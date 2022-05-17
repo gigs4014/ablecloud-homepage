@@ -1,4 +1,8 @@
 {
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
   "search.exclude": {
     "**/.yarn": true,
     "**/.pnp.*": true

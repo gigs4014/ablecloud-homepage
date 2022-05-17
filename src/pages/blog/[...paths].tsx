@@ -1,7 +1,4 @@
-import { Suspense, useMemo } from 'react';
-
 import { GetStaticProps } from 'next';
-import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 

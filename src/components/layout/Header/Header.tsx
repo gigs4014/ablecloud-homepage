@@ -1,14 +1,12 @@
-import { ReactNode, useState } from 'react';
+import { useState } from 'react';
 
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 
 import { useDarkMode } from '@hooks/common';
 
-import { CustomLink, Switch } from '@components/common';
+import { CustomLink } from '@components/common';
 
-import Moon from '@public/icons/moon.svg';
-import Sun from '@public/icons/sun.svg';
 import Logo from '@public/images/logo.png';
 
 import { HeaderMenuItem, MenuItem, SubMenu } from './Menu';

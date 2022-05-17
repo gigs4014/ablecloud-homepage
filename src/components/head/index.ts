@@ -1,2 +1,2 @@
-export * from './OpenGraph';
 export { default as Meta } from './Meta';
+export * from './OpenGraph';
