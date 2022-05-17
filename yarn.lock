@@ -2426,6 +2426,7 @@ __metadata:
     lodash: ^4.17.21
     next: 12.1.6
     next-mdx-remote: ^4.0.3
+    pinst: ^3.0.0
     postcss: ^8.4.13
     prettier: 2.6.2
     prettier-plugin-tailwindcss: ^0.1.10
@@ -6549,6 +6550,15 @@ __metadata:
   bin:
     pidtree: bin/pidtree.js
   checksum: 371cd14bbc9bdee2a6a44596dd521dd3565e223481e0b1afffdca3f1c29831850bfa7784114dc30d245d37e7d186cec035e036256b39f75d878d19498fe0df6a
+  languageName: node
+  linkType: hard
+
+"pinst@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "pinst@npm:3.0.0"
+  bin:
+    pinst: bin.js
+  checksum: 4ae48a6a60f79c37071233af51b4d91bfc85cfa3c12b66ccda60cdb642b4d14a4ab0cb3587afc55b1f6192cea1772a5e4822026a0d0d3528296edef00cc2d61f
   languageName: node
   linkType: hard
 
