@@ -14,15 +14,17 @@ npm i -g yarn
 
 소스 코드를 클론해온 후 아래 명령어를 통해 개발 서버를 실행할 수 있습니다.
 
-```bash
-# 도커 컨테이너 환경에서 실행할 때
-yarn docker:dev
-```
+- 도커 컨테이너 환경에서 실행할 때
 
-```bash
-# 로컬 환경에서 실행할 때
-yarn dev
-```
+  ```bash
+  yarn docker:dev
+  ```
+
+- 로컬 환경에서 실행할 때
+
+  ```bash
+  yarn dev
+  ```
 
 [http://localhost:3000](http://localhost:3000) 로 접속해 결과물을 볼 수 있습니다.
 
