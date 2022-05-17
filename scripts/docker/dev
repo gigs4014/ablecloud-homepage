@@ -1,4 +1,5 @@
-docker run -p 3000:3000 \
+docker run --rm -itp 3000:3000 \
+  --name ablecloud-homepage-dev \
   -w /app -v "$(pwd):/app" \
   node:16.15 \
   sh -c "yarn install && yarn next dev"
