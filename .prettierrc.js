@@ -1,5 +1,16 @@
 const { merge } = require('lodash');
 
+const ALIAS_PREFIX = '@/';
+
+/**
+ * @param  {string[]} paths
+ * @param {string?} prefix
+ * @returns {string}
+ */
+function alias(paths, prefix) {
+  return `^${prefix ?? ALIAS_PREFIX}(?:${paths.join('|')})(.*?)$`;
+}
+
 module.exports = {
   plugins: [
     merge(require('@trivago/prettier-plugin-sort-imports'), require('prettier-plugin-tailwindcss')),
@@ -21,13 +32,13 @@ module.exports = {
     '<THIRD_PARTY_MODULES>',
 
     // business logic & apis
-    '^@(?:hooks|helpers|utils|types)(.*)$',
+    alias(['hooks', 'helpers', 'utils', 'types']),
 
     // components
-    '^@(?:components|styles)(.*)$',
+    alias(['components', 'styles']),
 
     // assets
-    '^@(?:public)(.*)$',
+    alias(['public']),
 
     // others
     '^[./]',

@@ -1,8 +1,8 @@
 import { ReactNode } from 'react';
 
-import { cls } from '@utils';
+import { cls } from '@/utils';
 
-import { CustomLink } from '@components/common';
+import { CustomLink } from '@/components/common';
 
 import { HeaderMenuItem } from './Menu.types';
 

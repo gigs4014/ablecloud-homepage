@@ -4,10 +4,10 @@ import { useRouter } from 'next/router';
 
 import { MDXRemote } from 'next-mdx-remote';
 
-import { getAllPostFilePaths, getPost } from '@helpers/post';
-import { Post } from '@types';
+import { getAllPostFilePaths, getPost } from '@/helpers/post';
+import { Post } from '@/types';
 
-import { Meta } from '@components/head';
+import { Meta } from '@/components/head';
 
 interface PostPageProps {
   post: Post;

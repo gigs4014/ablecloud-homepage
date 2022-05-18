@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 
-import HEADER_MAIN from '@public/images/header/header_main.png';
+import HEADER_MAIN from '@/public/images/header/header_main.png';
 
 export default function HomePage() {
   return (

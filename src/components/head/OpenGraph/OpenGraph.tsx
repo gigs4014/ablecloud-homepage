@@ -1,4 +1,4 @@
-import { OpenGraph } from '@types';
+import { OpenGraph } from '@/types';
 
 export interface OpenGraphProps extends OpenGraph {}
 

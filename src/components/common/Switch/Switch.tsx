@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction } from 'react';
 
-import { useLiftedState } from '@hooks/utils';
-import { cls } from '@utils';
+import { useLiftedState } from '@/hooks/utils';
+import { cls } from '@/utils';
 
 export interface SwitchProps {
   className?: string;

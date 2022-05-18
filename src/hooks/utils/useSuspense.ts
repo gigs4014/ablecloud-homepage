@@ -1,6 +1,6 @@
 import { useCallback } from 'react';
 
-import { Task } from '@utils';
+import { Task } from '@/utils';
 
 type SuspenseKey = Array<string | number>;
 type SuspenseResolver = () => void;

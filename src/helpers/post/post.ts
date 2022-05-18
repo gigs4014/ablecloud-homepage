@@ -2,14 +2,13 @@ import fs from 'fs/promises';
 import { serialize } from 'next-mdx-remote/serialize';
 import remarkGFM from 'remark-gfm';
 
-import { Post } from '@types';
+import { Post } from '@/types';
 
 export const POST_PATH = '_posts';
 export const POST_EXT = 'mdx';
+export const POST_EXT_REGEX = new RegExp(`\.(${POST_EXT})$`);
 // TODO: get HOST from env or change by NODE_ENV
 const HOST = 'some-host.com';
-
-const POST_EXT_REGEX = new RegExp(`.${POST_EXT}$`);
 
 export async function getAllPostFilePaths(): Promise<Array<Array<string>>> {
   async function resolveDirRecursive(subPaths: string[] = []): Promise<Array<Array<string>>> {

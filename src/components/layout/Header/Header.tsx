@@ -3,11 +3,11 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 
-import { useDarkMode } from '@hooks/common';
+import { useDarkMode } from '@/hooks/common';
 
-import { CustomLink } from '@components/common';
+import { CustomLink } from '@/components/common';
 
-import Logo from '@public/images/logo.png';
+import Logo from '@/public/images/logo.png';
 
 import { HeaderMenuItem, MenuItem, SubMenu } from './Menu';
 

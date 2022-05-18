@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import { cls } from '@utils';
+import { cls } from '@/utils';
 
 export default function CustomFallbackPage() {
   const [state, setState] = useState(false);

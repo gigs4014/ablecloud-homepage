@@ -10,7 +10,7 @@ import {
   useState,
 } from 'react';
 
-import { useLazyState } from '@hooks/utils';
+import { useLazyState } from '@/hooks/utils';
 
 interface DarkModeContextProps {
   /**
