@@ -35,7 +35,7 @@ module.exports = {
     alias(['hooks', 'helpers', 'utils', 'types']),
 
     // components
-    alias(['components', 'styles']),
+    alias(['components', 'templates', 'styles']),
 
     // assets
     alias(['public']),

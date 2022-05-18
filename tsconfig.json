@@ -24,7 +24,8 @@
       "@/utils/*": ["src/utils/*"],
       "@/helpers": ["src/helpers"],
       "@/helpers/*": ["src/helpers/*"],
-      "@/types": ["src/types"]
+      "@/types": ["src/types"],
+      "@/templates": ["src/templates"]
     }
   },
   "include": ["next-env-custom.d.ts", "**/*.ts", "**/*.tsx"],

@@ -1,42 +1,113 @@
 import fs from 'fs/promises';
 import { serialize } from 'next-mdx-remote/serialize';
+import path from 'path';
 import remarkGFM from 'remark-gfm';
 
-import { Post } from '@/types';
+import { Post, PostFrontmatter, RecursiveStructure } from '@/types';
 
 export const POST_PATH = '_posts';
 export const POST_EXT = 'mdx';
 export const POST_EXT_REGEX = new RegExp(`\.(${POST_EXT})$`);
-// TODO: get HOST from env or change by NODE_ENV
-const HOST = 'some-host.com';
 
-export async function getAllPostFilePaths(): Promise<Array<Array<string>>> {
-  async function resolveDirRecursive(subPaths: string[] = []): Promise<Array<Array<string>>> {
-    const filePaths: Array<Array<string>> = [];
+export async function isCategoryDir(dirPath: string[]) {
+  try {
+    const stat = await fs.stat(path.join(POST_PATH, ...dirPath));
 
-    try {
-      const dir = await fs.opendir([POST_PATH, ...subPaths].join('/'));
-
-      for await (const dirent of dir) {
-        if (dirent.isFile()) {
-          // remove extension
-          const filename = dirent.name.replace(POST_EXT_REGEX, '');
-
-          filePaths.push([...subPaths, filename]);
-        } else if (dirent.isDirectory()) {
-          const subFilePaths = await resolveDirRecursive([...subPaths, dirent.name]);
-
-          filePaths.push(...subFilePaths);
-        }
-      }
-    } catch (err) {
-      console.error(err);
+    return stat.isDirectory();
+  } catch (e: any) {
+    if (e.code === 'ENOENT') {
+      return false;
+    } else {
+      throw e;
     }
+  }
+}
 
-    return filePaths;
+export async function getStructuredPostPaths(
+  basePath: string[] = [],
+): Promise<RecursiveStructure<string, undefined>> {
+  const structuredFilePaths: RecursiveStructure<string, undefined> = {};
+
+  try {
+    const dir = await fs.opendir(path.join(POST_PATH, ...basePath));
+
+    for await (const dirent of dir) {
+      if (dirent.isDirectory()) {
+        structuredFilePaths[dirent.name] = await getStructuredPostPaths([...basePath, dirent.name]);
+      } else if (dirent.isFile()) {
+        // remove extension
+        const filename = dirent.name.replace(POST_EXT_REGEX, '');
+        structuredFilePaths[filename] = undefined;
+      }
+    }
+  } catch (err) {
+    console.error('In getStructuredPostPaths', err);
   }
 
-  return resolveDirRecursive();
+  return structuredFilePaths;
+}
+
+export async function getAllSubPaths(basePath: string[] = []): Promise<string[][]> {
+  function recursive(
+    structure: RecursiveStructure<string, undefined>,
+    basePath: string[] = [],
+  ): string[][] {
+    const paths: string[][] = basePath.length === 0 ? [] : [basePath];
+
+    for (const [key, value] of Object.entries(structure)) {
+      if (value === undefined) {
+        paths.push([...basePath, key]);
+      } else {
+        paths.push(...recursive(value, [...basePath, key]));
+      }
+    }
+
+    return paths;
+  }
+
+  const structuredPostPaths = await getStructuredPostPaths(basePath);
+
+  return recursive(structuredPostPaths);
+}
+
+export function destructurizePaths(structured: RecursiveStructure<string, undefined>): string[][] {
+  function recursive(structure: RecursiveStructure<string, undefined>, basePath: string[] = []) {
+    const paths: string[][] = [];
+
+    for (const [key, value] of Object.entries(structure)) {
+      if (value !== undefined) {
+        const currentDir = [...basePath, key];
+        paths.push(currentDir, ...recursive(value, currentDir));
+      }
+    }
+
+    return paths;
+  }
+
+  return recursive(structured);
+}
+
+export async function getPostPaths(basePath: string[] = []): Promise<string[][]> {
+  const filePaths: string[][] = [];
+
+  try {
+    const dir = await fs.opendir(path.join(POST_PATH, ...basePath));
+
+    for await (const dirent of dir) {
+      if (dirent.isDirectory()) {
+        const subFilePaths = await getPostPaths([...basePath, dirent.name]);
+        filePaths.push(...subFilePaths);
+      } else if (dirent.isFile()) {
+        // remove extension
+        const filename = dirent.name.replace(POST_EXT_REGEX, '');
+        filePaths.push([...basePath, filename]);
+      }
+    }
+  } catch (err) {
+    console.error('In getPostPaths', err);
+  }
+
+  return filePaths;
 }
 
 class FileNotExistError extends Error {
@@ -48,15 +119,10 @@ class FileNotExistError extends Error {
   }
 }
 
-export async function getPost(paths: string[]): Promise<Post> {
-  const slug = paths.at(paths.length - 1);
-  if (slug === undefined) {
-    throw new FileNotExistError('No slug provided');
-  }
+export async function getPost(slug: string, basePath: string[]): Promise<Post> {
+  const categories = basePath.slice(0, basePath.length - 1);
 
-  const categories = paths.slice(0, paths.length - 1);
-
-  const filePath = `${POST_PATH}/${paths.join('/')}.${POST_EXT}`;
+  const filePath = `${path.join(POST_PATH, ...basePath, slug)}.${POST_EXT}`;
   try {
     const fileStat = await fs.stat(filePath);
 
@@ -77,27 +143,25 @@ export async function getPost(paths: string[]): Promise<Post> {
       title = 'Untitled',
       author = '',
       tags = [],
-    } = content.frontmatter as {
-      title: string;
-      author?: string;
-      tags?: string[];
-    };
+      createdAt,
+      updatedAt,
+    } = content.frontmatter as PostFrontmatter;
 
     return {
       slug,
       categories,
-      // createdAt: fileStat.birthtimeMs,
-      date: fileStat.mtimeMs, // updatedAt: mtimeMs,
+      title,
+      author,
+      tags,
+      // createdAt: createdAt ?? fileStat.birthtimeMs,
+      date: updatedAt ?? fileStat.mtimeMs, // updatedAt: mtimeMs,
       openGraph: {
         title,
         type: 'article',
         image: '',
-        url: `https://${HOST}/blog/${paths.join('/')}`,
+        url: `${process.env.HOST_URL}/blog/${basePath.join('/')}`,
       },
       content,
-      title,
-      author,
-      tags,
     };
   } catch (e: any) {
     if (e.code !== 'ENOENT') {
@@ -106,4 +170,18 @@ export async function getPost(paths: string[]): Promise<Post> {
 
     throw e;
   }
+}
+
+export async function getPosts(basePath: string[]): Promise<Post[]> {
+  const posts: Post[] = [];
+
+  try {
+    const dir = await fs.opendir(path.join(POST_PATH, ...basePath));
+
+    for await (const dirent of dir) {
+      posts.push(await getPost(dirent.name, basePath));
+    }
+  } catch (e) {}
+
+  return posts;
 }

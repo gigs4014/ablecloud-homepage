@@ -1,30 +1,21 @@
-import { GetStaticProps } from 'next';
 import Head from 'next/head';
-import { useRouter } from 'next/router';
 
 import { MDXRemote } from 'next-mdx-remote';
 
-import { getAllPostFilePaths, getPost } from '@/helpers/post';
-import { Post } from '@/types';
+import { BasePageProps, Post } from '@/types';
 
 import { Meta } from '@/components/head';
 
-interface PostPageProps {
+export interface PostDetailTemplateProps {
   post: Post;
 }
 
-export default function PostPage({ post }: PostPageProps) {
-  const router = useRouter();
-
-  if (router.isFallback) {
-    return <div>Loading...</div>;
-  }
-
+function PostDetailTemplate({ post }: PostDetailTemplateProps & BasePageProps<{ path: string[] }>) {
   return (
     <>
       <Head>
         <title>{post.title}</title>
-        <Meta.OpenGraph {...post.openGraph} />
+        {Meta.OpenGraph(post.openGraph)}
       </Head>
 
       <article className='prose flex h-full w-full flex-col dark:prose-invert lg:prose-xl lg:prose-p:my-2'>
@@ -62,34 +53,4 @@ export default function PostPage({ post }: PostPageProps) {
   );
 }
 
-type PostPageParams = {
-  paths: string[];
-};
-
-export const getStaticProps: GetStaticProps<PostPageProps, PostPageParams> = async ({
-  params: { paths } = { paths: [] },
-}) => {
-  try {
-    const post = await getPost(paths);
-
-    return { props: { post } };
-  } catch (e) {
-    console.log(e);
-    return { props: {}, notFound: true };
-  }
-};
-
-export async function getStaticPaths() {
-  const postPaths = await getAllPostFilePaths();
-
-  return {
-    paths: postPaths.map(postPath => {
-      return {
-        params: {
-          paths: postPath,
-        },
-      };
-    }),
-    fallback: false,
-  };
-}
+export default PostDetailTemplate;
