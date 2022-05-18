@@ -1,11 +1,17 @@
 import type { AppProps } from 'next/app';
+import Head from 'next/head';
 import Image from 'next/image';
 
 import { MDXProvider } from '@mdx-js/react';
+import dotenv from 'dotenv';
 import { MDXComponents } from 'mdx/types';
 
 import { Layout } from '@/components/layout';
 import '@/styles/globals.css';
+
+dotenv.config({
+  path: process.env.NODE_ENV === 'production' ? '.env.production' : '.env.development',
+});
 
 const ResponsiveImage = (props: any) => <Image alt={props.alt} layout='responsive' {...props} />;
 
@@ -17,9 +23,18 @@ export default function CustomApp({ Component, pageProps, router }: AppProps) {
   return (
     <MDXProvider components={components}>
       {/* <DarkModeProvider> */}
-      <Layout router={router}>
+      <Head>
+        <title>에이블클라우드</title>
+        <link rel='icon' href='/images/favicon.png' />
+      </Head>
+
+      {pageProps.noLayout ? (
         <Component {...pageProps} />
-      </Layout>
+      ) : (
+        <Layout router={router}>
+          <Component {...pageProps} />
+        </Layout>
+      )}
       {/* </DarkModeProvider> */}
     </MDXProvider>
   );
