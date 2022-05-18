@@ -3,15 +3,10 @@ import Head from 'next/head';
 import Image from 'next/image';
 
 import { MDXProvider } from '@mdx-js/react';
-import dotenv from 'dotenv';
 import { MDXComponents } from 'mdx/types';
 
 import { Layout } from '@/components/layout';
 import '@/styles/globals.css';
-
-dotenv.config({
-  path: process.env.NODE_ENV === 'production' ? '.env.production' : '.env.development',
-});
 
 const ResponsiveImage = (props: any) => <Image alt={props.alt} layout='responsive' {...props} />;
 

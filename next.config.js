@@ -8,6 +8,27 @@ const withMDX = require('@next/mdx')({
 });
 
 /**
+ * @param {import('next').NextConfig} nextConfig
+ **/
+const withDotenv = (nextConfig = {}) => {
+  const env = require('dotenv').config({
+    path: process.env.NODE_ENV === 'production' ? '/.env.production' : '/.env.development',
+  });
+
+  return Object.assign({}, nextConfig, {
+    env: { ...env, ...nextConfig.env },
+  });
+};
+
+/**
+ * @param {import('next').NextConfig} nextConfig
+ * @param {((nextConfig: import('next').NextConfig) => import('next').NextConfig)[]} plugins
+ **/
+const withPlugins = (nextConfig = {}, plugins = []) => {
+  return plugins.reduce((config, plugin) => plugin(config), nextConfig);
+};
+
+/**
  * @type {import('next').NextConfig}
  **/
 const nextConfig = {
@@ -26,4 +47,4 @@ const nextConfig = {
   reactStrictMode: true,
 };
 
-module.exports = withMDX(nextConfig);
+module.exports = withPlugins(nextConfig, [withMDX, withDotenv]);
