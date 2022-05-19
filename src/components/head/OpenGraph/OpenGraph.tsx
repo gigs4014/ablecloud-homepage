@@ -1,13 +1,8 @@
-import { useEffect } from 'react';
-
 import { OpenGraph } from '@/types';
 
 export interface OpenGraphProps extends OpenGraph {}
 
 export default function OpenGraphMeta({ title, description, type, url, image }: OpenGraphProps) {
-  useEffect(() => {
-    console.log('generate open graph meta');
-  });
   return (
     <>
       <meta property='og:title' content={title} />
