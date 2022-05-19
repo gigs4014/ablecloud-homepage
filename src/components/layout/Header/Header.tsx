@@ -102,7 +102,7 @@ export default function Header() {
           setIsMenuOpen(false);
           setSubMenuItems(undefined);
         }}
-        className='group relative flex h-fit max-w-screen-xl flex-1 flex-col rounded-b-lg bg-white shadow-md transition-transform dark:border-0.5 dark:border-t-0 dark:border-none dark:bg-stone-900 dark:text-white dark:shadow-stone-700'>
+        className='group relative flex h-fit max-w-page-full flex-1 flex-col rounded-b-lg bg-white shadow-md transition-transform dark:border-0.5 dark:border-t-0 dark:border-none dark:bg-stone-900 dark:text-white dark:shadow-stone-700'>
         {/* Main menu section */}
         <section className='flex h-16 w-full items-center'>
           {/* Logo */}
