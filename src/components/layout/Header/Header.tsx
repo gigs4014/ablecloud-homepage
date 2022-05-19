@@ -102,9 +102,9 @@ export default function Header() {
           setIsMenuOpen(false);
           setSubMenuItems(undefined);
         }}
-        className='group relative flex h-fit max-w-page-full flex-1 flex-col rounded-b-lg bg-white shadow-md transition-transform dark:border-0.5 dark:border-t-0 dark:border-none dark:bg-stone-900 dark:text-white dark:shadow-stone-700'>
+        className='group relative flex h-fit max-w-page-full flex-1 flex-col rounded-b-lg bg-white shadow-md'>
         {/* Main menu section */}
-        <section className='flex h-16 w-full items-center'>
+        <section className='flex h-16 w-full items-center justify-between px-6'>
           {/* Logo */}
           <div className=''>
             <CustomLink href='/'>
@@ -126,7 +126,7 @@ export default function Header() {
             </CustomLink>
           </div>
 
-          <div className='flex h-full flex-1'>
+          <div className='flex h-full flex-1 md:flex'>
             <ul className='flex h-full flex-1 justify-between'>
               {menuItems.map(item => (
                 <li
@@ -140,7 +140,7 @@ export default function Header() {
           </div>
 
           {/* Header right section */}
-          <div className='flex items-center justify-center space-x-4 px-8'>
+          <div className='flex items-center justify-center space-x-4 '>
             {/* <Switch
               className='bg-slate-600'
               value={Boolean(darkMode)}
@@ -160,7 +160,7 @@ export default function Header() {
 
         {/* Sub menu section */}
         {isMenuOpen && subMenuItems && (
-          <section className='flex h-full w-full items-center border-t-0.5 border-slate-200 dark:border-stone-700'>
+          <section className='flex h-full w-full items-center border-t-0.5 border-slate-200 px-4 md:flex'>
             <SubMenu items={subMenuItems} />
           </section>
         )}

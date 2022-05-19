@@ -5,10 +5,8 @@
 /**
  * @type {TailwindThemeValue}
  */
-const spacing = {
-  128: '32rem',
-  144: '36rem',
-  'page-full': '1200px',
+const width = ({ theme, breakpoints, colors, negative }, ...args) => {
+  return { 'page-full': '1200px', ...theme('spacing') };
 };
 
 /**
@@ -23,9 +21,17 @@ module.exports = {
         1: '1px',
         0.5: '0.5px',
       },
-      spacing,
-      maxWidth: spacing,
-      minWidth: spacing,
+      spacing: { 128: '32rem', 144: '36rem' },
+      scale: {
+        101: '1.01',
+        102: '1.02',
+        103: '1.03',
+        104: '1.04',
+      },
+      width,
+      maxWidth: width,
+      minWidth: width,
+      pageWidth: width,
     },
   },
   plugins: [require('@tailwindcss/typography')],

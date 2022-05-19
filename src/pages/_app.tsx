@@ -26,7 +26,7 @@ export default function CustomApp({ Component, pageProps, router }: AppProps) {
       {pageProps.noLayout ? (
         <Component {...pageProps} />
       ) : (
-        <Layout router={router}>
+        <Layout>
           <Component {...pageProps} />
         </Layout>
       )}

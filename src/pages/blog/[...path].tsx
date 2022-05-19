@@ -28,7 +28,7 @@ interface PostDetailPageProps extends BasePostPageProps, PostDetailTemplateProps
 
 type PostPageProps = PostDetailPageProps | PostListPageProps;
 
-export default function PostPage(props: PostPageProps) {
+export default function PostPage(props: Readonly<PostPageProps>) {
   const router = useRouter();
 
   if (router.isFallback) {
