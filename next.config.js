@@ -1,5 +1,18 @@
 // @ts-check
+/**
+ * @typedef NextConfig
+ * @type {import('next').NextConfig}
+ **/
 
+/**
+ * @callback Plugin
+ * @param {NextConfig} [nextConfig={}]
+ * @returns {NextConfig}
+ */
+
+/**
+ * @type {Plugin}
+ */
 const withMDX = require('@next/mdx')({
   extension: /\.mdx?$/,
   options: {
@@ -8,12 +21,10 @@ const withMDX = require('@next/mdx')({
 });
 
 /**
- * @param {import('next').NextConfig} nextConfig
- **/
+ * @type {Plugin}
+ */
 const withDotenv = (nextConfig = {}) => {
-  const env = require('dotenv').config({
-    path: process.env.NODE_ENV === 'production' ? '/.env.production' : '/.env.development',
-  });
+  const env = require('dotenv').config({ path: `/.env.${process.env.NODE_ENV}` });
 
   return Object.assign({}, nextConfig, {
     env: { ...env, ...nextConfig.env },
@@ -21,15 +32,16 @@ const withDotenv = (nextConfig = {}) => {
 };
 
 /**
- * @param {import('next').NextConfig} nextConfig
- * @param {((nextConfig: import('next').NextConfig) => import('next').NextConfig)[]} plugins
+ * @param {NextConfig} nextConfig
+ * @param {Plugin[]} [plugins=[]] - {@link Plugin} Array
+ * @returns {NextConfig}
  **/
 const withPlugins = (nextConfig = {}, plugins = []) => {
   return plugins.reduce((config, plugin) => plugin(config), nextConfig);
 };
 
 /**
- * @type {import('next').NextConfig}
+ * @type {NextConfig}
  **/
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
