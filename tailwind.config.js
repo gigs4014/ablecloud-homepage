@@ -34,5 +34,5 @@ module.exports = {
       pageWidth: width,
     },
   },
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [require('@tailwindcss/typography'), require('tailwind-scrollbar')],
 };
