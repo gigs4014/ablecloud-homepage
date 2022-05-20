@@ -2,13 +2,13 @@ import { ReactNode, useMemo } from 'react';
 
 import Link, { LinkProps } from 'next/link';
 
+import { BaseComponentProps } from '@/types';
 import { cls } from '@/utils';
 
-export interface CustomLinkProps extends Omit<LinkProps, 'href'> {
+export interface CustomLinkProps extends BaseComponentProps, Omit<LinkProps, 'href'> {
   href?: LinkProps['href'];
   children: ReactNode;
   style?: React.CSSProperties;
-  className?: string;
   /**
    * @default color (change to rgb(96, 165, 250))
    */
@@ -20,7 +20,7 @@ export default function CustomLink({
   children,
   className: givenClassName,
   style,
-  hoverBehavoir,
+  hoverBehavoir = 'color',
   ...linkProps
 }: CustomLinkProps) {
   const className = useMemo(
