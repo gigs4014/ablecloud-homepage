@@ -1,10 +1,10 @@
 import { Dispatch, SetStateAction } from 'react';
 
 import { useLiftedState } from '@/hooks/utils';
+import { BaseComponentProps } from '@/types';
 import { cls } from '@/utils';
 
-export interface SwitchProps {
-  className?: string;
+export interface SwitchProps extends BaseComponentProps {
   value?: boolean;
   setValue?: Dispatch<SetStateAction<boolean>>;
   disabled?: boolean;
