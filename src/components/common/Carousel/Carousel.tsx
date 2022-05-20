@@ -9,6 +9,7 @@ export interface CarouselProps extends BaseComponentProps {
 
 function Carousel({ className, children }: CarouselProps) {
   const carouselRef = useRef<HTMLUListElement>(null);
+  const prevCarouselPosition = useRef<number>(0);
 
   useEffect(() => {
     if (!carouselRef.current) return;
@@ -18,6 +19,13 @@ function Carousel({ className, children }: CarouselProps) {
         clearInterval(interval);
         return;
       }
+
+      if (prevCarouselPosition.current === carouselRef.current.scrollLeft) {
+        clearInterval(interval);
+        return;
+      }
+
+      prevCarouselPosition.current = carouselRef.current.scrollLeft;
 
       carouselRef.current.scrollBy({
         behavior: 'smooth',
