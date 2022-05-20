@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import Image from 'next/image';
 import { useRouter } from 'next/router';
@@ -9,12 +9,12 @@ import { Button, CustomLink } from '@/components/common';
 
 import Logo from '@/public/images/logo.png';
 
-import { HeaderMenuItem, MenuItem, SubMenu } from './Menu';
+import { HeaderMenuItem, MenuItem, SubMenu, getSelectedItem } from './Menu';
 
 const menuItems: Array<HeaderMenuItem> = [
   {
     label: '제품',
-    href: '/products',
+    href: '/products/ablestack',
     subMenuItems: [
       {
         label: 'AbleStack 하이퍼컨버지드 인프라',
@@ -22,11 +22,11 @@ const menuItems: Array<HeaderMenuItem> = [
       },
       {
         label: 'Ablestack 하이퍼컨버지드 어플라이언스',
-        href: '/products/ablestack-appliance',
+        href: '/products/ablestack/appliance',
       },
       {
         label: 'Ablestack 가상데스크탑인프라',
-        href: '/products/ablestack-vdi',
+        href: '/products/ablestack/vdi',
       },
     ],
   },
@@ -91,15 +91,21 @@ const menuItems: Array<HeaderMenuItem> = [
 export default function Header() {
   const { asPath } = useRouter();
   const [subMenuItems, setSubMenuItems] = useState<Array<HeaderMenuItem> | undefined>();
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
+
+  const [selectedItem, setSelectedItem] = useState<HeaderMenuItem | undefined>();
   const { darkMode, setDarkMode } = useDarkMode();
+
+  useEffect(() => {
+    setSelectedItem(getSelectedItem(menuItems, asPath));
+  }, [asPath]);
 
   return (
     <header className='fixed z-20 flex h-16 w-full justify-center'>
       <nav
-        onMouseEnter={() => setIsMenuOpen(true)}
+        onMouseEnter={() => setIsSubMenuOpen(true)}
         onMouseLeave={() => {
-          setIsMenuOpen(false);
+          setIsSubMenuOpen(false);
           setSubMenuItems(undefined);
         }}
         className='group relative flex h-fit max-w-page-full flex-1 flex-col rounded-b-lg bg-white shadow-md'>
@@ -133,7 +139,7 @@ export default function Header() {
                   className='flex-1'
                   onMouseEnter={() => setSubMenuItems(item.subMenuItems)}
                   key={item.href}>
-                  <MenuItem {...item} selected={asPath === item.href} />
+                  <MenuItem {...item} selectedItem={selectedItem} />
                 </li>
               ))}
             </ul>
@@ -157,9 +163,9 @@ export default function Header() {
         </section>
 
         {/* Sub menu section */}
-        {isMenuOpen && subMenuItems && (
+        {isSubMenuOpen && subMenuItems && (
           <section className='flex h-full w-full items-center border-t-0.5 border-slate-200 px-4 md:flex'>
-            <SubMenu items={subMenuItems} />
+            <SubMenu items={subMenuItems} selectedItem={selectedItem} />
           </section>
         )}
       </nav>

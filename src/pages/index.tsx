@@ -1,11 +1,13 @@
-import { ReactNode } from 'react';
+import { ReactNode, useRef } from 'react';
 
 import Head from 'next/head';
 import Image from 'next/image';
 
+import { useScrollEvent } from '@/hooks/common';
+import { useMountEffect } from '@/hooks/utils';
 import { cls } from '@/utils';
 
-import { Button, Carousel, CustomLink, CustomLinkProps } from '@/components/common';
+import { Button, Carousel, CarouselRef, CustomLink, CustomLinkProps } from '@/components/common';
 import { Container } from '@/components/layout';
 
 import HEADER_MAIN from '@/public/images/header/header_main.png';
@@ -16,6 +18,20 @@ const pageContainerProps = {
 };
 
 export default function HomePage() {
+  const carouselRef = useRef<CarouselRef>(null);
+
+  const { addScrollEvent } = useScrollEvent();
+
+  useMountEffect(() => {
+    if (carouselRef.current && carouselRef.current.elementRef.current) {
+      const carousel = carouselRef.current;
+      const carouselElement = carouselRef.current.elementRef.current;
+      return addScrollEvent('carousel auto scroll', carouselElement.offsetTop, () =>
+        carousel.startAutoScroll(),
+      );
+    }
+  });
+
   return (
     <>
       <Head>
@@ -116,7 +132,7 @@ export default function HomePage() {
             </Container.Page>
 
             <section className='not-prose mt-8 w-full self-center'>
-              <Carousel>
+              <Carousel autoScrollInterval={7000} stopAutoScrollOnEnd ref={carouselRef}>
                 {Array(10)
                   .fill(0)
                   .map((_, index) => (

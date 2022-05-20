@@ -1,25 +1,49 @@
-import { ReactNode } from 'react';
+import { ReactNode, useMemo } from 'react';
 
+import { BaseComponentProps } from '@/types';
 import { cls } from '@/utils';
 
 import { CustomLink } from '@/components/common';
 
 import { HeaderMenuItem } from './Menu.types';
 
-export type MenuItemProps = HeaderMenuItem & {
-  selected?: boolean;
-  children?: ReactNode;
-  className?: string;
-};
+export function getSelectedItem(
+  items: Array<HeaderMenuItem>,
+  currentPath: string,
+): HeaderMenuItem | undefined {
+  for (const item of items) {
+    // exact match
+    if (currentPath === item.href) return item;
+
+    // subPath match
+    if (item.subMenuItems) {
+      const subItem = getSelectedItem(item.subMenuItems, currentPath);
+
+      if (subItem !== undefined) return subItem;
+    }
+  }
+}
+
+export type MenuItemProps = HeaderMenuItem &
+  BaseComponentProps & {
+    selectedItem?: HeaderMenuItem;
+    children?: ReactNode;
+  };
 
 export function MenuItem({
   label,
   href,
   children,
   subMenuItems,
-  selected,
+  selectedItem,
   className,
 }: MenuItemProps) {
+  const selected = useMemo(() => {
+    if (selectedItem === undefined) return false;
+    if (href === selectedItem.href) return true;
+    if (subMenuItems && isIncludedItem(subMenuItems, selectedItem)) return true;
+  }, [href, subMenuItems, selectedItem]);
+
   return (
     <div className={cls`group flex h-full w-full items-center justify-center ${className}`}>
       <CustomLink
@@ -33,12 +57,23 @@ export function MenuItem({
   );
 }
 
+function isIncludedItem(parentItems: Array<HeaderMenuItem>, item: HeaderMenuItem): boolean {
+  for (const subItem of parentItems) {
+    if (subItem.href === item.href) return true;
+
+    if (subItem.subMenuItems && isIncludedItem(subItem.subMenuItems, item)) return true;
+  }
+
+  return false;
+}
+
 export interface SubMenuProps {
   items: Array<HeaderMenuItem>;
+  selectedItem?: HeaderMenuItem;
   className?: string;
 }
 
-export function SubMenu({ items, className }: SubMenuProps) {
+export function SubMenu({ items, selectedItem, className }: SubMenuProps) {
   const subMenuBlock = (subItem: HeaderMenuItem) => (
     <li key={subItem.href} className='space-y-2'>
       <CustomLink href={subItem.href}>
@@ -70,7 +105,7 @@ export function SubMenu({ items, className }: SubMenuProps) {
         } else {
           return (
             <li key={item.href}>
-              <MenuItem {...item} className='p-8' />
+              <MenuItem {...item} selectedItem={selectedItem} className='p-8' />
             </li>
           );
         }
