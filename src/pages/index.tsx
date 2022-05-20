@@ -3,7 +3,9 @@ import { ReactNode } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 
-import { CustomLink, CustomLinkProps } from '@/components/common';
+import { cls } from '@/utils';
+
+import { Button, Carousel, CustomLink, CustomLinkProps } from '@/components/common';
 import { Container } from '@/components/layout';
 
 import HEADER_MAIN from '@/public/images/header/header_main.png';
@@ -106,26 +108,43 @@ export default function HomePage() {
           </Container.Page>
 
           {/* 성공 사례 / 솔루션 */}
-          <Container.Page {...pageContainerProps}>
-            <h2>성공 사례</h2>
-            <p className='mt-4'>Anim enim duis deserunt veniam do aliquip tempor velit.</p>
+          <section
+            className={cls`${pageContainerProps.className} ${pageContainerProps.containerClassName}`}>
+            <Container.Page>
+              <h2>성공 사례</h2>
+              <p className='mt-4'>Anim enim duis deserunt veniam do aliquip tempor velit.</p>
+            </Container.Page>
 
-            <section className='mt-8 flex space-x-4 self-center'>
-              <div className='h-12 w-24 bg-slate-200 align-middle'>LOGO 1</div>
-              <div className='h-12 w-24 bg-slate-200 align-middle'>LOGO 2</div>
-              <div className='h-12 w-24 bg-slate-200 align-middle'>LOGO 3</div>
-              <div className='h-12 w-24 bg-slate-200 align-middle'>LOGO 4</div>
-              <div className='h-12 w-24 bg-slate-200 align-middle'>LOGO 5</div>
+            <section className='not-prose mt-8 w-full self-center'>
+              <Carousel>
+                {Array(10)
+                  .fill(0)
+                  .map((_, index) => (
+                    <li
+                      className='flex h-16 w-48 flex-shrink-0 snap-center snap-always items-center justify-center bg-slate-200'
+                      key={index}>
+                      <p>LOGO {index}</p>
+                    </li>
+                  ))}
+              </Carousel>
             </section>
 
-            <button className='mt-8 self-center rounded-md border-0.5 border-sky-500 py-2 px-12 text-sky-500'>
-              성공 사례 보기
-            </button>
-          </Container.Page>
+            <Container.Page>
+              <Button bordered className='mt-12'>
+                성공 사례 보기
+              </Button>
+            </Container.Page>
+          </section>
 
           {/* 데모 & Contact */}
           <Container.Page {...pageContainerProps}>
-            <h2></h2>
+            <h2>지금 바로 시작하십시오</h2>
+
+            <div className='mt-4 flex w-full justify-center space-x-8'>
+              <Button>데모 요청하기</Button>
+
+              <Button bordered>문의하기</Button>
+            </div>
           </Container.Page>
         </article>
       </section>
@@ -142,7 +161,9 @@ interface BoxProps {
 
 function Box({ title, image, description, linkProps }: BoxProps) {
   return (
-    <CustomLink className='flex flex-1 flex-col justify-between space-y-4 rounded-md border-0.5 border-gray-200 bg-white p-4 shadow-md transition-all hover:-translate-y-1 hover:scale-102 hover:text-inherit hover:shadow-xl'>
+    <CustomLink
+      hoverBehavoir='none'
+      className='flex flex-1 flex-col justify-between space-y-4 rounded-md border-0.5 border-gray-200 bg-white p-4 shadow-md transition-all hover:-translate-y-1 hover:scale-102 hover:shadow-xl'>
       <div className='space-y-4'>
         <h3>{title}</h3>
 
@@ -165,7 +186,9 @@ function Box({ title, image, description, linkProps }: BoxProps) {
 
 function RowBoxSmall({ title, image, description }: BoxProps) {
   return (
-    <CustomLink className='flex flex-1 items-center justify-between space-x-6 rounded-md border-0.5 border-gray-200 bg-white p-4 shadow-md transition-all hover:-translate-y-1 hover:scale-102 hover:text-inherit hover:shadow-xl'>
+    <CustomLink
+      hoverBehavoir='none'
+      className='flex flex-1 items-center justify-between space-x-6 rounded-md border-0.5 border-gray-200 bg-white p-4 shadow-md transition-all hover:-translate-y-1 hover:scale-102 hover:shadow-xl'>
       {/* image */}
       {/* {image} */}
       <div className='h-32 w-32 flex-shrink-0 bg-gray-400' />

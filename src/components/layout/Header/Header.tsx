@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 
 import { useDarkMode } from '@/hooks/common';
 
-import { CustomLink } from '@/components/common';
+import { Button, CustomLink } from '@/components/common';
 
 import Logo from '@/public/images/logo.png';
 
@@ -150,10 +150,8 @@ export default function Header() {
             /> */}
 
             {/* Demo button */}
-            <CustomLink
-              href='/demo'
-              className='flex h-10 items-center justify-center rounded-full bg-sky-400 py-4 px-8 text-white hover:text-white'>
-              Demo
+            <CustomLink href='/demo' className='hover:text-white'>
+              <Button>데모 요청하기</Button>
             </CustomLink>
           </div>
         </section>
