@@ -13,6 +13,7 @@ module.exports = {
           useRefOf: true,
           useSuspense: [true, true],
           useSynchronizedState: [false, true],
+          useScrollEffect: [true, true],
         },
       },
     ],
