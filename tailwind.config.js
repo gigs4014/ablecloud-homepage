@@ -2,6 +2,8 @@
 /** @typedef { import('tailwindcss/tailwind-config').TailwindConfig } TailwindConfig */
 /** @typedef { import('tailwindcss/tailwind-config').TailwindThemeValue } TailwindThemeValue */
 
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 /**
  * @type {TailwindThemeValue}
  */
@@ -16,6 +18,10 @@ module.exports = {
   content: ['./src/{pages,components,templates}/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'class',
   theme: {
+    fontFamily: {
+      // @ts-ignore
+      sans: ['Noto Sans KR', ...defaultTheme.fontFamily.sans],
+    },
     extend: {
       borderWidth: {
         1: '1px',
