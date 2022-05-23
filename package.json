@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build:dev": "next build",
+    "build": "next build",
     "docker:build": "./scripts/docker/build",
     "docker:run": "./scripts/docker/run",
     "docker:dev": "./scripts/docker/dev",
