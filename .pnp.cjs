@@ -45,7 +45,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:17.0.31"],\
             ["@types/react", "npm:18.0.8"],\
             ["@types/react-dom", "npm:18.0.3"],\
-            ["@wogns3623/eslint-plugin-better-exhaustive-deps", "virtual:db9f23fdeb5d81f74ecfb987409c44e0fcaf93cfd006b5770cece2c7dad59234e7ce370fcd258e70367386255d88d5ab9ba69fdd73a8bd2460aa93a70130216c#npm:1.0.0"],\
+            ["@wogns3623/eslint-plugin-better-exhaustive-deps", "virtual:db9f23fdeb5d81f74ecfb987409c44e0fcaf93cfd006b5770cece2c7dad59234e7ce370fcd258e70367386255d88d5ab9ba69fdd73a8bd2460aa93a70130216c#npm:1.1.0"],\
             ["@yarnpkg/pnpify", "npm:4.0.0-rc.5"],\
             ["@yarnpkg/sdks", "npm:3.0.0-rc.5"],\
             ["autoprefixer", "virtual:db9f23fdeb5d81f74ecfb987409c44e0fcaf93cfd006b5770cece2c7dad59234e7ce370fcd258e70367386255d88d5ab9ba69fdd73a8bd2460aa93a70130216c#npm:10.4.7"],\
@@ -3658,17 +3658,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@wogns3623/eslint-plugin-better-exhaustive-deps", [\
-        ["npm:1.0.0", {\
-          "packageLocation": "./.yarn/cache/@wogns3623-eslint-plugin-better-exhaustive-deps-npm-1.0.0-2a43665539-f86a421fcc.zip/node_modules/@wogns3623/eslint-plugin-better-exhaustive-deps/",\
+        ["npm:1.1.0", {\
+          "packageLocation": "./.yarn/cache/@wogns3623-eslint-plugin-better-exhaustive-deps-npm-1.1.0-6fe8ad5ff1-2124e2c071.zip/node_modules/@wogns3623/eslint-plugin-better-exhaustive-deps/",\
           "packageDependencies": [\
-            ["@wogns3623/eslint-plugin-better-exhaustive-deps", "npm:1.0.0"]\
+            ["@wogns3623/eslint-plugin-better-exhaustive-deps", "npm:1.1.0"]\
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:db9f23fdeb5d81f74ecfb987409c44e0fcaf93cfd006b5770cece2c7dad59234e7ce370fcd258e70367386255d88d5ab9ba69fdd73a8bd2460aa93a70130216c#npm:1.0.0", {\
-          "packageLocation": "./.yarn/__virtual__/@wogns3623-eslint-plugin-better-exhaustive-deps-virtual-fcbed6d77d/0/cache/@wogns3623-eslint-plugin-better-exhaustive-deps-npm-1.0.0-2a43665539-f86a421fcc.zip/node_modules/@wogns3623/eslint-plugin-better-exhaustive-deps/",\
+        ["virtual:db9f23fdeb5d81f74ecfb987409c44e0fcaf93cfd006b5770cece2c7dad59234e7ce370fcd258e70367386255d88d5ab9ba69fdd73a8bd2460aa93a70130216c#npm:1.1.0", {\
+          "packageLocation": "./.yarn/__virtual__/@wogns3623-eslint-plugin-better-exhaustive-deps-virtual-7ef6d0e053/0/cache/@wogns3623-eslint-plugin-better-exhaustive-deps-npm-1.1.0-6fe8ad5ff1-2124e2c071.zip/node_modules/@wogns3623/eslint-plugin-better-exhaustive-deps/",\
           "packageDependencies": [\
-            ["@wogns3623/eslint-plugin-better-exhaustive-deps", "virtual:db9f23fdeb5d81f74ecfb987409c44e0fcaf93cfd006b5770cece2c7dad59234e7ce370fcd258e70367386255d88d5ab9ba69fdd73a8bd2460aa93a70130216c#npm:1.0.0"],\
+            ["@wogns3623/eslint-plugin-better-exhaustive-deps", "virtual:db9f23fdeb5d81f74ecfb987409c44e0fcaf93cfd006b5770cece2c7dad59234e7ce370fcd258e70367386255d88d5ab9ba69fdd73a8bd2460aa93a70130216c#npm:1.1.0"],\
             ["@types/eslint", null],\
             ["eslint", "npm:8.14.0"]\
           ],\
@@ -3831,7 +3831,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:17.0.31"],\
             ["@types/react", "npm:18.0.8"],\
             ["@types/react-dom", "npm:18.0.3"],\
-            ["@wogns3623/eslint-plugin-better-exhaustive-deps", "virtual:db9f23fdeb5d81f74ecfb987409c44e0fcaf93cfd006b5770cece2c7dad59234e7ce370fcd258e70367386255d88d5ab9ba69fdd73a8bd2460aa93a70130216c#npm:1.0.0"],\
+            ["@wogns3623/eslint-plugin-better-exhaustive-deps", "virtual:db9f23fdeb5d81f74ecfb987409c44e0fcaf93cfd006b5770cece2c7dad59234e7ce370fcd258e70367386255d88d5ab9ba69fdd73a8bd2460aa93a70130216c#npm:1.1.0"],\
             ["@yarnpkg/pnpify", "npm:4.0.0-rc.5"],\
             ["@yarnpkg/sdks", "npm:3.0.0-rc.5"],\
             ["autoprefixer", "virtual:db9f23fdeb5d81f74ecfb987409c44e0fcaf93cfd006b5770cece2c7dad59234e7ce370fcd258e70367386255d88d5ab9ba69fdd73a8bd2460aa93a70130216c#npm:10.4.7"],\

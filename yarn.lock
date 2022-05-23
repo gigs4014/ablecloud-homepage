@@ -2257,12 +2257,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wogns3623/eslint-plugin-better-exhaustive-deps@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "@wogns3623/eslint-plugin-better-exhaustive-deps@npm:1.0.0"
+"@wogns3623/eslint-plugin-better-exhaustive-deps@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "@wogns3623/eslint-plugin-better-exhaustive-deps@npm:1.1.0"
   peerDependencies:
     eslint: ">=0.8.0"
-  checksum: f86a421fccb274e90b73688bcdd564ca6497a0920a8651ae874a9afcdd5b767d0aea8609a1277b5126e5c890b4f6a6a84b4244b7d65ca970c8cd85db2ca6a68d
+  checksum: 2124e2c071e651bf2d442fa95e6ef8b30ce790b2b0161d56fd69b1b2cc42adb1c1e7b1a510bffb644c8f00ad3c1b6c1764a1885c2cf897fec8891c2b8d627e51
   languageName: node
   linkType: hard
 
@@ -2413,7 +2413,7 @@ __metadata:
     "@types/node": 17.0.31
     "@types/react": 18.0.8
     "@types/react-dom": 18.0.3
-    "@wogns3623/eslint-plugin-better-exhaustive-deps": ^1.0.0
+    "@wogns3623/eslint-plugin-better-exhaustive-deps": ^1.1.0
     "@yarnpkg/pnpify": ^4.0.0-rc.4
     "@yarnpkg/sdks": ^3.0.0-rc.4
     autoprefixer: ^10.4.7
