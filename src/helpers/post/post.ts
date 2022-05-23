@@ -9,6 +9,7 @@ export const POST_PATH = '_posts';
 export const POST_EXT = 'mdx';
 export const POST_EXT_REGEX = new RegExp(`\.(${POST_EXT})$`);
 
+// Level DB?
 export async function isCategoryDir(dirPath: string[]) {
   try {
     const stat = await fs.stat(path.join(POST_PATH, ...dirPath));

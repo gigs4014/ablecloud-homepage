@@ -77,7 +77,7 @@ const Carousel = forwardRef<CarouselRef, CarouselProps>(
           left: 1,
         });
       }, autoScrollInterval);
-    }, [stopAutoScroll, autoScrollInterval, stopAutoScrollOnEnd]);
+    }, [autoScrollInterval, stopAutoScrollOnEnd]);
 
     // refresh autoScrollInterval when startAutoScroll changes
     useEffect(() => {
@@ -85,7 +85,7 @@ const Carousel = forwardRef<CarouselRef, CarouselProps>(
         stopAutoScroll();
         startAutoScroll();
       }
-    }, [stopAutoScroll, startAutoScroll]);
+    }, [startAutoScroll]);
 
     useMountEffect(() => {
       // start autoScroll when component is mounted && autoScroll is true
@@ -104,7 +104,7 @@ const Carousel = forwardRef<CarouselRef, CarouselProps>(
         stopAutoScroll,
         elementRef,
       }),
-      [startAutoScroll, stopAutoScroll],
+      [startAutoScroll],
     );
 
     return (

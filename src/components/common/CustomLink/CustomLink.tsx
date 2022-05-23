@@ -26,10 +26,10 @@ export default function CustomLink({
   const className = useMemo(
     () =>
       cls`${{
-        'hover:text-blue-400': hoverBehavoir === 'color',
-        'hover:underline': hoverBehavoir === 'underline',
+        'hover:text-blue-400': href && hoverBehavoir === 'color',
+        'hover:underline': href && hoverBehavoir === 'underline',
       }} ${givenClassName}`,
-    [givenClassName, hoverBehavoir],
+    [href, givenClassName, hoverBehavoir],
   );
 
   // Must add passHref to Link

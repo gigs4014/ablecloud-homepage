@@ -1,5 +1,7 @@
 import { DependencyList, EffectCallback, useEffect, useRef } from 'react';
 
+import { useMountEffect } from './useMountEffect';
+
 type SingletonEffectKey = string | readonly unknown[];
 
 class SingletonEffectManager {
@@ -98,7 +100,7 @@ export function useSingletonEffect(
 ) {
   const symbolRef = useRef<symbol>();
 
-  useEffect(() => {
+  useMountEffect(() => {
     symbolRef.current = manager.create(keys);
 
     return () => {
@@ -106,7 +108,7 @@ export function useSingletonEffect(
         manager.remove(keys, symbolRef.current);
       }
     };
-  }, []);
+  });
 
   useEffect(() => {
     if (symbolRef.current && manager.isFirstSymbol(keys, symbolRef.current)) callback();

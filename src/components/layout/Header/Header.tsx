@@ -17,16 +17,65 @@ const menuItems: Array<HeaderMenuItem> = [
     href: '/products/ablestack',
     subMenuItems: [
       {
-        label: 'AbleStack 하이퍼컨버지드 인프라',
+        type: 'group',
+        label: 'Ablestack Hyperconverged Infrastructure',
         href: '/products/ablestack',
+        subMenuItems: [
+          { label: 'Cube - OS', href: '/products/ablestack/cube' },
+          { label: 'Glue - 분산 스토리지', href: '/products/ablestack/glue' },
+          { label: 'Cell - 내장 하이퍼바이저', href: '/products/ablestack/cell' },
+          { label: 'Mold - 인프라 및 IT 운영', href: '/products/ablestack/mold' },
+          { label: 'Koral - 쿠버네티스 클러스터', href: '/products/ablestack/koral' },
+        ],
       },
       {
-        label: 'Ablestack 하이퍼컨버지드 어플라이언스',
-        href: '/products/ablestack/appliance',
+        type: 'group',
+        label: 'Storage',
+        href: '/products/ablestack/glue',
+        subMenuItems: [
+          { label: 'Volume - Block Storage', href: '/products/ablestack/glue/volume' },
+          { label: 'Files - File System', href: '/products/ablestack/glue/files' },
+          { label: 'Object - Object Storage', href: '/products/ablestack/glue/object' },
+        ],
       },
       {
-        label: 'Ablestack 가상데스크탑인프라',
-        href: '/products/ablestack/vdi',
+        type: 'group',
+        label: 'Management',
+        href: '/products/ablestack/management',
+        subMenuItems: [
+          { label: 'Wall - Monitoring platform', href: '/products/ablestack/management/wall' },
+          { label: 'Genie - Continuous Delivery', href: '/products/ablestack/management/genie' },
+          {
+            label: 'Station - Platform as a Service',
+            href: '/products/ablestack/management/station',
+          },
+        ],
+      },
+      {
+        type: 'group',
+        label: 'Network & Security',
+        href: '/products/ablestack/network',
+        subMenuItems: [
+          { label: 'Track - Virtual Networking', href: '/products/ablestack/network/track' },
+          { label: 'Atom - Micro Segmentation', href: '/products/ablestack/network/atom' },
+        ],
+      },
+      {
+        type: 'group',
+        label: 'End user tools',
+        subMenuItems: [
+          { label: 'Works - Desktop as a Service', href: '/products/ablestack/end-user-tools' },
+        ],
+      },
+      {
+        type: 'group',
+        label: 'Hardware',
+        subMenuItems: [
+          {
+            label: 'AbleStack Appliance',
+            href: '/products/ablestack/hardware',
+          },
+        ],
       },
     ],
   },
@@ -164,7 +213,7 @@ export default function Header() {
 
         {/* Sub menu section */}
         {isSubMenuOpen && subMenuItems && (
-          <section className='flex h-full w-full items-center border-t-0.5 border-slate-200 px-4 md:flex'>
+          <section className='flex h-full w-full items-center border-t-0.5 border-slate-200 px-32 md:flex'>
             <SubMenu items={subMenuItems} selectedItem={selectedItem} />
           </section>
         )}

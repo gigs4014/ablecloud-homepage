@@ -90,10 +90,12 @@ export function SubMenu({ items, selectedItem, className }: SubMenuProps) {
         if (item.type === 'group') {
           return (
             <li className='flex flex-col' key={item.href}>
-              <ul className='space-y-4'>
+              <ul className='space-y-4 p-4'>
                 {/* group section header */}
                 <li>
-                  <CustomLink href={item.href} className='p-4 text-sm text-slate-400'>
+                  <CustomLink
+                    href={item.href}
+                    className={`text-lg ${item.href ? 'text-sky-400' : 'text-slate-400'}`}>
                     {item.label}
                   </CustomLink>
                 </li>
