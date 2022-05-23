@@ -13,7 +13,7 @@ const width = ({ theme, breakpoints, colors, negative }, ...args) => {
  * @type {TailwindConfig}
  */
 module.exports = {
-  content: ['./src/pages/**/*.{js,ts,jsx,tsx}', './src/components/**/*.{js,ts,jsx,tsx}'],
+  content: ['./src/{pages,components,templates}/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'class',
   theme: {
     extend: {

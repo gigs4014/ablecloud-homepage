@@ -14,7 +14,7 @@ import { HeaderMenuItem, MenuItem, SubMenu, getSelectedItem } from './Menu';
 const menuItems: Array<HeaderMenuItem> = [
   {
     label: '제품',
-    href: '/products/ablestack',
+    href: '/products',
     subMenuItems: [
       {
         type: 'group',
@@ -26,16 +26,6 @@ const menuItems: Array<HeaderMenuItem> = [
           { label: 'Cell - 내장 하이퍼바이저', href: '/products/ablestack/cell' },
           { label: 'Mold - 인프라 및 IT 운영', href: '/products/ablestack/mold' },
           { label: 'Koral - 쿠버네티스 클러스터', href: '/products/ablestack/koral' },
-        ],
-      },
-      {
-        type: 'group',
-        label: 'Storage',
-        href: '/products/ablestack/glue',
-        subMenuItems: [
-          { label: 'Volume - Block Storage', href: '/products/ablestack/glue/volume' },
-          { label: 'Files - File System', href: '/products/ablestack/glue/files' },
-          { label: 'Object - Object Storage', href: '/products/ablestack/glue/object' },
         ],
       },
       {
@@ -53,6 +43,16 @@ const menuItems: Array<HeaderMenuItem> = [
       },
       {
         type: 'group',
+        label: 'Storage',
+        href: '/products/ablestack/glue',
+        subMenuItems: [
+          { label: 'Volume - Block Storage', href: '/products/ablestack/glue/volume' },
+          { label: 'Files - File System', href: '/products/ablestack/glue/files' },
+          { label: 'Object - Object Storage', href: '/products/ablestack/glue/object' },
+        ],
+      },
+      {
+        type: 'group',
         label: 'Network & Security',
         href: '/products/ablestack/network',
         subMenuItems: [
@@ -64,7 +64,10 @@ const menuItems: Array<HeaderMenuItem> = [
         type: 'group',
         label: 'End user tools',
         subMenuItems: [
-          { label: 'Works - Desktop as a Service', href: '/products/ablestack/end-user-tools' },
+          {
+            label: 'Works - Desktop as a Service',
+            href: '/products/ablestack/end-user-tools/works',
+          },
         ],
       },
       {

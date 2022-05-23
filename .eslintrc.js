@@ -18,5 +18,6 @@ module.exports = {
         checkMemoizedVariableIsStatic: true,
       },
     ],
+    'jsx-a11y/alt-text': 'off',
   },
 };
