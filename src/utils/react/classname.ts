@@ -34,8 +34,3 @@ export function cls(
     return result;
   }, '');
 }
-
-export function pseudo(modifier: string) {
-  return (strings: TemplateStringsArray, ...values: Array<ClassnameValue | ClassnameObject>) =>
-    cls(strings, ...values).replaceAll(/([^\s]+)/g, `${modifier}:$1`);
-}

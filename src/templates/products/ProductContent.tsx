@@ -1,7 +1,7 @@
 import { NamedExoticComponent, PropsWithChildren, ReactNode, memo } from 'react';
 
 import { BaseComponentProps } from '@/types';
-import { cls, pseudo } from '@/utils';
+import { cls } from '@/utils';
 
 export interface ProductContentProps extends BaseComponentProps {
   title?: ReactNode;
@@ -10,13 +10,13 @@ export interface ProductContentProps extends BaseComponentProps {
   imagePosition?: 'first' | 'last';
 }
 
-const oddBefore = pseudo('odd:before');
-
 const ProductContent = memo<PropsWithChildren<ProductContentProps>>(
   ({ title, description, image, imagePosition = 'last', className, children }) => {
     return (
-      <article
-        className={cls`relative flex w-full flex-col items-center py-16 ${oddBefore`absolute inset-0 -z-10 -skew-y-2 bg-slate-100`} ${className}`}>
+      <article className={cls`group relative flex w-full flex-col items-center py-16 ${className}`}>
+        {/* ::before */}
+        <div className='group-odd:absolute group-odd:inset-0 group-odd:-z-10 group-odd:-skew-y-2 group-odd:bg-slate-100' />
+
         <header className='max-w-page-full text-center'>
           {typeof title === 'string' ? <h2>{title}</h2> : title}
           {typeof description === 'string' ? (

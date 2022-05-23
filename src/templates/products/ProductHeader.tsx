@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 
 import { BaseComponentProps } from '@/types';
-import { cls, pseudo } from '@/utils';
+import { cls } from '@/utils';
 
 export interface ProductHeaderProps extends BaseComponentProps {
   title?: string;
@@ -10,8 +10,6 @@ export interface ProductHeaderProps extends BaseComponentProps {
   headerExtra?: ReactNode;
   image?: ReactNode;
 }
-
-const before = pseudo('before');
 
 export default function ProductHeader({
   title,
@@ -22,8 +20,9 @@ export default function ProductHeader({
   className,
 }: ProductHeaderProps) {
   return (
-    <header
-      className={cls`relative flex w-full justify-center py-16 ${before`absolute inset-0 -top-full -z-10 -skew-y-2 bg-slate-100`} ${className}`}>
+    <header className={cls`relative flex w-full justify-center py-16 ${className}`}>
+      {/* ::before */}
+      <div className='absolute inset-0 -top-full -z-10 -skew-y-2 bg-slate-100' />
       <div className='flex max-w-page-full space-x-8'>
         {/* info */}
         <section className='w-1/2'>
