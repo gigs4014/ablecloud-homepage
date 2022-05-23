@@ -15,6 +15,7 @@ module.exports = {
           useSynchronizedState: [false, true],
           useScrollEffect: [true, true],
         },
+        checkMemoizedVariableIsStatic: true,
       },
     ],
   },
