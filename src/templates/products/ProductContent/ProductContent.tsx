@@ -3,6 +3,10 @@ import { NamedExoticComponent, PropsWithChildren, ReactNode, memo } from 'react'
 import { BaseComponentProps } from '@/types';
 import { cls } from '@/utils';
 
+import ProductContentBox from './ProductContentBox';
+import ProductContentGoDetail from './ProductContentGoDetail';
+import ProductContentItemGrid from './ProductContentItemGrid';
+
 export interface ProductContentProps extends BaseComponentProps {
   title?: ReactNode;
   description?: ReactNode;
@@ -17,7 +21,7 @@ const ProductContent = memo<PropsWithChildren<ProductContentProps>>(
         {/* ::before */}
         <div className='group-odd:absolute group-odd:inset-0 group-odd:-z-10 group-odd:-skew-y-2 group-odd:bg-slate-100' />
 
-        <header className='max-w-page-full text-center'>
+        <header className='max-w-page-full pb-16 text-center'>
           {typeof title === 'string' ? <h2>{title}</h2> : title}
           {typeof description === 'string' ? (
             <p className='max-w-screen-md'>{description}</p>
@@ -37,28 +41,15 @@ const ProductContent = memo<PropsWithChildren<ProductContentProps>>(
     );
   },
 ) as NamedExoticComponent<PropsWithChildren<ProductContentProps>> & {
-  Box: typeof ContentBox;
+  Box: typeof ProductContentBox;
+  ItemGrid: typeof ProductContentItemGrid;
+  GoDetail: typeof ProductContentGoDetail;
 };
 
 ProductContent.displayName = 'ProductContent';
 
-interface ContentBoxProps extends BaseComponentProps {
-  title?: ReactNode;
-}
-
-export const ContentBox = memo<PropsWithChildren<ContentBoxProps>>(
-  ({ title, className, children }) => {
-    return (
-      <div className={`${className}`}>
-        <h2>{title}</h2>
-        <p>{children}</p>
-      </div>
-    );
-  },
-);
-
-ContentBox.displayName = 'ContentBox';
-
-ProductContent.Box = ContentBox;
+ProductContent.Box = ProductContentBox;
+ProductContent.ItemGrid = ProductContentItemGrid;
+ProductContent.GoDetail = ProductContentGoDetail;
 
 export default ProductContent;

@@ -3,8 +3,9 @@ import { PropsWithChildren } from 'react';
 import Head from 'next/head';
 
 import { BaseComponentProps } from '@/types';
+import { cls } from '@/utils';
 
-import { ProductHeaderProps } from './ProductHeader';
+import ProductHeader, { ProductHeaderProps } from './ProductHeader';
 
 export interface ProductTemplateProps extends ProductHeaderProps, BaseComponentProps {}
 
@@ -17,8 +18,10 @@ function ProductTemplate({
     <>
       <ProductTemplateHead {...headerContent} />
 
-      <article className={`flex w-full max-w-none flex-col py-32 ${className}`}>
-        <section>{children}</section>
+      <article className={cls`w-full max-w-none py-32 ${className}`}>
+        <ProductHeader {...headerContent} />
+
+        {children}
       </article>
     </>
   );
@@ -29,7 +32,7 @@ export default ProductTemplate;
 function ProductTemplateHead({ title, description, summary }: ProductTemplateProps) {
   return (
     <Head>
-      <title>{title}</title>
+      <title>{[title, summary].filter(Boolean).join(' - ')}</title>
     </Head>
   );
 }

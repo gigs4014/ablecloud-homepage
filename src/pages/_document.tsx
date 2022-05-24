@@ -8,6 +8,7 @@ export default function CustomDocument() {
           href='https://fonts.googleapis.com/css2?family=Noto&display=optional'
           rel='stylesheet'
         />
+        <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet' />
       </Head>
       <body>
         <Main />

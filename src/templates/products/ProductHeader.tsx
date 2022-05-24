@@ -23,7 +23,8 @@ export default function ProductHeader({
     <header className={cls`relative flex w-full justify-center py-16 ${className}`}>
       {/* ::before */}
       <div className='absolute inset-0 -top-full -z-10 -skew-y-2 bg-slate-100' />
-      <div className='flex max-w-page-full space-x-8'>
+
+      <div className='flex max-w-page-full items-center space-x-8'>
         {/* info */}
         <section className='w-1/2'>
           <h4>{title}</h4>

@@ -1,4 +1,3 @@
-//@ts-check
 /** @typedef { import('tailwindcss/tailwind-config').TailwindConfig } TailwindConfig */
 /** @typedef { import('tailwindcss/tailwind-config').TailwindThemeValue } TailwindThemeValue */
 
@@ -18,10 +17,7 @@ module.exports = {
   content: ['./src/{pages,components,templates}/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'class',
   theme: {
-    fontFamily: {
-      // @ts-ignore
-      sans: ['Noto Sans KR', ...defaultTheme.fontFamily.sans],
-    },
+    fontFamily: { sans: ['Noto Sans KR', ...defaultTheme.fontFamily.sans] },
     extend: {
       borderWidth: {
         1: '1px',
@@ -40,5 +36,9 @@ module.exports = {
       pageWidth: width,
     },
   },
-  plugins: [require('@tailwindcss/typography'), require('tailwind-scrollbar')],
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('tailwind-scrollbar'),
+    require('./lib/tailwindcss/plugins/tailwindcss-material-icons'),
+  ],
 };
