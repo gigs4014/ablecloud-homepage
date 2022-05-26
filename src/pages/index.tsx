@@ -13,7 +13,7 @@ import { Container } from '@/components/layout';
 import HEADER_MAIN from '@/public/images/header/header_main.png';
 
 const pageContainerProps = {
-  className: 'my-12 flex flex-col',
+  className: 'mb-12 flex flex-col',
   containerClassName: 'even:bg-slate-100',
 };
 
@@ -40,7 +40,7 @@ export default function HomePage() {
 
       <section className='w-full'>
         {/* Head image */}
-        <header className='flex max-h-128 items-center justify-center overflow-y-hidden'>
+        <header className='relative -top-16 flex max-h-128 items-center justify-center overflow-y-hidden'>
           <div className='w-screen flex-1'>
             <Image
               src={HEADER_MAIN}
@@ -50,7 +50,7 @@ export default function HomePage() {
           </div>
         </header>
 
-        <article className='prose flex max-w-none flex-col text-center prose-headings:m-0'>
+        <article className='prose-lg flex max-w-none flex-col text-center'>
           {/* 제품 소개 */}
           <Container.Page {...pageContainerProps}>
             <header className='max-w-screen-md self-center'>

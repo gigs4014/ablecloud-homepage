@@ -21,7 +21,7 @@ const ProductContent = memo<PropsWithChildren<ProductContentProps>>(
         {/* ::before */}
         <div className='group-odd:absolute group-odd:inset-0 group-odd:-z-10 group-odd:-skew-y-2 group-odd:bg-slate-100' />
 
-        <header className='max-w-page-full pb-16 text-center'>
+        <header className='max-w-page-full px-8 pb-16 text-center'>
           {typeof title === 'string' ? <h2>{title}</h2> : title}
           {typeof description === 'string' ? (
             <p className='max-w-screen-md'>{description}</p>
@@ -30,7 +30,7 @@ const ProductContent = memo<PropsWithChildren<ProductContentProps>>(
           )}
         </header>
 
-        <section className='flex w-full max-w-page-full items-center justify-between space-x-8'>
+        <section className='flex w-full max-w-page-full items-center justify-between space-x-8 px-8'>
           {imagePosition === 'first' && <div className='w-1/2'>{image}</div>}
 
           <div className='flex w-1/2 flex-col'>{children}</div>

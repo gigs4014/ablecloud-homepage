@@ -89,7 +89,7 @@ const items: Record<string, Array<ProductContentGridItem>> = {
 
 export default function ProductHomePage() {
   return (
-    <ProductTemplate {...headerContent} className='prose prose-headings:font-normal'>
+    <ProductTemplate {...headerContent} className='prose-lg'>
       <ProductContent
         title='ABLESTACK은 어떻게 클라우드 환경을 제공할까요?'
         description='ABLESTACK은 단지, 상용 x86 서버에 ABLESTACK Cube OS를 설치하여 활성화 됩니다. 3대 이상의 서버에 Cube OS를 설치하면 제공되는 모든 기능을 사용할 수 있으며, 고가용성을 제공하는 안정적이고 고성능의 클라우드 인프라를 확보할 수 있습니다. 이 모든 과정은 마법사를 통해 단 수십분 내에 완료됩니다.'

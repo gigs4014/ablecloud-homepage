@@ -1,13 +1,10 @@
 import { useEffect, useState } from 'react';
 
-import Image from 'next/image';
 import { useRouter } from 'next/router';
 
 import { useDarkMode } from '@/hooks/common';
 
 import { Button, CustomLink } from '@/components/common';
-
-import Logo from '@/public/logo.png';
 
 import { HeaderMenuItem, MenuItem, SubMenu, getSelectedItem } from './Menu';
 
@@ -153,7 +150,7 @@ export default function Header() {
   }, [asPath]);
 
   return (
-    <header className='fixed z-20 flex h-16 w-full justify-center'>
+    <header className='sticky top-0 z-20 flex h-16 w-full justify-center'>
       <nav
         onMouseEnter={() => setIsSubMenuOpen(true)}
         onMouseLeave={() => {
@@ -162,24 +159,12 @@ export default function Header() {
         }}
         className='group relative flex h-fit max-w-page-full flex-1 flex-col rounded-b-lg bg-white shadow-md'>
         {/* Main menu section */}
-        <section className='flex h-16 w-full items-center justify-between px-6'>
+        <section className='flex h-16 w-full items-center justify-between px-8'>
           {/* Logo */}
           <div className=''>
             <CustomLink href='/'>
-              <div className='h-32 w-52'>
-                <div className='relative h-full max-w-full'>
-                  <Image
-                    src={Logo}
-                    alt='Ablecloud logo'
-                    style={{
-                      filter:
-                        'brightness(0) saturate(100%) invert(56%) sepia(22%) saturate(2062%) hue-rotate(158deg) brightness(104%) contrast(75%)',
-                    }}
-                    layout='fill'
-                    objectFit='contain'
-                    quality={100}
-                  />
-                </div>
+              <div className='flex items-center'>
+                <span className='text-2xl font-bold text-sky-400'>ABLECLOUD</span>
               </div>
             </CustomLink>
           </div>

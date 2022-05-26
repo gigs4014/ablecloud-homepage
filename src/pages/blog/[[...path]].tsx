@@ -46,7 +46,6 @@ export const getStaticProps: GetStaticProps<PostPageProps, PostPageParams> = asy
   params = { path: [] },
 }) => {
   const { path = [] } = params;
-  console.log(params, path);
 
   try {
     const isDirectory = await isCategoryDir(path);

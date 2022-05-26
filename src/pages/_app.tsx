@@ -4,9 +4,13 @@ import Image from 'next/image';
 
 import { MDXProvider } from '@mdx-js/react';
 import { MDXComponents } from 'mdx/types';
+import moment from 'moment';
+import 'moment/locale/ko';
 
 import { Layout } from '@/components/layout';
 import '@/styles/globals.css';
+
+moment.locale('ko');
 
 const ResponsiveImage = (props: any) => <Image alt={props.alt} layout='responsive' {...props} />;
 

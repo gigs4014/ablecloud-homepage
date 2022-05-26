@@ -2,10 +2,8 @@ import Head from 'next/head';
 
 import { BasePageProps, Post } from '@/types';
 
-import { CustomLink } from '@/components/common';
 import { Meta, OpenGraphProps } from '@/components/head';
-
-import Breadcrumb from './PostBreadCrumb';
+import { PostList } from '@/components/post';
 
 export interface PostListTemplateProps {
   posts: Post[];
@@ -13,34 +11,13 @@ export interface PostListTemplateProps {
 
 function PostListTemplate({
   posts,
-  params: { path: category = [] },
+  params: { path: categories = [] },
 }: PostListTemplateProps & BasePageProps<{ path: string[] }>) {
   return (
     <>
-      <PostListTemplateHead posts={posts} category={category} />
+      <PostListTemplateHead posts={posts} categories={categories} />
 
-      <article className='w-full max-w-screen-md py-32'>
-        {/* categories */}
-        <header className='prose mb-16'>
-          <h4>Category</h4>
-          <h1>
-            <Breadcrumb paths={['blog', ...category]} />
-          </h1>
-        </header>
-
-        <ul className='space-y-4'>
-          {posts.map(post => (
-            <li className='flex justify-between' key={post.slug}>
-              <CustomLink
-                href={`/blog/${[...post.categories, post.slug].join('/')}`}
-                className='flex-1'>
-                <h2>{post.title}</h2>
-              </CustomLink>
-              <p>{new Date(post.date).toISOString()}</p>
-            </li>
-          ))}
-        </ul>
-      </article>
+      <PostList posts={posts} categories={categories} />
     </>
   );
 }
@@ -49,18 +26,18 @@ export default PostListTemplate;
 
 export interface PostListTemplateHeadProps {
   posts: Post[];
-  category: string[];
+  categories: string[];
 }
 
-export function PostListTemplateHead({ posts, category = [] }: PostListTemplateHeadProps) {
-  const title = ['에이블클라우드 블로그', category.join('/')].filter(Boolean).join(' - ');
+export function PostListTemplateHead({ posts, categories = [] }: PostListTemplateHeadProps) {
+  const title = ['에이블클라우드 블로그', categories.join('/')].filter(Boolean).join(' - ');
   const openGraph: OpenGraphProps = {
     title,
     image: posts.at(0)?.openGraph.image ?? '',
     type: 'website',
-    url: [process.env.HOST_URL, 'blog', ...category].join('/'),
+    url: [process.env.HOST_URL, 'blog', ...categories].join('/'),
     description: `에이블클라우드 블로그${
-      category.length ? ` ${category}에 해당하는` : ''
+      categories.length ? ` ${categories}에 해당하는` : ''
     } 게시글들을 보여줍니다.`,
   };
 

@@ -18,7 +18,7 @@ function ProductTemplate({
     <>
       <ProductTemplateHead {...headerContent} />
 
-      <article className={cls`w-full max-w-none py-32 ${className}`}>
+      <article className={cls`w-full max-w-none ${className}`}>
         <ProductHeader {...headerContent} />
 
         {children}

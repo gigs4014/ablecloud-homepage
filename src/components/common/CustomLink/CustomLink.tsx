@@ -13,6 +13,7 @@ export interface CustomLinkProps extends BaseComponentProps, Omit<LinkProps, 'hr
    * @default color (change to rgb(96, 165, 250))
    */
   hoverBehavoir?: 'color' | 'underline' | 'none';
+  linkBy?: 'anchor' | 'event';
 }
 
 export default function CustomLink({
@@ -21,11 +22,12 @@ export default function CustomLink({
   className: givenClassName,
   style,
   hoverBehavoir = 'color',
+  linkBy = 'anchor',
   ...linkProps
 }: CustomLinkProps) {
   const className = useMemo(
     () =>
-      cls`${{
+      cls`hover:cursor-pointer ${{
         'hover:text-blue-400': href && hoverBehavoir === 'color',
         'hover:underline': href && hoverBehavoir === 'underline',
       }} ${givenClassName}`,
@@ -33,19 +35,29 @@ export default function CustomLink({
   );
 
   // Must add passHref to Link
-  if (href) {
-    return (
-      <Link href={href} passHref {...linkProps}>
-        <a className={className} style={style}>
-          {children}
-        </a>
-      </Link>
-    );
-  } else {
+  if (href === undefined) {
     return (
       <div className={className} style={style}>
         {children}
       </div>
     );
   }
+
+  if (linkBy === 'event') {
+    return (
+      <Link href={href} passHref {...linkProps}>
+        <div className={className} style={style}>
+          {children}
+        </div>
+      </Link>
+    );
+  }
+
+  return (
+    <Link href={href} passHref {...linkProps}>
+      <a className={className} style={style}>
+        {children}
+      </a>
+    </Link>
+  );
 }

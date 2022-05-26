@@ -24,9 +24,18 @@ export interface PostFrontmatter {
 
 export interface Post {
   slug: string;
-  categories: string[];
   title: string;
-  summary?: string;
+  /**
+   * Subtitle of the post
+   */
+  subheadline?: string;
+  teaser?: string;
+  categories: string[];
+  tags?: string[];
+  header?: {
+    title: string;
+    image_fullwidth: string;
+  };
   author?: string;
   /**
    * Unix timestamp or ISO 8601 string
@@ -34,6 +43,5 @@ export interface Post {
   date: number | string;
   openGraph: OpenGraph;
   content: MDXRemoteSerializeResult;
-  tags?: string[];
   frontmatter?: PostFrontmatter;
 }
