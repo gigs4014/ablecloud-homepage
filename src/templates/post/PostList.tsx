@@ -19,14 +19,13 @@ function PostListTemplate({
     <>
       <PostListTemplateHead posts={posts} category={category} />
 
-      <article className='w-page-full py-32'>
+      <article className='w-full max-w-screen-md py-32'>
         {/* categories */}
-        <header className='prose mb-16 max-w-none'>
-          <h2>
-            <>
-              Category <Breadcrumb paths={['blog', ...category]} />
-            </>
-          </h2>
+        <header className='prose mb-16'>
+          <h4>Category</h4>
+          <h1>
+            <Breadcrumb paths={['blog', ...category]} />
+          </h1>
         </header>
 
         <ul className='space-y-4'>

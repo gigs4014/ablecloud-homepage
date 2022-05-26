@@ -13,7 +13,11 @@ export default function Breadcrumb({ paths, className }: BreadCrumbProps) {
         <span
           key={curr}
           className='flex items-center text-sky-300 after:px-2 after:text-black after:icon-[navigate\_next] last:after:hidden'>
-          <CustomLink href={`/${arr.slice(undefined, i + 1).join('/')}`}>{curr}</CustomLink>
+          <CustomLink
+            href={`/${arr.slice(undefined, i + 1).join('/')}`}
+            className='first-letter:uppercase'>
+            {curr}
+          </CustomLink>
         </span>
       ))}
     </nav>
