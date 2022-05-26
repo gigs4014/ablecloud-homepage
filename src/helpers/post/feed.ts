@@ -28,6 +28,8 @@ export default new FeedGenerator({
   title: '에이블클라우드 블로그',
   description: '제품 및 기능 릴리즈, 관련 기술, 사례 소개',
   copyright: '© ABLECLOUD with ABLESTOR, since 2021',
+  favicon: `${process.env.HOST_URL}/public/favicon.png`,
+  image: `${process.env.HOST_URL}/public/logo.png`,
   link: process.env.HOST_URL,
   feedLinks: {
     atom: `${process.env.HOST_URL}/feed/atom`,

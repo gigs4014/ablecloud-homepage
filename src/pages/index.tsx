@@ -36,7 +36,6 @@ export default function HomePage() {
     <>
       <Head>
         <title>Create Next App</title>
-        <link rel='icon' href='/images/favicon.png' />
       </Head>
 
       <section className='w-full'>

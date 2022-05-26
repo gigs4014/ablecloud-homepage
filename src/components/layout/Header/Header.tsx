@@ -7,7 +7,7 @@ import { useDarkMode } from '@/hooks/common';
 
 import { Button, CustomLink } from '@/components/common';
 
-import Logo from '@/public/images/logo.png';
+import Logo from '@/public/logo.png';
 
 import { HeaderMenuItem, MenuItem, SubMenu, getSelectedItem } from './Menu';
 
@@ -18,7 +18,7 @@ const menuItems: Array<HeaderMenuItem> = [
     subMenuItems: [
       {
         type: 'group',
-        label: 'Ablestack Hyperconverged Infrastructure',
+        label: 'Ablestack HCI',
         href: '/products/ablestack',
         subMenuItems: [
           { label: 'Cube - OS', href: '/products/ablestack/cube' },

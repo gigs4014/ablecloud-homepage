@@ -20,7 +20,7 @@ export default function CustomApp({ Component, pageProps, router }: AppProps) {
       {/* <DarkModeProvider> */}
       <Head>
         <title>에이블클라우드</title>
-        <link rel='icon' href='/images/favicon.png' />
+        <link rel='icon' href='/favicon.png' />
       </Head>
 
       {pageProps.noLayout ? (
