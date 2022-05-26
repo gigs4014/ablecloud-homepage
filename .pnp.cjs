@@ -58,6 +58,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["husky", "npm:8.0.1"],\
             ["lint-staged", "npm:12.4.1"],\
             ["lodash", "npm:4.17.21"],\
+            ["moment", "npm:2.29.3"],\
             ["next", "virtual:db9f23fdeb5d81f74ecfb987409c44e0fcaf93cfd006b5770cece2c7dad59234e7ce370fcd258e70367386255d88d5ab9ba69fdd73a8bd2460aa93a70130216c#npm:12.1.6"],\
             ["next-mdx-remote", "virtual:db9f23fdeb5d81f74ecfb987409c44e0fcaf93cfd006b5770cece2c7dad59234e7ce370fcd258e70367386255d88d5ab9ba69fdd73a8bd2460aa93a70130216c#npm:4.0.3"],\
             ["pinst", "npm:3.0.0"],\
@@ -3844,6 +3845,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["husky", "npm:8.0.1"],\
             ["lint-staged", "npm:12.4.1"],\
             ["lodash", "npm:4.17.21"],\
+            ["moment", "npm:2.29.3"],\
             ["next", "virtual:db9f23fdeb5d81f74ecfb987409c44e0fcaf93cfd006b5770cece2c7dad59234e7ce370fcd258e70367386255d88d5ab9ba69fdd73a8bd2460aa93a70130216c#npm:12.1.6"],\
             ["next-mdx-remote", "virtual:db9f23fdeb5d81f74ecfb987409c44e0fcaf93cfd006b5770cece2c7dad59234e7ce370fcd258e70367386255d88d5ab9ba69fdd73a8bd2460aa93a70130216c#npm:4.0.3"],\
             ["pinst", "npm:3.0.0"],\
@@ -8160,6 +8162,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/mkdirp-npm-1.0.4-37f6ef56b9-a96865108c.zip/node_modules/mkdirp/",\
           "packageDependencies": [\
             ["mkdirp", "npm:1.0.4"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["moment", [\
+        ["npm:2.29.3", {\
+          "packageLocation": "./.yarn/cache/moment-npm-2.29.3-fe4ba99bae-2e780e36d9.zip/node_modules/moment/",\
+          "packageDependencies": [\
+            ["moment", "npm:2.29.3"]\
           ],\
           "linkType": "HARD"\
         }]\
