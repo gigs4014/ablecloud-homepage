@@ -7,7 +7,7 @@ import { Post, PostFrontmatter, RecursiveStructure } from '@/types';
 
 export const POST_PATH = '_posts';
 export const POST_EXT = 'mdx';
-export const POST_EXT_REGEX = new RegExp(`\.(${POST_EXT})$`);
+export const POST_EXT_REGEX = new RegExp(`(\.${POST_EXT})$`);
 
 // Level DB?
 export async function isCategoryDir(dirPath: string[]) {
@@ -53,7 +53,7 @@ export async function getAllSubPaths(basePath: string[] = []): Promise<string[][
     structure: RecursiveStructure<string, undefined>,
     basePath: string[] = [],
   ): string[][] {
-    const paths: string[][] = basePath.length === 0 ? [] : [basePath];
+    const paths: string[][] = [basePath];
 
     for (const [key, value] of Object.entries(structure)) {
       if (value === undefined) {
@@ -121,8 +121,6 @@ class FileNotExistError extends Error {
 }
 
 export async function getPost(slug: string, basePath: string[]): Promise<Post> {
-  const categories = basePath.slice(0, basePath.length - 1);
-
   const filePath = `${path.join(POST_PATH, ...basePath, slug)}.${POST_EXT}`;
   try {
     const fileStat = await fs.stat(filePath);
@@ -150,7 +148,7 @@ export async function getPost(slug: string, basePath: string[]): Promise<Post> {
 
     return {
       slug,
-      categories,
+      categories: basePath,
       title,
       author,
       tags,
@@ -180,9 +178,15 @@ export async function getPosts(basePath: string[]): Promise<Post[]> {
     const dir = await fs.opendir(path.join(POST_PATH, ...basePath));
 
     for await (const dirent of dir) {
-      posts.push(await getPost(dirent.name, basePath));
+      if (dirent.isDirectory()) {
+        posts.push(...(await getPosts([...basePath, dirent.name])));
+      } else if (dirent.isFile()) {
+        posts.push(await getPost(dirent.name.replace(POST_EXT_REGEX, ''), basePath));
+      }
     }
-  } catch (e) {}
+  } catch (e) {
+    console.log('In getPosts', e);
+  }
 
   return posts;
 }

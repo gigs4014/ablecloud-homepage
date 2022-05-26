@@ -6,6 +6,8 @@ import { BasePageProps, Post } from '@/types';
 
 import { Meta } from '@/components/head';
 
+import Breadcrumb from './PostBreadCrumb';
+
 export interface PostDetailTemplateProps {
   post: Post;
 }
@@ -18,16 +20,10 @@ function PostDetailTemplate({ post }: PostDetailTemplateProps & BasePageProps<{ 
         {Meta.OpenGraph(post.openGraph)}
       </Head>
 
-      <article className='prose flex h-full w-full flex-col dark:prose-invert lg:prose-xl lg:prose-p:my-2'>
+      <article className='prose flex h-full w-full flex-col py-32 dark:prose-invert lg:prose-xl lg:prose-p:my-2'>
         <header className='flex flex-col space-y-4 pb-8'>
           {/* breadcrumb */}
-          <nav className='flex items-center last:after:content-[""]'>
-            {post.categories.map(category => (
-              <span key={category} className='after:content-[" > "]'>
-                {category}
-              </span>
-            ))}
-          </nav>
+          <Breadcrumb paths={['blog', ...post.categories]} />
 
           <h1>{post.title}</h1>
 

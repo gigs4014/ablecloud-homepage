@@ -45,21 +45,21 @@ export default function PostPage(props: Readonly<PostPageProps>) {
 export const getStaticProps: GetStaticProps<PostPageProps, PostPageParams> = async ({
   params = { path: [] },
 }) => {
-  const { path } = params;
+  const { path = [] } = params;
+  console.log(params, path);
 
   try {
-    // TODO: use fs.stat to path is a directory
     const isDirectory = await isCategoryDir(path);
-    const slug = path.pop();
+    const slug = path.at(-1);
 
     if (slug === undefined || isDirectory) {
-      console.log('isDirectory');
       // post list
       // TODO: get posts from directory
       const posts = await getPosts(path);
 
       return { props: { isDirectory: true, posts, params } };
     } else {
+      path.pop();
       const post = await getPost(slug, path);
 
       return { props: { post, params } };
