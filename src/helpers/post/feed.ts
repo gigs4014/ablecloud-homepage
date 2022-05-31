@@ -15,7 +15,7 @@ export class FeedGenerator {
       feed.addItem({
         title: post.title,
         id: post.slug,
-        link: `${feed.options.link}/blog/${[...post.categories, post.slug].join('/')}`,
+        link: `${feed.options.link}/${[...post.categories, post.slug].join('/')}`,
         date: new Date(post.date),
       });
     });

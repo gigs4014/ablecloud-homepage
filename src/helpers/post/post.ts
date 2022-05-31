@@ -159,7 +159,7 @@ export async function getPost(slug: string, basePath: string[]): Promise<Post> {
         title,
         type: 'article',
         image: '',
-        url: `${process.env.HOST_URL}/blog/${basePath.join('/')}`,
+        url: `${process.env.HOST_URL}/${basePath.join('/')}/${slug}`,
       },
       content,
       frontmatter: content.frontmatter ?? {},

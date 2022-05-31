@@ -22,7 +22,7 @@ function PostMetadata({ className, linkBy }: PostMetadataProps) {
       className={cls`not-prose flex divide-x-0.5 divide-slate-300 text-sm leading-[0.875rem] ${className}`}>
       {/* category */}
       <CustomLink
-        href={`/${['blog', ...categories].join('/')}`}
+        href={`/${categories.join('/')}`}
         hoverBehavoir='underline'
         linkBy={linkBy}
         className='pr-2 text-sky-500 first-letter:uppercase'>

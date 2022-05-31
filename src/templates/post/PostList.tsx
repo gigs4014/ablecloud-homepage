@@ -30,12 +30,14 @@ export interface PostListTemplateHeadProps {
 }
 
 export function PostListTemplateHead({ posts, categories = [] }: PostListTemplateHeadProps) {
-  const title = ['블로그', categories.join('/'), '에이블클라우드'].filter(Boolean).join(' - ');
+  const title = ['블로그', categories.slice(1).join('/'), '에이블클라우드']
+    .filter(Boolean)
+    .join(' - ');
   const openGraph: OpenGraphProps = {
     title,
     image: posts.at(0)?.openGraph.image ?? '',
     type: 'website',
-    url: [process.env.HOST_URL, 'blog', ...categories].join('/'),
+    url: [process.env.HOST_URL, 'blog', ...categories.slice(1)].join('/'),
     description: `에이블클라우드 블로그${
       categories.length ? ` ${categories}에 해당하는` : ''
     } 게시글들을 보여줍니다.`,
