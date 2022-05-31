@@ -77,7 +77,7 @@ export function SubMenu({ items, selectedItem, className }: SubMenuProps) {
   const subMenuBlock = (subItem: HeaderMenuItem) => (
     <li key={subItem.href} className='space-y-2'>
       <CustomLink href={subItem.href}>
-        <p className=''>{subItem.label}</p>
+        <p className='text-sm'>{subItem.label}</p>
 
         {subItem.description && <p className='text-xs text-slate-300'>{subItem.description}</p>}
       </CustomLink>
@@ -90,12 +90,10 @@ export function SubMenu({ items, selectedItem, className }: SubMenuProps) {
         if (item.type === 'group') {
           return (
             <li className='flex flex-col' key={item.href}>
-              <ul className='space-y-2 p-4'>
+              <ul className='space-y-2 p-4 text-lg'>
                 {/* group section header */}
                 <li>
-                  <CustomLink href={item.href} className={`text-xs text-slate-400`}>
-                    {item.label}
-                  </CustomLink>
+                  <CustomLink href={item.href}>{item.label}</CustomLink>
                 </li>
 
                 {item.subMenuItems.map(subMenuBlock)}
@@ -105,7 +103,7 @@ export function SubMenu({ items, selectedItem, className }: SubMenuProps) {
         } else {
           return (
             <li key={item.href}>
-              <MenuItem {...item} selectedItem={selectedItem} className='p-8' />
+              <MenuItem {...item} selectedItem={selectedItem} className='p-8 text-lg' />
             </li>
           );
         }

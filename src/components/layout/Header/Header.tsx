@@ -8,6 +8,41 @@ import { Button, CustomLink } from '@/components/common';
 
 import { HeaderMenuItem, MenuItem, SubMenu, getSelectedItem } from './Menu';
 
+/**
+## 메뉴 구성
+
+### 제품
+
+- Ablestack HCI
+    - Core (cube, cell, glue)
+    - Management (mold, koral, wall, genie, station)
+- Ablestack Appliance
+
+### 솔루션
+
+- 프라이빗 클라우드
+- 하이브리드 클라우드 (Genie 관련 내용 포함)
+- 웹 애플리케이션
+- 빅데이터
+- 영상감시
+- IoT
+- 엣지 컴퓨팅
+- 인공지능
+- 최종 사용자 컴퓨팅 (VDI, Works 관련 내용 포함)
+
+### 성공 사례
+
+### 회사
+
+- About Us
+- 파트너
+- 문의하기
+
+### 자료
+
+- Blog
+- Docs
+ */
 const menuItems: Array<HeaderMenuItem> = [
   {
     label: '제품',
@@ -18,64 +53,13 @@ const menuItems: Array<HeaderMenuItem> = [
         label: 'Ablestack HCI',
         href: '/products/ablestack',
         subMenuItems: [
-          { label: 'Cube - OS', href: '/products/ablestack/cube' },
-          { label: 'Glue - 분산 스토리지', href: '/products/ablestack/glue' },
-          { label: 'Cell - 내장 하이퍼바이저', href: '/products/ablestack/cell' },
-          { label: 'Mold - 인프라 및 IT 운영', href: '/products/ablestack/mold' },
-          { label: 'Koral - 쿠버네티스 클러스터', href: '/products/ablestack/koral' },
+          { label: 'Core', href: '/products/ablestack/core' },
+          { label: 'Management', href: '/products/ablestack/management' },
         ],
       },
       {
-        type: 'group',
-        label: 'Management',
+        label: 'Ablestack Appliance',
         href: '/products/ablestack/management',
-        subMenuItems: [
-          { label: 'Wall - Monitoring platform', href: '/products/ablestack/management/wall' },
-          { label: 'Genie - Continuous Delivery', href: '/products/ablestack/management/genie' },
-          {
-            label: 'Station - Platform as a Service',
-            href: '/products/ablestack/management/station',
-          },
-        ],
-      },
-      {
-        type: 'group',
-        label: 'Storage',
-        href: '/products/ablestack/glue',
-        subMenuItems: [
-          { label: 'Volume - Block Storage', href: '/products/ablestack/glue/volume' },
-          { label: 'Files - File System', href: '/products/ablestack/glue/files' },
-          { label: 'Object - Object Storage', href: '/products/ablestack/glue/object' },
-        ],
-      },
-      {
-        type: 'group',
-        label: 'Network & Security',
-        href: '/products/ablestack/network',
-        subMenuItems: [
-          { label: 'Track - Virtual Networking', href: '/products/ablestack/network/track' },
-          { label: 'Atom - Micro Segmentation', href: '/products/ablestack/network/atom' },
-        ],
-      },
-      {
-        type: 'group',
-        label: 'End user tools',
-        subMenuItems: [
-          {
-            label: 'Works - Desktop as a Service',
-            href: '/products/ablestack/end-user-tools/works',
-          },
-        ],
-      },
-      {
-        type: 'group',
-        label: 'Hardware',
-        subMenuItems: [
-          {
-            label: 'AbleStack Appliance',
-            href: '/products/ablestack/hardware',
-          },
-        ],
       },
     ],
   },
@@ -88,46 +72,58 @@ const menuItems: Array<HeaderMenuItem> = [
         href: '/solutions/private-cloud',
       },
       {
-        label: '가상화/클라우드',
-        href: '/solutions/virtualization',
+        label: '하이브리드 클라우드',
+        href: '/solutions/hybrid-cloud',
       },
       {
-        label: '감시 시스템',
+        label: '웹 애플리케이션',
+        href: '/solutions/web-app',
+      },
+      {
+        label: '빅데이터',
+        href: '/solutions/bigdata',
+      },
+      {
+        label: '영상감시',
         href: '/solutions/monitoring',
       },
       {
-        label: '해외지사/원격근무',
-        href: '/solutions/remote-work',
+        label: 'IoT',
+        href: '/solutions/iot',
       },
       {
         label: '엣지 컴퓨팅',
         href: '/solutions/edge-computing',
       },
       {
-        label: '클라우드네이티브',
-        href: '/solutions/cloudnative',
+        label: '인공지능',
+        href: '/solutions/ai',
+      },
+      {
+        label: '최종 사용자 컴퓨팅',
+        href: '/solutions/euc',
       },
     ],
   },
   {
-    label: '성공사례',
+    label: '성공 사례',
     href: '/stories',
   },
   {
-    label: '회사소개',
-    href: '/about-us',
+    label: '회사',
+    href: '/company',
     subMenuItems: [
       {
-        label: '채널 협력',
-        href: '/about-us/partners',
+        label: 'About Us',
+        href: '/company',
+      },
+      {
+        label: '파트너',
+        href: '/company/partners',
       },
       {
         label: '문의하기',
-        href: '/about-us#contact',
-      },
-      {
-        label: '찾아오시는길',
-        href: '/about-us#path',
+        href: '/company/contact',
       },
     ],
   },
@@ -193,7 +189,7 @@ export default function Header() {
             /> */}
 
             {/* Demo button */}
-            <CustomLink href='/demo' className='hover:text-white'>
+            <CustomLink href='/demo' hoverBehavoir='none'>
               <Button>데모 요청하기</Button>
             </CustomLink>
           </div>

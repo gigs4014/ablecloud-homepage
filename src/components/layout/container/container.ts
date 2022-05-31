@@ -1,3 +1,4 @@
+import { Card } from './Card';
 import PageContainer, { PageContainerProps } from './PageContainer';
 
 export type Container = {
@@ -6,6 +7,7 @@ export type Container = {
 
 const Container = {
   Page: PageContainer,
+  Card,
 };
 
 export default Container;
