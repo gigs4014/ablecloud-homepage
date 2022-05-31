@@ -148,7 +148,7 @@ export default function HomePage() {
 
         <Container.Article>
           {/* 제품 소개 */}
-          <Container.PageWidth>
+          <Container.PageWidth seperateWithPeer>
             <header className='max-w-screen-md self-center'>
               <h2>Culpa minim tempor.</h2>
               <p>
@@ -190,7 +190,7 @@ export default function HomePage() {
           </Container.PageWidth>
 
           {/* 차별점 */}
-          <Container.PageWidth>
+          <Container.PageWidth seperateWithPeer>
             <h2>에이블 클라우드를 선택해야 하는 이유</h2>
 
             <section className='mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2'>
@@ -229,7 +229,7 @@ export default function HomePage() {
           </Container.PageWidth>
 
           {/* 성공 사례 / 솔루션 */}
-          <Container.PageWidth>
+          <Container.PageWidth seperateWithPeer>
             <h2>성공 사례</h2>
             <p className='mt-4'>Anim enim duis deserunt veniam do aliquip tempor velit.</p>
 
@@ -255,7 +255,7 @@ export default function HomePage() {
           </Container.PageWidth>
 
           {/* 데모 & Contact */}
-          <Container.PageWidth>
+          <Container.PageWidth seperateWithPeer>
             <h2>지금 바로 시작하십시오</h2>
 
             <div className='mt-4 flex w-full justify-center space-x-8'>
@@ -283,7 +283,7 @@ interface BoxProps {
 
 export function Box({ title, image, description, linkText }: BoxProps) {
   return (
-    <Container.Card className='space-y-4 border-0.5 border-gray-200 p-4 text-center'>
+    <Container.Card className='h-full space-y-4 border-0.5 border-gray-200 p-4 text-center'>
       <h3>{title}</h3>
 
       {/* image */}

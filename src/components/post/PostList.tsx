@@ -11,7 +11,6 @@ export interface PostListProps {
 }
 
 function PostList({ posts, categories }: PostListProps) {
-  console.log('category', categories);
   return (
     <article className='w-full max-w-page-full px-8 py-16'>
       {/* categories */}

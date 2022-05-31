@@ -8,7 +8,7 @@ export interface ArticleProps extends BaseComponentProps {
 }
 
 export function Article({
-  enableHeadingMargin,
+  enableHeadingMargin = false,
   className,
   children,
 }: PropsWithChildren<ArticleProps>) {

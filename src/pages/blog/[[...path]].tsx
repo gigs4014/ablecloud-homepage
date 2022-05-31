@@ -46,6 +46,7 @@ export const getStaticProps: GetStaticProps<PostPageProps, PostPageParams> = asy
   params = { path: [] },
 }) => {
   const { path = [] } = params;
+  path.unshift('blog');
 
   try {
     const isDirectory = await isCategoryDir(path);
@@ -70,7 +71,7 @@ export const getStaticProps: GetStaticProps<PostPageProps, PostPageParams> = asy
 };
 
 export const getStaticPaths: GetStaticPaths<PostPageParams> = async () => {
-  const postPaths = await getAllSubPaths();
+  const postPaths = await getAllSubPaths(['blog']);
 
   return {
     paths: postPaths.map(postPath => {

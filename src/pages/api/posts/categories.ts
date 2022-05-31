@@ -8,6 +8,12 @@ type Data = {
 };
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
-  const categories = destructurizePaths(await getStructuredPostPaths());
+  let { basePath = '' } = req.query;
+
+  if (!Array.isArray(basePath)) {
+    basePath = [basePath];
+  }
+
+  const categories = destructurizePaths(await getStructuredPostPaths(basePath));
   res.status(200).json({ categories });
 }

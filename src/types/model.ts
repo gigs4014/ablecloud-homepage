@@ -8,7 +8,13 @@ export interface OpenGraph {
   description?: string;
 }
 
-export interface PostFrontmatter {
+declare type Frontmatter = null | boolean | number | string | FrontmatterArray | FrontmatterObject;
+declare type FrontmatterArray = Array<Frontmatter>;
+declare type FrontmatterObject = {
+  [key: string]: Frontmatter;
+};
+
+export type PostFrontmatter = FrontmatterObject & {
   title?: string;
   author?: string;
   tags?: string[];
@@ -20,7 +26,7 @@ export interface PostFrontmatter {
    * Unix timestamp or ISO 8601 string
    */
   updatedAt?: number | string;
-}
+};
 
 export interface Post {
   slug: string;

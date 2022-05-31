@@ -12,7 +12,10 @@ const fetcher = (...args: Parameters<typeof fetch>) => fetch(...args).then(res =
 
 function PostCategorySelector({ onChange, ...props }: PostCategorySelectorProps) {
   const router = useRouter();
-  const { data, error } = useSwr<{ categories: string[][] }>('/api/posts/categories', fetcher);
+  const { data, error } = useSwr<{ categories: string[][] }>(
+    '/api/posts/categories?basePath=blog',
+    fetcher,
+  );
 
   if (error) {
     console.log(error);

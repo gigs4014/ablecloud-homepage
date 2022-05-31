@@ -147,6 +147,7 @@ export async function getPost(slug: string, basePath: string[]): Promise<Post> {
     } = content.frontmatter as PostFrontmatter;
 
     return {
+      ...content.frontmatter,
       slug,
       categories: basePath,
       title,
@@ -161,6 +162,7 @@ export async function getPost(slug: string, basePath: string[]): Promise<Post> {
         url: `${process.env.HOST_URL}/blog/${basePath.join('/')}`,
       },
       content,
+      frontmatter: content.frontmatter ?? {},
     };
   } catch (e: any) {
     if (e.code !== 'ENOENT') {
