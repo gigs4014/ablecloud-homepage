@@ -1,6 +1,6 @@
 import { ParsedUrlQuery } from 'querystring';
 
 export interface BasePageProps<Q extends ParsedUrlQuery = ParsedUrlQuery> {
-  params: Q;
+  params?: Q;
   noLayout?: boolean;
 }
