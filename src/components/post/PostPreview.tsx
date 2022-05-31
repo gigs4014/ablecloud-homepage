@@ -1,8 +1,8 @@
 import Image from 'next/image';
 
 import { BaseComponentProps, Post } from '@/types';
-import { cls } from '@/utils';
 
+import { Container } from '../layout';
 import { PostContextProvider } from './PostContext';
 import PostMetadata from './PostMetadata';
 
@@ -13,8 +13,7 @@ export interface PostPreviewProps extends BaseComponentProps {
 function PostPreview({ post, className }: PostPreviewProps) {
   return (
     <PostContextProvider value={post}>
-      <section
-        className={cls`rounded-md bg-white p-3 shadow-md transition-all hover:-translate-y-1 hover:scale-102 hover:shadow-xl ${className}`}>
+      <Container.Card className={className}>
         <figure className='mb-4'>
           {post.header ? (
             <Image src={post.header.image_fullwidth} />
@@ -23,12 +22,14 @@ function PostPreview({ post, className }: PostPreviewProps) {
           )}
         </figure>
 
-        <PostMetadata className='mb-2' linkBy='event' />
+        <div className='p-3'>
+          <PostMetadata className='mb-2' linkBy='event' />
 
-        <h2 className='text-xl font-medium'>{post.title}</h2>
+          <h2 className='text-xl font-medium'>{post.title}</h2>
 
-        <p>{post.teaser}</p>
-      </section>
+          <p>{post.teaser}</p>
+        </div>
+      </Container.Card>
     </PostContextProvider>
   );
 }

@@ -2,11 +2,13 @@ import { useRef } from 'react';
 
 import { ImageProps } from 'next/image';
 
+import { ReactNode } from '@mdx-js/react/lib';
+
 import { useScrollEvent } from '@/hooks/common';
 import { useMountEffect } from '@/hooks/utils';
 import { cls } from '@/utils';
 
-import { Box, Button, Carousel, CarouselRef, RowBoxSmall } from '@/components/common';
+import { Button, Carousel, CarouselRef, CustomLink } from '@/components/common';
 import { AspectRatioImage } from '@/components/common/Image/Image';
 import { Container } from '@/components/layout';
 
@@ -29,7 +31,7 @@ import Logo_prosecutor_lg from '@/public/images/logos/logo_prosecutor_lg.png';
 import Logo_yit from '@/public/images/logos/logo_yit.jpg';
 
 const pageContainerProps = {
-  className: 'mb-12 flex flex-col',
+  className: 'my-12 flex flex-col',
   containerClassName: 'even:bg-slate-100',
 };
 
@@ -150,7 +152,7 @@ export default function HomePage() {
           </div>
         </header>
 
-        <article className='prose-lg flex max-w-none flex-col text-center'>
+        <article className='prose-lg flex max-w-none flex-col text-center prose-headings:m-0'>
           {/* 제품 소개 */}
           <Container.Page {...pageContainerProps}>
             <header className='max-w-screen-md self-center'>
@@ -164,26 +166,32 @@ export default function HomePage() {
             </header>
 
             <section className='mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3'>
-              <Box
-                title='Ut ea dolore minim'
-                image={'/images/main/main_1.jpg'}
-                description='Adipisicing occaecat enim tempor minim. Elit cillum in exercitation Lorem minim do voluptate minim elit proident.'
-                linkProps={{ children: <span>Learn more</span> }}
-              />
+              <CustomLink hoverBehavoir='none'>
+                <Box
+                  title='Ut ea dolore minim'
+                  image={'/images/main/main_1.jpg'}
+                  description='Adipisicing occaecat enim tempor minim. Elit cillum in exercitation Lorem minim do voluptate minim elit proident.'
+                  linkText={<span>Learn more</span>}
+                />
+              </CustomLink>
 
-              <Box
-                title='Do dolore sunt id'
-                image={'/images/main/main_2.jpg'}
-                description='Nisi adipisicing ullamco eiusmod eiusmod reprehenderit. Nulla sunt deserunt reprehenderit in amet sint dolore minim.'
-                linkProps={{ children: <span>Learn more</span> }}
-              />
+              <CustomLink hoverBehavoir='none'>
+                <Box
+                  title='Do dolore sunt id'
+                  image={'/images/main/main_2.jpg'}
+                  description='Nisi adipisicing ullamco eiusmod eiusmod reprehenderit. Nulla sunt deserunt reprehenderit in amet sint dolore minim.'
+                  linkText={<span>Learn more</span>}
+                />
+              </CustomLink>
 
-              <Box
-                title='Commodo in ad sint'
-                image={'/images/main/main_3.jpg'}
-                description='Do nisi eiusmod quis excepteur cillum sunt consectetur do. Velit labore minim deserunt ex.'
-                linkProps={{ children: <span>Learn more</span> }}
-              />
+              <CustomLink hoverBehavoir='none'>
+                <Box
+                  title='Commodo in ad sint'
+                  image={'/images/main/main_3.jpg'}
+                  description='Do nisi eiusmod quis excepteur cillum sunt consectetur do. Velit labore minim deserunt ex.'
+                  linkText={<span>Learn more</span>}
+                />
+              </CustomLink>
             </section>
           </Container.Page>
 
@@ -192,33 +200,37 @@ export default function HomePage() {
             <h2>에이블 클라우드를 선택해야 하는 이유</h2>
 
             <section className='mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2'>
-              <RowBoxSmall
-                title='Laborum proident'
-                image={'/images/main/main_4.jpg'}
-                description='Tempor qui eiusmod eiusmod ut ipsum ut sunt adipisicing pariatur aute.'
-                linkProps={{ children: null }}
-              />
+              <CustomLink hoverBehavoir='none'>
+                <RowBoxSmall
+                  title='Laborum proident'
+                  image={'/images/main/main_4.jpg'}
+                  description='Tempor qui eiusmod eiusmod ut ipsum ut sunt adipisicing pariatur aute.'
+                />
+              </CustomLink>
 
-              <RowBoxSmall
-                title='Laborum reprehenderit'
-                image={'/images/main/main_5.jpg'}
-                description='Nulla veniam amet esse aliqua amet laborum labore laborum pariatur proident id sit.'
-                linkProps={{ children: null }}
-              />
+              <CustomLink hoverBehavoir='none'>
+                <RowBoxSmall
+                  title='Laborum reprehenderit'
+                  image={'/images/main/main_5.jpg'}
+                  description='Nulla veniam amet esse aliqua amet laborum labore laborum pariatur proident id sit.'
+                />
+              </CustomLink>
 
-              <RowBoxSmall
-                title='Consequat veniam aliquip'
-                image={'/images/main/main_6.jpg'}
-                description='Aliqua duis enim non et dolor labore aliquip anim consectetur sint nostrud nostrud.'
-                linkProps={{ children: null }}
-              />
+              <CustomLink hoverBehavoir='none'>
+                <RowBoxSmall
+                  title='Consequat veniam aliquip'
+                  image={'/images/main/main_6.jpg'}
+                  description='Aliqua duis enim non et dolor labore aliquip anim consectetur sint nostrud nostrud.'
+                />
+              </CustomLink>
 
-              <RowBoxSmall
-                title='Aliquip Lorem culpa'
-                image={'/images/main/main_7.jpg'}
-                description='Minim qui sint cillum ea pariatur voluptate in mollit. Deserunt dolore dolore aute nostrud.'
-                linkProps={{ children: null }}
-              />
+              <CustomLink hoverBehavoir='none'>
+                <RowBoxSmall
+                  title='Aliquip Lorem culpa'
+                  image={'/images/main/main_7.jpg'}
+                  description='Minim qui sint cillum ea pariatur voluptate in mollit. Deserunt dolore dolore aute nostrud.'
+                />
+              </CustomLink>
             </section>
           </Container.Page>
 
@@ -245,9 +257,11 @@ export default function HomePage() {
             </section>
 
             <Container.Page>
-              <Button bordered className='mt-12'>
-                성공 사례 보기
-              </Button>
+              <CustomLink href='/stories' hoverBehavoir='none'>
+                <Button bordered className='mt-12'>
+                  성공 사례 보기
+                </Button>
+              </CustomLink>
             </Container.Page>
           </section>
 
@@ -256,13 +270,60 @@ export default function HomePage() {
             <h2>지금 바로 시작하십시오</h2>
 
             <div className='mt-4 flex w-full justify-center space-x-8'>
-              <Button>데모 요청하기</Button>
+              <CustomLink href='/demo' hoverBehavoir='none'>
+                <Button>데모 요청하기</Button>
+              </CustomLink>
 
-              <Button bordered>문의하기</Button>
+              <CustomLink href='/company/contact' hoverBehavoir='none'>
+                <Button bordered>문의하기</Button>
+              </CustomLink>
             </div>
           </Container.Page>
         </article>
       </section>
     </>
+  );
+}
+
+interface BoxProps {
+  title: string;
+  image: ReactNode;
+  description: string;
+  linkText?: ReactNode;
+}
+
+export function Box({ title, image, description, linkText }: BoxProps) {
+  return (
+    <Container.Card className='space-y-4 border-0.5 border-gray-200 p-4 text-center'>
+      <h3>{title}</h3>
+
+      {/* image */}
+      <div className='h-40 w-full bg-gray-400' />
+
+      <p>{description}</p>
+
+      <div className='flex items-center justify-center space-x-4 text-sky-500 after:ml-2 after:icon-[east]'>
+        {linkText}
+      </div>
+    </Container.Card>
+  );
+}
+
+export function RowBoxSmall({ title, image, description, linkText }: BoxProps) {
+  return (
+    <Container.Card className='flex flex-1 items-center justify-between space-x-6 border-0.5 border-gray-200 p-4'>
+      {/* image */}
+      <div className='h-32 w-32 flex-shrink-0 bg-gray-400' />
+
+      <div className='space-y-2 self-start text-left'>
+        <h4 className='font-medium'>{title}</h4>
+
+        <p>{description}</p>
+      </div>
+
+      <div className='flex items-center justify-center space-x-4 text-sky-500 after:ml-2 after:icon-[east]'>
+        {linkText}
+      </div>
+    </Container.Card>
   );
 }

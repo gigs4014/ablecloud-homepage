@@ -11,7 +11,7 @@ export interface PostListTemplateProps {
 
 function PostListTemplate({
   posts,
-  params: { path: categories = [] },
+  params: { path: categories = [] } = { path: [] },
 }: PostListTemplateProps & BasePageProps<{ path: string[] }>) {
   return (
     <>
@@ -30,7 +30,7 @@ export interface PostListTemplateHeadProps {
 }
 
 export function PostListTemplateHead({ posts, categories = [] }: PostListTemplateHeadProps) {
-  const title = ['에이블클라우드 블로그', categories.join('/')].filter(Boolean).join(' - ');
+  const title = ['블로그', categories.join('/'), '에이블클라우드'].filter(Boolean).join(' - ');
   const openGraph: OpenGraphProps = {
     title,
     image: posts.at(0)?.openGraph.image ?? '',
