@@ -1,8 +1,22 @@
-import { RefObject, forwardRef, useCallback, useEffect, useImperativeHandle, useRef } from 'react';
+import {
+  ForwardRefExoticComponent,
+  PropsWithChildren,
+  RefAttributes,
+  RefObject,
+  forwardRef,
+  useCallback,
+  useEffect,
+  useImperativeHandle,
+  useRef,
+} from 'react';
 
 import { useMountEffect } from '@/hooks/utils';
 import { BaseComponentProps } from '@/types';
 import { cls } from '@/utils';
+
+function CarouselItem({ children, className }: PropsWithChildren<BaseComponentProps>) {
+  return <li className={cls`snap-center snap-always ${className}`}>{children}</li>;
+}
 
 export interface CarouselProps extends BaseComponentProps {
   children?: React.ReactNode;
@@ -44,20 +58,26 @@ const Carousel = forwardRef<CarouselRef, CarouselProps>(
     const prevCarouselPosition = useRef<number>(0);
     const autoScrollIntervalId = useRef<NodeJS.Timeout>();
 
-    const stopAutoScroll = useCallback(
-      () => autoScrollIntervalId.current && clearInterval(autoScrollIntervalId.current),
-      [],
-    );
+    const stopAutoScroll = useCallback(() => {
+      if (autoScrollIntervalId.current) {
+        // console.log('carousel auto scroll stop');
+        clearInterval(autoScrollIntervalId.current);
+        autoScrollIntervalId.current = undefined;
+      }
+    }, []);
 
     const startAutoScroll = useCallback(() => {
       if (elementRef.current === null || autoScrollIntervalId.current !== undefined) return;
+      // console.log('carousel auto scroll start');
 
       elementRef.current.scrollBy({
         behavior: 'smooth',
-        left: 1,
+        left: 10,
       });
 
+      // console.log('carousel auto scroll add interval');
       autoScrollIntervalId.current = setInterval(() => {
+        // console.log('carousel auto scroll interval');
         if (!elementRef.current) {
           stopAutoScroll();
           return;
@@ -74,9 +94,11 @@ const Carousel = forwardRef<CarouselRef, CarouselProps>(
 
         elementRef.current.scrollBy({
           behavior: 'smooth',
-          left: 1,
+          left: 10,
         });
       }, autoScrollInterval);
+
+      return stopAutoScroll;
     }, [autoScrollInterval, stopAutoScrollOnEnd]);
 
     // refresh autoScrollInterval when startAutoScroll changes
@@ -115,8 +137,11 @@ const Carousel = forwardRef<CarouselRef, CarouselProps>(
       </ul>
     );
   },
-);
+) as ForwardRefExoticComponent<CarouselProps & RefAttributes<CarouselRef>> & {
+  Item: typeof CarouselItem;
+};
 
 Carousel.displayName = 'Carousel';
+Carousel.Item = CarouselItem;
 
 export default Carousel;
