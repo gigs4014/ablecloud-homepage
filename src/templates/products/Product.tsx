@@ -3,7 +3,8 @@ import { PropsWithChildren } from 'react';
 import Head from 'next/head';
 
 import { BaseComponentProps } from '@/types';
-import { cls } from '@/utils';
+
+import { Container } from '@/components/layout';
 
 import ProductHeader, { ProductHeaderProps } from './ProductHeader';
 
@@ -18,11 +19,11 @@ function ProductTemplate({
     <>
       <ProductTemplateHead {...headerContent} />
 
-      <article className={cls`w-full max-w-none ${className}`}>
+      <Container.Article enableHeadingMargin className={className}>
         <ProductHeader {...headerContent} />
 
         {children}
-      </article>
+      </Container.Article>
     </>
   );
 }

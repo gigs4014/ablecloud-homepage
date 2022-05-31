@@ -1,12 +1,14 @@
+import { Article } from './Article';
 import { Card } from './Card';
-import PageContainer, { PageContainerProps } from './PageContainer';
+import { PageWidth, PageWidthProps } from './PageWidth';
 
 export type Container = {
-  PageProps: PageContainerProps;
+  PageWidthProps: PageWidthProps;
 };
 
 const Container = {
-  Page: PageContainer,
+  PageWidth,
+  Article,
   Card,
 };
 

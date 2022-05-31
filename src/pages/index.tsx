@@ -6,7 +6,6 @@ import { ReactNode } from '@mdx-js/react/lib';
 
 import { useScrollEvent } from '@/hooks/common';
 import { useMountEffect } from '@/hooks/utils';
-import { cls } from '@/utils';
 
 import { Button, Carousel, CarouselRef, CustomLink } from '@/components/common';
 import { AspectRatioImage } from '@/components/common/Image/Image';
@@ -29,11 +28,6 @@ import Logo_ksgl from '@/public/images/logos/logo_ksgl.png';
 import Logo_kt_ucloud from '@/public/images/logos/logo_kt_ucloud.png';
 import Logo_prosecutor_lg from '@/public/images/logos/logo_prosecutor_lg.png';
 import Logo_yit from '@/public/images/logos/logo_yit.jpg';
-
-const pageContainerProps = {
-  className: 'my-12 flex flex-col',
-  containerClassName: 'even:bg-slate-100',
-};
 
 interface LogoData {
   title: string;
@@ -152,9 +146,9 @@ export default function HomePage() {
           </div>
         </header>
 
-        <article className='prose-lg flex max-w-none flex-col text-center prose-headings:m-0'>
+        <Container.Article>
           {/* 제품 소개 */}
-          <Container.Page {...pageContainerProps}>
+          <Container.PageWidth>
             <header className='max-w-screen-md self-center'>
               <h2>Culpa minim tempor.</h2>
               <p>
@@ -193,10 +187,10 @@ export default function HomePage() {
                 />
               </CustomLink>
             </section>
-          </Container.Page>
+          </Container.PageWidth>
 
           {/* 차별점 */}
-          <Container.Page {...pageContainerProps}>
+          <Container.PageWidth>
             <h2>에이블 클라우드를 선택해야 하는 이유</h2>
 
             <section className='mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2'>
@@ -232,22 +226,19 @@ export default function HomePage() {
                 />
               </CustomLink>
             </section>
-          </Container.Page>
+          </Container.PageWidth>
 
           {/* 성공 사례 / 솔루션 */}
-          <section
-            className={cls`${pageContainerProps.className} ${pageContainerProps.containerClassName}`}>
-            <Container.Page>
-              <h2>성공 사례</h2>
-              <p className='mt-4'>Anim enim duis deserunt veniam do aliquip tempor velit.</p>
-            </Container.Page>
+          <Container.PageWidth>
+            <h2>성공 사례</h2>
+            <p className='mt-4'>Anim enim duis deserunt veniam do aliquip tempor velit.</p>
 
-            <section className='not-prose mt-8 w-full self-center'>
+            <section className='not-prose relative mt-8 w-screen self-center'>
               <Carousel
                 autoScrollInterval={5000}
                 stopAutoScrollOnEnd
                 ref={carouselRef}
-                className='space-x-16'>
+                className='space-x-16 px-8'>
                 {logos.map(({ src, title, href }, index) => (
                   <Carousel.Item key={index} className='flex-shrink-0'>
                     <AspectRatioImage src={src} alt={`${title} 로고`} height={64} />
@@ -256,17 +247,15 @@ export default function HomePage() {
               </Carousel>
             </section>
 
-            <Container.Page>
-              <CustomLink href='/stories' hoverBehavoir='none'>
-                <Button bordered className='mt-12'>
-                  성공 사례 보기
-                </Button>
-              </CustomLink>
-            </Container.Page>
-          </section>
+            <CustomLink href='/stories' hoverBehavoir='none'>
+              <Button bordered className='mt-12'>
+                성공 사례 보기
+              </Button>
+            </CustomLink>
+          </Container.PageWidth>
 
           {/* 데모 & Contact */}
-          <Container.Page {...pageContainerProps}>
+          <Container.PageWidth>
             <h2>지금 바로 시작하십시오</h2>
 
             <div className='mt-4 flex w-full justify-center space-x-8'>
@@ -278,8 +267,8 @@ export default function HomePage() {
                 <Button bordered>문의하기</Button>
               </CustomLink>
             </div>
-          </Container.Page>
-        </article>
+          </Container.PageWidth>
+        </Container.Article>
       </section>
     </>
   );

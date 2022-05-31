@@ -131,7 +131,7 @@ const Carousel = forwardRef<CarouselRef, CarouselProps>(
 
     return (
       <ul
-        className={cls`flex snap-x snap-mandatory space-x-8 overflow-x-scroll scroll-smooth px-8 scrollbar-none ${className}`}
+        className={cls`flex snap-x snap-mandatory overflow-x-scroll scroll-smooth scrollbar-none ${className}`}
         ref={elementRef}>
         {children}
       </ul>

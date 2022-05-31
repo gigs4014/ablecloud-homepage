@@ -3,7 +3,7 @@ import { PropsWithChildren } from 'react';
 import { BaseComponentProps } from '@/types';
 import { cls } from '@/utils';
 
-interface CardProps extends BaseComponentProps {
+export interface CardProps extends BaseComponentProps {
   hoverBehavoir?: 'none' | 'scale';
 }
 

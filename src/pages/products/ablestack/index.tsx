@@ -12,7 +12,7 @@ const headerContent: ProductHeaderProps = {
 
 export default function AblestackPage() {
   return (
-    <ProductTemplate {...headerContent} className='prose-lg'>
+    <ProductTemplate {...headerContent}>
       <ProductContent title='Cell 하이퍼바이저' image={PlaceholderImg}>
         <ProductContent.Box title='사용자 투명성'>
           Mold 및 Glue에 완벽하게 통합되어 있기 때문에 사용자는 퍼블릭 클라우드와 같이 가상화 환경을
