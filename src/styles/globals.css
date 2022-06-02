@@ -6,5 +6,6 @@
   html {
     @apply font-sans;
     overflow-x: hidden;
+    word-break: keep-all;
   }
 }
