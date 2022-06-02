@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 
-import { ImageProps } from 'next/image';
+import Image, { ImageProps } from 'next/image';
 
 import { ReactNode } from '@mdx-js/react/lib';
 
@@ -138,7 +138,7 @@ export default function HomePage() {
         {/* Head image */}
         <header className='relative -top-16 flex max-h-128 items-center justify-center overflow-y-hidden'>
           <div className='w-screen flex-1'>
-            <AspectRatioImage
+            <Image
               src={HEADER_MAIN}
               layout='responsive'
               alt='비행기가 좌하단에서 우상단으로 날아가고 우상단 모서리에 태극기가 펄럭임. 안창남 비행사의 모습이 희미하게 태극기 아래에 보임'
