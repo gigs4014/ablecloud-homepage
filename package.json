@@ -25,6 +25,7 @@
     "next-mdx-remote": "^4.0.3",
     "react": "18.1.0",
     "react-dom": "18.1.0",
+    "react-responsive": "^9.0.0-beta.8",
     "remark-gfm": "^3.0.1",
     "swr": "^1.3.0"
   },
