@@ -32,7 +32,8 @@ export default new FeedGenerator({
   image: `${process.env.HOST_URL}/public/logo.png`,
   link: process.env.HOST_URL,
   feedLinks: {
-    atom: `${process.env.HOST_URL}/feed/atom`,
-    rss: `${process.env.HOST_URL}/feed/rss`,
+    rss: `${process.env.HOST_URL}/feed`,
+    atom: `${process.env.HOST_URL}/feed?type=atom`,
+    json: `${process.env.HOST_URL}/feed?type=json`,
   },
 });

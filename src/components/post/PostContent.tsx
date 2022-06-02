@@ -6,7 +6,6 @@ import { usePostContext } from './PostContext';
 
 function PostContent(props: DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement>) {
   const { content } = usePostContext();
-  console.log(content);
 
   return (
     <section {...props}>
