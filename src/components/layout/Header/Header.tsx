@@ -2,11 +2,14 @@ import { useEffect, useState } from 'react';
 
 import { useRouter } from 'next/router';
 
+import { useMediaQuery } from 'react-responsive';
+
 import { useDarkMode } from '@/hooks/common';
+import { cls } from '@/utils';
 
 import { Button, CustomLink } from '@/components/common';
 
-import { HeaderMenuItem, MenuItem, SubMenu, getSelectedItem } from './Menu';
+import { HeaderMenuItem, MenuItem, MobileMenuItem, SubMenu, getSelectedItem } from './Menu';
 
 /**
 ## 메뉴 구성
@@ -136,6 +139,8 @@ export default function Header() {
   const { asPath } = useRouter();
   const [subMenuItems, setSubMenuItems] = useState<Array<HeaderMenuItem> | undefined>();
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
+  const [focusedMenu, setFocusedMenu] = useState<HeaderMenuItem | undefined>();
+  const isBigScreen = useMediaQuery({ query: '(min-width: 768px)' });
 
   const [selectedItem, setSelectedItem] = useState<HeaderMenuItem | undefined>();
   const { darkMode, setDarkMode } = useDarkMode();
@@ -147,14 +152,16 @@ export default function Header() {
   return (
     <header className='sticky top-0 z-20 flex h-16 w-full justify-center'>
       <nav
-        onMouseEnter={() => setIsSubMenuOpen(true)}
+        onMouseEnter={() => isBigScreen && setIsSubMenuOpen(true)}
         onMouseLeave={() => {
-          setIsSubMenuOpen(false);
-          setSubMenuItems(undefined);
+          if (isBigScreen) {
+            setIsSubMenuOpen(false);
+            setSubMenuItems(undefined);
+          }
         }}
-        className='group relative flex h-fit max-w-page-full flex-1 flex-col rounded-b-lg bg-white shadow-md'>
+        className='group relative z-20 flex h-fit max-w-page-full flex-1 flex-col bg-white shadow-md md:rounded-b-lg'>
         {/* Main menu section */}
-        <section className='flex h-16 w-full items-center justify-between px-8'>
+        <section className=' flex h-16 w-full items-center justify-between px-8'>
           {/* Logo */}
           <div className=''>
             <CustomLink href='/'>
@@ -164,7 +171,7 @@ export default function Header() {
             </CustomLink>
           </div>
 
-          <div className='flex h-full flex-1 md:flex'>
+          <div className='hidden h-full md:flex md:flex-1'>
             <ul className='flex h-full flex-1 justify-between'>
               {menuItems.map(item => (
                 <li
@@ -178,7 +185,7 @@ export default function Header() {
           </div>
 
           {/* Header right section */}
-          <div className='flex items-center justify-center space-x-4 '>
+          <div className='hidden items-center justify-center space-x-4 md:flex'>
             {/* <Switch
               className='bg-slate-600'
               value={Boolean(darkMode)}
@@ -192,15 +199,56 @@ export default function Header() {
               <Button>데모 요청하기</Button>
             </CustomLink>
           </div>
+
+          <button
+            className='icon-[menu] icon-size-4xl md:hidden'
+            onClick={e => setIsSubMenuOpen(prev => !prev)}
+          />
         </section>
 
         {/* Sub menu section */}
-        {isSubMenuOpen && subMenuItems && (
-          <section className='flex h-full w-full items-center border-t-0.5 border-slate-200 px-32 md:flex'>
-            <SubMenu items={subMenuItems} selectedItem={selectedItem} />
+        {isSubMenuOpen && (
+          <section className=' h-full w-full items-center border-t-0.5 border-slate-200 px-8 md:flex md:px-32'>
+            {/* md breakpoint nav */}
+            {isBigScreen ? (
+              subMenuItems && <SubMenu items={subMenuItems} selectedItem={selectedItem} />
+            ) : (
+              <ul className='h-full w-full'>
+                {menuItems.map(item => (
+                  <li
+                    className='flex-1 py-2'
+                    onClick={e => {
+                      if (focusedMenu === item) {
+                        setFocusedMenu(undefined);
+                        setSubMenuItems(undefined);
+                      } else {
+                        setFocusedMenu(item);
+                        setSubMenuItems(item.subMenuItems);
+                      }
+                    }}
+                    key={item.href}>
+                    <MobileMenuItem
+                      {...item}
+                      focusedItem={focusedMenu}
+                      selectedItem={selectedItem}
+                    />
+                  </li>
+                ))}
+              </ul>
+            )}
           </section>
         )}
       </nav>
+
+      {/* mobile overlay */}
+      {isSubMenuOpen && !isBigScreen && (
+        <div
+          className={cls`fixed inset-0 z-10 bg-gray-500 bg-opacity-75 ${{
+            hidden: !isSubMenuOpen,
+          }}`}
+          onClick={() => setIsSubMenuOpen(false)}
+        />
+      )}
     </header>
   );
 }

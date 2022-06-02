@@ -28,7 +28,42 @@ export type MenuItemProps = HeaderMenuItem &
   BaseComponentProps & {
     selectedItem?: HeaderMenuItem;
     children?: ReactNode;
+    center?: boolean;
   };
+
+export function MobileMenuItem({
+  label,
+  href,
+  children,
+  subMenuItems,
+  focusedItem,
+  selectedItem,
+  className,
+}: MenuItemProps & { focusedItem?: HeaderMenuItem }) {
+  const selected = useMemo(() => {
+    if (selectedItem === undefined) return false;
+    if (href === selectedItem.href) return true;
+    if (subMenuItems && isIncludedItem(subMenuItems, selectedItem)) return true;
+  }, [href, subMenuItems, selectedItem]);
+
+  const focused = useMemo(() => {
+    if (focusedItem === undefined) return false;
+    if (href === focusedItem.href) return true;
+    if (subMenuItems && isIncludedItem(subMenuItems, focusedItem)) return true;
+  }, [href, subMenuItems, focusedItem]);
+
+  return (
+    <div className={cls`group h-full w-full ${className}`}>
+      <div className={cls`flex h-full w-full items-center justify-between`}>
+        <span className={cls`text-lg ${selected && 'text-blue-500'}`}>{label ?? children}</span>
+
+        <button className={focused ? `icon-[expand\\_less]` : `icon-[expand\\_more]`} />
+      </div>
+
+      {focused && subMenuItems && <SubMenu items={subMenuItems} selectedItem={selectedItem} />}
+    </div>
+  );
+}
 
 export function MenuItem({
   label,
@@ -45,10 +80,10 @@ export function MenuItem({
   }, [href, subMenuItems, selectedItem]);
 
   return (
-    <div className={cls`group flex h-full w-full items-center justify-center ${className}`}>
+    <div className={cls`group h-full w-full ${className}`}>
       <CustomLink
         href={href}
-        className={cls`flex h-full w-full items-center justify-center px-2 align-middle ${{
+        className={cls`flex h-full w-full items-center justify-center px-2 ${{
           'text-blue-500': selected,
         }}`}>
         <div>{label ?? children}</div>
@@ -85,29 +120,21 @@ export function SubMenu({ items, selectedItem, className }: SubMenuProps) {
   );
 
   return (
-    <ul className={cls`grid w-full grid-cols-3 rounded-b-lg dark:bg-stone-900 ${className}`}>
-      {items.map(item => {
-        if (item.type === 'group') {
-          return (
-            <li className='flex flex-col' key={item.href}>
-              <ul className='space-y-2 p-4 text-lg'>
-                {/* group section header */}
-                <li>
-                  <CustomLink href={item.href}>{item.label}</CustomLink>
-                </li>
+    <ul className={cls`md:grid md:w-full md:grid-cols-3 md:rounded-b-lg ${className}`}>
+      {items.map(item => (
+        <li className='flex flex-col' key={item.href}>
+          <ul className='space-y-1 py-1 px-2 text-base md:space-y-2 md:p-4 md:text-lg'>
+            {/* group section header */}
+            <li>
+              <CustomLink href={item.href} className=''>
+                {item.label}
+              </CustomLink>
+            </li>
 
-                {item.subMenuItems.map(subMenuBlock)}
-              </ul>
-            </li>
-          );
-        } else {
-          return (
-            <li key={item.href}>
-              <MenuItem {...item} selectedItem={selectedItem} className='p-8 text-lg' />
-            </li>
-          );
-        }
-      })}
+            {item.type === 'group' && item.subMenuItems.map(subMenuBlock)}
+          </ul>
+        </li>
+      ))}
     </ul>
   );
 }
