@@ -65,7 +65,6 @@ const menuItems: Array<HeaderMenuItem> = [
   },
   {
     label: '솔루션',
-    href: '/solutions',
     subMenuItems: [
       {
         label: '프라이빗 클라우드',
@@ -77,7 +76,7 @@ const menuItems: Array<HeaderMenuItem> = [
       },
       {
         label: '웹 애플리케이션',
-        href: '/solutions/web-app',
+        href: '/solutions/webapp',
       },
       {
         label: '빅데이터',
