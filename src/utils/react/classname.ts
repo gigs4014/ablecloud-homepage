@@ -1,6 +1,7 @@
 type Falsy = false | 0 | '' | null | undefined;
 type ClassnameValue = string | Falsy;
 type ClassnameObject = { [key: string]: boolean | Falsy };
+
 /**
  * @description Classname utility
  * - create classname from template literal

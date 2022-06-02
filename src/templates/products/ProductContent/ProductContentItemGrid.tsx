@@ -19,7 +19,7 @@ export interface ProductContentItemGridProps extends BaseComponentProps {
 const ProductContentItemGrid = memo(({ items, className }: ProductContentItemGridProps) => {
   return (
     <div className={cls`not-prose py-8 ${className}`}>
-      <ul className=' grid grid-cols-2 gap-x-8 gap-y-2'>
+      <ul className=' grid gap-x-2 gap-y-2 md:grid-cols-2'>
         {items.map(({ title, summary, description, href }, index) => (
           <li key={`${title}-${index}`}>
             <CustomLink

@@ -170,8 +170,8 @@ export interface Reject {
 //   }
 // }
 
-class Task<T> {
-  private _promise: Promise<any>;
+class Task<T = any> implements PromiseLike<T> {
+  private _promise: Promise<T>;
   private _resolver: Resolver<T> = () => console.warn('Resolver is called before assign!');
   private _rejector: Rejector = () => console.warn('Rejector is called before assign!');
 

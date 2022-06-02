@@ -8,18 +8,21 @@ import { Container } from '@/components/layout';
 
 import ProductHeader, { ProductHeaderProps } from './ProductHeader';
 
-export interface ProductTemplateProps extends ProductHeaderProps, BaseComponentProps {}
+export interface ProductTemplateProps extends ProductHeaderProps, BaseComponentProps {
+  enableProseSpacing?: boolean;
+}
 
 function ProductTemplate({
   children,
   className,
+  enableProseSpacing = true,
   ...headerContent
 }: PropsWithChildren<ProductTemplateProps>) {
   return (
     <>
       <ProductTemplateHead {...headerContent} />
 
-      <Container.Article enableHeadingMargin className={className}>
+      <Container.Article enableProseSpacing={enableProseSpacing} className={className}>
         <ProductHeader {...headerContent} />
 
         {children}

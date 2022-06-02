@@ -18,7 +18,7 @@ export default function StoryHomePage({ stories }: StoryHomePageProps) {
         <title>성공사례 - 에이블클라우드</title>
       </Head>
 
-      <Container.Article className='prose-ul:p-0'>
+      <Container.Article>
         <header className='mt-16'>
           <Container.PageWidth>
             <h2>ABLESTACK과 함께 IT 혁신을 실현한 사례들을 확인해보세요.</h2>

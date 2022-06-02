@@ -1,6 +1,6 @@
 import { ProductContent, ProductHeaderProps, ProductTemplate } from '@/templates';
 
-const PlaceholderImg = <div className='h-128 w-full bg-slate-200' />;
+const PlaceholderImg = <div className='h-96 w-full bg-slate-200' />;
 
 const headerContent: ProductHeaderProps = {
   title: 'Ablestack 클라우드 핵심 인프라',
