@@ -57,7 +57,7 @@ export function MobileMenuItem({
       <div className={cls`flex h-full w-full items-center justify-between`}>
         <span className={cls`text-lg ${selected && 'text-blue-500'}`}>{label ?? children}</span>
 
-        <button className={focused ? `icon-[expand\\_less]` : `icon-[expand\\_more]`} />
+        <button className={String.raw`${focused ? 'icon-[expand_less]' : 'icon-[expand_more]'}`} />
       </div>
 
       {focused && subMenuItems && <SubMenu items={subMenuItems} selectedItem={selectedItem} />}
