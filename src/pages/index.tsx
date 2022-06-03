@@ -146,7 +146,7 @@ export default function HomePage() {
           </div>
         </header>
 
-        <Container.Article>
+        <Container.Article className='text-center'>
           {/* 제품 소개 */}
           <Container.PageWidth seperateWithPeer>
             <header className='max-w-screen-md self-center'>

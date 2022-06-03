@@ -25,7 +25,7 @@ const ProductContentItemGrid = memo(({ items, className }: ProductContentItemGri
             <CustomLink
               href={href}
               className='flex items-center font-bold before:mr-2 before:text-lime-500 before:icon-[task_alt]'>
-              {`${title}${summary && '- ' + summary}`}
+              {`${title}${summary && ' - ' + summary}`}
             </CustomLink>
           </li>
         ))}

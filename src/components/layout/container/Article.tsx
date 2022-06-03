@@ -14,7 +14,7 @@ export function Article({
 }: PropsWithChildren<ArticleProps>) {
   return (
     <article
-      className={cls`prose-lg w-full max-w-none text-center ${
+      className={cls`prose-lg w-full max-w-none ${
         !enableProseSpacing && 'prose-headings:m-0'
       } ${className}`}>
       {children}

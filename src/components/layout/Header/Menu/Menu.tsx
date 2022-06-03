@@ -1,4 +1,4 @@
-import { ReactNode, useMemo } from 'react';
+import { MouseEventHandler, ReactNode, useMemo } from 'react';
 
 import { BaseComponentProps } from '@/types';
 import { cls } from '@/utils';
@@ -24,22 +24,24 @@ export function getSelectedItem(
   }
 }
 
-export type MenuItemProps = HeaderMenuItem &
-  BaseComponentProps & {
-    selectedItem?: HeaderMenuItem;
-    children?: ReactNode;
-    center?: boolean;
-  };
+export interface MenuItemProps extends BaseComponentProps {
+  item: HeaderMenuItem;
+  selectedItem?: HeaderMenuItem;
+  children?: ReactNode;
+  center?: boolean;
+}
 
 export function MobileMenuItem({
-  label,
-  href,
+  item: { label, href, subMenuItems },
   children,
-  subMenuItems,
   focusedItem,
   selectedItem,
+  onClick,
   className,
-}: MenuItemProps & { focusedItem?: HeaderMenuItem }) {
+}: MenuItemProps & {
+  focusedItem?: HeaderMenuItem;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
+}) {
   const selected = useMemo(() => {
     if (selectedItem === undefined) return false;
     if (href === selectedItem.href) return true;
@@ -57,19 +59,26 @@ export function MobileMenuItem({
       <div className={cls`flex h-full w-full items-center justify-between`}>
         <span className={cls`text-lg ${selected && 'text-blue-500'}`}>{label ?? children}</span>
 
-        <button className={String.raw`${focused ? 'icon-[expand_less]' : 'icon-[expand_more]'}`} />
+        <button
+          className={cls`transition-transform icon-[expand_more] ${focused && 'rotate-180'}`}
+          onClick={onClick}
+        />
       </div>
 
-      {focused && subMenuItems && <SubMenu items={subMenuItems} selectedItem={selectedItem} />}
+      {subMenuItems && (
+        <SubMenu
+          items={subMenuItems}
+          selectedItem={selectedItem}
+          // className={cls`overflow-hidden transition-[height] ${focused ? 'h-fit' : 'h-0'}`}
+        />
+      )}
     </div>
   );
 }
 
 export function MenuItem({
-  label,
-  href,
+  item: { label, href, subMenuItems },
   children,
-  subMenuItems,
   selectedItem,
   className,
 }: MenuItemProps) {
@@ -112,7 +121,7 @@ export function SubMenu({ items, selectedItem, className }: SubMenuProps) {
   const subMenuBlock = (subItem: HeaderMenuItem) => (
     <li key={subItem.href} className='space-y-2'>
       <CustomLink href={subItem.href}>
-        <p className='text-sm'>{subItem.label}</p>
+        <p className='pl-4 text-sm'>{subItem.label}</p>
 
         {subItem.description && <p className='text-xs text-slate-300'>{subItem.description}</p>}
       </CustomLink>
@@ -122,10 +131,10 @@ export function SubMenu({ items, selectedItem, className }: SubMenuProps) {
   return (
     <ul className={cls`md:grid md:w-full md:grid-cols-3 md:rounded-b-lg ${className}`}>
       {items.map(item => (
-        <li className='flex flex-col' key={item.href}>
-          <ul className='space-y-1 py-1 px-2 text-base md:space-y-2 md:p-4 md:text-lg'>
+        <li key={item.href}>
+          <ul className='space-y-1 py-1 px-4 text-base md:p-4 md:text-lg'>
             {/* group section header */}
-            <li>
+            <li className='mb-2'>
               <CustomLink href={item.href} className=''>
                 {item.label}
               </CustomLink>

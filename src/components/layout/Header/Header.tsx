@@ -178,7 +178,7 @@ export default function Header() {
                   className='flex-1'
                   onMouseEnter={() => setSubMenuItems(item.subMenuItems)}
                   key={item.href}>
-                  <MenuItem {...item} selectedItem={selectedItem} />
+                  <MenuItem item={item} selectedItem={selectedItem} />
                 </li>
               ))}
             </ul>
@@ -215,22 +215,20 @@ export default function Header() {
             ) : (
               <ul className='h-full w-full'>
                 {menuItems.map(item => (
-                  <li
-                    className='flex-1 py-2'
-                    onClick={e => {
-                      if (focusedMenu === item) {
-                        setFocusedMenu(undefined);
-                        setSubMenuItems(undefined);
-                      } else {
-                        setFocusedMenu(item);
-                        setSubMenuItems(item.subMenuItems);
-                      }
-                    }}
-                    key={item.href}>
+                  <li className='flex-1 py-2' key={item.href}>
                     <MobileMenuItem
-                      {...item}
+                      item={item}
                       focusedItem={focusedMenu}
                       selectedItem={selectedItem}
+                      onClick={e => {
+                        if (focusedMenu === item) {
+                          setFocusedMenu(undefined);
+                          setSubMenuItems(undefined);
+                        } else {
+                          setFocusedMenu(item);
+                          setSubMenuItems(item.subMenuItems);
+                        }
+                      }}
                     />
                   </li>
                 ))}
