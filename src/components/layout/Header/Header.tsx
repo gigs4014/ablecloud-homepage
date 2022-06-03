@@ -7,7 +7,7 @@ import { useMediaQuery } from 'react-responsive';
 import { useDarkMode } from '@/hooks/common';
 import { cls } from '@/utils';
 
-import { Button, CustomLink } from '@/components/common';
+import { CustomLink } from '@/components/common';
 
 import { HeaderMenuItem, MenuItem, MobileMenuItem, SubMenu, getSelectedItem } from './Menu';
 
@@ -48,8 +48,11 @@ import { HeaderMenuItem, MenuItem, MobileMenuItem, SubMenu, getSelectedItem } fr
  */
 const menuItems: Array<HeaderMenuItem> = [
   {
+    label: '회사소개',
+    href: '/company',
+  },
+  {
     label: '제품',
-    href: '/products',
     subMenuItems: [
       {
         type: 'group',
@@ -59,10 +62,6 @@ const menuItems: Array<HeaderMenuItem> = [
           { label: 'Core', href: '/products/ablestack/core' },
           { label: 'Management', href: '/products/ablestack/management' },
         ],
-      },
-      {
-        label: 'Ablestack Appliance',
-        href: '/products/ablestack/management',
       },
     ],
   },
@@ -108,30 +107,21 @@ const menuItems: Array<HeaderMenuItem> = [
     ],
   },
   {
-    label: '성공 사례',
-    href: '/stories',
+    label: '하드웨어 플랫폼',
+    href: '/appliance',
   },
   {
-    label: '회사',
-    href: '/company',
-    subMenuItems: [
-      {
-        label: 'About Us',
-        href: '/company',
-      },
-      {
-        label: '파트너',
-        href: '/company/partners',
-      },
-      {
-        label: '문의하기',
-        href: '/company/contact',
-      },
-    ],
+    label: '파트너',
+    href: '/partners',
+  },
+  {
+    label: '제품문의',
+    href: '/company/contact',
   },
   {
     label: 'Blog',
     href: '/blog',
+    align: 'right',
   },
 ];
 
@@ -161,9 +151,9 @@ export default function Header() {
         }}
         className='group relative z-20 flex h-fit max-w-page-full flex-1 flex-col bg-white shadow-md md:rounded-b-lg'>
         {/* Main menu section */}
-        <section className=' flex h-16 w-full items-center justify-between px-8'>
+        <section className=' flex h-16 w-full items-center justify-between px-4'>
           {/* Logo */}
-          <div className=''>
+          <div className='px-4'>
             <CustomLink href='/'>
               <div className='flex items-center'>
                 <span className='text-2xl font-bold text-sky-400'>ABLECLOUD</span>
@@ -172,10 +162,12 @@ export default function Header() {
           </div>
 
           <div className='hidden h-full md:flex md:flex-1'>
-            <ul className='flex h-full flex-1 justify-between'>
+            <ul className='h-full flex-1'>
               {menuItems.map(item => (
                 <li
-                  className='flex-1'
+                  className={cls`inline-flex h-full w-fit ${
+                    item.align === 'right' && 'float-right'
+                  }`}
                   onMouseEnter={() => setSubMenuItems(item.subMenuItems)}
                   key={item.href}>
                   <MenuItem item={item} selectedItem={selectedItem} />
@@ -185,20 +177,19 @@ export default function Header() {
           </div>
 
           {/* Header right section */}
-          <div className='hidden items-center justify-center space-x-4 md:flex'>
-            {/* <Switch
+          {/* <div className='hidden items-center justify-center space-x-4 md:flex'>
+            <Switch
               className='bg-slate-600'
               value={Boolean(darkMode)}
               setValue={setDarkMode}
               checkedChildren={<Moon className='h-full w-full fill-slate-100' />}
               unCheckedChildren={<Sun className='h-full w-full fill-slate-100' />}
-            /> */}
+            />
 
-            {/* Demo button */}
             <CustomLink href='/demo' hoverBehavoir='none'>
               <Button>데모 요청하기</Button>
             </CustomLink>
-          </div>
+          </div> */}
 
           <button
             className='icon-[menu] icon-size-4xl md:hidden'

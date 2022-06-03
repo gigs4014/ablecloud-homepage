@@ -32,7 +32,7 @@ export interface MenuItemProps extends BaseComponentProps {
 }
 
 export function MobileMenuItem({
-  item: { label, href, subMenuItems },
+  item,
   children,
   focusedItem,
   selectedItem,
@@ -42,57 +42,53 @@ export function MobileMenuItem({
   focusedItem?: HeaderMenuItem;
   onClick?: MouseEventHandler<HTMLButtonElement>;
 }) {
-  const selected = useMemo(() => {
-    if (selectedItem === undefined) return false;
-    if (href === selectedItem.href) return true;
-    if (subMenuItems && isIncludedItem(subMenuItems, selectedItem)) return true;
-  }, [href, subMenuItems, selectedItem]);
+  const { label, href, subMenuItems } = item;
+  const selected = useMemo(
+    () => selectedItem && isIncludedItem(item, selectedItem),
+    [item, selectedItem],
+  );
+  console.log(item.label, selected);
 
-  const focused = useMemo(() => {
-    if (focusedItem === undefined) return false;
-    if (href === focusedItem.href) return true;
-    if (subMenuItems && isIncludedItem(subMenuItems, focusedItem)) return true;
-  }, [href, subMenuItems, focusedItem]);
+  const focused = useMemo(() => item === focusedItem, [item, focusedItem]);
 
   return (
     <div className={cls`group h-full w-full ${className}`}>
-      <div className={cls`flex h-full w-full items-center justify-between`}>
+      <CustomLink href={href} className={cls`flex h-full w-full items-center justify-between`}>
         <span className={cls`text-lg ${selected && 'text-blue-500'}`}>{label ?? children}</span>
 
-        <button
-          className={cls`transition-transform icon-[expand_more] ${focused && 'rotate-180'}`}
-          onClick={onClick}
-        />
-      </div>
+        {subMenuItems && (
+          <button
+            className={cls`transition-transform icon-[expand_more] ${focused && 'rotate-180'}`}
+            onClick={onClick}
+          />
+        )}
+      </CustomLink>
 
       {subMenuItems && (
         <SubMenu
           items={subMenuItems}
           selectedItem={selectedItem}
-          // className={cls`overflow-hidden transition-[height] ${focused ? 'h-fit' : 'h-0'}`}
+          className={cls`overflow-hidden transition-[height] ${focused ? 'h-fit' : 'h-0'}`}
         />
       )}
     </div>
   );
 }
 
-export function MenuItem({
-  item: { label, href, subMenuItems },
-  children,
-  selectedItem,
-  className,
-}: MenuItemProps) {
-  const selected = useMemo(() => {
-    if (selectedItem === undefined) return false;
-    if (href === selectedItem.href) return true;
-    if (subMenuItems && isIncludedItem(subMenuItems, selectedItem)) return true;
-  }, [href, subMenuItems, selectedItem]);
+export function MenuItem({ item, children, selectedItem, className }: MenuItemProps) {
+  const { label, href } = item;
+  const selected = useMemo(
+    () => selectedItem && isIncludedItem(item, selectedItem),
+    [item, selectedItem],
+  );
+
+  console.log(item.label, selected);
 
   return (
     <div className={cls`group h-full w-full ${className}`}>
       <CustomLink
         href={href}
-        className={cls`flex h-full w-full items-center justify-center px-2 ${{
+        className={cls`flex h-full w-full items-center justify-center px-4 ${{
           'text-blue-500': selected,
         }}`}>
         <div>{label ?? children}</div>
@@ -101,11 +97,14 @@ export function MenuItem({
   );
 }
 
-function isIncludedItem(parentItems: Array<HeaderMenuItem>, item: HeaderMenuItem): boolean {
-  for (const subItem of parentItems) {
-    if (subItem.href === item.href) return true;
+function isIncludedItem(parentItem: HeaderMenuItem, item: HeaderMenuItem): boolean {
+  if (parentItem === item) return true;
 
-    if (subItem.subMenuItems && isIncludedItem(subItem.subMenuItems, item)) return true;
+  const { subMenuItems } = parentItem;
+  if (subMenuItems === undefined) return false;
+
+  for (const subItem of subMenuItems) {
+    if (isIncludedItem(subItem, item)) return true;
   }
 
   return false;
@@ -121,7 +120,12 @@ export function SubMenu({ items, selectedItem, className }: SubMenuProps) {
   const subMenuBlock = (subItem: HeaderMenuItem) => (
     <li key={subItem.href} className='space-y-2'>
       <CustomLink href={subItem.href}>
-        <p className='pl-4 text-sm'>{subItem.label}</p>
+        <p
+          className={cls`pl-4 text-sm ${
+            selectedItem && isIncludedItem(subItem, selectedItem) && 'text-blue-500'
+          }`}>
+          {subItem.label}
+        </p>
 
         {subItem.description && <p className='text-xs text-slate-300'>{subItem.description}</p>}
       </CustomLink>
@@ -134,7 +138,10 @@ export function SubMenu({ items, selectedItem, className }: SubMenuProps) {
         <li key={item.href}>
           <ul className='space-y-1 py-1 px-4 text-base md:p-4 md:text-lg'>
             {/* group section header */}
-            <li className='mb-2'>
+            <li
+              className={`mb-2  ${
+                selectedItem && isIncludedItem(item, selectedItem) && 'text-blue-500'
+              }`}>
               <CustomLink href={item.href} className=''>
                 {item.label}
               </CustomLink>
