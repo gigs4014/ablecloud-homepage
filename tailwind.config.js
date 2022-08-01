@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors');
+
 /** @typedef { import('tailwindcss/tailwind-config').TailwindConfig } TailwindConfig */
 /** @typedef { import('tailwindcss/tailwind-config').TailwindThemeValue } TailwindThemeValue */
 
@@ -19,6 +21,18 @@ module.exports = {
   theme: {
     fontFamily: { sans: ['Noto Sans KR', ...defaultTheme.fontFamily.sans] },
     extend: {
+      colors: {
+        transparent: 'transparent',
+        current: 'currentColor',
+        black: colors.black,
+        white: colors.white,
+        gray: colors.slate,
+        green: colors.emerald,
+        purple: colors.violet,
+        yellow: colors.amber,
+        pink: colors.fuchsia,
+        primary: '#2BBBE6',
+      },
       borderWidth: {
         1: '1px',
         0.5: '0.5px',
