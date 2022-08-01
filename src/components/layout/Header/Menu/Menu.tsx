@@ -82,14 +82,14 @@ export function MenuItem({ item, children, selectedItem, className }: MenuItemPr
     [item, selectedItem],
   );
 
-  console.log(item.label, selected);
+  // console.log(item.label, selected);
 
   return (
     <div className={cls`group h-full w-full ${className}`}>
       <CustomLink
         href={href}
         className={cls`flex h-full w-full items-center justify-center px-4 ${{
-          'text-blue-500': selected,
+          'text-primary': selected,
         }}`}>
         <div>{label ?? children}</div>
       </CustomLink>

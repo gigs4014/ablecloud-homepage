@@ -28,7 +28,7 @@ export default function CustomLink({
   const className = useMemo(
     () =>
       cls`hover:cursor-pointer ${{
-        'hover:text-blue-400': href && hoverBehavoir === 'color',
+        'hover:text-primary': href && hoverBehavoir === 'color',
         'hover:underline': href && hoverBehavoir === 'underline',
       }} ${givenClassName}`,
     [href, givenClassName, hoverBehavoir],

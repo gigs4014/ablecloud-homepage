@@ -9,6 +9,8 @@ import { cls } from '@/utils';
 
 import { CustomLink } from '@/components/common';
 
+import Logo_ablecloud_default from '@/public/images/logos/ablecloud_logo_default.svg';
+
 import { HeaderMenuItem, MenuItem, MobileMenuItem, SubMenu, getSelectedItem } from './Menu';
 
 /**
@@ -107,7 +109,7 @@ const menuItems: Array<HeaderMenuItem> = [
     ],
   },
   {
-    label: '하드웨어 플랫폼',
+    label: '성공사례',
     href: '/appliance',
   },
   {
@@ -121,7 +123,6 @@ const menuItems: Array<HeaderMenuItem> = [
   {
     label: 'Blog',
     href: '/blog',
-    align: 'right',
   },
 ];
 
@@ -140,7 +141,7 @@ export default function Header() {
   }, [asPath]);
 
   return (
-    <header className='sticky top-0 z-20 flex h-16 w-full justify-center'>
+    <header className='sticky top-0 z-20 flex h-[110px] w-full items-center justify-center bg-white '>
       <nav
         onMouseEnter={() => isBigScreen && setIsSubMenuOpen(true)}
         onMouseLeave={() => {
@@ -149,32 +150,26 @@ export default function Header() {
             setSubMenuItems(undefined);
           }
         }}
-        className='group relative z-20 flex h-fit max-w-page-full flex-1 flex-col bg-white shadow-md md:rounded-b-lg'>
+        className='group relative z-20 flex h-fit max-w-page-full flex-1 flex-col '>
         {/* Main menu section */}
-        <section className=' flex h-16 w-full items-center justify-between px-4'>
+        <section className='flex w-full items-center justify-between px-4'>
           {/* Logo */}
           <div className='px-4'>
             <CustomLink href='/'>
-              <div className='flex items-center'>
-                <span className='text-2xl font-bold text-sky-400'>ABLECLOUD</span>
-              </div>
+              <Logo_ablecloud_default />
             </CustomLink>
           </div>
 
-          <div className='hidden h-full md:flex md:flex-1'>
-            <ul className='h-full flex-1'>
-              {menuItems.map(item => (
-                <li
-                  className={cls`inline-flex h-full w-fit ${
-                    item.align === 'right' && 'float-right'
-                  }`}
-                  onMouseEnter={() => setSubMenuItems(item.subMenuItems)}
-                  key={item.href}>
-                  <MenuItem item={item} selectedItem={selectedItem} />
-                </li>
-              ))}
-            </ul>
-          </div>
+          <ul>
+            {menuItems.map(item => (
+              <li
+                className={cls`inline-flex w-fit ${item.align === 'right' && 'float-right'}`}
+                onMouseEnter={() => setSubMenuItems(item.subMenuItems)}
+                key={item.href}>
+                <MenuItem item={item} selectedItem={selectedItem} />
+              </li>
+            ))}
+          </ul>
 
           {/* Header right section */}
           {/* <div className='hidden items-center justify-center space-x-4 md:flex'>
@@ -190,11 +185,6 @@ export default function Header() {
               <Button>데모 요청하기</Button>
             </CustomLink>
           </div> */}
-
-          <button
-            className='icon-[menu] icon-size-4xl md:hidden'
-            onClick={e => setIsSubMenuOpen(prev => !prev)}
-          />
         </section>
 
         {/* Sub menu section */}
