@@ -32,6 +32,8 @@ module.exports = {
         yellow: colors.amber,
         pink: colors.fuchsia,
         primary: '#2BBBE6',
+        borderGray: '#D4D4D4',
+        backgroudGray: '#F6F7F9',
       },
       borderWidth: {
         1: '1px',

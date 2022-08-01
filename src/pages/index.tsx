@@ -11,7 +11,6 @@ import { Button, Carousel, CarouselRef, CustomLink } from '@/components/common';
 import { AspectRatioImage } from '@/components/common/Image/Image';
 import { Container } from '@/components/layout';
 
-import HEADER_MAIN from '@/public/images/header/header_main.png';
 import Logo_buan from '@/public/images/logos/logo_buan.jpg';
 import Logo_chuncheon from '@/public/images/logos/logo_chuncheon.jpg';
 import Logo_comwel from '@/public/images/logos/logo_comwel.jpg';
@@ -28,6 +27,15 @@ import Logo_ksgl from '@/public/images/logos/logo_ksgl.png';
 import Logo_kt_ucloud from '@/public/images/logos/logo_kt_ucloud.png';
 import Logo_prosecutor_lg from '@/public/images/logos/logo_prosecutor_lg.png';
 import Logo_yit from '@/public/images/logos/logo_yit.jpg';
+import Logo_Article_3_1 from '@/public/images/new/home/article_3_1.svg';
+import Logo_Article_3_2 from '@/public/images/new/home/article_3_2.svg';
+import Logo_Article_3_3 from '@/public/images/new/home/article_3_3.svg';
+import Logo_Article_3_4 from '@/public/images/new/home/article_3_4.svg';
+// New Image
+import HOME_FIRST_BG from '@/public/images/new/home/home_first_bg.png';
+import Logo_NewConceptDataCenter from '@/public/images/new/home/new_concept_data_center.svg';
+import Logo_SingleCloudPlatForm from '@/public/images/new/home/single_cloud-platform.svg';
+import Logo_WebTotalManagementPlatform from '@/public/images/new/home/web_total_management_platform.svg';
 
 interface LogoData {
   title: string;
@@ -136,10 +144,10 @@ export default function HomePage() {
     <>
       <section className='w-full'>
         {/* Head image */}
-        <header className='relative -top-16 flex max-h-128 items-center justify-center overflow-y-hidden'>
+        <header className='relative  flex max-h-128 items-center justify-center overflow-y-hidden'>
           <div className='w-screen flex-1'>
             <Image
-              src={HEADER_MAIN}
+              src={HOME_FIRST_BG}
               layout='responsive'
               alt='비행기가 좌하단에서 우상단으로 날아가고 우상단 모서리에 태극기가 펄럭임. 안창남 비행사의 모습이 희미하게 태극기 아래에 보임'
             />
@@ -150,40 +158,36 @@ export default function HomePage() {
           {/* 제품 소개 */}
           <Container.PageWidth seperateWithPeer>
             <header className='max-w-screen-md self-center'>
-              <h2>Culpa minim tempor.</h2>
+              <h2>SDDC를 실현하는 HCI 플랫폼</h2>
               <p>
-                Laborum laborum nulla Lorem ad Lorem nulla fugiat consectetur dolore. Officia
-                eiusmod ex pariatur velit. Eiusmod cillum aute sunt excepteur do dolor voluptate.
-                Sint fugiat ex ullamco amet minim irure ullamco ipsum voluptate ullamco. Minim
-                proident dolore adipisicing incididunt.
+                가상화 및 소프트웨어 정의 기술을 이용한 하이퍼 컨버지드 인프라 플랫폼 ABLESTACK을
+                통해 컴퓨팅, 스토리지, 가상화, 네트워크를 사용하고 관리할 수 있는 엔터프라이즈
+                클라우드 데이터센터를 구축할 수 있습니다.
               </p>
             </header>
 
             <section className='mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3'>
               <CustomLink hoverBehavoir='none'>
                 <Box
-                  title='Ut ea dolore minim'
-                  image={'/images/main/main_1.jpg'}
-                  description='Adipisicing occaecat enim tempor minim. Elit cillum in exercitation Lorem minim do voluptate minim elit proident.'
-                  linkText={<span>Learn more</span>}
+                  title='단일 클라우드 플랫폼'
+                  image={<Logo_SingleCloudPlatForm />}
+                  linkText={<span>에이블클라우드가 하는 일</span>}
                 />
               </CustomLink>
 
               <CustomLink hoverBehavoir='none'>
                 <Box
-                  title='Do dolore sunt id'
-                  image={'/images/main/main_2.jpg'}
-                  description='Nisi adipisicing ullamco eiusmod eiusmod reprehenderit. Nulla sunt deserunt reprehenderit in amet sint dolore minim.'
-                  linkText={<span>Learn more</span>}
+                  title='웹기반 통합 관리 플랫폼'
+                  image={<Logo_WebTotalManagementPlatform />}
+                  linkText={<span>자세히 알아보기</span>}
                 />
               </CustomLink>
 
               <CustomLink hoverBehavoir='none'>
                 <Box
-                  title='Commodo in ad sint'
-                  image={'/images/main/main_3.jpg'}
-                  description='Do nisi eiusmod quis excepteur cillum sunt consectetur do. Velit labore minim deserunt ex.'
-                  linkText={<span>Learn more</span>}
+                  title='새로운 개념의 데이터센터'
+                  image={<Logo_NewConceptDataCenter />}
+                  linkText={<span>지금 시작하기</span>}
                 />
               </CustomLink>
             </section>
@@ -191,38 +195,42 @@ export default function HomePage() {
 
           {/* 차별점 */}
           <Container.PageWidth seperateWithPeer>
-            <h2>에이블 클라우드를 선택해야 하는 이유</h2>
+            <h2>ABLESTACK을 선택해야 하는 이유</h2>
 
             <section className='mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2'>
               <CustomLink hoverBehavoir='none'>
                 <RowBoxSmall
-                  title='Laborum proident'
-                  image={'/images/main/main_4.jpg'}
-                  description='Tempor qui eiusmod eiusmod ut ipsum ut sunt adipisicing pariatur aute.'
+                  title='단순한 구조'
+                  image={<Logo_Article_3_1 />}
+                  description='서버, 네트워크, 스토리지를 하나의 장비로 통합하여
+                  물리적인 인프라 구조를 단순화합니다.'
                 />
               </CustomLink>
 
               <CustomLink hoverBehavoir='none'>
                 <RowBoxSmall
-                  title='Laborum reprehenderit'
-                  image={'/images/main/main_5.jpg'}
-                  description='Nulla veniam amet esse aliqua amet laborum labore laborum pariatur proident id sit.'
+                  title='확장성이 우수한 유연 인프라'
+                  image={<Logo_Article_3_2 />}
+                  description='인프라를 추가적으로 확장해야할 때, 무중단 상태로
+                  서버를 추가할 수 있습니다.'
                 />
               </CustomLink>
 
               <CustomLink hoverBehavoir='none'>
                 <RowBoxSmall
-                  title='Consequat veniam aliquip'
-                  image={'/images/main/main_6.jpg'}
-                  description='Aliqua duis enim non et dolor labore aliquip anim consectetur sint nostrud nostrud.'
+                  title='자동 자가 복구'
+                  image={<Logo_Article_3_3 />}
+                  description='물리적인 장애 발생 시에도 중지되지 않으며,
+                  일정 시간 경과 후 자가 복구를 실시합니다.'
                 />
               </CustomLink>
 
               <CustomLink hoverBehavoir='none'>
                 <RowBoxSmall
-                  title='Aliquip Lorem culpa'
-                  image={'/images/main/main_7.jpg'}
-                  description='Minim qui sint cillum ea pariatur voluptate in mollit. Deserunt dolore dolore aute nostrud.'
+                  title='기존 인프라 대비 80% 절감'
+                  image={<Logo_Article_3_4 />}
+                  description='서버, 네트워크, 스토리지를 하나의 장비로 통합하여
+                  물리적인 인프라 구조를 단순화합니다.'
                 />
               </CustomLink>
             </section>
@@ -230,8 +238,8 @@ export default function HomePage() {
 
           {/* 성공 사례 / 솔루션 */}
           <Container.PageWidth seperateWithPeer>
-            <h2>성공 사례</h2>
-            <p className='mt-4'>Anim enim duis deserunt veniam do aliquip tempor velit.</p>
+            <h2>국내 최초의 HCI, ABLESTACK을 선택한 기업들</h2>
+            <p className='mt-4'>에이블스택과 함께하는 파트너 입니다.</p>
 
             <section className='not-prose relative mt-8 w-screen self-center'>
               <Carousel
@@ -277,21 +285,20 @@ export default function HomePage() {
 interface BoxProps {
   title: string;
   image: ReactNode;
-  description: string;
+  description?: string;
   linkText?: ReactNode;
 }
 
-export function Box({ title, image, description, linkText }: BoxProps) {
+export function Box({ title, image, linkText }: BoxProps) {
   return (
-    <Container.Card className='h-full space-y-4 border-0.5 border-gray-200 p-4 text-center'>
+    <Container.Card className='border-borderGrayColor h-full space-y-4 border-1 p-4 text-center'>
       <h3>{title}</h3>
 
       {/* image */}
-      <div className='h-40 w-full bg-gray-400' />
+      {/* <div className='h-40 w-full bg-gray-400' /> */}
+      <div className='flex items-center justify-center'>{image}</div>
 
-      <p>{description}</p>
-
-      <div className='flex items-center justify-center space-x-4 text-sky-500 after:ml-2 after:icon-[east]'>
+      <div className='flex items-center justify-center space-x-4 text-primary after:ml-2 after:icon-[east]'>
         {linkText}
       </div>
     </Container.Card>
@@ -302,7 +309,7 @@ export function RowBoxSmall({ title, image, description, linkText }: BoxProps) {
   return (
     <Container.Card className='flex flex-1 items-center justify-between space-x-6 border-0.5 border-gray-200 p-4'>
       {/* image */}
-      <div className='h-32 w-32 flex-shrink-0 bg-gray-400' />
+      <div className='flex items-center justify-center'>{image}</div>
 
       <div className='space-y-2 self-start text-left'>
         <h4 className='font-medium'>{title}</h4>
