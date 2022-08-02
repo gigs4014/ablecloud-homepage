@@ -147,7 +147,7 @@ export default function HomePage() {
       <section className='w-full'>
         {/* Head image */}
         <header className='relative  flex max-h-128 items-center justify-center overflow-y-hidden'>
-          <div className='w-screen flex-1'>
+          <div className={`w-screen flex-1 `}>
             <Image
               src={HOME_FIRST_BG}
               layout='responsive'
