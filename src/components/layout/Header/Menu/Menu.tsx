@@ -1,11 +1,9 @@
 import { MouseEventHandler, ReactNode, useMemo } from 'react';
 
-import { BaseComponentProps } from '@/types';
+import { BaseComponentProps, HeaderMenuItem } from '@/types';
 import { cls } from '@/utils';
 
 import { CustomLink } from '@/components/common';
-
-import { HeaderMenuItem } from './Menu.types';
 
 export function getSelectedItem(
   items: Array<HeaderMenuItem>,

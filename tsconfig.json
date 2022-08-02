@@ -18,6 +18,8 @@
     "paths": {
       "@/public/*": ["public/*"],
       "@/components/*": ["src/components/*"],
+      "@/constants/*": ["src/constants/*"],
+      "@/constants": ["src/constants"],
       "@/styles/*": ["src/styles/*"],
       "@/hooks/*": ["src/hooks/*"],
       "@/utils": ["src/utils"],
