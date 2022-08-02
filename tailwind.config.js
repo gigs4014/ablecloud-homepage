@@ -34,6 +34,7 @@ module.exports = {
         primary: '#2BBBE6',
         borderGray: '#D4D4D4',
         backgroudGray: '#F6F7F9',
+        backgroundBlue: '#71A6CE',
       },
       borderWidth: {
         1: '1px',

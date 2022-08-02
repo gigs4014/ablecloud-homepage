@@ -11,7 +11,7 @@ import { CustomLink } from '@/components/common';
 
 import Logo_ablecloud_default from '@/public/images/logos/ablecloud_logo_default.svg';
 
-import { HeaderMenuItem, MenuItem, MobileMenuItem, SubMenu, getSelectedItem } from './Menu';
+import { HeaderMenuItem, MenuItem, getSelectedItem } from './Menu';
 
 /**
 ## 메뉴 구성
@@ -163,7 +163,7 @@ export default function Header() {
           <ul>
             {menuItems.map(item => (
               <li
-                className={cls`inline-flex w-fit ${item.align === 'right' && 'float-right'}`}
+                className={cls`inline-flex w-fit`}
                 onMouseEnter={() => setSubMenuItems(item.subMenuItems)}
                 key={item.href}>
                 <MenuItem item={item} selectedItem={selectedItem} />
@@ -186,37 +186,6 @@ export default function Header() {
             </CustomLink>
           </div> */}
         </section>
-
-        {/* Sub menu section */}
-        {isSubMenuOpen && (
-          <section className=' h-full w-full items-center border-t-0.5 border-slate-200 px-8 md:flex md:px-32'>
-            {/* md breakpoint nav */}
-            {isBigScreen ? (
-              subMenuItems && <SubMenu items={subMenuItems} selectedItem={selectedItem} />
-            ) : (
-              <ul className='h-full w-full'>
-                {menuItems.map(item => (
-                  <li className='flex-1 py-2' key={item.href}>
-                    <MobileMenuItem
-                      item={item}
-                      focusedItem={focusedMenu}
-                      selectedItem={selectedItem}
-                      onClick={e => {
-                        if (focusedMenu === item) {
-                          setFocusedMenu(undefined);
-                          setSubMenuItems(undefined);
-                        } else {
-                          setFocusedMenu(item);
-                          setSubMenuItems(item.subMenuItems);
-                        }
-                      }}
-                    />
-                  </li>
-                ))}
-              </ul>
-            )}
-          </section>
-        )}
       </nav>
 
       {/* mobile overlay */}

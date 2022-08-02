@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 
-import Image, { ImageProps } from 'next/image';
+import Image from 'next/image';
 
 import { ReactNode } from '@mdx-js/react/lib';
 
@@ -8,121 +8,123 @@ import { useScrollEvent } from '@/hooks/common';
 import { useMountEffect } from '@/hooks/utils';
 
 import { Button, Carousel, CarouselRef, CustomLink } from '@/components/common';
-import { AspectRatioImage } from '@/components/common/Image/Image';
 import { Container } from '@/components/layout';
 
-import Logo_buan from '@/public/images/logos/logo_buan.jpg';
-import Logo_chuncheon from '@/public/images/logos/logo_chuncheon.jpg';
-import Logo_comwel from '@/public/images/logos/logo_comwel.jpg';
-import Logo_daiso from '@/public/images/logos/logo_daiso.jpg';
-import Logo_gjcf from '@/public/images/logos/logo_gjcf.jpg';
-import Logo_gntel_lg from '@/public/images/logos/logo_gntel_lg.png';
-import Logo_goryeong from '@/public/images/logos/logo_goryeong.png';
-import Logo_gyeongnam from '@/public/images/logos/logo_gyeongnam.jpg';
-import Logo_incheon_edu from '@/public/images/logos/logo_incheon_edu.jpg';
-import Logo_internet_tomato from '@/public/images/logos/logo_internet_tomato.png';
-import Logo_jeonju from '@/public/images/logos/logo_jeonju.jpg';
-import Logo_jeonnam_edu from '@/public/images/logos/logo_jeonnam_edu.jpg';
-import Logo_ksgl from '@/public/images/logos/logo_ksgl.png';
-import Logo_kt_ucloud from '@/public/images/logos/logo_kt_ucloud.png';
-import Logo_prosecutor_lg from '@/public/images/logos/logo_prosecutor_lg.png';
-import Logo_yit from '@/public/images/logos/logo_yit.jpg';
 import Logo_Article_3_1 from '@/public/images/new/home/article_3_1.svg';
 import Logo_Article_3_2 from '@/public/images/new/home/article_3_2.svg';
 import Logo_Article_3_3 from '@/public/images/new/home/article_3_3.svg';
 import Logo_Article_3_4 from '@/public/images/new/home/article_3_4.svg';
+import Logo_Article_4_1 from '@/public/images/new/home/article_4_1.svg';
+import Logo_Article_4_2 from '@/public/images/new/home/article_4_2.svg';
+import Logo_Article_4_3 from '@/public/images/new/home/article_4_3.svg';
+import Logo_Article_4_4 from '@/public/images/new/home/article_4_4.svg';
+import Logo_Article_4_5 from '@/public/images/new/home/article_4_5.svg';
 // New Image
 import HOME_FIRST_BG from '@/public/images/new/home/home_first_bg.png';
 import Logo_NewConceptDataCenter from '@/public/images/new/home/new_concept_data_center.svg';
 import Logo_SingleCloudPlatForm from '@/public/images/new/home/single_cloud-platform.svg';
 import Logo_WebTotalManagementPlatform from '@/public/images/new/home/web_total_management_platform.svg';
+import Logo_Product_Default from '@/public/images/new/product_default.svg';
 
 interface LogoData {
   title: string;
-  src: ImageProps['src'];
+  src: ReactNode;
   href?: string;
 }
 const logos: Array<LogoData> = [
   {
-    title: '부안군',
-    src: Logo_buan,
-    href: 'https://www.buan.go.kr/',
-  },
-  {
-    title: '춘천시',
-    src: Logo_chuncheon,
-    href: 'https://www.chuncheon.go.kr/',
-  },
-  {
-    title: '근로복지공단',
-    src: Logo_comwel,
-    href: 'https://www.comwel.or.kr/',
-  },
-  {
-    title: '다이소',
-    src: Logo_daiso,
-    href: 'https://www.daiso.co.kr/',
-  },
-  {
-    title: '광주문화재단',
-    src: Logo_gjcf,
-    href: 'http://www.gjcf.or.kr/',
-  },
-  {
     title: '지엔텔',
-    src: Logo_gntel_lg,
+    src: <Logo_Article_4_1 />,
     href: 'http://www.lgntel.com/',
   },
   {
-    title: '고령군',
-    src: Logo_goryeong,
-    href: 'https://www.goryeong.go.kr/',
+    title: '지오멕스소프트',
+    src: <Logo_Article_4_2 />,
+    href: 'http://www.lgntel.com/',
   },
   {
-    title: '경상남도',
-    src: Logo_gyeongnam,
-    href: 'https://www.gyeongnam.go.kr/',
+    title: '한국세무사회',
+    src: <Logo_Article_4_3 />,
+    href: 'http://www.lgntel.com/',
   },
   {
-    title: '인천광역시 교육청',
-    src: Logo_incheon_edu,
-    href: 'https://www.ice.go.kr/',
-  },
-  {
-    title: '인터넷 토마토',
-    src: Logo_internet_tomato,
-    href: 'https://www.emato.net/',
-  },
-  {
-    title: '전주시',
-    src: Logo_jeonju,
-    href: 'https://www.jeonju.go.kr/',
-  },
-  {
-    title: '전라남도 교육청',
-    src: Logo_jeonnam_edu,
-    href: 'https://www.jne.go.kr/',
-  },
-  {
-    title: '한국 스마트그리드 사업단',
-    src: Logo_ksgl,
-    href: 'https://www.smartgrid.or.kr',
-  },
-  {
-    title: 'kt ucloud biz',
-    src: Logo_kt_ucloud,
-    href: 'https://cloud.kt.com/',
+    title: '근로복지공단',
+    src: <Logo_Article_4_4 />,
+    href: 'https://www.comwel.or.kr/',
   },
   {
     title: '대검찰청',
-    src: Logo_prosecutor_lg,
+    src: <Logo_Article_4_5 />,
     href: 'https://www.spo.go.kr/',
   },
-  {
-    title: '여주대학교',
-    src: Logo_yit,
-    href: 'https://www.yit.ac.kr/',
-  },
+  // {
+  //   title: '부안군',
+  //   src: Logo_buan,
+  //   href: 'https://www.buan.go.kr/',
+  // },
+  // {
+  //   title: '춘천시',
+  //   src: Logo_chuncheon,
+  //   href: 'https://www.chuncheon.go.kr/',
+  // },
+
+  // {
+  //   title: '다이소',
+  //   src: Logo_daiso,
+  //   href: 'https://www.daiso.co.kr/',
+  // },
+  // {
+  //   title: '광주문화재단',
+  //   src: Logo_gjcf,
+  //   href: 'http://www.gjcf.or.kr/',
+  // },
+
+  // {
+  //   title: '고령군',
+  //   src: Logo_goryeong,
+  //   href: 'https://www.goryeong.go.kr/',
+  // },
+  // {
+  //   title: '경상남도',
+  //   src: Logo_gyeongnam,
+  //   href: 'https://www.gyeongnam.go.kr/',
+  // },
+  // {
+  //   title: '인천광역시 교육청',
+  //   src: Logo_incheon_edu,
+  //   href: 'https://www.ice.go.kr/',
+  // },
+  // {
+  //   title: '인터넷 토마토',
+  //   src: Logo_internet_tomato,
+  //   href: 'https://www.emato.net/',
+  // },
+  // {
+  //   title: '전주시',
+  //   src: Logo_jeonju,
+  //   href: 'https://www.jeonju.go.kr/',
+  // },
+  // {
+  //   title: '전라남도 교육청',
+  //   src: Logo_jeonnam_edu,
+  //   href: 'https://www.jne.go.kr/',
+  // },
+  // {
+  //   title: '한국 스마트그리드 사업단',
+  //   src: Logo_ksgl,
+  //   href: 'https://www.smartgrid.or.kr',
+  // },
+  // {
+  //   title: 'kt ucloud biz',
+  //   src: Logo_kt_ucloud,
+  //   href: 'https://cloud.kt.com/',
+  // },
+
+  // {
+  //   title: '여주대학교',
+  //   src: Logo_yit,
+  //   href: 'https://www.yit.ac.kr/',
+  // },
 ];
 
 export default function HomePage() {
@@ -158,7 +160,8 @@ export default function HomePage() {
           {/* 제품 소개 */}
           <Container.PageWidth seperateWithPeer>
             <header className='max-w-screen-md self-center'>
-              <h2>SDDC를 실현하는 HCI 플랫폼</h2>
+              <div className={'text-[30px] font-[500]'}>SDDC를 실현하는 HCI 플랫폼</div>
+
               <p>
                 가상화 및 소프트웨어 정의 기술을 이용한 하이퍼 컨버지드 인프라 플랫폼 ABLESTACK을
                 통해 컴퓨팅, 스토리지, 가상화, 네트워크를 사용하고 관리할 수 있는 엔터프라이즈
@@ -195,8 +198,7 @@ export default function HomePage() {
 
           {/* 차별점 */}
           <Container.PageWidth seperateWithPeer>
-            <h2>ABLESTACK을 선택해야 하는 이유</h2>
-
+            <div className={'text-[30px] font-[500]'}>ABLESTACK을 선택해야 하는 이유</div>
             <section className='mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2'>
               <CustomLink hoverBehavoir='none'>
                 <RowBoxSmall
@@ -236,9 +238,11 @@ export default function HomePage() {
             </section>
           </Container.PageWidth>
 
-          {/* 성공 사례 / 솔루션 */}
+          {/* 파트너 */}
           <Container.PageWidth seperateWithPeer>
-            <h2>국내 최초의 HCI, ABLESTACK을 선택한 기업들</h2>
+            <div className={'text-[30px] font-[500]'}>
+              국내 최초의 HCI, ABLESTACK을 선택한 기업들
+            </div>
             <p className='mt-4'>에이블스택과 함께하는 파트너 입니다.</p>
 
             <section className='not-prose relative mt-8 w-screen self-center'>
@@ -249,24 +253,58 @@ export default function HomePage() {
                 className='space-x-16 px-8'>
                 {logos.map(({ src, title, href }, index) => (
                   <Carousel.Item key={index} className='flex-shrink-0'>
-                    <AspectRatioImage src={src} alt={`${title} 로고`} height={64} />
+                    {src}
                   </Carousel.Item>
                 ))}
               </Carousel>
             </section>
 
             <CustomLink href='/stories' hoverBehavoir='none'>
-              <Button bordered className='mt-12'>
-                성공 사례 보기
+              <Button solid className='mt-12'>
+                파트너 확인하기
               </Button>
             </CustomLink>
           </Container.PageWidth>
 
           {/* 데모 & Contact */}
           <Container.PageWidth seperateWithPeer>
-            <h2>지금 바로 시작하십시오</h2>
+            <div className={'text-[30px] font-[500]'}>
+              보다 더 자세한 자료와 컨설팅을 받아보세요.
+            </div>
 
-            <div className='mt-4 flex w-full justify-center space-x-8'>
+            <p className='mt-3.5'>
+              단순한 구조로 IT 서비스에 필요한 모든 인프라를 제공할 뿐만 아니라, <br /> 단 1시간
+              이내에 사용자 사이트에 HCI 인프라를 구성하고 클라우드 서비스를 시작할 수 있습니다.
+              <br />
+              에이블스택을 바로 사용해보세요.
+            </p>
+
+            <div className={'flex gap-10'}>
+              <RowBoxAction
+                title={'Case Study'}
+                image={<Logo_Product_Default />}
+                description={'에이블스택을 최대로 활용하는 파트너사들의 케이스를 확인해보세요.'}
+                buttonTitle={'지금 시작하기'}
+                href={''}
+              />
+              <RowBoxAction
+                title={'데모 체험'}
+                image={<Logo_Product_Default />}
+                description={'에이블스택을 먼저 체험하고, 사용해보세요.'}
+                buttonTitle={'기술 지원 및 데모 요청'}
+                href={''}
+              />
+              <RowBoxAction
+                title={'전문가와 상담'}
+                image={<Logo_Product_Default />}
+                description={
+                  '에이블스택 전문가와 직접 상담해보세요. 여러분에게 최적화된 솔루션 구축을 약속드려요.'
+                }
+                buttonTitle={'문의하러 가기'}
+                href={''}
+              />
+            </div>
+            {/* <div className='mt-4 flex w-full justify-center space-x-8'>
               <CustomLink href='/demo' hoverBehavoir='none'>
                 <Button>데모 요청하기</Button>
               </CustomLink>
@@ -274,7 +312,23 @@ export default function HomePage() {
               <CustomLink href='/company/contact' hoverBehavoir='none'>
                 <Button bordered>문의하기</Button>
               </CustomLink>
-            </div>
+            </div> */}
+          </Container.PageWidth>
+          <Container.PageWidth containerClassName={'bg-backgroundBlue'} className={'text-white'}>
+            <div className={'text-[30px] font-[500]'}>ABLESTACK 하드웨어 플랫폼</div>
+
+            <p className='mt-3.5'>
+              ABLESTACK은 소프트웨어 HCI 플랫폼으로, 고객사에 성공적으로 HCI 기반 클라우드 환경을
+              구성하기 위해서는 <br /> ABLESTACK이 설치되어 실행되는 서버 하드웨어가 필요합니다.
+              ABLESTACK은 자사 어플라이언스와 함께
+              <br /> 다양한 OEM 파트너, 서드파티 서버 공급업체의 서버 플랫폼과 호환됩니다.
+            </p>
+
+            <CustomLink href='/stories' hoverBehavoir='none'>
+              <Button bordered className='mt-12 bg-white'>
+                어플라이언스 보러가기
+              </Button>
+            </CustomLink>
           </Container.PageWidth>
         </Container.Article>
       </section>
@@ -317,8 +371,35 @@ export function RowBoxSmall({ title, image, description, linkText }: BoxProps) {
         <p>{description}</p>
       </div>
 
-      <div className='flex items-center justify-center space-x-4 text-sky-500 after:ml-2 after:icon-[east]'>
-        {linkText}
+      <div className='flex items-center justify-center space-x-4'>{linkText}</div>
+    </Container.Card>
+  );
+}
+
+export function RowBoxAction({
+  title,
+  image,
+  description,
+  buttonTitle,
+  href,
+}: {
+  title: string;
+  image: ReactNode;
+  description: string;
+  buttonTitle: string;
+  href: string;
+}) {
+  return (
+    <Container.Card className='border-borderGrayColor h-full border-1 text-center'>
+      {image}
+
+      <div className={'px-[60px] pb-10 pt-8'}>
+        <div className={'mb-6 text-xl'}>{title}</div>
+
+        <div className='mb-[40px] text-base'>{description}</div>
+        <Button bordered onClick={() => {}}>
+          {buttonTitle}
+        </Button>
       </div>
     </Container.Card>
   );

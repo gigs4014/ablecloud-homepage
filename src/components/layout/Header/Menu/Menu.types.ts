@@ -5,11 +5,6 @@ interface BaseHeaderMenuItem {
   description?: string;
   type?: 'group';
   href?: string;
-
-  /**
-   * @default "left"
-   */
-  align?: 'left' | 'right';
   subMenuItems?: Array<HeaderMenuItem>;
 }
 
