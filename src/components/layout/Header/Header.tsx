@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 
 import { menuItems } from '@/constants';
 import { useMediaQuery } from 'react-responsive';
+import { v4 as uuid } from 'uuid';
 
 import { useDarkMode } from '@/hooks/common';
 import { HeaderMenuItem } from '@/types';
@@ -29,6 +30,9 @@ export default function Header() {
     setSelectedItem(getSelectedItem(menuItems, asPath));
   }, [asPath]);
 
+  useEffect(() => {
+    console.log({ selectedItem });
+  }, [selectedItem]);
   return (
     <header className='sticky top-0 z-20 flex h-[110px] w-full items-center justify-center bg-white '>
       <nav
@@ -39,7 +43,7 @@ export default function Header() {
             setSubMenuItems(undefined);
           }
         }}
-        className='group relative z-20 flex h-fit max-w-page-full flex-1 flex-col '>
+        className='group relative z-20 flex h-fit max-w-page-full flex-1 flex-col flex-nowrap '>
         {/* Main menu section */}
         <section className='flex w-full items-center justify-between px-4'>
           {/* Logo */}
@@ -54,7 +58,7 @@ export default function Header() {
               <li
                 className={cls`inline-flex w-fit`}
                 onMouseEnter={() => setSubMenuItems(item.subMenuItems)}
-                key={item.href}>
+                key={uuid()}>
                 <MenuItem item={item} selectedItem={selectedItem} />
               </li>
             ))}

@@ -113,3 +113,80 @@ export const menuItems: Array<HeaderMenuItem> = [
     href: '/blog',
   },
 ];
+
+export const footerMenus = [
+  {
+    label: '에이블클라우드',
+    subMenuItems: [
+      {
+        label: '회사소개',
+        href: '/company',
+      },
+    ],
+  },
+  {
+    label: '제품',
+    subMenuItems: [
+      {
+        label: 'ABLESTACK의 탄생',
+        href: '/company',
+      },
+      {
+        label: 'ABLESTACK 소개',
+        href: '/company',
+      },
+    ],
+  },
+  {
+    label: '솔루션',
+    subMenuItems: [
+      {
+        label: '-',
+        href: '/company',
+      },
+      {
+        label: '-',
+        href: '/company',
+      },
+    ],
+  },
+  {
+    label: '성공사례',
+    subMenuItems: [
+      {
+        label: '-',
+        href: '/company',
+      },
+      {
+        label: '-',
+        href: '/company',
+      },
+    ],
+  },
+  {
+    label: '파트너',
+    subMenuItems: [
+      {
+        label: '파트너 네트워크',
+        href: '/company',
+      },
+    ],
+  },
+  {
+    label: '지원',
+    subMenuItems: [
+      {
+        label: '데모 신청하기',
+        href: '/company',
+      },
+      {
+        label: '전문가와 상담하기',
+        href: '/company',
+      },
+      {
+        label: '기술 지원 받기',
+        href: '/company',
+      },
+    ],
+  },
+];
