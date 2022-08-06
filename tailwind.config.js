@@ -19,6 +19,36 @@ module.exports = {
   content: ['./src/{pages,components,templates}/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'class',
   theme: {
+    backgroundImage: {
+      'home-header-bg': "url('/images/new/home/home_first_bg.png')",
+      'company-header-bg': "url('/images/new/company/company_first_bg.svg')",
+      'product-header-bg': "url('/images/new/product/product-header-bg.svg')",
+      'ablestack-header-bg': "url('/images/new/product/ablestack/ablestack-header-bg.svg')",
+      'ablestack-block-header-bg':
+        "url('/images/new/product/ablestack/ablestackBlock/ablestackBlock-header-bg.svg')",
+      'ablestack-cell-header-bg':
+        "url('/images/new/product/ablestack/ablestackCell/ablestackCell-header-bg.svg')",
+      'ablestack-files-header-bg':
+        "url('/images/new/product/ablestack/ablestackFiles/ablestackFiles-header-bg.svg')",
+      'ablestack-genie-header-bg':
+        "url('/images/new/product/ablestack/ablestackGenie/ablestackGenie-header-bg.svg')",
+      'ablestack-glue-header-bg':
+        "url('/images/new/product/ablestack/ablestackGlue/ablestackGlue-header-bg.svg')",
+      'ablestack-koral-header-bg':
+        "url('/images/new/product/ablestack/ablestackKoral/ablestackKoral-header-bg.svg')",
+      'ablestack-mold-header-bg':
+        "url('/images/new/product/ablestack/ablestackMold/ablestackMold-header-bg.svg')",
+      'ablestack-object-header-bg':
+        "url('/images/new/product/ablestack/ablestackObject/ablestackObject-header-bg.svg')",
+      'ablestack-slio-header-bg':
+        "url('/images/new/product/ablestack/ablestackSlio/ablestackSlio-header-bg.svg')",
+      'ablestack-station-header-bg':
+        "url('/images/new/product/ablestack/ablestackStation/ablestackStation-header-bg.svg')",
+      'ablestack-track-header-bg':
+        "url('/images/new/product/ablestack/ablestackTrack/ablestackTrack-header-bg.svg')",
+      'ablestack-wall-header-bg':
+        "url('/images/new/product/ablestack/ablestackWall/ablestackWall-header-bg.svg')",
+    },
     fontFamily: { sans: ['Noto Sans KR', ...defaultTheme.fontFamily.sans] },
     extend: {
       colors: {
