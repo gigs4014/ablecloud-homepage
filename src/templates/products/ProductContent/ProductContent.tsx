@@ -3,10 +3,11 @@ import { NamedExoticComponent, PropsWithChildren, ReactNode, memo } from 'react'
 import { BaseComponentProps } from '@/types';
 import { cls } from '@/utils';
 
-import { ItemCard, RowSmallCard } from '@/components/common';
+import { ActionCard, ItemCard, RowSmallCard, RowSummaryCard } from '@/components/common';
 import { Container } from '@/components/layout';
 
 import ProductContentBox from './ProductContentBox';
+import ProductContentDescription from './ProductContentDescription';
 import ProductContentGoDetail from './ProductContentGoDetail';
 import ProductContentIntro from './ProductContentIntro';
 import ProductContentItemGrid from './ProductContentItemGrid';
@@ -35,13 +36,17 @@ const ProductContent = memo<PropsWithChildren<ProductContentProps>>(
               <div className='max-w-screen-md'>{description}</div>
             )}
           </header>
-          {image && (
+          {image ? (
             <section className='flex w-full items-center justify-between space-x-8'>
               {imagePosition === 'first' && <div className='w-1/2'>{image}</div>}
 
               <div className='flex w-1/2 flex-col'>{children}</div>
 
               {imagePosition === 'last' && <div className='w-1/2'>{image}</div>}
+            </section>
+          ) : (
+            <section className='flex w-full items-center justify-between space-x-8'>
+              {children}
             </section>
           )}
           {addNode && (
@@ -54,20 +59,26 @@ const ProductContent = memo<PropsWithChildren<ProductContentProps>>(
     );
   },
 ) as NamedExoticComponent<PropsWithChildren<ProductContentProps>> & {
+  ActionCard: typeof ActionCard;
   Box: typeof ProductContentBox;
+  Description: typeof ProductContentDescription;
   ItemGrid: typeof ProductContentItemGrid;
   GoDetail: typeof ProductContentGoDetail;
   RowSmallCard: typeof RowSmallCard;
+  RowSummaryCard: typeof RowSummaryCard;
   Intro: typeof ProductContentIntro;
   Item: typeof ItemCard;
 };
 
 ProductContent.displayName = 'ProductContent';
 
+ProductContent.ActionCard = ActionCard;
 ProductContent.Box = ProductContentBox;
+ProductContent.Description = ProductContentDescription;
 ProductContent.ItemGrid = ProductContentItemGrid;
 ProductContent.GoDetail = ProductContentGoDetail;
 ProductContent.RowSmallCard = RowSmallCard;
+ProductContent.RowSummaryCard = RowSummaryCard;
 ProductContent.Intro = ProductContentIntro;
 ProductContent.Item = ItemCard;
 

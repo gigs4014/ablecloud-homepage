@@ -151,7 +151,7 @@ export function ItemCard({
 }: CardProps) {
   return (
     <Container.Card
-      className={`h-full  pb-[37px] text-center shadow-none ${containerClassName}`}
+      className={`h-full pb-[37px] text-center shadow-none ${containerClassName}`}
       hoverBehavoir={hoverBehavoir}>
       {image && <div className='flex items-center justify-center'>{image}</div>}
 

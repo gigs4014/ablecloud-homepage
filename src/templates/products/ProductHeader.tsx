@@ -10,6 +10,7 @@ export interface ProductHeaderProps extends BaseComponentProps {
   headerExtra?: ReactNode;
   image?: ReactNode;
   bgImage?: string;
+  textColor?: string;
 }
 
 export default function ProductHeader({
@@ -20,6 +21,7 @@ export default function ProductHeader({
   image,
   bgImage,
   className,
+  textColor = 'text-white',
 }: ProductHeaderProps) {
   return (
     <header
@@ -32,7 +34,7 @@ export default function ProductHeader({
         <section className='w-1/2 overflow-visible'>{image}</section>
 
         {/* info */}
-        <section className='w-1/2 text-white '>
+        <section className={`w-1/2 ${textColor} `}>
           <p className={'text-[42px] font-[900] leading-[52.42px]'}>{title}</p>
           <h1>{summary}</h1>
           <p className={'text-[18px] font-[400] leading-[26.06px]'}>{description}</p>
