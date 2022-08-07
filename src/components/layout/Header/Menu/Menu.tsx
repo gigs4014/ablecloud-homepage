@@ -109,6 +109,21 @@ export function MenuItem({ item, children, selectedItem, className }: MenuItemPr
                 }}`}>
                 <div>{item.label ?? children}</div>
               </CustomLink>
+              {item.subMenuItems && (
+                <ul>
+                  {item.subMenuItems.map(item => (
+                    <li key={uuid()}>
+                      <CustomLink
+                        href={item.href}
+                        className={cls`flex h-full w-full items-center justify-start px-4 py-2${{
+                          'text-primary': selected,
+                        }}`}>
+                        <div>{item.label ?? children}</div>
+                      </CustomLink>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </li>
           ))}
         </ul>

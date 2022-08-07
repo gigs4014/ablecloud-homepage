@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import { useRouter } from 'next/router';
 
@@ -7,7 +7,8 @@ import { useMediaQuery } from 'react-responsive';
 import { v4 as uuid } from 'uuid';
 
 import { useDarkMode } from '@/hooks/common';
-import { HeaderMenuItem } from '@/types';
+import useScrollDown from '@/hooks/common/useScrollDown';
+import { HeaderMenuItem, TNullable } from '@/types';
 import { cls } from '@/utils';
 
 import { CustomLink } from '@/components/common';
@@ -24,17 +25,23 @@ export default function Header() {
   const isBigScreen = useMediaQuery({ query: '(min-width: 768px)' });
 
   const [selectedItem, setSelectedItem] = useState<HeaderMenuItem | undefined>();
+
+  const headerRef = useRef<TNullable<HTMLDivElement>>(null);
+
   const { darkMode, setDarkMode } = useDarkMode();
+
+  useScrollDown(headerRef);
 
   useEffect(() => {
     setSelectedItem(getSelectedItem(menuItems, asPath));
   }, [asPath]);
 
-  useEffect(() => {
-    console.log({ selectedItem });
-  }, [selectedItem]);
+  useEffect(() => {}, [selectedItem]);
+
   return (
-    <header className='sticky top-0 z-20 flex h-[110px] w-full items-center justify-center bg-white '>
+    <header
+      ref={headerRef}
+      className='sticky top-0 z-20 flex h-[110px] w-full items-center justify-center bg-white '>
       <nav
         onMouseEnter={() => isBigScreen && setIsSubMenuOpen(true)}
         onMouseLeave={() => {

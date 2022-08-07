@@ -7,7 +7,15 @@ import { ReactNode } from '@mdx-js/react/lib';
 import { useScrollEvent } from '@/hooks/common';
 import { useMountEffect } from '@/hooks/utils';
 
-import { Button, Carousel, CarouselRef, CustomLink } from '@/components/common';
+import {
+  ActionCard,
+  Button,
+  Carousel,
+  CarouselRef,
+  CustomLink,
+  DescriptionCard,
+  RowSummaryCard,
+} from '@/components/common';
 import { Container } from '@/components/layout';
 
 import Logo_Article_3_1 from '@/public/images/new/home/article_3_1.svg';
@@ -171,7 +179,8 @@ export default function HomePage() {
 
             <section className='mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3'>
               <CustomLink hoverBehavoir='none'>
-                <Box
+                <DescriptionCard
+                  containerClassName='border-borderGrayColor border-1'
                   title='단일 클라우드 플랫폼'
                   image={<Logo_SingleCloudPlatForm />}
                   linkText={<span>에이블클라우드가 하는 일</span>}
@@ -179,7 +188,8 @@ export default function HomePage() {
               </CustomLink>
 
               <CustomLink hoverBehavoir='none'>
-                <Box
+                <DescriptionCard
+                  containerClassName='border-borderGrayColor border-1'
                   title='웹기반 통합 관리 플랫폼'
                   image={<Logo_WebTotalManagementPlatform />}
                   linkText={<span>자세히 알아보기</span>}
@@ -187,7 +197,8 @@ export default function HomePage() {
               </CustomLink>
 
               <CustomLink hoverBehavoir='none'>
-                <Box
+                <DescriptionCard
+                  containerClassName='border-borderGrayColor border-1'
                   title='새로운 개념의 데이터센터'
                   image={<Logo_NewConceptDataCenter />}
                   linkText={<span>지금 시작하기</span>}
@@ -200,41 +211,33 @@ export default function HomePage() {
           <Container.PageWidth seperateWithPeer>
             <div className={'text-[30px] font-[500]'}>ABLESTACK을 선택해야 하는 이유</div>
             <section className='mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2'>
-              <CustomLink hoverBehavoir='none'>
-                <RowBoxSmall
-                  title='단순한 구조'
-                  image={<Logo_Article_3_1 />}
-                  description='서버, 네트워크, 스토리지를 하나의 장비로 통합하여
+              <RowSummaryCard
+                title='단순한 구조'
+                image={<Logo_Article_3_1 />}
+                description='서버, 네트워크, 스토리지를 하나의 장비로 통합하여
                   물리적인 인프라 구조를 단순화합니다.'
-                />
-              </CustomLink>
+              />
 
-              <CustomLink hoverBehavoir='none'>
-                <RowBoxSmall
-                  title='확장성이 우수한 유연 인프라'
-                  image={<Logo_Article_3_2 />}
-                  description='인프라를 추가적으로 확장해야할 때, 무중단 상태로
+              <RowSummaryCard
+                title='확장성이 우수한 유연 인프라'
+                image={<Logo_Article_3_2 />}
+                description='인프라를 추가적으로 확장해야할 때, 무중단 상태로
                   서버를 추가할 수 있습니다.'
-                />
-              </CustomLink>
+              />
 
-              <CustomLink hoverBehavoir='none'>
-                <RowBoxSmall
-                  title='자동 자가 복구'
-                  image={<Logo_Article_3_3 />}
-                  description='물리적인 장애 발생 시에도 중지되지 않으며,
+              <RowSummaryCard
+                title='자동 자가 복구'
+                image={<Logo_Article_3_3 />}
+                description='물리적인 장애 발생 시에도 중지되지 않으며,
                   일정 시간 경과 후 자가 복구를 실시합니다.'
-                />
-              </CustomLink>
+              />
 
-              <CustomLink hoverBehavoir='none'>
-                <RowBoxSmall
-                  title='기존 인프라 대비 80% 절감'
-                  image={<Logo_Article_3_4 />}
-                  description='서버, 네트워크, 스토리지를 하나의 장비로 통합하여
+              <RowSummaryCard
+                title='기존 인프라 대비 80% 절감'
+                image={<Logo_Article_3_4 />}
+                description='서버, 네트워크, 스토리지를 하나의 장비로 통합하여
                   물리적인 인프라 구조를 단순화합니다.'
-                />
-              </CustomLink>
+              />
             </section>
           </Container.PageWidth>
 
@@ -280,21 +283,21 @@ export default function HomePage() {
             </p>
 
             <div className={'flex gap-10'}>
-              <RowBoxAction
+              <ActionCard
                 title={'Case Study'}
                 image={<Logo_Product_Default />}
                 description={'에이블스택을 최대로 활용하는 파트너사들의 케이스를 확인해보세요.'}
                 buttonTitle={'지금 시작하기'}
                 href={''}
               />
-              <RowBoxAction
+              <ActionCard
                 title={'데모 체험'}
                 image={<Logo_Product_Default />}
                 description={'에이블스택을 먼저 체험하고, 사용해보세요.'}
                 buttonTitle={'기술 지원 및 데모 요청'}
                 href={''}
               />
-              <RowBoxAction
+              <ActionCard
                 title={'전문가와 상담'}
                 image={<Logo_Product_Default />}
                 description={
@@ -333,74 +336,5 @@ export default function HomePage() {
         </Container.Article>
       </section>
     </>
-  );
-}
-
-interface BoxProps {
-  title: string;
-  image: ReactNode;
-  description?: string;
-  linkText?: ReactNode;
-}
-
-export function Box({ title, image, linkText }: BoxProps) {
-  return (
-    <Container.Card className='border-borderGrayColor h-full space-y-4 border-1 p-4 text-center'>
-      <h3>{title}</h3>
-
-      {/* image */}
-      {/* <div className='h-40 w-full bg-gray-400' /> */}
-      <div className='flex items-center justify-center'>{image}</div>
-
-      <div className='flex items-center justify-center space-x-4 text-primary after:ml-2 after:icon-[east]'>
-        {linkText}
-      </div>
-    </Container.Card>
-  );
-}
-
-export function RowBoxSmall({ title, image, description, linkText }: BoxProps) {
-  return (
-    <Container.Card className='flex flex-1 items-center justify-between space-x-6 border-0.5 border-gray-200 p-4'>
-      {/* image */}
-      <div className='flex items-center justify-center'>{image}</div>
-
-      <div className='space-y-2 self-start text-left'>
-        <h4 className='font-medium'>{title}</h4>
-
-        <p>{description}</p>
-      </div>
-
-      <div className='flex items-center justify-center space-x-4'>{linkText}</div>
-    </Container.Card>
-  );
-}
-
-export function RowBoxAction({
-  title,
-  image,
-  description,
-  buttonTitle,
-  href,
-}: {
-  title: string;
-  image: ReactNode;
-  description: string;
-  buttonTitle: string;
-  href: string;
-}) {
-  return (
-    <Container.Card className='border-borderGrayColor h-full border-1 text-center'>
-      {image}
-
-      <div className={'px-[60px] pb-10 pt-8'}>
-        <div className={'mb-6 text-xl'}>{title}</div>
-
-        <div className='mb-[40px] text-base'>{description}</div>
-        <Button bordered onClick={() => {}}>
-          {buttonTitle}
-        </Button>
-      </div>
-    </Container.Card>
   );
 }
