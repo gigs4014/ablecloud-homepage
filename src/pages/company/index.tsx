@@ -1,11 +1,9 @@
 import { useRef } from 'react';
 
-import { ReactNode } from '@mdx-js/react/lib';
-
 import { useScrollEvent } from '@/hooks/common';
 import { useMountEffect } from '@/hooks/utils';
 
-import { BaseCard, CarouselRef, SmallCard } from '@/components/common';
+import { CarouselRef, DescriptionCard, SmallCard } from '@/components/common';
 import { Container } from '@/components/layout';
 
 import Logo_Article_2_1 from '@/public/images/new/company/article_2_1.svg';
@@ -25,14 +23,6 @@ import Logo_Article_6_1 from '@/public/images/new/company/article_6_1.svg';
 import Logo_Article_6_2 from '@/public/images/new/company/article_6_2.svg';
 import Logo_Article_6_3 from '@/public/images/new/company/article_6_3.svg';
 import Logo_Article_6_4 from '@/public/images/new/company/article_6_4.svg';
-// New Image
-import Company_First_BG from '@/public/images/new/company/company_first_bg.svg';
-
-interface LogoData {
-  title: string;
-  src: ReactNode;
-  href?: string;
-}
 
 export default function CompanyPage() {
   const carouselRef = useRef<CarouselRef>(null);
@@ -53,9 +43,7 @@ export default function CompanyPage() {
     <>
       <section className='w-full'>
         {/* Head image */}
-        <header className='relative  flex max-h-128 items-center justify-center overflow-y-hidden'>
-          <Company_First_BG />
-        </header>
+        <div className='flex h-[512px] w-full items-center justify-center bg-company-header-bg bg-cover'></div>
 
         <Container.Article className='text-center'>
           <Container.PageWidth containerClassName={'bg-backgroudGray'}>
@@ -72,7 +60,7 @@ export default function CompanyPage() {
             </header>
 
             <section className='mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3'>
-              <BaseCard
+              <DescriptionCard
                 title='기업 클라우드 구축 '
                 image={<Logo_Article_2_1 />}
                 description={
@@ -86,7 +74,7 @@ export default function CompanyPage() {
                 }
               />
 
-              <BaseCard
+              <DescriptionCard
                 title='다양한 애플리케이션 제공'
                 image={<Logo_Article_2_2 />}
                 description={
@@ -100,7 +88,7 @@ export default function CompanyPage() {
                 }
               />
 
-              <BaseCard
+              <DescriptionCard
                 title='파트너 생태계 구성'
                 image={<Logo_Article_2_3 />}
                 description={
@@ -176,7 +164,7 @@ export default function CompanyPage() {
             <div className={'text-[30px] font-[500]'}>단순함을 추구합니다.</div>
 
             <section className='mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3'>
-              <BaseCard
+              <DescriptionCard
                 containerClassName={'bg-backgroudGray'}
                 title='하이퍼 컨버징'
                 image={<Logo_Article_5_1 />}
@@ -193,7 +181,7 @@ export default function CompanyPage() {
                 }
               />
 
-              <BaseCard
+              <DescriptionCard
                 containerClassName={'bg-backgroudGray'}
                 title='10분 내 구성'
                 image={<Logo_Article_5_2 />}
@@ -206,7 +194,7 @@ export default function CompanyPage() {
                 }
               />
 
-              <BaseCard
+              <DescriptionCard
                 containerClassName={'bg-backgroudGray'}
                 title='원클릭 배포'
                 image={<Logo_Article_5_3 />}

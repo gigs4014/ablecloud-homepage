@@ -5,10 +5,11 @@ import { cls } from '@/utils';
 
 export interface ProductHeaderProps extends BaseComponentProps {
   title?: string;
-  summary: string;
+  summary?: string;
   description: string;
   headerExtra?: ReactNode;
   image?: ReactNode;
+  bgImage?: string;
 }
 
 export default function ProductHeader({
@@ -17,24 +18,26 @@ export default function ProductHeader({
   description,
   headerExtra,
   image,
+  bgImage,
   className,
 }: ProductHeaderProps) {
   return (
-    <header className={cls`relative flex w-full justify-center py-16 ${className}`}>
+    <header
+      className={cls`relative flex h-[560px] w-full justify-center bg-cover py-16 ${bgImage} ${className}`}>
       {/* ::before */}
-      <div className='absolute inset-0 -top-full -z-10 -skew-y-2 bg-slate-100' />
+      <div className='absolute inset-0 -top-full -z-10 ' />
 
       <div className='flex max-w-page-full items-center space-x-8 px-8'>
-        {/* info */}
-        <section className='w-1/2'>
-          <h4>{title}</h4>
-          <h1>{summary}</h1>
-          <h3>{description}</h3>
-          <div>{headerExtra}</div>
-        </section>
-
         {/* image */}
         <section className='w-1/2 overflow-visible'>{image}</section>
+
+        {/* info */}
+        <section className='w-1/2 text-white '>
+          <p className={'text-[42px] font-[900] leading-[52.42px]'}>{title}</p>
+          <h1>{summary}</h1>
+          <p className={'text-[18px] font-[400] leading-[26.06px]'}>{description}</p>
+          <div>{headerExtra}</div>
+        </section>
       </div>
     </header>
   );
