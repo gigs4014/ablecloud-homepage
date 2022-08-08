@@ -10,8 +10,6 @@ import Logo_Article_4_3 from '@/public/images/new/product/ablestack/ablestackBlo
 import Logo_Article_4_4 from '@/public/images/new/product/ablestack/ablestackBlock/article_4_4.svg';
 import Logo_Product_Default from '@/public/images/new/product_default.svg';
 
-const PlaceholderImg = <div className='h-96 w-full bg-slate-200' />;
-
 const headerContent: ProductHeaderProps = {
   title: 'Block 블록 스토리지 볼륨',
   description: `Volume은 Glue에 내장된 확장형 블록 스토리지로, 가상머신의 워크로드 및 물리적인 워크로드에 모드 대응할 수 있도록 설계된 단일 통합 스토리지 플랫폼입니다.
@@ -97,8 +95,8 @@ export default function AblestackBlockPage() {
       </ProductContent>
 
       <ProductContent title='관련 솔루션'>
-        <div className='gap-[10px]'>
-          <div className='flex gap-[10px]'>
+        <div>
+          <div className='flex gap-[40px]'>
             <ProductContent.RowSummaryCard
               title={'비즈니스 연속성'}
               description={`내장된 스냅샷 백업 및 복구, 재해복구 및 써드파티
@@ -112,7 +110,7 @@ export default function AblestackBlockPage() {
               image={<Logo_Article_4_2 />}
             />
           </div>
-          <div className='flex gap-[10px]'>
+          <div className='mt-[40px] flex gap-[40px]'>
             <ProductContent.RowSummaryCard
               title={'IT 운영'}
               description={`일원화된 자원관리 및 네트워크 관리를 통해 단일 환경에서
