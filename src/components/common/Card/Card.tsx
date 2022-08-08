@@ -114,8 +114,10 @@ export function RowSummaryCard({
       )}
 
       <div className='ml-[14px]'>
-        <p className={'m-0 mb-[8px] p-0 font-[500] leading-[23.17px]'}>{title}</p>
-        {description && <p className={'m-0 p-0 font-[400] leading-[23.17px]'}>{description}</p>}
+        <p className={'m-0 mb-[8px] p-0 text-[16px] font-[500] leading-[23.17px]'}>{title}</p>
+        {description && (
+          <p className={'m-0 p-0 text-[16px] font-[400] leading-[23.17px]'}>{description}</p>
+        )}
       </div>
 
       {linkText && <div className='flex items-center justify-center space-x-4'>{linkText}</div>}
