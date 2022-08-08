@@ -106,14 +106,16 @@ export function RowSummaryCard({
   return (
     <Container.Card
       hoverBehavoir={hoverBehavoir}
-      className='flex flex-1 items-center justify-between space-x-6 border-0.5 border-gray-200 p-4'>
+      className='flex h-[144px] max-w-[580px] flex-1 items-center justify-between border-0.5 border-gray-200 py-[20px]'>
       {image && (
-        <div className='flex min-h-[108px] min-w-[100px] items-center justify-center'>{image}</div>
+        <div className='mx-[36px]  flex min-h-[108px] min-w-[100px] items-center justify-center'>
+          {image}
+        </div>
       )}
 
-      <div className='space-y-2 self-start text-left'>
-        <h4 className='font-medium'>{title}</h4>
-        {description && <p>{description}</p>}
+      <div className='ml-[14px]'>
+        <p className={'m-0 mb-[8px] p-0 font-[500] leading-[23.17px]'}>{title}</p>
+        {description && <p className={'m-0 p-0 font-[400] leading-[23.17px]'}>{description}</p>}
       </div>
 
       {linkText && <div className='flex items-center justify-center space-x-4'>{linkText}</div>}
