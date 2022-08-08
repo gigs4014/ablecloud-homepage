@@ -20,7 +20,7 @@ module.exports = {
   darkMode: 'class',
   theme: {
     backgroundImage: {
-      'home-header-bg': "url('/images/new/home/home_first_bg.png')",
+      'home-header-bg': "url('/images/new/home/home-header-bg.svg')",
       'company-header-bg': "url('/images/new/company/company_first_bg.svg')",
       'product-header-bg': "url('/images/new/product/product-header-bg.svg')",
       'ablestack-header-bg': "url('/images/new/product/ablestack/ablestack-header-bg.svg')",

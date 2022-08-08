@@ -17,11 +17,10 @@ export interface ProductContentProps extends BaseComponentProps {
   description?: ReactNode;
   image?: ReactNode;
   imagePosition?: 'first' | 'last';
-  addNode?: ReactNode;
 }
 
 const ProductContent = memo<PropsWithChildren<ProductContentProps>>(
-  ({ title, description, image, imagePosition = 'last', className, children, addNode }) => {
+  ({ title, description, image, imagePosition = 'last', className, children }) => {
     return (
       <section className={cls`group relative flex w-full flex-col items-center pb-16 ${className}`}>
         {/* ::before */}
@@ -47,11 +46,6 @@ const ProductContent = memo<PropsWithChildren<ProductContentProps>>(
           ) : (
             <section className='flex w-full items-center justify-between space-x-8'>
               {children}
-            </section>
-          )}
-          {addNode && (
-            <section className='flex w-full items-center justify-between space-x-8'>
-              {addNode}
             </section>
           )}
         </Container.PageWidth>

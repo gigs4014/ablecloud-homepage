@@ -1,4 +1,4 @@
-import { Button } from '@/components/common';
+import { Button, CustomLink } from '@/components/common';
 import { ProductContent, ProductHeaderProps, ProductTemplate } from '@/templates';
 
 import Logo_Article_1_1 from '@/public/images/new/product/ablestack/article_1_1.svg';
@@ -20,8 +20,6 @@ import Logo_Article_6_1 from '@/public/images/new/product/ablestack/article_6_1.
 import Logo_Article_6_2 from '@/public/images/new/product/ablestack/article_6_2.svg';
 import Logo_Article_6_3 from '@/public/images/new/product/ablestack/article_6_3.svg';
 
-const PlaceholderImg = <div className='h-96 w-full bg-slate-200' />;
-
 const headerContent: ProductHeaderProps = {
   title: 'ABLESTACK HCI',
   description: `ABLESTACK은 엔터프라이즈 클라우드 환경을 구축하는
@@ -42,13 +40,13 @@ export default function AblestackPage() {
         className={'bg-backgroudGray'}
         title='ABLESTACK HCI'
         description={`복잡한 구조의 전통적 기업 데이터센터의 문제점을 해결하고, IT 환경의 급속한 발전으로 인해 발생하는 문제점을 해결하기 위해
-단일 서버 구성으로 모든 인프라와 플랫폼을 실행할 수 있도록 고안된 HCI 플랫폼 입니다.`}
-        addNode={
-          <Button solid onClick={() => {}}>
-            개요 보러가기
-          </Button>
-        }
-      />
+단일 서버 구성으로 모든 인프라와 플랫폼을 실행할 수 있도록 고안된 HCI 플랫폼 입니다.`}>
+        <div className={'flex w-full justify-center'}>
+          <CustomLink href='/stories' hoverBehavoir='none'>
+            <Button solid>개요 보러가기</Button>
+          </CustomLink>
+        </div>
+      </ProductContent>
 
       <ProductContent image={<Logo_Article_3_5 />}>
         <ProductContent.Intro
@@ -61,32 +59,41 @@ export default function AblestackPage() {
           }
         />
         <div className='flex gap-[10px]'>
-          <ProductContent.RowSmallCard
-            containerClassName={'bg-[#EEF4FB]'}
-            title={'Glue'}
-            description={'스토리지'}
-            image={<Logo_Article_3_1 />}
-          />
-          <ProductContent.RowSmallCard
-            containerClassName={'bg-[#EEF4FB]'}
-            title={'Cell'}
-            description={'가상화'}
-            image={<Logo_Article_3_2 />}
-          />
+          <CustomLink href='/products/ablestack/glue' className={'w-full'}>
+            <ProductContent.RowSmallCard
+              containerClassName={'bg-[#EEF4FB]'}
+              title={'Glue'}
+              description={'스토리지'}
+              image={<Logo_Article_3_1 />}
+            />
+          </CustomLink>
+
+          <CustomLink href='/products/ablestack/cell' className={'w-full'}>
+            <ProductContent.RowSmallCard
+              containerClassName={'bg-[#EEF4FB]'}
+              title={'Cell'}
+              description={'가상화'}
+              image={<Logo_Article_3_2 />}
+            />
+          </CustomLink>
         </div>
         <div className='mt-[10px] flex gap-[10px]'>
-          <ProductContent.RowSmallCard
-            containerClassName={'bg-[#EEF4FB]'}
-            title={'Koral'}
-            description={'쿠버네테스 엔진'}
-            image={<Logo_Article_3_3 />}
-          />
-          <ProductContent.RowSmallCard
-            containerClassName={'bg-[#EEF4FB]'}
-            title={'Track'}
-            description={'네트워크 및 보안'}
-            image={<Logo_Article_3_4 />}
-          />
+          <CustomLink href='/products/ablestack/koral' className={'w-full'}>
+            <ProductContent.RowSmallCard
+              containerClassName={'bg-[#EEF4FB]'}
+              title={'Koral'}
+              description={'쿠버네테스 엔진'}
+              image={<Logo_Article_3_3 />}
+            />
+          </CustomLink>
+          <CustomLink href='/products/ablestack/track' className={'w-full'}>
+            <ProductContent.RowSmallCard
+              containerClassName={'bg-[#EEF4FB]'}
+              title={'Track'}
+              description={'네트워크 및 보안'}
+              image={<Logo_Article_3_4 />}
+            />
+          </CustomLink>
         </div>
       </ProductContent>
 
@@ -105,24 +112,32 @@ export default function AblestackPage() {
           }
         />
         <div className='flex gap-[10px]'>
-          <ProductContent.RowSmallCard
-            title={'Mold'}
-            description={'클라우드 관리플랫폼'}
-            image={<Logo_Article_4_2 />}
-          />
-          <ProductContent.RowSmallCard
-            title={'Genie'}
-            description={'하이브리드 배포 자동화'}
-            image={<Logo_Article_4_3 />}
-          />
+          <CustomLink href='/products/ablestack/mold' className={'w-full'}>
+            <ProductContent.RowSmallCard
+              title={'Mold'}
+              description={'클라우드 관리플랫폼'}
+              image={<Logo_Article_4_2 />}
+            />
+          </CustomLink>
+
+          <CustomLink href='/products/ablestack/genie' className={'w-full'}>
+            <ProductContent.RowSmallCard
+              title={'Genie'}
+              description={'하이브리드 배포 자동화'}
+              image={<Logo_Article_4_3 />}
+            />
+          </CustomLink>
         </div>
 
         <div className='mt-[10px] flex gap-[10px]'>
-          <ProductContent.RowSmallCard
-            title={'Wall'}
-            description={'통합 모니터링'}
-            image={<Logo_Article_4_4 />}
-          />
+          <CustomLink href='/products/ablestack/wall' className={'w-full'}>
+            <ProductContent.RowSmallCard
+              title={'Wall'}
+              description={'통합 모니터링'}
+              image={<Logo_Article_4_4 />}
+            />
+          </CustomLink>
+
           <ProductContent.RowSmallCard containerClassName={'invisible'} title={''} />
         </div>
       </ProductContent>
@@ -139,32 +154,41 @@ export default function AblestackPage() {
           }
         />
         <div className='flex gap-[10px]'>
-          <ProductContent.RowSmallCard
-            containerClassName={'bg-[#EEF4FB]'}
-            title={'Block'}
-            description={'블록스토리지'}
-            image={<Logo_Article_5_1 />}
-          />
-          <ProductContent.RowSmallCard
-            containerClassName={'bg-[#EEF4FB]'}
-            title={'Files'}
-            description={'파일시스템'}
-            image={<Logo_Article_5_2 />}
-          />
+          <CustomLink href='/products/ablestack/block' className={'w-full'}>
+            <ProductContent.RowSmallCard
+              containerClassName={'bg-[#EEF4FB]'}
+              title={'Block'}
+              description={'블록스토리지'}
+              image={<Logo_Article_5_1 />}
+            />
+          </CustomLink>
+
+          <CustomLink href='/products/ablestack/files' className={'w-full'}>
+            <ProductContent.RowSmallCard
+              containerClassName={'bg-[#EEF4FB]'}
+              title={'Files'}
+              description={'파일시스템'}
+              image={<Logo_Article_5_2 />}
+            />
+          </CustomLink>
         </div>
         <div className='mt-[10px] flex gap-[10px]'>
-          <ProductContent.RowSmallCard
-            containerClassName={'bg-[#EEF4FB]'}
-            title={'Objects'}
-            description={'오브젝트 파일 시스템'}
-            image={<Logo_Article_5_3 />}
-          />
-          <ProductContent.RowSmallCard
-            containerClassName={'bg-[#EEF4FB]'}
-            title={'Slio'}
-            description={'백업 자동화'}
-            image={<Logo_Article_5_4 />}
-          />
+          <CustomLink href='/products/ablestack/object' className={'w-full'}>
+            <ProductContent.RowSmallCard
+              containerClassName={'bg-[#EEF4FB]'}
+              title={'Objects'}
+              description={'오브젝트 파일 시스템'}
+              image={<Logo_Article_5_3 />}
+            />
+          </CustomLink>
+          <CustomLink href='/products/ablestack/slio' className={'w-full'}>
+            <ProductContent.RowSmallCard
+              containerClassName={'bg-[#EEF4FB]'}
+              title={'Slio'}
+              description={'백업 자동화'}
+              image={<Logo_Article_5_4 />}
+            />
+          </CustomLink>
         </div>
       </ProductContent>
 
@@ -183,16 +207,20 @@ export default function AblestackPage() {
           }
         />
         <div className='flex gap-[10px]'>
-          <ProductContent.RowSmallCard
-            title={'Works'}
-            description={'데스크톱 서비스'}
-            image={<Logo_Article_6_2 />}
-          />
-          <ProductContent.RowSmallCard
-            title={'Station'}
-            description={'플랫폼 서비스'}
-            image={<Logo_Article_6_3 />}
-          />
+          <CustomLink href='/products/ablestack/works' className={'w-full'}>
+            <ProductContent.RowSmallCard
+              title={'Works'}
+              description={'데스크톱 서비스'}
+              image={<Logo_Article_6_2 />}
+            />
+          </CustomLink>
+          <CustomLink href='/products/ablestack/station' className={'w-full'}>
+            <ProductContent.RowSmallCard
+              title={'Station'}
+              description={'플랫폼 서비스'}
+              image={<Logo_Article_6_3 />}
+            />
+          </CustomLink>
         </div>
       </ProductContent>
     </ProductTemplate>

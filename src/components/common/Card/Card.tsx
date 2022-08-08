@@ -2,7 +2,7 @@ import { ReactNode } from '@mdx-js/react/lib';
 
 import { BaseComponentProps } from '@/types';
 
-import { Button } from '@/components/common';
+import { Button, CustomLink } from '@/components/common';
 import { Container } from '@/components/layout';
 
 interface CardProps extends BaseComponentProps {
@@ -31,18 +31,26 @@ export function ActionCard({
   return (
     <Container.Card
       hoverBehavoir={hoverBehavoir}
-      className={`border-borderGrayColor border-1 text-center ${containerClassName}`}>
-      {image && <div className='min-h-[218px] w-full'>{image}</div>}
+      className={`border-borderGrayColor min-w-[374px] border-1 ${containerClassName}`}>
+      {image && <div className='h-[218px] w-full'>{image}</div>}
 
-      <div className={'px-[60px] pb-10 pt-8'}>
-        <div className={'mb-6 text-xl'}>{title}</div>
+      <div className={'flex flex-col justify-center px-[30px] pb-[40px] pt-[32px] text-center'}>
+        <p className={'m-0 mb-6 p-0 text-[20px] font-[500] leading-[28.96px]'}>{title}</p>
 
-        {description && <div className='mb-[40px] text-base'>{description}</div>}
+        {typeof description === 'string' ? (
+          <p className='m-0 mb-[40px] h-[46px] p-0 text-[16px] font-[400] leading-[23.17px]'>
+            {description}
+          </p>
+        ) : (
+          { description }
+        )}
 
         {buttonTitle && (
-          <Button bordered onClick={() => {}}>
-            {buttonTitle}
-          </Button>
+          <CustomLink href={href} hoverBehavoir='none'>
+            <Button className={'border-[#3281C4] text-[#3281C4]'} bordered>
+              {buttonTitle}
+            </Button>
+          </CustomLink>
         )}
       </div>
     </Container.Card>
@@ -116,7 +124,9 @@ export function RowSummaryCard({
       <div className='ml-[14px]'>
         <p className={'m-0 mb-[8px] p-0 text-[16px] font-[500] leading-[23.17px]'}>{title}</p>
         {description && (
-          <p className={'m-0 p-0 text-[16px] font-[400] leading-[23.17px]'}>{description}</p>
+          <p className={'m-0 p-0 pr-[70px] text-[16px] font-[400] leading-[23.17px]'}>
+            {description}
+          </p>
         )}
       </div>
 

@@ -1,23 +1,16 @@
 import { useRef } from 'react';
 
-import Image from 'next/image';
-
 import { ReactNode } from '@mdx-js/react/lib';
 
 import { useScrollEvent } from '@/hooks/common';
 import { useMountEffect } from '@/hooks/utils';
 
-import {
-  ActionCard,
-  Button,
-  Carousel,
-  CarouselRef,
-  CustomLink,
-  DescriptionCard,
-  RowSummaryCard,
-} from '@/components/common';
-import { Container } from '@/components/layout';
+import { Button, Carousel, CarouselRef, CustomLink } from '@/components/common';
+import { HomeContent, HomeHeaderProps, HomeTemplate } from '@/templates';
 
+import Logo_Article_2_1 from '@/public/images/new/home/article_2_1.svg';
+import Logo_Article_2_2 from '@/public/images/new/home/article_2_2.svg';
+import Logo_Article_2_3 from '@/public/images/new/home/article_2_3.svg';
 import Logo_Article_3_1 from '@/public/images/new/home/article_3_1.svg';
 import Logo_Article_3_2 from '@/public/images/new/home/article_3_2.svg';
 import Logo_Article_3_3 from '@/public/images/new/home/article_3_3.svg';
@@ -27,11 +20,6 @@ import Logo_Article_4_2 from '@/public/images/new/home/article_4_2.svg';
 import Logo_Article_4_3 from '@/public/images/new/home/article_4_3.svg';
 import Logo_Article_4_4 from '@/public/images/new/home/article_4_4.svg';
 import Logo_Article_4_5 from '@/public/images/new/home/article_4_5.svg';
-// New Image
-import HOME_FIRST_BG from '@/public/images/new/home/home_first_bg.png';
-import Logo_NewConceptDataCenter from '@/public/images/new/home/new_concept_data_center.svg';
-import Logo_SingleCloudPlatForm from '@/public/images/new/home/single_cloud-platform.svg';
-import Logo_WebTotalManagementPlatform from '@/public/images/new/home/web_total_management_platform.svg';
 import Logo_Product_Default from '@/public/images/new/product_default.svg';
 
 interface LogoData {
@@ -39,6 +27,13 @@ interface LogoData {
   src: ReactNode;
   href?: string;
 }
+
+const headerContent: HomeHeaderProps = {
+  title: '',
+  description: ``,
+  bgImage: 'bg-home-header-bg',
+};
+
 const logos: Array<LogoData> = [
   {
     title: '지엔텔',
@@ -152,189 +147,163 @@ export default function HomePage() {
 
   return (
     <>
-      <section className='w-full'>
-        {/* Head image */}
-        <header className='relative  flex max-h-128 items-center justify-center overflow-y-hidden'>
-          <div className={`w-screen flex-1 `}>
-            <Image
-              src={HOME_FIRST_BG}
-              layout='responsive'
-              alt='비행기가 좌하단에서 우상단으로 날아가고 우상단 모서리에 태극기가 펄럭임. 안창남 비행사의 모습이 희미하게 태극기 아래에 보임'
+      <HomeTemplate {...headerContent}>
+        <HomeContent
+          title='SDDC를 실현하는 HCI 플랫폼'
+          description={`가상화 및 소프트웨어 정의 기술을 이용한 하이퍼 컨버지드 인프라 플랫폼 ABLESTACK을
+          통해 컴퓨팅, 스토리지, 가상화, 네트워크를 사용하고 관리할 수 있는 엔터프라이즈
+          클라우드 데이터센터를 구축할 수 있습니다.`}>
+          <div className='mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3'>
+            <HomeContent.ItemGrid
+              containerClassName='border-borderGrayColor border-1'
+              title='단일 클라우드 플랫폼'
+              image={<Logo_Article_2_1 />}
+              linkText={
+                <CustomLink hoverBehavoir='none'>
+                  <span>에이블클라우드가 하는 일</span>
+                </CustomLink>
+              }
+            />
+
+            <HomeContent.ItemGrid
+              containerClassName='border-borderGrayColor border-1'
+              title='웹기반 통합 관리 플랫폼'
+              image={<Logo_Article_2_2 />}
+              linkText={
+                <CustomLink hoverBehavoir='none'>
+                  <span>자세히 알아보기</span>
+                </CustomLink>
+              }
+            />
+
+            <HomeContent.ItemGrid
+              containerClassName='border-borderGrayColor border-1'
+              title='새로운 개념의 데이터센터'
+              image={<Logo_Article_2_3 />}
+              linkText={
+                <CustomLink hoverBehavoir='none'>
+                  <span>지금 시작하기</span>
+                </CustomLink>
+              }
             />
           </div>
-        </header>
+        </HomeContent>
 
-        <Container.Article className='text-center'>
-          {/* 제품 소개 */}
-          <Container.PageWidth seperateWithPeer>
-            <header className='max-w-screen-md self-center'>
-              <div className={'text-[30px] font-[500]'}>SDDC를 실현하는 HCI 플랫폼</div>
-
-              <p>
-                가상화 및 소프트웨어 정의 기술을 이용한 하이퍼 컨버지드 인프라 플랫폼 ABLESTACK을
-                통해 컴퓨팅, 스토리지, 가상화, 네트워크를 사용하고 관리할 수 있는 엔터프라이즈
-                클라우드 데이터센터를 구축할 수 있습니다.
-              </p>
-            </header>
-
-            <section className='mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3'>
-              <CustomLink hoverBehavoir='none'>
-                <DescriptionCard
-                  containerClassName='border-borderGrayColor border-1'
-                  title='단일 클라우드 플랫폼'
-                  image={<Logo_SingleCloudPlatForm />}
-                  linkText={<span>에이블클라우드가 하는 일</span>}
-                />
-              </CustomLink>
-
-              <CustomLink hoverBehavoir='none'>
-                <DescriptionCard
-                  containerClassName='border-borderGrayColor border-1'
-                  title='웹기반 통합 관리 플랫폼'
-                  image={<Logo_WebTotalManagementPlatform />}
-                  linkText={<span>자세히 알아보기</span>}
-                />
-              </CustomLink>
-
-              <CustomLink hoverBehavoir='none'>
-                <DescriptionCard
-                  containerClassName='border-borderGrayColor border-1'
-                  title='새로운 개념의 데이터센터'
-                  image={<Logo_NewConceptDataCenter />}
-                  linkText={<span>지금 시작하기</span>}
-                />
-              </CustomLink>
-            </section>
-          </Container.PageWidth>
-
-          {/* 차별점 */}
-          <Container.PageWidth seperateWithPeer>
-            <div className={'text-[30px] font-[500]'}>ABLESTACK을 선택해야 하는 이유</div>
-            <section className='mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2'>
-              <RowSummaryCard
-                title='단순한 구조'
-                image={<Logo_Article_3_1 />}
-                description='서버, 네트워크, 스토리지를 하나의 장비로 통합하여
+        <HomeContent className={'bg-backgroudGray'} title='ABLESTACK을 선택해야 하는 이유'>
+          <section className='mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2'>
+            <HomeContent.RowSummaryCard
+              title='단순한 구조'
+              image={<Logo_Article_3_1 />}
+              description='서버, 네트워크, 스토리지를 하나의 장비로 통합하여
                   물리적인 인프라 구조를 단순화합니다.'
-              />
+            />
 
-              <RowSummaryCard
-                title='확장성이 우수한 유연 인프라'
-                image={<Logo_Article_3_2 />}
-                description='인프라를 추가적으로 확장해야할 때, 무중단 상태로
+            <HomeContent.RowSummaryCard
+              title='확장성이 우수한 유연 인프라'
+              image={<Logo_Article_3_2 />}
+              description='인프라를 추가적으로 확장해야할 때, 무중단 상태로
                   서버를 추가할 수 있습니다.'
-              />
+            />
 
-              <RowSummaryCard
-                title='자동 자가 복구'
-                image={<Logo_Article_3_3 />}
-                description='물리적인 장애 발생 시에도 중지되지 않으며,
+            <HomeContent.RowSummaryCard
+              title='자동 자가 복구'
+              image={<Logo_Article_3_3 />}
+              description='물리적인 장애 발생 시에도 중지되지 않으며,
                   일정 시간 경과 후 자가 복구를 실시합니다.'
-              />
+            />
 
-              <RowSummaryCard
-                title='기존 인프라 대비 80% 절감'
-                image={<Logo_Article_3_4 />}
-                description='서버, 네트워크, 스토리지를 하나의 장비로 통합하여
+            <HomeContent.RowSummaryCard
+              title='기존 인프라 대비 80% 절감'
+              image={<Logo_Article_3_4 />}
+              description='서버, 네트워크, 스토리지를 하나의 장비로 통합하여
                   물리적인 인프라 구조를 단순화합니다.'
-              />
-            </section>
-          </Container.PageWidth>
+            />
+          </section>
+        </HomeContent>
 
-          {/* 파트너 */}
-          <Container.PageWidth seperateWithPeer>
-            <div className={'text-[30px] font-[500]'}>
-              국내 최초의 HCI, ABLESTACK을 선택한 기업들
-            </div>
-            <p className='mt-4'>에이블스택과 함께하는 파트너 입니다.</p>
-
-            <section className='not-prose relative mt-8 w-screen self-center'>
-              <Carousel
-                autoScrollInterval={5000}
-                stopAutoScrollOnEnd
-                ref={carouselRef}
-                className='space-x-16 px-8'>
-                {logos.map(({ src, title, href }, index) => (
-                  <Carousel.Item key={index} className='flex-shrink-0'>
-                    {src}
-                  </Carousel.Item>
-                ))}
-              </Carousel>
-            </section>
-
+        <HomeContent
+          title='국내 최초의 HCI, ABLESTACK을 선택한 기업들'
+          description={'에이블스택과 함께하는 파트너 입니다.'}>
+          <section className='not-prose relative mt-8 flex w-screen justify-center self-center'>
+            <Carousel
+              autoScrollInterval={5000}
+              stopAutoScrollOnEnd
+              ref={carouselRef}
+              className='space-x-16 px-8'>
+              {logos.map(({ src, title, href }, index) => (
+                <Carousel.Item key={index} className='flex-shrink-0'>
+                  {src}
+                </Carousel.Item>
+              ))}
+            </Carousel>
+          </section>
+          <div className='flex justify-center'>
             <CustomLink href='/stories' hoverBehavoir='none'>
               <Button solid className='mt-12'>
                 파트너 확인하기
               </Button>
             </CustomLink>
-          </Container.PageWidth>
+          </div>
+        </HomeContent>
 
-          {/* 데모 & Contact */}
-          <Container.PageWidth seperateWithPeer>
-            <div className={'text-[30px] font-[500]'}>
-              보다 더 자세한 자료와 컨설팅을 받아보세요.
-            </div>
-
+        {/* 데모 & Contact */}
+        <HomeContent
+          className={'bg-backgroudGray'}
+          title='보다 더 자세한 자료와 컨설팅을 받아보세요.'
+          description={
             <p className='mt-3.5'>
               단순한 구조로 IT 서비스에 필요한 모든 인프라를 제공할 뿐만 아니라, <br /> 단 1시간
               이내에 사용자 사이트에 HCI 인프라를 구성하고 클라우드 서비스를 시작할 수 있습니다.
               <br />
               에이블스택을 바로 사용해보세요.
             </p>
-
-            <div className={'flex gap-10'}>
-              <ActionCard
-                title={'Case Study'}
-                image={<Logo_Product_Default />}
-                description={'에이블스택을 최대로 활용하는 파트너사들의 케이스를 확인해보세요.'}
-                buttonTitle={'지금 시작하기'}
-                href={''}
-              />
-              <ActionCard
-                title={'데모 체험'}
-                image={<Logo_Product_Default />}
-                description={'에이블스택을 먼저 체험하고, 사용해보세요.'}
-                buttonTitle={'기술 지원 및 데모 요청'}
-                href={''}
-              />
-              <ActionCard
-                title={'전문가와 상담'}
-                image={<Logo_Product_Default />}
-                description={
-                  '에이블스택 전문가와 직접 상담해보세요. 여러분에게 최적화된 솔루션 구축을 약속드려요.'
-                }
-                buttonTitle={'문의하러 가기'}
-                href={''}
-              />
-            </div>
-            {/* <div className='mt-4 flex w-full justify-center space-x-8'>
-              <CustomLink href='/demo' hoverBehavoir='none'>
-                <Button>데모 요청하기</Button>
-              </CustomLink>
-
-              <CustomLink href='/company/contact' hoverBehavoir='none'>
-                <Button bordered>문의하기</Button>
-              </CustomLink>
-            </div> */}
-          </Container.PageWidth>
-          <Container.PageWidth containerClassName={'bg-backgroundBlue'} className={'text-white'}>
-            <div className={'text-[30px] font-[500]'}>ABLESTACK 하드웨어 플랫폼</div>
-
-            <p className='mt-3.5'>
+          }>
+          <div className={'grid grid-cols-1 gap-[40px] md:grid-cols-2 lg:grid-cols-3'}>
+            <HomeContent.ActionCard
+              title={'Case Study'}
+              image={<Logo_Product_Default />}
+              description={'에이블스택을 최대로 활용하는 파트너사들의 케이스를 확인해보세요.'}
+              buttonTitle={'지금 시작하기'}
+              href={''}
+            />
+            <HomeContent.ActionCard
+              title={'데모 체험'}
+              image={<Logo_Product_Default />}
+              description={'에이블스택을 먼저 체험하고, 사용해보세요.'}
+              buttonTitle={'기술 지원 및 데모 요청'}
+              href={''}
+            />
+            <HomeContent.ActionCard
+              title={'전문가와 상담'}
+              image={<Logo_Product_Default />}
+              description={
+                '에이블스택 전문가와 직접 상담해보세요. 여러분에게 최적화된 솔루션 구축을 약속드려요.'
+              }
+              buttonTitle={'문의하러 가기'}
+              href={''}
+            />
+          </div>
+        </HomeContent>
+        <HomeContent
+          className={'bg-backgroundBlue text-white'}
+          title='ABLESTACK 하드웨어 플랫폼'
+          description={
+            <p className='mt-3.5 text-[16px] font-[400] leading-[23.17px]'>
               ABLESTACK은 소프트웨어 HCI 플랫폼으로, 고객사에 성공적으로 HCI 기반 클라우드 환경을
               구성하기 위해서는 <br /> ABLESTACK이 설치되어 실행되는 서버 하드웨어가 필요합니다.
               ABLESTACK은 자사 어플라이언스와 함께
               <br /> 다양한 OEM 파트너, 서드파티 서버 공급업체의 서버 플랫폼과 호환됩니다.
             </p>
-
+          }>
+          <div className='flex justify-center'>
             <CustomLink href='/stories' hoverBehavoir='none'>
               <Button bordered className='mt-12 bg-white'>
                 어플라이언스 보러가기
               </Button>
             </CustomLink>
-          </Container.PageWidth>
-        </Container.Article>
-      </section>
+          </div>
+        </HomeContent>
+      </HomeTemplate>
     </>
   );
 }
