@@ -60,7 +60,7 @@ export default function Header() {
             </CustomLink>
           </div>
 
-          <ul>
+          <ul className={'hidden md:block lg:block'}>
             {menuItems.map(item => (
               <li
                 className={cls`inline-flex w-fit`}

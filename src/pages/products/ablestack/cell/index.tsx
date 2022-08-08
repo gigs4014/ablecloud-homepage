@@ -70,66 +70,65 @@ export default function AblestackCellPage() {
       </ProductContent>
 
       <ProductContent title='유즈케이스'>
-        <div>
-          <div className='flex gap-[40px]'>
-            <ProductContent.RowSummaryCard
-              title={'서버 가상화'}
-              description={`내장된 Cell 하이퍼바이저는 기업을 위한 최적의 가상화
+        <div className='mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2'>
+          <ProductContent.RowSummaryCard
+            title={'서버 가상화'}
+            description={`내장된 Cell 하이퍼바이저는 기업을 위한 최적의 가상화
               플랫폼으로 광범위한 Linux 배포판 운영체제 및 
               Microsoft Windows 운영체제를 지원합니다.`}
-              image={<Logo_Article_4_1 />}
-            />
-            <ProductContent.RowSummaryCard
-              title={'데이터베이스'}
-              description={`최신 커널 기반의 베어메탈급 IO 성능을 제공하여
+            image={<Logo_Article_4_1 />}
+          />
+          <ProductContent.RowSummaryCard
+            title={'데이터베이스'}
+            description={`최신 커널 기반의 베어메탈급 IO 성능을 제공하여
               Oracle, MS-SQL, MySQL, Tibero 등의
               데이터베이스 운영에 적합합니다.`}
-              image={<Logo_Article_4_2 />}
-            />
-          </div>
-          <div className='mt-[40px] flex gap-[40px]'>
-            <ProductContent.RowSummaryCard
-              title={'데스크톱/애플리케이션 가상화'}
-              description={`다양한 가상데스크톱 환경에 모두 적용이 가능하고
+            image={<Logo_Article_4_2 />}
+          />
+
+          <ProductContent.RowSummaryCard
+            title={'데스크톱/애플리케이션 가상화'}
+            description={`다양한 가상데스크톱 환경에 모두 적용이 가능하고
               단순한 구성을 제공함으로써 비대면 업무 환경 및 
               지사별 업무 환경을 구성할 수 있습니다.`}
-              image={<Logo_Article_4_3 />}
-            />
-            <ProductContent.RowSummaryCard
-              title={'멀티 클라우드'}
-              description={`Cell 하이퍼바이저 및 VMWare, Citrix, Hyper-V 등의
+            image={<Logo_Article_4_3 />}
+          />
+          <ProductContent.RowSummaryCard
+            title={'멀티 클라우드'}
+            description={`Cell 하이퍼바이저 및 VMWare, Citrix, Hyper-V 등의
               다양한 하이퍼바이저 환경을 구성할 수 있습니다.`}
-              image={<Logo_Article_4_4 />}
-            />
-          </div>
+            image={<Logo_Article_4_4 />}
+          />
         </div>
       </ProductContent>
 
       <ProductContent className={'bg-backgroudGray'} title='최신 리소스 살펴보기'>
-        <ProductContent.ActionCard
-          title={'기술노트'}
-          image={<Logo_Product_Default />}
-          description={`에이블스택을 좀더
+        <div className={'grid grid-cols-1 gap-[40px] md:grid-cols-2 lg:grid-cols-3'}>
+          <ProductContent.ActionCard
+            title={'기술노트'}
+            image={<Logo_Product_Default />}
+            description={`에이블스택을 좀더
           자세하게 설명한 기술개요`}
-          buttonTitle={'지금 보러가기'}
-          href={''}
-        />
-        <ProductContent.ActionCard
-          title={'데모 체험'}
-          image={<Logo_Product_Default />}
-          description={`에이블스택을 먼저 체험하고,
+            buttonTitle={'지금 보러가기'}
+            href={''}
+          />
+          <ProductContent.ActionCard
+            title={'데모 체험'}
+            image={<Logo_Product_Default />}
+            description={`에이블스택을 먼저 체험하고,
           사용해보세요.`}
-          buttonTitle={'기술 지원 및 데모 요청'}
-          href={''}
-        />
-        <ProductContent.ActionCard
-          title={'전문가와 상담'}
-          image={<Logo_Product_Default />}
-          description={`에이블스택 전문가와 직접 상담해보세요.
+            buttonTitle={'기술 지원 및 데모 요청'}
+            href={''}
+          />
+          <ProductContent.ActionCard
+            title={'전문가와 상담'}
+            image={<Logo_Product_Default />}
+            description={`에이블스택 전문가와 직접 상담해보세요.
           여러분에게 최적화된 솔루션 구축을 약속드려요.`}
-          buttonTitle={'문의하러 가기'}
-          href={''}
-        />
+            buttonTitle={'문의하러 가기'}
+            href={''}
+          />
+        </div>
       </ProductContent>
     </ProductTemplate>
   );

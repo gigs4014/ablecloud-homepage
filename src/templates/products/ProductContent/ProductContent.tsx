@@ -37,16 +37,18 @@ const ProductContent = memo<PropsWithChildren<ProductContentProps>>(
           </header>
           {image ? (
             <section className='flex w-full items-center justify-between space-x-8'>
-              {imagePosition === 'first' && <div className='w-1/2'>{image}</div>}
+              {imagePosition === 'first' && (
+                <div className='hidden w-1/2 overflow-visible md:block lg:block'>{image}</div>
+              )}
 
-              <div className='flex w-1/2 flex-col'>{children}</div>
+              <div className='flex w-full flex-col md:w-1/2 lg:w-1/2'>{children}</div>
 
-              {imagePosition === 'last' && <div className='w-1/2'>{image}</div>}
+              {imagePosition === 'last' && (
+                <div className='hidden w-1/2 overflow-visible md:block lg:block'>{image}</div>
+              )}
             </section>
           ) : (
-            <section className='flex w-full items-center justify-between space-x-8'>
-              {children}
-            </section>
+            <>{children}</>
           )}
         </Container.PageWidth>
       </section>

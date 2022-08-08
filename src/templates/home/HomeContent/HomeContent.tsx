@@ -16,7 +16,8 @@ export interface HomeContentProps extends BaseComponentProps {
 const HomeContent = memo<PropsWithChildren<HomeContentProps>>(
   ({ title, description, className, children }) => {
     return (
-      <section className={cls`group relative flex w-full flex-col items-center pb-16 ${className}`}>
+      <section
+        className={cls`md:display-none group relative flex w-full flex-col items-center pb-16 ${className}`}>
         <Container.PageWidth>
           <header className='flex flex-col items-center px-8 text-center'>
             {typeof title === 'string' ? <h2>{title}</h2> : title}

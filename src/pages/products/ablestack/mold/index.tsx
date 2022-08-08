@@ -62,64 +62,63 @@ export default function AblestackMoldPage() {
       </ProductContent>
 
       <ProductContent title='관련 솔루션'>
-        <div>
-          <div className='flex gap-[40px]'>
-            <ProductContent.RowSummaryCard
-              title={'비즈니스 연속성'}
-              description={`내장된 스냅샷 백업 및 복구, 재해복구 및 써드파티
+        <div className='mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2'>
+          <ProductContent.RowSummaryCard
+            title={'비즈니스 연속성'}
+            description={`내장된 스냅샷 백업 및 복구, 재해복구 및 써드파티
               백업/복구 기능을 통해 비즈니스 연속성을 보장합니다.`}
-              image={<Logo_Article_4_1 />}
-            />
-            <ProductContent.RowSummaryCard
-              title={'비즈니스 크리티컬 앱'}
-              description={`정책 기반 가상자원 관리 및 부하분산 기능을 통해
+            image={<Logo_Article_4_1 />}
+          />
+          <ProductContent.RowSummaryCard
+            title={'비즈니스 크리티컬 앱'}
+            description={`정책 기반 가상자원 관리 및 부하분산 기능을 통해
               기업의 중요 애플리케이션을 안정적으로 실행합니다.`}
-              image={<Logo_Article_4_2 />}
-            />
-          </div>
-          <div className='mt-[40px] flex gap-[40px]'>
-            <ProductContent.RowSummaryCard
-              title={'IT 운영'}
-              description={`일원화된 자원관리 및 네트워크 관리를 통해 단일 환경에서
+            image={<Logo_Article_4_2 />}
+          />
+
+          <ProductContent.RowSummaryCard
+            title={'IT 운영'}
+            description={`일원화된 자원관리 및 네트워크 관리를 통해 단일 환경에서
               모든 인프라를 관리하고 통제할 수 있습니다.`}
-              image={<Logo_Article_4_3 />}
-            />
-            <ProductContent.RowSummaryCard
-              title={'개발 및 테스트'}
-              description={`다양한 가상머신 및 개발환경을 배포하여 사용할 수 있어
+            image={<Logo_Article_4_3 />}
+          />
+          <ProductContent.RowSummaryCard
+            title={'개발 및 테스트'}
+            description={`다양한 가상머신 및 개발환경을 배포하여 사용할 수 있어
               개발 및 테스트, 운영 환경 통합을 위한 최적의 환경을
               제공합니다. `}
-              image={<Logo_Article_4_4 />}
-            />
-          </div>
+            image={<Logo_Article_4_4 />}
+          />
         </div>
       </ProductContent>
 
       <ProductContent className={'bg-backgroudGray'} title='최신 리소스 살펴보기'>
-        <ProductContent.ActionCard
-          title={'기술노트'}
-          image={<Logo_Product_Default />}
-          description={`에이블스택을 좀더
+        <div className={'grid grid-cols-1 gap-[40px] md:grid-cols-2 lg:grid-cols-3'}>
+          <ProductContent.ActionCard
+            title={'기술노트'}
+            image={<Logo_Product_Default />}
+            description={`에이블스택을 좀더
           자세하게 설명한 기술개요`}
-          buttonTitle={'지금 보러가기'}
-          href={''}
-        />
-        <ProductContent.ActionCard
-          title={'데모 체험'}
-          image={<Logo_Product_Default />}
-          description={`에이블스택을 먼저 체험하고,
+            buttonTitle={'지금 보러가기'}
+            href={''}
+          />
+          <ProductContent.ActionCard
+            title={'데모 체험'}
+            image={<Logo_Product_Default />}
+            description={`에이블스택을 먼저 체험하고,
           사용해보세요.`}
-          buttonTitle={'기술 지원 및 데모 요청'}
-          href={''}
-        />
-        <ProductContent.ActionCard
-          title={'전문가와 상담'}
-          image={<Logo_Product_Default />}
-          description={`에이블스택 전문가와 직접 상담해보세요.
+            buttonTitle={'기술 지원 및 데모 요청'}
+            href={''}
+          />
+          <ProductContent.ActionCard
+            title={'전문가와 상담'}
+            image={<Logo_Product_Default />}
+            description={`에이블스택 전문가와 직접 상담해보세요.
           여러분에게 최적화된 솔루션 구축을 약속드려요.`}
-          buttonTitle={'문의하러 가기'}
-          href={''}
-        />
+            buttonTitle={'문의하러 가기'}
+            href={''}
+          />
+        </div>
       </ProductContent>
     </ProductTemplate>
   );

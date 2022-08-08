@@ -27,43 +27,45 @@ export default function AblestackObjectPage() {
         title='Object 스토리지를 선택하는 이유'
         description={`안전하며, 확장 가능한 클라우드 오브젝트 스토리지로
         빅데이터, 클라우드 네이티브 애플리케이션, 안전한 자료 저장 애플리케이션 등에 적합합니다.`}>
-        <ProductContent.Item
-          image={<Logo_Article_2_1 />}
-          title={'비정형 데이터 복잡성 완화'}
-          description={
-            <p>
-              단일 창에서 단일 플랫폼으로
-              <br />
-              무제한 용량을 지원하는
-              <br />
-              비정형 스토리지 공간을 제공
-            </p>
-          }
-        />
-        <ProductContent.Item
-          image={<Logo_Article_2_2 />}
-          title={'높은 호환성 제공'}
-          description={
-            <p>
-              AWS S3, OpenStack Swift와
-              <br />
-              호환되는 네임스페이스를 제공
-            </p>
-          }
-        />
-        <ProductContent.Item
-          image={<Logo_Article_2_3 />}
-          title={'강화된 데이터 보안'}
-          description={
-            <p>
-              복제, 암호화, WORM, 불변성을
-              <br />
-              통한 데이터 보호하고
-              <br />
-              오브젝트 버전 관리를 지원
-            </p>
-          }
-        />
+        <div className='mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3'>
+          <ProductContent.Item
+            image={<Logo_Article_2_1 />}
+            title={'비정형 데이터 복잡성 완화'}
+            description={
+              <p>
+                단일 창에서 단일 플랫폼으로
+                <br />
+                무제한 용량을 지원하는
+                <br />
+                비정형 스토리지 공간을 제공
+              </p>
+            }
+          />
+          <ProductContent.Item
+            image={<Logo_Article_2_2 />}
+            title={'높은 호환성 제공'}
+            description={
+              <p>
+                AWS S3, OpenStack Swift와
+                <br />
+                호환되는 네임스페이스를 제공
+              </p>
+            }
+          />
+          <ProductContent.Item
+            image={<Logo_Article_2_3 />}
+            title={'강화된 데이터 보안'}
+            description={
+              <p>
+                복제, 암호화, WORM, 불변성을
+                <br />
+                통한 데이터 보호하고
+                <br />
+                오브젝트 버전 관리를 지원
+              </p>
+            }
+          />
+        </div>
       </ProductContent>
 
       <ProductContent
@@ -102,63 +104,62 @@ export default function AblestackObjectPage() {
       </ProductContent>
 
       <ProductContent title='관련 솔루션'>
-        <div>
-          <div className='flex gap-[40px]'>
-            <ProductContent.RowSummaryCard
-              title={'비즈니스 크리티컬 앱'}
-              description={`다수의 가상머신을 통해 서비스되는 비즈니스 앱을 위해
+        <div className='mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2'>
+          <ProductContent.RowSummaryCard
+            title={'비즈니스 크리티컬 앱'}
+            description={`다수의 가상머신을 통해 서비스되는 비즈니스 앱을 위해
               공유 스토리지를 제공합니다.`}
-              image={<Logo_Article_4_1 />}
-            />
-            <ProductContent.RowSummaryCard
-              title={'VDI/DaaS'}
-              description={`Hyper-V, Citrix 등의 환경에서의 고성능 파일시스템을
+            image={<Logo_Article_4_1 />}
+          />
+          <ProductContent.RowSummaryCard
+            title={'VDI/DaaS'}
+            description={`Hyper-V, Citrix 등의 환경에서의 고성능 파일시스템을
               통해 안정적인 데스크톱 환경을 구축합니다.`}
-              image={<Logo_Article_4_2 />}
-            />
-          </div>
-          <div className='mt-[40px] flex gap-[40px]'>
-            <ProductContent.RowSummaryCard
-              title={'영상 감시'}
-              description={`영상 수집 서버를 통해 수집되는 영상 데이터를 저장하고
+            image={<Logo_Article_4_2 />}
+          />
+
+          <ProductContent.RowSummaryCard
+            title={'영상 감시'}
+            description={`영상 수집 서버를 통해 수집되는 영상 데이터를 저장하고
               조회할 수 있는 대용량 공유 스토리지를 제공합니다.`}
-              image={<Logo_Article_4_3 />}
-            />
-            <ProductContent.RowSummaryCard
-              title={'멀티 클라우드'}
-              description={`다양한 프로토콜 지원을 통해 VMWare, Hyper-V, 
+            image={<Logo_Article_4_3 />}
+          />
+          <ProductContent.RowSummaryCard
+            title={'멀티 클라우드'}
+            description={`다양한 프로토콜 지원을 통해 VMWare, Hyper-V, 
               Citrix, Linux KVM 등의 멀티 하이퍼바이저를 지원합니다.`}
-              image={<Logo_Article_4_4 />}
-            />
-          </div>
+            image={<Logo_Article_4_4 />}
+          />
         </div>
       </ProductContent>
 
       <ProductContent className={'bg-backgroudGray'} title='최신 리소스 살펴보기'>
-        <ProductContent.ActionCard
-          title={'기술노트'}
-          image={<Logo_Product_Default />}
-          description={`에이블스택을 좀더
+        <div className={'grid grid-cols-1 gap-[40px] md:grid-cols-2 lg:grid-cols-3'}>
+          <ProductContent.ActionCard
+            title={'기술노트'}
+            image={<Logo_Product_Default />}
+            description={`에이블스택을 좀더
           자세하게 설명한 기술개요`}
-          buttonTitle={'지금 보러가기'}
-          href={''}
-        />
-        <ProductContent.ActionCard
-          title={'데모 체험'}
-          image={<Logo_Product_Default />}
-          description={`에이블스택을 먼저 체험하고,
+            buttonTitle={'지금 보러가기'}
+            href={''}
+          />
+          <ProductContent.ActionCard
+            title={'데모 체험'}
+            image={<Logo_Product_Default />}
+            description={`에이블스택을 먼저 체험하고,
           사용해보세요.`}
-          buttonTitle={'기술 지원 및 데모 요청'}
-          href={''}
-        />
-        <ProductContent.ActionCard
-          title={'전문가와 상담'}
-          image={<Logo_Product_Default />}
-          description={`에이블스택 전문가와 직접 상담해보세요.
+            buttonTitle={'기술 지원 및 데모 요청'}
+            href={''}
+          />
+          <ProductContent.ActionCard
+            title={'전문가와 상담'}
+            image={<Logo_Product_Default />}
+            description={`에이블스택 전문가와 직접 상담해보세요.
           여러분에게 최적화된 솔루션 구축을 약속드려요.`}
-          buttonTitle={'문의하러 가기'}
-          href={''}
-        />
+            buttonTitle={'문의하러 가기'}
+            href={''}
+          />
+        </div>
       </ProductContent>
     </ProductTemplate>
   );

@@ -58,65 +58,64 @@ export default function AblestackGluePage() {
       </ProductContent>
 
       <ProductContent title='관련 솔루션'>
-        <div>
-          <div className='flex gap-[40px]'>
-            <ProductContent.RowSummaryCard
-              title={'핵심 업무를 위한 가상화 인프라'}
-              description={`내장 디스크 만으로 고성능의 내결함성 스토리지를 제공하여
+        <div className='mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2'>
+          <ProductContent.RowSummaryCard
+            title={'핵심 업무를 위한 가상화 인프라'}
+            description={`내장 디스크 만으로 고성능의 내결함성 스토리지를 제공하여
               복잡한 스토리지 패브릭을 제거할 수 있고
               99.9% 이상의 운영을 보장하는 안정성을 제공합니다.`}
-              image={<Logo_Article_4_1 />}
-            />
-            <ProductContent.RowSummaryCard
-              title={'프라이빗 클라우드'}
-              description={`필요할 때 무중단으로 무제한 확장이 가능하여
+            image={<Logo_Article_4_1 />}
+          />
+          <ProductContent.RowSummaryCard
+            title={'프라이빗 클라우드'}
+            description={`필요할 때 무중단으로 무제한 확장이 가능하여
               프라이빗 클라우드 구축을 위한 최적의 솔루션입니다.`}
-              image={<Logo_Article_4_2 />}
-            />
-          </div>
-          <div className='mt-[40px] flex gap-[40px]'>
-            <ProductContent.RowSummaryCard
-              title={'Edge Computing'}
-              description={`내장 디스크 만으로 스토리지를 제공하기 때문에
+            image={<Logo_Article_4_2 />}
+          />
+
+          <ProductContent.RowSummaryCard
+            title={'Edge Computing'}
+            description={`내장 디스크 만으로 스토리지를 제공하기 때문에
               단순하고 유연성이 높은 Edge Computing 인프라를
               제공합니다.`}
-              image={<Logo_Article_4_3 />}
-            />
-            <ProductContent.RowSummaryCard
-              title={'가상데스크톱/DaaS'}
-              description={`Thin Provisioning, 베이스 스냅샷 기능을 제공하여
+            image={<Logo_Article_4_3 />}
+          />
+          <ProductContent.RowSummaryCard
+            title={'가상데스크톱/DaaS'}
+            description={`Thin Provisioning, 베이스 스냅샷 기능을 제공하여
               다양한 가상데스크톱/DaaS 환경에 적용할 수 있습니다.`}
-              image={<Logo_Article_4_4 />}
-            />
-          </div>
+            image={<Logo_Article_4_4 />}
+          />
         </div>
       </ProductContent>
 
       <ProductContent className={'bg-backgroudGray'} title='최신 리소스 살펴보기'>
-        <ProductContent.ActionCard
-          title={'기술노트'}
-          image={<Logo_Product_Default />}
-          description={`에이블스택을 좀더
+        <div className={'grid grid-cols-1 gap-[40px] md:grid-cols-2 lg:grid-cols-3'}>
+          <ProductContent.ActionCard
+            title={'기술노트'}
+            image={<Logo_Product_Default />}
+            description={`에이블스택을 좀더
           자세하게 설명한 기술개요`}
-          buttonTitle={'지금 보러가기'}
-          href={''}
-        />
-        <ProductContent.ActionCard
-          title={'데모 체험'}
-          image={<Logo_Product_Default />}
-          description={`에이블스택을 먼저 체험하고,
+            buttonTitle={'지금 보러가기'}
+            href={''}
+          />
+          <ProductContent.ActionCard
+            title={'데모 체험'}
+            image={<Logo_Product_Default />}
+            description={`에이블스택을 먼저 체험하고,
           사용해보세요.`}
-          buttonTitle={'기술 지원 및 데모 요청'}
-          href={''}
-        />
-        <ProductContent.ActionCard
-          title={'전문가와 상담'}
-          image={<Logo_Product_Default />}
-          description={`에이블스택 전문가와 직접 상담해보세요.
+            buttonTitle={'기술 지원 및 데모 요청'}
+            href={''}
+          />
+          <ProductContent.ActionCard
+            title={'전문가와 상담'}
+            image={<Logo_Product_Default />}
+            description={`에이블스택 전문가와 직접 상담해보세요.
           여러분에게 최적화된 솔루션 구축을 약속드려요.`}
-          buttonTitle={'문의하러 가기'}
-          href={''}
-        />
+            buttonTitle={'문의하러 가기'}
+            href={''}
+          />
+        </div>
       </ProductContent>
     </ProductTemplate>
   );

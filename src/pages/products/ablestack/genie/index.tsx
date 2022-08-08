@@ -57,64 +57,63 @@ export default function AblestackGeniePage() {
       </ProductContent>
 
       <ProductContent title='관련 솔루션'>
-        <div>
-          <div className='flex gap-[40px]'>
-            <ProductContent.RowSummaryCard
-              title={'개발 및 테스트'}
-              description={`오픈소스 프로젝트 및 개발/테스트 환경을 자동 배포하여
+        <div className='mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2'>
+          <ProductContent.RowSummaryCard
+            title={'개발 및 테스트'}
+            description={`오픈소스 프로젝트 및 개발/테스트 환경을 자동 배포하여
               빠르게 필요한 개발 및 테스트 환경을 구축합니다.`}
-              image={<Logo_Article_4_1 />}
-            />
-            <ProductContent.RowSummaryCard
-              title={'하이브리드 클라우드'}
-              description={`원클릭으로 ABLESTACK 인프라 뿐 아니라 AWS, 
+            image={<Logo_Article_4_1 />}
+          />
+          <ProductContent.RowSummaryCard
+            title={'하이브리드 클라우드'}
+            description={`원클릭으로 ABLESTACK 인프라 뿐 아니라 AWS, 
               Azure, Google 등의 퍼블릭 클라우드에 자원을
               바로 배포할 수 있습니다. `}
-              image={<Logo_Article_4_2 />}
-            />
-          </div>
-          <div className='mt-[40px] flex gap-[40px]'>
-            <ProductContent.RowSummaryCard
-              title={'빅 데이터'}
-              description={`복잡한 구성의 빅데이터 에코 플랫폼을 원클릭으로
+            image={<Logo_Article_4_2 />}
+          />
+
+          <ProductContent.RowSummaryCard
+            title={'빅 데이터'}
+            description={`복잡한 구성의 빅데이터 에코 플랫폼을 원클릭으로
               수분 내에 배포하고 사용할 수 있습니다. `}
-              image={<Logo_Article_4_3 />}
-            />
-            <ProductContent.RowSummaryCard
-              title={'데브옵스/IT운영'}
-              description={`자동화된 IT 인프라 제공을 통해 애플리케이션의 
+            image={<Logo_Article_4_3 />}
+          />
+          <ProductContent.RowSummaryCard
+            title={'데브옵스/IT운영'}
+            description={`자동화된 IT 인프라 제공을 통해 애플리케이션의 
               딜리버리 사이클을 단축합니다. `}
-              image={<Logo_Article_4_4 />}
-            />
-          </div>
+            image={<Logo_Article_4_4 />}
+          />
         </div>
       </ProductContent>
 
       <ProductContent className={'bg-backgroudGray'} title='최신 리소스 살펴보기'>
-        <ProductContent.ActionCard
-          title={'기술노트'}
-          image={<Logo_Product_Default />}
-          description={`에이블스택을 좀더
+        <div className={'grid grid-cols-1 gap-[40px] md:grid-cols-2 lg:grid-cols-3'}>
+          <ProductContent.ActionCard
+            title={'기술노트'}
+            image={<Logo_Product_Default />}
+            description={`에이블스택을 좀더
           자세하게 설명한 기술개요`}
-          buttonTitle={'지금 보러가기'}
-          href={''}
-        />
-        <ProductContent.ActionCard
-          title={'데모 체험'}
-          image={<Logo_Product_Default />}
-          description={`에이블스택을 먼저 체험하고,
+            buttonTitle={'지금 보러가기'}
+            href={''}
+          />
+          <ProductContent.ActionCard
+            title={'데모 체험'}
+            image={<Logo_Product_Default />}
+            description={`에이블스택을 먼저 체험하고,
           사용해보세요.`}
-          buttonTitle={'기술 지원 및 데모 요청'}
-          href={''}
-        />
-        <ProductContent.ActionCard
-          title={'전문가와 상담'}
-          image={<Logo_Product_Default />}
-          description={`에이블스택 전문가와 직접 상담해보세요.
+            buttonTitle={'기술 지원 및 데모 요청'}
+            href={''}
+          />
+          <ProductContent.ActionCard
+            title={'전문가와 상담'}
+            image={<Logo_Product_Default />}
+            description={`에이블스택 전문가와 직접 상담해보세요.
           여러분에게 최적화된 솔루션 구축을 약속드려요.`}
-          buttonTitle={'문의하러 가기'}
-          href={''}
-        />
+            buttonTitle={'문의하러 가기'}
+            href={''}
+          />
+        </div>
       </ProductContent>
     </ProductTemplate>
   );

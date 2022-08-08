@@ -59,64 +59,62 @@ export default function AblestackKoralPage() {
       </ProductContent>
 
       <ProductContent title='관련 솔루션'>
-        <div>
-          <div className='flex gap-[40px]'>
-            <ProductContent.RowSummaryCard
-              title={'클라우드 네이티브'}
-              description={`독커 기반의 쿠버네티스 클러스터를 제공하여  마이크로
+        <div className='mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2'>
+          <ProductContent.RowSummaryCard
+            title={'클라우드 네이티브'}
+            description={`독커 기반의 쿠버네티스 클러스터를 제공하여  마이크로
               서비스, CI/CD 등의 클라우드 네이티브 환경을 제공합니다.`}
-              image={<Logo_Article_4_1 />}
-            />
-            <ProductContent.RowSummaryCard
-              title={'하이브리드 클라우드'}
-              description={`빠르게 이식할 수 있는 독커 컨테이너를 기반으로
+            image={<Logo_Article_4_1 />}
+          />
+          <ProductContent.RowSummaryCard
+            title={'하이브리드 클라우드'}
+            description={`빠르게 이식할 수 있는 독커 컨테이너를 기반으로
               AWS, Azure, Google 및 독커 호환 컨테이너에 바로
               배포하여 통합할 수 있습니다.`}
-              image={<Logo_Article_4_2 />}
-            />
-          </div>
-          <div className='mt-[40px] flex gap-[40px]'>
-            <ProductContent.RowSummaryCard
-              title={'인공지능/머신러닝'}
-              description={`컨테이너 기반의 이머징 오픈소스 애플리케이션과 
+            image={<Logo_Article_4_2 />}
+          />
+          <ProductContent.RowSummaryCard
+            title={'인공지능/머신러닝'}
+            description={`컨테이너 기반의 이머징 오픈소스 애플리케이션과 
               GPU를 결합하여 AI/ML 플랫폼을 제공합니다.`}
-              image={<Logo_Article_4_3 />}
-            />
-            <ProductContent.RowSummaryCard
-              title={'비즈니스 애플리케이션'}
-              description={`지속적인 개발 및 통합을 통해 비즈니스 애플리케이션의
+            image={<Logo_Article_4_3 />}
+          />
+          <ProductContent.RowSummaryCard
+            title={'비즈니스 애플리케이션'}
+            description={`지속적인 개발 및 통합을 통해 비즈니스 애플리케이션의
               개발/운영 주기를 가속화 합니다.`}
-              image={<Logo_Article_4_4 />}
-            />
-          </div>
+            image={<Logo_Article_4_4 />}
+          />
         </div>
       </ProductContent>
 
       <ProductContent className={'bg-backgroudGray'} title='최신 리소스 살펴보기'>
-        <ProductContent.ActionCard
-          title={'기술노트'}
-          image={<Logo_Product_Default />}
-          description={`에이블스택을 좀더
+        <div className={'grid grid-cols-1 gap-[40px] md:grid-cols-2 lg:grid-cols-3'}>
+          <ProductContent.ActionCard
+            title={'기술노트'}
+            image={<Logo_Product_Default />}
+            description={`에이블스택을 좀더
           자세하게 설명한 기술개요`}
-          buttonTitle={'지금 보러가기'}
-          href={''}
-        />
-        <ProductContent.ActionCard
-          title={'데모 체험'}
-          image={<Logo_Product_Default />}
-          description={`에이블스택을 먼저 체험하고,
+            buttonTitle={'지금 보러가기'}
+            href={''}
+          />
+          <ProductContent.ActionCard
+            title={'데모 체험'}
+            image={<Logo_Product_Default />}
+            description={`에이블스택을 먼저 체험하고,
           사용해보세요.`}
-          buttonTitle={'기술 지원 및 데모 요청'}
-          href={''}
-        />
-        <ProductContent.ActionCard
-          title={'전문가와 상담'}
-          image={<Logo_Product_Default />}
-          description={`에이블스택 전문가와 직접 상담해보세요.
+            buttonTitle={'기술 지원 및 데모 요청'}
+            href={''}
+          />
+          <ProductContent.ActionCard
+            title={'전문가와 상담'}
+            image={<Logo_Product_Default />}
+            description={`에이블스택 전문가와 직접 상담해보세요.
           여러분에게 최적화된 솔루션 구축을 약속드려요.`}
-          buttonTitle={'문의하러 가기'}
-          href={''}
-        />
+            buttonTitle={'문의하러 가기'}
+            href={''}
+          />
+        </div>
       </ProductContent>
     </ProductTemplate>
   );

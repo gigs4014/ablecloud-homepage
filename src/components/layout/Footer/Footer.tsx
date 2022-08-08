@@ -9,8 +9,8 @@ import Logo_ablecloud_gray from '@/public/images/logos/ablecloud_logo_gray.svg';
 
 function FooterSite() {
   return (
-    <section className={'h-[330px] py-[50px]'}>
-      <ul className={`flex list-none justify-between`}>
+    <section className={'hidden h-[330px] py-[50px] lg:block'}>
+      <ul className={`flex max-w-page-full list-none justify-between`}>
         {footerMenus.map(menu => (
           <li key={uuid()} className={'min-w-50 float-left'}>
             <ol className={'bg-red'}>

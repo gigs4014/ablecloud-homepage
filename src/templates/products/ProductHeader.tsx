@@ -31,11 +31,11 @@ export default function ProductHeader({
 
       <div className='flex max-w-page-full items-center space-x-8 px-8'>
         {/* image */}
-        <section className='w-1/2 overflow-visible'>{image}</section>
+        <section className='hidden w-1/2 overflow-visible md:block lg:block'>{image}</section>
 
         {/* info */}
-        <section className={`w-1/2 ${textColor} `}>
-          <p className={'text-[42px] font-[900] leading-[52.42px]'}>{title}</p>
+        <section className={`w-full md:w-1/2 lg:w-1/2 ${textColor} `}>
+          <p className={'whitespace-nowrap text-[42px] font-[900] leading-[52.42px]'}>{title}</p>
           <h1>{summary}</h1>
           <p className={'text-[18px] font-[400] leading-[26.06px]'}>{description}</p>
           <div>{headerExtra}</div>
