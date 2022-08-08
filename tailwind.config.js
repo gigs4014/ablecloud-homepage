@@ -21,7 +21,7 @@ module.exports = {
   theme: {
     backgroundImage: {
       'home-header-bg': "url('/images/new/home/home-header-bg.svg')",
-      'company-header-bg': "url('/images/new/company/company_first_bg.svg')",
+      'company-header-bg': "url('/images/new/company/company-header-bg.svg')",
       'product-header-bg': "url('/images/new/product/product-header-bg.svg')",
       'ablestack-header-bg': "url('/images/new/product/ablestack/ablestack-header-bg.svg')",
       'ablestack-block-header-bg':

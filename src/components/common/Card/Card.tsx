@@ -97,7 +97,7 @@ export function SmallCard({
 }) {
   return (
     <div
-      className={`h-[130px] min-w-[130px] flex-col items-center justify-center rounded-[10px] bg-primary px-[8px] text-center text-white ${className}`}>
+      className={`h-[130px] min-w-[130px] flex-col items-center justify-center rounded-[10px] px-[8px] text-center text-white ${className}`}>
       <p className={'m-0 mt-[20px] text-[30px] font-[700]'}>{value}</p>
       <p className={'m-0 whitespace-nowrap text-[16px] font-[400]'}>{title}</p>
     </div>
