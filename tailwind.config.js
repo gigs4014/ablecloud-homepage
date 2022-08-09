@@ -25,13 +25,13 @@ module.exports = {
       'product-header-bg': "url('/images/new/product/product-header-bg.svg')",
       'ablestack-header-bg': "url('/images/new/product/ablestack/ablestack-header-bg.svg')",
       'ablestack-block-header-bg':
-        "url('/images/new/product/ablestack/ablestackBlock/ablestackBlock-header-bg.svg')",
+        "url('/images/new/product/ablestack/ablestackBlock/ablestackBlock-header-bg.png')",
       'ablestack-cell-header-bg':
-        "url('/images/new/product/ablestack/ablestackCell/ablestackCell-header-bg.svg')",
+        "url('/images/new/product/ablestack/ablestackCell/ablestackCell-header-bg.png')",
       'ablestack-files-header-bg':
         "url('/images/new/product/ablestack/ablestackFiles/ablestackFiles-header-bg.svg')",
       'ablestack-genie-header-bg':
-        "url('/images/new/product/ablestack/ablestackGenie/ablestackGenie-header-bg.svg')",
+        "url('/images/new/product/ablestack/ablestackGenie/ablestackGenie-header-bg.png')",
       'ablestack-glue-header-bg':
         "url('/images/new/product/ablestack/ablestackGlue/ablestackGlue-header-bg.svg')",
       'ablestack-koral-header-bg':

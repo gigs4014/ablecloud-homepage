@@ -36,7 +36,9 @@ export default function Header() {
     setSelectedItem(getSelectedItem(menuItems, asPath));
   }, [asPath]);
 
-  useEffect(() => {}, [selectedItem]);
+  useEffect(() => {
+    console.log({ selectedItem });
+  }, [selectedItem]);
 
   return (
     <header
@@ -62,10 +64,7 @@ export default function Header() {
 
           <ul className={'hidden md:block lg:block'}>
             {menuItems.map(item => (
-              <li
-                className={cls`inline-flex w-fit`}
-                onMouseEnter={() => setSubMenuItems(item.subMenuItems)}
-                key={uuid()}>
+              <li className={cls`inline-flex w-fit`} key={uuid()}>
                 <MenuItem item={item} selectedItem={selectedItem} />
               </li>
             ))}
@@ -89,14 +88,15 @@ export default function Header() {
       </nav>
 
       {/* mobile overlay */}
-      {isSubMenuOpen && !isBigScreen && (
+      {/* {isSubMenuOpen && !isBigScreen && (
         <div
           className={cls`fixed inset-0 z-10 bg-gray-500 bg-opacity-75 ${{
             hidden: !isSubMenuOpen,
           }}`}
-          onClick={() => setIsSubMenuOpen(false)}
-        />
-      )}
+          onClick={() => setIsSubMenuOpen(false)}>
+          test
+        </div>
+      )} */}
     </header>
   );
 }

@@ -42,7 +42,7 @@ export function ActionCard({
             {description}
           </p>
         ) : (
-          { description }
+          description
         )}
 
         {buttonTitle && (
@@ -115,19 +115,15 @@ export function RowSummaryCard({
   return (
     <Container.Card
       hoverBehavoir={hoverBehavoir}
-      className={`flex h-[144px]  items-center justify-between border-0.5 border-gray-200 py-[20px] shadow-none ${containerClassName}`}>
+      className={`flex h-[144px]  items-center justify-start border-0.5 border-gray-200 py-[20px] px-[32px] shadow-none ${containerClassName}`}>
       {image && (
-        <div className='mx-[36px]  flex min-h-[108px] min-w-[100px] items-center justify-center'>
-          {image}
-        </div>
+        <div className='flex min-h-[108px] min-w-[100px] items-center justify-center'>{image}</div>
       )}
 
-      <div className='ml-[14px] text-left'>
+      <div className='ml-[14px] '>
         <p className={'m-0 mb-[8px] p-0 text-[16px] font-[500] leading-[23.17px]'}>{title}</p>
         {description && (
-          <p className={'m-0 p-0 pr-[70px] text-[16px] font-[400] leading-[23.17px]'}>
-            {description}
-          </p>
+          <p className={'m-0 p-0  text-[16px] font-[400] leading-[23.17px]'}>{description}</p>
         )}
       </div>
 

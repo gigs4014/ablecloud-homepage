@@ -19,7 +19,7 @@ export function Card({
 
   return (
     <section
-      className={cls`h-full w-full overflow-hidden rounded-md bg-white shadow-md ${hoverStyle} ${className}`}>
+      className={cls`h-full w-full overflow-hidden rounded-md bg-white  ${hoverStyle} ${className}`}>
       {children}
     </section>
   );

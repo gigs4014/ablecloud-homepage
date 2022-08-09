@@ -48,23 +48,71 @@ export const menuItems: Array<HeaderMenuItem> = [
         // type: 'group',
         label: 'Ablestack HCI',
         href: '/products/ablestack',
+      },
+      {
+        type: 'group',
+        label: '인프라 스트럭처',
+        href: '/products/ablestack',
+        subMenuItems: [
+          { label: 'Glue 스토리지', href: '/products/ablestack/glue' },
+          { label: 'Cell 가상화', href: '/products/ablestack/cell' },
+          { label: 'Koral 쿠버네테스 엔진', href: '/products/ablestack/koral' },
+          { label: 'Track 네트워크 보안', href: '/products/ablestack/track' },
+        ],
         // subMenuItems: [
-        //   { label: 'Block', href: '/products/ablestack/block' },
-        //   { label: 'Cell', href: '/products/ablestack/cell' },
-        //   { label: 'Files', href: '/products/ablestack/files' },
-        //   { label: 'Genie', href: '/products/ablestack/genie' },
-        //   { label: 'Glue', href: '/products/ablestack/glue' },
-        //   { label: 'Koral', href: '/products/ablestack/koral' },
-        //   { label: 'Mold', href: '/products/ablestack/mold' },
-        //   { label: 'Object', href: '/products/ablestack/object' },
+        //   { label: 'Block 블록스토리지', href: '/products/ablestack/block' },
+        //   { label: 'Cell 가상화', href: '/products/ablestack/cell' },
+        //   { label: 'Files 파일시스템', href: '/products/ablestack/files' },
+        //   { label: 'Genie 하이브리드 배포 자동화', href: '/products/ablestack/genie' },
+        //   { label: 'Glue 스토리지', href: '/products/ablestack/glue' },
+        //   { label: 'Koral 쿠버네테스 엔진', href: '/products/ablestack/koral' },
+        //   { label: 'Mold 클라우드 관리', href: '/products/ablestack/mold' },
+        //   { label: 'Object 오브젝트 스토리지', href: '/products/ablestack/object' },
         //   { label: 'Slio', href: '/products/ablestack/slio' },
-        //   { label: 'Station', href: '/products/ablestack/station' },
-        //   { label: 'Track', href: '/products/ablestack/track' },
-        //   { label: 'Wall', href: '/products/ablestack/wall' },
-        //   { label: 'Works', href: '/products/ablestack/works' },
+        //   { label: 'Station 플랫폼서비스', href: '/products/ablestack/station' },
+        //   { label: 'Track 네트워크 보안', href: '/products/ablestack/track' },
+        //   { label: 'Wall 통합 모니터링', href: '/products/ablestack/wall' },
+        //   { label: 'Works 가상데스크톱', href: '/products/ablestack/works' },
         //   { label: 'Core', href: '/products/ablestack/core' },
         //   { label: 'Management', href: '/products/ablestack/management' },
         // ],
+      },
+      {
+        type: 'group',
+        label: '관리플랫폼',
+        href: '/products/ablestack',
+        subMenuItems: [
+          { label: 'Mold 클라우드 관리', href: '/products/ablestack/mold' },
+          { label: 'Genie 하이브리드 배포 자동화', href: '/products/ablestack/genie' },
+          { label: 'Wall 통합 모니터링', href: '/products/ablestack/wall' },
+        ],
+      },
+      {
+        type: 'group',
+        label: '통합스토리지',
+        href: '/products/ablestack',
+        subMenuItems: [
+          { label: 'Block 블록스토리지', href: '/products/ablestack/block' },
+          { label: 'Files 파일시스템', href: '/products/ablestack/files' },
+          { label: 'Object 오브젝트 스토리지', href: '/products/ablestack/object' },
+        ],
+      },
+      {
+        type: 'group',
+        label: '서비스 및 플랫폼',
+        href: '/products/ablestack',
+        subMenuItems: [
+          { label: 'Works 가상데스크톱', href: '/products/ablestack/works' },
+          { label: 'Station 플랫폼서비스', href: '/products/ablestack/station' },
+        ],
+      },
+      {
+        label: 'ABLESTACK 어플라이언스',
+        href: '/products/ablestack',
+      },
+      {
+        label: 'ABLESTACK 조달제품',
+        href: '/products/ablestack',
       },
     ],
   },
@@ -142,11 +190,11 @@ export const footerMenus = [
     subMenuItems: [
       {
         label: 'ABLESTACK의 탄생',
-        href: '/company',
+        href: '/products',
       },
       {
         label: 'ABLESTACK 소개',
-        href: '/company',
+        href: '/products/ablestack',
       },
     ],
   },
@@ -155,7 +203,7 @@ export const footerMenus = [
     subMenuItems: [
       {
         label: '-',
-        href: '/company',
+        href: '/solutions',
       },
       {
         label: '-',
@@ -168,7 +216,7 @@ export const footerMenus = [
     subMenuItems: [
       {
         label: '-',
-        href: '/company',
+        href: '/appliance',
       },
       {
         label: '-',
@@ -181,7 +229,7 @@ export const footerMenus = [
     subMenuItems: [
       {
         label: '파트너 네트워크',
-        href: '/company',
+        href: '/partners',
       },
     ],
   },
