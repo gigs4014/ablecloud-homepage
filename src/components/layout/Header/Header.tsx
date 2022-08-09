@@ -1,129 +1,21 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import { useRouter } from 'next/router';
 
+import { menuItems } from '@/constants';
 import { useMediaQuery } from 'react-responsive';
+import { v4 as uuid } from 'uuid';
 
 import { useDarkMode } from '@/hooks/common';
+import useScrollDown from '@/hooks/common/useScrollDown';
+import { HeaderMenuItem, TNullable } from '@/types';
 import { cls } from '@/utils';
 
 import { CustomLink } from '@/components/common';
 
-import { HeaderMenuItem, MenuItem, MobileMenuItem, SubMenu, getSelectedItem } from './Menu';
+import Logo_ablecloud_default from '@/public/images/logos/ablecloud_logo_default.svg';
 
-/**
-## 메뉴 구성
-
-### 제품
-
-- Ablestack HCI
-    - Core (cube, cell, glue)
-    - Management (mold, koral, wall, genie, station)
-- Ablestack Appliance
-
-### 솔루션
-
-- 프라이빗 클라우드
-- 하이브리드 클라우드 (Genie 관련 내용 포함)
-- 웹 애플리케이션
-- 빅데이터
-- 영상감시
-- IoT
-- 엣지 컴퓨팅
-- 인공지능
-- 최종 사용자 컴퓨팅 (VDI, Works 관련 내용 포함)
-
-### 성공 사례
-
-### 회사
-
-- About Us
-- 파트너
-- 문의하기
-
-### 자료
-
-- Blog
-- Docs
- */
-const menuItems: Array<HeaderMenuItem> = [
-  {
-    label: '회사소개',
-    href: '/company',
-  },
-  {
-    label: '제품',
-    subMenuItems: [
-      {
-        type: 'group',
-        label: 'Ablestack HCI',
-        href: '/products/ablestack',
-        subMenuItems: [
-          { label: 'Core', href: '/products/ablestack/core' },
-          { label: 'Management', href: '/products/ablestack/management' },
-        ],
-      },
-    ],
-  },
-  {
-    label: '솔루션',
-    subMenuItems: [
-      {
-        label: '프라이빗 클라우드',
-        href: '/solutions/private-cloud',
-      },
-      {
-        label: '하이브리드 클라우드',
-        href: '/solutions/hybrid-cloud',
-      },
-      {
-        label: '웹 애플리케이션',
-        href: '/solutions/webapp',
-      },
-      {
-        label: '빅데이터',
-        href: '/solutions/bigdata',
-      },
-      {
-        label: '영상감시',
-        href: '/solutions/monitoring',
-      },
-      {
-        label: 'IoT',
-        href: '/solutions/iot',
-      },
-      {
-        label: '엣지 컴퓨팅',
-        href: '/solutions/edge-computing',
-      },
-      {
-        label: '인공지능',
-        href: '/solutions/ai',
-      },
-      {
-        label: '최종 사용자 컴퓨팅',
-        href: '/solutions/euc',
-      },
-    ],
-  },
-  {
-    label: '하드웨어 플랫폼',
-    href: '/appliance',
-  },
-  {
-    label: '파트너',
-    href: '/partners',
-  },
-  {
-    label: '제품문의',
-    href: '/company/contact',
-  },
-  {
-    label: 'Blog',
-    href: '/blog',
-    align: 'right',
-  },
-];
+import { MenuItem, getSelectedItem } from './Menu';
 
 export default function Header() {
   const { asPath } = useRouter();
@@ -133,14 +25,23 @@ export default function Header() {
   const isBigScreen = useMediaQuery({ query: '(min-width: 768px)' });
 
   const [selectedItem, setSelectedItem] = useState<HeaderMenuItem | undefined>();
+
+  const headerRef = useRef<TNullable<HTMLDivElement>>(null);
+
   const { darkMode, setDarkMode } = useDarkMode();
+
+  useScrollDown(headerRef);
 
   useEffect(() => {
     setSelectedItem(getSelectedItem(menuItems, asPath));
   }, [asPath]);
 
+  useEffect(() => {}, [selectedItem]);
+
   return (
-    <header className='sticky top-0 z-20 flex h-16 w-full justify-center'>
+    <header
+      ref={headerRef}
+      className='sticky top-0 z-20 flex h-[110px] w-full items-center justify-center bg-white '>
       <nav
         onMouseEnter={() => isBigScreen && setIsSubMenuOpen(true)}
         onMouseLeave={() => {
@@ -149,32 +50,26 @@ export default function Header() {
             setSubMenuItems(undefined);
           }
         }}
-        className='group relative z-20 flex h-fit max-w-page-full flex-1 flex-col bg-white shadow-md md:rounded-b-lg'>
+        className='group relative z-20 flex h-fit max-w-page-full flex-1 flex-col flex-nowrap '>
         {/* Main menu section */}
-        <section className=' flex h-16 w-full items-center justify-between px-4'>
+        <section className='flex w-full items-center justify-between px-4'>
           {/* Logo */}
           <div className='px-4'>
             <CustomLink href='/'>
-              <div className='flex items-center'>
-                <span className='text-2xl font-bold text-sky-400'>ABLECLOUD</span>
-              </div>
+              <Logo_ablecloud_default />
             </CustomLink>
           </div>
 
-          <div className='hidden h-full md:flex md:flex-1'>
-            <ul className='h-full flex-1'>
-              {menuItems.map(item => (
-                <li
-                  className={cls`inline-flex h-full w-fit ${
-                    item.align === 'right' && 'float-right'
-                  }`}
-                  onMouseEnter={() => setSubMenuItems(item.subMenuItems)}
-                  key={item.href}>
-                  <MenuItem item={item} selectedItem={selectedItem} />
-                </li>
-              ))}
-            </ul>
-          </div>
+          <ul className={'hidden md:block lg:block'}>
+            {menuItems.map(item => (
+              <li
+                className={cls`inline-flex w-fit`}
+                onMouseEnter={() => setSubMenuItems(item.subMenuItems)}
+                key={uuid()}>
+                <MenuItem item={item} selectedItem={selectedItem} />
+              </li>
+            ))}
+          </ul>
 
           {/* Header right section */}
           {/* <div className='hidden items-center justify-center space-x-4 md:flex'>
@@ -190,43 +85,7 @@ export default function Header() {
               <Button>데모 요청하기</Button>
             </CustomLink>
           </div> */}
-
-          <button
-            className='icon-[menu] icon-size-4xl md:hidden'
-            onClick={e => setIsSubMenuOpen(prev => !prev)}
-          />
         </section>
-
-        {/* Sub menu section */}
-        {isSubMenuOpen && (
-          <section className=' h-full w-full items-center border-t-0.5 border-slate-200 px-8 md:flex md:px-32'>
-            {/* md breakpoint nav */}
-            {isBigScreen ? (
-              subMenuItems && <SubMenu items={subMenuItems} selectedItem={selectedItem} />
-            ) : (
-              <ul className='h-full w-full'>
-                {menuItems.map(item => (
-                  <li className='flex-1 py-2' key={item.href}>
-                    <MobileMenuItem
-                      item={item}
-                      focusedItem={focusedMenu}
-                      selectedItem={selectedItem}
-                      onClick={e => {
-                        if (focusedMenu === item) {
-                          setFocusedMenu(undefined);
-                          setSubMenuItems(undefined);
-                        } else {
-                          setFocusedMenu(item);
-                          setSubMenuItems(item.subMenuItems);
-                        }
-                      }}
-                    />
-                  </li>
-                ))}
-              </ul>
-            )}
-          </section>
-        )}
       </nav>
 
       {/* mobile overlay */}

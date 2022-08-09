@@ -8,4 +8,8 @@
     overflow-x: hidden;
     word-break: keep-all;
   }
+  p {
+    margin: 0;
+    padding: 0;
+  }
 }

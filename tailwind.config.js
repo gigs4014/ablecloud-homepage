@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors');
+
 /** @typedef { import('tailwindcss/tailwind-config').TailwindConfig } TailwindConfig */
 /** @typedef { import('tailwindcss/tailwind-config').TailwindThemeValue } TailwindThemeValue */
 
@@ -17,8 +19,53 @@ module.exports = {
   content: ['./src/{pages,components,templates}/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'class',
   theme: {
+    backgroundImage: {
+      'home-header-bg': "url('/images/new/home/home-header-bg.svg')",
+      'company-header-bg': "url('/images/new/company/company-header-bg.svg')",
+      'product-header-bg': "url('/images/new/product/product-header-bg.svg')",
+      'ablestack-header-bg': "url('/images/new/product/ablestack/ablestack-header-bg.svg')",
+      'ablestack-block-header-bg':
+        "url('/images/new/product/ablestack/ablestackBlock/ablestackBlock-header-bg.svg')",
+      'ablestack-cell-header-bg':
+        "url('/images/new/product/ablestack/ablestackCell/ablestackCell-header-bg.svg')",
+      'ablestack-files-header-bg':
+        "url('/images/new/product/ablestack/ablestackFiles/ablestackFiles-header-bg.svg')",
+      'ablestack-genie-header-bg':
+        "url('/images/new/product/ablestack/ablestackGenie/ablestackGenie-header-bg.svg')",
+      'ablestack-glue-header-bg':
+        "url('/images/new/product/ablestack/ablestackGlue/ablestackGlue-header-bg.svg')",
+      'ablestack-koral-header-bg':
+        "url('/images/new/product/ablestack/ablestackKoral/ablestackKoral-header-bg.svg')",
+      'ablestack-mold-header-bg':
+        "url('/images/new/product/ablestack/ablestackMold/ablestackMold-header-bg.svg')",
+      'ablestack-object-header-bg':
+        "url('/images/new/product/ablestack/ablestackObject/ablestackObject-header-bg.svg')",
+      'ablestack-slio-header-bg':
+        "url('/images/new/product/ablestack/ablestackSlio/ablestackSlio-header-bg.svg')",
+      'ablestack-station-header-bg':
+        "url('/images/new/product/ablestack/ablestackStation/ablestackStation-header-bg.svg')",
+      'ablestack-track-header-bg':
+        "url('/images/new/product/ablestack/ablestackTrack/ablestackTrack-header-bg.svg')",
+      'ablestack-wall-header-bg':
+        "url('/images/new/product/ablestack/ablestackWall/ablestackWall-header-bg.svg')",
+    },
     fontFamily: { sans: ['Noto Sans KR', ...defaultTheme.fontFamily.sans] },
     extend: {
+      colors: {
+        transparent: 'transparent',
+        current: 'currentColor',
+        black: colors.black,
+        white: colors.white,
+        gray: colors.slate,
+        green: colors.emerald,
+        purple: colors.violet,
+        yellow: colors.amber,
+        pink: colors.fuchsia,
+        primary: '#2BBBE6',
+        borderGray: '#D4D4D4',
+        backgroudGray: '#F6F7F9',
+        backgroundBlue: '#71A6CE',
+      },
       borderWidth: {
         1: '1px',
         0.5: '0.5px',

@@ -1,11 +1,11 @@
-import { MouseEventHandler, ReactNode, useMemo } from 'react';
+import { MouseEventHandler, ReactNode, useMemo, useState } from 'react';
 
-import { BaseComponentProps } from '@/types';
+import { v4 as uuid } from 'uuid';
+
+import { BaseComponentProps, HeaderMenuItem } from '@/types';
 import { cls } from '@/utils';
 
 import { CustomLink } from '@/components/common';
-
-import { HeaderMenuItem } from './Menu.types';
 
 export function getSelectedItem(
   items: Array<HeaderMenuItem>,
@@ -76,23 +76,58 @@ export function MobileMenuItem({
 }
 
 export function MenuItem({ item, children, selectedItem, className }: MenuItemProps) {
-  const { label, href } = item;
+  const { label, href, subMenuItems } = item;
+
+  const [isSubMenuOpen, setIsSubMenuOpen] = useState<boolean>(false);
   const selected = useMemo(
     () => selectedItem && isIncludedItem(item, selectedItem),
     [item, selectedItem],
   );
 
-  console.log(item.label, selected);
+  // console.log(item.label, selected);
 
   return (
-    <div className={cls`group h-full w-full ${className}`}>
+    <div
+      className={cls`group h-full w-full ${className}`}
+      onMouseOver={() => setIsSubMenuOpen(true)}
+      onMouseLeave={() => setIsSubMenuOpen(false)}>
       <CustomLink
         href={href}
         className={cls`flex h-full w-full items-center justify-center px-4 ${{
-          'text-blue-500': selected,
+          'text-primary': selected,
         }}`}>
         <div>{label ?? children}</div>
       </CustomLink>
+      {isSubMenuOpen && subMenuItems && (
+        <ul className='absolute border-1 bg-white p-[4px]'>
+          {subMenuItems.map(item => (
+            <li key={uuid()}>
+              <CustomLink
+                href={item.href}
+                className={cls`flex h-full w-full items-center justify-start px-4 py-2${{
+                  'text-primary': selected,
+                }}`}>
+                <div>{item.label ?? children}</div>
+              </CustomLink>
+              {item.subMenuItems && (
+                <ul>
+                  {item.subMenuItems.map(item => (
+                    <li key={uuid()}>
+                      <CustomLink
+                        href={item.href}
+                        className={cls`flex h-full w-full items-center justify-start px-4 py-2${{
+                          'text-primary': selected,
+                        }}`}>
+                        <div>{item.label ?? children}</div>
+                      </CustomLink>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 }

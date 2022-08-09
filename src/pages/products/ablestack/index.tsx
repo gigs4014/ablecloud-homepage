@@ -1,69 +1,227 @@
+import { Button, CustomLink } from '@/components/common';
 import { ProductContent, ProductHeaderProps, ProductTemplate } from '@/templates';
 
-const PlaceholderImg = <div className='h-96 w-full bg-slate-200' />;
+import Logo_Article_1_1 from '@/public/images/new/product/ablestack/article_1_1.svg';
+import Logo_Article_3_1 from '@/public/images/new/product/ablestack/article_3_1.svg';
+import Logo_Article_3_2 from '@/public/images/new/product/ablestack/article_3_2.svg';
+import Logo_Article_3_3 from '@/public/images/new/product/ablestack/article_3_3.svg';
+import Logo_Article_3_4 from '@/public/images/new/product/ablestack/article_3_4.svg';
+import Logo_Article_3_5 from '@/public/images/new/product/ablestack/article_3_5.svg';
+import Logo_Article_4_1 from '@/public/images/new/product/ablestack/article_4_1.svg';
+import Logo_Article_4_2 from '@/public/images/new/product/ablestack/article_4_2.svg';
+import Logo_Article_4_3 from '@/public/images/new/product/ablestack/article_4_3.svg';
+import Logo_Article_4_4 from '@/public/images/new/product/ablestack/article_4_4.svg';
+import Logo_Article_5_1 from '@/public/images/new/product/ablestack/article_5_1.svg';
+import Logo_Article_5_2 from '@/public/images/new/product/ablestack/article_5_2.svg';
+import Logo_Article_5_3 from '@/public/images/new/product/ablestack/article_5_3.svg';
+import Logo_Article_5_4 from '@/public/images/new/product/ablestack/article_5_4.svg';
+import Logo_Article_5_5 from '@/public/images/new/product/ablestack/article_5_5.svg';
+import Logo_Article_6_1 from '@/public/images/new/product/ablestack/article_6_1.svg';
+import Logo_Article_6_2 from '@/public/images/new/product/ablestack/article_6_2.svg';
+import Logo_Article_6_3 from '@/public/images/new/product/ablestack/article_6_3.svg';
 
 const headerContent: ProductHeaderProps = {
-  title: 'Ablestack 클라우드 핵심 인프라',
-  summary: '소프트웨어로 정의된 단일 플랫폼',
-  description:
-    '소프트웨어 정의 기술을 이용한 하이퍼 컨버지드 플랫폼인 ABLESTACK을 통해 컴퓨팅, 스토리지, 가상화, 네트워킹을 핵심으로 제공하는 엔터프라이즈 클라우드를 구축할 수 있습니다.',
-  image: PlaceholderImg,
+  title: 'ABLESTACK HCI',
+  description: `ABLESTACK은 엔터프라이즈 클라우드 환경을 구축하는
+  HCI (Hyper Converged Infrastructure) 플랫폼입니다.
+  단 하나의 플랫폼으로 가상머신, 앱, 가상화/클라우드 등 
+  사용하고 관리할 수 있습니다. 상용 x86 서버에 10G Network에 연결하고
+  ABLESTACK을 설치하면 지금 바로 핵심 인프라를 포함하여
+  모든 서비스를 시작할 수 있습니다.
+  `,
+  image: <Logo_Article_1_1 />,
+  bgImage: 'bg-ablestack-header-bg',
 };
 
 export default function AblestackPage() {
   return (
     <ProductTemplate {...headerContent}>
-      <ProductContent title='Cell 하이퍼바이저' image={PlaceholderImg}>
-        <ProductContent.Box title='사용자 투명성'>
-          Mold 및 Glue에 완벽하게 통합되어 있기 때문에 사용자는 퍼블릭 클라우드와 같이 가상화 환경을
-          의식할 필요가 없습니다.
-        </ProductContent.Box>
-
-        <ProductContent.Box title='단일 제어 플랫폼'>
-          Mold를 통해 가상화, 인프라 관리, 네트워킹, 보안, 셀프 서비스를 모두 사용할 수 있습니다.
-        </ProductContent.Box>
-
-        <ProductContent.Box title='최적의 성능과 기능'>
-          PCI Passthrough, NVIDIA GPU 등의 최신 기술 지원을 통해 이머징 워크로드에서 필요한 성능과
-          기능을 제공합니다.
-        </ProductContent.Box>
-
-        <ProductContent.GoDetail href='/products/ablestack/cell'>
-          Ablestack Cell
-        </ProductContent.GoDetail>
+      <ProductContent
+        className={'bg-backgroudGray'}
+        title='ABLESTACK HCI'
+        description={`복잡한 구조의 전통적 기업 데이터센터의 문제점을 해결하고, IT 환경의 급속한 발전으로 인해 발생하는 문제점을 해결하기 위해
+단일 서버 구성으로 모든 인프라와 플랫폼을 실행할 수 있도록 고안된 HCI 플랫폼 입니다.`}>
+        <div className={'flex w-full justify-center'}>
+          <CustomLink href='/stories' hoverBehavoir='none'>
+            <Button solid>개요 보러가기</Button>
+          </CustomLink>
+        </div>
       </ProductContent>
 
-      <ProductContent title='Glue 분산스토리지' imagePosition='first' image={PlaceholderImg}>
-        <ProductContent.Box title=''></ProductContent.Box>
-        <ProductContent.Box title=''></ProductContent.Box>
+      <ProductContent image={<Logo_Article_3_5 />}>
+        <ProductContent.Intro
+          title='ABLESTACK 인프라스트럭처'
+          description={
+            <p className='mt-[24px] text-[16px] font-[400] leading-[23.17px]'>
+              ABLESTACK으로 구성된 클라우드 환경을 통해 스토리지, 가상머신, 컨테이너,
+              <br /> 네트워크 등의 인프라를 생성하여 사용할 수 있습니다.
+            </p>
+          }
+        />
+        <div className='flex gap-[10px]'>
+          <CustomLink href='/products/ablestack/glue' className={'w-full'}>
+            <ProductContent.RowSmallCard
+              containerClassName={'bg-[#EEF4FB]'}
+              title={'Glue'}
+              description={'스토리지'}
+              image={<Logo_Article_3_1 />}
+            />
+          </CustomLink>
 
-        <ProductContent.GoDetail href='/products/ablestack/glue'>
-          Ablestack Glue
-        </ProductContent.GoDetail>
+          <CustomLink href='/products/ablestack/cell' className={'w-full'}>
+            <ProductContent.RowSmallCard
+              containerClassName={'bg-[#EEF4FB]'}
+              title={'Cell'}
+              description={'가상화'}
+              image={<Logo_Article_3_2 />}
+            />
+          </CustomLink>
+        </div>
+        <div className='mt-[10px] flex gap-[10px]'>
+          <CustomLink href='/products/ablestack/koral' className={'w-full'}>
+            <ProductContent.RowSmallCard
+              containerClassName={'bg-[#EEF4FB]'}
+              title={'Koral'}
+              description={'쿠버네테스 엔진'}
+              image={<Logo_Article_3_3 />}
+            />
+          </CustomLink>
+          <CustomLink href='/products/ablestack/track' className={'w-full'}>
+            <ProductContent.RowSmallCard
+              containerClassName={'bg-[#EEF4FB]'}
+              title={'Track'}
+              description={'네트워크 및 보안'}
+              image={<Logo_Article_3_4 />}
+            />
+          </CustomLink>
+        </div>
       </ProductContent>
 
-      <ProductContent title='Mold 클라우드센터' image={PlaceholderImg}>
-        <ProductContent.GoDetail href='/products/ablestack/mold'>
-          Ablestack Mold
-        </ProductContent.GoDetail>
+      <ProductContent
+        className={'bg-backgroudGray'}
+        imagePosition={'first'}
+        image={<Logo_Article_4_1 />}>
+        <ProductContent.Intro
+          title='관리플랫폼'
+          description={
+            <p className='mt-[24px] text-[16px] font-[400] leading-[23.17px]'>
+              ABLESTACK은 설치와 동시에 셀프서비스 방식의 클라우드 플랫폼 및 자동화 플랫폼을
+              <br />
+              사용하고, 자원의 운영현황을 모니터링할 수 있습니다.
+            </p>
+          }
+        />
+        <div className='flex gap-[10px]'>
+          <CustomLink href='/products/ablestack/mold' className={'w-full'}>
+            <ProductContent.RowSmallCard
+              title={'Mold'}
+              description={'클라우드 관리플랫폼'}
+              image={<Logo_Article_4_2 />}
+            />
+          </CustomLink>
+
+          <CustomLink href='/products/ablestack/genie' className={'w-full'}>
+            <ProductContent.RowSmallCard
+              title={'Genie'}
+              description={'하이브리드 배포 자동화'}
+              image={<Logo_Article_4_3 />}
+            />
+          </CustomLink>
+        </div>
+
+        <div className='mt-[10px] flex gap-[10px]'>
+          <CustomLink href='/products/ablestack/wall' className={'w-full'}>
+            <ProductContent.RowSmallCard
+              title={'Wall'}
+              description={'통합 모니터링'}
+              image={<Logo_Article_4_4 />}
+            />
+          </CustomLink>
+
+          <ProductContent.RowSmallCard containerClassName={'invisible'} title={''} />
+        </div>
       </ProductContent>
 
-      <ProductContent title='Koral 쿠버네테스 클러스터' image={PlaceholderImg}>
-        <ProductContent.GoDetail href='/products/ablestack/koral'>
-          Ablestack Koral
-        </ProductContent.GoDetail>
+      <ProductContent image={<Logo_Article_5_5 />}>
+        <ProductContent.Intro
+          title='통합 스토리지'
+          description={
+            <p className='mt-[24px] text-[16px] font-[400] leading-[23.17px]'>
+              ABLESTACK 스토리지는 다양한 게이트웨이를 지원하여 블록, 파일시스템,
+              <br />
+              오브젝트 스토리지, 그리고 백업 기능을 제공합니다.
+            </p>
+          }
+        />
+        <div className='flex gap-[10px]'>
+          <CustomLink href='/products/ablestack/block' className={'w-full'}>
+            <ProductContent.RowSmallCard
+              containerClassName={'bg-[#EEF4FB]'}
+              title={'Block'}
+              description={'블록스토리지'}
+              image={<Logo_Article_5_1 />}
+            />
+          </CustomLink>
+
+          <CustomLink href='/products/ablestack/files' className={'w-full'}>
+            <ProductContent.RowSmallCard
+              containerClassName={'bg-[#EEF4FB]'}
+              title={'Files'}
+              description={'파일시스템'}
+              image={<Logo_Article_5_2 />}
+            />
+          </CustomLink>
+        </div>
+        <div className='mt-[10px] flex gap-[10px]'>
+          <CustomLink href='/products/ablestack/object' className={'w-full'}>
+            <ProductContent.RowSmallCard
+              containerClassName={'bg-[#EEF4FB]'}
+              title={'Objects'}
+              description={'오브젝트 파일 시스템'}
+              image={<Logo_Article_5_3 />}
+            />
+          </CustomLink>
+          <CustomLink href='/products/ablestack/slio' className={'w-full'}>
+            <ProductContent.RowSmallCard
+              containerClassName={'bg-[#EEF4FB]'}
+              title={'Slio'}
+              description={'백업 자동화'}
+              image={<Logo_Article_5_4 />}
+            />
+          </CustomLink>
+        </div>
       </ProductContent>
 
-      <ProductContent title='Track 가상 네트워킹' image={PlaceholderImg}>
-        <ProductContent.GoDetail href='/products/ablestack/network/track'>
-          Ablestack Track
-        </ProductContent.GoDetail>
-      </ProductContent>
-
-      <ProductContent title='Atom Micro Segmentation' image={PlaceholderImg}>
-        <ProductContent.GoDetail href='/products/ablestack/network/atom'>
-          Ablestack Atom
-        </ProductContent.GoDetail>
+      <ProductContent
+        className={'bg-backgroudGray'}
+        imagePosition={'first'}
+        image={<Logo_Article_6_1 />}>
+        <ProductContent.Intro
+          title='플랫폼 및 서비스'
+          description={
+            <p className='mt-[24px] text-[16px] font-[400] leading-[23.17px]'>
+              ABLESTACK은 빅데이터 및 인공지능 플랫폼 및 가상데스크톱을 제공하여 신속하게
+              <br />
+              시스템 개발 및 원격 업무 환경을 구성할 수 있습니다.
+            </p>
+          }
+        />
+        <div className='flex gap-[10px]'>
+          <CustomLink href='/products/ablestack/works' className={'w-full'}>
+            <ProductContent.RowSmallCard
+              title={'Works'}
+              description={'데스크톱 서비스'}
+              image={<Logo_Article_6_2 />}
+            />
+          </CustomLink>
+          <CustomLink href='/products/ablestack/station' className={'w-full'}>
+            <ProductContent.RowSmallCard
+              title={'Station'}
+              description={'플랫폼 서비스'}
+              image={<Logo_Article_6_3 />}
+            />
+          </CustomLink>
+        </div>
       </ProductContent>
     </ProductTemplate>
   );
