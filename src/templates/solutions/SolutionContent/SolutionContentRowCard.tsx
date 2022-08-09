@@ -34,6 +34,6 @@ const SolutionContentRowCard = memo<SolutionContentBoxProps>(
   },
 );
 
-SolutionContentRowCard.displayName = 'SolutionContentBox';
+SolutionContentRowCard.displayName = 'SolutionContentRowCard';
 
 export default SolutionContentRowCard;

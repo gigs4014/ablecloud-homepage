@@ -21,6 +21,6 @@ const CompanyContentImageItem = memo(
   },
 );
 
-CompanyContentImageItem.displayName = 'CompanyContentItemGrid';
+CompanyContentImageItem.displayName = 'CompanyContentImageItem';
 
 export default CompanyContentImageItem;
