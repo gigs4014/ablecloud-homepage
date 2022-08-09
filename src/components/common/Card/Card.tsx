@@ -110,18 +110,19 @@ export function RowSummaryCard({
   description,
   linkText,
   hoverBehavoir = 'none',
+  containerClassName,
 }: CardProps) {
   return (
     <Container.Card
       hoverBehavoir={hoverBehavoir}
-      className='flex h-[144px] max-w-[580px] flex-1 items-center justify-between border-0.5 border-gray-200 py-[20px] shadow-none'>
+      className={`flex h-[144px]  items-center justify-between border-0.5 border-gray-200 py-[20px] shadow-none ${containerClassName}`}>
       {image && (
         <div className='mx-[36px]  flex min-h-[108px] min-w-[100px] items-center justify-center'>
           {image}
         </div>
       )}
 
-      <div className='ml-[14px]'>
+      <div className='ml-[14px] text-left'>
         <p className={'m-0 mb-[8px] p-0 text-[16px] font-[500] leading-[23.17px]'}>{title}</p>
         {description && (
           <p className={'m-0 p-0 pr-[70px] text-[16px] font-[400] leading-[23.17px]'}>

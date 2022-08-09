@@ -1,24 +1,42 @@
-import React, { PropsWithChildren } from 'react';
+import { PropsWithChildren } from 'react';
 
-import { BasePageProps } from '@/types';
+import Head from 'next/head';
+
+import { BaseComponentProps } from '@/types';
 
 import { Container } from '@/components/layout';
 
-interface SolutionProps extends BasePageProps {
-  title: string;
+import SolutionHeader, { SolutionHeaderProps } from './SolutionHeader';
+
+export interface SolutionTemplateProps extends SolutionHeaderProps, BaseComponentProps {
+  enableProseSpacing?: boolean;
 }
 
-export default function SolutionTemplate({ title, children }: PropsWithChildren<SolutionProps>) {
+function SolutionTemplate({
+  children,
+  className,
+  enableProseSpacing = true,
+  ...headerContent
+}: PropsWithChildren<SolutionTemplateProps>) {
   return (
-    <Container.Article>
-      <header>
-        <Container.PageWidth>
-          <h4>Solution</h4>
-          <h1>{title}</h1>
-        </Container.PageWidth>
-      </header>
+    <>
+      <SolutionTemplateHead {...headerContent} />
 
-      {children}
-    </Container.Article>
+      <Container.Article enableProseSpacing={enableProseSpacing} className={className}>
+        <SolutionHeader {...headerContent} />
+
+        {children}
+      </Container.Article>
+    </>
+  );
+}
+
+export default SolutionTemplate;
+
+function SolutionTemplateHead({ title, description }: SolutionTemplateProps) {
+  return (
+    <Head>
+      <title>{[title].filter(Boolean).join(' - ')}</title>
+    </Head>
   );
 }
