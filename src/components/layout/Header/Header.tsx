@@ -88,7 +88,7 @@ export default function Header() {
       </nav>
 
       {/* mobile overlay */}
-      {isSubMenuOpen && !isBigScreen && (
+      {/* {isSubMenuOpen && !isBigScreen && (
         <div
           className={cls`fixed inset-0 z-10 bg-gray-500 bg-opacity-75 ${{
             hidden: !isSubMenuOpen,
@@ -96,7 +96,7 @@ export default function Header() {
           onClick={() => setIsSubMenuOpen(false)}>
           test
         </div>
-      )}
+      )} */}
     </header>
   );
 }
