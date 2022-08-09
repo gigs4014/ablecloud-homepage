@@ -9,6 +9,7 @@ export function useScrollDown(ref: React.MutableRefObject<TNullable<HTMLDivEleme
       if (ref.current) {
         if (currentScrollPos !== 0) {
           ref.current.style.background = '#FFFFFF';
+          ref.current.style.border = '1px solid #D4D4D4';
         } else {
           ref.current.style.background = 'none';
         }

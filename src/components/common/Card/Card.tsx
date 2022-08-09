@@ -42,7 +42,7 @@ export function ActionCard({
             {description}
           </p>
         ) : (
-          { description }
+          description
         )}
 
         {buttonTitle && (

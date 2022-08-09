@@ -33,7 +33,7 @@ export default function PartnerHeader({
           )}
         </section>
         {/* image */}
-        <section className=' hidden w-1/2 overflow-visible md:flex md:justify-end lg:flex lg:justify-end'>
+        <section className='hidden w-1/2 overflow-visible md:flex md:justify-end lg:flex lg:justify-end'>
           {image}
         </section>
       </div>
