@@ -190,11 +190,11 @@ export const footerMenus = [
     subMenuItems: [
       {
         label: 'ABLESTACK의 탄생',
-        href: '/company',
+        href: '/products',
       },
       {
         label: 'ABLESTACK 소개',
-        href: '/company',
+        href: '/products/ablestack',
       },
     ],
   },
@@ -203,7 +203,7 @@ export const footerMenus = [
     subMenuItems: [
       {
         label: '-',
-        href: '/company',
+        href: '/solutions',
       },
       {
         label: '-',
@@ -216,7 +216,7 @@ export const footerMenus = [
     subMenuItems: [
       {
         label: '-',
-        href: '/company',
+        href: '/appliance',
       },
       {
         label: '-',
@@ -229,7 +229,7 @@ export const footerMenus = [
     subMenuItems: [
       {
         label: '파트너 네트워크',
-        href: '/company',
+        href: '/partners',
       },
     ],
   },
