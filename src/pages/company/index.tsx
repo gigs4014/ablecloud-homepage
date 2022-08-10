@@ -152,7 +152,10 @@ export default function CompanyPage() {
               개발하고 발전시킵니다.
             </p>
           }>
-          <div className={'grid grid-cols-2 gap-[16px] px-[170px] md:grid-cols-3 lg:grid-cols-6'}>
+          <div
+            className={
+              'px-auto justify-startgrid-cols-2 grid place-content-center gap-[16px] md:grid-cols-3 lg:grid-cols-6'
+            }>
             <Logo_Article_4_1 />
             <Logo_Article_4_2 />
             <Logo_Article_4_3 />

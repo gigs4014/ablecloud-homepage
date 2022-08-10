@@ -43,6 +43,9 @@ export function MobileMenuItem({
   onClick?: MouseEventHandler<HTMLButtonElement>;
 }) {
   const { label, href, subMenuItems } = item;
+
+  const [isSubMenuOpen, setIsSubMenuOpen] = useState<boolean>(false);
+
   const selected = useMemo(
     () => selectedItem && isIncludedItem(item, selectedItem),
     [item, selectedItem],
@@ -51,24 +54,24 @@ export function MobileMenuItem({
   const focused = useMemo(() => item === focusedItem, [item, focusedItem]);
 
   return (
-    <div className={cls`group h-full w-full ${className}`}>
-      <CustomLink href={href} className={cls`flex h-full w-full items-center justify-between`}>
-        <span className={cls`text-lg ${selected && 'text-blue-500'}`}>{label ?? children}</span>
+    <div className={cls`group h-full w-full py-[20px]${className} border-b-1 `}>
+      <CustomLink href={href}>
+        <div
+          className={cls`flex h-full w-full items-center justify-between`}
+          onClick={() => subMenuItems && setIsSubMenuOpen(isSubMenuOpen => !isSubMenuOpen)}>
+          <span className={cls`text-lg ${selected && 'text-primary'}`}>{label ?? children}</span>
 
-        {subMenuItems && (
-          <button
-            className={cls`transition-transform icon-[expand_more] ${focused && 'rotate-180'}`}
-            onClick={onClick}
-          />
-        )}
+          {subMenuItems && (
+            <button
+              className={cls`transition-transform icon-[expand_more] ${focused && 'rotate-180'}`}
+              onClick={() => setIsSubMenuOpen(isSubMenuOpen => !isSubMenuOpen)}
+            />
+          )}
+        </div>
       </CustomLink>
 
-      {subMenuItems && (
-        <SubMenu
-          items={subMenuItems}
-          selectedItem={selectedItem}
-          className={cls`overflow-hidden transition-[height] ${focused ? 'h-fit' : 'h-0'}`}
-        />
+      {isSubMenuOpen && subMenuItems && (
+        <MobileSubMenu items={subMenuItems} selectedItem={selectedItem} />
       )}
     </div>
   );
@@ -101,39 +104,6 @@ export function MenuItem({ item, children, selectedItem, className }: MenuItemPr
       </CustomLink>
       {isSubMenuOpen && subMenuItems && (
         <SubMenu items={subMenuItems} selectedItem={selectedItem} />
-        // <ul className='absolute border-1 bg-white p-[4px] shadow-md'>
-        //   {subMenuItems.map(item => (
-        //     <li
-        //       key={uuid()}
-        //       onMouseOver={() => {
-        //         item.subMenuItems && setIsSubChildMenuOpen(true);
-        //       }}
-        //       onMouseLeave={() => {
-        //         item.subMenuItems && setIsSubChildMenuOpen(false);
-        //       }}>
-        //       <CustomLink
-        //         href={item.href}
-        //         className={cls`py-2$ font-[400px] flex h-full w-full items-center justify-start px-[16px] py-[15px] text-[16px]`}>
-        //         <div>{item.label ?? children}</div>
-        //       </CustomLink>
-        //       {isSubChildMenuOpen && item.subMenuItems && (
-        //         <ul className='absolute border-1 bg-white p-[4px]'>
-        //           {item.subMenuItems.map(item => (
-        //             <li key={uuid()}>
-        //               <CustomLink
-        //                 href={item.href}
-        //                 className={cls`flex h-full w-full items-center justify-start px-[16px] py-[15px]${{
-        //                   'text-primary': selected,
-        //                 }}`}>
-        //                 <div>{item.label ?? children}</div>
-        //               </CustomLink>
-        //             </li>
-        //           ))}
-        //         </ul>
-        //       )}
-        //     </li>
-        //   ))}
-        // </ul>
       )}
     </div>
   );
@@ -176,6 +146,42 @@ export function SubMenu({ items, selectedItem, className }: SubMenuProps) {
 
   return (
     <ul className={cls`absolute rounded-md border-1 bg-white p-[4px] shadow-md ${className}`}>
+      {items.map(item => (
+        <li key={uuid()}>
+          <ul className='rounded-md py-[8px] px-[16px] text-base hover:bg-backgroudGray md:text-[16px]'>
+            {/* group section header */}
+            <li
+              className={`${selectedItem && isIncludedItem(item, selectedItem) && 'text-primary'}`}>
+              <CustomLink href={item.href} className=''>
+                {item.label}
+              </CustomLink>
+            </li>
+
+            {item.type === 'group' && item.subMenuItems.map(subMenuBlock)}
+          </ul>
+        </li>
+      ))}
+    </ul>
+  );
+}
+export function MobileSubMenu({ className, items, selectedItem }: SubMenuProps) {
+  const subMenuBlock = (subItem: HeaderMenuItem) => (
+    <li key={uuid()} className='space-y-2'>
+      <CustomLink href={subItem.href}>
+        <p
+          className={cls`pl-4 text-sm ${
+            selectedItem && isIncludedItem(subItem, selectedItem) && 'text-primary'
+          }`}>
+          {subItem.label}
+        </p>
+
+        {subItem.description && <p className='text-xs text-slate-300'>{subItem.description}</p>}
+      </CustomLink>
+    </li>
+  );
+
+  return (
+    <ul className={cls`h-full w-full p-[4px] ${className}`}>
       {items.map(item => (
         <li key={uuid()}>
           <ul className='rounded-md py-[8px] px-[16px] text-base hover:bg-backgroudGray md:text-[16px]'>
