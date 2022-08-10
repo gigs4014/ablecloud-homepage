@@ -18,7 +18,7 @@ const headerContent: ProductHeaderProps = {
   image: <Logo_Article_1_1 />,
 };
 
-export default function AblestackSlioPage() {
+export default function AblestackWorksPage() {
   return (
     <ProductTemplate {...headerContent}>
       <ProductContent
