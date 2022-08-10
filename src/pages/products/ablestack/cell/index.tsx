@@ -32,7 +32,7 @@ export default function AblestackCellPage() {
         description={`Cell은 CentOS KVM을 기반으로 ABLESTACK 운영에 최적화된 기능을 추가한 내장된 하이퍼바이저입니다.
         Cell 하이퍼바이저는 다음과 같은 주요 컴포넌트로 구성됩니다.`}>
         <div className={'flex w-full items-center justify-center'}>
-          <Image src={Logo_Article_2_1} />
+          <Image src={Logo_Article_2_1} loading={'lazy'} />
         </div>
       </ProductContent>
 

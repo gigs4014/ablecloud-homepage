@@ -73,7 +73,7 @@ export default function AblestackFilesPage() {
         className={'bg-backgroudGray'}
         title='다양한 애플리케이션을 지원하는 범용 파일 시스템'
         imagePosition='first'
-        image={<Image src={Logo_Article_3_1} />}>
+        image={<Image src={Logo_Article_3_1} loading={'lazy'} />}>
         <ProductContent.Description
           contents={[
             {

@@ -28,7 +28,7 @@ export default function AblestackKoralPage() {
         title='아키텍처 개요'
         description={`Koral은 Mold에 내장된 플러그인으로 Mold를 통해 원클릭으로 쿠버네티스 클러스터를 배포하고 관리할 수 있습니다.`}>
         <div className={'flex w-full items-center justify-center'}>
-          <Image src={Logo_Article_2_1} />
+          <Image src={Logo_Article_2_1} loading={'lazy'} />
         </div>
       </ProductContent>
 

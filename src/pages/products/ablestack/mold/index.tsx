@@ -27,7 +27,7 @@ export default function AblestackMoldPage() {
         description={`Mold는 Cell 하이퍼바이저 및 다양한 하이퍼바이저 호스트에 연결하여
         가상머신, 네트워크, 스토리지 관리 기능을 통합적으로 제공하는 클라우드 플랫폼 입니다.`}>
         <div className={'flex w-full items-center justify-center'}>
-          <Image src={Logo_Article_2_1} />
+          <Image src={Logo_Article_2_1} loading={'lazy'} />
         </div>
       </ProductContent>
 
@@ -35,7 +35,7 @@ export default function AblestackMoldPage() {
         className={'bg-backgroudGray'}
         title='단일 콘솔에서 가상머신과 볼륨, 네트워크, 백업, 컨테이너 등의 모든 것을 관리'
         imagePosition='first'
-        image={<Image src={Logo_Article_3_1} />}>
+        image={<Image src={Logo_Article_3_1} loading={'lazy'} />}>
         <ProductContent.Description
           contents={[
             {

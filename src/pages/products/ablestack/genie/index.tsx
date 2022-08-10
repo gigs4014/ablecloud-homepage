@@ -23,7 +23,7 @@ export default function AblestackGeniePage() {
         title='아키텍처 개요'
         description={`Genie는 범용 언어를 기반으로 수행되는 자동화 도구로, 어려운 작업을 반복적으로 수행할 수 있도록 미리 생성한 플레이북을 기반으로 에이전트 없이 버튼 하나만 누르면 전사적으로 가상머신, 컨테이너, 네트워크, 애플리케이션 등을 배포할 수 있습니다.`}>
         <div className={'flex w-full items-center justify-center'}>
-          <Image src={Logo_Article_2_1} />
+          <Image src={Logo_Article_2_1} loading={'lazy'} />
         </div>
       </ProductContent>
 

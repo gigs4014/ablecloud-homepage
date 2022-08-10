@@ -29,7 +29,7 @@ export default function AblestackTrackPage() {
         description={`Track은 가상 라우터 기반의 오버레이 소프트웨어 정의 네트워크를 제공합니다.
         다양한 네트워크 기능을 빠르게 구성하고 관리할 수 있습니다. `}>
         <div className={'flex w-full items-center justify-center'}>
-          <Image src={Logo_Article_2_1} />
+          <Image src={Logo_Article_2_1} loading={'lazy'} />
         </div>
       </ProductContent>
 

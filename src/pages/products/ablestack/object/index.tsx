@@ -72,7 +72,7 @@ export default function AblestackObjectPage() {
         className={'bg-backgroudGray'}
         title='비정형 데이터를 위한 안전하고 확장성 있는 통합 플랫폼'
         imagePosition='first'
-        image={<Image src={Logo_Article_3_1} />}>
+        image={<Image src={Logo_Article_3_1} loading={'lazy'} />}>
         <ProductContent.Description
           contents={[
             {
