@@ -13,6 +13,7 @@ import { cls } from '@/utils';
 import { CustomLink } from '@/components/common';
 
 import Logo_ablecloud_default from '@/public/images/logos/ablecloud_logo_default.svg';
+import Logo_ablecloud_white from '@/public/images/logos/ablecloud_logo_white.svg';
 import BurgerSVG from '@/public/images/new/burger.svg';
 import CloseSVG from '@/public/images/new/close.svg';
 
@@ -23,6 +24,7 @@ export default function Header() {
   const [subMenuItems, setSubMenuItems] = useState<Array<HeaderMenuItem> | undefined>();
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
   const [isBigScreen, setIsBigScreen] = useState<boolean | undefined>();
+  const [isProductsAbleStackPage, setIsProductAbleStackPage] = useState(false);
   const [isMobileMenu, setIsMobileMenu] = useState(false);
 
   const bigScreen = useMediaQuery({ query: '(min-width: 768px)' });
@@ -33,9 +35,14 @@ export default function Header() {
 
   // const { darkMode, setDarkMode } = useDarkMode();
 
-  useScrollDown(headerRef);
+  const isCurrentScrollTop = useScrollDown(headerRef);
 
   useEffect(() => {
+    if (asPath.includes('/products/ablestack')) {
+      setIsProductAbleStackPage(true);
+    } else {
+      setIsProductAbleStackPage(false);
+    }
     setSelectedItem(getSelectedItem(menuItems, asPath));
   }, [asPath]);
 
@@ -44,13 +51,15 @@ export default function Header() {
   }, [bigScreen]);
 
   // useEffect(() => {
-  //   console.log({ isBigScreen });
-  // }, [isBigScreen]);
+  //   console.log({ isCurrentScrollTop });
+  // }, [isCurrentScrollTop]);
 
   return (
     <header
       ref={headerRef}
-      className={`sticky top-0 z-20 flex ${
+      className={`${
+        isCurrentScrollTop && isProductsAbleStackPage && isBigScreen ? 'absolute' : 'sticky'
+      } top-0 z-20 flex ${
         isBigScreen ? 'h-[110px]' : 'min-h-[60px]'
       } w-full items-center justify-center bg-white`}>
       <nav
@@ -67,7 +76,11 @@ export default function Header() {
           {/* Logo */}
           <div className='px-4'>
             <CustomLink href='/'>
-              <Logo_ablecloud_default />
+              {isCurrentScrollTop && isProductsAbleStackPage && isBigScreen ? (
+                <Logo_ablecloud_white />
+              ) : (
+                <Logo_ablecloud_default />
+              )}
             </CustomLink>
           </div>
 
@@ -75,7 +88,11 @@ export default function Header() {
             <ul>
               {menuItems.map(item => (
                 <li className={cls`inline-flex w-fit`} key={uuid()}>
-                  <MenuItem item={item} selectedItem={selectedItem} />
+                  <MenuItem
+                    item={item}
+                    selectedItem={selectedItem}
+                    isProductsAbleStackPage={isCurrentScrollTop && isProductsAbleStackPage}
+                  />
                 </li>
               ))}
             </ul>

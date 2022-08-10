@@ -1,6 +1,6 @@
-import { ReactNode } from 'react';
+import { ReactNode, useEffect, useRef, useState } from 'react';
 
-import { BaseComponentProps } from '@/types';
+import { BaseComponentProps, TNullable } from '@/types';
 import { cls } from '@/utils';
 
 export interface ProductHeaderProps extends BaseComponentProps {
@@ -23,13 +23,37 @@ export default function ProductHeader({
   className,
   textColor = 'text-white',
 }: ProductHeaderProps) {
+  const [isCurrentScrollTop, setIsCurrentScrollTop] = useState<boolean>(true);
+
+  const productHeaderRef = useRef<TNullable<HTMLDivElement>>(null);
+
+  useEffect(() => {
+    const listener = () => {
+      const currentScrollPos = window.pageYOffset;
+      if (productHeaderRef.current) {
+        if (currentScrollPos === 0) {
+          setIsCurrentScrollTop(true);
+        } else {
+          setIsCurrentScrollTop(false);
+        }
+      }
+    };
+
+    window.addEventListener('scroll', listener);
+
+    return () => window.removeEventListener('scroll', listener);
+  }, [productHeaderRef]);
+
   return (
     <header
-      className={cls`relative flex h-[560px] w-full justify-center bg-cover py-16 ${bgImage} ${className}`}>
-      {/* ::before */}
-      <div className='absolute inset-0 -top-full -z-10 ' />
-
-      <div className='flex max-w-page-full items-center space-x-8 px-8'>
+      ref={productHeaderRef}
+      className={cls`relative flex ${
+        isCurrentScrollTop ? 'h-[670px]' : 'h-[560px]'
+      } w-full justify-center bg-cover py-16 ${bgImage} ${className}`}>
+      <div
+        className={`flex ${
+          isCurrentScrollTop ? 'mt-[100px]' : 'mt-[20px]'
+        } max-w-page-full items-center space-x-8 px-8`}>
         {/* image */}
         <section className='hidden w-1/2 overflow-visible md:block lg:block'>{image}</section>
 

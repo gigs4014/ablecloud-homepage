@@ -29,6 +29,7 @@ export interface MenuItemProps extends BaseComponentProps {
   selectedItem?: HeaderMenuItem;
   children?: ReactNode;
   center?: boolean;
+  isProductsAbleStackPage?: boolean;
 }
 
 export function MobileMenuItem({
@@ -77,7 +78,13 @@ export function MobileMenuItem({
   );
 }
 
-export function MenuItem({ item, children, selectedItem, className }: MenuItemProps) {
+export function MenuItem({
+  item,
+  children,
+  selectedItem,
+  className,
+  isProductsAbleStackPage,
+}: MenuItemProps) {
   const { label, href, subMenuItems } = item;
 
   const [isSubMenuOpen, setIsSubMenuOpen] = useState<boolean>(false);
@@ -97,9 +104,9 @@ export function MenuItem({ item, children, selectedItem, className }: MenuItemPr
       onMouseLeave={() => setIsSubMenuOpen(false)}>
       <CustomLink
         href={href}
-        className={cls`flex h-full w-full items-center justify-center px-4 ${{
-          'text-primary': selected,
-        }}`}>
+        className={cls`flex h-full w-full items-center justify-center px-4 ${
+          selected ? `text-primary` : isProductsAbleStackPage ? 'text-white' : 'text-black'
+        }`}>
         <div>{label ?? children}</div>
       </CustomLink>
       {isSubMenuOpen && subMenuItems && (
