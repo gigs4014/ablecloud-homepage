@@ -183,9 +183,15 @@ export default function HomePage() {
       <HomeTemplate {...headerContent}>
         <HomeContent
           title='SDDC를 실현하는 HCI 플랫폼'
-          description={`가상화 및 소프트웨어 정의 기술을 이용한 하이퍼 컨버지드 인프라 플랫폼 ABLESTACK을
-          통해 컴퓨팅, 스토리지, 가상화, 네트워크를 사용하고 관리할 수 있는 엔터프라이즈
-          클라우드 데이터센터를 구축할 수 있습니다.`}>
+          description={
+            <p className='m-0 mb-[25px] p-0 text-[16px] font-[400] leading-[23.17px]'>
+              가상화 및 소프트웨어 정의 기술을 이용한 하이퍼 컨버지드 인프라 플랫폼 ABLESTACK을
+              <br />
+              통해 컴퓨팅, 스토리지, 가상화, 네트워크를 사용하고 관리할 수 있는 엔터프라이즈
+              <br />
+              클라우드 데이터센터를 구축할 수 있습니다.
+            </p>
+          }>
           <div className='mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3'>
             <HomeContent.ItemGrid
               containerClassName='border-borderGrayColor border-1'
@@ -256,7 +262,11 @@ export default function HomePage() {
 
         <HomeContent
           title='국내 최초의 HCI, ABLESTACK을 선택한 기업들'
-          description={'에이블스택과 함께하는 파트너 입니다.'}>
+          description={
+            <p className='m-0 mb-[50px] p-0 text-[16px] font-[400] leading-[23.17px]'>
+              에이블스택과 함께하는 파트너 입니다.
+            </p>
+          }>
           <div className={'w-full'}>
             <CustomSlider settingsOverrides={imageSliderSettings}>
               <Logo_Article_4_1 />
@@ -280,7 +290,7 @@ export default function HomePage() {
           className={'bg-backgroudGray'}
           title='보다 더 자세한 자료와 컨설팅을 받아보세요.'
           description={
-            <p className='mt-3.5'>
+            <p className='m-0 mb-[25px] mt-3.5 p-0 text-[16px] font-[400] leading-[23.17px]'>
               단순한 구조로 IT 서비스에 필요한 모든 인프라를 제공할 뿐만 아니라, <br /> 단 1시간
               이내에 사용자 사이트에 HCI 인프라를 구성하고 클라우드 서비스를 시작할 수 있습니다.
               <br />
