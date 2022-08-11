@@ -152,15 +152,11 @@ export default function CompanyPage() {
         <CompanyContent
           className={'bg-backgroudGray'}
           title='ABLECLOUD가 시도하는 새로운 기업 인프라'
-          description={
-            <p className='mt-[18px] mb-[8px] text-[18px] font-[400]'>
-              우리는 ABLESTACK을 어디서나 어느 애플리케이션 및 워크로드를 실행할 수 있는 클라우드
-              인프라, 스토리지, 데이터베이스를 제공하며,
-              <br />
-              빅데이터, 인공지능, IoT를 위한 다양한 플랫폼을 제공할 수 있는 클라우드 단일 플랫폼으로
-              개발하고 발전시킵니다.
-            </p>
-          }>
+          description={`우리는 ABLESTACK을 어디서나 어느 애플리케이션 및 워크로드를 실행할 수 있는 클라우드
+            인프라, 스토리지, 데이터베이스를 제공하며,
+            
+            빅데이터, 인공지능, IoT를 위한 다양한 플랫폼을 제공할 수 있는 클라우드 단일 플랫폼으로
+            개발하고 발전시킵니다.`}>
           <div
             className={
               'px-auto justify-startgrid-cols-2 grid place-content-center gap-[16px] md:grid-cols-3 lg:grid-cols-6'

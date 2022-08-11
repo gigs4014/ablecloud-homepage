@@ -246,7 +246,7 @@ export default function SolutionPage() {
           className={'bg-backgroudGray'}
           title='ABLESTACK 클라우드 솔루션'
           description={
-            <div className={'text-[16px] font-[400] leading-[23.17px]'}>
+            <div className={'max-w-[630px] text-[16px] font-[400] leading-[23.17px]'}>
               <p>
                 HCI를 통해서 이상적인 디지털 인프라 환경을 배포하고, 여러 워크로드가 상호간의
                 마찰없이 동일한 인프라를 공유하여 각각의 앱이 목표를 빠르고 효율적으로 달성할 수
@@ -281,8 +281,13 @@ export default function SolutionPage() {
         <SolutionContent
           className={'bg-[#EEF4FB]'}
           title='파트너 애플리케이션'
-          description={`ABLSTACK은 파트너의 다양한 애플리케이션과 턴키로 시스템을 구축하여
-          기업이 원하는 다양한 IT 기능 및 서비스를 솔루션으로 제공합니다.`}>
+          description={
+            <p className='m-0 mb-[12px] max-w-[960px] p-0 text-[16px] font-[400] leading-[23.17px]'>
+              ABLSTACK은 파트너의 다양한 애플리케이션과 턴키로 시스템을 구축하여
+              <br />
+              기업이 원하는 다양한 IT 기능 및 서비스를 솔루션으로 제공합니다.
+            </p>
+          }>
           <div className='mx-auto mt-8 grid w-full max-w-[860px] grid-cols-1 gap-[10px] md:grid-cols-2 lg:grid-cols-3'>
             {partners.map(partner => {
               const { title, image, description, href } = partner;

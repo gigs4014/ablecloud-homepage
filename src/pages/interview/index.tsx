@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 import { InterViewContent, InterViewHeaderProps, InterViewTemplate } from '@/templates';
 
-import Logo_Article_1_1 from '@/public/images/new/interView/article_1_1.png';
+import Logo_Article_1_1 from '@/public/images/new/interview/article_1_1.png';
 
 const headerContent: InterViewHeaderProps = {
   title: '성공 사례',
