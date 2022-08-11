@@ -25,6 +25,7 @@ export default function Header() {
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
   const [isBigScreen, setIsBigScreen] = useState<boolean | undefined>();
   const [isProductsAbleStackPage, setIsProductAbleStackPage] = useState(false);
+  const [isProductsAbleStackPageException, setIsProductAbleStackPageException] = useState(false);
   const [isMobileMenu, setIsMobileMenu] = useState(false);
 
   const bigScreen = useMediaQuery({ query: '(min-width: 768px)' });
@@ -40,6 +41,11 @@ export default function Header() {
   useEffect(() => {
     if (asPath.includes('/products/ablestack')) {
       setIsProductAbleStackPage(true);
+      if (['mold', 'volume', 'files', 'slio', 'station'].some(name => asPath.includes(name))) {
+        setIsProductAbleStackPageException(true);
+      } else {
+        setIsProductAbleStackPageException(false);
+      }
     } else {
       setIsProductAbleStackPage(false);
     }
@@ -76,7 +82,10 @@ export default function Header() {
           {/* Logo */}
           <div className='px-4'>
             <CustomLink href='/'>
-              {isCurrentScrollTop && isProductsAbleStackPage && isBigScreen ? (
+              {isCurrentScrollTop &&
+              isProductsAbleStackPage &&
+              isBigScreen &&
+              !isProductsAbleStackPageException ? (
                 <Logo_ablecloud_white />
               ) : (
                 <Logo_ablecloud_default />
@@ -91,7 +100,11 @@ export default function Header() {
                   <MenuItem
                     item={item}
                     selectedItem={selectedItem}
-                    isProductsAbleStackPage={isCurrentScrollTop && isProductsAbleStackPage}
+                    isProductsAbleStackPage={
+                      isCurrentScrollTop &&
+                      isProductsAbleStackPage &&
+                      !isProductsAbleStackPageException
+                    }
                   />
                 </li>
               ))}
