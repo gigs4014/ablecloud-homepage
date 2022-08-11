@@ -35,36 +35,38 @@ const headerContent: HomeHeaderProps = {
 };
 
 const imageSliderSettings = {
-  dots: true,
-  arrows: false,
+  dots: false,
   infinite: true,
-  autoplay: true,
-  speed: 500,
+  slidesToShow: 4,
   slidesToScroll: 1,
-  slidesToShow: 5,
-  swipeToSlide: false,
-  // className: "pressSlider",
+  arrows: false,
+  autoplay: true,
+  speed: 2000,
+  autoplaySpeed: 1000,
+  width: 850,
+  cssEase: 'linear',
   responsive: [
     {
       breakpoint: 1280, //Tailwind lg default
       settings: {
-        slidesToShow: 6,
+        slidesToShow: 3,
       },
     },
     {
       breakpoint: 1024, //Tailwind lg default
       settings: {
-        slidesToShow: 5,
+        slidesToShow: 3,
       },
     },
     {
       breakpoint: 768, //Tailwind md default
       settings: {
-        slidesToShow: 3,
+        slidesToShow: 2,
       },
     },
   ],
 };
+
 const logos: Array<LogoData> = [
   {
     title: '지엔텔',
@@ -255,7 +257,7 @@ export default function HomePage() {
         <HomeContent
           title='국내 최초의 HCI, ABLESTACK을 선택한 기업들'
           description={'에이블스택과 함께하는 파트너 입니다.'}>
-          <CustomSlider>
+          <CustomSlider settingsOverrides={imageSliderSettings}>
             <Logo_Article_4_1 />
             <Logo_Article_4_2 />
             <Logo_Article_4_3 />
