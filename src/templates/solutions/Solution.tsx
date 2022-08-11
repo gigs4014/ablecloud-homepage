@@ -36,7 +36,7 @@ export default SolutionTemplate;
 function SolutionTemplateHead({ title, description }: SolutionTemplateProps) {
   return (
     <Head>
-      <title>{[title].filter(Boolean).join(' - ')}</title>
+      <title>{[title, description].filter(Boolean).join(' - ')}</title>
     </Head>
   );
 }

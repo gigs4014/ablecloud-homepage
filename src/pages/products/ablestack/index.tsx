@@ -1,24 +1,71 @@
-import { Button, CustomLink } from '@/components/common';
+import React from 'react';
+
+import Image from 'next/image';
+
+import { Button, CustomLink, SvgIcon } from '@/components/common';
 import { ProductContent, ProductHeaderProps, ProductTemplate } from '@/templates';
 
-import Logo_Article_1_1 from '@/public/images/new/product/ablestack/article_1_1.svg';
-import Logo_Article_3_1 from '@/public/images/new/product/ablestack/article_3_1.svg';
-import Logo_Article_3_2 from '@/public/images/new/product/ablestack/article_3_2.svg';
-import Logo_Article_3_3 from '@/public/images/new/product/ablestack/article_3_3.svg';
-import Logo_Article_3_4 from '@/public/images/new/product/ablestack/article_3_4.svg';
-import Logo_Article_3_5 from '@/public/images/new/product/ablestack/article_3_5.svg';
-import Logo_Article_4_1 from '@/public/images/new/product/ablestack/article_4_1.svg';
-import Logo_Article_4_2 from '@/public/images/new/product/ablestack/article_4_2.svg';
-import Logo_Article_4_3 from '@/public/images/new/product/ablestack/article_4_3.svg';
-import Logo_Article_4_4 from '@/public/images/new/product/ablestack/article_4_4.svg';
-import Logo_Article_5_1 from '@/public/images/new/product/ablestack/article_5_1.svg';
-import Logo_Article_5_2 from '@/public/images/new/product/ablestack/article_5_2.svg';
-import Logo_Article_5_3 from '@/public/images/new/product/ablestack/article_5_3.svg';
-import Logo_Article_5_4 from '@/public/images/new/product/ablestack/article_5_4.svg';
-import Logo_Article_5_5 from '@/public/images/new/product/ablestack/article_5_5.svg';
-import Logo_Article_6_1 from '@/public/images/new/product/ablestack/article_6_1.svg';
-import Logo_Article_6_2 from '@/public/images/new/product/ablestack/article_6_2.svg';
-import Logo_Article_6_3 from '@/public/images/new/product/ablestack/article_6_3.svg';
+import Logo_Article_1_1 from '@/public/images/new/product/ablestack/article_1_1.png';
+import Logo_Article_3_5 from '@/public/images/new/product/ablestack/article_3_5.png';
+import Logo_Article_4_1 from '@/public/images/new/product/ablestack/article_4_1.png';
+import Logo_Article_5_5 from '@/public/images/new/product/ablestack/article_5_5.png';
+import Logo_Article_6_1 from '@/public/images/new/product/ablestack/article_6_1.png';
+
+// const Logo_Article_1_1 = React.lazy(
+//   () => import('@/public/images/new/product/ablestack/article_1_1.svg'),
+// );
+const Logo_Article_3_1 = React.lazy(
+  () => import('@/public/images/new/product/ablestack/article_3_1.svg'),
+);
+const Logo_Article_3_2 = React.lazy(
+  () => import('@/public/images/new/product/ablestack/article_3_2.svg'),
+);
+const Logo_Article_3_3 = React.lazy(
+  () => import('@/public/images/new/product/ablestack/article_3_3.svg'),
+);
+const Logo_Article_3_4 = React.lazy(
+  () => import('@/public/images/new/product/ablestack/article_3_4.svg'),
+);
+// const Logo_Article_3_5 = React.lazy(
+//   () => import('@/public/images/new/product/ablestack/article_3_5.svg'),
+// );
+// const Logo_Article_4_1 = React.lazy(
+//   () => import('@/public/images/new/product/ablestack/article_4_1.svg'),
+// );
+const Logo_Article_4_2 = React.lazy(
+  () => import('@/public/images/new/product/ablestack/article_4_2.svg'),
+);
+const Logo_Article_4_3 = React.lazy(
+  () => import('@/public/images/new/product/ablestack/article_4_3.svg'),
+);
+const Logo_Article_4_4 = React.lazy(
+  () => import('@/public/images/new/product/ablestack/article_4_4.svg'),
+);
+
+const Logo_Article_5_1 = React.lazy(
+  () => import('@/public/images/new/product/ablestack/article_5_1.svg'),
+);
+const Logo_Article_5_2 = React.lazy(
+  () => import('@/public/images/new/product/ablestack/article_5_2.svg'),
+);
+const Logo_Article_5_3 = React.lazy(
+  () => import('@/public/images/new/product/ablestack/article_5_3.svg'),
+);
+const Logo_Article_5_4 = React.lazy(
+  () => import('@/public/images/new/product/ablestack/article_5_4.svg'),
+);
+// const Logo_Article_5_5 = React.lazy(
+//   () => import('@/public/images/new/product/ablestack/article_5_5.svg'),
+// );
+// const Logo_Article_6_1 = React.lazy(
+//   () => import('@/public/images/new/product/ablestack/article_6_1.svg'),
+// );
+const Logo_Article_6_2 = React.lazy(
+  () => import('@/public/images/new/product/ablestack/article_6_2.svg'),
+);
+const Logo_Article_6_3 = React.lazy(
+  () => import('@/public/images/new/product/ablestack/article_6_3.svg'),
+);
 
 const headerContent: ProductHeaderProps = {
   title: 'ABLESTACK HCI',
@@ -29,7 +76,7 @@ const headerContent: ProductHeaderProps = {
   ABLESTACK을 설치하면 지금 바로 핵심 인프라를 포함하여
   모든 서비스를 시작할 수 있습니다.
   `,
-  image: <Logo_Article_1_1 />,
+  image: <Image src={Logo_Article_1_1} />,
   bgImage: 'bg-ablestack-header-bg',
 };
 
@@ -42,13 +89,13 @@ export default function AblestackPage() {
         description={`복잡한 구조의 전통적 기업 데이터센터의 문제점을 해결하고, IT 환경의 급속한 발전으로 인해 발생하는 문제점을 해결하기 위해
 단일 서버 구성으로 모든 인프라와 플랫폼을 실행할 수 있도록 고안된 HCI 플랫폼 입니다.`}>
         <div className={'flex w-full justify-center'}>
-          <CustomLink href='/stories' hoverBehavoir='none'>
+          <CustomLink href='/products' hoverBehavoir='none'>
             <Button solid>개요 보러가기</Button>
           </CustomLink>
         </div>
       </ProductContent>
 
-      <ProductContent image={<Logo_Article_3_5 />}>
+      <ProductContent image={<Image src={Logo_Article_3_5} loading={'lazy'} />}>
         <ProductContent.Intro
           title='ABLESTACK 인프라스트럭처'
           description={
@@ -64,7 +111,7 @@ export default function AblestackPage() {
               containerClassName={'bg-[#EEF4FB]'}
               title={'Glue'}
               description={'스토리지'}
-              image={<Logo_Article_3_1 />}
+              image={<SvgIcon Svg={Logo_Article_3_1} />}
             />
           </CustomLink>
 
@@ -73,7 +120,7 @@ export default function AblestackPage() {
               containerClassName={'bg-[#EEF4FB]'}
               title={'Cell'}
               description={'가상화'}
-              image={<Logo_Article_3_2 />}
+              image={<SvgIcon Svg={Logo_Article_3_2} />}
             />
           </CustomLink>
         </div>
@@ -83,7 +130,7 @@ export default function AblestackPage() {
               containerClassName={'bg-[#EEF4FB]'}
               title={'Koral'}
               description={'쿠버네테스 엔진'}
-              image={<Logo_Article_3_3 />}
+              image={<SvgIcon Svg={Logo_Article_3_3} />}
             />
           </CustomLink>
           <CustomLink href='/products/ablestack/track' className={'w-full'}>
@@ -91,7 +138,7 @@ export default function AblestackPage() {
               containerClassName={'bg-[#EEF4FB]'}
               title={'Track'}
               description={'네트워크 및 보안'}
-              image={<Logo_Article_3_4 />}
+              image={<SvgIcon Svg={Logo_Article_3_4} />}
             />
           </CustomLink>
         </div>
@@ -100,7 +147,7 @@ export default function AblestackPage() {
       <ProductContent
         className={'bg-backgroudGray'}
         imagePosition={'first'}
-        image={<Logo_Article_4_1 />}>
+        image={<Image src={Logo_Article_4_1} loading={'lazy'} />}>
         <ProductContent.Intro
           title='관리플랫폼'
           description={
@@ -116,7 +163,7 @@ export default function AblestackPage() {
             <ProductContent.RowSmallCard
               title={'Mold'}
               description={'클라우드 관리플랫폼'}
-              image={<Logo_Article_4_2 />}
+              image={<SvgIcon Svg={Logo_Article_4_2} />}
             />
           </CustomLink>
 
@@ -124,7 +171,7 @@ export default function AblestackPage() {
             <ProductContent.RowSmallCard
               title={'Genie'}
               description={'하이브리드 배포 자동화'}
-              image={<Logo_Article_4_3 />}
+              image={<SvgIcon Svg={Logo_Article_4_3} />}
             />
           </CustomLink>
         </div>
@@ -134,7 +181,7 @@ export default function AblestackPage() {
             <ProductContent.RowSmallCard
               title={'Wall'}
               description={'통합 모니터링'}
-              image={<Logo_Article_4_4 />}
+              image={<SvgIcon Svg={Logo_Article_4_4} />}
             />
           </CustomLink>
 
@@ -142,7 +189,7 @@ export default function AblestackPage() {
         </div>
       </ProductContent>
 
-      <ProductContent image={<Logo_Article_5_5 />}>
+      <ProductContent image={<Image src={Logo_Article_5_5} loading={'lazy'} />}>
         <ProductContent.Intro
           title='통합 스토리지'
           description={
@@ -159,7 +206,7 @@ export default function AblestackPage() {
               containerClassName={'bg-[#EEF4FB]'}
               title={'Block'}
               description={'블록스토리지'}
-              image={<Logo_Article_5_1 />}
+              image={<SvgIcon Svg={Logo_Article_5_1} />}
             />
           </CustomLink>
 
@@ -168,7 +215,7 @@ export default function AblestackPage() {
               containerClassName={'bg-[#EEF4FB]'}
               title={'Files'}
               description={'파일시스템'}
-              image={<Logo_Article_5_2 />}
+              image={<SvgIcon Svg={Logo_Article_5_2} />}
             />
           </CustomLink>
         </div>
@@ -178,7 +225,7 @@ export default function AblestackPage() {
               containerClassName={'bg-[#EEF4FB]'}
               title={'Objects'}
               description={'오브젝트 파일 시스템'}
-              image={<Logo_Article_5_3 />}
+              image={<SvgIcon Svg={Logo_Article_5_3} />}
             />
           </CustomLink>
           <CustomLink href='/products/ablestack/slio' className={'w-full'}>
@@ -186,7 +233,7 @@ export default function AblestackPage() {
               containerClassName={'bg-[#EEF4FB]'}
               title={'Slio'}
               description={'백업 자동화'}
-              image={<Logo_Article_5_4 />}
+              image={<SvgIcon Svg={Logo_Article_5_4} />}
             />
           </CustomLink>
         </div>
@@ -195,7 +242,7 @@ export default function AblestackPage() {
       <ProductContent
         className={'bg-backgroudGray'}
         imagePosition={'first'}
-        image={<Logo_Article_6_1 />}>
+        image={<Image src={Logo_Article_6_1} loading={'lazy'} />}>
         <ProductContent.Intro
           title='플랫폼 및 서비스'
           description={
@@ -211,14 +258,14 @@ export default function AblestackPage() {
             <ProductContent.RowSmallCard
               title={'Works'}
               description={'데스크톱 서비스'}
-              image={<Logo_Article_6_2 />}
+              image={<SvgIcon Svg={Logo_Article_6_2} />}
             />
           </CustomLink>
           <CustomLink href='/products/ablestack/station' className={'w-full'}>
             <ProductContent.RowSmallCard
               title={'Station'}
               description={'플랫폼 서비스'}
-              image={<Logo_Article_6_3 />}
+              image={<SvgIcon Svg={Logo_Article_6_3} />}
             />
           </CustomLink>
         </div>

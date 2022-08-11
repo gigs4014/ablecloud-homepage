@@ -33,10 +33,10 @@ function ProductTemplate({
 
 export default ProductTemplate;
 
-function ProductTemplateHead({ title, description, summary }: ProductTemplateProps) {
+function ProductTemplateHead({ title, description }: ProductTemplateProps) {
   return (
     <Head>
-      <title>{[title, summary].filter(Boolean).join(' - ')}</title>
+      <title>{[title, description].filter(Boolean).join(' - ')}</title>
     </Head>
   );
 }

@@ -1,3 +1,6 @@
+import Image from 'next/image';
+
+import { CustomSlider } from '@/components/common';
 import { CompanyContent, CompanyHeaderProps, CompanyTemplate } from '@/templates';
 
 import Logo_Article_1_1 from '@/public/images/new/company/article_1_1.svg';
@@ -10,10 +13,16 @@ import Logo_Article_4_3 from '@/public/images/new/company/article_4_3.svg';
 import Logo_Article_4_4 from '@/public/images/new/company/article_4_4.svg';
 import Logo_Article_4_5 from '@/public/images/new/company/article_4_5.svg';
 import Logo_Article_4_6 from '@/public/images/new/company/article_4_6.svg';
-import Logo_Article_4_7 from '@/public/images/new/company/article_4_7.svg';
+import Logo_Article_4_7 from '@/public/images/new/company/article_4_7.png';
 import Logo_Article_5_1 from '@/public/images/new/company/article_5_1.svg';
 import Logo_Article_5_2 from '@/public/images/new/company/article_5_2.svg';
 import Logo_Article_5_3 from '@/public/images/new/company/article_5_3.svg';
+import Logo_Article_5_4 from '@/public/images/new/company/article_5_4.svg';
+import Logo_Article_5_5 from '@/public/images/new/company/article_5_5.svg';
+import Logo_Article_5_6 from '@/public/images/new/company/article_5_6.svg';
+import Logo_Article_5_7 from '@/public/images/new/company/article_5_7.svg';
+import Logo_Article_5_8 from '@/public/images/new/company/article_5_8.svg';
+import Logo_Article_5_9 from '@/public/images/new/company/article_5_9.svg';
 import Logo_Article_6_1 from '@/public/images/new/company/article_6_1.svg';
 import Logo_Article_6_2 from '@/public/images/new/company/article_6_2.svg';
 import Logo_Article_6_3 from '@/public/images/new/company/article_6_3.svg';
@@ -63,7 +72,7 @@ export default function CompanyPage() {
               title='기업 클라우드 구축 '
               image={<Logo_Article_2_1 />}
               description={
-                <p className={'whitespace-nowrap text-[16px] font-[400]'}>
+                <p className={'m-0 whitespace-nowrap p-0 text-[16px] font-[400] leading-[23.17px]'}>
                   가상화, 소프트웨어 정의 기술로 단순화 되고
                   <br />
                   안정적인 인프라를 기업에 제공하여
@@ -77,7 +86,7 @@ export default function CompanyPage() {
               title='다양한 애플리케이션 제공'
               image={<Logo_Article_2_2 />}
               description={
-                <p className={'whitespace-nowrap text-[16px] font-[400]'}>
+                <p className={'m-0 whitespace-nowrap p-0 text-[16px] font-[400] leading-[23.17px]'}>
                   가상머신, 컨테이너 인프라 뿐 아니라 배포
                   <br />
                   자동화, 가상데스크톱, 빅데이터, 인공지능
@@ -91,7 +100,7 @@ export default function CompanyPage() {
               title='파트너 생태계 구성'
               image={<Logo_Article_2_3 />}
               description={
-                <p className={'whitespace-nowrap text-[16px] font-[400]'}>
+                <p className={'m-0 whitespace-nowrap p-0 text-[16px] font-[400] leading-[23.17px]'}>
                   다양한 파트너 솔루션 지원을 통해
                   <br />
                   ABLESTACK 만으로 모든 애플리케이션을
@@ -152,7 +161,10 @@ export default function CompanyPage() {
               개발하고 발전시킵니다.
             </p>
           }>
-          <div className={'grid grid-cols-2 gap-[16px] px-[170px] md:grid-cols-3 lg:grid-cols-6'}>
+          <div
+            className={
+              'px-auto justify-startgrid-cols-2 grid place-content-center gap-[16px] md:grid-cols-3 lg:grid-cols-6'
+            }>
             <Logo_Article_4_1 />
             <Logo_Article_4_2 />
             <Logo_Article_4_3 />
@@ -160,16 +172,16 @@ export default function CompanyPage() {
             <Logo_Article_4_5 />
             <Logo_Article_4_6 />
           </div>
-          <Logo_Article_4_7 />
+          <Image src={Logo_Article_4_7} />
         </CompanyContent>
         <CompanyContent title='단순함을 추구합니다.'>
-          <section className='mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3'>
+          <CustomSlider>
             <CompanyContent.DescriptionCard
-              containerClassName={'bg-backgroudGray'}
+              containerClassName={'bg-[#F6F7F9]'}
               title='하이퍼 컨버징'
               image={<Logo_Article_5_1 />}
               description={
-                <p className={'whitespace-nowrap text-[16px] font-[400]'}>
+                <p className={'m-0 whitespace-nowrap p-0 text-[16px] font-[400] leading-[23.17px]'}>
                   서버, 스토리지, 네트워크 장비를 따로 구입
                   <br />
                   하여 구성하는 인프라는 더 이상 그만.
@@ -182,11 +194,11 @@ export default function CompanyPage() {
             />
 
             <CompanyContent.DescriptionCard
-              containerClassName={'bg-backgroudGray'}
+              containerClassName={'bg-[#F6F7F9]'}
               title='10분 내 구성'
               image={<Logo_Article_5_2 />}
               description={
-                <p className={'whitespace-nowrap text-[16px] font-[400]'}>
+                <p className={'m-0 whitespace-nowrap p-0 text-[16px] font-[400] leading-[23.17px]'}>
                   마법사를 통해 클라우드 환경을 <br />
                   단 10분 만에, <br />
                   그리고 쉽게 구성할 수 있어야 합니다. <br />
@@ -195,11 +207,11 @@ export default function CompanyPage() {
             />
 
             <CompanyContent.DescriptionCard
-              containerClassName={'bg-backgroudGray'}
+              containerClassName={'bg-[#F6F7F9]'}
               title='원클릭 배포'
               image={<Logo_Article_5_3 />}
               description={
-                <p className={'whitespace-nowrap text-[16px] font-[400]'}>
+                <p className={'m-0 whitespace-nowrap p-0 text-[16px] font-[400] leading-[23.17px]'}>
                   사용자가 직접 단 한번의 클릭으로
                   <br />
                   가상머신과 컨테이너,
@@ -210,7 +222,92 @@ export default function CompanyPage() {
                 </p>
               }
             />
-          </section>
+
+            <CompanyContent.DescriptionCard
+              containerClassName={'bg-[#D5EAFD]'}
+              title='데이터 안정성'
+              image={<Logo_Article_5_4 />}
+              description={
+                <p className={'m-0 whitespace-nowrap p-0 text-[16px] font-[400] leading-[23.17px]'}>
+                  스토리지는 자체적으로 고장을 식별하고,
+                  <br />
+                  스스로 고장을 복구할 수 있어야 합니다.
+                  <br />
+                  그리고 암호화, 원본 자료 유지, 백업 지원을 통해
+                  <br />
+                  안전하게 관리되어야 합니다.
+                </p>
+              }
+            />
+
+            <CompanyContent.DescriptionCard
+              containerClassName={'bg-[#D5EAFD]'}
+              title='모든 애플리케이션을 위한 스토리지 '
+              image={<Logo_Article_5_5 />}
+              description={
+                <p className={'m-0 whitespace-nowrap p-0 text-[16px] font-[400] leading-[23.17px]'}>
+                  ABLESTACK HCI 스토리지는 일반적인
+                  <br />웹 서버 등의 서비스 뿐 아니라, 빅데이터,
+                  <br /> 영상감시, VDI 등의 모든 서비스에서
+                  <br /> 잘 동작합니다.
+                </p>
+              }
+            />
+
+            <CompanyContent.DescriptionCard
+              containerClassName={'bg-[#D5EAFD]'}
+              title='데이터베이스 자동화'
+              image={<Logo_Article_5_6 />}
+              description={
+                <p className={'m-0 whitespace-nowrap p-0 text-[16px] font-[400] leading-[23.17px]'}>
+                  애플리케이션을 실행하기 위한
+                  <br />
+                  다양한 데이터베이스를 자동으로 배포하고
+                  <br />
+                  사용할 수 있게 됩니다.
+                </p>
+              }
+            />
+
+            <CompanyContent.DescriptionCard
+              containerClassName={'bg-[#EDEDED]'}
+              title='하드웨어 선택의 자유'
+              image={<Logo_Article_5_7 />}
+              description={
+                <p className={'m-0 whitespace-nowrap p-0 text-[16px] font-[400] leading-[23.17px]'}>
+                  어떠한 브랜드의 서버에서도 잘 동작합니다.
+                  <br /> 지금까지 사용한 익숙한 서버를 포기할 <br />
+                  필요가 없습니다.
+                </p>
+              }
+            />
+
+            <CompanyContent.DescriptionCard
+              containerClassName={'bg-[#EDEDED]'}
+              title='가상화 소프트웨어 선택의 자유'
+              image={<Logo_Article_5_8 />}
+              description={
+                <p className={'m-0 whitespace-nowrap p-0 text-[16px] font-[400] leading-[23.17px]'}>
+                  자체 제공하는 Cell 하이퍼바이저 뿐 아니라, <br />
+                  Citrix Hypervisor, Hyper V, VMWare ESXi, <br /> Linux KVM 등 다양한 <br />
+                  가상화 소프트웨어와 모두 호환됩니다.
+                </p>
+              }
+            />
+
+            <CompanyContent.DescriptionCard
+              containerClassName={'bg-[#EDEDED]'}
+              title='애플리케이션 선택의 자유'
+              image={<Logo_Article_5_9 />}
+              description={
+                <p className={'m-0 whitespace-nowrap p-0 text-[16px] font-[400] leading-[23.17px]'}>
+                  가상화, 컨테이너 기술을 통해
+                  <br />
+                  어떤 애플리케이션도 실행할 수 있습니다.
+                </p>
+              }
+            />
+          </CustomSlider>
         </CompanyContent>
         <CompanyContent title='인증 및 특허권' className={'bg-backgroudGray'}>
           <div className={'mt-[80px] grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4'}>

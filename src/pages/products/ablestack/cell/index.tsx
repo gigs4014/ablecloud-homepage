@@ -2,7 +2,6 @@ import Image from 'next/image';
 
 import { ProductContent, ProductHeaderProps, ProductTemplate } from '@/templates';
 
-import Logo_Article_3_1 from '@/public/images/new/product/ablestack/ablestackBlock/article_3_1.svg';
 import Logo_Article_2_1 from '@/public/images/new/product/ablestack/ablestackCell/article_2_1.png';
 import Logo_Article_3_2 from '@/public/images/new/product/ablestack/ablestackCell/article_3_2.svg';
 import Logo_Article_3_3 from '@/public/images/new/product/ablestack/ablestackCell/article_3_3.svg';
@@ -11,6 +10,7 @@ import Logo_Article_4_1 from '@/public/images/new/product/ablestack/ablestackCel
 import Logo_Article_4_2 from '@/public/images/new/product/ablestack/ablestackCell/article_4_2.svg';
 import Logo_Article_4_3 from '@/public/images/new/product/ablestack/ablestackCell/article_4_3.svg';
 import Logo_Article_4_4 from '@/public/images/new/product/ablestack/ablestackCell/article_4_4.svg';
+import Logo_Article_3_1 from '@/public/images/new/product/ablestack/ablestackGlue/article_3_1.png';
 import Logo_Product_Default from '@/public/images/new/product_default.svg';
 
 const headerContent: ProductHeaderProps = {
@@ -22,6 +22,7 @@ const headerContent: ProductHeaderProps = {
    원을 쪼개서 각각의 역할을 수행하는 작은 단위의 세포 또는 방인 가상머
    신을 실행하기 위한 환경을 제공하는 플랫폼입니다.`,
   bgImage: 'bg-ablestack-cell-header-bg',
+  imagePosition: 'last',
 };
 
 export default function AblestackCellPage() {
@@ -32,7 +33,7 @@ export default function AblestackCellPage() {
         description={`Cell은 CentOS KVM을 기반으로 ABLESTACK 운영에 최적화된 기능을 추가한 내장된 하이퍼바이저입니다.
         Cell 하이퍼바이저는 다음과 같은 주요 컴포넌트로 구성됩니다.`}>
         <div className={'flex w-full items-center justify-center'}>
-          <Image src={Logo_Article_2_1} />
+          <Image src={Logo_Article_2_1} loading={'lazy'} />
         </div>
       </ProductContent>
 
@@ -40,7 +41,7 @@ export default function AblestackCellPage() {
         className={'bg-backgroudGray'}
         title='에이블클라우드가 무상으로 제공하는 하이퍼바이저'
         imagePosition='first'
-        image={<Logo_Article_3_1 />}>
+        image={<Image src={Logo_Article_3_1} />}>
         <ProductContent.Description
           contents={[
             {
@@ -62,7 +63,7 @@ export default function AblestackCellPage() {
             },
           ]}
         />
-        <div className='flex gap-[30px] pl-[38px]'>
+        <div className=' hidden gap-[30px] pl-[38px] md:flex lg:flex'>
           <Logo_Article_3_2 />
           <Logo_Article_3_3 />
           <Logo_Article_3_4 />

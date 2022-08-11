@@ -2,12 +2,12 @@ import Image from 'next/image';
 
 import { ProductContent, ProductHeaderProps, ProductTemplate } from '@/templates';
 
-import Logo_Article_3_1 from '@/public/images/new/product/ablestack/ablestackBlock/article_3_1.svg';
 import Logo_Article_2_1 from '@/public/images/new/product/ablestack/ablestackGenie/article_2_1.png';
 import Logo_Article_4_1 from '@/public/images/new/product/ablestack/ablestackGenie/article_4_1.svg';
 import Logo_Article_4_2 from '@/public/images/new/product/ablestack/ablestackGenie/article_4_2.svg';
 import Logo_Article_4_3 from '@/public/images/new/product/ablestack/ablestackGenie/article_4_3.svg';
 import Logo_Article_4_4 from '@/public/images/new/product/ablestack/ablestackGenie/article_4_4.svg';
+import Logo_Article_3_1 from '@/public/images/new/product/ablestack/ablestackGlue/article_3_1.png';
 import Logo_Product_Default from '@/public/images/new/product_default.svg';
 
 const headerContent: ProductHeaderProps = {
@@ -23,7 +23,7 @@ export default function AblestackGeniePage() {
         title='아키텍처 개요'
         description={`Genie는 범용 언어를 기반으로 수행되는 자동화 도구로, 어려운 작업을 반복적으로 수행할 수 있도록 미리 생성한 플레이북을 기반으로 에이전트 없이 버튼 하나만 누르면 전사적으로 가상머신, 컨테이너, 네트워크, 애플리케이션 등을 배포할 수 있습니다.`}>
         <div className={'flex w-full items-center justify-center'}>
-          <Image src={Logo_Article_2_1} />
+          <Image src={Logo_Article_2_1} loading={'lazy'} />
         </div>
       </ProductContent>
 
@@ -31,7 +31,7 @@ export default function AblestackGeniePage() {
         className={'bg-backgroudGray'}
         title='Genie 애플리케이션 관리 기능과 이점'
         imagePosition='first'
-        image={<Logo_Article_3_1 />}>
+        image={<Image src={Logo_Article_3_1} />}>
         <ProductContent.Description
           contents={[
             {

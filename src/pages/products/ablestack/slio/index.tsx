@@ -77,7 +77,7 @@ export default function AblestackSlioPage() {
         className={'bg-backgroudGray'}
         title='중앙 집중화된 유연한 데이터 보호 환경'
         imagePosition='first'
-        image={<Image src={Logo_Article_3_1} />}>
+        image={<Image src={Logo_Article_3_1} loading={'lazy'} />}>
         <ProductContent.Description
           contents={[
             {

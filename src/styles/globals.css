@@ -1,7 +1,7 @@
+@import url('./slider.module.css');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 @layer base {
   html {
     @apply font-sans;

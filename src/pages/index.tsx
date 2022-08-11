@@ -5,7 +5,7 @@ import { ReactNode } from '@mdx-js/react/lib';
 import { useScrollEvent } from '@/hooks/common';
 import { useMountEffect } from '@/hooks/utils';
 
-import { Button, Carousel, CarouselRef, CustomLink } from '@/components/common';
+import { Button, CarouselRef, CustomLink, CustomSlider } from '@/components/common';
 import { HomeContent, HomeHeaderProps, HomeTemplate } from '@/templates';
 
 import Logo_Article_2_1 from '@/public/images/new/home/article_2_1.svg';
@@ -32,6 +32,39 @@ const headerContent: HomeHeaderProps = {
   title: '',
   description: ``,
   bgImage: 'bg-home-header-bg',
+};
+
+const imageSliderSettings = {
+  dots: false,
+  infinite: true,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  arrows: false,
+  autoplay: true,
+  speed: 2000,
+  autoplaySpeed: 1000,
+  width: 850,
+  cssEase: 'linear',
+  responsive: [
+    {
+      breakpoint: 1280,
+      settings: {
+        slidesToShow: 3,
+      },
+    },
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+      },
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+      },
+    },
+  ],
 };
 
 const logos: Array<LogoData> = [
@@ -224,19 +257,15 @@ export default function HomePage() {
         <HomeContent
           title='국내 최초의 HCI, ABLESTACK을 선택한 기업들'
           description={'에이블스택과 함께하는 파트너 입니다.'}>
-          <section className='not-prose relative mt-8 flex w-screen justify-center self-center'>
-            <Carousel
-              autoScrollInterval={5000}
-              stopAutoScrollOnEnd
-              ref={carouselRef}
-              className='space-x-16 px-8'>
-              {logos.map(({ src, title, href }, index) => (
-                <Carousel.Item key={index} className='flex-shrink-0'>
-                  {src}
-                </Carousel.Item>
-              ))}
-            </Carousel>
-          </section>
+          <div className={'w-full'}>
+            <CustomSlider settingsOverrides={imageSliderSettings}>
+              <Logo_Article_4_1 />
+              <Logo_Article_4_2 />
+              <Logo_Article_4_3 />
+              <Logo_Article_4_4 />
+              <Logo_Article_4_5 />
+            </CustomSlider>
+          </div>
           <div className='flex justify-center'>
             <CustomLink href='/stories' hoverBehavoir='none'>
               <Button solid className='mt-12'>
@@ -258,7 +287,7 @@ export default function HomePage() {
               에이블스택을 바로 사용해보세요.
             </p>
           }>
-          <div className={'grid grid-cols-1 gap-[40px] md:grid-cols-2 lg:grid-cols-3'}>
+          <div className={'grid w-full grid-cols-1 gap-[40px] md:grid-cols-2 lg:grid-cols-3'}>
             <HomeContent.ActionCard
               title={'Case Study'}
               image={<Logo_Product_Default />}

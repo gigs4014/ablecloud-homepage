@@ -25,7 +25,7 @@ export default function AblestackWallPage() {
         ABLESTACK HCI는 HCI를 구성하는 모든 호스트 및 가상머신, 그리고 사용자가 모니터링하기 원하는 인프라에 대한 매트릭을 쿼리하고
         시각화하며, 임계치 설정에 따른 경고를 받을 수 있습니다.`}>
         <div className={'flex w-full items-center justify-center'}>
-          <Image src={Logo_Article_2_1} />
+          <Image src={Logo_Article_2_1} loading={'lazy'} />
         </div>
       </ProductContent>
 
@@ -33,7 +33,7 @@ export default function AblestackWallPage() {
         className={'bg-backgroudGray'}
         title='데이터 쿼리, 시각화 그리고 경고하는 모니터링 플랫폼'
         imagePosition='first'
-        image={<Image src={Logo_Article_3_1} />}>
+        image={<Image src={Logo_Article_3_1} loading={'lazy'} />}>
         <ProductContent.Description
           contents={[
             {

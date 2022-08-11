@@ -31,7 +31,7 @@ export function ActionCard({
   return (
     <Container.Card
       hoverBehavoir={hoverBehavoir}
-      className={`border-borderGrayColor min-w-[374px] border-1 ${containerClassName}`}>
+      className={`border-borderGrayColor w-full border-1 ${containerClassName}`}>
       {image && <div className='h-[218px] w-full'>{image}</div>}
 
       <div className={'flex flex-col justify-center px-[30px] pb-[40px] pt-[32px] text-center'}>
@@ -67,7 +67,7 @@ export function DescriptionCard({
 }: CardProps) {
   return (
     <Container.Card
-      className={`h-full pt-[35px] pb-[58px] text-center shadow-none ${containerClassName}`}
+      className={`h-[436px] pt-[35px] pb-[58px] text-center shadow-none ${containerClassName}`}
       hoverBehavoir={hoverBehavoir}>
       {image && <div className='flex items-center justify-center'>{image}</div>}
 

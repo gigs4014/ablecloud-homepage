@@ -10,7 +10,7 @@ import {
 import Logo_Article_3_1 from '@/public/images/new/product/article_3_1.png';
 
 const headerContent: ProductHeaderProps = {
-  summary: 'ABLESTACK의 탄생',
+  title: 'ABLESTACK의 탄생',
   description: `복잡한 구조의 전통적 기업 데이터센터의 문제점을 해결하고,
     IT 환경의 급속한 발전으로 인해  발생하는 문제점을 해결하기 위해
     단일 서버 구성으로 모든 인프라와 플랫폼을 실행할 수 있도록 고안된

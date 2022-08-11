@@ -1,4 +1,13 @@
-import { NamedExoticComponent, PropsWithChildren, ReactNode, memo } from 'react';
+import {
+  NamedExoticComponent,
+  PropsWithChildren,
+  ReactNode,
+  memo,
+  useEffect,
+  useState,
+} from 'react';
+
+import { useMediaQuery } from 'react-responsive';
 
 import { BaseComponentProps } from '@/types';
 import { cls } from '@/utils';
@@ -21,6 +30,14 @@ export interface ProductContentProps extends BaseComponentProps {
 
 const ProductContent = memo<PropsWithChildren<ProductContentProps>>(
   ({ title, description, image, imagePosition = 'last', className, children }) => {
+    const [isBigScreen, setIsBigScreen] = useState<boolean | undefined>();
+
+    const bigScreen = useMediaQuery({ query: '(min-width: 768px)' });
+
+    useEffect(() => {
+      setIsBigScreen(bigScreen);
+    }, [bigScreen]);
+
     return (
       <section className={cls`group relative flex w-full flex-col items-center pb-16 ${className}`}>
         {/* ::before */}
@@ -38,13 +55,22 @@ const ProductContent = memo<PropsWithChildren<ProductContentProps>>(
           {image ? (
             <section className='flex w-full items-center justify-between space-x-8'>
               {imagePosition === 'first' && (
-                <div className='hidden w-1/2 overflow-visible md:block lg:block'>{image}</div>
+                <div
+                  className={`${
+                    isBigScreen ? 'flex w-1/2' : 'hidden'
+                  } items-center justify-center `}>
+                  {image}
+                </div>
               )}
 
-              <div className='flex w-full flex-col md:w-1/2 lg:w-1/2'>{children}</div>
+              <div className={`${isBigScreen ? 'w-1/2' : 'w-full'} flex-col justify-center`}>
+                {children}
+              </div>
 
               {imagePosition === 'last' && (
-                <div className='hidden w-1/2 overflow-visible md:block lg:block'>{image}</div>
+                <div className={`${isBigScreen ? 'w-1/2' : 'hidden'} items-center justify-center`}>
+                  {image}
+                </div>
               )}
             </section>
           ) : (
