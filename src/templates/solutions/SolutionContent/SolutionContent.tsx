@@ -3,6 +3,7 @@ import { NamedExoticComponent, PropsWithChildren, ReactNode, memo } from 'react'
 import { BaseComponentProps } from '@/types';
 import { cls } from '@/utils';
 
+import { RowSmallCard } from '@/components/common';
 import { Container } from '@/components/layout';
 
 import SolutionContentRowCard from './SolutionContentRowCard';
@@ -33,10 +34,12 @@ const SolutionContent = memo<PropsWithChildren<SolutionContentProps>>(
   },
 ) as NamedExoticComponent<PropsWithChildren<SolutionContentProps>> & {
   RowCard: typeof SolutionContentRowCard;
+  RowSmallCard: typeof RowSmallCard;
 };
 
 SolutionContent.displayName = 'SolutionContent';
 
 SolutionContent.RowCard = SolutionContentRowCard;
+SolutionContent.RowSmallCard = RowSmallCard;
 
 export default SolutionContent;
