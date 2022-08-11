@@ -47,19 +47,19 @@ const imageSliderSettings = {
   cssEase: 'linear',
   responsive: [
     {
-      breakpoint: 1280, //Tailwind lg default
+      breakpoint: 1280,
       settings: {
         slidesToShow: 3,
       },
     },
     {
-      breakpoint: 1024, //Tailwind lg default
+      breakpoint: 1024,
       settings: {
         slidesToShow: 3,
       },
     },
     {
-      breakpoint: 768, //Tailwind md default
+      breakpoint: 768,
       settings: {
         slidesToShow: 2,
       },
