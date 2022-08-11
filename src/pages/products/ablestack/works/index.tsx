@@ -1,10 +1,12 @@
+import Image from 'next/image';
+
 import { ProductContent, ProductHeaderProps, ProductTemplate } from '@/templates';
 
-import Logo_Article_1_1 from '@/public/images/new/product/ablestack/ablestackWorks/article_1_1.svg';
+import Logo_Article_1_1 from '@/public/images/new/product/ablestack/ablestackWorks/article_1_1.png';
 import Logo_Article_2_1 from '@/public/images/new/product/ablestack/ablestackWorks/article_2_1.svg';
 import Logo_Article_2_2 from '@/public/images/new/product/ablestack/ablestackWorks/article_2_2.svg';
 import Logo_Article_2_3 from '@/public/images/new/product/ablestack/ablestackWorks/article_2_3.svg';
-import Logo_Article_3_1 from '@/public/images/new/product/ablestack/ablestackWorks/article_3_1.svg';
+import Logo_Article_3_1 from '@/public/images/new/product/ablestack/ablestackWorks/article_3_1.png';
 import Logo_Article_4_1 from '@/public/images/new/product/ablestack/ablestackWorks/article_4_1.svg';
 import Logo_Article_4_2 from '@/public/images/new/product/ablestack/ablestackWorks/article_4_2.svg';
 import Logo_Article_4_3 from '@/public/images/new/product/ablestack/ablestackWorks/article_4_3.svg';
@@ -15,7 +17,7 @@ const headerContent: ProductHeaderProps = {
   title: 'Works 데스크톱 서비스',
   description: `ABLESTACK의 Works는 Mold상에서 DaaS(Desktop As a Service)를 제공하여 전용 클라이언트 없이 언제서가 업무 환경을 사용할 수 있는 가상 데스크톱 플랫폼 입니다.`,
   bgImage: 'bg-ablestack-works-header-bg',
-  image: <Logo_Article_1_1 />,
+  image: <Image src={Logo_Article_1_1} />,
 };
 
 export default function AblestackWorksPage() {
@@ -66,7 +68,7 @@ export default function AblestackWorksPage() {
         className={'bg-backgroudGray'}
         title='단일 콘솔에서 가상머신과 볼륨, 네트워크, 백업, 컨테이너 등의 모든 것을 관리'
         imagePosition='first'
-        image={<Logo_Article_3_1 />}>
+        image={<Image src={Logo_Article_3_1} />}>
         <ProductContent.Description
           contents={[
             {

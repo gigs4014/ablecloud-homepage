@@ -1,7 +1,11 @@
 import React from 'react';
 
+import Image from 'next/image';
+
 import { SvgIcon } from '@/components/common';
 import { ProductContent, ProductHeaderProps, ProductTemplate } from '@/templates';
+
+import Logo_Article_3_1 from '@/public/images/new/product/ablestack/ablestackBlock/article_3_1.png';
 
 const Logo_Article_2_1 = React.lazy(
   () => import('@/public/images/new/product/ablestack/ablestackBlock/article_2_1.svg'),
@@ -12,9 +16,7 @@ const Logo_Article_2_2 = React.lazy(
 const Logo_Article_2_3 = React.lazy(
   () => import('@/public/images/new/product/ablestack/ablestackBlock/article_2_3.svg'),
 );
-const Logo_Article_3_1 = React.lazy(
-  () => import('@/public/images/new/product/ablestack/ablestackBlock/article_3_1.svg'),
-);
+
 const Logo_Article_4_1 = React.lazy(
   () => import('@/public/images/new/product/ablestack/ablestackBlock/article_4_1.svg'),
 );
@@ -86,7 +88,7 @@ export default function AblestackBlockPage() {
         className={'bg-backgroudGray'}
         title='원하는 플랫폼에서 모든 워크로드 연결'
         imagePosition='first'
-        image={<SvgIcon Svg={Logo_Article_3_1} />}>
+        image={<Image src={Logo_Article_3_1} />}>
         <ProductContent.Description
           contents={[
             {

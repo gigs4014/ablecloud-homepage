@@ -1,10 +1,11 @@
+import Image from 'next/image';
+
 import { ProductContent, ProductHeaderProps, ProductTemplate } from '@/templates';
 
-import Logo_Article_1_1 from '@/public/images/new/product/ablestack/ablestackStation/article_1_1.svg';
 import Logo_Article_2_1 from '@/public/images/new/product/ablestack/ablestackStation/article_2_1.svg';
 import Logo_Article_2_2 from '@/public/images/new/product/ablestack/ablestackStation/article_2_2.svg';
 import Logo_Article_2_3 from '@/public/images/new/product/ablestack/ablestackStation/article_2_3.svg';
-import Logo_Article_3_1 from '@/public/images/new/product/ablestack/ablestackStation/article_3_1.svg';
+import Logo_Article_3_1 from '@/public/images/new/product/ablestack/ablestackStation/article_3_1.png';
 import Logo_Article_4_1 from '@/public/images/new/product/ablestack/ablestackStation/article_4_1.svg';
 import Logo_Article_4_2 from '@/public/images/new/product/ablestack/ablestackStation/article_4_2.svg';
 import Logo_Article_4_3 from '@/public/images/new/product/ablestack/ablestackStation/article_4_3.svg';
@@ -15,9 +16,9 @@ const headerContent: ProductHeaderProps = {
   title: 'Station 플랫폼 서비스',
   description: `Station은 Mold와 Genie를 통해 제공되는 플랫폼 서비스로
   ABLESTACK이 제공하는 이머징 플랫폼을 바로 사용할 수 있습니다. `,
-  bgImage: 'bg-white',
-  image: <Logo_Article_1_1 />,
+  bgImage: 'bg-ablestack-station-header-bg',
   textColor: 'text-black',
+  imagePosition: 'last',
 };
 
 export default function AblestackStationPage() {
@@ -72,7 +73,7 @@ export default function AblestackStationPage() {
         className={'bg-backgroudGray'}
         title='HCI와 통합된 턴키 이머징 플랫폼 서비스'
         imagePosition='first'
-        image={<Logo_Article_3_1 />}>
+        image={<Image src={Logo_Article_3_1} />}>
         <ProductContent.Description
           contents={[
             {

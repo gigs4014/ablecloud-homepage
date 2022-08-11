@@ -257,13 +257,15 @@ export default function HomePage() {
         <HomeContent
           title='국내 최초의 HCI, ABLESTACK을 선택한 기업들'
           description={'에이블스택과 함께하는 파트너 입니다.'}>
-          <CustomSlider settingsOverrides={imageSliderSettings}>
-            <Logo_Article_4_1 />
-            <Logo_Article_4_2 />
-            <Logo_Article_4_3 />
-            <Logo_Article_4_4 />
-            <Logo_Article_4_5 />
-          </CustomSlider>
+          <div className={'w-full'}>
+            <CustomSlider settingsOverrides={imageSliderSettings}>
+              <Logo_Article_4_1 />
+              <Logo_Article_4_2 />
+              <Logo_Article_4_3 />
+              <Logo_Article_4_4 />
+              <Logo_Article_4_5 />
+            </CustomSlider>
+          </div>
           <div className='flex justify-center'>
             <CustomLink href='/stories' hoverBehavoir='none'>
               <Button solid className='mt-12'>
@@ -285,7 +287,7 @@ export default function HomePage() {
               에이블스택을 바로 사용해보세요.
             </p>
           }>
-          <div className={'grid grid-cols-1 gap-[40px] md:grid-cols-2 lg:grid-cols-3'}>
+          <div className={'grid w-full grid-cols-1 gap-[40px] md:grid-cols-2 lg:grid-cols-3'}>
             <HomeContent.ActionCard
               title={'Case Study'}
               image={<Logo_Product_Default />}

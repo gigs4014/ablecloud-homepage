@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import { CustomSlider } from '@/components/common';
 import { CompanyContent, CompanyHeaderProps, CompanyTemplate } from '@/templates';
 
@@ -11,7 +13,7 @@ import Logo_Article_4_3 from '@/public/images/new/company/article_4_3.svg';
 import Logo_Article_4_4 from '@/public/images/new/company/article_4_4.svg';
 import Logo_Article_4_5 from '@/public/images/new/company/article_4_5.svg';
 import Logo_Article_4_6 from '@/public/images/new/company/article_4_6.svg';
-import Logo_Article_4_7 from '@/public/images/new/company/article_4_7.svg';
+import Logo_Article_4_7 from '@/public/images/new/company/article_4_7.png';
 import Logo_Article_5_1 from '@/public/images/new/company/article_5_1.svg';
 import Logo_Article_5_2 from '@/public/images/new/company/article_5_2.svg';
 import Logo_Article_5_3 from '@/public/images/new/company/article_5_3.svg';
@@ -170,7 +172,7 @@ export default function CompanyPage() {
             <Logo_Article_4_5 />
             <Logo_Article_4_6 />
           </div>
-          <Logo_Article_4_7 />
+          <Image src={Logo_Article_4_7} />
         </CompanyContent>
         <CompanyContent title='단순함을 추구합니다.'>
           <CustomSlider>

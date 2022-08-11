@@ -1,7 +1,9 @@
+import Image from 'next/image';
+
 import { ProductContent, ProductHeaderProps, ProductTemplate } from '@/templates';
 
-import Logo_Article_2_1 from '@/public/images/new/product/ablestack/ablestackGlue/article_2_1.svg';
-import Logo_Article_3_1 from '@/public/images/new/product/ablestack/ablestackGlue/article_3_1.svg';
+import Logo_Article_2_1 from '@/public/images/new/product/ablestack/ablestackGlue/article_2_1.png';
+import Logo_Article_3_1 from '@/public/images/new/product/ablestack/ablestackGlue/article_3_1.png';
 import Logo_Article_4_1 from '@/public/images/new/product/ablestack/ablestackGlue/article_4_1.svg';
 import Logo_Article_4_2 from '@/public/images/new/product/ablestack/ablestackGlue/article_4_2.svg';
 import Logo_Article_4_3 from '@/public/images/new/product/ablestack/ablestackGlue/article_4_3.svg';
@@ -12,6 +14,7 @@ const headerContent: ProductHeaderProps = {
   title: 'Glue 스토리지',
   description: `Glue는 접착제, 풀을 뜻하는 단어로, ABLESTACK의 스토리지 플랫폼의 이름입니다. 호스트에 있는 디스크를 이용해 통합된 저장공간을 제공하고, 다양한 형태로 스토리지 서비스를 제공하는 HCI 스토리지의 특성을 잘 설명할 수 있는 단어로, 통합 스토리지라는 의미를 담고 있습니다.`,
   bgImage: 'bg-ablestack-glue-header-bg',
+  imagePosition: 'last',
 };
 
 export default function AblestackGluePage() {
@@ -22,7 +25,7 @@ export default function AblestackGluePage() {
         description={`Glue는 ABLESTACK HCI의 핵심 구성요소로 HCI의 스토리지를 제공하기 위한 플랫폼입니다.
         다음의 그림은 ABLESTACK HCI의 전체 구성요소 중 Glue가 제공하는 기능을 아키텍처로 표현합니다.`}>
         <div className={'flex w-full items-center justify-center'}>
-          <Logo_Article_2_1 />
+          <Image src={Logo_Article_2_1} />
         </div>
       </ProductContent>
 
@@ -30,7 +33,7 @@ export default function AblestackGluePage() {
         className={'bg-backgroudGray'}
         title='기존의 SAN 또는 NAS를 뛰어넘는 고도로 자동화된 하이퍼 컨버지드 스토리지'
         imagePosition='first'
-        image={<Logo_Article_3_1 />}>
+        image={<Image src={Logo_Article_3_1} />}>
         <ProductContent.Description
           contents={[
             {

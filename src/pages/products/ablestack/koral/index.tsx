@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 import { ProductContent, ProductHeaderProps, ProductTemplate } from '@/templates';
 
-import Logo_Article_3_1 from '@/public/images/new/product/ablestack/ablestackBlock/article_3_1.svg';
+import Logo_Article_3_1 from '@/public/images/new/product/ablestack/ablestackGlue/article_3_1.png';
 import Logo_Article_2_1 from '@/public/images/new/product/ablestack/ablestackKoral/article_2_1.png';
 import Logo_Article_4_1 from '@/public/images/new/product/ablestack/ablestackKoral/article_4_1.svg';
 import Logo_Article_4_2 from '@/public/images/new/product/ablestack/ablestackKoral/article_4_2.svg';
@@ -19,6 +19,7 @@ const headerContent: ProductHeaderProps = {
   ABLESTACK에 배포할 수 있으며, 안정적으로 운영할 수 있을 뿐 아니라, 
   필요 시 신속하게 확장이 가능합니다. `,
   bgImage: 'bg-ablestack-koral-header-bg',
+  imagePosition: 'last',
 };
 
 export default function AblestackKoralPage() {
@@ -36,7 +37,7 @@ export default function AblestackKoralPage() {
         className={'bg-backgroudGray'}
         title='컨테이너 기반의 애플리케이션 배포를 지원하기 위한 플러그인'
         imagePosition='first'
-        image={<Logo_Article_3_1 />}>
+        image={<Image src={Logo_Article_3_1} />}>
         <ProductContent.Description
           contents={[
             {

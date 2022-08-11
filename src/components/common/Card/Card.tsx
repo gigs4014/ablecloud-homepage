@@ -31,7 +31,7 @@ export function ActionCard({
   return (
     <Container.Card
       hoverBehavoir={hoverBehavoir}
-      className={`border-borderGrayColor min-w-[374px] border-1 ${containerClassName}`}>
+      className={`border-borderGrayColor w-full border-1 ${containerClassName}`}>
       {image && <div className='h-[218px] w-full'>{image}</div>}
 
       <div className={'flex flex-col justify-center px-[30px] pb-[40px] pt-[32px] text-center'}>

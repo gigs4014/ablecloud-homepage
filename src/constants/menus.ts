@@ -95,6 +95,7 @@ export const menuItems: Array<HeaderMenuItem> = [
           { label: 'Block 블록스토리지', href: '/products/ablestack/block' },
           { label: 'Files 파일시스템', href: '/products/ablestack/files' },
           { label: 'Object 오브젝트 스토리지', href: '/products/ablestack/object' },
+          { label: 'Slio 백업 자동화', href: '/products/ablestack/slio' },
         ],
       },
       {

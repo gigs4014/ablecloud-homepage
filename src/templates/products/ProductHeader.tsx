@@ -5,23 +5,21 @@ import { cls } from '@/utils';
 
 export interface ProductHeaderProps extends BaseComponentProps {
   title?: string;
-  summary?: string;
   description: string;
-  headerExtra?: ReactNode;
   image?: ReactNode;
   bgImage?: string;
   textColor?: string;
+  imagePosition?: 'first' | 'last';
 }
 
 export default function ProductHeader({
   title,
-  summary,
   description,
-  headerExtra,
   image,
   bgImage,
   className,
   textColor = 'text-white',
+  imagePosition = 'first',
 }: ProductHeaderProps) {
   const [isCurrentScrollTop, setIsCurrentScrollTop] = useState<boolean>(true);
 
@@ -54,16 +52,23 @@ export default function ProductHeader({
         className={`flex ${
           isCurrentScrollTop ? 'mt-[100px]' : 'mt-[20px]'
         } max-w-page-full items-center space-x-8 px-8`}>
-        {/* image */}
-        <section className='hidden w-1/2 overflow-visible md:block lg:block'>{image}</section>
+        {imagePosition === 'first' && (
+          <section className='hidden w-1/2 items-center justify-center overflow-visible md:flex lg:flex'>
+            {image}
+          </section>
+        )}
 
         {/* info */}
         <section className={`w-full md:w-1/2 lg:w-1/2 ${textColor} `}>
-          <p className={'whitespace-nowrap text-[42px] font-[900] leading-[52.42px]'}>{title}</p>
-          <h1>{summary}</h1>
+          <p className={'text-[42px] font-[900] leading-[52.42px]'}>{title}</p>
           <p className={'text-[18px] font-[400] leading-[26.06px]'}>{description}</p>
-          <div>{headerExtra}</div>
         </section>
+
+        {imagePosition === 'last' && (
+          <section className='hidden w-1/2 items-center justify-center overflow-visible md:flex lg:flex'>
+            {image}
+          </section>
+        )}
       </div>
     </header>
   );

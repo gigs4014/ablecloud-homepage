@@ -2,8 +2,8 @@ import Image from 'next/image';
 
 import { ProductContent, ProductHeaderProps, ProductTemplate } from '@/templates';
 
-import Logo_Article_3_1 from '@/public/images/new/product/ablestack/ablestackBlock/article_3_1.svg';
-import Logo_Article_1_1 from '@/public/images/new/product/ablestack/ablestackTrack/article_1_1.svg';
+import Logo_Article_3_1 from '@/public/images/new/product/ablestack/ablestackGlue/article_3_1.png';
+import Logo_Article_1_1 from '@/public/images/new/product/ablestack/ablestackTrack/article_1_1.png';
 import Logo_Article_2_1 from '@/public/images/new/product/ablestack/ablestackTrack/article_2_1.png';
 import Logo_Article_4_1 from '@/public/images/new/product/ablestack/ablestackTrack/article_4_1.svg';
 import Logo_Article_4_2 from '@/public/images/new/product/ablestack/ablestackTrack/article_4_2.svg';
@@ -18,7 +18,7 @@ const headerContent: ProductHeaderProps = {
    네트워크 어플라이언스를 배포하여 빠르게 사용자 단위로 격리된 네트워
    크를 배포하고 활용할 수 있습니다. `,
   bgImage: 'bg-ablestack-track-header-bg',
-  image: <Logo_Article_1_1 />,
+  image: <Image src={Logo_Article_1_1} />,
 };
 
 export default function AblestackTrackPage() {
@@ -37,7 +37,7 @@ export default function AblestackTrackPage() {
         className={'bg-backgroudGray'}
         title='Track : Overlay SDN'
         imagePosition='first'
-        image={<Logo_Article_3_1 />}>
+        image={<Image src={Logo_Article_3_1} />}>
         <ProductContent.Description
           contents={[
             {

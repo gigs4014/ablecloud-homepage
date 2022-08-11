@@ -50,6 +50,8 @@ module.exports = {
         "url('/images/new/product/ablestack/ablestackWall/ablestackWall-header-bg.svg')",
       'ablestack-works-header-bg':
         "url('/images/new/product/ablestack/ablestackWorks/ablestackWorks-header-bg.svg')",
+      'ablestack-station-header-bg':
+        "url('/images/new/product/ablestack/ablestackStation/ablestackStation-header-bg.svg')",
     },
     fontFamily: { sans: ['Noto Sans KR', ...defaultTheme.fontFamily.sans] },
     extend: {

@@ -2,12 +2,12 @@ import Image from 'next/image';
 
 import { ProductContent, ProductHeaderProps, ProductTemplate } from '@/templates';
 
-import Logo_Article_3_1 from '@/public/images/new/product/ablestack/ablestackBlock/article_3_1.svg';
 import Logo_Article_2_1 from '@/public/images/new/product/ablestack/ablestackGenie/article_2_1.png';
 import Logo_Article_4_1 from '@/public/images/new/product/ablestack/ablestackGenie/article_4_1.svg';
 import Logo_Article_4_2 from '@/public/images/new/product/ablestack/ablestackGenie/article_4_2.svg';
 import Logo_Article_4_3 from '@/public/images/new/product/ablestack/ablestackGenie/article_4_3.svg';
 import Logo_Article_4_4 from '@/public/images/new/product/ablestack/ablestackGenie/article_4_4.svg';
+import Logo_Article_3_1 from '@/public/images/new/product/ablestack/ablestackGlue/article_3_1.png';
 import Logo_Product_Default from '@/public/images/new/product_default.svg';
 
 const headerContent: ProductHeaderProps = {
@@ -31,7 +31,7 @@ export default function AblestackGeniePage() {
         className={'bg-backgroudGray'}
         title='Genie 애플리케이션 관리 기능과 이점'
         imagePosition='first'
-        image={<Logo_Article_3_1 />}>
+        image={<Image src={Logo_Article_3_1} />}>
         <ProductContent.Description
           contents={[
             {
