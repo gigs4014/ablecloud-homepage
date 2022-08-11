@@ -160,7 +160,7 @@ export const menuItems: Array<HeaderMenuItem> = [
   },
   {
     label: '성공사례',
-    href: '/appliance',
+    href: '/interview',
   },
   {
     label: '파트너',
@@ -208,7 +208,7 @@ export const footerMenus = [
       },
       {
         label: '-',
-        href: '/company',
+        href: '/solutions',
       },
     ],
   },
@@ -217,11 +217,11 @@ export const footerMenus = [
     subMenuItems: [
       {
         label: '-',
-        href: '/appliance',
+        href: '/interview',
       },
       {
         label: '-',
-        href: '/company',
+        href: '/interview',
       },
     ],
   },
