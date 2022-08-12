@@ -14,7 +14,7 @@ const SolutionContentRowCard = memo<SolutionContentBoxProps>(
   ({ title, image, description, className }) => {
     return (
       <Container.Card
-        hoverBehavoir={'none'}
+        hoverBehavoir={'scale'}
         className={`flex h-[115px] items-center justify-between border-none  shadow-none ${className}`}>
         <div className='mx-[15px] flex min-h-[80px] min-w-[90px] items-center justify-center'>
           {image}

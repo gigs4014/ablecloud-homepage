@@ -1,12 +1,9 @@
-import { useRef } from 'react';
+import Link from 'next/link';
 
 import { ReactNode } from '@mdx-js/react/lib';
 
-import { useScrollEvent } from '@/hooks/common';
-import { useMountEffect } from '@/hooks/utils';
-
-import { Button, CarouselRef, CustomLink, CustomSlider } from '@/components/common';
-import { HomeContent, HomeHeaderProps, HomeTemplate } from '@/templates';
+import { Button, CustomLink, CustomSlider } from '@/components/common';
+import { CommonDemoContent, HomeContent, HomeHeaderProps, HomeTemplate } from '@/templates';
 
 import Logo_Article_2_1 from '@/public/images/new/home/article_2_1.svg';
 import Logo_Article_2_2 from '@/public/images/new/home/article_2_2.svg';
@@ -20,7 +17,6 @@ import Logo_Article_4_2 from '@/public/images/new/home/article_4_2.svg';
 import Logo_Article_4_3 from '@/public/images/new/home/article_4_3.svg';
 import Logo_Article_4_4 from '@/public/images/new/home/article_4_4.svg';
 import Logo_Article_4_5 from '@/public/images/new/home/article_4_5.svg';
-import Logo_Product_Default from '@/public/images/new/product_default.svg';
 
 interface LogoData {
   title: string;
@@ -28,11 +24,46 @@ interface LogoData {
   href?: string;
 }
 
-const headerContent: HomeHeaderProps = {
-  title: '',
-  description: ``,
-  bgImage: 'bg-home-header-bg',
-};
+const headerContents: HomeHeaderProps[] = [
+  {
+    title: '',
+    description: ``,
+    bgImage: 'bg-home-header-bg',
+  },
+  {
+    title: 'ON Innovation 2023',
+    description: (
+      <p className={'m-0 p-0 text-[18px] font-[400] leading-[26.06px]'}>
+        빠르게 변화하는 IT인프라, 에이블클라우드는 이러한 변화속에서 대응할 수 있도록 본 행사를
+        개최합니다.
+        <br />
+        ON Innovation 2023은 차세대 디지털 전환에 대비한 국산 HCI 클라우드 및 가상 데스크톱, ICT
+        동향, 스마트 플랫폼,
+        <br />
+        스토리지 인프라, 업무 자동화 등의 IT 인프라 솔루션을 소개합니다.
+        <br />
+        본 행사를 통해 파트너분들을 위한 다양한 솔루션 및 제품에 대한 유용한 정보를 얻어가시길
+        바랍니다.
+        <br />
+        <br />
+        <br />
+        [부산] 2022.08.24(수) / [대구] 2022.08.25(목)
+        <br />
+        [대전] 2022.08.30(화) / [광주] 2022.09.01(목)
+      </p>
+    ),
+    bgImage: 'bg-home-header-bg-2',
+    headerExtra: (
+      <Link href={'https://www.ablestor.com/_app/view/landing/roadshow.php'} passHref>
+        <a target={'_blank'}>
+          <Button buttonStyle={'bordered'} className={'border-[#ffffff] text-[#ffffff]'}>
+            행사 자세히 알아보기
+          </Button>
+        </a>
+      </Link>
+    ),
+  },
+];
 
 const imageSliderSettings = {
   dots: false,
@@ -164,23 +195,9 @@ const logos: Array<LogoData> = [
 ];
 
 export default function HomePage() {
-  const carouselRef = useRef<CarouselRef>(null);
-
-  const { addScrollEvent } = useScrollEvent();
-
-  useMountEffect(() => {
-    if (carouselRef.current && carouselRef.current.elementRef.current) {
-      const carousel = carouselRef.current;
-      const carouselElement = carouselRef.current.elementRef.current;
-      return addScrollEvent('carousel auto scroll', carouselElement.offsetTop, () =>
-        carousel.startAutoScroll(),
-      );
-    }
-  });
-
   return (
     <>
-      <HomeTemplate {...headerContent}>
+      <HomeTemplate headerContents={headerContents}>
         <HomeContent
           title='SDDC를 실현하는 HCI 플랫폼'
           description={
@@ -193,38 +210,35 @@ export default function HomePage() {
             </p>
           }>
           <div className='mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3'>
-            <HomeContent.ItemGrid
-              containerClassName='border-borderGrayColor border-1'
-              title='단일 클라우드 플랫폼'
-              image={<Logo_Article_2_1 />}
-              linkText={
-                <CustomLink hoverBehavoir='none'>
-                  <span>에이블클라우드가 하는 일</span>
-                </CustomLink>
-              }
-            />
+            <CustomLink href={''}>
+              <HomeContent.ItemGrid
+                containerClassName='border-borderGrayColor border-1'
+                title='단일 클라우드 플랫폼'
+                image={<Logo_Article_2_1 />}
+                linkText={<span>에이블클라우드가 하는 일</span>}
+                hoverBehavoir={'scale'}
+              />
+            </CustomLink>
 
-            <HomeContent.ItemGrid
-              containerClassName='border-borderGrayColor border-1'
-              title='웹기반 통합 관리 플랫폼'
-              image={<Logo_Article_2_2 />}
-              linkText={
-                <CustomLink hoverBehavoir='none'>
-                  <span>자세히 알아보기</span>
-                </CustomLink>
-              }
-            />
+            <CustomLink href={''}>
+              <HomeContent.ItemGrid
+                containerClassName='border-borderGrayColor border-1'
+                title='웹기반 통합 관리 플랫폼'
+                image={<Logo_Article_2_2 />}
+                linkText={<span>자세히 알아보기</span>}
+                hoverBehavoir={'scale'}
+              />
+            </CustomLink>
 
-            <HomeContent.ItemGrid
-              containerClassName='border-borderGrayColor border-1'
-              title='새로운 개념의 데이터센터'
-              image={<Logo_Article_2_3 />}
-              linkText={
-                <CustomLink hoverBehavoir='none'>
-                  <span>지금 시작하기</span>
-                </CustomLink>
-              }
-            />
+            <CustomLink href={''}>
+              <HomeContent.ItemGrid
+                containerClassName='border-borderGrayColor border-1'
+                title='새로운 개념의 데이터센터'
+                image={<Logo_Article_2_3 />}
+                linkText={<span>지금 시작하기</span>}
+                hoverBehavoir={'scale'}
+              />
+            </CustomLink>
           </div>
         </HomeContent>
 
@@ -297,31 +311,7 @@ export default function HomePage() {
               에이블스택을 바로 사용해보세요.
             </p>
           }>
-          <div className={'grid w-full grid-cols-1 gap-[40px] md:grid-cols-2 lg:grid-cols-3'}>
-            <HomeContent.ActionCard
-              title={'Case Study'}
-              image={<Logo_Product_Default />}
-              description={'에이블스택을 최대로 활용하는 파트너사들의 케이스를 확인해보세요.'}
-              buttonTitle={'지금 시작하기'}
-              href={''}
-            />
-            <HomeContent.ActionCard
-              title={'데모 체험'}
-              image={<Logo_Product_Default />}
-              description={'에이블스택을 먼저 체험하고, 사용해보세요.'}
-              buttonTitle={'기술 지원 및 데모 요청'}
-              href={''}
-            />
-            <HomeContent.ActionCard
-              title={'전문가와 상담'}
-              image={<Logo_Product_Default />}
-              description={
-                '에이블스택 전문가와 직접 상담해보세요. 여러분에게 최적화된 솔루션 구축을 약속드려요.'
-              }
-              buttonTitle={'문의하러 가기'}
-              href={''}
-            />
-          </div>
+          <CommonDemoContent />
         </HomeContent>
         <HomeContent
           className={'bg-backgroundBlue text-white'}

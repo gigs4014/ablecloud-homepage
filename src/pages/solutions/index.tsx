@@ -25,7 +25,7 @@ const headerContent: SolutionHeaderProps = {
       ABLESTACK은 기업의 비즈니스 및 IT혁신을 위한 필수적인 솔루션입니다.
     </p>
   ),
-  bgImage: 'bg-backgroudGray',
+  bgImage: 'bg-[#FAFAFA]',
   image: <Logo_Article_1_1 />,
   textColor: 'text-black',
 };
@@ -271,7 +271,7 @@ export default function SolutionPage() {
               const { title, image, description, href } = solution;
 
               return (
-                <CustomLink key={uuid()} href={href} className={'w-full'}>
+                <CustomLink key={uuid()} href={href} hoverBehavoir='none' className={'w-full'}>
                   <SolutionContent.RowCard title={title} image={image} description={description} />
                 </CustomLink>
               );
@@ -292,7 +292,7 @@ export default function SolutionPage() {
             {partners.map(partner => {
               const { title, image, description, href } = partner;
               return (
-                <CustomLink key={uuid()} href={href} className={'w-full'}>
+                <CustomLink key={uuid()} href={href} hoverBehavoir='none' className={'w-full'}>
                   <SolutionContent.RowSmallCard
                     image={image}
                     title={title}

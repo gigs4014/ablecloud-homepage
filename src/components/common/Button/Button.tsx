@@ -36,7 +36,7 @@ export function BorderedButton(buttonProps: ButtonProps) {
   return (
     <button
       {...rest}
-      className={cls`self-center whitespace-nowrap rounded-md border-0.5 border-backgroundBlue py-2 px-10 font-[500] text-backgroundBlue ${className}`}>
+      className={cls`self-center whitespace-nowrap rounded-md border-0.5 border-backgroundBlue py-2 px-10 font-[500] text-backgroundBlue hover:scale-102 ${className}`}>
       {children}
     </button>
   );
@@ -48,7 +48,7 @@ export function SolidButton(buttonProps: ButtonProps) {
   return (
     <button
       {...rest}
-      className={cls`self-center whitespace-nowrap rounded-md bg-primary py-2 px-10  font-[500] text-white ${className}`}>
+      className={cls`self-center whitespace-nowrap rounded-md bg-primary py-2 px-10  font-[500] text-white hover:scale-102 ${className}`}>
       {children}
     </button>
   );

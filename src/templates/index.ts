@@ -1,3 +1,4 @@
+export * from './commonContents';
 export * from './company';
 export * from './home';
 export * from './interview';
