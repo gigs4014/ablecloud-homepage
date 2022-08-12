@@ -46,7 +46,7 @@ export function ActionCard({
         )}
 
         {buttonTitle && (
-          <CustomLink href={href} hoverBehavoir='none'>
+          <CustomLink href={href}>
             <Button className={'border-[#3281C4] text-[#3281C4]'} bordered>
               {buttonTitle}
             </Button>
@@ -137,7 +137,7 @@ export function RowSmallCard({
   image,
   description,
   containerClassName,
-  hoverBehavoir = 'none',
+  hoverBehavoir = 'scale',
 }: CardProps) {
   return (
     <Container.Card

@@ -1,11 +1,6 @@
-import { useRef } from 'react';
-
 import { ReactNode } from '@mdx-js/react/lib';
 
-import { useScrollEvent } from '@/hooks/common';
-import { useMountEffect } from '@/hooks/utils';
-
-import { Button, CarouselRef, CustomLink, CustomSlider } from '@/components/common';
+import { Button, CustomLink, CustomSlider } from '@/components/common';
 import { CommonDemoContent, HomeContent, HomeHeaderProps, HomeTemplate } from '@/templates';
 
 import Logo_Article_2_1 from '@/public/images/new/home/article_2_1.svg';
@@ -196,20 +191,6 @@ const logos: Array<LogoData> = [
 ];
 
 export default function HomePage() {
-  const carouselRef = useRef<CarouselRef>(null);
-
-  const { addScrollEvent } = useScrollEvent();
-
-  useMountEffect(() => {
-    if (carouselRef.current && carouselRef.current.elementRef.current) {
-      const carousel = carouselRef.current;
-      const carouselElement = carouselRef.current.elementRef.current;
-      return addScrollEvent('carousel auto scroll', carouselElement.offsetTop, () =>
-        carousel.startAutoScroll(),
-      );
-    }
-  });
-
   return (
     <>
       <HomeTemplate headerContents={headerContents}>
@@ -225,38 +206,35 @@ export default function HomePage() {
             </p>
           }>
           <div className='mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3'>
-            <HomeContent.ItemGrid
-              containerClassName='border-borderGrayColor border-1'
-              title='단일 클라우드 플랫폼'
-              image={<Logo_Article_2_1 />}
-              linkText={
-                <CustomLink hoverBehavoir='none'>
-                  <span>에이블클라우드가 하는 일</span>
-                </CustomLink>
-              }
-            />
+            <CustomLink href={''}>
+              <HomeContent.ItemGrid
+                containerClassName='border-borderGrayColor border-1'
+                title='단일 클라우드 플랫폼'
+                image={<Logo_Article_2_1 />}
+                linkText={<span>에이블클라우드가 하는 일</span>}
+                hoverBehavoir={'scale'}
+              />
+            </CustomLink>
 
-            <HomeContent.ItemGrid
-              containerClassName='border-borderGrayColor border-1'
-              title='웹기반 통합 관리 플랫폼'
-              image={<Logo_Article_2_2 />}
-              linkText={
-                <CustomLink hoverBehavoir='none'>
-                  <span>자세히 알아보기</span>
-                </CustomLink>
-              }
-            />
+            <CustomLink href={''}>
+              <HomeContent.ItemGrid
+                containerClassName='border-borderGrayColor border-1'
+                title='웹기반 통합 관리 플랫폼'
+                image={<Logo_Article_2_2 />}
+                linkText={<span>자세히 알아보기</span>}
+                hoverBehavoir={'scale'}
+              />
+            </CustomLink>
 
-            <HomeContent.ItemGrid
-              containerClassName='border-borderGrayColor border-1'
-              title='새로운 개념의 데이터센터'
-              image={<Logo_Article_2_3 />}
-              linkText={
-                <CustomLink hoverBehavoir='none'>
-                  <span>지금 시작하기</span>
-                </CustomLink>
-              }
-            />
+            <CustomLink href={''}>
+              <HomeContent.ItemGrid
+                containerClassName='border-borderGrayColor border-1'
+                title='새로운 개념의 데이터센터'
+                image={<Logo_Article_2_3 />}
+                linkText={<span>지금 시작하기</span>}
+                hoverBehavoir={'scale'}
+              />
+            </CustomLink>
           </div>
         </HomeContent>
 

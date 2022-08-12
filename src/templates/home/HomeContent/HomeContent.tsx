@@ -3,7 +3,7 @@ import { NamedExoticComponent, PropsWithChildren, ReactNode, memo } from 'react'
 import { BaseComponentProps } from '@/types';
 import { cls } from '@/utils';
 
-import { ActionCard, RowSummaryCard } from '@/components/common';
+import { RowSummaryCard } from '@/components/common';
 import { Container } from '@/components/layout';
 
 import HomeContentItemGrid from './HomeContentItemGrid';
@@ -41,14 +41,12 @@ const HomeContent = memo<PropsWithChildren<HomeContentProps>>(
     );
   },
 ) as NamedExoticComponent<PropsWithChildren<HomeContentProps>> & {
-  ActionCard: typeof ActionCard;
   RowSummaryCard: typeof RowSummaryCard;
   ItemGrid: typeof HomeContentItemGrid;
 };
 
 HomeContent.displayName = 'HomeContent';
 
-HomeContent.ActionCard = ActionCard;
 HomeContent.RowSummaryCard = RowSummaryCard;
 HomeContent.ItemGrid = HomeContentItemGrid;
 
