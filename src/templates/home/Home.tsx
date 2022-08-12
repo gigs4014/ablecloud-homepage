@@ -1,20 +1,20 @@
-import { PropsWithChildren } from 'react';
-
-import { v4 as uuid } from 'uuid';
-
-import { BaseComponentProps } from '@/types';
-
 import { CustomSlider } from '@/components/common';
 import { Container } from '@/components/layout';
-
+import { BaseComponentProps } from '@/types';
+import { PropsWithChildren } from 'react';
+import { v4 as uuid } from 'uuid';
 import HomeHeader, { HomeHeaderProps } from './HomeHeader';
+
+
+
+
 
 export interface HomeTemplateProps extends BaseComponentProps {
   enableProseSpacing?: boolean;
   headerContents: HomeHeaderProps[];
 }
 
-const imageSliderSettings = {
+const headerSliderSettings = {
   dots: false,
   infinite: true,
   slidesToShow: 1,
@@ -34,7 +34,7 @@ function HomeTemplate({
   return (
     <>
       <Container.Article enableProseSpacing={enableProseSpacing} className={className}>
-        <CustomSlider settingsOverrides={imageSliderSettings}>
+        <CustomSlider settingsOverrides={headerSliderSettings}>
           {headerContents.map(headerContent => (
             <HomeHeader key={uuid()} {...headerContent} />
           ))}
