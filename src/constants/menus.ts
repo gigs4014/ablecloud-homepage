@@ -117,47 +117,47 @@ export const menuItems: Array<HeaderMenuItem> = [
       },
     ],
   },
-  {
-    label: '솔루션',
-    subMenuItems: [
-      {
-        label: '프라이빗 클라우드',
-        href: '/solutions/private-cloud',
-      },
-      {
-        label: '하이브리드 클라우드',
-        href: '/solutions/hybrid-cloud',
-      },
-      {
-        label: '웹 애플리케이션',
-        href: '/solutions/webapp',
-      },
-      {
-        label: '빅데이터',
-        href: '/solutions/bigdata',
-      },
-      {
-        label: '영상감시',
-        href: '/solutions/monitoring',
-      },
-      {
-        label: 'IoT',
-        href: '/solutions/iot',
-      },
-      {
-        label: '엣지 컴퓨팅',
-        href: '/solutions/edge-computing',
-      },
-      {
-        label: '인공지능',
-        href: '/solutions/ai',
-      },
-      {
-        label: '최종 사용자 컴퓨팅',
-        href: '/solutions/euc',
-      },
-    ],
-  },
+  // {
+  //   label: '솔루션',
+  //   subMenuItems: [
+  //     {
+  //       label: '프라이빗 클라우드',
+  //       href: '/solutions/private-cloud',
+  //     },
+  //     {
+  //       label: '하이브리드 클라우드',
+  //       href: '/solutions/hybrid-cloud',
+  //     },
+  //     {
+  //       label: '웹 애플리케이션',
+  //       href: '/solutions/webapp',
+  //     },
+  //     {
+  //       label: '빅데이터',
+  //       href: '/solutions/bigdata',
+  //     },
+  //     {
+  //       label: '영상감시',
+  //       href: '/solutions/monitoring',
+  //     },
+  //     {
+  //       label: 'IoT',
+  //       href: '/solutions/iot',
+  //     },
+  //     {
+  //       label: '엣지 컴퓨팅',
+  //       href: '/solutions/edge-computing',
+  //     },
+  //     {
+  //       label: '인공지능',
+  //       href: '/solutions/ai',
+  //     },
+  //     {
+  //       label: '최종 사용자 컴퓨팅',
+  //       href: '/solutions/euc',
+  //     },
+  //   ],
+  // },
   {
     label: '성공사례',
     href: '/interview',
@@ -166,14 +166,14 @@ export const menuItems: Array<HeaderMenuItem> = [
     label: '파트너',
     href: '/partners',
   },
-  {
-    label: '제품문의',
-    href: '/company/contact',
-  },
-  {
-    label: 'Blog',
-    href: '/blog',
-  },
+  // {
+  //   label: '제품문의',
+  //   href: '/company/contact',
+  // },
+  // {
+  //   label: 'Blog',
+  //   href: '/blog',
+  // },
 ];
 
 export const footerMenus = [

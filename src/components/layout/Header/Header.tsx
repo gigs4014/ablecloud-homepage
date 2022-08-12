@@ -78,7 +78,7 @@ export default function Header() {
         }}
         className='group relative z-20 flex h-fit max-w-page-full flex-1 flex-col flex-nowrap '>
         {/* Main menu section */}
-        <section className='relative flex w-full items-center justify-between px-4'>
+        <section className='flex w-full items-center justify-between px-4'>
           {/* Logo */}
           <div className='px-4'>
             <CustomLink href='/'>
