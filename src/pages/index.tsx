@@ -28,11 +28,44 @@ interface LogoData {
   href?: string;
 }
 
-const headerContent: HomeHeaderProps = {
-  title: '',
-  description: ``,
-  bgImage: 'bg-home-header-bg',
-};
+const headerContents: HomeHeaderProps[] = [
+  {
+    title: '',
+    description: ``,
+    bgImage: 'bg-home-header-bg',
+  },
+  {
+    title: 'ON Innovation 2023',
+    description: (
+      <p className={'m-0 p-0 text-[18px] font-[400] leading-[26.06px]'}>
+        빠르게 변화하는 IT인프라, 에이블클라우드는 이러한 변화속에서 대응할 수 있도록 본 행사를
+        개최합니다.
+        <br />
+        ON Innovation 2023은 차세대 디지털 전환에 대비한 국산 HCI 클라우드 및 가상 데스크톱, ICT
+        동향, 스마트 플랫폼,
+        <br />
+        스토리지 인프라, 업무 자동화 등의 IT 인프라 솔루션을 소개합니다.
+        <br />
+        본 행사를 통해 파트너분들을 위한 다양한 솔루션 및 제품에 대한 유용한 정보를 얻어가시길
+        바랍니다.
+        <br />
+        <br />
+        <br />
+        [부산] 2022.08.24(수) / [대구] 2022.08.25(목)
+        <br />
+        [대전] 2022.08.30(화) / [광주] 2022.09.01(목)
+      </p>
+    ),
+    bgImage: 'bg-home-header-bg-2',
+    headerExtra: (
+      <a href={'https://www.ablestor.com/_app/view/landing/roadshow.php'} target={'_blank'}>
+        <Button buttonStyle={'bordered'} className={'border-[#ffffff] text-[#ffffff]'}>
+          행사 자세히 알아보기
+        </Button>
+      </a>
+    ),
+  },
+];
 
 const imageSliderSettings = {
   dots: false,
@@ -180,7 +213,7 @@ export default function HomePage() {
 
   return (
     <>
-      <HomeTemplate {...headerContent}>
+      <HomeTemplate headerContents={headerContents}>
         <HomeContent
           title='SDDC를 실현하는 HCI 플랫폼'
           description={
