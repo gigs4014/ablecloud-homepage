@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import { ReactNode } from '@mdx-js/react/lib';
 
 import { Button, CustomLink, CustomSlider } from '@/components/common';
@@ -52,11 +54,13 @@ const headerContents: HomeHeaderProps[] = [
     ),
     bgImage: 'bg-home-header-bg-2',
     headerExtra: (
-      <a href={'https://www.ablestor.com/_app/view/landing/roadshow.php'} target={'_blank'}>
-        <Button buttonStyle={'bordered'} className={'border-[#ffffff] text-[#ffffff]'}>
-          행사 자세히 알아보기
-        </Button>
-      </a>
+      <Link href={'https://www.ablestor.com/_app/view/landing/roadshow.php'} passHref>
+        <a target={'_blank'}>
+          <Button buttonStyle={'bordered'} className={'border-[#ffffff] text-[#ffffff]'}>
+            행사 자세히 알아보기
+          </Button>
+        </a>
+      </Link>
     ),
   },
 ];
