@@ -32,7 +32,7 @@ export function ActionCard({
     <Container.Card
       hoverBehavoir={hoverBehavoir}
       className={`border-borderGrayColor w-full border-1 ${containerClassName}`}>
-      {image && <div className='h-[218px] w-full'>{image}</div>}
+      {image && <div className='max-h-[218px] w-full'>{image}</div>}
 
       <div className={'flex flex-col justify-center px-[30px] pb-[40px] pt-[32px] text-center'}>
         <p className={'m-0 mb-6 p-0 text-[20px] font-[500] leading-[28.96px]'}>{title}</p>

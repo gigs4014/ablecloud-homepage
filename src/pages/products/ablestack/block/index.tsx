@@ -3,7 +3,12 @@ import React from 'react';
 import Image from 'next/image';
 
 import { SvgIcon } from '@/components/common';
-import { ProductContent, ProductHeaderProps, ProductTemplate } from '@/templates';
+import {
+  CommonDemoContent,
+  ProductContent,
+  ProductHeaderProps,
+  ProductTemplate,
+} from '@/templates';
 
 import Logo_Article_3_1 from '@/public/images/new/product/ablestack/ablestackBlock/article_3_1.png';
 
@@ -148,32 +153,7 @@ export default function AblestackBlockPage() {
       </ProductContent>
 
       <ProductContent className={'bg-backgroudGray'} title='최신 리소스 살펴보기'>
-        <div className={'grid grid-cols-1 gap-[40px] md:grid-cols-2 lg:grid-cols-3'}>
-          <ProductContent.ActionCard
-            title={'기술노트'}
-            image={<SvgIcon Svg={Logo_Product_Default} />}
-            description={`에이블스택을 좀더
-          자세하게 설명한 기술개요`}
-            buttonTitle={'지금 보러가기'}
-            href={''}
-          />
-          <ProductContent.ActionCard
-            title={'데모 체험'}
-            image={<SvgIcon Svg={Logo_Product_Default} />}
-            description={`에이블스택을 먼저 체험하고,
-          사용해보세요.`}
-            buttonTitle={'기술 지원 및 데모 요청'}
-            href={''}
-          />
-          <ProductContent.ActionCard
-            title={'전문가와 상담'}
-            image={<SvgIcon Svg={Logo_Product_Default} />}
-            description={`에이블스택 전문가와 직접 상담해보세요.
-          여러분에게 최적화된 솔루션 구축을 약속드려요.`}
-            buttonTitle={'문의하러 가기'}
-            href={''}
-          />
-        </div>
+        <CommonDemoContent />
       </ProductContent>
     </ProductTemplate>
   );
