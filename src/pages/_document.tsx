@@ -4,10 +4,6 @@ export default function CustomDocument() {
   return (
     <Html lang='ko'>
       <Head>
-        <link
-          href='https://fonts.googleapis.com/css2?family=Noto&display=optional'
-          rel='stylesheet'
-        />
         {/* filled icon */}
         <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet' />
         <link
