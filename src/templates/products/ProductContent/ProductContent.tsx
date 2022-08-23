@@ -1,25 +1,23 @@
-import {
-  NamedExoticComponent,
-  PropsWithChildren,
-  ReactNode,
-  memo,
-  useEffect,
-  useState,
-} from 'react';
-
-import { useMediaQuery } from 'react-responsive';
-
-import { BaseComponentProps } from '@/types';
-import { cls } from '@/utils';
-
 import { ActionCard, ItemCard, RowSmallCard, RowSummaryCard } from '@/components/common';
 import { Container } from '@/components/layout';
-
+import { BaseComponentProps } from '@/types';
+import { cls } from '@/utils';
+import {
+    memo, NamedExoticComponent,
+    PropsWithChildren,
+    ReactNode, useEffect,
+    useState
+} from 'react';
+import { useMediaQuery } from 'react-responsive';
 import ProductContentBox from './ProductContentBox';
 import ProductContentDescription from './ProductContentDescription';
 import ProductContentGoDetail from './ProductContentGoDetail';
 import ProductContentIntro from './ProductContentIntro';
 import ProductContentItemGrid from './ProductContentItemGrid';
+
+
+
+
 
 export interface ProductContentProps extends BaseComponentProps {
   title?: ReactNode;
@@ -39,7 +37,7 @@ const ProductContent = memo<PropsWithChildren<ProductContentProps>>(
     }, [bigScreen]);
 
     return (
-      <section className={cls`group relative flex w-full flex-col items-center pb-16 ${className}`}>
+      <section className={cls`group relative flex w-full flex-col items-center pb-16 overflow-hidden ${className}`}>
         {/* ::before */}
         {/* <div className='group-odd:absolute group-odd:inset-0 group-odd:-z-10 group-odd:-skew-y-2 group-odd:bg-slate-100' /> */}
 
