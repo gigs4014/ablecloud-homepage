@@ -57,6 +57,10 @@ const nextConfig = {
   },
 
   reactStrictMode: true,
+
+  typescript: {
+    ignoreBuildErrors: true,
+  }
 };
 
 module.exports = withPlugins(nextConfig, [withMDX, withDotenv]);
