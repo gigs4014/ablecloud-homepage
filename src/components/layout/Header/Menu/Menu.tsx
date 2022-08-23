@@ -155,9 +155,10 @@ export function SubMenu({ items, selectedItem, className }: SubMenuProps) {
   return (
     <div
       className={cls`fixed left-0  flex w-screen justify-center border-t-1 border-borderGray bg-white drop-shadow-lg `}>
-      <ul className={cls`grid w-page-full grid-cols-3 gap-[10px] py-[40px] ${className}`}>
+      <ul
+        className={cls`min-x-[1000px] flex h-[459px] min-h-[459px] w-[1000px] flex-col flex-wrap gap-x-[217px] py-[40px] ${className}`}>
         {items.map(item => (
-          <li key={uuid()}>
+          <li key={uuid()} className={item.type !== 'group' ? 'mb-[10px]' : ''}>
             <ul className='py-[8px] px-[16px] text-[16px] font-[500] '>
               {item.type === 'group' ? (
                 <>

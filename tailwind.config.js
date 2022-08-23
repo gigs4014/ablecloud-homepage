@@ -54,7 +54,7 @@ module.exports = {
       'ablestack-station-header-bg':
         "url('/images/new/product/ablestack/ablestackStation/ablestackStation-header-bg.svg')",
     },
-    fontFamily: { sans: ['Noto Sans KR', ...defaultTheme.fontFamily.sans] },
+    fontFamily: { sans: ['Noto Sans', 'SUIT'] },
     extend: {
       colors: {
         transparent: 'transparent',
@@ -70,6 +70,7 @@ module.exports = {
         borderGray: '#D4D4D4',
         backgroudGray: '#F6F7F9',
         backgroundBlue: '#71A6CE',
+        darkBlue: '#2151A2',
       },
       borderWidth: {
         1: '1px',
