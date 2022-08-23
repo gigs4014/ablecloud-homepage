@@ -113,7 +113,7 @@ export default function PartnersPage() {
                   setActiveTabIndex(Number(e.target.value));
                 }}>
                 {partnerItems.map((item, key) => (
-                  <option id={`${key}-tab`} value={key}>
+                  <option id={`${key}-tab`} value={key} key={key}>
                     {item.title}
                   </option>
                 ))}
@@ -140,9 +140,9 @@ export default function PartnersPage() {
           <div className='mt-8 grid grid-cols-1 gap-[5px] md:grid-cols-2 lg:grid-cols-4'>
             <>
               {partnerItems[activeTabIndex] &&
-                partnerItems[activeTabIndex].subItems.map(item => (
+                partnerItems[activeTabIndex].subItems.map((item, i) => (
                   <>
-                    <PartnerContent.LogoBox title={item.name} image={item.src} />
+                    <PartnerContent.LogoBox title={item.name} image={item.src} key={i} />
                   </>
                 ))}
             </>
