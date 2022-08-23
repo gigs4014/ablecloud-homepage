@@ -1,9 +1,10 @@
+import { useState } from 'react';
+
+import { partnerItems } from '@/constants/partners';
+
 import { PartnerContent, PartnerHeaderProps, PartnerTemplate } from '@/templates';
 
 import Logo_Article_1_1 from '@/public/images/new/partner/article_1_1.svg';
-import Logo_Article_4_1 from '@/public/images/new/partner/article_4_1.svg';
-import Logo_Article_4_2 from '@/public/images/new/partner/article_4_2.svg';
-import Logo_Article_4_3 from '@/public/images/new/partner/article_4_3.svg';
 
 const headerContent: PartnerHeaderProps = {
   title: '파트너',
@@ -23,6 +24,8 @@ const headerContent: PartnerHeaderProps = {
 };
 
 export default function PartnersPage() {
+  const [activeTabIndex, setActiveTabIndex] = useState(0);
+
   return (
     <>
       <PartnerTemplate {...headerContent}>
@@ -31,48 +34,118 @@ export default function PartnersPage() {
           title='함께 성공하는 미래'
           description={`에이블클라우드는 고객은 물론 파트너도 만족할 수 있는 진정한 파트너십을 제공하기 위해 최선을 다합니다.
 파트너의 권익을 위한 다양한 프로그램 지원을 통해 지속 성장하도록 돕겠습니다.`}>
-          <div className='mt-8 grid grid-cols-1 gap-[40px] md:grid-cols-2 lg:grid-cols-2'>
+          <div className='mt-8 grid h-full grid-cols-1 gap-[15px] md:h-full md:grid-cols-1 lg:h-[300px] lg:grid-cols-3'>
             <PartnerContent.Description
               title='판매/기술지원 파트너'
-              description={`ABLESTACK을 고객에게 소개하고, 비즈니스를 창출하며,
-제품을 고객 사이트에 배포하고, 종합적인 지원서비스를 제공하는 파트너입니다.
-전담 영업 조직 및 기술지원 조직을 운영하며,
-ABLECLOUD와 모든 분야에서 긴밀하게 협업하는 파트너입니다.`}
+              description={`ABLESTACK을 고객에게 소개하고,
+              비즈니스를 창출하며,
+              제품을 고객 사이트에 배포하고,
+              종합적인 지원서비스를 제공하는 파트너입니다.
+              전담 영업 조직 및 기술지원 조직을 운영하며,
+              ABLECLOUD와 모든 분야에서 긴밀하게
+              협업하는 파트너입니다.`}
             />
             <PartnerContent.Description
-              title='기술제휴 파트너'
-              description={`ABLESTACK에서 실행되는 엔터프라이즈 애플리케이션에 대한
-              배포, 테스트, 사용자 지원 등을 담당하는 파트너입니다.
-              ABLESTACK 상에서 써드파티로 실행되는 애플리케이션 중
-              분야별 플랫폼에 대한 전문적인 기술지원 및 상용화 과정을 지원합니다.`}
+              title='솔루션 파트너'
+              description={`ABLESTACK을 인프라로 하여 
+              고객에게 필요한 애플리케이션을 제공하는
+              파트너로서 빅데이터, 가상데스크톱,
+              영상감시, 데이터베이스 등을 검증된
+              아키텍처를 통해 최적의 상태로
+              고객에게 통합하여 턴키로 제공합니다.`}
             />
             <PartnerContent.Description
-              title='SI 파트너'
-              description={`고객사에 프로젝트 단위로 제공하는 파트너입니다.
-              공공 및 기업의 대규모 프로젝트를 수행하며,
-              이 때 필요한 인프라를 ABLESTACK으로 도입하는 것을 중점적으로 고려합니다.
-              구축이 완료된 후에도 지속적으로 고객에게 관리 서비스를 제공합니다.`}
-            />
-            <PartnerContent.Description
-              title='교육 및 컨설팅 파트너'
-              description={`가상화 및 클라우드, 빅데이터와 관련된 프로젝트를 수행하기 위한
-              타당성 조사 및 전략 계획의 수립 컨설팅을 수행합니다. 
-              ABLESTACK을 기반으로 구성되는 클라우드 환경을 고객에게 컨설팅하고,
-              ABLESTACK에 대한 클라우드 관점에서의 교육 서비스를 제공합니다.
-              `}
+              title='하드웨어 파트너'
+              description={`ABLESTACK을 설치하고 운영하기 위한
+              x86 서버 제품 및 블록 및 백업 스토리지를
+              제공하는 파트너로, ABLESTACK의
+              철저한 검증을 거쳐 최적의 아키텍처를
+              제공하고, 안정적인 가상화 환경을 제공하기
+              위한 서버, 스토리지, 네트워크 파트너입니다.`}
             />
           </div>
         </PartnerContent>
-        <PartnerContent title='에이블클라우드와 제휴해야 하는 이유'></PartnerContent>
+        <PartnerContent title='에이블클라우드와 제휴해야 하는 이유'>
+          <div className='mt-8 grid h-full grid-cols-1 gap-[15px] md:h-full md:grid-cols-1 lg:h-[300px] lg:grid-cols-3'>
+            <PartnerContent.Description
+              title='더 빠른 파트너 지원'
+              description={`파트너가 즉시 적용할 수 있는
+              판매, 사이징, 마케팅 도구를 제공하고
+              더욱 빠른 파트너 지원을 통해
+              고객에게 가상화/클라우드 플랫폼을
+              안정적으로 제공할 수 있는 
+              영업적/기술적 지원을 보장합니다.`}
+            />
+            <PartnerContent.Description
+              title='지속 가능한 비즈니스 공유'
+              description={`파트너와 함께 지속 가능한 
+              비즈니스 모델을 발굴하고
+              발굴된 비즈니스 기회를 파트너에게
+              우선적으로 공유하여
+              제품의 판매 및 수익이 지속적으로
+              창출되도록 합니다.`}
+            />
+            <PartnerContent.Description
+              title='탁월한 에코플랫폼'
+              description={`ABLESTACK을 기반으로
+              검증된 애플리케이션 및 
+              하드웨어 제품을 에코 플랫폼으로 
+              제공하여 고객이 원하는 IT 환경을
+              인프라 레벨에서 애플리케이션 레벨까지
+              턴키로 제공함으로써
+              파터너의 매출 및 이익을 극대화 합니다.`}
+            />
+          </div>
+        </PartnerContent>
         <PartnerContent
           className={'bg-backgroudGray'}
           title='함께하는 파트너'
           description={`현재 에이블클라우드와 함께하고 있는 파트너 입니다.`}>
-          <div className='mt-8 grid grid-cols-1 gap-[100px] md:grid-cols-2 lg:grid-cols-4'>
-            <PartnerContent.LogoBox title={'(주)조인트리'} image={<Logo_Article_4_1 />} />
-            <PartnerContent.LogoBox title={'(주)지엔텔'} image={<Logo_Article_4_2 />} />
-            <PartnerContent.LogoBox title={'(주)지오멕스소프트'} image={<Logo_Article_4_3 />} />
-            <PartnerContent.LogoBox title={'(주)가시'} image={<Logo_Article_4_3 />} />
+          <div className='flex w-full flex-row items-center justify-center gap-[20px]'>
+            <div className='lg:hidden'>
+              <label htmlFor='tabs' className='sr-only'>
+                Select your category
+              </label>
+              <select
+                id='tabs'
+                className='block w-full min-w-[344px] rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500 sm:text-sm md:min-w-[470px]'
+                onChange={e => {
+                  setActiveTabIndex(Number(e.target.value));
+                }}>
+                {partnerItems.map((item, key) => (
+                  <option id={`${key}-tab`} value={key}>
+                    {item.title}
+                  </option>
+                ))}
+              </select>
+            </div>
+            <ul className={'-mb-px hidden text-center text-sm font-medium lg:flex'}>
+              {partnerItems.map((item, key) => (
+                <li className={'mr-2'} role={'presentation'}>
+                  <button
+                    id={`${key}-tab`}
+                    className={`h-[48px] w-[240px] rounded-lg border-neutral-300 ${
+                      activeTabIndex === key
+                        ? `border-0 bg-darkBlue text-white`
+                        : `border-1 bg-white`
+                    }`}
+                    type={'button'}
+                    onClick={() => setActiveTabIndex(key)}>
+                    {item.title}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className='mt-8 grid grid-cols-1 gap-[5px] md:grid-cols-2 lg:grid-cols-4'>
+            <>
+              {partnerItems[activeTabIndex] &&
+                partnerItems[activeTabIndex].subItems.map(item => (
+                  <>
+                    <PartnerContent.LogoBox title={item.name} image={item.src} />
+                  </>
+                ))}
+            </>
           </div>
         </PartnerContent>
       </PartnerTemplate>

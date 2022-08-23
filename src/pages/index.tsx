@@ -26,11 +26,6 @@ interface LogoData {
 
 const headerContents: HomeHeaderProps[] = [
   {
-    title: '',
-    description: ``,
-    bgImage: 'bg-home-header-bg',
-  },
-  {
     title: 'ON Innovation 2023',
     description: (
       <p className={'m-0 p-0 text-[18px] font-[400] leading-[26.06px]'}>
@@ -56,12 +51,17 @@ const headerContents: HomeHeaderProps[] = [
     headerExtra: (
       <Link href={'https://www.ablestor.com/_app/view/landing/roadshow.php'} passHref>
         <a target={'_blank'}>
-          <Button buttonStyle={'bordered'} className={'border-[#ffffff] text-[#ffffff]'}>
+          <Button className={'border-[1px] border-[white] bg-transparent text-[white]'}>
             행사 자세히 알아보기
           </Button>
         </a>
       </Link>
     ),
+  },
+  {
+    title: '',
+    description: ``,
+    bgImage: 'bg-home-header-bg',
   },
 ];
 

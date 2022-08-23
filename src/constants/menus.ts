@@ -158,10 +158,10 @@ export const menuItems: Array<HeaderMenuItem> = [
   //     },
   //   ],
   // },
-  {
-    label: '성공사례',
-    href: '/interview',
-  },
+  // {
+  //   label: '성공사례',
+  //   href: '/interview',
+  // },
   {
     label: '파트너',
     href: '/partners',
@@ -199,32 +199,32 @@ export const footerMenus = [
       },
     ],
   },
-  {
-    label: '솔루션',
-    subMenuItems: [
-      {
-        label: '-',
-        href: '/solutions',
-      },
-      {
-        label: '-',
-        href: '/solutions',
-      },
-    ],
-  },
-  {
-    label: '성공사례',
-    subMenuItems: [
-      {
-        label: '-',
-        href: '/interview',
-      },
-      {
-        label: '-',
-        href: '/interview',
-      },
-    ],
-  },
+  // {
+  //   label: '솔루션',
+  //   subMenuItems: [
+  //     {
+  //       label: '-',
+  //       href: '/solutions',
+  //     },
+  //     {
+  //       label: '-',
+  //       href: '/solutions',
+  //     },
+  //   ],
+  // },
+  // {
+  //   label: '성공사례',
+  //   subMenuItems: [
+  //     {
+  //       label: '-',
+  //       href: '/interview',
+  //     },
+  //     {
+  //       label: '-',
+  //       href: '/interview',
+  //     },
+  //   ],
+  // },
   {
     label: '파트너',
     subMenuItems: [
