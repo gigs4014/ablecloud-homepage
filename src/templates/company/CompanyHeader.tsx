@@ -17,7 +17,7 @@ export default function CompanyHeader({
 }: CompanyHeaderProps) {
   return (
     <header
-      className={cls`relative flex h-[560px] w-full items-center justify-center bg-cover py-16 ${bgImage} ${className}`}>
+      className={cls`sm:px-50 md:px-50 relative flex h-[560px] w-full items-center justify-center bg-cover py-16 ${bgImage} ${className}`}>
       <div className='flex w-full max-w-page-full items-center space-x-8'>
         {/* info */}
         <section>
