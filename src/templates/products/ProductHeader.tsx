@@ -51,7 +51,7 @@ export default function ProductHeader({
       <div
         className={`flex ${
           isCurrentScrollTop ? 'mt-[100px]' : 'mt-[20px]'
-        } max-w-page-full items-center space-x-8 px-8`}>
+        } max-w-page-full items-center px-8`}>
         {imagePosition === 'first' && (
           <section className='hidden w-1/2 items-center justify-center overflow-visible md:flex lg:flex'>
             {image}

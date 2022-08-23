@@ -1,23 +1,25 @@
-import { ActionCard, ItemCard, RowSmallCard, RowSummaryCard } from '@/components/common';
-import { Container } from '@/components/layout';
+import {
+  NamedExoticComponent,
+  PropsWithChildren,
+  ReactNode,
+  memo,
+  useEffect,
+  useState,
+} from 'react';
+
+import { useMediaQuery } from 'react-responsive';
+
 import { BaseComponentProps } from '@/types';
 import { cls } from '@/utils';
-import {
-    memo, NamedExoticComponent,
-    PropsWithChildren,
-    ReactNode, useEffect,
-    useState
-} from 'react';
-import { useMediaQuery } from 'react-responsive';
+
+import { ActionCard, ItemCard, RowSmallCard, RowSummaryCard } from '@/components/common';
+import { Container } from '@/components/layout';
+
 import ProductContentBox from './ProductContentBox';
 import ProductContentDescription from './ProductContentDescription';
 import ProductContentGoDetail from './ProductContentGoDetail';
 import ProductContentIntro from './ProductContentIntro';
 import ProductContentItemGrid from './ProductContentItemGrid';
-
-
-
-
 
 export interface ProductContentProps extends BaseComponentProps {
   title?: ReactNode;
@@ -37,7 +39,8 @@ const ProductContent = memo<PropsWithChildren<ProductContentProps>>(
     }, [bigScreen]);
 
     return (
-      <section className={cls`group relative flex w-full flex-col items-center pb-16 overflow-hidden ${className}`}>
+      <section
+        className={cls`group relative flex w-full flex-col items-center overflow-hidden pb-16 ${className}`}>
         {/* ::before */}
         {/* <div className='group-odd:absolute group-odd:inset-0 group-odd:-z-10 group-odd:-skew-y-2 group-odd:bg-slate-100' /> */}
 
@@ -59,7 +62,7 @@ const ProductContent = memo<PropsWithChildren<ProductContentProps>>(
             )}
           </header>
           {image ? (
-            <section className='flex w-full items-center justify-between space-x-8'>
+            <section className='flex w-full items-center justify-between'>
               {imagePosition === 'first' && (
                 <div
                   className={`${
