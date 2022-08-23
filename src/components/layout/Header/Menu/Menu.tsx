@@ -65,6 +65,7 @@ export function MobileMenuItem({
           {subMenuItems && (
             <button
               className={cls`transition-transform icon-[expand_more] ${focused && 'rotate-180'}`}
+              style={{ zIndex: -9999 }}
               onClick={() => setIsSubMenuOpen(isSubMenuOpen => !isSubMenuOpen)}
             />
           )}
