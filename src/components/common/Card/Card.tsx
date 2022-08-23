@@ -115,7 +115,7 @@ export function RowSummaryCard({
   return (
     <Container.Card
       hoverBehavoir={hoverBehavoir}
-      className={`flex h-[144px]  items-center justify-start border-0.5 border-gray-200 py-[20px] px-[32px] shadow-none ${containerClassName}`}>
+      className={`flex h-full items-center justify-start border-0.5 border-gray-200 py-[20px] px-[32px] shadow-none ${containerClassName}`}>
       {image && (
         <div className='flex min-h-[108px] min-w-[100px] items-center justify-center'>{image}</div>
       )}
