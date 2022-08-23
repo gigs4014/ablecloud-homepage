@@ -58,11 +58,11 @@ const headerContents: HomeHeaderProps[] = [
       </Link>
     ),
   },
-  {
-    title: '',
-    description: ``,
-    bgImage: 'bg-home-header-bg',
-  },
+  // {
+  //   title: '',
+  //   description: ``,
+  //   bgImage: 'bg-home-header-bg',
+  // },
 ];
 
 const imageSliderSettings = {

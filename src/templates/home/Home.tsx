@@ -4,7 +4,6 @@ import { v4 as uuid } from 'uuid';
 
 import { BaseComponentProps } from '@/types';
 
-import { CustomSlider } from '@/components/common';
 import { Container } from '@/components/layout';
 
 import HomeHeader, { HomeHeaderProps } from './HomeHeader';
@@ -34,11 +33,11 @@ function HomeTemplate({
   return (
     <>
       <Container.Article enableProseSpacing={enableProseSpacing} className={className}>
-        <CustomSlider settingsOverrides={headerSliderSettings}>
-          {headerContents.map(headerContent => (
-            <HomeHeader key={uuid()} {...headerContent} />
-          ))}
-        </CustomSlider>
+        {/* <CustomSlider settingsOverrides={headerSliderSettings}> */}
+        {headerContents.map(headerContent => (
+          <HomeHeader key={uuid()} {...headerContent} />
+        ))}
+        {/* </CustomSlider> */}
 
         {children}
       </Container.Article>
