@@ -113,7 +113,7 @@ export default function PartnersPage() {
                   setActiveTabIndex(Number(e.target.value));
                 }}>
                 {partnerItems.map((item, key) => (
-                  <option id={`${key}-tab`} value={key}>
+                  <option id={`${key}-tab`} value={key} key={key}>
                     {item.title}
                   </option>
                 ))}
@@ -121,7 +121,7 @@ export default function PartnersPage() {
             </div>
             <ul className={'-mb-px hidden text-center text-sm font-medium lg:flex'}>
               {partnerItems.map((item, key) => (
-                <li className={'mr-2'} role={'presentation'}>
+                <li className={'mr-2'} role={'presentation'} key={key}>
                   <button
                     id={`${key}-tab`}
                     className={`h-[48px] w-[240px] rounded-lg border-neutral-300 ${
@@ -140,9 +140,9 @@ export default function PartnersPage() {
           <div className='mt-8 grid grid-cols-1 gap-[5px] md:grid-cols-2 lg:grid-cols-4'>
             <>
               {partnerItems[activeTabIndex] &&
-                partnerItems[activeTabIndex].subItems.map(item => (
+                partnerItems[activeTabIndex].subItems.map((item, i) => (
                   <>
-                    <PartnerContent.LogoBox title={item.name} image={item.src} />
+                    <PartnerContent.LogoBox title={item.name} image={item.src} key={i} />
                   </>
                 ))}
             </>

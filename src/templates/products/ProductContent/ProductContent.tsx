@@ -39,7 +39,8 @@ const ProductContent = memo<PropsWithChildren<ProductContentProps>>(
     }, [bigScreen]);
 
     return (
-      <section className={cls`group relative flex w-full flex-col items-center pb-16 ${className}`}>
+      <section
+        className={cls`group relative flex w-full flex-col items-center overflow-hidden pb-16 ${className}`}>
         {/* ::before */}
         {/* <div className='group-odd:absolute group-odd:inset-0 group-odd:-z-10 group-odd:-skew-y-2 group-odd:bg-slate-100' /> */}
 
@@ -61,7 +62,7 @@ const ProductContent = memo<PropsWithChildren<ProductContentProps>>(
             )}
           </header>
           {image ? (
-            <section className='flex w-full items-center justify-between space-x-8'>
+            <section className='flex w-full items-center justify-between'>
               {imagePosition === 'first' && (
                 <div
                   className={`${

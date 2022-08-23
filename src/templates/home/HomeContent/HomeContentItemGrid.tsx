@@ -25,7 +25,7 @@ const HomeContentItemGrid = memo(
     return (
       <Container.Card
         hoverBehavoir={hoverBehavoir}
-        className={`h-full pt-[35px] pb-[58px] text-center  shadow-none md:px-[16px] lg:px-[16px] ${containerClassName}`}>
+        className={`h-full px-[16px] pt-[35px] pb-[58px] text-center shadow-none ${containerClassName}`}>
         <div className={'mb-6 text-xl'}>{title}</div>
 
         <div className='flex h-[257px] items-center justify-center'>{image}</div>

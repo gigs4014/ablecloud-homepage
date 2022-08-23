@@ -1,9 +1,9 @@
-import { NamedExoticComponent, PropsWithChildren, ReactNode, memo } from 'react';
-
+import { Container } from '@/components/layout';
 import { BaseComponentProps } from '@/types';
 import { cls } from '@/utils';
+import { memo, NamedExoticComponent, PropsWithChildren, ReactNode } from 'react';
 
-import { Container } from '@/components/layout';
+
 
 export interface InterViewContentProps extends BaseComponentProps {
   title?: ReactNode;
@@ -13,7 +13,7 @@ export interface InterViewContentProps extends BaseComponentProps {
 const InterViewContent = memo<PropsWithChildren<InterViewContentProps>>(
   ({ title, description, className, children }) => {
     return (
-      <section className={cls`group relative flex w-full flex-col items-center pb-16 ${className}`}>
+      <section className={cls`group relative flex w-full flex-col items-center pb-16 overflow-hidden ${className}`}>
         <Container.PageWidth>
           <header className='flex flex-col items-center px-8 text-center'>
             {typeof title === 'string' ? (
