@@ -113,7 +113,7 @@ export default function CompanyPage() {
         </CompanyContent>
 
         <CompanyContent title={'History'}>
-          <div className={'flex justify-between px-[210px]'}>
+          <div className={'flex justify-between lg:px-[210px]'}>
             <div className={'w-[190px] text-left'}>
               <p className={'text-[24px] font-[700] leading-[34.75px]'}>2021</p>
               <p className={'text-[18px] font-[400] leading-[26.06px]'}>에이블클라우드의 출발</p>
@@ -135,7 +135,8 @@ export default function CompanyPage() {
               </p>
             </div>
           </div>
-          <div className={'grid grid-cols-2 gap-[16px] px-[170px] md:grid-cols-3 lg:grid-cols-6'}>
+          <div
+            className={'grid grid-cols-2 gap-[16px] md:grid-cols-3 lg:grid-cols-6 lg:px-[170px]'}>
             <CompanyContent.SmallCard
               className={`bg-[#83D1FF]`}
               value={'1'}
