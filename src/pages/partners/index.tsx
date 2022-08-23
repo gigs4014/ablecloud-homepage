@@ -121,7 +121,7 @@ export default function PartnersPage() {
             </div>
             <ul className={'-mb-px hidden text-center text-sm font-medium lg:flex'}>
               {partnerItems.map((item, key) => (
-                <li className={'mr-2'} role={'presentation'}>
+                <li className={'mr-2'} role={'presentation'} key={key}>
                   <button
                     id={`${key}-tab`}
                     className={`h-[48px] w-[240px] rounded-lg border-neutral-300 ${
