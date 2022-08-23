@@ -70,6 +70,7 @@ module.exports = {
         borderGray: '#D4D4D4',
         backgroudGray: '#F6F7F9',
         backgroundBlue: '#71A6CE',
+        darkBlue: '#2151A2',
       },
       borderWidth: {
         1: '1px',
