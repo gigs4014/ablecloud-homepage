@@ -1,3 +1,4 @@
+import { Dirent } from 'fs';
 import fs from 'fs/promises';
 import { serialize } from 'next-mdx-remote/serialize';
 import path from 'path';
@@ -24,6 +25,10 @@ export async function isCategoryDir(dirPath: string[]) {
   }
 }
 
+function isMdxFile(dirent: Dirent) {
+  return POST_EXT_REGEX.test(dirent.name);
+}
+
 export async function getStructuredPostPaths(
   basePath: string[] = [],
 ): Promise<RecursiveStructure<string, undefined>> {
@@ -35,7 +40,7 @@ export async function getStructuredPostPaths(
     for await (const dirent of dir) {
       if (dirent.isDirectory()) {
         structuredFilePaths[dirent.name] = await getStructuredPostPaths([...basePath, dirent.name]);
-      } else if (dirent.isFile()) {
+      } else if (isMdxFile(dirent)) {
         // remove extension
         const filename = dirent.name.replace(POST_EXT_REGEX, '');
         structuredFilePaths[filename] = undefined;
@@ -98,10 +103,8 @@ export async function getPostPaths(basePath: string[] = []): Promise<string[][]>
       if (dirent.isDirectory()) {
         const subFilePaths = await getPostPaths([...basePath, dirent.name]);
         filePaths.push(...subFilePaths);
-      } else if (dirent.isFile()) {
-        // remove extension
-        const filename = dirent.name.replace(POST_EXT_REGEX, '');
-        filePaths.push([...basePath, filename]);
+      } else if (isMdxFile(dirent)) {
+        filePaths.push([...basePath, dirent.name.replace(POST_EXT_REGEX, '')]);
       }
     }
   } catch (err) {
@@ -182,7 +185,7 @@ export async function getPosts(basePath: string[]): Promise<Post[]> {
     for await (const dirent of dir) {
       if (dirent.isDirectory()) {
         posts.push(...(await getPosts([...basePath, dirent.name])));
-      } else if (dirent.isFile()) {
+      } else if (isMdxFile(dirent)) {
         posts.push(await getPost(dirent.name.replace(POST_EXT_REGEX, ''), basePath));
       }
     }
