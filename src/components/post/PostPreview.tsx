@@ -14,7 +14,7 @@ function PostPreview({ post, className }: PostPreviewProps) {
     <PostContextProvider value={post}>
       <Container.Card className={className}>
         <figure className='mb-4 bg-gray-200'>
-          <AspectRatioImage src={post.header?.image_fullwidth ?? '/'} height={256} />
+          <AspectRatioImage src={post.header?.thumbnail ?? '/'} height={256} />
         </figure>
 
         <div className='p-3'>

@@ -144,6 +144,8 @@ export async function getPost(slug: string, basePath: string[]): Promise<Post> {
     const {
       title = 'Untitled',
       author = '',
+      subtitle = '',
+      thumbnail = '',
       tags = [],
       createdAt,
       updatedAt,
@@ -163,6 +165,11 @@ export async function getPost(slug: string, basePath: string[]): Promise<Post> {
         type: 'article',
         image: '',
         url: `${process.env.HOST_URL}/${basePath.join('/')}/${slug}`,
+      },
+      header: {
+        title,
+        subtitle,
+        thumbnail,
       },
       content,
       frontmatter: content.frontmatter ?? {},

@@ -4,7 +4,7 @@ import Head from 'next/head';
 import { getPosts } from '@/helpers/post';
 import { BasePageProps, Post } from '@/types';
 
-import { CustomLink } from '@/components/common';
+import { AspectRatioImage, CustomLink } from '@/components/common';
 import { Container } from '@/components/layout';
 
 interface StoryHomePageProps extends BasePageProps {
@@ -28,15 +28,16 @@ export default function StoryHomePage({ stories }: StoryHomePageProps) {
         <Container.PageWidth>
           <ul className='grid grid-cols-1 gap-8 md:grid-cols-2'>
             {stories.map(
-              (
-                { title, categories, slug, tags = [], frontmatter: { subtitle, thumbnail } = {} },
-                index,
-              ) => (
+              ({ title, categories, slug, tags = [], header: { subtitle, thumbnail } }, index) => (
                 <li key={index}>
                   <CustomLink href={[...categories, slug].join('/')} hoverBehavoir='none'>
                     <Container.Card className='flex h-full flex-col'>
                       {/* image placeholder */}
-                      <div className='h-64 w-full bg-slate-200' />
+                      {thumbnail ? (
+                        <AspectRatioImage src={thumbnail} height={256} />
+                      ) : (
+                        <div className='h-64 w-full bg-slate-200' />
+                      )}
 
                       <section className='flex flex-1 flex-col justify-between p-3 text-left'>
                         <div>

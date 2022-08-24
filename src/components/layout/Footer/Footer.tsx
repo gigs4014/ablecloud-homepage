@@ -43,6 +43,10 @@ export default function Footer() {
         <Logo_ablecloud_gray />
 
         <div className='flex space-x-4 text-xs text-neutral-500'>
+          <span>서비스 이용약관</span>
+
+          <span>개인정보 처리방침</span>
+
           <span>주소</span>
 
           <ul className='flex space-x-1'>

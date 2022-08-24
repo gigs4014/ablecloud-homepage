@@ -16,6 +16,8 @@ declare type FrontmatterObject = {
 
 export type PostFrontmatter = FrontmatterObject & {
   title?: string;
+  subtitle?: string;
+  thumbnail?: string;
   author?: string;
   tags?: string[];
   /**
@@ -38,9 +40,10 @@ export interface Post {
   teaser?: string;
   categories: string[];
   tags?: string[];
-  header?: {
+  header: {
     title: string;
-    image_fullwidth: string;
+    subtitle: string;
+    thumbnail?: string;
   };
   author?: string;
   /**
