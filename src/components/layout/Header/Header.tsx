@@ -145,7 +145,7 @@ export default function Header() {
               unCheckedChildren={<Sun className='h-full w-full fill-slate-100' />}
             />
 
-            <CustomLink href='/demo' hoverBehavoir='none'>
+            <CustomLink href='/demo' hoverBehavior='none'>
               <Button>데모 요청하기</Button>
             </CustomLink>
           </div> */}

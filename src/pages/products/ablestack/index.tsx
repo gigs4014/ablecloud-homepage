@@ -89,7 +89,7 @@ export default function AblestackPage() {
         description={`복잡한 구조의 전통적 기업 데이터센터의 문제점을 해결하고, IT 환경의 급속한 발전으로 인해 발생하는 문제점을 해결하기 위해
 단일 서버 구성으로 모든 인프라와 플랫폼을 실행할 수 있도록 고안된 HCI 플랫폼 입니다.`}>
         <div className={'flex w-full justify-center'}>
-          <CustomLink href='/products' hoverBehavoir='none'>
+          <CustomLink href='/products' hoverBehavior='none'>
             <Button solid>개요 보러가기</Button>
           </CustomLink>
         </div>
@@ -106,7 +106,7 @@ export default function AblestackPage() {
           }
         />
         <div className='flex gap-[10px]'>
-          <CustomLink href='/products/ablestack/glue' hoverBehavoir='none' className={'w-full'}>
+          <CustomLink href='/products/ablestack/glue' hoverBehavior='none' className={'w-full'}>
             <ProductContent.RowSmallCard
               containerClassName={'bg-[#EEF4FB]'}
               title={'Glue'}
@@ -115,7 +115,7 @@ export default function AblestackPage() {
             />
           </CustomLink>
 
-          <CustomLink href='/products/ablestack/cell' hoverBehavoir='none' className={'w-full'}>
+          <CustomLink href='/products/ablestack/cell' hoverBehavior='none' className={'w-full'}>
             <ProductContent.RowSmallCard
               containerClassName={'bg-[#EEF4FB]'}
               title={'Cell'}
@@ -125,7 +125,7 @@ export default function AblestackPage() {
           </CustomLink>
         </div>
         <div className='mt-[10px] flex gap-[10px]'>
-          <CustomLink href='/products/ablestack/koral' hoverBehavoir='none' className={'w-full'}>
+          <CustomLink href='/products/ablestack/koral' hoverBehavior='none' className={'w-full'}>
             <ProductContent.RowSmallCard
               containerClassName={'bg-[#EEF4FB]'}
               title={'Koral'}
@@ -133,7 +133,7 @@ export default function AblestackPage() {
               image={<SvgIcon Svg={Logo_Article_3_3} />}
             />
           </CustomLink>
-          <CustomLink href='/products/ablestack/track' hoverBehavoir='none' className={'w-full'}>
+          <CustomLink href='/products/ablestack/track' hoverBehavior='none' className={'w-full'}>
             <ProductContent.RowSmallCard
               containerClassName={'bg-[#EEF4FB]'}
               title={'Track'}
@@ -159,7 +159,7 @@ export default function AblestackPage() {
           }
         />
         <div className='flex gap-[10px]'>
-          <CustomLink href='/products/ablestack/mold' hoverBehavoir='none' className={'w-full'}>
+          <CustomLink href='/products/ablestack/mold' hoverBehavior='none' className={'w-full'}>
             <ProductContent.RowSmallCard
               title={'Mold'}
               description={'클라우드 관리플랫폼'}
@@ -167,7 +167,7 @@ export default function AblestackPage() {
             />
           </CustomLink>
 
-          <CustomLink href='/products/ablestack/genie' hoverBehavoir='none' className={'w-full'}>
+          <CustomLink href='/products/ablestack/genie' hoverBehavior='none' className={'w-full'}>
             <ProductContent.RowSmallCard
               title={'Genie'}
               description={'하이브리드 배포 자동화'}
@@ -177,7 +177,7 @@ export default function AblestackPage() {
         </div>
 
         <div className='mt-[10px] flex gap-[10px]'>
-          <CustomLink href='/products/ablestack/wall' hoverBehavoir='none' className={'w-full'}>
+          <CustomLink href='/products/ablestack/wall' hoverBehavior='none' className={'w-full'}>
             <ProductContent.RowSmallCard
               title={'Wall'}
               description={'통합 모니터링'}
@@ -201,7 +201,7 @@ export default function AblestackPage() {
           }
         />
         <div className='flex gap-[10px]'>
-          <CustomLink href='/products/ablestack/block' hoverBehavoir='none' className={'w-full'}>
+          <CustomLink href='/products/ablestack/block' hoverBehavior='none' className={'w-full'}>
             <ProductContent.RowSmallCard
               containerClassName={'bg-[#EEF4FB]'}
               title={'Block'}
@@ -210,7 +210,7 @@ export default function AblestackPage() {
             />
           </CustomLink>
 
-          <CustomLink href='/products/ablestack/files' hoverBehavoir='none' className={'w-full'}>
+          <CustomLink href='/products/ablestack/files' hoverBehavior='none' className={'w-full'}>
             <ProductContent.RowSmallCard
               containerClassName={'bg-[#EEF4FB]'}
               title={'Files'}
@@ -220,7 +220,7 @@ export default function AblestackPage() {
           </CustomLink>
         </div>
         <div className='mt-[10px] flex gap-[10px]'>
-          <CustomLink href='/products/ablestack/object' hoverBehavoir='none' className={'w-full'}>
+          <CustomLink href='/products/ablestack/object' hoverBehavior='none' className={'w-full'}>
             <ProductContent.RowSmallCard
               containerClassName={'bg-[#EEF4FB]'}
               title={'Objects'}
@@ -228,7 +228,7 @@ export default function AblestackPage() {
               image={<SvgIcon Svg={Logo_Article_5_3} />}
             />
           </CustomLink>
-          <CustomLink href='/products/ablestack/slio' hoverBehavoir='none' className={'w-full'}>
+          <CustomLink href='/products/ablestack/slio' hoverBehavior='none' className={'w-full'}>
             <ProductContent.RowSmallCard
               containerClassName={'bg-[#EEF4FB]'}
               title={'Slio'}
@@ -254,14 +254,14 @@ export default function AblestackPage() {
           }
         />
         <div className='flex gap-[10px]'>
-          <CustomLink href='/products/ablestack/works' hoverBehavoir='none' className={'w-full'}>
+          <CustomLink href='/products/ablestack/works' hoverBehavior='none' className={'w-full'}>
             <ProductContent.RowSmallCard
               title={'Works'}
               description={'데스크톱 서비스'}
               image={<SvgIcon Svg={Logo_Article_6_2} />}
             />
           </CustomLink>
-          <CustomLink href='/products/ablestack/station' hoverBehavoir='none' className={'w-full'}>
+          <CustomLink href='/products/ablestack/station' hoverBehavior='none' className={'w-full'}>
             <ProductContent.RowSmallCard
               title={'Station'}
               description={'플랫폼 서비스'}

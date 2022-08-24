@@ -4,7 +4,7 @@ import Head from 'next/head';
 import { getPosts } from '@/helpers/post';
 import { BasePageProps, Post } from '@/types';
 
-import { AspectRatioImage, CustomLink } from '@/components/common';
+import { AspectRatioImage } from '@/components/common';
 import { Container } from '@/components/layout';
 
 interface StoryHomePageProps extends BasePageProps {
@@ -30,41 +30,41 @@ export default function StoryHomePage({ stories }: StoryHomePageProps) {
             {stories.map(
               ({ title, categories, slug, tags = [], header: { subtitle, thumbnail } }, index) => (
                 <li key={index}>
-                  <CustomLink href={[...categories, slug].join('/')} hoverBehavoir='none'>
-                    <Container.Card className='flex h-full flex-col'>
-                      {/* image placeholder */}
-                      {thumbnail ? (
-                        <AspectRatioImage src={thumbnail} height={256} />
-                      ) : (
-                        <div className='h-64 w-full bg-slate-200' />
-                      )}
+                  {/* <CustomLink href={[...categories, slug].join('/')} hoverBehavior='none'> */}
+                  <Container.Card className='flex h-full flex-col shadow-md' hoverBehavior='none'>
+                    {/* image placeholder */}
+                    {thumbnail ? (
+                      <AspectRatioImage src={thumbnail} height={256} />
+                    ) : (
+                      <div className='h-64 w-full bg-slate-200' />
+                    )}
 
-                      <section className='flex flex-1 flex-col justify-between p-3 text-left'>
-                        <div>
-                          {/* title */}
-                          <h2>{title}</h2>
+                    <section className='flex flex-1 flex-col justify-between p-3 text-left'>
+                      <div>
+                        {/* title */}
+                        <h2>{title}</h2>
 
-                          {/* subtitle */}
-                          <p className='font-thin text-gray-500'>{String(subtitle)}</p>
+                        {/* subtitle */}
+                        <p className='font-thin text-gray-500'>{String(subtitle)}</p>
+                      </div>
+
+                      <div>
+                        <hr className='my-2' />
+
+                        {/* tags */}
+                        <div className='flex text-sm text-gray-300'>
+                          {tags.map((tag, tagIndex) => (
+                            <span
+                              className='after:mx-1 after:content-["/"] last:after:hidden'
+                              key={tagIndex}>
+                              {tag}
+                            </span>
+                          ))}
                         </div>
-
-                        <div>
-                          <hr className='my-2' />
-
-                          {/* tags */}
-                          <div className='flex text-sm text-gray-300'>
-                            {tags.map((tag, tagIndex) => (
-                              <span
-                                className='after:mx-1 after:content-["/"] last:after:hidden'
-                                key={tagIndex}>
-                                {tag}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-                      </section>
-                    </Container.Card>
-                  </CustomLink>
+                      </div>
+                    </section>
+                  </Container.Card>
+                  {/* </CustomLink> */}
                 </li>
               ),
             )}

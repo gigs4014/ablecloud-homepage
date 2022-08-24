@@ -25,7 +25,7 @@ function PostList({ posts, categories }: PostListProps) {
       <ul className='grid grid-cols-1 place-items-center gap-8 md:grid-cols-2 lg:grid-cols-3'>
         {posts.map(post => (
           <li className='h-full w-full' key={post.slug}>
-            <CustomLink href={`/${[...post.categories, post.slug].join('/')}`} hoverBehavoir='none'>
+            <CustomLink href={`/${[...post.categories, post.slug].join('/')}`} hoverBehavior='none'>
               <PostPreview post={post} />
             </CustomLink>
           </li>

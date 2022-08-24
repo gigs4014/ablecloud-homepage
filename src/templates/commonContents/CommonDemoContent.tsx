@@ -15,7 +15,7 @@ const CommonDemoContent = memo<BaseComponentProps>(({ className }) => {
     <div
       className={`grid w-full grid-cols-1 gap-[40px] md:grid-cols-2 lg:grid-cols-3 ${className}`}>
       <ActionCard
-        hoverBehavoir={'scale'}
+        hoverBehavior={'scale'}
         title={'Case Study'}
         image={<Image src={Logo_Article_5_1} objectFit={'cover'} height={218} />}
         description={'에이블스택을 최대로 활용하는 파트너사들의 케이스를 확인해보세요.'}
@@ -23,7 +23,7 @@ const CommonDemoContent = memo<BaseComponentProps>(({ className }) => {
         href={''}
       />
       <ActionCard
-        hoverBehavoir={'scale'}
+        hoverBehavior={'scale'}
         title={'데모 체험'}
         image={<Image src={Logo_Article_5_2} objectFit={'cover'} height={218} />}
         description={'에이블스택을 먼저 체험하고, 사용해보세요.'}
@@ -31,7 +31,7 @@ const CommonDemoContent = memo<BaseComponentProps>(({ className }) => {
         href={''}
       />
       <ActionCard
-        hoverBehavoir={'scale'}
+        hoverBehavior={'scale'}
         title={'전문가와 상담'}
         image={<Image src={Logo_Article_5_3} objectFit={'cover'} height={218} />}
         description={

@@ -4,17 +4,17 @@ import { BaseComponentProps } from '@/types';
 import { cls } from '@/utils';
 
 export interface CardProps extends BaseComponentProps {
-  hoverBehavoir?: 'none' | 'scale';
+  hoverBehavior?: 'none' | 'scale';
 }
 
 export function Card({
-  hoverBehavoir = 'scale',
+  hoverBehavior = 'scale',
   className,
   children,
 }: PropsWithChildren<CardProps>) {
   const hoverStyle = cls`${{
     'transition-all hover:-translate-y-1 hover:scale-102 hover:shadow-xl':
-      hoverBehavoir === 'scale',
+      hoverBehavior === 'scale',
   }}`;
 
   return (

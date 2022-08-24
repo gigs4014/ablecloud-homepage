@@ -11,7 +11,7 @@ interface CardProps extends BaseComponentProps {
   containerClassName?: string;
   description?: ReactNode;
   linkText?: ReactNode;
-  hoverBehavoir?: 'none' | 'scale';
+  hoverBehavior?: 'none' | 'scale';
 }
 
 interface ActionCardProps extends CardProps {
@@ -26,11 +26,11 @@ export function ActionCard({
   description,
   buttonTitle,
   href,
-  hoverBehavoir = 'none',
+  hoverBehavior = 'none',
 }: ActionCardProps) {
   return (
     <Container.Card
-      hoverBehavoir={hoverBehavoir}
+      hoverBehavior={hoverBehavior}
       className={`border-borderGrayColor w-full border-1 ${containerClassName}`}>
       {image && <div className='max-h-[218px] w-full'>{image}</div>}
 
@@ -63,12 +63,12 @@ export function DescriptionCard({
   image,
   description,
   linkText,
-  hoverBehavoir = 'none',
+  hoverBehavior: hoverBehavior = 'none',
 }: CardProps) {
   return (
     <Container.Card
       className={`h-[436px] pt-[35px] pb-[58px] text-center shadow-none ${containerClassName}`}
-      hoverBehavoir={hoverBehavoir}>
+      hoverBehavior={hoverBehavior}>
       {image && <div className='flex items-center justify-center'>{image}</div>}
 
       <div className={'pt-[66px]'}>
@@ -109,12 +109,12 @@ export function RowSummaryCard({
   image,
   description,
   linkText,
-  hoverBehavoir = 'none',
+  hoverBehavior: hoverBehavior = 'none',
   containerClassName,
 }: CardProps) {
   return (
     <Container.Card
-      hoverBehavoir={hoverBehavoir}
+      hoverBehavior={hoverBehavior}
       className={`flex h-full items-center justify-start border-0.5 border-gray-200 py-[20px] px-[32px] shadow-none ${containerClassName}`}>
       {image && (
         <div className='flex min-h-[108px] min-w-[100px] items-center justify-center'>{image}</div>
@@ -137,11 +137,11 @@ export function RowSmallCard({
   image,
   description,
   containerClassName,
-  hoverBehavoir = 'scale',
+  hoverBehavior: hoverBehavior = 'scale',
 }: CardProps) {
   return (
     <Container.Card
-      hoverBehavoir={hoverBehavoir}
+      hoverBehavior={hoverBehavior}
       className={`flex items-center justify-start border-0.5  shadow-none ${containerClassName}`}>
       {image && <div className='flex items-center justify-center'>{image}</div>}
 
@@ -158,12 +158,12 @@ export function ItemCard({
   title,
   image,
   description,
-  hoverBehavoir = 'none',
+  hoverBehavior: hoverBehavior = 'none',
 }: CardProps) {
   return (
     <Container.Card
       className={`h-full pb-[37px] text-center shadow-none ${containerClassName}`}
-      hoverBehavoir={hoverBehavoir}>
+      hoverBehavior={hoverBehavior}>
       {image && <div className='flex items-center justify-center'>{image}</div>}
 
       <div>

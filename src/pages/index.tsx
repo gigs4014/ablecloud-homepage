@@ -216,7 +216,7 @@ export default function HomePage() {
                 title='단일 클라우드 플랫폼'
                 image={<Logo_Article_2_1 />}
                 linkText={<span>에이블클라우드가 하는 일</span>}
-                hoverBehavoir={'scale'}
+                hoverBehavior={'scale'}
               />
             </CustomLink>
 
@@ -226,7 +226,7 @@ export default function HomePage() {
                 title='웹기반 통합 관리 플랫폼'
                 image={<Logo_Article_2_2 />}
                 linkText={<span>자세히 알아보기</span>}
-                hoverBehavoir={'scale'}
+                hoverBehavior={'scale'}
               />
             </CustomLink>
 
@@ -236,7 +236,7 @@ export default function HomePage() {
                 title='새로운 개념의 데이터센터'
                 image={<Logo_Article_2_3 />}
                 linkText={<span>지금 시작하기</span>}
-                hoverBehavoir={'scale'}
+                hoverBehavior={'scale'}
               />
             </CustomLink>
           </div>
@@ -291,7 +291,7 @@ export default function HomePage() {
             </CustomSlider>
           </div>
           <div className='flex justify-center'>
-            <CustomLink href='/stories' hoverBehavoir='none'>
+            <CustomLink href='/stories' hoverBehavior='none'>
               <Button solid className='mt-12'>
                 파트너 확인하기
               </Button>
@@ -325,7 +325,7 @@ export default function HomePage() {
             </p>
           }>
           <div className='flex justify-center'>
-            <CustomLink href='/stories' hoverBehavoir='none'>
+            <CustomLink href='/stories' hoverBehavior='none'>
               <Button bordered className='mt-12 bg-white'>
                 어플라이언스 보러가기
               </Button>

@@ -11,7 +11,7 @@ export interface HomeContentGridItemProps extends BaseComponentProps {
   image: ReactNode;
   containerClassName?: string;
   linkText?: ReactNode;
-  hoverBehavoir?: 'none' | 'scale';
+  hoverBehavior?: 'none' | 'scale';
 }
 
 const HomeContentItemGrid = memo(
@@ -20,11 +20,11 @@ const HomeContentItemGrid = memo(
     title,
     image,
     linkText,
-    hoverBehavoir = 'none',
+    hoverBehavior = 'none',
   }: HomeContentGridItemProps) => {
     return (
       <Container.Card
-        hoverBehavoir={hoverBehavoir}
+        hoverBehavior={hoverBehavior}
         className={`h-full px-[16px] pt-[35px] pb-[58px] text-center text-black shadow-none ${containerClassName}`}>
         <div className={'mb-6 text-xl'}>{title}</div>
 

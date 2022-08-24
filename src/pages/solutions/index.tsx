@@ -271,7 +271,7 @@ export default function SolutionPage() {
               const { title, image, description, href } = solution;
 
               return (
-                <CustomLink key={uuid()} href={href} hoverBehavoir='none' className={'w-full'}>
+                <CustomLink key={uuid()} href={href} hoverBehavior='none' className={'w-full'}>
                   <SolutionContent.RowCard title={title} image={image} description={description} />
                 </CustomLink>
               );
@@ -292,7 +292,7 @@ export default function SolutionPage() {
             {partners.map(partner => {
               const { title, image, description, href } = partner;
               return (
-                <CustomLink key={uuid()} href={href} hoverBehavoir='none' className={'w-full'}>
+                <CustomLink key={uuid()} href={href} hoverBehavior='none' className={'w-full'}>
                   <SolutionContent.RowSmallCard
                     image={image}
                     title={title}

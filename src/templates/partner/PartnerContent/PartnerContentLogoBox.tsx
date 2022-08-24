@@ -12,7 +12,7 @@ export interface PartnerContentLogoBoxProps extends BaseComponentProps {
 const PartnerContentLogoBox = memo<PartnerContentLogoBoxProps>(({ title, image, className }) => {
   return (
     <Container.Card
-      hoverBehavoir={'none'}
+      hoverBehavior={'none'}
       className={`bg-white text-center shadow-none ${className} flex h-[150px] max-h-[150px] flex-col justify-center`}>
       {image && <div className={'flex items-center justify-center'}>{image}</div>}
 
