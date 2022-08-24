@@ -1,12 +1,12 @@
-import { DescriptionCard, SmallCard } from '@/components/common';
-import { Container } from '@/components/layout';
+import { NamedExoticComponent, PropsWithChildren, ReactNode, memo } from 'react';
+
 import { BaseComponentProps } from '@/types';
 import { cls } from '@/utils';
-import { memo, NamedExoticComponent, PropsWithChildren, ReactNode } from 'react';
+
+import { DescriptionCard, SmallCard } from '@/components/common';
+import { Container } from '@/components/layout';
+
 import CompanyContentImageItem from './CompanyContentImageItem';
-
-
-
 
 export interface CompanyContentProps extends BaseComponentProps {
   title?: ReactNode;
@@ -16,7 +16,8 @@ export interface CompanyContentProps extends BaseComponentProps {
 const CompanyContent = memo<PropsWithChildren<CompanyContentProps>>(
   ({ title, description, className, children }) => {
     return (
-      <section className={cls`group relative flex w-full flex-col items-center pb-16 overflow-hidden ${className}`}>
+      <section
+        className={cls`group relative flex w-full flex-col items-center overflow-hidden pb-16 ${className}`}>
         <Container.PageWidth>
           <header className='flex flex-col items-center px-8 text-center'>
             {typeof title === 'string' ? (
