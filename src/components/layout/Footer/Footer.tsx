@@ -9,7 +9,7 @@ import Logo_ablecloud_gray from '@/public/images/logos/ablecloud_logo_gray.svg';
 
 function FooterSite() {
   return (
-    <section className={'hidden h-[330px] py-[50px] lg:block'}>
+    <section className={'hidden h-fit py-[50px] px-8 lg:block'}>
       <ul className={`flex max-w-page-full list-none justify-between`}>
         {footerMenus.map(menu => (
           <li key={uuid()} className={'min-w-50 float-left'}>
@@ -38,8 +38,25 @@ export default function Footer() {
       {/* copyright */}
       {/* social logos */}
       <FooterSite />
-      <div className={'mx-2.5 my-2.5 flex justify-start'}>
+
+      <div className={'my-8 flex justify-between px-8'}>
         <Logo_ablecloud_gray />
+
+        <div className='flex space-x-4 text-xs text-neutral-500'>
+          <span>주소</span>
+
+          <ul className='flex space-x-1'>
+            <li>
+              <p>{`연구소(대전)`}</p>
+              <p>{`본사(서울)`}</p>
+            </li>
+
+            <li>
+              <p className='before:content-["_:_"] '>{`대전광역시 대덕구 대화동 대전로 106번길 66, 펜타플렉스 811호`}</p>
+              <p className='before:content-["_:_"] '>{`서울특별시 영등포구 영신로 220 KnK디지털타워 1808호`}</p>
+            </li>
+          </ul>
+        </div>
       </div>
       {/* pages not in header */}
     </footer>
