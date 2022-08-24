@@ -10,7 +10,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
   // let token = req.headers.authorization;
   try {
     const stdout = await new Promise<string>((resolve, reject) => {
-      exec('git pull', (error, stdout, stderr) => {
+      exec('yarn run prod:fetch', (error, stdout, stderr) => {
         if (error) {
           console.log(`error: ${error.message}`);
           reject(new Error(stderr));

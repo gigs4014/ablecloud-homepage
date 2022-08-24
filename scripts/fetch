@@ -1,0 +1,5 @@
+git reset --hard
+git checkout dev
+git pull
+yarn docker:build
+yarn docker:run

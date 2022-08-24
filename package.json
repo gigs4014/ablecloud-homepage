@@ -10,6 +10,7 @@
     "docker:dev": "./scripts/docker/dev",
     "start": "next start",
     "lint": "next lint",
+    "prod:fetch": "./scripts/fetch",
     "postinstall": "./scripts/postinstall",
     "prepack": "pinst --disable",
     "postpack": "pinst --enable"
