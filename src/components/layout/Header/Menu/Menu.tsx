@@ -1,4 +1,4 @@
-import { MouseEventHandler, ReactNode, useMemo, useState } from 'react';
+import { MouseEventHandler, ReactNode, useCallback, useMemo, useRef, useState } from 'react';
 
 import { v4 as uuid } from 'uuid';
 
@@ -88,8 +88,16 @@ export function MenuItem({
 }: MenuItemProps) {
   const { label, href, subMenuItems } = item;
 
-  const [isSubMenuOpen, setIsSubMenuOpen] = useState<boolean>(false);
-  const [isSubChildMenuOpen, setIsSubChildMenuOpen] = useState<boolean>(false);
+  const [isSubMenuOpen, _setIsSubMenuOpen] = useState<boolean>(false);
+  const timeoutRef = useRef<NodeJS.Timeout>();
+  const setIsSubMenuOpen = useCallback((value: boolean) => {
+    timeoutRef.current && clearTimeout(timeoutRef.current);
+    if (!value) {
+      timeoutRef.current = setTimeout(() => _setIsSubMenuOpen(value), 200);
+    } else {
+      _setIsSubMenuOpen(value);
+    }
+  }, []);
 
   const selected = useMemo(
     () => selectedItem && isIncludedItem(item, selectedItem),
@@ -107,8 +115,7 @@ export function MenuItem({
         href={href}
         className={cls`flex h-full w-full items-center justify-center px-4  
         hover:border-b-4 hover:border-primary hover:font-[700] hover:text-black 
-        ${selected ? `text-primary` : isProductsAbleStackPage ? 'text-white' : 'text-black'}
-        ${isSubMenuOpen && 'border-b-4 border-primary'}`}>
+        ${selected ? `text-primary` : isProductsAbleStackPage ? 'text-white' : 'text-black'}`}>
         <div>{label ?? children}</div>
       </CustomLink>
       {isSubMenuOpen && subMenuItems && (
@@ -155,7 +162,7 @@ export function SubMenu({ items, selectedItem, className }: SubMenuProps) {
 
   return (
     <div
-      className={cls`fixed left-0  flex w-screen justify-center border-t-1 border-borderGray bg-white drop-shadow-lg `}>
+      className={cls`fixed left-0 flex w-screen justify-center border-t-1 border-borderGray bg-white drop-shadow-lg `}>
       <ul
         className={cls`min-x-[1000px] flex h-[459px] min-h-[459px] w-[1000px] flex-col flex-wrap gap-x-[217px] py-[40px] ${className}`}>
         {items.map(item => (
