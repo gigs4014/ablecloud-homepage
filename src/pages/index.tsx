@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react';
+
 import Link from 'next/link';
 
 import { ReactNode } from '@mdx-js/react/lib';
@@ -23,12 +25,11 @@ interface LogoData {
   src: ReactNode;
   href?: string;
 }
-
-const headerContents: HomeHeaderProps[] = [
+const headerContents = (fontSize: string): HomeHeaderProps[] => [
   {
     title: 'ON Innovation 2023',
     description: (
-      <p className={'m-0 p-0 text-[18px] font-[400] leading-[26.06px]'}>
+      <p className={`m-0 p-0 ${fontSize} font-[400] leading-[26.06px]`}>
         빠르게 변화하는 IT인프라, 에이블클라우드는 이러한 변화속에서 대응할 수 있도록 본 행사를
         개최합니다.
         <br />
@@ -195,9 +196,17 @@ const logos: Array<LogoData> = [
 ];
 
 export default function HomePage() {
+  const [fontSize, setFontSize] = useState('');
+
+  useEffect(() => {
+    const width = window.outerWidth;
+    if (width <= 407) setFontSize('text-[14px]');
+    else setFontSize('text-[18px]');
+  }, []);
+
   return (
     <>
-      <HomeTemplate headerContents={headerContents}>
+      <HomeTemplate headerContents={headerContents(fontSize)}>
         <HomeContent
           title='SDDC를 실현하는 HCI 플랫폼'
           description={
@@ -314,7 +323,7 @@ export default function HomePage() {
           <CommonDemoContent />
         </HomeContent>
         <HomeContent
-          className={'bg-backgroundBlue text-white'}
+          className={'bg-backgroundBlue pb-0 text-white'}
           title='ABLESTACK 하드웨어 플랫폼'
           description={
             <p className='mt-3.5 text-[16px] font-[400] leading-[23.17px]'>
