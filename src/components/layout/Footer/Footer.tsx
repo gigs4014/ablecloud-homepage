@@ -33,7 +33,7 @@ function FooterSite() {
 
 export default function Footer() {
   return (
-    <footer className={`w-full max-w-page-full`}>
+    <footer className={`hidden w-full max-w-page-full lg:block`}>
       {/* simplified logo */}
       {/* copyright */}
       {/* social logos */}
