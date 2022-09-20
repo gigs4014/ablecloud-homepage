@@ -33,40 +33,26 @@ function FooterSite() {
 
 function FooterInformation() {
   return (
-    <section className={'relative flex h-[150px] bg-[#414141]'}>
-      <div className={'m-auto flex w-[1200px] shrink-0 grow-0 items-center justify-center'}>
+    <section className={'relative flex min-h-[150px] bg-[#414141]'}>
+      <div className={'m-auto flex items-center justify-center p-[20px]'}>
         <div>
           <Logo_ablecloud_white className='mx-[22.5px]' />
         </div>
         <div>
           {footerInformation.map((info, index) => {
-            if (index === 0) {
-              {
-                info.map(({ label, description }) => {
-                  return (
-                    <p
-                      key={uuid()}
-                      className={`mr-[16px] mb-[16px] inline-block leading-[23px] tracking-wide text-white`}>
-                      <label className={'font-bold'}>{label}</label>
-                      <label className={'font-normal'}>{description}</label>
-                    </p>
-                  );
-                });
-              }
-            }
             return (
-              <>
-                {info.map(({ label, description }) => {
+              <div key={index} className='flex flex-wrap justify-between gap-x-4'>
+                {info.map(({ label, description }, i) => {
                   return (
                     <p
-                      key={uuid()}
-                      className={`mr-[18.75px] mb-[0px] inline-block leading-[23px] tracking-wide text-white`}>
+                      key={i}
+                      className={`keep-all mb-[0px] inline-block tracking-wide text-white`}>
                       <label className={'font-bold'}>{label}</label>
                       <label className={'font-normal'}>{description}</label>
                     </p>
                   );
                 })}
-              </>
+              </div>
             );
           })}
         </div>
