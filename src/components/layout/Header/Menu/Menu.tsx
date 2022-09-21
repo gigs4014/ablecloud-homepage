@@ -100,12 +100,12 @@ export function MenuItem({
 
   return (
     <div
-      className={cls`group h-[110px] w-full ${className}`}
+      className={cls`group h-[110px] w-[85px] ${className}`}
       onMouseOver={() => setIsSubMenuOpen(true)}
       onMouseLeave={() => setIsSubMenuOpen(false)}>
       <CustomLink
         href={href}
-        className={cls`flex h-full w-full items-center justify-center px-4  
+        className={cls`flex h-full items-center justify-center px-4  
         hover:border-b-4 hover:border-primary hover:font-[700] hover:text-black 
         ${selected ? `text-primary` : isProductsAbleStackPage ? 'text-white' : 'text-black'}
         ${isSubMenuOpen && 'border-b-4 border-primary'}`}>
@@ -155,12 +155,11 @@ export function SubMenu({ items, selectedItem, className }: SubMenuProps) {
 
   return (
     <div
-      className={cls`fixed left-0  flex w-screen justify-center border-t-1 border-borderGray bg-white drop-shadow-lg `}>
-      <ul
-        className={cls`min-x-[1000px] flex h-[459px] min-h-[459px] w-[1000px] flex-col flex-wrap gap-x-[217px] py-[40px] ${className}`}>
+      className={cls` flex w-[310px] justify-center border-t-1 border-borderGray bg-white drop-shadow-lg`}>
+      <ul className={cls`min-x-[310px] flex w-[1000px] flex-col flex-wrap ${className}`}>
         {items.map(item => (
-          <li key={uuid()} className={item.type !== 'group' ? 'mb-[10px]' : ''}>
-            <ul className='py-[8px] px-[16px] text-[16px] font-[500] '>
+          <li key={uuid()}>
+            <ul className='h-[53px] py-[15px] pl-[16px] text-[16px] font-[500] '>
               {item.type === 'group' ? (
                 <>
                   <li className={'mb-[20px]'}>
