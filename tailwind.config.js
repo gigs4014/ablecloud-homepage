@@ -22,6 +22,7 @@ module.exports = {
     backgroundImage: {
       'home-header-bg': "url('/images/new/home/home-header-bg.svg')",
       'home-header-bg-2': "url('/images/new/home/home-header-bg-2.svg')",
+      'home-header-bg-3': "url('/images/new/home/home-header-bg-3.png')",
       'company-header-bg': "url('/images/new/company/company-header-bg.svg')",
       'product-header-bg': "url('/images/new/product/product-header-bg.svg')",
       'ablestack-header-bg': "url('/images/new/product/ablestack/ablestack-header-bg.svg')",
