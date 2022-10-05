@@ -1,12 +1,12 @@
-import { RowSmallCard } from '@/components/common';
-import { Container } from '@/components/layout';
+import { NamedExoticComponent, PropsWithChildren, ReactNode, memo } from 'react';
+
 import { BaseComponentProps } from '@/types';
 import { cls } from '@/utils';
-import { memo, NamedExoticComponent, PropsWithChildren, ReactNode } from 'react';
+
+import { RowSmallCard } from '@/components/common';
+import { Container } from '@/components/layout';
+
 import SolutionContentRowCard from './SolutionContentRowCard';
-
-
-
 
 export interface SolutionContentProps extends BaseComponentProps {
   title?: ReactNode;
@@ -16,11 +16,12 @@ export interface SolutionContentProps extends BaseComponentProps {
 const SolutionContent = memo<PropsWithChildren<SolutionContentProps>>(
   ({ title, description, className, children }) => {
     return (
-      <section className={cls`group relative flex w-full flex-col items-center pb-16 overflow-hidden ${className}`}>
+      <section
+        className={cls`group relative flex w-full flex-col items-center overflow-hidden pb-16 ${className}`}>
         <Container.PageWidth>
           <header className='flex flex-col items-center px-8 text-center'>
             {typeof title === 'string' ? (
-              <p className={'m-0 mb-[25px] p-0 text-[30px] font-[500] leading-[43.44px]'}>
+              <p className={'m-0 mb-[25px]  p-0 text-[30px] font-[500] leading-[43.44px]'}>
                 {title}
               </p>
             ) : (

@@ -7,7 +7,7 @@ import {
   ProductTemplate,
 } from '@/templates';
 
-import Logo_Article_1_1 from '@/public/images/new/product/ablestack/ablestackObject/article_1_1.svg';
+import Logo_Article_1_1 from '@/public/images/new/product/ablestack/ablestackObject/article_1_1.png';
 import Logo_Article_2_1 from '@/public/images/new/product/ablestack/ablestackObject/article_2_1.svg';
 import Logo_Article_2_2 from '@/public/images/new/product/ablestack/ablestackObject/article_2_2.svg';
 import Logo_Article_2_3 from '@/public/images/new/product/ablestack/ablestackObject/article_2_3.svg';
@@ -19,9 +19,13 @@ import Logo_Article_4_4 from '@/public/images/new/product/ablestack/ablestackObj
 
 const headerContent: ProductHeaderProps = {
   title: 'Object 오브젝트 스토리지',
-  description: `Glue Objects는 간단하고 안전한 스케일 아웃 오브젝트 스토리지로 S3, Swift와 호환되기 때문에 기존의 오브젝트 스토리지 클라이언트로 빠르게 접속하고, 마이그레이션 할 수 있으며, 기업 내에서 빠르게 오브젝트 스토리지를 구성할 수 있습니다.`,
+  description: `
+      Glue Objects는 간단하고 안전한 스케일 아웃 오브젝트 스토리지로 S3,
+      Swift와 호환되기 때문에 기존의 오브젝트 스토리지 클라이언트로 빠르게 접속하고, 
+      마이그레이션 할 수 있으며, 기업 내에서 빠르게 오브젝트 스
+   `,
   bgImage: 'bg-ablestack-object-header-bg',
-  image: <Logo_Article_1_1 />,
+  image: <Image src={Logo_Article_1_1} />,
 };
 
 export default function AblestackObjectPage() {
@@ -36,37 +40,19 @@ export default function AblestackObjectPage() {
             image={<Logo_Article_2_1 />}
             title={'비정형 데이터 복잡성 완화'}
             description={
-              <p>
-                단일 창에서 단일 플랫폼으로
-                <br />
-                무제한 용량을 지원하는
-                <br />
-                비정형 스토리지 공간을 제공
-              </p>
+              <p>단일 창에서 단일 플랫폼으로 무제한 용량을 지원하는 비정형 스토리지 공간을 제공</p>
             }
           />
           <ProductContent.Item
             image={<Logo_Article_2_2 />}
             title={'높은 호환성 제공'}
-            description={
-              <p>
-                AWS S3, OpenStack Swift와
-                <br />
-                호환되는 네임스페이스를 제공
-              </p>
-            }
+            description={<p>AWS S3, OpenStack Swift와 호환되는 네임스페이스를 제공</p>}
           />
           <ProductContent.Item
             image={<Logo_Article_2_3 />}
             title={'강화된 데이터 보안'}
             description={
-              <p>
-                복제, 암호화, WORM, 불변성을
-                <br />
-                통한 데이터 보호하고
-                <br />
-                오브젝트 버전 관리를 지원
-              </p>
+              <p>복제, 암호화, WORM, 불변성을 통한 데이터 보호하고 오브젝트 버전 관리를 지원</p>
             }
           />
         </div>
@@ -110,28 +96,30 @@ export default function AblestackObjectPage() {
       <ProductContent title='관련 솔루션'>
         <div className='mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2'>
           <ProductContent.RowSummaryCard
-            title={'비즈니스 크리티컬 앱'}
-            description={`다수의 가상머신을 통해 서비스되는 비즈니스 앱을 위해
-              공유 스토리지를 제공합니다.`}
+            title={'빅데이터'}
+            description={`S3 호환 인터페이스와 빠르고 무한히 확장 가능한 
+            오브젝트 스토리지로 빅데이터를 위한 민첩한 스토리지를
+            제공합니다.`}
             image={<Logo_Article_4_1 />}
           />
           <ProductContent.RowSummaryCard
-            title={'VDI/DaaS'}
-            description={`Hyper-V, Citrix 등의 환경에서의 고성능 파일시스템을
-              통해 안정적인 데스크톱 환경을 구축합니다.`}
+            title={'백업 및 아카이브'}
+            description={`내장된 오브젝트 버전관리를 제공하고, 스토리지를
+            더욱 안전하게 보호하여 별도의 오프라인 테이프 시스템
+            없이 백업, 아카이브를 지원합니다.`}
             image={<Logo_Article_4_2 />}
           />
 
           <ProductContent.RowSummaryCard
-            title={'영상 감시'}
-            description={`영상 수집 서버를 통해 수집되는 영상 데이터를 저장하고
-              조회할 수 있는 대용량 공유 스토리지를 제공합니다.`}
+            title={'클라우드 네이티브'}
+            description={`차세대 클라우드 네이티브 애플리케이션 개발을 위한
+            간단하고 유연한 스토리지입니다.`}
             image={<Logo_Article_4_3 />}
           />
           <ProductContent.RowSummaryCard
-            title={'멀티 클라우드'}
-            description={`다양한 프로토콜 지원을 통해 VMWare, Hyper-V, 
-              Citrix, Linux KVM 등의 멀티 하이퍼바이저를 지원합니다.`}
+            title={'전자문서 유통/관리'}
+            description={`WORM 기능을 통해 전자문서의 불변성을 보장하여
+            안전한 전자문서 유통 및 관리 환경을 제공합니다.`}
             image={<Logo_Article_4_4 />}
           />
         </div>

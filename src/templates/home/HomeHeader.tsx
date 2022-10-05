@@ -5,7 +5,7 @@ import { cls } from '@/utils';
 
 export interface HomeHeaderProps extends BaseComponentProps {
   title?: string;
-  description: ReactNode;
+  description?: ReactNode;
   headerExtra?: ReactNode;
   bgImage?: string;
   textColor?: string;
@@ -21,7 +21,7 @@ export default function HomeHeader({
 }: HomeHeaderProps) {
   return (
     <header
-      className={cls`relative flex h-full w-full justify-center bg-cover py-16 ${bgImage} ${className}`}>
+      className={cls`flexh-full relative h-full min-h-[560px] w-full justify-center bg-cover py-16 ${bgImage} ${className}`}>
       <div className='flex max-w-page-full items-center space-x-8 px-8'>
         {/* info */}
         <section className={`${textColor} text-center`}>

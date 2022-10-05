@@ -11,11 +11,11 @@ import Logo_Article_3_1 from '@/public/images/new/product/article_3_1.png';
 
 const headerContent: ProductHeaderProps = {
   title: 'ABLESTACK의 탄생',
-  description: `복잡한 구조의 전통적 기업 데이터센터의 문제점을 해결하고,
-    IT 환경의 급속한 발전으로 인해  발생하는 문제점을 해결하기 위해
-    단일 서버 구성으로 모든 인프라와 플랫폼을 실행할 수 있도록 고안된
-    HCI 플랫폼 입니다.`,
+  description: `복잡한 구조의 전통적 기업 데이터센터의 문제점을 해결하고, IT 환경의 급속한 발전으로
+      인해 발생하는 문제점을 해결하기 위해 단일 서버 구성으로 모든 인프라와 플랫폼을 실행할
+      수 있도록 고안된 HCI 플랫폼 입니다.`,
   bgImage: 'bg-product-header-bg',
+  imagePosition: 'last',
 };
 
 const items: Record<string, Array<ProductContentGridItem>> = {
@@ -91,16 +91,21 @@ export default function ProductHomePage() {
   return (
     <ProductTemplate {...headerContent}>
       <ProductContent
-        className={'bg-backgroudGray'}
+        className={'bg-backgroudGray leading-normal'}
         title='기업 데이터센터가 직면한 문제'
-        description={`기업에서 데이터 센터를 운영하고 실현하는 상황에서 생기는 어려움이 많습니다.
-        특히나 급진적으로 발전하는 IT 환경에 비해 IT 인프라를 관리하는 데이터 센터의 대응은 속도를 따라가기 어렵습니다.`}>
+        description={
+          <p className='my-[30px]'>
+            기업에서 데이터 센터를 운영하고 실현하는 상황에서 생기는 어려움이 많습니다. 특히나
+            급진적으로 발전하는 IT 환경에 비해 IT 인프라를 관리하는 데이터 센터의 대응은 속도를
+            따라가기 어렵습니다.
+          </p>
+        }>
         <div className='mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2'>
           <ProductContent.RowSummaryCard
             title={'점점 더 복잡해지는 인프라'}
             description={`서로 다른 서버, 네트워크 장비, 스토리지로 구축된 기업 데이터센터는
-운영하면서 증가하는 애플리케이션을 실행하고 서비스하기 위해 더 많은
-서버 등의 장비를 필요로 하게 됩니다.`}
+          영하면서 증가하는 애플리케이션을 실행하고 서비스하기 위해 더 많은
+          서버 등의 장비를 필요로 하게 됩니다.`}
           />
           <ProductContent.RowSummaryCard
             title={'급격한 IT 기술변화에 대응이 어려운 경직된 인프라'}

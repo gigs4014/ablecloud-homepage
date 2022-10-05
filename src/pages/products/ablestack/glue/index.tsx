@@ -16,7 +16,9 @@ import Logo_Article_4_4 from '@/public/images/new/product/ablestack/ablestackGlu
 
 const headerContent: ProductHeaderProps = {
   title: 'Glue 스토리지',
-  description: `Glue는 접착제, 풀을 뜻하는 단어로, ABLESTACK의 스토리지 플랫폼의 이름입니다. 호스트에 있는 디스크를 이용해 통합된 저장공간을 제공하고, 다양한 형태로 스토리지 서비스를 제공하는 HCI 스토리지의 특성을 잘 설명할 수 있는 단어로, 통합 스토리지라는 의미를 담고 있습니다.`,
+  description: `ßGlue는 접착제, 풀을 뜻하는 단어로, ABLESTACK의 스토리지 플랫폼의 이름입니다. 호스트에 있는 
+  디스크를 이용해 통합된 저장공간을 제공하 고, 다양한 형태로 스토리지 서비스를 제공하는 HCI
+  스토리지의 특성을 잘 설명할 수 있는 단어로, 통합 스토리지라는 의미를 담고 있습니다.`,
   bgImage: 'bg-ablestack-glue-header-bg',
   imagePosition: 'last',
 };

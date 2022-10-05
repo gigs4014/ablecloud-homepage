@@ -16,7 +16,10 @@ import Logo_Article_4_4 from '@/public/images/new/product/ablestack/ablestackWal
 
 const headerContent: ProductHeaderProps = {
   title: 'Wall ',
-  description: `ABLESTACK의 Wall은 HCI 인프라와 가상머신, 그리고 각종 애플리케이션을 모니터링하고, 필요시 알람을 제공하는 등의 감시 및 보호를 위한 모니터링 플랫폼입니다.`,
+  description: `
+      ABLESTACK의 Wall은 HCI 인프라와 가상머신, 그리고 각종 애플리케이션을 모니터링하고, 
+      필요시 알람을 제공하는 등의 감시 및 보호를 위한 모니터링 플랫폼입니다.
+    `,
   bgImage: 'bg-ablestack-wall-header-bg',
 };
 

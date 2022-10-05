@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react';
 
-import Link from 'next/link';
-
 import { ReactNode } from '@mdx-js/react/lib';
 
 import { Button, CustomLink, CustomSlider } from '@/components/common';
@@ -27,37 +25,7 @@ interface LogoData {
 }
 const headerContents = (fontSize: string): HomeHeaderProps[] => [
   {
-    title: 'ON Innovation 2023',
-    description: (
-      <p className={`m-0 p-0 ${fontSize} font-[400] leading-[26.06px]`}>
-        빠르게 변화하는 IT인프라, 에이블클라우드는 이러한 변화속에서 대응할 수 있도록 본 행사를
-        개최합니다.
-        <br />
-        ON Innovation 2023은 차세대 디지털 전환에 대비한 국산 HCI 클라우드 및 가상 데스크톱, ICT
-        동향, 스마트 플랫폼,
-        <br />
-        스토리지 인프라, 업무 자동화 등의 IT 인프라 솔루션을 소개합니다.
-        <br />
-        본 행사를 통해 파트너분들을 위한 다양한 솔루션 및 제품에 대한 유용한 정보를 얻어가시길
-        바랍니다.
-        <br />
-        <br />
-        <br />
-        [부산] 2022.08.24(수) / [대구] 2022.08.25(목)
-        <br />
-        [대전] 2022.08.30(화) / [광주] 2022.09.01(목)
-      </p>
-    ),
-    bgImage: 'bg-home-header-bg-2',
-    headerExtra: (
-      <Link href={'https://www.ablestor.com/_app/view/landing/roadshow.php'} passHref>
-        <a target={'_blank'}>
-          <Button className={'border-[1px] border-[white] bg-transparent text-[white]'}>
-            행사 자세히 알아보기
-          </Button>
-        </a>
-      </Link>
-    ),
+    bgImage: 'bg-home-header-bg',
   },
   // {
   //   title: '',
@@ -211,15 +179,13 @@ export default function HomePage() {
           title='SDDC를 실현하는 HCI 플랫폼'
           description={
             <p className='m-0 mb-[25px] p-0 text-[16px] font-[400] leading-[23.17px]'>
-              가상화 및 소프트웨어 정의 기술을 이용한 하이퍼 컨버지드 인프라 플랫폼 ABLESTACK을
-              <br />
-              통해 컴퓨팅, 스토리지, 가상화, 네트워크를 사용하고 관리할 수 있는 엔터프라이즈
-              <br />
-              클라우드 데이터센터를 구축할 수 있습니다.
+              가상화 및 소프트웨어 정의 기술을 이용한 하이퍼 컨버지드 인프라 플랫폼 ABLESTACK을 통해
+              컴퓨팅, 스토리지, 가상화, 네트워크를 사용하고 관리할 수 있는 엔터프라이즈 클라우드
+              데이터센터를 구축할 수 있습니다.
             </p>
           }>
-          <div className='mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3'>
-            <CustomLink href={''}>
+          <div className='mt-8 grid w-full max-w-page-full grid-cols-1 gap-6 px-4 md:grid-cols-2 lg:grid-cols-3'>
+            <CustomLink href={'/'}>
               <HomeContent.ItemGrid
                 containerClassName='border-borderGrayColor border-1'
                 title='단일 클라우드 플랫폼'
@@ -229,7 +195,7 @@ export default function HomePage() {
               />
             </CustomLink>
 
-            <CustomLink href={''}>
+            <CustomLink href={'/'}>
               <HomeContent.ItemGrid
                 containerClassName='border-borderGrayColor border-1'
                 title='웹기반 통합 관리 플랫폼'
@@ -239,7 +205,7 @@ export default function HomePage() {
               />
             </CustomLink>
 
-            <CustomLink href={''}>
+            <CustomLink href={'/'}>
               <HomeContent.ItemGrid
                 containerClassName='border-borderGrayColor border-1'
                 title='새로운 개념의 데이터센터'
@@ -314,9 +280,8 @@ export default function HomePage() {
           title='보다 더 자세한 자료와 컨설팅을 받아보세요.'
           description={
             <p className='m-0 mb-[25px] mt-3.5 p-0 text-[16px] font-[400] leading-[23.17px]'>
-              단순한 구조로 IT 서비스에 필요한 모든 인프라를 제공할 뿐만 아니라, <br /> 단 1시간
-              이내에 사용자 사이트에 HCI 인프라를 구성하고 클라우드 서비스를 시작할 수 있습니다.
-              <br />
+              단순한 구조로 IT 서비스에 필요한 모든 인프라를 제공할 뿐만 아니라, 단 1시간 이내에
+              사용자 사이트에 HCI 인프라를 구성하고 클라우드 서비스를 시작할 수 있습니다.
               에이블스택을 바로 사용해보세요.
             </p>
           }>
@@ -328,9 +293,9 @@ export default function HomePage() {
           description={
             <p className='mt-3.5 text-[16px] font-[400] leading-[23.17px]'>
               ABLESTACK은 소프트웨어 HCI 플랫폼으로, 고객사에 성공적으로 HCI 기반 클라우드 환경을
-              구성하기 위해서는 <br /> ABLESTACK이 설치되어 실행되는 서버 하드웨어가 필요합니다.
-              ABLESTACK은 자사 어플라이언스와 함께
-              <br /> 다양한 OEM 파트너, 서드파티 서버 공급업체의 서버 플랫폼과 호환됩니다.
+              구성하기 위해서는 ABLESTACK이 설치되어 실행되는 서버 하드웨어가 필요합니다.
+              ABLESTACK은 자사 어플라이언스와 함께 다양한 OEM 파트너, 서드파티 서버 공급업체의 서버
+              플랫폼과 호환됩니다.
             </p>
           }>
           <div className='flex justify-center'>

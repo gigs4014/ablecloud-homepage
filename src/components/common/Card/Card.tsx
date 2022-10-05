@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import { ReactNode } from '@mdx-js/react/lib';
 
 import { BaseComponentProps } from '@/types';
@@ -19,6 +21,10 @@ interface ActionCardProps extends CardProps {
   href: string;
 }
 
+interface NormalCard extends CardProps {
+  href: string;
+}
+
 export function ActionCard({
   containerClassName,
   title,
@@ -31,23 +37,21 @@ export function ActionCard({
   return (
     <Container.Card
       hoverBehavoir={hoverBehavoir}
-      className={`border-borderGrayColor w-full border-1 ${containerClassName}`}>
-      {image && <div className='max-h-[218px] w-full'>{image}</div>}
+      className={`not-prose border-borderGrayColor max-w-[400px] border-1 ${containerClassName}`}>
+      {image && <div className='max-h-[218px] max-w-[400px]'>{image}</div>}
 
       <div className={'flex flex-col justify-center px-[30px] pb-[40px] pt-[32px] text-center'}>
         <p className={'m-0 mb-6 p-0 text-[20px] font-[500] leading-[28.96px]'}>{title}</p>
 
         {typeof description === 'string' ? (
-          <p className='m-0 mb-[40px] h-[46px] p-0 text-[16px] font-[400] leading-[23.17px]'>
-            {description}
-          </p>
+          <p className='m-0 h-[69px] p-0 text-[16px] font-[400] leading-[23.17px]'>{description}</p>
         ) : (
           description
         )}
 
         {buttonTitle && (
           <CustomLink href={href}>
-            <Button className={'border-[#3281C4] text-[#3281C4]'} bordered>
+            <Button className={'mt-5 border-[#3281C4] text-[#3281C4]'} bordered>
               {buttonTitle}
             </Button>
           </CustomLink>
@@ -67,15 +71,13 @@ export function DescriptionCard({
 }: CardProps) {
   return (
     <Container.Card
-      className={`h-[436px] pt-[35px] pb-[58px] text-center shadow-none ${containerClassName}`}
+      className={`m-auto h-[436px] w-11/12 pt-[35px] pb-[58px] text-center shadow-none ${containerClassName}`}
       hoverBehavoir={hoverBehavoir}>
       {image && <div className='flex items-center justify-center'>{image}</div>}
 
       <div className={'pt-[66px]'}>
         <div className={'mb-[26px] text-[20px] font-[500] leading-[28.96px]'}>{title}</div>
-
         {description && description}
-
         {linkText && (
           <div className='flex items-center justify-center space-x-4 text-primary after:ml-2 after:icon-[east]'>
             {linkText}
@@ -97,7 +99,7 @@ export function SmallCard({
 }) {
   return (
     <div
-      className={`h-[130px] min-w-[130px] flex-col items-center justify-center rounded-[10px] px-[8px] text-center text-white ${className}`}>
+      className={`m-auto h-[130px] w-full min-w-[130px] max-w-[150px] flex-col items-center justify-center rounded-[10px] px-[8px] text-center text-white ${className}`}>
       <p className={'m-0 mt-[20px] text-[30px] font-[700]'}>{value}</p>
       <p className={'m-0 whitespace-nowrap text-[16px] font-[400]'}>{title}</p>
     </div>
@@ -123,7 +125,7 @@ export function RowSummaryCard({
       <div className='ml-[14px] '>
         <p className={'m-0 mb-[8px] p-0 text-[16px] font-[500] leading-[23.17px]'}>{title}</p>
         {description && (
-          <p className={'m-0 p-0  text-[16px] font-[400] leading-[23.17px]'}>{description}</p>
+          <p className={'m-0 p-0 text-[16px] font-[400]  leading-[23.17px]'}>{description}</p>
         )}
       </div>
 
@@ -142,10 +144,10 @@ export function RowSmallCard({
   return (
     <Container.Card
       hoverBehavoir={hoverBehavoir}
-      className={`flex items-center justify-start border-0.5  shadow-none ${containerClassName}`}>
+      className={`flex w-full items-center justify-start border-0.5 shadow-none ${containerClassName}`}>
       {image && <div className='flex items-center justify-center'>{image}</div>}
 
-      <div className={'text-[14px] font-[500] leading-[20.27px]'}>
+      <div className={'px-1 text-[14px] font-[500] leading-[20.27px]'}>
         <div>{title}</div>
         {description && <div>{description}</div>}
       </div>
@@ -162,7 +164,7 @@ export function ItemCard({
 }: CardProps) {
   return (
     <Container.Card
-      className={`h-full pb-[37px] text-center shadow-none ${containerClassName}`}
+      className={`h-full px-8 pb-[37px] text-center shadow-none ${containerClassName}`}
       hoverBehavoir={hoverBehavoir}>
       {image && <div className='flex items-center justify-center'>{image}</div>}
 
@@ -174,5 +176,24 @@ export function ItemCard({
         {description && description}
       </div>
     </Container.Card>
+  );
+}
+
+export function NormalCard({ title, image, description, href }: NormalCard) {
+  return (
+    <Link href={href}>
+      <div
+        className={
+          'not-prose flex max-h-[320px] w-full items-center justify-center rounded-[10px] border-2 transition-all hover:translate-y-1 hover:scale-102 hover:shadow-ic xl:border-0'
+        }>
+        <div>
+          <div className='flex h-[150px] w-full items-center justify-center'>{image}</div>
+          <div className='m-auto max-w-[380px] pb-4 text-center'>
+            <p className='my-2 text-[20px] font-medium'>{title}</p>
+            <div className='px-6'>{description}</div>
+          </div>
+        </div>
+      </div>
+    </Link>
   );
 }

@@ -18,8 +18,10 @@ import Logo_Article_4_4 from '@/public/images/new/product/ablestack/ablestackSta
 
 const headerContent: ProductHeaderProps = {
   title: 'Station 플랫폼 서비스',
-  description: `Station은 Mold와 Genie를 통해 제공되는 플랫폼 서비스로
-  ABLESTACK이 제공하는 이머징 플랫폼을 바로 사용할 수 있습니다. `,
+  description: `
+      Station은 Mold와 Genie를 통해 제공되는 플랫폼 서비스로
+     ABLESTACK이 제공하는 이머징 플랫폼을 바로 사용할 수 있습니다.
+    `,
   bgImage: 'bg-ablestack-station-header-bg',
   textColor: 'text-black',
   imagePosition: 'last',
@@ -36,39 +38,17 @@ export default function AblestackStationPage() {
           <ProductContent.Item
             image={<Logo_Article_2_1 />}
             title={'턴키 플랫폼 서비스'}
-            description={
-              <p>
-                제조사가 직접 제공하는
-                <br />
-                배포판 플랫폼으로
-                <br />
-                지속적 유지보수를 보장함
-              </p>
-            }
+            description={<p>제조사가 직접 제공하는 배포판 플랫폼으로 지속적 유지보수를 보장함</p>}
           />
           <ProductContent.Item
             image={<Logo_Article_2_2 />}
             title={'통합된 인프라'}
-            description={
-              <p>
-                HCI와 통합되어 구성이 단순하고
-                <br />
-                별도의 외부 SW가 필요 없음
-              </p>
-            }
+            description={<p>HCI와 통합되어 구성이 단순하고 별도의 외부 SW가 필요 없음</p>}
           />
           <ProductContent.Item
             image={<Logo_Article_2_3 />}
             title={'원클릭 자동화'}
-            description={
-              <p>
-                Genie를 통해 원클릭으로
-                <br />
-                플랫폼을 배포하고 상태를
-                <br />
-                모니터링
-              </p>
-            }
+            description={<p>Genie를 통해 원클릭으로 플랫폼을 배포하고 상태를 모니터링</p>}
           />
         </div>
       </ProductContent>

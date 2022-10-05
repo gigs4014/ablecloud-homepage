@@ -13,8 +13,7 @@ export function Card({
   children,
 }: PropsWithChildren<CardProps>) {
   const hoverStyle = cls`${{
-    'transition-all hover:-translate-y-1 hover:scale-102 hover:shadow-xl':
-      hoverBehavoir === 'scale',
+    'transition-all hover:translate-y-1 hover:scale-102 hover:shadow-ic': hoverBehavoir === 'scale',
   }}`;
 
   return (

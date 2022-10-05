@@ -1,4 +1,4 @@
-import { MouseEventHandler, ReactNode, useMemo, useState } from 'react';
+import { Dispatch, MouseEventHandler, ReactNode, SetStateAction, useMemo, useState } from 'react';
 
 import { v4 as uuid } from 'uuid';
 
@@ -6,6 +6,8 @@ import { BaseComponentProps, HeaderMenuItem } from '@/types';
 import { cls } from '@/utils';
 
 import { CustomLink } from '@/components/common';
+
+import Chevron_Down from '@/public/images/logos/chevron_down.svg';
 
 export function getSelectedItem(
   items: Array<HeaderMenuItem>,
@@ -26,6 +28,7 @@ export function getSelectedItem(
 
 export interface MenuItemProps extends BaseComponentProps {
   item: HeaderMenuItem;
+  setIsMobileMenu?: Dispatch<SetStateAction<boolean>>;
   selectedItem?: HeaderMenuItem;
   children?: ReactNode;
   center?: boolean;
@@ -38,6 +41,7 @@ export function MobileMenuItem({
   focusedItem,
   selectedItem,
   onClick,
+  setIsMobileMenu,
   className,
 }: MenuItemProps & {
   focusedItem?: HeaderMenuItem;
@@ -55,25 +59,33 @@ export function MobileMenuItem({
   const focused = useMemo(() => item === focusedItem, [item, focusedItem]);
 
   return (
-    <div className={cls`group h-full w-full py-[20px]${className} border-b-1 `}>
+    <div className={cls`group h-full w-full py-[20px] ${className} border-b-1`}>
       <CustomLink href={href}>
         <div
           className={cls`flex h-full w-full items-center justify-between`}
-          onClick={() => subMenuItems && setIsSubMenuOpen(isSubMenuOpen => !isSubMenuOpen)}>
+          onClick={() => {
+            subMenuItems && setIsSubMenuOpen(isSubMenuOpen => !isSubMenuOpen);
+            !subMenuItems && setIsMobileMenu && setIsMobileMenu(false);
+          }}>
           <span className={cls`text-lg ${selected && 'text-primary'}`}>{label ?? children}</span>
 
           {subMenuItems && (
-            <button
-              className={cls`transition-transform icon-[expand_more] ${focused && 'rotate-180'}`}
-              style={{ zIndex: -9999 }}
-              onClick={() => setIsSubMenuOpen(isSubMenuOpen => !isSubMenuOpen)}
-            />
+            <Chevron_Down className='w-[18px]' />
+            // <button
+            //   className={cls`transition-transform icon-[expand_more] ${focused && 'rotate-180'}`}
+            //   style={{ zIndex: -9999 }}
+            //   onClick={() => setIsSubMenuOpen(isSubMenuOpen => !isSubMenuOpen)}
+            // />
           )}
         </div>
       </CustomLink>
 
       {isSubMenuOpen && subMenuItems && (
-        <MobileSubMenu items={subMenuItems} selectedItem={selectedItem} />
+        <MobileSubMenu
+          items={subMenuItems}
+          selectedItem={selectedItem}
+          setIsMobileMenu={setIsMobileMenu}
+        />
       )}
     </div>
   );
@@ -100,15 +112,15 @@ export function MenuItem({
 
   return (
     <div
-      className={cls`group h-[110px] w-[85px] ${className}`}
+      className={cls`group h-[110px] w-[80px] ${className}`}
       onMouseOver={() => setIsSubMenuOpen(true)}
       onMouseLeave={() => setIsSubMenuOpen(false)}>
       <CustomLink
         href={href}
-        className={cls`flex h-full items-center justify-center px-4  
-        hover:border-b-4 hover:border-primary hover:font-[700] hover:text-black 
+        className={cls`flex h-full items-center justify-center px-4 
+       hover:font-[700] hover:shadow-primary
         ${selected ? `text-primary` : isProductsAbleStackPage ? 'text-white' : 'text-black'}
-        ${isSubMenuOpen && 'border-b-4 border-primary'}`}>
+        ${isSubMenuOpen && 'shadow-primary '}`}>
         <div>{label ?? children}</div>
       </CustomLink>
       {isSubMenuOpen && subMenuItems && (
@@ -135,6 +147,7 @@ export interface SubMenuProps {
   items: Array<HeaderMenuItem>;
   selectedItem?: HeaderMenuItem;
   className?: string;
+  setIsMobileMenu?: Dispatch<SetStateAction<boolean>>;
 }
 
 export function SubMenu({ items, selectedItem, className }: SubMenuProps) {
@@ -187,7 +200,7 @@ export function SubMenu({ items, selectedItem, className }: SubMenuProps) {
     </div>
   );
 }
-export function MobileSubMenu({ className, items, selectedItem }: SubMenuProps) {
+export function MobileSubMenu({ className, items, selectedItem, setIsMobileMenu }: SubMenuProps) {
   const subMenuBlock = (subItem: HeaderMenuItem) => (
     <li key={uuid()} className='space-y-2'>
       <CustomLink href={subItem.href}>
@@ -210,10 +223,11 @@ export function MobileSubMenu({ className, items, selectedItem }: SubMenuProps) 
           <ul className='rounded-md py-[8px] px-[16px] text-base hover:bg-backgroudGray md:text-[16px]'>
             {/* group section header */}
             <li
-              className={`${selectedItem && isIncludedItem(item, selectedItem) && 'text-primary'}`}>
-              <CustomLink href={item.href} className=''>
-                {item.label}
-              </CustomLink>
+              className={`${selectedItem && isIncludedItem(item, selectedItem) && 'text-primary'}`}
+              onClick={() => {
+                setIsMobileMenu && setIsMobileMenu(false);
+              }}>
+              <CustomLink href={item.href}>{item.label}</CustomLink>
             </li>
 
             {item.type === 'group' && item.subMenuItems.map(subMenuBlock)}

@@ -16,12 +16,11 @@ import Logo_Article_4_4 from '@/public/images/new/product/ablestack/ablestackKor
 
 const headerContent: ProductHeaderProps = {
   title: 'Koral  쿠버네티스 엔진',
-  description: `Koral은 ABLESTACK 설치 시 기본적으로 설치되는 플러그인입니다. 이 
-  기능을 사용의 사용은 플러그인 사용을 위한 설정을 적용하고, 
-  Kubernetes 클러스터를 배포하기 위한 실행 바이너리 ISO를 등록함으로써 
-  가능합니다. Koral을 이용하면 쉽고 빠르게 컨테이너 환경을 
-  ABLESTACK에 배포할 수 있으며, 안정적으로 운영할 수 있을 뿐 아니라, 
-  필요 시 신속하게 확장이 가능합니다. `,
+  description: `
+      Koral은 ABLESTACK 설치 시 기본적으로 설치되는 플러그인입니다. 이 기능을 사용의 사용은 플러그인
+      사용을 위한 설정을 적용하고, Kubernetes 클러스터를 배포하기 위한 실행 바이너리 ISO를 등록함으로
+      써 가능합니다. Koral을 이용하면 쉽고 빠르게 컨테이너 환경을  ABLESTACK에 배포할 수
+      있으며, 안정적으로 운영할 수 있을 뿐 아니라, 필요 시 신속하게 확장이 가능합니다.`,
   bgImage: 'bg-ablestack-koral-header-bg',
   imagePosition: 'last',
 };

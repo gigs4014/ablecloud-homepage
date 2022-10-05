@@ -19,7 +19,10 @@ import Logo_Article_4_4 from '@/public/images/new/product/ablestack/ablestackFil
 
 const headerContent: ProductHeaderProps = {
   title: 'Files 파일시스템',
-  description: `Glue Files는 Glue에 내장된 표준 파일 시스템으로 데이터 중심의 IT 환경에서 간단하고 유연하며, 지능적인 파일 스토리지 서비스를 제공합니다.`,
+  description: `
+      Glue Files는 Glue에 내장된 표준 파일 시스템으로 데이터 중심의 IT 
+      환경에서 간단하고 유연하며, 지능적인 파일 스토리지 서비스를 제공합니다.
+   `,
   bgImage: 'bg-ablestack-files-header-bg',
   textColor: 'text-black',
   image: <Logo_Article_1_1 />,
@@ -37,37 +40,19 @@ export default function AblestackFilesPage() {
             image={<Logo_Article_2_1 />}
             title={'단 몇 분만에 배포하기'}
             description={
-              <p>
-                몇 번의 클릭만으로 중단없이
-                <br />
-                공유스토리지, 또는 전용스토리지를
-                <br />
-                통합 관리
-              </p>
+              <p>몇 번의 클릭만으로 중단없이 공유스토리지, 또는 전용스토리지를 통합 관리</p>
             }
           />
           <ProductContent.Item
             image={<Logo_Article_2_2 />}
             title={'다양한 프로토콜 지원'}
-            description={
-              <p>
-                POSIX, NFS, SMB 등의
-                <br />
-                다양한 스토리지 프로토콜 지원
-              </p>
-            }
+            description={<p>POSIX, NFS, SMB 등의 다양한 스토리지 프로토콜 지원</p>}
           />
           <ProductContent.Item
             image={<Logo_Article_2_3 />}
             title={'운영 자동화'}
             description={
-              <p>
-                파일 시스템의 데이터 구성,
-                <br />
-                사용자, 세션 정보 등을
-                <br />
-                효율적으로 관리 가능
-              </p>
+              <p>파일 시스템의 데이터 구성, 사용자, 세션 정보 등을 효율적으로 관리 가능</p>
             }
           />
         </div>

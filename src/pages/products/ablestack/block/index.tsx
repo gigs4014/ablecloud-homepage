@@ -37,9 +37,10 @@ const Logo_Article_4_4 = React.lazy(
 const Logo_Product_Default = React.lazy(() => import('@/public/images/new/product_default.svg'));
 
 const headerContent: ProductHeaderProps = {
-  title: 'Block 블록 스토리지 볼륨',
-  description: `Volume은 Glue에 내장된 확장형 블록 스토리지로, 가상머신의 워크로드 및 물리적인 워크로드에 모드 대응할 수 있도록 설계된 단일 통합 스토리지 플랫폼입니다.
-  `,
+  title: 'Volume 블록 스토리지',
+  description: `Volume은 Glue에 내장된 확장형 블록 스토리지로, 가상머신의 워크로드
+    및 물리적인 워크로드 에 모드 대응할 수 있도록 설계된 단일 통합 스토리
+    지 플랫폼입니다.`,
   bgImage: 'bg-ablestack-block-header-bg',
   textColor: 'text-black',
 };
@@ -56,35 +57,17 @@ export default function AblestackBlockPage() {
           <ProductContent.Item
             image={<SvgIcon Svg={Logo_Article_2_1} />}
             title={'간편한 관리'}
-            description={
-              <p>
-                볼륨의 생성, 확장 관리가 간편한
-                <br />
-                엔터프라이즈급 블록 스토리지
-              </p>
-            }
+            description={<p>볼륨의 생성, 확장 관리가 간편한 엔터프라이즈급 블록 스토리지</p>}
           />
           <ProductContent.Item
             image={<SvgIcon Svg={Logo_Article_2_2} />}
             title={'복잡성 해소 및 비용 절감'}
-            description={
-              <p>
-                구형의 레거시 인프라 유지보수를
-                <br />
-                위한 오버헤드 비용 절감
-              </p>
-            }
+            description={<p>구형의 레거시 인프라 유지보수를 위한 오버헤드 비용 절감</p>}
           />
           <ProductContent.Item
             image={<SvgIcon Svg={Logo_Article_2_3} />}
             title={'HCI의 장점 활용'}
-            description={
-              <p>
-                HCI의 이점인 지능형 데이터 관리,
-                <br />
-                고수준 재해복구, 백업 등을 활용
-              </p>
-            }
+            description={<p>HCI의 이점인 지능형 데이터 관리, 고수준 재해복구, 백업 등을 활용</p>}
           />
         </div>
       </ProductContent>

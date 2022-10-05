@@ -11,20 +11,21 @@ import Logo_Article_2_1 from '@/public/images/new/product/ablestack/ablestackCel
 import Logo_Article_3_2 from '@/public/images/new/product/ablestack/ablestackCell/article_3_2.svg';
 import Logo_Article_3_3 from '@/public/images/new/product/ablestack/ablestackCell/article_3_3.svg';
 import Logo_Article_3_4 from '@/public/images/new/product/ablestack/ablestackCell/article_3_4.svg';
-import Logo_Article_4_1 from '@/public/images/new/product/ablestack/ablestackCell/article_4_1.svg';
-import Logo_Article_4_2 from '@/public/images/new/product/ablestack/ablestackCell/article_4_2.svg';
-import Logo_Article_4_3 from '@/public/images/new/product/ablestack/ablestackCell/article_4_3.svg';
-import Logo_Article_4_4 from '@/public/images/new/product/ablestack/ablestackCell/article_4_4.svg';
+import Logo_Article_4_5 from '@/public/images/new/product/ablestack/ablestackCell/article_4_5.svg';
+import Logo_Article_4_6 from '@/public/images/new/product/ablestack/ablestackCell/article_4_6.svg';
+import Logo_Article_4_7 from '@/public/images/new/product/ablestack/ablestackCell/article_4_7.svg';
+import Logo_Article_4_8 from '@/public/images/new/product/ablestack/ablestackCell/article_4_8.svg';
 import Logo_Article_3_1 from '@/public/images/new/product/ablestack/ablestackGlue/article_3_1.png';
 
 const headerContent: ProductHeaderProps = {
   title: 'Cell 가상화',
-  description: `Cell은 '세포, 방'등의 의미를 가진 명사로, 하나의 개체를 구성하기 위한
-   요소가 각자의 역할을 수행하는 상태를 묘사합니다. ABLESTACK은 호스
-   트 내에서 구역을 정해 실행되는 가상머신 또는 컨테이너를 실행하기 위
-   한 하이퍼바이저에 이 이름을 붙였습니다. 말 그대로 하나의 호스트의 자
-   원을 쪼개서 각각의 역할을 수행하는 작은 단위의 세포 또는 방인 가상머
-   신을 실행하기 위한 환경을 제공하는 플랫폼입니다.`,
+  description: `
+      Cell은 '세포, 방' 등의 의미를 가진 명사로, 하나의 개체를 구성하기 위한
+      요소가 각자의 역할을 수행하는 상태를 묘사합니다. ABLESTACK은 호스트 
+      내에서 구역을 정해 실행되는 가상머신 또는 컨테이너를 실행하기 위한
+      하이퍼바이저에 이 이름을 붙였습니다. 말 그대로 하나의 호스트의 자원을
+      쪼개서 각각의 역할을 수행하는 작은 단위의 세포 또는 방인 가상머신을 
+      실행하기 위한 환경을 제공하는 플랫폼입니다.`,
   bgImage: 'bg-ablestack-cell-header-bg',
   imagePosition: 'last',
 };
@@ -81,14 +82,14 @@ export default function AblestackCellPage() {
             description={`내장된 Cell 하이퍼바이저는 기업을 위한 최적의 가상화
               플랫폼으로 광범위한 Linux 배포판 운영체제 및 
               Microsoft Windows 운영체제를 지원합니다.`}
-            image={<Logo_Article_4_1 />}
+            image={<Logo_Article_4_5 />}
           />
           <ProductContent.RowSummaryCard
             title={'데이터베이스'}
             description={`최신 커널 기반의 베어메탈급 IO 성능을 제공하여
               Oracle, MS-SQL, MySQL, Tibero 등의
               데이터베이스 운영에 적합합니다.`}
-            image={<Logo_Article_4_2 />}
+            image={<Logo_Article_4_6 />}
           />
 
           <ProductContent.RowSummaryCard
@@ -96,13 +97,13 @@ export default function AblestackCellPage() {
             description={`다양한 가상데스크톱 환경에 모두 적용이 가능하고
               단순한 구성을 제공함으로써 비대면 업무 환경 및 
               지사별 업무 환경을 구성할 수 있습니다.`}
-            image={<Logo_Article_4_3 />}
+            image={<Logo_Article_4_7 />}
           />
           <ProductContent.RowSummaryCard
             title={'멀티 클라우드'}
             description={`Cell 하이퍼바이저 및 VMWare, Citrix, Hyper-V 등의
               다양한 하이퍼바이저 환경을 구성할 수 있습니다.`}
-            image={<Logo_Article_4_4 />}
+            image={<Logo_Article_4_8 />}
           />
         </div>
       </ProductContent>

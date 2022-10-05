@@ -27,22 +27,19 @@ import Logo_Article_6_1 from '@/public/images/new/company/article_6_1.svg';
 import Logo_Article_6_2 from '@/public/images/new/company/article_6_2.svg';
 import Logo_Article_6_3 from '@/public/images/new/company/article_6_3.svg';
 import Logo_Article_6_4 from '@/public/images/new/company/article_6_4.svg';
+import Line from '@/public/images/new/line.png';
 
 const headerContent: CompanyHeaderProps = {
   title: <Logo_Article_1_1 />,
   description: (
     <div className={'text-[18px] font-[400] leading-[26.06px]'}>
       <p>
-        우리는 빠르게 변화하는 세상에서, 언제나 무한한 가능성을 봅니다.
-        <br />
-        그리고 새로운 플랫폼으로 그 가능성의 세계를 힘차게 열고 날아오릅니다.
+        우리는 빠르게 변화하는 세상에서, 언제나 무한한 가능성을 봅니다. 그리고 새로운 플랫폼으로 그
+        가능성의 세계를 힘차게 열고 날아오릅니다.
       </p>
       <p>
-        에이블클라우드는 클라우드 엔지니어의 꿈을 이루고,
-        <br />
-        또 기업이 클라우드를 통해 새로운 기회를 만들어 나가며,
-        <br />
-        혁신적인 솔루션을 세상에 널리 퍼뜨리는 일을 돕는 기업으로 성장할 것입니다.
+        에이블클라우드는 클라우드 엔지니어의 꿈을 이루고, 또 기업이 클라우드를 통해 새로운 기회를
+        만들어 나가며, 혁신적인 솔루션을 세상에 널리 퍼뜨리는 일을 돕는 기업으로 성장할 것입니다.
       </p>
     </div>
   ),
@@ -55,28 +52,25 @@ export default function CompanyPage() {
       <CompanyTemplate {...headerContent}>
         <CompanyContent
           title={
-            <div className={'text-[30px] font-[900] leading-[37.44px] text-primary'}>
+            <div className={'mt-[30px] text-[30px] font-[900] leading-[37.44px] text-primary'}>
               Software Defined Data Center
             </div>
           }
           description={
             <p className={'text-[18px] font-[400] leading-[26.06px]'}>
-              우리는 단일 클라우드 플랫폼인 ABLESTACK을 통해 <br /> 데이터센터에 필요한 인프라와
-              관리체계, 그리고 다양한 플랫폼을 제공함으로써 <br />
-              소프트웨어로 정의된 새로운 개념의 데이터센터를 실현하고 고객에게 제공합니다.
+              우리는 단일 클라우드 플랫폼인 ABLESTACK을 통해 데이터센터에 필요한 인프라와 관리체계,
+              그리고 다양한 플랫폼을 제공함으로써 소프트웨어로 정의된 새로운 개념의 데이터센터를
+              실현하고 고객에게 제공합니다.
             </p>
           }
           className={'bg-backgroudGray'}>
-          <section className='mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3'>
+          <section className='sm:gri16-cols-2 mt-8 grid grid-cols-1 gap-6 lg:grid-cols-3'>
             <CompanyContent.DescriptionCard
               title='기업 클라우드 구축 '
               image={<Logo_Article_2_1 />}
               description={
-                <p className={'m-0 whitespace-nowrap p-0 text-[16px] font-[400] leading-[23.17px]'}>
-                  가상화, 소프트웨어 정의 기술로 단순화 되고
-                  <br />
-                  안정적인 인프라를 기업에 제공하여
-                  <br />
+                <p className={'m-0 px-5 text-[16px] font-[400] leading-[23.17px]'}>
+                  가상화, 소프트웨어 정의 기술로 단순화 되고 안정적인 인프라를 기업에 제공하여
                   레거시 인프라를 현대화 합니다.
                 </p>
               }
@@ -86,11 +80,8 @@ export default function CompanyPage() {
               title='다양한 애플리케이션 제공'
               image={<Logo_Article_2_2 />}
               description={
-                <p className={'m-0 whitespace-nowrap p-0 text-[16px] font-[400] leading-[23.17px]'}>
-                  가상머신, 컨테이너 인프라 뿐 아니라 배포
-                  <br />
-                  자동화, 가상데스크톱, 빅데이터, 인공지능
-                  <br />
+                <p className={'m-0 px-5 text-[16px] font-[400] leading-[23.17px]'}>
+                  가상머신, 컨테이너 인프라 뿐 아니라 배포 자동화, 가상데스크톱, 빅데이터, 인공지능
                   등의 다양한 플랫폼을 통합하여 제공합니다.
                 </p>
               }
@@ -100,12 +91,9 @@ export default function CompanyPage() {
               title='파트너 생태계 구성'
               image={<Logo_Article_2_3 />}
               description={
-                <p className={'m-0 whitespace-nowrap p-0 text-[16px] font-[400] leading-[23.17px]'}>
-                  다양한 파트너 솔루션 지원을 통해
-                  <br />
-                  ABLESTACK 만으로 모든 애플리케이션을
-                  <br />
-                  적용할 수 있도록 파트너들과 생태계를 구성합니다.
+                <p className={'m-0 px-5 text-[16px] font-[400] leading-[23.17px]'}>
+                  다양한 파트너 솔루션 지원을 통해 ABLESTACK 만으로 모든 애플리케이션을 적용할 수
+                  있도록 파트너들과 생태계를 구성합니다.
                 </p>
               }
             />
@@ -113,30 +101,44 @@ export default function CompanyPage() {
         </CompanyContent>
 
         <CompanyContent title={'History'}>
-          <div className={'flex justify-between lg:px-[210px]'}>
-            <div className={'w-[190px] text-left'}>
-              <p className={'text-[24px] font-[700] leading-[34.75px]'}>2021</p>
-              <p className={'text-[18px] font-[400] leading-[26.06px]'}>에이블클라우드의 출발</p>
-              <p className={'my-0 text-[140px] font-[400] leading-[162.4px]'}>21</p>
-              <p className={'leading-[26.06px text-[18px] font-[400]'}>
+          <div className={'mb-[40px]'}>
+            <div className='mb-[20px] flex w-full items-center justify-between'>
+              <p className={'pr-3 pl-8 text-[24px] font-[700] leading-[34.75px] sm:pl-16'}>2021</p>
+              <Image src={Line} objectFit={'contain'} />
+              <p className={'pl-3 pr-8 text-[24px] font-[700] leading-[34.75px] sm:pr-16'}>2022</p>
+            </div>
+            <div className={'mb-[20px] flex justify-between'}>
+              <p className={'pl-8 text-[18px] font-[400] leading-[26.06px] sm:pl-16'}>
+                에이블클라우드의 출발
+              </p>
+              <p className={'pr-8 pl-2 text-[18px] font-[400] leading-[26.06px] sm:pr-16'}>
+                현재 업적까지 단
+              </p>
+            </div>
+            <div className='mb-[20px] flex justify-between'>
+              <p className={'my-[16px] pl-8 text-[140px] font-[400] leading-[162.4px] sm:pl-16'}>
+                21
+              </p>
+              <div className='my-[16px] flex justify-end whitespace-nowrap pr-8 sm:pr-16'>
+                <p className={'text-[140px] font-[400] leading-[162.4px] text-primary'}>1</p>
+                <p className='ml-[20px] mt-[90px]'>년</p>
+              </div>
+            </div>
+            <div className={'mb-[20px] flex justify-between'}>
+              <p className={'leading-[26.06px pl-8 text-left text-[18px] font-[400] sm:pl-16'}>
                 에이블클라우드는
                 <br />
                 21년에 설립된 회사입니다.
               </p>
-            </div>
-            <div className={'text-right'}>
-              <p className={'text-[24px] font-[700] leading-[34.75px]'}>2022</p>
-              <p className={'text-[18px] font-[400] leading-[26.06px]'}>현재 업적까지 단</p>
-              <p className={'my-0 text-[140px] font-[400] leading-[162.4px] text-primary'}>1</p>
-              <p className={'leading-[26.06px text-[18px] font-[400]'}>
+              <p
+                className={'leading-[26.06px pr-8 pl-2 text-right text-[18px] font-[400] sm:pr-16'}>
                 에이블클라우드의
                 <br />
                 이유있는 자신감,
               </p>
             </div>
           </div>
-          <div
-            className={'grid grid-cols-2 gap-[16px] md:grid-cols-3 lg:grid-cols-6 lg:px-[170px]'}>
+          <div className={'grid grid-cols-2 gap-[16px] sm:grid-cols-3 lg:grid-cols-6'}>
             <CompanyContent.SmallCard
               className={`bg-[#83D1FF]`}
               value={'1'}
@@ -160,14 +162,14 @@ export default function CompanyPage() {
             개발하고 발전시킵니다.`}>
           <div
             className={
-              'px-auto justify-startgrid-cols-2 grid place-content-center gap-[16px] md:grid-cols-3 lg:grid-cols-6'
+              'px-auto grid grid-cols-2 place-content-center gap-[16px] sm:grid-cols-3 lg:grid-cols-6'
             }>
-            <Logo_Article_4_1 />
-            <Logo_Article_4_2 />
-            <Logo_Article_4_3 />
-            <Logo_Article_4_4 />
-            <Logo_Article_4_5 />
-            <Logo_Article_4_6 />
+            <Logo_Article_4_1 className='m-auto' />
+            <Logo_Article_4_2 className='m-auto' />
+            <Logo_Article_4_3 className='m-auto' />
+            <Logo_Article_4_4 className='m-auto' />
+            <Logo_Article_4_5 className='m-auto' />
+            <Logo_Article_4_6 className='m-auto' />
           </div>
           <Image src={Logo_Article_4_7} />
         </CompanyContent>
@@ -306,8 +308,11 @@ export default function CompanyPage() {
             />
           </CustomSlider>
         </CompanyContent>
-        <CompanyContent title='인증 및 특허권' className={'bg-backgroudGray'}>
-          <div className={'mt-[80px] grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4'}>
+        <CompanyContent title='인증 및 특허권' className={'not-prose bg-backgroudGray py-4'}>
+          <div
+            className={
+              'sm:gri16-cols-2 mt-8 grid max-w-page-full grid-cols-1 gap-6 lg:grid-cols-4'
+            }>
             <CompanyContent.ImageItam title='기업부설연구소 인정서' image={<Logo_Article_6_1 />} />
             <CompanyContent.ImageItam title='소프트웨어품질인정서' image={<Logo_Article_6_2 />} />
             <CompanyContent.ImageItam title='저작권 등록증' image={<Logo_Article_6_3 />} />

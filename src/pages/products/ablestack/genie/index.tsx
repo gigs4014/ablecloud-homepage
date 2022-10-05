@@ -16,8 +16,13 @@ import Logo_Article_3_1 from '@/public/images/new/product/ablestack/ablestackGlu
 
 const headerContent: ProductHeaderProps = {
   title: 'Genie 셀프서비스/자동화',
-  description: `Genie는 개발형 하이브리드 클라우드 배포 자동화 플랫폼으로, ABLESTACK에 대한 자동화 뿐 아니라 퍼블릭/프라이빗 클라우드 환경에 대한 자동화 기능을 제공합니다.`,
-  bgImage: 'bg-ablestack-genie-header-bg',
+  description: `
+      Genie는 개발형 하이브리드 클라우드 배포 자동화 플랫폼으로,
+      ABLESTACK에 대한 자동화 뿐 아니라 퍼블릭/프라이빗 클라우드 환경에
+      대한 자동화 기능을 제공합니다.`,
+  textColor: 'text-black',
+  multiBgImage:
+    'bgImage bg-[url(/images/new/product/ablestack/ablestackGenie/ablestack-genie-header-fw.png),_url(/images/new/product/ablestack/ablestackGenie/ablestackGenie-header-bg.png)]',
 };
 
 export default function AblestackGeniePage() {
@@ -49,7 +54,7 @@ export default function AblestackGeniePage() {
               title: '다양한 사전 정의 배포 스크립트',
               descriptions: [
                 '웹 애플리케이션, Dev Tools, 빅데이터, AI 등의 사전정의된 플랫폼 배포 도구 제공',
-                '유명 오픈 소스 ㅡ로젝트의 배포판 제공',
+                '유명 오픈 소스 프로젝트의 배포판 제공',
               ],
             },
             {

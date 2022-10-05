@@ -7,7 +7,7 @@ import {
   ProductTemplate,
 } from '@/templates';
 
-import Logo_Article_1_1 from '@/public/images/new/product/ablestack/ablestackSlio/article_1_1.svg';
+import Logo_Article_1_1 from '@/public/images/new/product/ablestack/ablestackSlio/article_1_1.png';
 import Logo_Article_2_1 from '@/public/images/new/product/ablestack/ablestackSlio/article_2_1.svg';
 import Logo_Article_2_2 from '@/public/images/new/product/ablestack/ablestackSlio/article_2_2.svg';
 import Logo_Article_2_3 from '@/public/images/new/product/ablestack/ablestackSlio/article_2_3.svg';
@@ -19,11 +19,13 @@ import Logo_Article_4_4 from '@/public/images/new/product/ablestack/ablestackSli
 
 const headerContent: ProductHeaderProps = {
   title: 'Slio 통합 백업',
-  description: `Silo는 최신 비즈니스 환경을 위한 데이터 보호를 제공하여
-  시스템의 다운타임을 최소화하고, 백업 작업을 간단하게 합니다.
-  통합된 턴키 백업 솔루션으로 시스템을 더 쉽게 운영할 수 있습니다.`,
+  description: `
+      Silo는 최신 비즈니스 환경을 위한 데이터 보호를 제공하여
+      시스템의 다운타임을 최소화하고, 백업 작업을 간단하게 합니다.
+      통합된 턴키 백업 솔루션으로 시스템을 더 쉽게 운영할 수 있습니다.
+   `,
   bgImage: 'bg-ablestack-slio-header-bg',
-  image: <Logo_Article_1_1 />,
+  image: <Image src={Logo_Article_1_1} />,
   textColor: 'text-black',
 };
 
@@ -40,11 +42,8 @@ export default function AblestackSlioPage() {
             title={'데이터 수명 주기 관리'}
             description={
               <p>
-                통합 백업 관리 환경을 제공하여
-                <br />
-                백업/복구에 대한 가시성을 제공하고
-                <br />
-                백업 수명 주기를 관리
+                통합 백업 관리 환경을 제공하여 백업/복구에 대한 가시성을 제공하고 백업 수명 주기를
+                관리
               </p>
             }
           />
@@ -52,13 +51,7 @@ export default function AblestackSlioPage() {
             image={<Logo_Article_2_2 />}
             title={'걱정 없는 SLA 준수'}
             description={
-              <p>
-                가동시간 서비스 수준 계약을
-                <br />
-                확실하게 충족하고
-                <br />
-                효율적으로 백업/복구를 지원
-              </p>
+              <p>가동시간 서비스 수준 계약을 확실하게 충족하고 효율적으로 백업/복구를 지원</p>
             }
           />
           <ProductContent.Item
@@ -66,11 +59,7 @@ export default function AblestackSlioPage() {
             title={'통합 백업 작업'}
             description={
               <p>
-                서로 다른 데이터 보호 제품을
-                <br />
-                구매하고 지원할 필요가 없어
-                <br />
-                시스템 운영 시간을 절약
+                서로 다른 데이터 보호 제품을 구매하고 지원할 필요가 없어 시스템 운영 시간을 절약
               </p>
             }
           />

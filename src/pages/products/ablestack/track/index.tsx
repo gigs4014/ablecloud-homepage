@@ -8,7 +8,6 @@ import {
 } from '@/templates';
 
 import Logo_Article_3_1 from '@/public/images/new/product/ablestack/ablestackGlue/article_3_1.png';
-import Logo_Article_1_1 from '@/public/images/new/product/ablestack/ablestackTrack/article_1_1.png';
 import Logo_Article_2_1 from '@/public/images/new/product/ablestack/ablestackTrack/article_2_1.png';
 import Logo_Article_4_1 from '@/public/images/new/product/ablestack/ablestackTrack/article_4_1.svg';
 import Logo_Article_4_2 from '@/public/images/new/product/ablestack/ablestackTrack/article_4_2.svg';
@@ -17,12 +16,12 @@ import Logo_Article_4_4 from '@/public/images/new/product/ablestack/ablestackTra
 
 const headerContent: ProductHeaderProps = {
   title: 'Track 네트워크 및 보안',
-  description: `Track은 ABLESTACK에 가상화된 네트워킹 레이어를 구성하는 플랫폼으
-  로, 가상화 영역에 소프트웨어 정의된 네트워크를 배포합니다. 가상화된
-   네트워크 어플라이언스를 배포하여 빠르게 사용자 단위로 격리된 네트워
-   크를 배포하고 활용할 수 있습니다. `,
+  description: `
+      Track은 ABLESTACK에 가상화된 네트워킹 레이어를 구성하는 플랫폼으로, 가상화 영역에 소프트웨어 정의된 네트워크를 배포합니다. 
+      가상화된네트워크 어플라이언스를 배포하여 빠르게 사용자 단위로 격리된 네트워크를 배포하고 활용할 수 있습니다.
+   `,
   bgImage: 'bg-ablestack-track-header-bg',
-  image: <Image src={Logo_Article_1_1} />,
+  imagePosition: 'last',
 };
 
 export default function AblestackTrackPage() {

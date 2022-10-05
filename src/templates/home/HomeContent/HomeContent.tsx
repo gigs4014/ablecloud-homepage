@@ -17,7 +17,7 @@ const HomeContent = memo<PropsWithChildren<HomeContentProps>>(
   ({ title, description, className, children }) => {
     return (
       <section
-        className={cls`group relative flex w-full flex-col items-center overflow-hidden pb-16 ${className}`}>
+        className={cls`group relative flex w-full flex-col items-center overflow-hidden pb-8 ${className}`}>
         <Container.PageWidth className='items-center'>
           <header className='flex max-w-[100vw] flex-col items-center px-8 text-center'>
             {typeof title === 'string' ? (

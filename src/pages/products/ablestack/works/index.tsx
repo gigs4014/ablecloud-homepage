@@ -19,7 +19,11 @@ import Logo_Article_4_4 from '@/public/images/new/product/ablestack/ablestackWor
 
 const headerContent: ProductHeaderProps = {
   title: 'Works 데스크톱 서비스',
-  description: `ABLESTACK의 Works는 Mold상에서 DaaS(Desktop As a Service)를 제공하여 전용 클라이언트 없이 언제서가 업무 환경을 사용할 수 있는 가상 데스크톱 플랫폼 입니다.`,
+  description: `
+      ABLESTACK의 Works는 Mold상에서 DaaS(Desktop As a Service)를
+      제공하여 전용 클라이언트 없이 언제든지 업무 환경을 사용할 수 있는 가상 데스크톱
+      플랫폼 입니다.
+   `,
   bgImage: 'bg-ablestack-works-header-bg',
   image: <Image src={Logo_Article_1_1} />,
 };
@@ -35,35 +39,17 @@ export default function AblestackWorksPage() {
           <ProductContent.Item
             image={<Logo_Article_2_1 />}
             title={'HCI와 DaaS의 결합'}
-            description={
-              <p>
-                HCI와 결합되어 있기 때문에
-                <br />
-                단순한 구성, 비용 효율적임
-              </p>
-            }
+            description={<p>HCI와 결합되어 있기 때문에 단순한 구성, 비용 효율적임</p>}
           />
           <ProductContent.Item
             image={<Logo_Article_2_2 />}
             title={'클라이언트리스 가상 데스크톱'}
-            description={
-              <p>
-                배포된 데스크톱 연결에
-                <br />
-                별도의 클라이언트가 필요없음
-              </p>
-            }
+            description={<p>배포된 데스크톱 연결에 별도의 클라이언트가 필요없음</p>}
           />
           <ProductContent.Item
             image={<Logo_Article_2_3 />}
             title={'자동화된 배포'}
-            description={
-              <p>
-                Mold와 연계되어 필요 시
-                <br />
-                원클릭으로 모든 인프라를 배포
-              </p>
-            }
+            description={<p>Mold와 연계되어 필요 시 원클릭으로 모든 인프라를 배포</p>}
           />
         </div>
       </ProductContent>

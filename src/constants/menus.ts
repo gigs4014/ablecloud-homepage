@@ -148,6 +148,7 @@ export const menuItems: Array<HeaderMenuItem> = [
   },
   {
     label: '솔루션',
+    href: '/solutions',
     subMenuItems: [
       {
         label: '프라이빗 클라우드',
@@ -292,42 +293,88 @@ export const footerMenus = [
 ];
 interface FooterItem {
   label: string;
-  description: string;
+  description?: string;
 }
 
-export const footerInformation: FooterItem[][] = [
+export const footerInformation1: FooterItem[][] = [
   [
     {
-      label: '회사명  ',
-      description: '(주)에이블클라우드',
+      label: '회사명 (주)에이블클라우드',
     },
     {
-      label: '주소 본사 ',
-      description: '서울특별시 영등포구 영신로 220 KnK디지털타워 1808호',
-    },
-    {
-      label: '연구소 ',
-      description: '대전광역시 대덕구 대화로106번길 66 811호  ',
+      label: '대표 박동혁',
     },
   ],
   [
     {
-      label: '사업자등록번호 ',
-      description: '886-86-02158',
+      label: '주소 본사 서울특별시 영등포구 영신로 220 KnK디지털타워 1808호',
+    },
+  ],
+  [
+    {
+      label: '연구소 대전광역시 대덕구 대화로106번길 66 811호',
+    },
+  ],
+  [
+    {
+      label: '사업자등록번호 886-86-02158',
+    },
+  ],
+  [
+    {
+      label: '전화 02-456-7667',
     },
     {
-      label: '대표 ',
+      label: '팩스 02-456-7262',
+    },
+  ],
+  [
+    {
+      label: 'Copyright (주)에이블클라우드. All Rights Reserved.',
+    },
+  ],
+];
+
+export const footerInformation2: FooterItem[][] = [
+  [
+    {
+      label: '회사명:',
+      description: '(주)에이블클라우드',
+    },
+    {
+      label: '대표:',
       description: '박동혁',
     },
+  ],
+  [
     {
-      label: '전화 ',
+      label: '주소 본사:',
+      description: '서울특별시 영등포구 영신로 220 KnK디지털타워 1808호',
+    },
+  ],
+  [
+    {
+      label: '연구소:',
+      description: '대전광역시 대덕구 대화로106번길 66 811호',
+    },
+  ],
+  [
+    {
+      label: '사업자등록번호:',
+      description: '886-86-02158',
+    },
+  ],
+  [
+    {
+      label: '전화:',
       description: '02-456-7667',
     },
     {
-      label: '팩스 ',
+      label: '팩스:',
       description: '02-456-7262',
     },
-
+  ],
+  [
     {
       label: 'Copyright (주)에이블클라우드. All Rights Reserved.',
       description: '',

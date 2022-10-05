@@ -6,7 +6,7 @@ import { menuItems } from '@/constants';
 import { useMediaQuery } from 'react-responsive';
 import { v4 as uuid } from 'uuid';
 
-import useScrollDown from '@/hooks/common/useScrollDown';
+// import useScrollDown from '@/hooks/common/useScrollDown';
 import { HeaderMenuItem, TNullable } from '@/types';
 import { cls } from '@/utils';
 
@@ -14,18 +14,19 @@ import { CustomLink } from '@/components/common';
 
 import Logo_ablecloud_default from '@/public/images/logos/ablecloud_logo_default.svg';
 import Logo_ablecloud_white from '@/public/images/logos/ablecloud_logo_white.svg';
-import BurgerSVG from '@/public/images/new/burger.svg';
-import CloseSVG from '@/public/images/new/close.svg';
+import BlackBurgerSVG from '@/public/images/new/burger.svg';
+import BlackCloseSVG from '@/public/images/new/close.svg';
+import WhiteBurgerSVG from '@/public/images/new/white_burger.svg';
+import WhiteCloseSVG from '@/public/images/new/white_close.svg';
 
 import { MenuItem, MobileMenuItem, getSelectedItem } from './Menu';
 
-export default function Header() {
+export default function Header(ref: React.MutableRefObject<TNullable<HTMLDivElement>>) {
   const { asPath } = useRouter();
   const [subMenuItems, setSubMenuItems] = useState<Array<HeaderMenuItem> | undefined>();
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
   const [isBigScreen, setIsBigScreen] = useState<boolean | undefined>();
-  const [isProductsAbleStackPage, setIsProductAbleStackPage] = useState(false);
-  const [isProductsAbleStackPageException, setIsProductAbleStackPageException] = useState(false);
+  const [isTextWhitePage, setIsTextWhitePage] = useState(false);
   const [isMobileMenu, setIsMobileMenu] = useState(false);
 
   const bigScreen = useMediaQuery({ query: '(min-width: 768px)' });
@@ -34,20 +35,33 @@ export default function Header() {
 
   const headerRef = useRef<TNullable<HTMLDivElement>>(null);
 
-  // const { darkMode, setDarkMode } = useDarkMode();
-
-  const isCurrentScrollTop = useScrollDown(headerRef);
+  // let isCurrentScrollTop = useScrollDown(headerRef);
+  const [isCurrentScrollTop, setIsCurrentScrollTop] = useState(true);
+  const [isWhiteHeader, setIsWhiteHeader] = useState(true);
 
   useEffect(() => {
-    if (asPath.includes('/products/ablestack')) {
-      setIsProductAbleStackPage(true);
-      if (['mold', 'volume', 'files', 'slio', 'station'].some(name => asPath.includes(name))) {
-        setIsProductAbleStackPageException(true);
+    setIsTextWhitePage(false);
+
+    if (asPath.includes('/products')) {
+      if (
+        ['mold', 'block', 'files', 'slio', 'station', 'genie'].some(name => asPath.includes(name))
+      ) {
+        setIsTextWhitePage(false);
       } else {
-        setIsProductAbleStackPageException(false);
+        setIsTextWhitePage(true);
+      }
+    } else if (asPath.includes('/interview')) {
+      setIsTextWhitePage(false);
+      if (['kacpta'].some(name => asPath.includes(name))) {
+        setIsTextWhitePage(true);
+      } else {
+        setIsTextWhitePage(false);
       }
     } else {
-      setIsProductAbleStackPage(false);
+      setIsTextWhitePage(false);
+      if (asPath.includes('/partners')) {
+        setIsTextWhitePage(true);
+      }
     }
     setSelectedItem(getSelectedItem(menuItems, asPath));
   }, [asPath]);
@@ -56,6 +70,19 @@ export default function Header() {
     setIsBigScreen(bigScreen);
   }, [bigScreen]);
 
+  useEffect(() => {
+    const listener = () => {
+      const currentScrollPos = window.pageYOffset;
+      if (currentScrollPos == 0) {
+        setIsCurrentScrollTop(true);
+      } else {
+        setIsCurrentScrollTop(false);
+      }
+    };
+    window.addEventListener('scroll', listener);
+    return () => window.removeEventListener('scroll', listener);
+  });
+
   // useEffect(() => {
   //   console.log({ isCurrentScrollTop });
   // }, [isCurrentScrollTop]);
@@ -63,11 +90,17 @@ export default function Header() {
   return (
     <header
       ref={headerRef}
-      className={`${
-        isCurrentScrollTop && isProductsAbleStackPage && isBigScreen ? 'absolute' : 'sticky'
-      } top-0 z-20 flex ${
+      className={`fixed top-0 z-20 flex ${
         isBigScreen ? 'h-[110px]' : 'min-h-[60px]'
-      } w-full items-center justify-center bg-white`}>
+      } w-full items-center justify-center ${
+        isCurrentScrollTop
+          ? !isWhiteHeader
+            ? 'bg-none'
+            : 'bg-white'
+          : !isWhiteHeader
+          ? 'bg-white'
+          : 'bg-white'
+      }`}>
       <nav
         onMouseEnter={() => isBigScreen && setIsSubMenuOpen(true)}
         onMouseLeave={() => {
@@ -82,10 +115,9 @@ export default function Header() {
           {/* Logo */}
           <div className='px-4'>
             <CustomLink href='/'>
-              {isCurrentScrollTop &&
-              isProductsAbleStackPage &&
-              isBigScreen &&
-              !isProductsAbleStackPageException ? (
+              {isCurrentScrollTop && !isWhiteHeader && isTextWhitePage ? (
+                // isBigScreen &&
+                // !isProductsAbleStackPageException ?
                 <Logo_ablecloud_white />
               ) : (
                 <Logo_ablecloud_default />
@@ -100,11 +132,7 @@ export default function Header() {
                   <MenuItem
                     item={item}
                     selectedItem={selectedItem}
-                    isProductsAbleStackPage={
-                      isCurrentScrollTop &&
-                      isProductsAbleStackPage &&
-                      !isProductsAbleStackPageException
-                    }
+                    isProductsAbleStackPage={isCurrentScrollTop && isTextWhitePage}
                   />
                 </li>
               ))}
@@ -113,8 +141,17 @@ export default function Header() {
             <>
               {isMobileMenu ? (
                 <>
-                  <div className={'cursor-pointer'} onClick={() => setIsMobileMenu(false)}>
-                    <CloseSVG width={'22'} height={'22'} />
+                  <div
+                    className={'cursor-pointer'}
+                    onClick={() => {
+                      setIsWhiteHeader(false);
+                      setIsMobileMenu(false);
+                    }}>
+                    {isCurrentScrollTop && !isWhiteHeader && isTextWhitePage ? (
+                      <WhiteCloseSVG width={'22'} height={'22'} />
+                    ) : (
+                      <BlackCloseSVG width={'22'} height={'22'} />
+                    )}
                   </div>
                   <ul
                     className={
@@ -122,14 +159,27 @@ export default function Header() {
                     }>
                     {menuItems.map(item => (
                       <li key={uuid()}>
-                        <MobileMenuItem item={item} selectedItem={selectedItem} />
+                        <MobileMenuItem
+                          item={item}
+                          selectedItem={selectedItem}
+                          setIsMobileMenu={setIsMobileMenu}
+                        />
                       </li>
                     ))}
                   </ul>
                 </>
               ) : (
-                <div className={'cursor-pointer'} onClick={() => setIsMobileMenu(true)}>
-                  <BurgerSVG width={'22'} height={'22'} />
+                <div
+                  className={'cursor-pointer'}
+                  onClick={() => {
+                    setIsWhiteHeader(true);
+                    setIsMobileMenu(true);
+                  }}>
+                  {isTextWhitePage && isCurrentScrollTop ? (
+                    <WhiteBurgerSVG width={'22'} height={'22'} />
+                  ) : (
+                    <BlackBurgerSVG width={'22'} height={'22'} />
+                  )}
                 </div>
               )}
             </>

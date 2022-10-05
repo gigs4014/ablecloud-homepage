@@ -70,12 +70,10 @@ const Logo_Article_6_3 = React.lazy(
 const headerContent: ProductHeaderProps = {
   title: 'ABLESTACK HCI',
   description: `ABLESTACK은 엔터프라이즈 클라우드 환경을 구축하는
-  HCI (Hyper Converged Infrastructure) 플랫폼입니다.
-  단 하나의 플랫폼으로 가상머신, 앱, 가상화/클라우드 등 
-  사용하고 관리할 수 있습니다. 상용 x86 서버에 10G Network에 연결하고
-  ABLESTACK을 설치하면 지금 바로 핵심 인프라를 포함하여
-  모든 서비스를 시작할 수 있습니다.
-  `,
+      HCI (Hyper Converged Infrastructure) 플랫폼입니다.
+      단 하나의 플랫폼으로 가상머신, 앱, 가상화/클라우드 등 사용하고 관리할 수
+      있습니다. 상용 x86 서버에 10G Network에 연결하고 ABLESTACK을 설치하면 지금 바로 핵심 인프라를
+      포함하여 모든 서비스를 시작할 수 있습니다.`,
   image: <Image src={Logo_Article_1_1} />,
   bgImage: 'bg-ablestack-header-bg',
 };
@@ -86,8 +84,13 @@ export default function AblestackPage() {
       <ProductContent
         className={'bg-backgroudGray'}
         title='ABLESTACK HCI'
-        description={`복잡한 구조의 전통적 기업 데이터센터의 문제점을 해결하고, IT 환경의 급속한 발전으로 인해 발생하는 문제점을 해결하기 위해
-단일 서버 구성으로 모든 인프라와 플랫폼을 실행할 수 있도록 고안된 HCI 플랫폼 입니다.`}>
+        description={
+          <p className={'mt-5 mb-10 leading-normal'}>
+            복잡한 구조의 전통적 기업 데이터센터의 문제점을 해결하고, IT 환경의 급속한 발전으로 인해
+            발생하는 문제점을 해결하기 위해 단일 서버 구성으로 모든 인프라와 플랫폼을 실행할 수
+            있도록 고안된 HCI 플랫폼 입니다.
+          </p>
+        }>
         <div className={'flex w-full justify-center'}>
           <CustomLink href='/products' hoverBehavoir='none'>
             <Button solid>개요 보러가기</Button>
@@ -100,8 +103,8 @@ export default function AblestackPage() {
           title='ABLESTACK 인프라스트럭처'
           description={
             <p className='mt-[24px] text-[16px] font-[400] leading-[23.17px]'>
-              ABLESTACK으로 구성된 클라우드 환경을 통해 스토리지, 가상머신, 컨테이너,
-              <br /> 네트워크 등의 인프라를 생성하여 사용할 수 있습니다.
+              ABLESTACK으로 구성된 클라우드 환경을 통해 스토리지, 가상머신, 컨테이너, 네트워크 등의
+              인프라를 생성하여 사용할 수 있습니다.
             </p>
           }
         />
@@ -153,7 +156,6 @@ export default function AblestackPage() {
           description={
             <p className='mt-[24px] text-[16px] font-[400] leading-[23.17px]'>
               ABLESTACK은 설치와 동시에 셀프서비스 방식의 클라우드 플랫폼 및 자동화 플랫폼을
-              <br />
               사용하고, 자원의 운영현황을 모니터링할 수 있습니다.
             </p>
           }
@@ -194,9 +196,8 @@ export default function AblestackPage() {
           title='통합 스토리지'
           description={
             <p className='mt-[24px] text-[16px] font-[400] leading-[23.17px]'>
-              ABLESTACK 스토리지는 다양한 게이트웨이를 지원하여 블록, 파일시스템,
-              <br />
-              오브젝트 스토리지, 그리고 백업 기능을 제공합니다.
+              ABLESTACK 스토리지는 다양한 게이트웨이를 지원하여 블록, 파일시스템, 오브젝트 스토리지,
+              그리고 백업 기능을 제공합니다.
             </p>
           }
         />
@@ -240,16 +241,15 @@ export default function AblestackPage() {
       </ProductContent>
 
       <ProductContent
-        className={'bg-backgroudGray'}
+        className={'bg-[#EEF4FB]'}
         imagePosition={'first'}
         image={<Image src={Logo_Article_6_1} loading={'lazy'} />}>
         <ProductContent.Intro
           title='플랫폼 및 서비스'
           description={
             <p className='mt-[24px] text-[16px] font-[400] leading-[23.17px]'>
-              ABLESTACK은 빅데이터 및 인공지능 플랫폼 및 가상데스크톱을 제공하여 신속하게
-              <br />
-              시스템 개발 및 원격 업무 환경을 구성할 수 있습니다.
+              ABLESTACK은 빅데이터 및 인공지능 플랫폼 및 가상데스크톱을 제공하여 신속하게 시스템
+              개발 및 원격 업무 환경을 구성할 수 있습니다.
             </p>
           }
         />
