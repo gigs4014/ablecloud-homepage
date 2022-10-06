@@ -37,7 +37,7 @@ function FooterInformation() {
     <section className={'relative w-full bg-[#414141] py-8'}>
       <div className={'m-auto flex w-full max-w-page-full flex-wrap px-8 md:flex-nowrap'}>
         <div className='my-6 mr-24 flex items-center md:my-0 '>
-          <Logo_ablecloud_white />
+          <Logo_ablecloud_white width={125} />
         </div>
         <div className='flex flex-col'>
           {footerInformation.map((info, index) => {

@@ -17,7 +17,6 @@ import Logo_ablecloud_white from '@/public/images/logos/ablecloud_logo_white.svg
 import BlackBurgerSVG from '@/public/images/new/burger.svg';
 import BlackCloseSVG from '@/public/images/new/close.svg';
 import WhiteBurgerSVG from '@/public/images/new/white_burger.svg';
-import WhiteCloseSVG from '@/public/images/new/white_close.svg';
 
 import { MenuItem, MobileMenuItem, getSelectedItem } from './Menu';
 
@@ -40,9 +39,22 @@ export default function Header(ref: React.MutableRefObject<TNullable<HTMLDivElem
   const [isWhiteHeader, setIsWhiteHeader] = useState<boolean | undefined>();
 
   useEffect(() => {
+    const listener = () => {
+      const currentScrollPos = window.pageYOffset;
+      if (currentScrollPos == 0) {
+        setIsCurrentScrollTop(true);
+      } else {
+        setIsCurrentScrollTop(false);
+      }
+    };
+    listener();
+    window.addEventListener('scroll', listener);
+    return () => window.removeEventListener('scroll', listener);
+  });
+
+  useEffect(() => {
     setIsTextWhitePage(false);
     setIsWhiteHeader(false);
-    setIsCurrentScrollTop(true);
     if (asPath.includes('/products')) {
       if (
         ['mold', 'block', 'files', 'slio', 'station', 'genie'].some(name => asPath.includes(name))
@@ -52,7 +64,6 @@ export default function Header(ref: React.MutableRefObject<TNullable<HTMLDivElem
         setIsTextWhitePage(true);
       }
     } else if (asPath.includes('/interview')) {
-      setIsTextWhitePage(false);
       if (['kacpta'].some(name => asPath.includes(name))) {
         setIsTextWhitePage(true);
       } else {
@@ -60,7 +71,7 @@ export default function Header(ref: React.MutableRefObject<TNullable<HTMLDivElem
       }
     } else {
       setIsTextWhitePage(false);
-      if (asPath.includes('/partners')) {
+      if (asPath.includes('/partners') || asPath == '/') {
         setIsTextWhitePage(true);
       }
     }
@@ -70,19 +81,6 @@ export default function Header(ref: React.MutableRefObject<TNullable<HTMLDivElem
   useEffect(() => {
     setIsBigScreen(bigScreen);
   }, [bigScreen]);
-
-  useEffect(() => {
-    const listener = () => {
-      const currentScrollPos = window.pageYOffset;
-      if (currentScrollPos == 0) {
-        setIsCurrentScrollTop(true);
-      } else {
-        setIsCurrentScrollTop(false);
-      }
-    };
-    window.addEventListener('scroll', listener);
-    return () => window.removeEventListener('scroll', listener);
-  });
 
   // useEffect(() => {
   //   console.log({ isCurrentScrollTop });
@@ -106,16 +104,16 @@ export default function Header(ref: React.MutableRefObject<TNullable<HTMLDivElem
         }}
         className='group relative z-20 flex h-fit max-w-page-full flex-1 flex-col flex-nowrap '>
         {/* Main menu section */}
-        <section className='flex w-full items-center justify-between px-4'>
+        <section className='flex w-full items-center justify-between px-2'>
           {/* Logo */}
-          <div className='px-4'>
+          <div className='pl-2 pt-2'>
             <CustomLink href='/'>
               {isCurrentScrollTop && !isWhiteHeader && isTextWhitePage ? (
                 // isBigScreen &&
                 // !isProductsAbleStackPageException ?
-                <Logo_ablecloud_white />
+                <Logo_ablecloud_white width={isBigScreen ? '180' : '125'} />
               ) : (
-                <Logo_ablecloud_default />
+                <Logo_ablecloud_default width={isBigScreen ? '180' : '125'} />
               )}
             </CustomLink>
           </div>
@@ -142,11 +140,7 @@ export default function Header(ref: React.MutableRefObject<TNullable<HTMLDivElem
                       setIsWhiteHeader(false);
                       setIsMobileMenu(false);
                     }}>
-                    {isCurrentScrollTop && !isWhiteHeader && isTextWhitePage ? (
-                      <WhiteCloseSVG width={'22'} height={'22'} />
-                    ) : (
-                      <BlackCloseSVG width={'22'} height={'22'} />
-                    )}
+                    <BlackCloseSVG width={'26'} height={'26'} />
                   </div>
                   <ul
                     className={
@@ -171,9 +165,9 @@ export default function Header(ref: React.MutableRefObject<TNullable<HTMLDivElem
                     setIsMobileMenu(true);
                   }}>
                   {isTextWhitePage && isCurrentScrollTop ? (
-                    <WhiteBurgerSVG width={'22'} height={'22'} />
+                    <WhiteBurgerSVG width={'26'} height={'26'} />
                   ) : (
-                    <BlackBurgerSVG width={'22'} height={'22'} />
+                    <BlackBurgerSVG width={'26'} height={'26'} />
                   )}
                 </div>
               )}
