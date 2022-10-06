@@ -36,12 +36,13 @@ export default function Header(ref: React.MutableRefObject<TNullable<HTMLDivElem
   const headerRef = useRef<TNullable<HTMLDivElement>>(null);
 
   // let isCurrentScrollTop = useScrollDown(headerRef);
-  const [isCurrentScrollTop, setIsCurrentScrollTop] = useState(true);
-  const [isWhiteHeader, setIsWhiteHeader] = useState(true);
+  const [isCurrentScrollTop, setIsCurrentScrollTop] = useState<boolean | undefined>();
+  const [isWhiteHeader, setIsWhiteHeader] = useState<boolean | undefined>();
 
   useEffect(() => {
     setIsTextWhitePage(false);
-
+    setIsWhiteHeader(false);
+    setIsCurrentScrollTop(true);
     if (asPath.includes('/products')) {
       if (
         ['mold', 'block', 'files', 'slio', 'station', 'genie'].some(name => asPath.includes(name))
@@ -93,13 +94,7 @@ export default function Header(ref: React.MutableRefObject<TNullable<HTMLDivElem
       className={`fixed top-0 z-20 flex ${
         isBigScreen ? 'h-[110px]' : 'min-h-[60px]'
       } w-full items-center justify-center ${
-        isCurrentScrollTop
-          ? !isWhiteHeader
-            ? 'bg-none'
-            : 'bg-white'
-          : !isWhiteHeader
-          ? 'bg-white'
-          : 'bg-white'
+        isCurrentScrollTop ? (!isWhiteHeader ? 'bg-none' : 'bg-white') : 'bg-white'
       }`}>
       <nav
         onMouseEnter={() => isBigScreen && setIsSubMenuOpen(true)}

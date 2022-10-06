@@ -1,4 +1,4 @@
-import { footerInformation2, footerMenus } from '@/constants';
+import { footerInformation, footerMenus } from '@/constants';
 import { v4 as uuid } from 'uuid';
 
 import { cls } from '@/utils';
@@ -40,7 +40,7 @@ function FooterInformation() {
           <Logo_ablecloud_white />
         </div>
         <div className='flex flex-col'>
-          {footerInformation2.map((info, index) => {
+          {footerInformation.map((info, index) => {
             return (
               <div key={index}>
                 {info.map((value, index) => {
