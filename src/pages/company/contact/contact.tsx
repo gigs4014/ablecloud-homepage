@@ -1,21 +1,23 @@
 import { Button, CustomLink } from '@/components/common';
 import { Container } from '@/components/layout';
 
-export default function ContactPage() {
+export default function ContactPage({ title, type }: { title: string; type: string }) {
   return (
     <>
       <Container.Article enableProseSpacing={true}>
         <Container.PageWidth separateWithPeer invertBg className='text-center'>
-          <h1>기술지원 및 데모요청</h1>
+          <h1>{title}</h1>
 
           <p>
-            ABLESTACK 전체 제품에 대한 기술지원 및 데모지원 서비스를 제공합니다. 다음의 양식에
-            기술지원 요청 내용을 작성하신 후 이메일을 보내면 담당자 확인 후 회신하여 드립니다.
+            {type === '문의'
+              ? ''
+              : 'ABLESTACK 전체 제품에 대한 기술지원 및 데모지원 서비스를 제공합니다. 다음의 양식에'}{' '}
+            {type} 내용을 작성하신 후 이메일을 보내면 담당자 확인 후 회신하여 드립니다.
           </p>
         </Container.PageWidth>
 
         <Container.PageWidth separateWithPeer invertBg>
-          <ContactForm />
+          <ContactForm type={type} />
         </Container.PageWidth>
 
         <Container.PageWidth separateWithPeer invertBg>
@@ -57,7 +59,7 @@ export default function ContactPage() {
   );
 }
 
-function ContactForm() {
+function ContactForm({ type }: { type: string }) {
   return (
     <form
       name='sentMessage'
@@ -103,12 +105,16 @@ function ContactForm() {
         </div>
         <div className='flex flex-col'>
           <label className='mb-1 border-l-0.5 border-transparent pl-2 text-sm text-neutral-600'>
-            기술지원요청 내용
+            {type} 내용
           </label>
           <textarea
             rows={5}
             className='rounded-md p-2 shadow-[inset_0_2px_4px_0] shadow-neutral-200'
-            placeholder='기술지원을 요청할 내용을 입력하세요. 요청 구분(제품소개, 데모요청, 기술지원), 회사, 담당자, 기술지원요청 목적 등을 명확하게 알 수 있도록 작성해 주십시오. 내용 확인 후 바로 회신 드리겠습니다.'
+            placeholder={
+              type === '문의'
+                ? '문의 내용을 명확하게 알 수 있도록 작성해 주십시오. 내용 확인 후 바로 회신 드리겠습니다.'
+                : '기술지원을 요청할 내용을 입력하세요. 요청 구분(제품소개, 데모요청, 기술지원), 회사, 담당자, 기술지원요청 목적 등을 명확하게 알 수 있도록 작성해 주십시오. 내용 확인 후 바로 회신 드리겠습니다.'
+            }
             id='message'
             name='message'
             required
@@ -120,7 +126,7 @@ function ContactForm() {
 
       <div className='self-center'>
         <Button type='submit' id='sendMessageButton'>
-          기술지원요청 이메일 보내기
+          {type} 이메일 보내기
         </Button>
       </div>
     </form>

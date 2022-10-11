@@ -28,7 +28,7 @@ const CommonDemoContent = memo<BaseComponentProps>(({ className }) => {
         image={<Image src={Logo_Article_5_2} objectFit={'cover'} height={218} />}
         description={'에이블스택을 먼저 체험하고, 사용해보세요.'}
         buttonTitle={'기술 지원 및 데모 요청'}
-        href={'/'}
+        href={'/company/contact/support'}
       />
       <ActionCard
         hoverBehavior={'scale'}
@@ -38,7 +38,7 @@ const CommonDemoContent = memo<BaseComponentProps>(({ className }) => {
           '에이블스택 전문가와 직접 상담해보세요. 여러분에게 최적화된 솔루션 구축을 약속드려요.'
         }
         buttonTitle={'문의하러 가기'}
-        href={'/'}
+        href={'/company/contact/inquire'}
       />
     </div>
   );

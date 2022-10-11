@@ -218,11 +218,7 @@ export default function HomePage() {
             </p>
           }>
           <div className='mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3'>
-<<<<<<< Updated upstream
-            <CustomLink href={'/company'}>
-=======
             <CustomLink href={'/'}>
->>>>>>> Stashed changes
               <HomeContent.ItemGrid
                 containerClassName='border-borderGrayColor border-1'
                 title='단일 클라우드 플랫폼'
@@ -231,12 +227,7 @@ export default function HomePage() {
                 hoverBehavior={'scale'}
               />
             </CustomLink>
-
-<<<<<<< Updated upstream
-            <CustomLink href={'/products/ablestack/mold'}>
-=======
             <CustomLink href={'/'}>
->>>>>>> Stashed changes
               <HomeContent.ItemGrid
                 containerClassName='border-borderGrayColor border-1'
                 title='웹기반 통합 관리 플랫폼'
@@ -245,12 +236,7 @@ export default function HomePage() {
                 hoverBehavior={'scale'}
               />
             </CustomLink>
-
-<<<<<<< Updated upstream
-            <CustomLink href={'/products/ablestack'}>
-=======
             <CustomLink href={'/'}>
->>>>>>> Stashed changes
               <HomeContent.ItemGrid
                 containerClassName='border-borderGrayColor border-1'
                 title='새로운 개념의 데이터센터'
