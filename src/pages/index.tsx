@@ -29,20 +29,23 @@ const headerContents = (fontSize: string): HomeHeaderProps[] => [
   {
     title: 'Cloud Innovation 2023',
     description: (
-      <p className={`m-0 p-0 ${fontSize} font-[400] leading-[26.06px]`}>
-        <p className='text-[20px]'>
-          에이블클라우드의 국산 HCI 솔루션 ‘ABLESTACK’ <br />
-          그리고 Eco System 솔루션 소개 세미나
+      <div className={`m-0 p-0 ${fontSize} font-[400] leading-[26.06px]`}>
+        <p className='m-auto w-full max-w-[350px]'>
+          에이블클라우드의 국산 HCI 솔루션 ‘ABLESTACK’ 그리고 Eco System 솔루션 소개 세미나
         </p>
         <br />
-        <p className='text-[16px]'>
-          2022년 11월 03일(목)
-          <br />
-          포포인츠 바이 쉐라톤 구로 - G볼룸
-          <br />
-          오후 2시 - 오후 5시
+        <p className='m-auto w-full max-w-[750px]'>
+          빠르게 변화하는 IT인프라, 에이블클라우드는 이러한 변화속에서 대응할 수 있도록 본 행사를
+          개최합니다. Cloud Innovation 2023은 차세대 디지털 전환에 대비한 솔루션을 소개합니다. 본
+          행사를 통해 파트너분들을 위한 다양한 솔루션 및 제품에 대한 유용한 정보를 얻어가시길
+          바랍니다.
         </p>
-      </p>
+        <br />
+        <br />
+        <p className='m-auto w-full max-w-[410px]'>
+          2022년 11월 03일(목) 포포인츠 바이 쉐라톤 구로 - G볼룸 오후 2시 - 오후 5시
+        </p>
+      </div>
     ),
     bgImage: 'bg-home-header-bg-3',
     headerExtra: (
@@ -215,7 +218,7 @@ export default function HomePage() {
             </p>
           }>
           <div className='mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3'>
-            <CustomLink href={'/company'}>
+            <CustomLink href={'/'}>
               <HomeContent.ItemGrid
                 containerClassName='border-borderGrayColor border-1'
                 title='단일 클라우드 플랫폼'
@@ -224,8 +227,7 @@ export default function HomePage() {
                 hoverBehavior={'scale'}
               />
             </CustomLink>
-
-            <CustomLink href={'/products/ablestack/mold'}>
+            <CustomLink href={'/'}>
               <HomeContent.ItemGrid
                 containerClassName='border-borderGrayColor border-1'
                 title='웹기반 통합 관리 플랫폼'
@@ -234,8 +236,7 @@ export default function HomePage() {
                 hoverBehavior={'scale'}
               />
             </CustomLink>
-
-            <CustomLink href={'/products/ablestack'}>
+            <CustomLink href={'/'}>
               <HomeContent.ItemGrid
                 containerClassName='border-borderGrayColor border-1'
                 title='새로운 개념의 데이터센터'

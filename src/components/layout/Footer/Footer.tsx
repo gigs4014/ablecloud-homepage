@@ -1,25 +1,26 @@
-import { footerMenus } from '@/constants';
+import { footerInformation, footerMenus } from '@/constants';
 import { v4 as uuid } from 'uuid';
 
 import { cls } from '@/utils';
 
 import { CustomLink } from '@/components/common';
 
-import Logo_ablecloud_gray from '@/public/images/logos/ablecloud_logo_gray.svg';
+import Logo_ablecloud_white from '@/public/images/logos/ablecloud_logo_white.svg';
 
+// 사용안함
 function FooterSite() {
   return (
-    <section className={'hidden h-fit py-[50px] px-8 lg:block'}>
-      <ul className={`flex max-w-page-full list-none justify-between`}>
+    <section className={'relative hidden h-56 px-5 pt-12 pb-2 lg:block'}>
+      <ul className={`m-auto flex max-w-page-full list-none justify-between px-4`}>
         {footerMenus.map(menu => (
           <li key={uuid()} className={'min-w-50 float-left'}>
             <ol className={'bg-red'}>
-              <li className='font-[700]'>{menu.label}</li>
+              <li className='font-[700] text-[#555555]'>{menu.label}</li>
               {menu.subMenuItems.map(subMenu => (
                 <CustomLink
                   key={uuid()}
                   href={subMenu.href}
-                  className={cls`mt-[8px] flex h-full w-full items-center justify-between`}>
+                  className={cls`mt-2 flex h-full w-full items-center justify-between text-[#555555]`}>
                   <li>{subMenu.label}</li>
                 </CustomLink>
               ))}
@@ -31,37 +32,50 @@ function FooterSite() {
   );
 }
 
+function FooterInformation() {
+  return (
+    <section className={'relative w-full bg-[#414141] py-8'}>
+      <div className={'m-auto flex w-full max-w-page-full flex-wrap px-8 md:flex-nowrap'}>
+        <div className='my-6 mr-24 flex items-center md:my-0 '>
+          <Logo_ablecloud_white width={125} />
+        </div>
+        <div className='flex flex-col'>
+          {footerInformation.map((info, index) => {
+            return (
+              <div key={index}>
+                {info.map((value, index) => {
+                  return (
+                    <div key={index} className={`mr-2 inline-flex tracking-wide text-black`}>
+                      <div className='flex'>
+                        <div className='text-[14px] text-white'>
+                          {value.label}&nbsp;{value.description}
+                        </div>
+                        {info.length > 1 && index + 1 < info.length ? (
+                          <div className='my-1 ml-2 hidden bg-white pr-[1px] md:flex'></div>
+                        ) : (
+                          ''
+                        )}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function Footer() {
   return (
-    <footer className={`hidden w-full max-w-page-full lg:block`}>
+    <footer className={`relative w-full`}>
       {/* simplified logo */}
       {/* copyright */}
       {/* social logos */}
       <FooterSite />
-
-      <div className={'my-8 flex justify-between px-8'}>
-        <Logo_ablecloud_gray />
-
-        <div className='flex space-x-4 text-xs text-neutral-500'>
-          <span>서비스 이용약관</span>
-
-          <span>개인정보 처리방침</span>
-
-          <span>주소</span>
-
-          <ul className='flex space-x-1'>
-            <li>
-              <p>{`연구소(대전)`}</p>
-              <p>{`본사(서울)`}</p>
-            </li>
-
-            <li>
-              <p className='before:content-["_:_"] '>{`대전광역시 대덕구 대화동 대전로 106번길 66, 펜타플렉스 811호`}</p>
-              <p className='before:content-["_:_"] '>{`서울특별시 영등포구 영신로 220 KnK디지털타워 1808호`}</p>
-            </li>
-          </ul>
-        </div>
-      </div>
+      <FooterInformation />
       {/* pages not in header */}
     </footer>
   );
