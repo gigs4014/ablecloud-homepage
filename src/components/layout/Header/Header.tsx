@@ -24,57 +24,50 @@ export default function Header(ref: React.MutableRefObject<TNullable<HTMLDivElem
   const { asPath } = useRouter();
   const [subMenuItems, setSubMenuItems] = useState<Array<HeaderMenuItem> | undefined>();
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
-  const [isBigScreen, setIsBigScreen] = useState<boolean | undefined>();
+  const [isBigScreen, setIsBigScreen] = useState<boolean>(false);
   const [isTextWhitePage, setIsTextWhitePage] = useState(false);
   const [isMobileMenu, setIsMobileMenu] = useState(false);
 
-  const bigScreen = useMediaQuery({ query: '(min-width: 768px)' });
-
   const [selectedItem, setSelectedItem] = useState<HeaderMenuItem | undefined>();
+
+  const [isCurrentScrollTop, setIsCurrentScrollTop] = useState<boolean>(false);
+  const [isWhiteHeader, setIsWhiteHeader] = useState<boolean>(false);
 
   const headerRef = useRef<TNullable<HTMLDivElement>>(null);
 
+  const bigScreen = useMediaQuery({ query: '(min-width: 768px)' });
+
   // let isCurrentScrollTop = useScrollDown(headerRef);
-  const [isCurrentScrollTop, setIsCurrentScrollTop] = useState<boolean | undefined>();
-  const [isWhiteHeader, setIsWhiteHeader] = useState<boolean | undefined>();
+
+  const toggleMenu = () => {
+    setIsWhiteHeader(prevState => !prevState);
+    setIsMobileMenu(prevState => !prevState);
+  };
 
   useEffect(() => {
     const listener = () => {
       const currentScrollPos = window.pageYOffset;
-      if (currentScrollPos == 0) {
-        setIsCurrentScrollTop(true);
-      } else {
-        setIsCurrentScrollTop(false);
-      }
+      setIsCurrentScrollTop(currentScrollPos === 0);
     };
     listener();
     window.addEventListener('scroll', listener);
+
     return () => window.removeEventListener('scroll', listener);
   });
 
   useEffect(() => {
     setIsTextWhitePage(false);
-    setIsWhiteHeader(false);
+
     if (asPath.includes('/products')) {
-      if (
-        ['mold', 'block', 'files', 'slio', 'station', 'genie'].some(name => asPath.includes(name))
-      ) {
-        setIsTextWhitePage(false);
-      } else {
-        setIsTextWhitePage(true);
-      }
+      setIsTextWhitePage(
+        !['mold', 'block', 'files', 'slio', 'station', 'genie'].some(name => asPath.includes(name)),
+      );
     } else if (asPath.includes('/interview')) {
-      if (['kacpta'].some(name => asPath.includes(name))) {
-        setIsTextWhitePage(true);
-      } else {
-        setIsTextWhitePage(false);
-      }
+      setIsTextWhitePage(['kacpta'].some(name => asPath.includes(name)));
     } else {
-      setIsTextWhitePage(false);
-      if (asPath.includes('/partners') || asPath == '/') {
-        setIsTextWhitePage(true);
-      }
+      setIsTextWhitePage(asPath.includes('/partners') || asPath === '/');
     }
+
     setSelectedItem(getSelectedItem(menuItems, asPath));
   }, [asPath]);
 
@@ -106,7 +99,7 @@ export default function Header(ref: React.MutableRefObject<TNullable<HTMLDivElem
         {/* Main menu section */}
         <section className='flex w-full items-center justify-between px-2'>
           {/* Logo */}
-          <div className='pl-2 pt-2'>
+          <div className='pl-2 pt-1'>
             <CustomLink href='/'>
               {isCurrentScrollTop && !isWhiteHeader && isTextWhitePage ? (
                 // isBigScreen &&
@@ -134,12 +127,7 @@ export default function Header(ref: React.MutableRefObject<TNullable<HTMLDivElem
             <>
               {isMobileMenu ? (
                 <>
-                  <div
-                    className={'cursor-pointer'}
-                    onClick={() => {
-                      setIsWhiteHeader(false);
-                      setIsMobileMenu(false);
-                    }}>
+                  <div className={'cursor-pointer'} onClick={toggleMenu}>
                     <BlackCloseSVG width={'26'} height={'26'} />
                   </div>
                   <ul
@@ -158,12 +146,7 @@ export default function Header(ref: React.MutableRefObject<TNullable<HTMLDivElem
                   </ul>
                 </>
               ) : (
-                <div
-                  className={'cursor-pointer'}
-                  onClick={() => {
-                    setIsWhiteHeader(true);
-                    setIsMobileMenu(true);
-                  }}>
+                <div className={'cursor-pointer'} onClick={toggleMenu}>
                   {isTextWhitePage && isCurrentScrollTop ? (
                     <WhiteBurgerSVG width={'26'} height={'26'} />
                   ) : (

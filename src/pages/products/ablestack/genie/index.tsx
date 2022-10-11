@@ -20,7 +20,7 @@ const headerContent: ProductHeaderProps = {
       Genie는 개발형 하이브리드 클라우드 배포 자동화 플랫폼으로,
       ABLESTACK에 대한 자동화 뿐 아니라 퍼블릭/프라이빗 클라우드 환경에
       대한 자동화 기능을 제공합니다.`,
-  textColor: 'text-black',
+  textColor: 'text-[#444444]',
   multiBgImage:
     'bgImage bg-[url(/images/new/product/ablestack/ablestackGenie/ablestack-genie-header-fw.png),_url(/images/new/product/ablestack/ablestackGenie/ablestackGenie-header-bg.png)]',
 };
@@ -37,7 +37,7 @@ export default function AblestackGeniePage() {
       </ProductContent>
 
       <ProductContent
-        className={'bg-backgroudGray'}
+        className={'bg-backgroudGray text-[#444444]'}
         title='Genie 애플리케이션 관리 기능과 이점'
         imagePosition='first'
         image={<Image src={Logo_Article_3_1} />}>
@@ -96,7 +96,7 @@ export default function AblestackGeniePage() {
         </div>
       </ProductContent>
 
-      <ProductContent className={'bg-backgroudGray'} title='최신 리소스 살펴보기'>
+      <ProductContent className={'bg-backgroudGray text-[#444444]'} title='최신 리소스 살펴보기'>
         <CommonDemoContent />
       </ProductContent>
     </ProductTemplate>

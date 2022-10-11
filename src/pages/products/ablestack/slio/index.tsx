@@ -26,7 +26,7 @@ const headerContent: ProductHeaderProps = {
    `,
   bgImage: 'bg-ablestack-slio-header-bg',
   image: <Image src={Logo_Article_1_1} />,
-  textColor: 'text-black',
+  textColor: 'text-[#444444]',
 };
 
 export default function AblestackSlioPage() {
@@ -67,7 +67,7 @@ export default function AblestackSlioPage() {
       </ProductContent>
 
       <ProductContent
-        className={'bg-backgroudGray'}
+        className={'bg-backgroudGray text-[#444444]'}
         title='중앙 집중화된 유연한 데이터 보호 환경'
         imagePosition='first'
         image={<Image src={Logo_Article_3_1} loading={'lazy'} />}>
@@ -132,7 +132,7 @@ export default function AblestackSlioPage() {
         </div>
       </ProductContent>
 
-      <ProductContent className={'bg-backgroudGray'} title='최신 리소스 살펴보기'>
+      <ProductContent className={'bg-backgroudGray text-[#444444]'} title='최신 리소스 살펴보기'>
         <CommonDemoContent />
       </ProductContent>
     </ProductTemplate>

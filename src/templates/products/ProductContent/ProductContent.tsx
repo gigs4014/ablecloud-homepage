@@ -40,11 +40,13 @@ const ProductContent = memo<PropsWithChildren<ProductContentProps>>(
 
     return (
       <section
-        className={cls`group relative flex w-full flex-col items-center overflow-hidden pb-8 ${className}`}>
+        className={cls`not-prose group relative flex w-full flex-col items-center overflow-hidden pb-8 ${
+          className ? className : 'text-[#444444]'
+        }`}>
         {/* ::before */}
         {/* <div className='group-odd:absolute group-odd:inset-0 group-odd:-z-10 group-odd:-skew-y-2 group-odd:bg-slate-100' /> */}
 
-        <Container.PageWidth>
+        <Container.PageWidth className='px-4'>
           <header className='flex flex-col items-center px-8 text-center '>
             {typeof title === 'string' ? (
               <p className={'m-0 mb-[25px] p-0 text-[30px] font-[500] leading-[43.44px]'}>

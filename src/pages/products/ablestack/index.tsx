@@ -82,7 +82,7 @@ export default function AblestackPage() {
   return (
     <ProductTemplate {...headerContent}>
       <ProductContent
-        className={'bg-backgroudGray'}
+        className={'bg-backgroudGray text-[#444444]'}
         title='ABLESTACK HCI'
         description={
           <p className={'mt-5 mb-10 leading-normal'}>
@@ -148,7 +148,7 @@ export default function AblestackPage() {
       </ProductContent>
 
       <ProductContent
-        className={'bg-backgroudGray'}
+        className={'bg-backgroudGray text-[#444444]'}
         imagePosition={'first'}
         image={<Image src={Logo_Article_4_1} loading={'lazy'} />}>
         <ProductContent.Intro
@@ -241,7 +241,7 @@ export default function AblestackPage() {
       </ProductContent>
 
       <ProductContent
-        className={'bg-[#EEF4FB]'}
+        className={'bg-[#EEF4FB] text-[#444444]'}
         imagePosition={'first'}
         image={<Image src={Logo_Article_6_1} loading={'lazy'} />}>
         <ProductContent.Intro

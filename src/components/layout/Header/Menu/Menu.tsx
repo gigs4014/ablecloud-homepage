@@ -59,7 +59,7 @@ export function MobileMenuItem({
   const focused = useMemo(() => item === focusedItem, [item, focusedItem]);
 
   return (
-    <div className={cls`group h-full w-full py-[20px] ${className} border-b-1`}>
+    <div className={cls`group h-full w-full py-[20px] text-[#444444] ${className} border-b-1`}>
       <CustomLink href={href}>
         <div
           className={cls`flex h-full w-full items-center justify-between`}
@@ -119,7 +119,7 @@ export function MenuItem({
         href={href}
         className={cls`flex h-full items-center justify-center px-4 
        hover:font-[700] hover:shadow-primary
-        ${selected ? `text-primary` : isProductsAbleStackPage ? 'text-white' : 'text-black'}
+        ${selected ? `text-primary` : isProductsAbleStackPage ? 'text-white' : 'text-[#444444]'}
         ${isSubMenuOpen && 'shadow-primary '}`}>
         <div>{label ?? children}</div>
       </CustomLink>

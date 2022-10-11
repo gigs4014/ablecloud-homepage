@@ -249,7 +249,9 @@ export default function HomePage() {
           </div>
         </HomeContent>
 
-        <HomeContent className={'bg-backgroudGray'} title='ABLESTACK을 선택해야 하는 이유'>
+        <HomeContent
+          className={'bg-backgroudGray text-[#444444]'}
+          title='ABLESTACK을 선택해야 하는 이유'>
           <section className='mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2'>
             <HomeContent.RowSummaryCard
               title='단순한 구조'
@@ -308,7 +310,7 @@ export default function HomePage() {
 
         {/* 데모 & Contact */}
         <HomeContent
-          className={'bg-backgroudGray'}
+          className={'bg-backgroudGray text-[#444444]'}
           title='보다 더 자세한 자료와 컨설팅을 받아보세요.'
           description={
             <p className='m-0 mb-[25px] mt-3.5 p-0 text-[16px] font-[400] leading-[23.17px]'>
@@ -323,7 +325,7 @@ export default function HomePage() {
           className={'bg-backgroundBlue pb-0 text-white'}
           title='ABLESTACK 하드웨어 플랫폼'
           description={
-            <p className='mt-3.5 text-[16px] font-[400] leading-[23.17px]'>
+            <p className='max-w-page mt-3.5 w-full text-[16px] font-[400] leading-[23.17px] '>
               ABLESTACK은 소프트웨어 HCI 플랫폼으로, 고객사에 성공적으로 HCI 기반 클라우드 환경을
               구성하기 위해서는 ABLESTACK이 설치되어 실행되는 서버 하드웨어가 필요합니다.
               ABLESTACK은 자사 어플라이언스와 함께 다양한 OEM 파트너, 서드파티 서버 공급업체의 서버

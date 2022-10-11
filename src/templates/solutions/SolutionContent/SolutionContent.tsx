@@ -17,7 +17,9 @@ const SolutionContent = memo<PropsWithChildren<SolutionContentProps>>(
   ({ title, description, className, children }) => {
     return (
       <section
-        className={cls`group relative flex w-full flex-col items-center overflow-hidden pb-16 ${className}`}>
+        className={cls`group relative flex w-full flex-col items-center overflow-hidden pb-16 ${
+          className ? className : 'text-[#444444]'
+        }`}>
         <Container.PageWidth>
           <header className='flex flex-col items-center px-8 text-center'>
             {typeof title === 'string' ? (

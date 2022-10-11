@@ -1,11 +1,16 @@
-import { useEffect, useState } from 'react';
+import { Dispatch, SetStateAction, useEffect, useState } from 'react';
 
 import Link from 'next/link';
 
-import { clients, urlSplit } from 'src/pages/interview';
+import { SelectValue, clients, urlSplit } from 'src/pages/interview';
 
 import { NormalCard } from '@/components/common';
 import MultiSelect from '@/components/common/MultiSelect/MultiSelect';
+
+interface SolutionSearchProps {
+  resultValue: SelectValue;
+  setResultValue: Dispatch<SetStateAction<SelectValue>>;
+}
 
 interface clientList {
   title: string;
@@ -16,28 +21,14 @@ interface clientList {
   subtype: string;
 }
 
-export const SolutionSearch = ({
-  resultValue,
-  setResultValue,
-}: {
-  resultValue: {
-    mainType: string;
-    subType: string;
-  };
-  setResultValue: React.Dispatch<
-    React.SetStateAction<{
-      mainType: string;
-      subType: string;
-    }>
-  >;
-}) => {
+export const SolutionSearch = ({ resultValue, setResultValue }: SolutionSearchProps) => {
   useEffect(() => {
     const url = window.location.href;
     const typeValue = urlSplit(url);
     setSelectValue(typeValue);
   }, []);
 
-  const [selectValue, setSelectValue] = useState({
+  const [selectValue, setSelectValue] = useState<SelectValue>({
     mainType: '전체',
     subType: '-',
   });
@@ -54,7 +45,7 @@ export const SolutionSearch = ({
   });
 
   return (
-    <div className='m-auto max-w-page-full'>
+    <div className='m-auto max-w-page-full text-[#444444]'>
       <div className='mb-4 flex w-full flex-row justify-center'>
         <MultiSelect selectValue={selectValue} setValue={setSelectValue} />
         <Link href={`#${selectValue.mainType}/${selectValue.subType}`}>
@@ -72,9 +63,7 @@ export const SolutionSearch = ({
       <div>
         {clientList.length > 0 ? (
           <div className='my-16 grid min-h-[510px] grid-cols-1 gap-6 px-4 md:grid-cols-2 xl:grid-cols-3'>
-            {clientList.map((value, index) => {
-              const { title, image, description, href } = value;
-
+            {clientList.map(({ title, image, description, href }, index) => {
               return (
                 <NormalCard
                   key={index}

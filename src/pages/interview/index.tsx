@@ -121,13 +121,18 @@ const headerContent: InterViewHeaderProps = {
   textColor: 'text-black',
 };
 
+export interface SelectValue {
+  mainType: string;
+  subType: string;
+}
+
 export default function InterViewsPage() {
   useEffect(() => {
     const url = window.location.href;
     const typeValue = urlSplit(url);
     setResultValue(typeValue);
   }, []);
-  const [resultValue, setResultValue] = useState({
+  const [resultValue, setResultValue] = useState<SelectValue>({
     mainType: '전체',
     subType: '-',
   });

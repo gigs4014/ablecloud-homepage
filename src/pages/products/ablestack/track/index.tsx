@@ -37,7 +37,7 @@ export default function AblestackTrackPage() {
       </ProductContent>
 
       <ProductContent
-        className={'bg-backgroudGray'}
+        className={'bg-backgroudGray text-[#444444]'}
         title='Track : Overlay SDN'
         imagePosition='first'
         image={<Image src={Logo_Article_3_1} />}>
@@ -99,7 +99,7 @@ export default function AblestackTrackPage() {
         </div>
       </ProductContent>
 
-      <ProductContent className={'bg-backgroudGray'} title='최신 리소스 살펴보기'>
+      <ProductContent className={'bg-backgroudGray text-[#444444]'} title='최신 리소스 살펴보기'>
         <CommonDemoContent />
       </ProductContent>
     </ProductTemplate>

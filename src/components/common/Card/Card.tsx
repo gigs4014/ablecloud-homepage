@@ -37,7 +37,7 @@ export function ActionCard({
   return (
     <Container.Card
       hoverBehavoir={hoverBehavoir}
-      className={`not-prose border-borderGrayColor max-w-[400px] border-1 ${containerClassName}`}>
+      className={`not-prose border-borderGrayColor m-auto w-full max-w-[400px] border-1 ${containerClassName}`}>
       {image && <div className='max-h-[218px] max-w-[400px]'>{image}</div>}
 
       <div className={'flex flex-col justify-center px-[30px] pb-[40px] pt-[32px] text-center'}>
@@ -51,7 +51,9 @@ export function ActionCard({
 
         {buttonTitle && (
           <CustomLink href={href}>
-            <Button className={'mt-5 border-[#3281C4] text-[#3281C4]'} bordered>
+            <Button
+              className={'mt-5 w-full max-w-[240px] border-[#3281C4] text-[#3281C4]'}
+              bordered>
               {buttonTitle}
             </Button>
           </CustomLink>
@@ -117,9 +119,11 @@ export function RowSummaryCard({
   return (
     <Container.Card
       hoverBehavoir={hoverBehavoir}
-      className={`flex h-full items-center justify-start border-0.5 border-gray-200 py-[20px] px-[32px] shadow-none ${containerClassName}`}>
+      className={`flex h-full items-center justify-start border-0.5 border-gray-200 py-4 px-6 shadow-none ${containerClassName}`}>
       {image && (
-        <div className='flex min-h-[108px] min-w-[100px] items-center justify-center'>{image}</div>
+        <div className='hidden min-h-[108px] min-w-[100px] items-center justify-center xsm:flex'>
+          {image}
+        </div>
       )}
 
       <div className='ml-[14px] '>

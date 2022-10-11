@@ -15,10 +15,10 @@ export function PageWidth({
 }: PageWidthProps) {
   return (
     <section
-      className={cls`flex justify-center self-center ${
+      className={cls`flex justify-center self-center  ${
         seperateWithPeer && 'even:bg-backgroudGray'
       } ${containerClassName}`}>
-      <div className={cls`my-[50px] flex max-w-page-full flex-1 flex-col px-4 ${className}`}>
+      <div className={cls`my-[50px] flex max-w-page-full  flex-1 flex-col ${className}`}>
         {children}
       </div>
     </section>

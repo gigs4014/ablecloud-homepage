@@ -36,7 +36,7 @@ const headerContent: SolutionHeaderProps = {
     `,
   bgImage: 'bg-[#FAFAFA]',
   image: <Image src={Logo_Article_1_1} />,
-  textColor: 'text-black',
+  textColor: 'text-[#444444]',
 };
 
 const solutions = [
@@ -250,7 +250,7 @@ export default function SolutionPage() {
     <>
       <SolutionTemplate {...headerContent}>
         <SolutionContent
-          className={'bg-backgroudGray'}
+          className={'bg-backgroudGray text-[#444444]'}
           title='ABLESTACK 클라우드 솔루션'
           description={
             <div className={'max-w-[800px] text-[16px] font-[400] leading-[23.17px]'}>
@@ -274,7 +274,7 @@ export default function SolutionPage() {
           }></SolutionContent>
         <SolutionContent title='솔루션 유즈케이스'>
           <div
-            className='mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3
+            className='mx-4 mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3
           '>
             {solutions.map(({ title, image, description, href }) => {
               return (
@@ -286,7 +286,7 @@ export default function SolutionPage() {
           </div>
         </SolutionContent>
         <SolutionContent
-          className={'not-prose w-full bg-[#EEF4FB]'}
+          className={'not-prose w-full bg-[#EEF4FB] text-[#444444]'}
           title='파트너 애플리케이션'
           description={
             <p className='m-0 mb-[12px] max-w-[960px] text-[16px] font-[400] leading-[23.17px]'>
@@ -294,7 +294,7 @@ export default function SolutionPage() {
               다양한 IT 기능 및 서비스를 솔루션으로 제공합니다.
             </p>
           }>
-          <div className='mx-auto mt-8 grid w-full max-w-page-full grid-cols-1 gap-[10px] md:grid-cols-2 lg:grid-cols-3'>
+          <div className='mx-auto mt-8 grid w-full max-w-page-full grid-cols-1 gap-[10px] px-4 md:grid-cols-2 lg:grid-cols-3'>
             {partners.map(({ title, image, description, href }) => {
               return (
                 <CustomLink key={uuid()} href={href} hoverBehavoir='none' className={'w-full'}>

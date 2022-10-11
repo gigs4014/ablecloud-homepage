@@ -23,7 +23,7 @@ const headerContent: ProductHeaderProps = {
      ABLESTACK이 제공하는 이머징 플랫폼을 바로 사용할 수 있습니다.
     `,
   bgImage: 'bg-ablestack-station-header-bg',
-  textColor: 'text-black',
+  textColor: 'text-[#444444]',
   imagePosition: 'last',
 };
 
@@ -54,7 +54,7 @@ export default function AblestackStationPage() {
       </ProductContent>
 
       <ProductContent
-        className={'bg-backgroudGray'}
+        className={'bg-backgroudGray text-[#444444]'}
         title='HCI와 통합된 턴키 이머징 플랫폼 서비스'
         imagePosition='first'
         image={<Image src={Logo_Article_3_1} />}>
@@ -112,7 +112,7 @@ export default function AblestackStationPage() {
         </div>
       </ProductContent>
 
-      <ProductContent className={'bg-backgroudGray'} title='최신 리소스 살펴보기'>
+      <ProductContent className={'bg-backgroudGray text-[#444444]'} title='최신 리소스 살펴보기'>
         <CommonDemoContent />
       </ProductContent>
     </ProductTemplate>

@@ -59,7 +59,7 @@ export default function AblestackObjectPage() {
       </ProductContent>
 
       <ProductContent
-        className={'bg-backgroudGray'}
+        className={'bg-backgroudGray text-[#444444]'}
         title='비정형 데이터를 위한 안전하고 확장성 있는 통합 플랫폼'
         imagePosition='first'
         image={<Image src={Logo_Article_3_1} loading={'lazy'} />}>
@@ -125,7 +125,7 @@ export default function AblestackObjectPage() {
         </div>
       </ProductContent>
 
-      <ProductContent className={'bg-backgroudGray'} title='최신 리소스 살펴보기'>
+      <ProductContent className={'bg-backgroudGray text-[#444444]'} title='최신 리소스 살펴보기'>
         <CommonDemoContent />
       </ProductContent>
     </ProductTemplate>

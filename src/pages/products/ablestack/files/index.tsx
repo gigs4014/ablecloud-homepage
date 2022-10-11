@@ -7,7 +7,7 @@ import {
   ProductTemplate,
 } from '@/templates';
 
-import Logo_Article_1_1 from '@/public/images/new/product/ablestack/ablestackFiles/article_1_1.svg';
+import Logo_Article_1_1 from '@/public/images/new/product/ablestack/ablestackFiles/article_1_1.png';
 import Logo_Article_2_1 from '@/public/images/new/product/ablestack/ablestackFiles/article_2_1.svg';
 import Logo_Article_2_2 from '@/public/images/new/product/ablestack/ablestackFiles/article_2_2.svg';
 import Logo_Article_2_3 from '@/public/images/new/product/ablestack/ablestackFiles/article_2_3.svg';
@@ -24,8 +24,8 @@ const headerContent: ProductHeaderProps = {
       환경에서 간단하고 유연하며, 지능적인 파일 스토리지 서비스를 제공합니다.
    `,
   bgImage: 'bg-ablestack-files-header-bg',
-  textColor: 'text-black',
-  image: <Logo_Article_1_1 />,
+  textColor: 'text-[#444444]',
+  image: <Image src={Logo_Article_1_1} />,
 };
 
 export default function AblestackFilesPage() {
@@ -59,7 +59,7 @@ export default function AblestackFilesPage() {
       </ProductContent>
 
       <ProductContent
-        className={'bg-backgroudGray'}
+        className={'bg-backgroudGray text-[#444444]'}
         title='다양한 애플리케이션을 지원하는 범용 파일 시스템'
         imagePosition='first'
         image={<Image src={Logo_Article_3_1} loading={'lazy'} />}>
@@ -114,7 +114,7 @@ export default function AblestackFilesPage() {
         </div>
       </ProductContent>
 
-      <ProductContent className={'bg-backgroudGray'} title='최신 리소스 살펴보기'>
+      <ProductContent className={'bg-backgroudGray text-[#444444]'} title='최신 리소스 살펴보기'>
         <CommonDemoContent />
       </ProductContent>
     </ProductTemplate>

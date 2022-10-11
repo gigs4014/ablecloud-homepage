@@ -32,7 +32,7 @@ import Line from '@/public/images/new/line.png';
 const headerContent: CompanyHeaderProps = {
   title: <Logo_Article_1_1 />,
   description: (
-    <div className={'text-[18px] font-[400] leading-[26.06px]'}>
+    <div className={'text-[18px] font-[400] leading-[26.06px] text-[#444444]'}>
       <p>
         우리는 빠르게 변화하는 세상에서, 언제나 무한한 가능성을 봅니다. 그리고 새로운 플랫폼으로 그
         가능성의 세계를 힘차게 열고 날아오릅니다.
@@ -52,19 +52,19 @@ export default function CompanyPage() {
       <CompanyTemplate {...headerContent}>
         <CompanyContent
           title={
-            <div className={'mt-[30px] text-[30px] font-[900] leading-[37.44px] text-primary'}>
+            <div className={'my-[30px] text-[30px] font-[900] leading-[37.44px] text-primary'}>
               Software Defined Data Center
             </div>
           }
           description={
-            <p className={'text-[18px] font-[400] leading-[26.06px]'}>
+            <p className={'text-[18px] font-[400] leading-[26.06px] text-[#444444]'}>
               우리는 단일 클라우드 플랫폼인 ABLESTACK을 통해 데이터센터에 필요한 인프라와 관리체계,
               그리고 다양한 플랫폼을 제공함으로써 소프트웨어로 정의된 새로운 개념의 데이터센터를
               실현하고 고객에게 제공합니다.
             </p>
           }
-          className={'bg-backgroudGray'}>
-          <section className='sm:gri16-cols-2 mt-8 grid grid-cols-1 gap-6 lg:grid-cols-3'>
+          className={'bg-backgroudGray text-[#444444]'}>
+          <section className='mt-8 grid max-w-page-full grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'>
             <CompanyContent.DescriptionCard
               title='기업 클라우드 구축 '
               image={<Logo_Article_2_1 />}
@@ -103,35 +103,37 @@ export default function CompanyPage() {
         <CompanyContent title={'History'}>
           <div className={'mb-[40px]'}>
             <div className='mb-[20px] flex w-full items-center justify-between'>
-              <p className={'pr-3 pl-8 text-[24px] font-[700] leading-[34.75px] sm:pl-16'}>2021</p>
+              <p className={'pr-3 pl-8 text-[24px] font-[700] leading-[34.75px] xsm:pl-16'}>2021</p>
               <Image src={Line} objectFit={'contain'} />
-              <p className={'pl-3 pr-8 text-[24px] font-[700] leading-[34.75px] sm:pr-16'}>2022</p>
+              <p className={'pl-3 pr-8 text-[24px] font-[700] leading-[34.75px] xsm:pr-16'}>2022</p>
             </div>
             <div className={'mb-[20px] flex justify-between'}>
-              <p className={'pl-8 text-[18px] font-[400] leading-[26.06px] sm:pl-16'}>
+              <p className={'pl-8 text-[18px] font-[400] leading-[26.06px] xsm:pl-16'}>
                 에이블클라우드의 출발
               </p>
-              <p className={'pr-8 pl-2 text-[18px] font-[400] leading-[26.06px] sm:pr-16'}>
+              <p className={'pr-8 pl-2 text-[18px] font-[400] leading-[26.06px] xsm:pr-16'}>
                 현재 업적까지 단
               </p>
             </div>
             <div className='mb-[20px] flex justify-between'>
-              <p className={'my-[16px] pl-8 text-[140px] font-[400] leading-[162.4px] sm:pl-16'}>
+              <p className={'my-[16px] pl-8 text-[140px] font-[400] leading-[162.4px] xsm:pl-16'}>
                 21
               </p>
-              <div className='my-[16px] flex justify-end whitespace-nowrap pr-8 sm:pr-16'>
+              <div className='my-[16px] flex justify-end whitespace-nowrap pr-8 xsm:pr-16'>
                 <p className={'text-[140px] font-[400] leading-[162.4px] text-primary'}>1</p>
                 <p className='ml-[20px] mt-[90px]'>년</p>
               </div>
             </div>
             <div className={'mb-[20px] flex justify-between'}>
-              <p className={'leading-[26.06px pl-8 text-left text-[18px] font-[400] sm:pl-16'}>
+              <p className={'leading-[26.06px pl-8 text-left text-[18px] font-[400] xsm:pl-16'}>
                 에이블클라우드는
                 <br />
                 21년에 설립된 회사입니다.
               </p>
               <p
-                className={'leading-[26.06px pr-8 pl-2 text-right text-[18px] font-[400] sm:pr-16'}>
+                className={
+                  'leading-[26.06px pr-8 pl-2 text-right text-[18px] font-[400] xsm:pr-16'
+                }>
                 에이블클라우드의
                 <br />
                 이유있는 자신감,
@@ -153,7 +155,7 @@ export default function CompanyPage() {
         </CompanyContent>
 
         <CompanyContent
-          className={'bg-backgroudGray'}
+          className={'bg-backgroudGray text-[#444444]'}
           title='ABLECLOUD가 시도하는 새로운 기업 인프라'
           description={`우리는 ABLESTACK을 어디서나 어느 애플리케이션 및 워크로드를 실행할 수 있는 클라우드
             인프라, 스토리지, 데이터베이스를 제공하며,
@@ -308,11 +310,11 @@ export default function CompanyPage() {
             />
           </CustomSlider>
         </CompanyContent>
-        <CompanyContent title='인증 및 특허권' className={'not-prose bg-backgroudGray py-4'}>
+        <CompanyContent
+          title='인증 및 특허권'
+          className={'not-prose bg-backgroudGray py-4 text-[#444444]'}>
           <div
-            className={
-              'sm:gri16-cols-2 mt-8 grid max-w-page-full grid-cols-1 gap-6 lg:grid-cols-4'
-            }>
+            className={'mt-8 grid max-w-page-full grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4'}>
             <CompanyContent.ImageItam title='기업부설연구소 인정서' image={<Logo_Article_6_1 />} />
             <CompanyContent.ImageItam title='소프트웨어품질인정서' image={<Logo_Article_6_2 />} />
             <CompanyContent.ImageItam title='저작권 등록증' image={<Logo_Article_6_3 />} />

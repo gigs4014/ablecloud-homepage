@@ -46,14 +46,13 @@ export default function InterViewHeader({
   image,
   bgImage,
   className,
-  textColor = 'text-white',
 }: InterViewHeaderProps) {
   return (
     <header
       className={cls`relative flex h-[560px] w-full justify-center bg-cover py-16 ${bgImage} ${className}`}>
       <div className='flex max-w-page-full items-center justify-between space-x-8 px-8'>
         {/* info */}
-        <section className={`w-full md:w-1/2 lg:w-1/2 ${textColor} `}>
+        <section className={`w-full text-[#444444] md:w-1/2 lg:w-1/2 `}>
           <p className={'whitespace-nowrap text-[42px] font-[900] leading-[52.42px]'}>{title}</p>
           {typeof description === 'string' ? (
             <p className={'text-[18px] font-[400] leading-[26.06px]'}>{description}</p>

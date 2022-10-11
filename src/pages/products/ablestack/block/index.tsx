@@ -42,7 +42,7 @@ const headerContent: ProductHeaderProps = {
     및 물리적인 워크로드 에 모드 대응할 수 있도록 설계된 단일 통합 스토리
     지 플랫폼입니다.`,
   bgImage: 'bg-ablestack-block-header-bg',
-  textColor: 'text-black',
+  textColor: 'text-[#444444]',
 };
 
 export default function AblestackBlockPage() {
@@ -73,7 +73,7 @@ export default function AblestackBlockPage() {
       </ProductContent>
 
       <ProductContent
-        className={'bg-backgroudGray'}
+        className={'bg-backgroudGray text-[#444444]'}
         title='원하는 플랫폼에서 모든 워크로드 연결'
         imagePosition='first'
         image={<Image src={Logo_Article_3_1} />}>
@@ -135,7 +135,7 @@ export default function AblestackBlockPage() {
         </div>
       </ProductContent>
 
-      <ProductContent className={'bg-backgroudGray'} title='최신 리소스 살펴보기'>
+      <ProductContent className={'bg-backgroudGray text-[#444444]'} title='최신 리소스 살펴보기'>
         <CommonDemoContent />
       </ProductContent>
     </ProductTemplate>

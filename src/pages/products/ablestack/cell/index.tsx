@@ -43,7 +43,7 @@ export default function AblestackCellPage() {
       </ProductContent>
 
       <ProductContent
-        className={'bg-backgroudGray'}
+        className={'bg-backgroudGray text-[#444444]'}
         title='에이블클라우드가 무상으로 제공하는 하이퍼바이저'
         imagePosition='first'
         image={<Image src={Logo_Article_3_1} />}>
@@ -68,7 +68,7 @@ export default function AblestackCellPage() {
             },
           ]}
         />
-        <div className=' hidden gap-[30px] pl-[38px] md:flex lg:flex'>
+        <div className=' hidden gap-6 pl-8 lg:flex'>
           <Logo_Article_3_2 />
           <Logo_Article_3_3 />
           <Logo_Article_3_4 />
@@ -108,7 +108,7 @@ export default function AblestackCellPage() {
         </div>
       </ProductContent>
 
-      <ProductContent className={'bg-backgroudGray'} title='최신 리소스 살펴보기'>
+      <ProductContent className={'bg-backgroudGray text-[#444444]'} title='최신 리소스 살펴보기'>
         <CommonDemoContent />
       </ProductContent>
     </ProductTemplate>

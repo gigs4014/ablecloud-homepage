@@ -55,7 +55,7 @@ export default function AblestackWorksPage() {
       </ProductContent>
 
       <ProductContent
-        className={'bg-backgroudGray'}
+        className={'bg-backgroudGray text-[#444444]'}
         title='단일 콘솔에서 가상머신과 볼륨, 네트워크, 백업, 컨테이너 등의 모든 것을 관리'
         imagePosition='first'
         image={<Image src={Logo_Article_3_1} />}>
@@ -119,7 +119,7 @@ export default function AblestackWorksPage() {
         </div>
       </ProductContent>
 
-      <ProductContent className={'bg-backgroudGray'} title='최신 리소스 살펴보기'>
+      <ProductContent className={'bg-backgroudGray text-[#444444]'} title='최신 리소스 살펴보기'>
         <CommonDemoContent />
       </ProductContent>
     </ProductTemplate>

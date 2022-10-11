@@ -37,7 +37,7 @@ export default function AblestackWallPage() {
       </ProductContent>
 
       <ProductContent
-        className={'bg-backgroudGray'}
+        className={'bg-backgroudGray text-[#444444]'}
         title='데이터 쿼리, 시각화 그리고 경고하는 모니터링 플랫폼'
         imagePosition='first'
         image={<Image src={Logo_Article_3_1} loading={'lazy'} />}>
@@ -93,7 +93,7 @@ export default function AblestackWallPage() {
         </div>
       </ProductContent>
 
-      <ProductContent className={'bg-backgroudGray'} title='최신 리소스 살펴보기'>
+      <ProductContent className={'bg-backgroudGray text-[#444444]'} title='최신 리소스 살펴보기'>
         <CommonDemoContent />
       </ProductContent>
     </ProductTemplate>

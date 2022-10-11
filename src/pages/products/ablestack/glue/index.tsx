@@ -36,7 +36,7 @@ export default function AblestackGluePage() {
       </ProductContent>
 
       <ProductContent
-        className={'bg-backgroudGray'}
+        className={'bg-backgroudGray text-[#444444]'}
         title='기존의 SAN 또는 NAS를 뛰어넘는 고도로 자동화된 하이퍼 컨버지드 스토리지'
         imagePosition='first'
         image={<Image src={Logo_Article_3_1} />}>
@@ -98,7 +98,7 @@ export default function AblestackGluePage() {
         </div>
       </ProductContent>
 
-      <ProductContent className={'bg-backgroudGray'} title='최신 리소스 살펴보기'>
+      <ProductContent className={'bg-backgroudGray text-[#444444]'} title='최신 리소스 살펴보기'>
         <CommonDemoContent />
       </ProductContent>
     </ProductTemplate>

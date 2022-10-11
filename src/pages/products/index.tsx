@@ -91,7 +91,7 @@ export default function ProductHomePage() {
   return (
     <ProductTemplate {...headerContent}>
       <ProductContent
-        className={'bg-backgroudGray leading-normal'}
+        className={'bg-backgroudGray leading-normal text-[#444444]'}
         title='기업 데이터센터가 직면한 문제'
         description={
           <p className='my-[30px]'>
@@ -100,7 +100,7 @@ export default function ProductHomePage() {
             따라가기 어렵습니다.
           </p>
         }>
-        <div className='mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2'>
+        <div className='mt-8 grid grid-cols-1 gap-6 px-4 lg:grid-cols-2'>
           <ProductContent.RowSummaryCard
             title={'점점 더 복잡해지는 인프라'}
             description={`서로 다른 서버, 네트워크 장비, 스토리지로 구축된 기업 데이터센터는
@@ -136,8 +136,8 @@ export default function ProductHomePage() {
         </div>
       </ProductContent>
 
-      <ProductContent className={'bg-backgroudGray'} title='ABLESTACK의 특징'>
-        <div className='mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2'>
+      <ProductContent className={'bg-backgroudGray text-[#444444]'} title='ABLESTACK의 특징'>
+        <div className='mx-4 mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2'>
           <ProductContent.RowSummaryCard
             title={'단순한 통합 인프라'}
             description={`x86 서버만으로 구성된 단순한 인프라로 서버, 네트워크, 스토리지 등의

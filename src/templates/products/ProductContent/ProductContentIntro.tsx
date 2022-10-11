@@ -12,7 +12,7 @@ const ProductContentIntro = memo<ProductContentIntroProps>(({ title, className, 
   return (
     <div className={cls`${className}`}>
       <p className={'text-[30px] font-[500] leading-[43px]'}>{title}</p>
-      {description}
+      <div className='mb-8'>{description}</div>
     </div>
   );
 });

@@ -22,7 +22,7 @@ export const CustomSlider = ({ settingsOverrides, children }: CarouselProps) => 
     autoplay: true,
     responsive: [
       {
-        breakpoint: 1150,
+        breakpoint: 1170,
         settings: {
           slidesToScroll: 1,
           slidesToShow: 1,

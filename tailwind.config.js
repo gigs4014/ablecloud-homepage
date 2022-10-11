@@ -61,6 +61,10 @@ module.exports = {
     },
     fontFamily: { sans: ['Noto Sans', 'SUIT'] },
     extend: {
+      screens: {
+        xsm: '550px',
+        // => @media (min-width: 550px) { ... }
+      },
       boxShadow: {
         ic: '0px 0px 8px rgba(33, 81, 162, 0.25)',
         primary: 'inset 0 -4px #2bbae6',
