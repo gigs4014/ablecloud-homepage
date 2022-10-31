@@ -1,6 +1,8 @@
-git reset --hard
+git reset --hard origin/dev
 git fetch
 git checkout dev
 git pull
+yarn
 yarn build
 yarn pm2 start ecosystem.config.js
+echo "success"
