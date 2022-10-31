@@ -86,9 +86,9 @@ export default function Header() {
               isProductsAbleStackPage &&
               isBigScreen &&
               !isProductsAbleStackPageException ? (
-                <Logo_ablecloud_white />
+                <Logo_ablecloud_white width={isBigScreen ? '200' : '125'} />
               ) : (
-                <Logo_ablecloud_default />
+                <Logo_ablecloud_default width={isBigScreen ? '200' : '125'} />
               )}
             </CustomLink>
           </div>
