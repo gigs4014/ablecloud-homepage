@@ -1,5 +1,6 @@
 git reset --hard
+git fetch
 git checkout dev
 git pull
-yarn docker:build
-yarn docker:run
+yarn build
+yarn pm2:start
