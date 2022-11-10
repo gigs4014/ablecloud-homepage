@@ -21,7 +21,7 @@ export default function HomeHeader({
 }: HomeHeaderProps) {
   return (
     <header
-      className={cls`relative flex h-full w-full justify-center bg-cover py-16 ${bgImage} ${className}`}>
+      className={cls`relative flex h-full w-full justify-center bg-cover py-24 ${bgImage} ${className}`}>
       <div className='flex max-w-page-full items-center space-x-8 px-8'>
         {/* info */}
         <section className={`${textColor} text-center`}>
@@ -32,7 +32,7 @@ export default function HomeHeader({
             description
           )}
 
-          {headerExtra && <div className={'mt-[40px]'}>{headerExtra}</div>}
+          {headerExtra && <div className={'mt-[40px] bg-transparent'}>{headerExtra}</div>}
         </section>
       </div>
     </header>
