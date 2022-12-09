@@ -27,10 +27,10 @@ export function InterViewClientHeader({ title, bgImage, bgColor }: ClientHeader)
       <header
         className={`relative flex h-[410px] justify-center bg-cover ${bgImage} ${bgColor} bg-blend-screen`}>
         <div className='flex w-full max-w-page-full'>
-          <section className='mt-36 ml-8'>
-            <div onClick={() => history.back()} className=''>
+          <section className='ml-8 mt-36'>
+            <div onClick={() => history.back()} className='flex items-center '>
               <Image src={BackButton} />
-              <label className='ml-4 text-[14px] text-white'>모든 성공사례</label>
+              <div className=' ml-4 text-[14px] leading-loose text-white'>모든 성공사례</div>
             </div>
             <p className='mt-16 text-[42px] font-black text-white'>{title}</p>
           </section>

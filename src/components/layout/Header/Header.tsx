@@ -45,6 +45,14 @@ export default function Header(ref: React.MutableRefObject<TNullable<HTMLDivElem
   };
 
   useEffect(() => {
+    setIsWhiteHeader(false);
+  }, [asPath]);
+
+  useEffect(() => {
+    console.log({ isCurrentScrollTop, isWhiteHeader, isTextWhitePage });
+  }, [isWhiteHeader, isTextWhitePage]);
+
+  useEffect(() => {
     const listener = () => {
       const currentScrollPos = window.pageYOffset;
       setIsCurrentScrollTop(currentScrollPos === 0);
@@ -99,7 +107,13 @@ export default function Header(ref: React.MutableRefObject<TNullable<HTMLDivElem
         {/* Main menu section */}
         <section className='flex w-full items-center justify-between px-2'>
           {/* Logo */}
-          <div className='pl-2 pt-1'>
+          <div
+            className='pl-2 pt-1'
+            onClick={() => {
+              if (bigScreen) return;
+              setIsWhiteHeader(false);
+              setIsMobileMenu(false);
+            }}>
             <CustomLink href='/'>
               {isCurrentScrollTop && !isWhiteHeader && isTextWhitePage ? (
                 // isBigScreen &&

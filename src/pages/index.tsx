@@ -252,7 +252,7 @@ export default function HomePage() {
         <HomeContent
           className={'bg-backgroudGray text-[#444444]'}
           title='ABLESTACK을 선택해야 하는 이유'>
-          <section className='mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2'>
+          <section className='mx-4 mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2'>
             <HomeContent.RowSummaryCard
               title='단순한 구조'
               image={<Logo_Article_3_1 />}

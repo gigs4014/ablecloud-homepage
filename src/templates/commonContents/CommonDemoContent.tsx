@@ -11,7 +11,7 @@ import Logo_Article_5_4 from '@/public/images/new/home/article_5_4.png';
 const CommonDemoContent = memo<BaseComponentProps>(({ className }) => {
   return (
     <div
-      className={`grid w-full max-w-page-full grid-cols-1 gap-[40px] py-[43.5px] md:grid-cols-2 lg:grid-cols-3 ${className}`}>
+      className={`mx-4 grid max-w-page-full grid-cols-1 gap-[40px] py-[43.5px] md:grid-cols-2 lg:grid-cols-3 ${className}`}>
       <ActionCard
         hoverBehavoir={'scale'}
         title={'Case Study'}
