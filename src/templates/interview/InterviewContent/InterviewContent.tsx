@@ -11,22 +11,12 @@ export interface InterViewContentProps extends BaseComponentProps {
 }
 
 export interface InterViewClientContentProps {
-  clinetImage?: any;
-  description?: any;
+  clinetImage: JSX.Element;
+  introduceDescription: ReactNode;
+  introduceImage?: JSX.Element;
+  assignmentDescription?: ReactNode;
+  solutionDescription?: ReactNode;
 }
-
-export const InterViewClientContent = ({
-  clinetImage,
-  description,
-}: InterViewClientContentProps) => {
-  return (
-    <section className='m-auto min-h-[800px] max-w-page-full px-8 text-[#444444]'>
-      <div className='mt-[55.5px]'>{clinetImage}</div>
-      <div className='mt-[33.5px] w-full sm:w-[500px]'>{description}</div>
-      <div className='mt-[37.5px] text-[24px]'>회사</div>
-    </section>
-  );
-};
 
 const InterViewContent = memo<PropsWithChildren<InterViewContentProps>>(
   ({ title, description, className, children }) => {
@@ -55,6 +45,33 @@ const InterViewContent = memo<PropsWithChildren<InterViewContentProps>>(
     );
   },
 ) as NamedExoticComponent<PropsWithChildren<InterViewContentProps>> & {};
+
+export const InterViewClientContent = ({
+  clinetImage,
+  introduceDescription,
+  introduceImage,
+  assignmentDescription,
+  solutionDescription,
+}: InterViewClientContentProps) => {
+  return (
+    <section className='not-prose m-auto min-h-[800px] max-w-page-full px-8 text-[#444444] xl:px-0'>
+      <div className='mt-16'>{clinetImage}</div>
+      <div className='mt-12'>
+        <div className='text-[24px] font-bold'>고객소개</div>
+        <div className='mt-12 w-full lg:w-[954px]'>{introduceDescription}</div>
+        <div className='mt-8 h-auto max-w-full bg-[#F7F7F7] p-4'>{introduceImage}</div>
+      </div>
+      <div className='mt-14'>
+        <div className='text-[24px] font-bold'>당면과제</div>
+        <div className='mt-12 w-full lg:w-[954px]'>{assignmentDescription}</div>
+      </div>
+      <div className='my-14'>
+        <div className='text-[24px] font-bold'>적용솔루션</div>
+        <div className='mt-12 w-full lg:w-[954px]'>{solutionDescription}</div>
+      </div>
+    </section>
+  );
+};
 
 InterViewContent.displayName = 'InterViewContent';
 

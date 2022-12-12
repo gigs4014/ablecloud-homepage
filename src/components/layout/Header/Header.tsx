@@ -45,6 +45,7 @@ export default function Header(ref: React.MutableRefObject<TNullable<HTMLDivElem
   };
 
   useEffect(() => {
+    // setIsWhiteHeader(false);
     setIsWhiteHeader(false);
   }, [asPath]);
 
@@ -70,8 +71,8 @@ export default function Header(ref: React.MutableRefObject<TNullable<HTMLDivElem
       setIsTextWhitePage(
         !['mold', 'block', 'files', 'slio', 'station', 'genie'].some(name => asPath.includes(name)),
       );
-    } else if (asPath.includes('/interview')) {
-      setIsTextWhitePage(['kacpta'].some(name => asPath.includes(name)));
+    } else if (asPath.includes('/interview/')) {
+      setIsTextWhitePage(![].some(name => asPath.includes(name)));
     } else {
       setIsTextWhitePage(asPath.includes('/partners') || asPath === '/');
     }
@@ -154,6 +155,7 @@ export default function Header(ref: React.MutableRefObject<TNullable<HTMLDivElem
                           item={item}
                           selectedItem={selectedItem}
                           setIsMobileMenu={setIsMobileMenu}
+                          setIsWhiteHeader={setIsWhiteHeader}
                         />
                       </li>
                     ))}

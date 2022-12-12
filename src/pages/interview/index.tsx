@@ -17,6 +17,7 @@ import Logo_Article_1_8 from '@/public/images/new/interview/article_1_8.svg';
 import Logo_Article_1_9 from '@/public/images/new/interview/article_1_9.svg';
 import Logo_Article_1_10 from '@/public/images/new/interview/article_1_10.svg';
 import Logo_Article_1_11 from '@/public/images/new/interview/article_1_11.svg';
+import Logo_Article_1_12 from '@/public/images/new/interview/article_1_12.svg';
 
 export const clients = [
   {
@@ -31,7 +32,7 @@ export const clients = [
     title: '평택시청',
     image: <Logo_Article_1_3 />,
     description: <p>UNIWIDE 국산 서버에 기반한 상수로 원격 검침 시스템 구축 사업</p>,
-    href: '/',
+    href: '/interview/pyeongtaek',
     maintype: '산업',
     subtype: 'Solution',
   },
@@ -39,7 +40,7 @@ export const clients = [
     title: '근로복지공단',
     image: <Logo_Article_1_4 />,
     description: <p>2U 4NODE 형태의 HCI 어플라이언스 제품 구성 제공</p>,
-    href: '/',
+    href: '/interview/comwel',
     maintype: '산업',
     subtype: 'Solution',
   },
@@ -49,7 +50,7 @@ export const clients = [
     description: (
       <p>LG 헬로비젼과 P.P.P(민관협력사업)을 통해 가상화 시스템 구축 및 유지보수 진행</p>
     ),
-    href: '/',
+    href: '/interview/gyeongnam',
     maintype: '산업',
     subtype: 'Solution',
   },
@@ -57,7 +58,7 @@ export const clients = [
     title: '여주대학교',
     image: <Logo_Article_1_6 />,
     description: <p>KTNF 국산서버에 기반한 혁신 지원 사업에 가상화 시스템 구축</p>,
-    href: '/',
+    href: '/interview/yit',
     maintype: '나',
     subtype: '나-a',
   },
@@ -67,7 +68,7 @@ export const clients = [
     description: (
       <p>Citrix : XenServer, XenDesktop으로 구성하여 가상화 시스템 및 VDI 시스템 구축</p>
     ),
-    href: '/',
+    href: '/interview/kipo',
     maintype: '나',
     subtype: '나-a',
   },
@@ -75,7 +76,7 @@ export const clients = [
     title: '충남대학교병원',
     image: <Logo_Article_1_8 />,
     description: <p>VMWare 기반의 VDI 구축</p>,
-    href: '/',
+    href: '/interview/cnuh',
     maintype: '나',
     subtype: '나-a',
   },
@@ -83,7 +84,7 @@ export const clients = [
     title: '지엔텔',
     image: <Logo_Article_1_9 />,
     description: <p>2U 4NODE 형태의 HCI 어플라이언스 제품 구성 제공</p>,
-    href: '/',
+    href: '/interview/gntel',
     maintype: '산업',
     subtype: 'Solution',
   },
@@ -91,7 +92,7 @@ export const clients = [
     title: '데이타스트림즈',
     image: <Logo_Article_1_10 />,
     description: <p>2U 4NODE 형태의 HCI 어플라이언스 제품 구성 제공</p>,
-    href: '/',
+    href: '/interview/datastreams',
     maintype: '다',
     subtype: '다-c',
   },
@@ -99,7 +100,15 @@ export const clients = [
     title: '대검찰청',
     image: <Logo_Article_1_11 />,
     description: <p>VMWare 기반의 VDI 구축</p>,
-    href: '/',
+    href: '/interview/spo',
+    maintype: '산업',
+    subtype: 'Solution',
+  },
+  {
+    title: '국방기술품질원',
+    image: <Logo_Article_1_12 />,
+    description: <p>문서중앙화</p>,
+    href: '/interview//dtaq',
     maintype: '산업',
     subtype: 'Solution',
   },

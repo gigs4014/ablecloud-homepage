@@ -18,19 +18,19 @@ export interface InterViewHeaderProps extends BaseComponentProps {
 export interface ClientHeader {
   title: string;
   bgImage: ReactNode;
-  bgColor: string;
 }
 
-export function InterViewClientHeader({ title, bgImage, bgColor }: ClientHeader) {
+export function InterViewClientHeader({ title, bgImage }: ClientHeader) {
   return (
     <>
-      <header
-        className={`relative flex h-[410px] justify-center bg-cover ${bgImage} ${bgColor} bg-blend-screen`}>
+      <header className={`relative flex h-[410px] justify-center bg-cover ${bgImage} `}>
         <div className='flex w-full max-w-page-full'>
-          <section className='ml-8 mt-36'>
-            <div onClick={() => history.back()} className='flex items-center '>
-              <Image src={BackButton} />
-              <div className=' ml-4 text-[14px] leading-loose text-white'>모든 성공사례</div>
+          <section className='ml-8 mt-32'>
+            <div onClick={() => history.back()} className='flex'>
+              <div className=' h-full '>
+                <Image src={BackButton} />
+              </div>
+              <label className='ml-4 text-[14px] text-white'>모든 성공사례</label>
             </div>
             <p className='mt-16 text-[42px] font-black text-white'>{title}</p>
           </section>

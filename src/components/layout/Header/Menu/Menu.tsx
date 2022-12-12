@@ -29,6 +29,7 @@ export function getSelectedItem(
 export interface MenuItemProps extends BaseComponentProps {
   item: HeaderMenuItem;
   setIsMobileMenu?: Dispatch<SetStateAction<boolean>>;
+  setIsWhiteHeader?: Dispatch<SetStateAction<boolean>>;
   selectedItem?: HeaderMenuItem;
   children?: ReactNode;
   center?: boolean;
@@ -43,6 +44,7 @@ export function MobileMenuItem({
   onClick,
   setIsMobileMenu,
   className,
+  setIsWhiteHeader,
 }: MenuItemProps & {
   focusedItem?: HeaderMenuItem;
   onClick?: MouseEventHandler<HTMLButtonElement>;
@@ -65,7 +67,10 @@ export function MobileMenuItem({
           className={cls`flex h-full w-full items-center justify-between`}
           onClick={() => {
             subMenuItems && setIsSubMenuOpen(isSubMenuOpen => !isSubMenuOpen);
-            !subMenuItems && setIsMobileMenu && setIsMobileMenu(false);
+            if (!subMenuItems && setIsWhiteHeader && setIsMobileMenu) {
+              setIsWhiteHeader(false);
+              setIsMobileMenu(false);
+            }
           }}>
           <span className={cls`text-lg ${selected && 'text-primary'}`}>{label ?? children}</span>
 
@@ -85,6 +90,7 @@ export function MobileMenuItem({
           items={subMenuItems}
           selectedItem={selectedItem}
           setIsMobileMenu={setIsMobileMenu}
+          setIsWhiteHeader={setIsWhiteHeader}
         />
       )}
     </div>
@@ -148,6 +154,7 @@ export interface SubMenuProps {
   selectedItem?: HeaderMenuItem;
   className?: string;
   setIsMobileMenu?: Dispatch<SetStateAction<boolean>>;
+  setIsWhiteHeader?: Dispatch<SetStateAction<boolean>>;
 }
 
 export function SubMenu({ items, selectedItem, className }: SubMenuProps) {
@@ -200,7 +207,13 @@ export function SubMenu({ items, selectedItem, className }: SubMenuProps) {
     </div>
   );
 }
-export function MobileSubMenu({ className, items, selectedItem, setIsMobileMenu }: SubMenuProps) {
+export function MobileSubMenu({
+  className,
+  items,
+  selectedItem,
+  setIsMobileMenu,
+  setIsWhiteHeader,
+}: SubMenuProps) {
   const subMenuBlock = (subItem: HeaderMenuItem) => (
     <li key={uuid()} className='space-y-2'>
       <CustomLink href={subItem.href}>
@@ -220,18 +233,26 @@ export function MobileSubMenu({ className, items, selectedItem, setIsMobileMenu 
     <ul className={cls`h-full w-full p-[4px] ${className}`}>
       {items.map(item => (
         <li key={uuid()}>
-          <ul className='rounded-md py-[8px] px-[16px] text-base hover:bg-backgroudGray md:text-[16px]'>
-            {/* group section header */}
-            <li
-              className={`${selectedItem && isIncludedItem(item, selectedItem) && 'text-primary'}`}
+          <CustomLink href={item.href}>
+            <ul
+              className='rounded-md py-[8px] px-[16px] text-base hover:bg-backgroudGray md:text-[16px]'
               onClick={() => {
-                setIsMobileMenu && setIsMobileMenu(false);
+                if (setIsMobileMenu && setIsWhiteHeader) {
+                  setIsWhiteHeader(false);
+                  setIsMobileMenu(false);
+                }
               }}>
-              <CustomLink href={item.href}>{item.label}</CustomLink>
-            </li>
+              {/* group section header */}
+              <li
+                className={`${
+                  selectedItem && isIncludedItem(item, selectedItem) && 'text-primary'
+                }`}>
+                {item.label}
+              </li>
 
-            {item.type === 'group' && item.subMenuItems.map(subMenuBlock)}
-          </ul>
+              {item.type === 'group' && item.subMenuItems.map(subMenuBlock)}
+            </ul>
+          </CustomLink>
         </li>
       ))}
     </ul>
