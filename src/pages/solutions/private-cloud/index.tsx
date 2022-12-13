@@ -2,26 +2,26 @@ import Image from 'next/image';
 
 import { SolutionContent, SolutionHeaderProps, SolutionTemplate } from '@/templates';
 
-import Logo_Article_1_2 from '@/public/images/new/solutions/article_1_2.png';
-import Logo_Article_2_7 from '@/public/images/new/solutions/article_2_7.svg';
+import Logo_Article_1_6 from '@/public/images/new/solutions/article_1_6.png';
+import Logo_Article_2_1 from '@/public/images/new/solutions/article_2_1.svg';
 import Logo_Article_3_2 from '@/public/images/new/solutions/article_3_2.png';
 
 const headerContent: SolutionHeaderProps = {
-  title: '빅데이터 분석',
+  title: '프라이빗 클라우드',
   description: (
-    <p className='max-w-[400px]'>
-      ABLESTACK HCI 만의 빅데이터 전용 아키텍처와 자동화 도구를 통해 빠르게 빅데이터 환경을
-      구축하십시오.
+    <p className='max-w-[430px]'>
+      필요에 따라 언제든지 확장할 수 있고 모든 앱을 실행할 수 있는 HCI 기반 클라우드로 비즈니스를
+      강화할 수 있습니다.
     </p>
   ),
 
-  textImage: <Logo_Article_2_7 />,
+  textImage: <Logo_Article_2_1 />,
   bgImage: 'bg-[#FAFAFA]',
-  image: <Image src={Logo_Article_1_2} />,
+  image: <Image src={Logo_Article_1_6} />,
   textColor: 'text-[#444444]',
 };
 
-const BigDataAnalysisPage = () => {
+const PrivateCloudPage = () => {
   return (
     <SolutionTemplate {...headerContent}>
       <SolutionContent
@@ -128,4 +128,4 @@ const BigDataAnalysisPage = () => {
   );
 };
 
-export default BigDataAnalysisPage;
+export default PrivateCloudPage;

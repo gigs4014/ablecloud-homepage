@@ -2,26 +2,25 @@ import Image from 'next/image';
 
 import { SolutionContent, SolutionHeaderProps, SolutionTemplate } from '@/templates';
 
-import Logo_Article_1_2 from '@/public/images/new/solutions/article_1_2.png';
-import Logo_Article_2_7 from '@/public/images/new/solutions/article_2_7.svg';
+import Logo_Article_1_18 from '@/public/images/new/solutions/article_1_18.png';
+import Logo_Article_2_17 from '@/public/images/new/solutions/article_2_17.svg';
 import Logo_Article_3_2 from '@/public/images/new/solutions/article_3_2.png';
 
 const headerContent: SolutionHeaderProps = {
-  title: '빅데이터 분석',
+  title: '백업 및 복구',
   description: (
     <p className='max-w-[400px]'>
-      ABLESTACK HCI 만의 빅데이터 전용 아키텍처와 자동화 도구를 통해 빠르게 빅데이터 환경을
-      구축하십시오.
+      가상환경 뿐 아니라 레거시 환경에 대한 통합 백업 및 복구를 지원합니다.
     </p>
   ),
 
-  textImage: <Logo_Article_2_7 />,
+  textImage: <Logo_Article_2_17 />,
   bgImage: 'bg-[#FAFAFA]',
-  image: <Image src={Logo_Article_1_2} />,
+  image: <Image src={Logo_Article_1_18} />,
   textColor: 'text-[#444444]',
 };
 
-const BigDataAnalysisPage = () => {
+const ElectronicDocumentPage = () => {
   return (
     <SolutionTemplate {...headerContent}>
       <SolutionContent
@@ -128,4 +127,4 @@ const BigDataAnalysisPage = () => {
   );
 };
 
-export default BigDataAnalysisPage;
+export default ElectronicDocumentPage;

@@ -2,26 +2,26 @@ import Image from 'next/image';
 
 import { SolutionContent, SolutionHeaderProps, SolutionTemplate } from '@/templates';
 
-import Logo_Article_1_2 from '@/public/images/new/solutions/article_1_2.png';
-import Logo_Article_2_7 from '@/public/images/new/solutions/article_2_7.svg';
+import Logo_Article_1_9 from '@/public/images/new/solutions/article_1_9.png';
+import Logo_Article_2_10 from '@/public/images/new/solutions/article_2_10.svg';
 import Logo_Article_3_2 from '@/public/images/new/solutions/article_3_2.png';
 
 const headerContent: SolutionHeaderProps = {
-  title: '빅데이터 분석',
+  title: '개발/테스트',
   description: (
     <p className='max-w-[400px]'>
-      ABLESTACK HCI 만의 빅데이터 전용 아키텍처와 자동화 도구를 통해 빠르게 빅데이터 환경을
-      구축하십시오.
+      효율적이고 민첩한 개발 및 테스트 환경을 통해 생산성을 높이고 출시사이클 단축을 통해 수익을
+      높일수 있습니다.
     </p>
   ),
 
-  textImage: <Logo_Article_2_7 />,
+  textImage: <Logo_Article_2_10 />,
   bgImage: 'bg-[#FAFAFA]',
-  image: <Image src={Logo_Article_1_2} />,
+  image: <Image src={Logo_Article_1_9} />,
   textColor: 'text-[#444444]',
 };
 
-const BigDataAnalysisPage = () => {
+const DevAndTsetPage = () => {
   return (
     <SolutionTemplate {...headerContent}>
       <SolutionContent
@@ -128,4 +128,4 @@ const BigDataAnalysisPage = () => {
   );
 };
 
-export default BigDataAnalysisPage;
+export default DevAndTsetPage;

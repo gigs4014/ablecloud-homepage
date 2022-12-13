@@ -2,26 +2,26 @@ import Image from 'next/image';
 
 import { SolutionContent, SolutionHeaderProps, SolutionTemplate } from '@/templates';
 
-import Logo_Article_1_2 from '@/public/images/new/solutions/article_1_2.png';
-import Logo_Article_2_7 from '@/public/images/new/solutions/article_2_7.svg';
+import Logo_Article_1_20 from '@/public/images/new/solutions/article_1_20.png';
+import Logo_Article_2_18 from '@/public/images/new/solutions/article_2_18.svg';
 import Logo_Article_3_2 from '@/public/images/new/solutions/article_3_2.png';
 
 const headerContent: SolutionHeaderProps = {
-  title: '빅데이터 분석',
+  title: '원격 및 지사 오피스',
   description: (
-    <p className='max-w-[400px]'>
-      ABLESTACK HCI 만의 빅데이터 전용 아키텍처와 자동화 도구를 통해 빠르게 빅데이터 환경을
-      구축하십시오.
+    <p className='max-w-[430px]'>
+      단일 HCI 플랫폼에서 지사의 모든 로컬 앱과 가상 데스크톱 등을 안전하게 실행 하여 비용, 복잡성
+      등을 모두 낮춥니다.
     </p>
   ),
 
-  textImage: <Logo_Article_2_7 />,
+  textImage: <Logo_Article_2_18 />,
   bgImage: 'bg-[#FAFAFA]',
-  image: <Image src={Logo_Article_1_2} />,
+  image: <Image src={Logo_Article_1_20} />,
   textColor: 'text-[#444444]',
 };
 
-const BigDataAnalysisPage = () => {
+const RemoteAndOfficesPage = () => {
   return (
     <SolutionTemplate {...headerContent}>
       <SolutionContent
@@ -128,4 +128,4 @@ const BigDataAnalysisPage = () => {
   );
 };
 
-export default BigDataAnalysisPage;
+export default RemoteAndOfficesPage;

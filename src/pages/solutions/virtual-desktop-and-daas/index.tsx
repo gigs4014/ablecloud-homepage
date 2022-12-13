@@ -2,26 +2,27 @@ import Image from 'next/image';
 
 import { SolutionContent, SolutionHeaderProps, SolutionTemplate } from '@/templates';
 
-import Logo_Article_1_2 from '@/public/images/new/solutions/article_1_2.png';
-import Logo_Article_2_7 from '@/public/images/new/solutions/article_2_7.svg';
+import Logo_Article_1_11 from '@/public/images/new/solutions/article_1_11.png';
+import Logo_Article_2_12 from '@/public/images/new/solutions/article_2_12.svg';
 import Logo_Article_3_2 from '@/public/images/new/solutions/article_3_2.png';
 
+11;
 const headerContent: SolutionHeaderProps = {
-  title: '빅데이터 분석',
+  title: '가상데스크톱/DaaS',
   description: (
-    <p className='max-w-[400px]'>
-      ABLESTACK HCI 만의 빅데이터 전용 아키텍처와 자동화 도구를 통해 빠르게 빅데이터 환경을
-      구축하십시오.
+    <p className='max-w-[430px]'>
+      회사 직원들을 위한 디지털 작업 공간을 제공하여 업무 환경에 더 큰 유연성을 생산하며 업무
+      생산성을 높이십시오.
     </p>
   ),
 
-  textImage: <Logo_Article_2_7 />,
+  textImage: <Logo_Article_2_12 />,
   bgImage: 'bg-[#FAFAFA]',
-  image: <Image src={Logo_Article_1_2} />,
+  image: <Image src={Logo_Article_1_11} />,
   textColor: 'text-[#444444]',
 };
 
-const BigDataAnalysisPage = () => {
+const VirtualDesktopAndDaasPage = () => {
   return (
     <SolutionTemplate {...headerContent}>
       <SolutionContent
@@ -128,4 +129,4 @@ const BigDataAnalysisPage = () => {
   );
 };
 
-export default BigDataAnalysisPage;
+export default VirtualDesktopAndDaasPage;
