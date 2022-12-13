@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useRef, useState } from 'react';
+import { ReactNode, useRef } from 'react';
 
 import { BaseComponentProps, TNullable } from '@/types';
 import { cls } from '@/utils';
@@ -23,26 +23,26 @@ export default function ProductHeader({
   textColor = 'text-white',
   imagePosition = 'first',
 }: ProductHeaderProps) {
-  const [isCurrentScrollTop, setIsCurrentScrollTop] = useState<boolean>(true);
+  // const [isCurrentScrollTop, setIsCurrentScrollTop] = useState<boolean>(true);
 
   const productHeaderRef = useRef<TNullable<HTMLDivElement>>(null);
 
-  useEffect(() => {
-    const listener = () => {
-      const currentScrollPos = window.pageYOffset;
-      if (productHeaderRef.current) {
-        if (currentScrollPos === 0) {
-          setIsCurrentScrollTop(true);
-        } else {
-          setIsCurrentScrollTop(false);
-        }
-      }
-    };
+  // useEffect(() => {
+  //   const listener = () => {
+  //     const currentScrollPos = window.pageYOffset;
+  //     if (productHeaderRef.current) {
+  //       if (currentScrollPos === 0) {
+  //         setIsCurrentScrollTop(true);
+  //       } else {
+  //         setIsCurrentScrollTop(false);
+  //       }
+  //     }
+  //   };
 
-    window.addEventListener('scroll', listener);
+  //   window.addEventListener('scroll', listener);
 
-    return () => window.removeEventListener('scroll', listener);
-  }, [productHeaderRef]);
+  //   return () => window.removeEventListener('scroll', listener);
+  // }, [productHeaderRef]);
 
   return (
     <header

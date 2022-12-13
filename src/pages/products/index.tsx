@@ -15,7 +15,7 @@ const headerContent: ProductHeaderProps = {
       인해 발생하는 문제점을 해결하기 위해 단일 서버 구성으로 모든 인프라와 플랫폼을 실행할
       수 있도록 고안된 HCI 플랫폼 입니다.`,
   bgImage: 'bg-product-header-bg',
-  imagePosition: 'last',
+  imagePosition: 'last', 
 };
 
 const items: Record<string, Array<ProductContentGridItem>> = {

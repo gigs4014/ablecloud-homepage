@@ -25,15 +25,22 @@ import Logo_Article_2_16 from '@/public/images/new/solutions/article_2_16.svg';
 import Logo_Article_2_17 from '@/public/images/new/solutions/article_2_17.svg';
 import Logo_Article_2_18 from '@/public/images/new/solutions/article_2_18.svg';
 import Logo_Article_2_19 from '@/public/images/new/solutions/article_2_19.svg';
+import Logo_Article_2_20 from '@/public/images/new/solutions/article_2_20.svg';
+import Logo_Article_2_21 from '@/public/images/new/solutions/article_2_21.svg';
 import Logo_Article_4_1 from '@/public/images/new/solutions/article_4_1.svg';
 import Logo_Article_4_2 from '@/public/images/new/solutions/article_4_2.svg';
 
 const headerContent: SolutionHeaderProps = {
   title: '솔루션',
-  description: `
+  description: (
+    <p>
       어떤 형태의 애플리케이션, 어떠한 비즈니스 워크로드 등에 상관없이 ABLESTACK이 솔루션을
-      제공합니다. ABLESTACK은 기업의 비즈니스 및 IT혁신을 위한 필수적인 솔루션입니다.
-    `,
+      제공합니다.
+      <br />
+      <br />
+      ABLESTACK은 기업의 비즈니스 및 IT혁신을 위한 필수적인 솔루션입니다.
+    </p>
+  ),
   bgImage: 'bg-[#FAFAFA]',
   image: <Image src={Logo_Article_1_1} />,
   textColor: 'text-[#444444]',
@@ -46,7 +53,7 @@ const solutions = [
     description: `빅 데이터 애플리케이션을 위한 
     클라우드 HCI의 민첩성과 온프레이스
     관리 편리성을 활용하십시오.`,
-    href: '/',
+    href: '/solutions/big-data-analysis',
   },
   {
     title: '비즈니스 연속성/재해복구',
@@ -58,6 +65,7 @@ const solutions = [
   },
   {
     title: '비즈니스 크리티털 앱',
+    image: <Logo_Article_2_20 />,
     description: `HCI기반의 엔터프라이즈 클라우드를
     활용하여 비용을 낮추고 단순성, 확장성,
     성능을 통해 비즈니스를 가속합니다.`,
@@ -175,6 +183,7 @@ const solutions = [
   },
   {
     title: 'CI/CD',
+    image: <Logo_Article_2_21 />,
     description: `HCI 기반의 클라우드 환경을 통해 
     빠르게 개발환경을 지원하고 통합하여
     애플리케이션 생명주기를 단축합니다.`,

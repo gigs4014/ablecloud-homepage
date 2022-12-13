@@ -64,7 +64,7 @@ export default function CompanyPage() {
             </p>
           }
           className={'bg-backgroudGray text-[#444444]'}>
-          <section className='mt-8 grid max-w-page-full grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'>
+          <section className='mx-4 mt-8 grid max-w-page-full grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'>
             <CompanyContent.DescriptionCard
               title='기업 클라우드 구축 '
               image={<Logo_Article_2_1 />}
