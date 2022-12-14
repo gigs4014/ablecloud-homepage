@@ -20,7 +20,7 @@ function PartnerTemplate({
 }: PropsWithChildren<PartnerTemplateProps>) {
   return (
     <>
-      <PartnerTemplateHead {...headerContent} />
+      {/* <PartnerTemplateHead {...headerContent} /> */}
 
       <Container.Article enableProseSpacing={enableProseSpacing} className={className}>
         <PartnerHeader {...headerContent} />

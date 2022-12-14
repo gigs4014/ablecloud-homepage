@@ -1,3 +1,5 @@
+import { NextSeo } from 'next-seo';
+
 import { ClientHeader, InterViewClientContentProps, InterViewClientTemplate } from '@/templates';
 
 import Logo_Article_1_12 from '@/public/images/new/interview/article_1_12_2.svg';
@@ -53,5 +55,23 @@ const clientContent: InterViewClientContentProps = {
 
 //국립기술품질원
 export default function DtaqPage() {
-  return <InterViewClientTemplate headerContent={headerContent} clientContent={clientContent} />;
+  return (
+    <>
+      <NextSeo
+        title='국립기술품질원  / HCI 구축사례'
+        description='국립기술품질원  / HCI 구축사례'
+        openGraph={{
+          type: 'website',
+          url: 'https://www.ablecloud.io/interview/dtaq',
+          images: [
+            {
+              url: '',
+              alt: '국립기술품질원  / HCI 구축사례',
+            },
+          ],
+        }}
+      />
+      <InterViewClientTemplate headerContent={headerContent} clientContent={clientContent} />
+    </>
+  );
 }

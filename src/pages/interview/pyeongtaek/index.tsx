@@ -1,3 +1,5 @@
+import { NextSeo } from 'next-seo';
+
 import { ClientHeader, InterViewClientContentProps, InterViewClientTemplate } from '@/templates';
 
 import Logo_Article_1_3 from '@/public/images/new/interview/article_1_3_2.svg';
@@ -51,5 +53,23 @@ const clientContent: InterViewClientContentProps = {
 
 //평택 시청
 export default function PyeongtaekPage() {
-  return <InterViewClientTemplate headerContent={headerContent} clientContent={clientContent} />;
+  return (
+    <>
+      <NextSeo
+        title='평택시청 / HCI 구축사례'
+        description='평택시청 / HCI 구축사례'
+        openGraph={{
+          type: 'website',
+          url: 'https://www.ablecloud.io/interview/pyeongtaek',
+          images: [
+            {
+              url: '',
+              alt: '평택시청 / HCI 구축사례',
+            },
+          ],
+        }}
+      />
+      <InterViewClientTemplate headerContent={headerContent} clientContent={clientContent} />
+    </>
+  );
 }

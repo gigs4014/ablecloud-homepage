@@ -1,5 +1,6 @@
 import Image from 'next/image';
 
+import { NextSeo } from 'next-seo';
 import { v4 as uuid } from 'uuid';
 
 import { CustomLink } from '@/components/common';
@@ -257,6 +258,20 @@ const partners = [
 export default function SolutionPage() {
   return (
     <>
+      <NextSeo
+        title='클라우드 솔루션'
+        description='클라우드 솔루션'
+        openGraph={{
+          type: 'website',
+          url: 'https://www.ablecloud.io/solutions',
+          images: [
+            {
+              url: '',
+              alt: '클라우드 솔루션',
+            },
+          ],
+        }}
+      />
       <SolutionTemplate {...headerContent}>
         <SolutionContent
           className={'bg-backgroudGray text-[#444444]'}

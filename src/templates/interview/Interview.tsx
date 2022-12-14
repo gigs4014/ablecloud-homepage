@@ -25,7 +25,7 @@ function InterViewTemplate({
 }: PropsWithChildren<InterViewTemplateProps>) {
   return (
     <>
-      <InterViewTemplateHead {...headerContent} />
+      {/* <InterViewTemplateHead {...headerContent} /> */}
 
       <Container.Article enableProseSpacing={enableProseSpacing} className={className}>
         <InterViewHeader {...headerContent} />

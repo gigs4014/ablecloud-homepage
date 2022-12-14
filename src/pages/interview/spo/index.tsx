@@ -1,3 +1,5 @@
+import { NextSeo } from 'next-seo';
+
 import { ClientHeader, InterViewClientContentProps, InterViewClientTemplate } from '@/templates';
 
 import Logo_Article_1_11 from '@/public/images/new/interview/article_1_11.svg';
@@ -58,5 +60,23 @@ const clientContent: InterViewClientContentProps = {
 
 //대검찰청
 export default function SpoPage() {
-  return <InterViewClientTemplate headerContent={headerContent} clientContent={clientContent} />;
+  return (
+    <>
+      <NextSeo
+        title='대검찰청  / HCI 구축사례'
+        description='대검찰청  / HCI 구축사례'
+        openGraph={{
+          type: 'website',
+          url: 'https://www.ablecloud.io/interview/spo',
+          images: [
+            {
+              url: '',
+              alt: '대검찰청  / HCI 구축사례',
+            },
+          ],
+        }}
+      />
+      <InterViewClientTemplate headerContent={headerContent} clientContent={clientContent} />
+    </>
+  );
 }

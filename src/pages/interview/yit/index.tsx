@@ -1,3 +1,5 @@
+import { NextSeo } from 'next-seo';
+
 import { ClientHeader, InterViewClientContentProps, InterViewClientTemplate } from '@/templates';
 
 import Logo_Article_1_6 from '@/public/images/new/interview/article_1_6.svg';
@@ -61,5 +63,23 @@ const clientContent: InterViewClientContentProps = {
 
 //여주대학교
 export default function YitPage() {
-  return <InterViewClientTemplate headerContent={headerContent} clientContent={clientContent} />;
+  return (
+    <>
+      <NextSeo
+        title='여주대학교 / HCI 구축사례'
+        description='여주대학교 / HCI 구축사례'
+        openGraph={{
+          type: 'website',
+          url: 'https://www.ablecloud.io/interview/yit',
+          images: [
+            {
+              url: '',
+              alt: '여주대학교 / HCI 구축사례',
+            },
+          ],
+        }}
+      />
+      <InterViewClientTemplate headerContent={headerContent} clientContent={clientContent} />;
+    </>
+  );
 }

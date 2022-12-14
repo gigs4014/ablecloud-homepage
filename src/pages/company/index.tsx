@@ -1,5 +1,7 @@
 import Image from 'next/image';
 
+import { NextSeo } from 'next-seo';
+
 import { CustomSlider } from '@/components/common';
 import { CompanyContent, CompanyHeaderProps, CompanyTemplate } from '@/templates';
 
@@ -49,6 +51,20 @@ const headerContent: CompanyHeaderProps = {
 export default function CompanyPage() {
   return (
     <>
+      <NextSeo
+        title='에이블클라우드'
+        description='프라이빗 클라우드 플랫폼 개발 전문업체'
+        openGraph={{
+          type: 'website',
+          url: 'https://www.ablecloud.io/company',
+          images: [
+            {
+              url: '',
+              alt: '에이블클라우드',
+            },
+          ],
+        }}
+      />
       <CompanyTemplate {...headerContent}>
         <CompanyContent
           title={

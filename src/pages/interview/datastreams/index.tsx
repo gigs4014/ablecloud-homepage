@@ -1,3 +1,5 @@
+import { NextSeo } from 'next-seo';
+
 import { ClientHeader, InterViewClientContentProps, InterViewClientTemplate } from '@/templates';
 
 import Logo_Article_1_10 from '@/public/images/new/interview/article_1_10.svg';
@@ -61,5 +63,23 @@ const clientContent: InterViewClientContentProps = {
 
 //datastreams
 export default function DatastreamsPage() {
-  return <InterViewClientTemplate headerContent={headerContent} clientContent={clientContent} />;
+  return (
+    <>
+      <NextSeo
+        title='HCI 구축사례'
+        description='HCI 구축사례'
+        openGraph={{
+          type: 'website',
+          url: 'https://www.ablecloud.io/interview/datastreams',
+          images: [
+            {
+              url: '',
+              alt: 'HCI 구축사례',
+            },
+          ],
+        }}
+      />
+      <InterViewClientTemplate headerContent={headerContent} clientContent={clientContent} />
+    </>
+  );
 }

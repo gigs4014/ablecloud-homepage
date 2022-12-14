@@ -1,3 +1,5 @@
+import { NextSeo } from 'next-seo';
+
 import { ClientHeader, InterViewClientContentProps, InterViewClientTemplate } from '@/templates';
 
 import Logo_Article_1_4 from '@/public/images/new/interview/article_1_4_2.svg';
@@ -51,5 +53,23 @@ const clientContent: InterViewClientContentProps = {
 
 //근로복지공단
 export default function ComwelPage() {
-  return <InterViewClientTemplate headerContent={headerContent} clientContent={clientContent} />;
+  return (
+    <>
+      <NextSeo
+        title='근로복지공단 / HCI 구축사례'
+        description='근로복지공단 / HCI 구축사례'
+        openGraph={{
+          type: 'website',
+          url: 'https://www.ablecloud.io/interview/comwel',
+          images: [
+            {
+              url: '',
+              alt: '근로복지공단 / HCI 구축사례',
+            },
+          ],
+        }}
+      />
+      <InterViewClientTemplate headerContent={headerContent} clientContent={clientContent} />
+    </>
+  );
 }

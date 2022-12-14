@@ -20,7 +20,7 @@ function ProductTemplate({
 }: PropsWithChildren<ProductTemplateProps>) {
   return (
     <>
-      <ProductTemplateHead {...headerContent} />
+      {/* <ProductTemplateHead {...headerContent} /> */}
 
       <Container.Article enableProseSpacing={enableProseSpacing} className={className}>
         <ProductHeader {...headerContent} />

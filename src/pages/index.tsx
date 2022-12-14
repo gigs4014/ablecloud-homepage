@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 
 import { ReactNode } from '@mdx-js/react/lib';
+import { NextSeo } from 'next-seo';
 
 import { Button, CustomLink, CustomSlider } from '@/components/common';
 import { CommonDemoContent, HomeContent, HomeHeaderProps, HomeTemplate } from '@/templates';
@@ -206,6 +207,20 @@ export default function HomePage() {
 
   return (
     <>
+      <NextSeo
+        title='HCI 솔루션 개발 전문기업 에이블 클라우드'
+        description='하이퍼컨버지드인프라(HCI) 개발 전문업체입니다.'
+        openGraph={{
+          type: 'website',
+          url: 'https://www.ablecloud.io/',
+          images: [
+            {
+              url: '',
+              alt: '에이블클라우드',
+            },
+          ],
+        }}
+      />
       <HomeTemplate headerContents={headerContents(fontSize)}>
         <HomeContent
           title='SDDC를 실현하는 HCI 플랫폼'

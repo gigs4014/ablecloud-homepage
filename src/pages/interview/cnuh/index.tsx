@@ -1,3 +1,5 @@
+import { NextSeo } from 'next-seo';
+
 import { ClientHeader, InterViewClientContentProps, InterViewClientTemplate } from '@/templates';
 
 import Logo_Article_1_8 from '@/public/images/new/interview/article_1_8_2.svg';
@@ -62,5 +64,23 @@ const clientContent: InterViewClientContentProps = {
 
 //충남대학교병원
 export default function CnuhPage() {
-  return <InterViewClientTemplate headerContent={headerContent} clientContent={clientContent} />;
+  return (
+    <>
+      <NextSeo
+        title='충남대학교병원 / HCI 구축사례'
+        description='충남대학교병원 / HCI 구축사례'
+        openGraph={{
+          type: 'website',
+          url: 'https://www.ablecloud.io/interview/cnuh',
+          images: [
+            {
+              url: '',
+              alt: '충남대학교병원 / HCI 구축사례',
+            },
+          ],
+        }}
+      />
+      <InterViewClientTemplate headerContent={headerContent} clientContent={clientContent} />
+    </>
+  );
 }

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 
 import Image from 'next/image';
 
+import { NextSeo } from 'next-seo';
 import { SolutionSearch } from 'src/templates/solutions/SolutionContent/SolutionSearch';
 
 import { InterViewContent, InterViewHeaderProps, InterViewTemplate } from '@/templates';
@@ -148,6 +149,20 @@ export default function InterViewsPage() {
 
   return (
     <>
+      <NextSeo
+        title='파트너'
+        description='파트너'
+        openGraph={{
+          type: 'website',
+          url: 'https://www.ablecloud.io/interview',
+          images: [
+            {
+              url: '',
+              alt: '파트너',
+            },
+          ],
+        }}
+      />
       <InterViewTemplate {...headerContent}>
         <InterViewContent title='ABLESTACK를 통해 혁신을 이룩한 고객사례'></InterViewContent>
 

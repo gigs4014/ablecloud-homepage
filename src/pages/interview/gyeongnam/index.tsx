@@ -1,3 +1,5 @@
+import { NextSeo } from 'next-seo';
+
 import { ClientHeader, InterViewClientContentProps, InterViewClientTemplate } from '@/templates';
 
 import Logo_Article_1_5 from '@/public/images/new/interview/article_1_5.svg';
@@ -46,5 +48,23 @@ const clientContent: InterViewClientContentProps = {
 };
 //경남도청
 export default function GyeongnamPage() {
-  return <InterViewClientTemplate headerContent={headerContent} clientContent={clientContent} />;
+  return (
+    <>
+      <NextSeo
+        title='경남도청 / HCI 구축사례'
+        description='경남도청 / HCI 구축사례'
+        openGraph={{
+          type: 'website',
+          url: 'https://www.ablecloud.io/interview/gyeongnam',
+          images: [
+            {
+              url: '',
+              alt: '경남도청 / HCI 구축사례',
+            },
+          ],
+        }}
+      />
+      <InterViewClientTemplate headerContent={headerContent} clientContent={clientContent} />
+    </>
+  );
 }
