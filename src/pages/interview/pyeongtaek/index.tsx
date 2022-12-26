@@ -1,9 +1,11 @@
+import Image from 'next/image';
+
 import { NextSeo } from 'next-seo';
 
 import { ClientHeader, InterViewClientContentProps, InterViewClientTemplate } from '@/templates';
 
 import Logo_Article_1_3 from '@/public/images/new/interview/article_1_3_2.svg';
-import PyeongtaekIntroduceImg from '@/public/images/new/interview/clientintroduceimage/PyeongtaekImage.svg';
+import PyeongtaekIntroduceImg from '@/public/images/new/interview/clientintroduceimage/PyeongtaekImage.png';
 
 const headerContent: ClientHeader = {
   title: '평택시청',
@@ -22,7 +24,11 @@ const clientContent: InterViewClientContentProps = {
       다양한 IT 인프라를 운영하고 있습니다.
     </p>
   ),
-  introduceImage: <PyeongtaekIntroduceImg className='mx-auto max-w-[490px]' />,
+  introduceImage: (
+    <div className='mx-auto max-w-[490px]'>
+      <Image src={PyeongtaekIntroduceImg} />
+    </div>
+  ),
   assignmentDescription: (
     <div>
       평택시청은 수도계량시스템의 현대화를 위해 다음의 요구사항을 제시하였습니다.

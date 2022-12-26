@@ -1,9 +1,11 @@
+import Image from 'next/image';
+
 import { NextSeo } from 'next-seo';
 
 import { ClientHeader, InterViewClientContentProps, InterViewClientTemplate } from '@/templates';
 
 import Logo_Article_1_7 from '@/public/images/new/interview/article_1_7.svg';
-import KipoIntroduceImg from '@/public/images/new/interview/clientintroduceimage/KipoImage.svg';
+import KipoIntroduceImg from '@/public/images/new/interview/clientintroduceimage/KipoImage.png';
 
 const headerContent: ClientHeader = {
   title: '특허청',
@@ -19,7 +21,11 @@ const clientContent: InterViewClientContentProps = {
       심사 업무를 수행하는 다양한 시스템이 내부적으로 운영되고 있습니다.
     </p>
   ),
-  introduceImage: <KipoIntroduceImg className='mx-auto max-w-[494px]' />,
+  introduceImage: (
+    <div className='mx-auto max-w-[494px]'>
+      <Image src={KipoIntroduceImg} />
+    </div>
+  ),
   assignmentDescription: (
     <div>
       특허청은 특허심사 업무의 효율성을 높이고, 어디서든 관련 업무를 수행할 수 있는 환경을 특허심사

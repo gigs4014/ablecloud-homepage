@@ -1,9 +1,11 @@
+import Image from 'next/image';
+
 import { NextSeo } from 'next-seo';
 
 import { ClientHeader, InterViewClientContentProps, InterViewClientTemplate } from '@/templates';
 
 import Logo_Article_1_4 from '@/public/images/new/interview/article_1_4_2.svg';
-import ComwelIntroduceImg from '@/public/images/new/interview/clientintroduceimage/ComwelImage.svg';
+import ComwelIntroduceImg from '@/public/images/new/interview/clientintroduceimage/ComwelImage.png';
 
 const headerContent: ClientHeader = {
   title: '근로복지공단',
@@ -22,7 +24,11 @@ const clientContent: InterViewClientContentProps = {
       기반의 복지행정을 제공하기 위해 지속적인 IT서비스 및 인프라 개선을 추진하고 있습니다.
     </p>
   ),
-  introduceImage: <ComwelIntroduceImg className='mx-auto max-w-[465px]' />,
+  introduceImage: (
+    <div className='mx-auto max-w-[465px]'>
+      <Image src={ComwelIntroduceImg} />
+    </div>
+  ),
   assignmentDescription: (
     <div>
       근로복지공단은 축척되어온 노동복제 데이터를 분석하여 효율적으로 복지정책을 수행하는데 많은

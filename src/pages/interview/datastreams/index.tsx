@@ -1,9 +1,11 @@
+import Image from 'next/image';
+
 import { NextSeo } from 'next-seo';
 
 import { ClientHeader, InterViewClientContentProps, InterViewClientTemplate } from '@/templates';
 
 import Logo_Article_1_10 from '@/public/images/new/interview/article_1_10.svg';
-import DatastreamsIntroduceImg from '@/public/images/new/interview/clientintroduceimage/DatastreamsImage.svg';
+import DatastreamsIntroduceImg from '@/public/images/new/interview/clientintroduceimage/DatastreamsImage.png';
 
 const headerContent: ClientHeader = {
   title: '데이타스트림즈 ',
@@ -22,7 +24,11 @@ const clientContent: InterViewClientContentProps = {
       컨설팅 서비스, 플랫폼을 제공하고 있습니다.
     </p>
   ),
-  introduceImage: <DatastreamsIntroduceImg className='mx-auto max-w-[493px]' />,
+  introduceImage: (
+    <div className='mx-auto max-w-[493px]'>
+      <Image src={DatastreamsIntroduceImg} />
+    </div>
+  ),
   assignmentDescription: (
     <div>
       데이터스트림즈는 보유한 다양한 빅데이터 기반의 애플리케이션에 대한 지속적 개발 및 배포를

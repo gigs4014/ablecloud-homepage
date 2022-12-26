@@ -1,9 +1,11 @@
+import Image from 'next/image';
+
 import { NextSeo } from 'next-seo';
 
 import { ClientHeader, InterViewClientContentProps, InterViewClientTemplate } from '@/templates';
 
 import Logo_Article_1_8 from '@/public/images/new/interview/article_1_8_2.svg';
-import CnuhIntroduceImg from '@/public/images/new/interview/clientintroduceimage/CnuhImage.svg';
+import CnuhIntroduceImg from '@/public/images/new/interview/clientintroduceimage/CnuhImage.png';
 
 const headerContent: ClientHeader = {
   title: '충남대학교병원',
@@ -22,7 +24,11 @@ const clientContent: InterViewClientContentProps = {
       있는 혁신적인 IT 의료 인프라를 바탕으로 최상의 서비스를 제공하고 있습니다.
     </p>
   ),
-  introduceImage: <CnuhIntroduceImg className='mx-auto max-w-[399px]' />,
+  introduceImage: (
+    <div className='mx-auto max-w-[399px]'>
+      <Image src={CnuhIntroduceImg} />
+    </div>
+  ),
   assignmentDescription: (
     <div>
       충남대학교병원은 본원 및 세종분원의 개원을 통해 지역 주민에 대한 의료 서비스의 질을 높이기

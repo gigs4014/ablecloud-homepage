@@ -1,9 +1,11 @@
+import Image from 'next/image';
+
 import { NextSeo } from 'next-seo';
 
 import { ClientHeader, InterViewClientContentProps, InterViewClientTemplate } from '@/templates';
 
 import Logo_Article_1_9 from '@/public/images/new/interview/article_1_9.svg';
-import GntelIntroduceImg from '@/public/images/new/interview/clientintroduceimage/GntelImage.svg';
+import GntelIntroduceImg from '@/public/images/new/interview/clientintroduceimage/GntelImage.png';
 
 const headerContent: ClientHeader = {
   title: '지엔텔',
@@ -22,7 +24,11 @@ const clientContent: InterViewClientContentProps = {
       경쟁력을 갖춘 Total Solution 제공을 목표로 하는 전문 IT 기업입니다.
     </p>
   ),
-  introduceImage: <GntelIntroduceImg className='mx-auto max-w-[451px]' />,
+  introduceImage: (
+    <div className='mx-auto max-w-[451px]'>
+      <Image src={GntelIntroduceImg} />
+    </div>
+  ),
   assignmentDescription: (
     <div>
       지엔텔은 내부 업무를 위한 다양한 인프라를 효과적으로 운영할 수 있을 뿐 아니라, 다양한

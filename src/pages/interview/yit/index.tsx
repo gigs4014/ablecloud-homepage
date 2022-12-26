@@ -1,9 +1,11 @@
+import Image from 'next/image';
+
 import { NextSeo } from 'next-seo';
 
 import { ClientHeader, InterViewClientContentProps, InterViewClientTemplate } from '@/templates';
 
 import Logo_Article_1_6 from '@/public/images/new/interview/article_1_6.svg';
-import YitIntroduceImg from '@/public/images/new/interview/clientintroduceimage/YitImage.svg';
+import YitIntroduceImg from '@/public/images/new/interview/clientintroduceimage/YitImage.png';
 
 const headerContent: ClientHeader = {
   title: '여주대학교',
@@ -22,7 +24,11 @@ const clientContent: InterViewClientContentProps = {
       인프라를 동시에 운영하고 있습니다.
     </p>
   ),
-  introduceImage: <YitIntroduceImg className='mx-auto max-w-[396px]' />,
+  introduceImage: (
+    <div className='mx-auto max-w-[396px]'>
+      <Image src={YitIntroduceImg} />
+    </div>
+  ),
   assignmentDescription: (
     <div>
       여주대학교는 학사행정시스템의 효율적인 운영 및 연구개발 인프라의 학내 제공을 위한 효율적인

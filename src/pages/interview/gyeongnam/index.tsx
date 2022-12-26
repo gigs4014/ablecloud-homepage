@@ -1,9 +1,11 @@
+import Image from 'next/image';
+
 import { NextSeo } from 'next-seo';
 
 import { ClientHeader, InterViewClientContentProps, InterViewClientTemplate } from '@/templates';
 
 import Logo_Article_1_5 from '@/public/images/new/interview/article_1_5.svg';
-import GyeongnamIntroduceImg from '@/public/images/new/interview/clientintroduceimage/GyeongnamImage.svg';
+import GyeongnamIntroduceImg from '@/public/images/new/interview/clientintroduceimage/GyeongnamImage.png';
 
 const headerContent: ClientHeader = {
   title: '경상남도청',
@@ -19,7 +21,11 @@ const clientContent: InterViewClientContentProps = {
       내부적으로 운영하고 있습니다.
     </p>
   ),
-  introduceImage: <GyeongnamIntroduceImg className='mx-auto max-w-[462px]' />,
+  introduceImage: (
+    <div className='mx-auto max-w-[462px]'>
+      <Image src={GyeongnamIntroduceImg} />
+    </div>
+  ),
   assignmentDescription: (
     <div>
       대민 업무를 위한 물리적인 시스템의 운영 관리에 대한 개선을 위한 다음의 요구사항이 있었습니다.

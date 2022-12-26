@@ -1,9 +1,11 @@
+import Image from 'next/image';
+
 import { NextSeo } from 'next-seo';
 
 import { ClientHeader, InterViewClientContentProps, InterViewClientTemplate } from '@/templates';
 
 import Logo_Article_1_12 from '@/public/images/new/interview/article_1_12_2.svg';
-import DtaqIntroduceImg from '@/public/images/new/interview/clientintroduceimage/DtaqImage.svg';
+import DtaqIntroduceImg from '@/public/images/new/interview/clientintroduceimage/DtaqImage.png';
 
 const headerContent: ClientHeader = {
   title: '국방기술품질원',
@@ -23,7 +25,11 @@ const clientContent: InterViewClientContentProps = {
       육성 지원 및 국방기술기획·관리·평가를 수행하고 있습니다.
     </p>
   ),
-  introduceImage: <DtaqIntroduceImg className='mx-auto max-w-[490px]' />,
+  introduceImage: (
+    <div className='mx-auto max-w-[490px]'>
+      <Image src={DtaqIntroduceImg} />
+    </div>
+  ),
   assignmentDescription: (
     <div>
       국방기술품질원은 내부 문서의 안전한 문서 관리 및 공유 체계를 위한 문서중앙화 환경을 구축하기

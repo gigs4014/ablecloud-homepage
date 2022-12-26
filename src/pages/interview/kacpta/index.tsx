@@ -1,9 +1,11 @@
+import Image from 'next/image';
+
 import { NextSeo } from 'next-seo';
 
 import { ClientHeader, InterViewClientContentProps, InterViewClientTemplate } from '@/templates';
 
 import Logo_Article_1_2 from '@/public/images/new/interview/article_1_2.svg';
-import KacptaIntroduceImg from '@/public/images/new/interview/clientintroduceimage/KacptaImage.svg';
+import KacptaIntroduceImg from '@/public/images/new/interview/clientintroduceimage/KacptaImage.png';
 
 const headerContent: ClientHeader = {
   title: '한국세무사회',
@@ -23,7 +25,11 @@ const clientContent: InterViewClientContentProps = {
       아니라 공인세무사 시험 관리 등의 다양한 시스템을 운영하고 있습니다.
     </p>
   ),
-  introduceImage: <KacptaIntroduceImg className='mx-auto max-w-[422px]' />,
+  introduceImage: (
+    <div className='m-auto max-w-[422px]'>
+      <Image src={KacptaIntroduceImg} />
+    </div>
+  ),
   assignmentDescription: (
     <div>
       한국세무사회는 홈페이지, 공인세무사 시험 관리, 다양한 세무행정 지원 시스템을 운영하고 있으며,

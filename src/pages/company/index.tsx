@@ -213,6 +213,7 @@ export default function CompanyPage() {
             <CompanyContent.DescriptionCard
               containerClassName={'bg-[#F6F7F9]'}
               title='10분 내 구성'
+              className='mx-4'
               image={<Logo_Article_5_2 />}
               description={
                 <p className={'m-0 whitespace-nowrap p-0 text-[16px] font-[400] leading-[23.17px]'}>

@@ -1,9 +1,11 @@
+import Image from 'next/image';
+
 import { NextSeo } from 'next-seo';
 
 import { ClientHeader, InterViewClientContentProps, InterViewClientTemplate } from '@/templates';
 
 import Logo_Article_1_11 from '@/public/images/new/interview/article_1_11.svg';
-import SpoIntroduceImg from '@/public/images/new/interview/clientintroduceimage/SpoImage.svg';
+import SpoIntroduceImg from '@/public/images/new/interview/clientintroduceimage/SpoImage.png';
 
 const headerContent: ClientHeader = {
   title: '대검찰청',
@@ -23,7 +25,11 @@ const clientContent: InterViewClientContentProps = {
       있습니다.
     </p>
   ),
-  introduceImage: <SpoIntroduceImg className='mx-auto max-w-[440px]' />,
+  introduceImage: (
+    <div className='mx-auto max-w-[440px]'>
+      <Image src={SpoIntroduceImg} />
+    </div>
+  ),
   assignmentDescription: (
     <div>
       대검찰청 및 지방검찰청 내의 다양한 자료를 효과적으로 관리하는데 있어 다음과 같은 한계가
