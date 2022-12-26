@@ -26,6 +26,7 @@ interface LogoData {
   src: ReactNode;
   href?: string;
 }
+
 const headerContents = (fontSize: string): HomeHeaderProps[] => [
   {
     title: 'Cloud Innovation 2023',
