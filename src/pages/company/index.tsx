@@ -192,7 +192,7 @@ export default function CompanyPage() {
           <Image src={Logo_Article_4_7} />
         </CompanyContent>
         <CompanyContent title='단순함을 추구합니다.'>
-          <CustomSlider>
+          <CustomSlider settingsOverrides={{ slidesToShow: 3, slidesToScroll: 3 }}>
             <CompanyContent.DescriptionCard
               containerClassName={'bg-[#F6F7F9]'}
               title='하이퍼 컨버징'

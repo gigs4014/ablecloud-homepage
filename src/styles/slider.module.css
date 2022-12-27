@@ -79,6 +79,7 @@
 .slick-slide {
   display: none;
   float: left;
+  min-width: 1px;
   flex-wrap: nowrap;
   height: 100%;
   padding: 10px;

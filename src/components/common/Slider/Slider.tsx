@@ -16,8 +16,8 @@ export const CustomSlider = ({ settingsOverrides, children }: CarouselProps) => 
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToScroll: 3,
-    slidesToShow: 3,
+    slidesToShow: 1,
+    slidesToScroll: 1,
     swipeToSlide: true,
     autoplay: true,
     responsive: [
