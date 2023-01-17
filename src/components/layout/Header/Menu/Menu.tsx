@@ -106,16 +106,7 @@ export function MenuItem({
 }: MenuItemProps) {
   const { label, href, subMenuItems } = item;
 
-  const [isSubMenuOpen, _setIsSubMenuOpen] = useState<boolean>(false);
-  const timeoutRef = useRef<NodeJS.Timeout>();
-  const setIsSubMenuOpen = useCallback((value: boolean) => {
-    timeoutRef.current && clearTimeout(timeoutRef.current);
-    if (!value) {
-      timeoutRef.current = setTimeout(() => _setIsSubMenuOpen(value), 200);
-    } else {
-      _setIsSubMenuOpen(value);
-    }
-  }, []);
+  const [isSubMenuOpen, setIsSubMenuOpen] = useState<boolean>(false);
 
   const selected = useMemo(
     () => selectedItem && isIncludedItem(item, selectedItem),

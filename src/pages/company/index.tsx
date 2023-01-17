@@ -29,7 +29,6 @@ import Logo_Article_6_1 from '@/public/images/new/company/article_6_1.svg';
 import Logo_Article_6_2 from '@/public/images/new/company/article_6_2.svg';
 import Logo_Article_6_3 from '@/public/images/new/company/article_6_3.svg';
 import Logo_Article_6_4 from '@/public/images/new/company/article_6_4.svg';
-import Line from '@/public/images/new/line.png';
 
 const headerContent: CompanyHeaderProps = {
   title: <Logo_Article_1_1 />,
@@ -120,7 +119,7 @@ export default function CompanyPage() {
           <div className={'mb-[40px]'}>
             <div className='mb-[20px] flex w-full items-center justify-between'>
               <p className={'pr-3 pl-8 text-[24px] font-[700] leading-[34.75px] xsm:pl-16'}>2021</p>
-              <Image src={Line} objectFit={'contain'} />
+              <div className='h-[1px] w-full bg-[#444]'></div>
               <p className={'pl-3 pr-8 text-[24px] font-[700] leading-[34.75px] xsm:pr-16'}>2022</p>
             </div>
             <div className={'mb-[20px] flex justify-between'}>

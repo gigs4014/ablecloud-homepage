@@ -36,7 +36,7 @@ export function ActionCard({
 }: ActionCardProps) {
   return (
     <Container.Card
-      hoverBehavoir={hoverBehavoir}
+      hoverBehavior={hoverBehavior}
       className={`not-prose border-borderGrayColor m-auto w-full max-w-[400px] border-1 ${containerClassName}`}>
       {image && <div className='max-h-[218px] max-w-[400px]'>{image}</div>}
 
@@ -74,7 +74,7 @@ export function DescriptionCard({
   return (
     <Container.Card
       className={`h-[436px] w-[95%] pt-[35px] pb-[58px] text-center shadow-none ${containerClassName}`}
-      hoverBehavoir={hoverBehavoir}>
+      hoverBehavior={hoverBehavior}>
       {image && <div className='flex items-center justify-center'>{image}</div>}
 
       <div className={'pt-[66px]'}>
@@ -118,7 +118,7 @@ export function RowSummaryCard({
 }: CardProps) {
   return (
     <Container.Card
-      hoverBehavoir={hoverBehavoir}
+      hoverBehavior={hoverBehavior}
       className={`flex h-full items-center justify-start border-0.5 border-gray-200 py-4 px-6 shadow-none ${containerClassName}`}>
       {image && (
         <div className='hidden min-h-[108px] min-w-[100px] items-center justify-center xsm:flex'>
@@ -147,7 +147,7 @@ export function RowSmallCard({
 }: CardProps) {
   return (
     <Container.Card
-      hoverBehavoir={hoverBehavoir}
+      hoverBehavior={hoverBehavior}
       className={`flex w-full items-center justify-start border-0.5 shadow-none ${containerClassName}`}>
       {image && <div className='flex items-center justify-center'>{image}</div>}
 
@@ -169,7 +169,7 @@ export function ItemCard({
   return (
     <Container.Card
       className={`h-full px-8 pb-[37px] text-center shadow-none ${containerClassName}`}
-      hoverBehavoir={hoverBehavoir}>
+      hoverBehavior={hoverBehavior}>
       {image && <div className='flex items-center justify-center'>{image}</div>}
 
       <div>
