@@ -6,7 +6,9 @@ import { SolutionContent, SolutionHeaderProps, SolutionTemplate } from '@/templa
 
 import Logo_Article_1_18 from '@/public/images/new/solutions/article_1_18.png';
 import Logo_Article_2_17 from '@/public/images/new/solutions/article_2_17.svg';
-import Logo_Article_3_2 from '@/public/images/new/solutions/article_3_2.png';
+import Logo_Article_3_49 from '@/public/images/new/solutions/article_3_49.png';
+import Logo_Article_3_50 from '@/public/images/new/solutions/article_3_50.png';
+import Logo_Article_3_51 from '@/public/images/new/solutions/article_3_51.png';
 
 const headerContent: SolutionHeaderProps = {
   title: '백업 및 복구',
@@ -44,40 +46,40 @@ const ElectronicDocumentPage = () => {
           className={'bg-[#FFFFFF] text-[#444444]'}
           description={
             <p className='max-w-[590px]'>
-              HCI Node의 로컬 디스크를 직접 활용한 전용 데이터노드 구성 아키텍처와 자동화 지원을
-              통한 신속한 구성, 가상화를 통한 높은 유연성을 가진 빅데이터 인프라
+              ABLESTACK HCI에 내장되어 있는 백업 및 복구 기능과 외장 백업 장치와의 연계를 통해
+              어떤한 상애 상황에서도 빠르게 서비스를 복구할 수 있습니다.
             </p>
           }>
           <section className='mt-12 grid max-w-page-full grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'>
             <SolutionContent.DescriptionCard
               containerClassName='bg-[#F6F7F9]'
-              title='Hadoop 전용 구성'
+              title='저비용 백업/복구'
               description={
                 <p className={'m-0 px-12 text-[16px] font-[400] leading-[23.17px]'}>
-                  HDFS를 위한 전용 디스크를 선택하여 데이터 노드를 구성함으로써 기존 HCI가 가지는
-                  빅데이터 환경의 저장용량 이슈를 해결했습니다.
+                  내장되어 있는 백업/복구 및 외부 연계 통합 백업으로 저비용으로 재해 복구 인프라를
+                  구성할 수 있습니다.
                 </p>
               }
             />
 
             <SolutionContent.DescriptionCard
-              title='신속한 구성'
+              title='장애 복구 시간 단축'
               containerClassName='bg-[#F6F7F9]'
               description={
                 <p className={'m-0 px-8 text-[16px] font-[400] leading-[23.17px]'}>
-                  사용자가 원하는 빅데이터 플랫폼을 자동화 도구를 이용해 원하는 절차와 설정으로
-                  원클릭으로 빠르게 구성 할 수 있습니다.
+                  외부 백업 및 스냅샷, 시스템, 파일 단위로 복구를 지원하여 장애 복구 시간을
+                  단축합니다.
                 </p>
               }
             />
 
             <SolutionContent.DescriptionCard
-              title='파트너 생태계 구성'
+              title='백업/복구 가시성 제고'
               containerClassName='bg-[#F6F7F9]'
               description={
                 <p className={'m-0 px-12 text-[16px] font-[400] leading-[23.17px]'}>
-                  가상머신 뿐 아니라 Kubernetes 환경을 제공하여 다양한 빅데이터 애플리케이션을
-                  개발하고 배포할 수 있는 유연성을 제공합니다.
+                  통합 관리시스템을 통해 백업 상황을 확인할 수 있고 바로 복구가 가능하여 높은
+                  가시성을 제공합니다.
                 </p>
               }
             />
@@ -85,18 +87,18 @@ const ElectronicDocumentPage = () => {
         </SolutionContent>
         <SolutionContent
           className={'bg-[#EEF4FB] text-[#444444]'}
-          // title='기존의 SAN 또는 NAS를 뛰어넘는 고도로 자동화된 하이퍼 컨버지드 스토리지'
           imagePosition='first'
-          image={<Image src={Logo_Article_3_2} />}>
+          image={<Image src={Logo_Article_3_49} />}>
           <SolutionContent.Description
-            title='다양한 HDFS 옵션 제공'
+            title='내장되어 있는 백업/복구 기능'
             contents={[
               {
                 title:
-                  'ABLESTACK은 HCI를 이용해 유연하게 Hadoop 데이터 저장환경을 제공하기 위해 다양한 HDFS 구성 옵션을 제공합니다.',
+                  'ABLESTACK HCI는 자체적으로 내장되어 있는 백업/복구 기능을 제공할 뿐 아니라 상용 외장 백업 장비와의 연동을 통해 효과적으로 백업/복구 체계를 구성할 수 있습니다.',
                 descriptions: [
-                  '노드의 로컬 디스크를 직접 HDFS용 디스크로 사용 가능',
-                  'Hadoop Cluster가 HDFS 대신, 전용 어댑터를 통해 Glue Object Storage를 데이터 저장소로 사용할 수 있음',
+                  '내장되어 있는 가상머신 스냅샷 백업 및 볼륨 단위 복구 기능 제공',
+                  '상용 외장 백업 장비와의 연동으로 가상머신 이미지 및 파일 단위 복구 기능 제공',
+                  'Veeam, DellEMC Networker, Synology Active Backup 등의 외장 백업 지원',
                 ],
               },
             ]}
@@ -104,18 +106,17 @@ const ElectronicDocumentPage = () => {
         </SolutionContent>
         <SolutionContent
           className={'bg-[#FFFFFF] text-[#444444]'}
-          // title='기존의 SAN 또는 NAS를 뛰어넘는 고도로 자동화된 하이퍼 컨버지드 스토리지'
           imagePosition='last'
-          image={<Image src={Logo_Article_3_2} />}>
+          image={<Image src={Logo_Article_3_50} />}>
           <SolutionContent.Description
-            title='다양한 HDFS 옵션 제공'
+            title='다양한 형태의 복구 기능 지원'
             contents={[
               {
                 title:
-                  'ABLESTACK은 HCI를 이용해 유연하게 Hadoop 데이터 저장환경을 제공하기 위해 다양한 HDFS 구성 옵션을 제공합니다.',
+                  'ABLESTACK 백업/복구는 스냅샷 단위, 이미지 단위, 파일 단위 등 다양한 형태로 복구를 지원하여 복구 시간을 단축합니다.',
                 descriptions: [
-                  '노드의 로컬 디스크를 직접 HDFS용 디스크로 사용 가능',
-                  'Hadoop Cluster가 HDFS 대신, 전용 어댑터를 통해 Glue Object Storage를 데이터 저장소로 사용할 수 있음',
+                  '가상머신 볼륨 스냅샷 백업 및 볼륨 복구 기능 제공',
+                  '외장 백업 장비와의 연동을 통해 가상머신의 이미지, 파일 단위 백업 및라이브 리스토어 기능 제공',
                 ],
               },
             ]}
@@ -123,18 +124,17 @@ const ElectronicDocumentPage = () => {
         </SolutionContent>
         <SolutionContent
           className={'bg-[#F6F7F9;] text-[#444444]'}
-          // title='기존의 SAN 또는 NAS를 뛰어넘는 고도로 자동화된 하이퍼 컨버지드 스토리지'
           imagePosition='first'
-          image={<Image src={Logo_Article_3_2} />}>
+          image={<Image src={Logo_Article_3_51} />}>
           <SolutionContent.Description
-            title='다양한 HDFS 옵션 제공'
+            title='가시성 높은 백업/복구 모니터링'
             contents={[
               {
                 title:
-                  'ABLESTACK은 HCI를 이용해 유연하게 Hadoop 데이터 저장환경을 제공하기 위해 다양한 HDFS 구성 옵션을 제공합니다.',
+                  'ABLESTACK은 내장된 백업/복구 기능 뿐 아니라 상용 외부 백업 저장장치와의 연동을 통해 관리 플랫폼에서 백업/복구 상태를 모니터링 합니다.',
                 descriptions: [
-                  '노드의 로컬 디스크를 직접 HDFS용 디스크로 사용 가능',
-                  'Hadoop Cluster가 HDFS 대신, 전용 어댑터를 통해 Glue Object Storage를 데이터 저장소로 사용할 수 있음',
+                  'Mold를 통한 스냅샷 백업 상태 조회 및 정기 스냅샷 백업 실행',
+                  '상용 외부 백업 저장 장치와의 API 연계를 통해 Mold UI를 통해 백업의 상태 및복원 상태를 바로 확인할 수 있는 기능 제공',
                 ],
               },
             ]}

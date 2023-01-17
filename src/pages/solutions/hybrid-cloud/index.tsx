@@ -6,7 +6,9 @@ import { SolutionContent, SolutionHeaderProps, SolutionTemplate } from '@/templa
 
 import Logo_Article_1_5 from '@/public/images/new/solutions/article_1_5.png';
 import Logo_Article_2_4 from '@/public/images/new/solutions/article_2_4.svg';
-import Logo_Article_3_2 from '@/public/images/new/solutions/article_3_2.png';
+import Logo_Article_3_11 from '@/public/images/new/solutions/article_3_11.png';
+import Logo_Article_3_12 from '@/public/images/new/solutions/article_3_12.png';
+import Logo_Article_3_13 from '@/public/images/new/solutions/article_3_13.png';
 
 const headerContent: SolutionHeaderProps = {
   title: '하이브리드 클라우드',
@@ -44,40 +46,39 @@ const HybridCloudPage = () => {
           className={'bg-[#FFFFFF] text-[#444444]'}
           description={
             <p className='max-w-[590px]'>
-              HCI Node의 로컬 디스크를 직접 활용한 전용 데이터노드 구성 아키텍처와 자동화 지원을
-              통한 신속한 구성, 가상화를 통한 높은 유연성을 가진 빅데이터 인프라
+              ABLESTACK HCI에 통합된 멀티클라우드 자동화 플랫폼과 내장된 VPC 네트워크 기능을 통해
+              사용자의 온프레미스 환경을 퍼블릭클라우드로 빠르게 확장하십시오.
             </p>
           }>
           <section className='mt-12 grid max-w-page-full grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'>
             <SolutionContent.DescriptionCard
               containerClassName='bg-[#F6F7F9]'
-              title='Hadoop 전용 구성'
+              title='클라우드 선택의 자유'
               description={
                 <p className={'m-0 px-12 text-[16px] font-[400] leading-[23.17px]'}>
-                  HDFS를 위한 전용 디스크를 선택하여 데이터 노드를 구성함으로써 기존 HCI가 가지는
-                  빅데이터 환경의 저장용량 이슈를 해결했습니다.
+                  멀티 클라우드 플랫폼을 통해 더 이상 사용자가 어떤 클라우드를 선택하여 사용할지
+                  고민하지 않고 투명하게 클라우드를 확장합니다.
                 </p>
               }
             />
 
             <SolutionContent.DescriptionCard
-              title='신속한 구성'
+              title='통합된 단순함'
               containerClassName='bg-[#F6F7F9]'
               description={
                 <p className={'m-0 px-8 text-[16px] font-[400] leading-[23.17px]'}>
-                  사용자가 원하는 빅데이터 플랫폼을 자동화 도구를 이용해 원하는 절차와 설정으로
-                  원클릭으로 빠르게 구성 할 수 있습니다.
+                  Mold와 Genie를 통해 웹 기반으로, 그리고 워크플로우를 통해 언제든지 사용자의
+                  온프레미스 환경을 퍼블릭 환경으로 확장할 수 있습니다.
                 </p>
               }
             />
 
             <SolutionContent.DescriptionCard
-              title='파트너 생태계 구성'
+              title='안전한 네트워크 통합'
               containerClassName='bg-[#F6F7F9]'
               description={
                 <p className={'m-0 px-12 text-[16px] font-[400] leading-[23.17px]'}>
-                  가상머신 뿐 아니라 Kubernetes 환경을 제공하여 다양한 빅데이터 애플리케이션을
-                  개발하고 배포할 수 있는 유연성을 제공합니다.
+                  내장된 VPC 네트워크를 통해 퍼블릭 클라우드의 VPC와의 암호화된 통신을 제공합니다.
                 </p>
               }
             />
@@ -85,18 +86,18 @@ const HybridCloudPage = () => {
         </SolutionContent>
         <SolutionContent
           className={'bg-[#EEF4FB] text-[#444444]'}
-          // title='기존의 SAN 또는 NAS를 뛰어넘는 고도로 자동화된 하이퍼 컨버지드 스토리지'
           imagePosition='first'
-          image={<Image src={Logo_Article_3_2} />}>
+          image={<Image src={Logo_Article_3_11} />}>
           <SolutionContent.Description
-            title='다양한 HDFS 옵션 제공'
+            title='내장된 멀티클라우드 자동화'
             contents={[
               {
                 title:
-                  'ABLESTACK은 HCI를 이용해 유연하게 Hadoop 데이터 저장환경을 제공하기 위해 다양한 HDFS 구성 옵션을 제공합니다.',
+                  'ABLESTACK은 ABLESTACK 클러스터에서 다양한 환경의 클라우드로의 확장이 가능하도록 멀티클라우드 자동화 플랫폼이 내장되어 있습니다.',
                 descriptions: [
-                  '노드의 로컬 디스크를 직접 HDFS용 디스크로 사용 가능',
-                  'Hadoop Cluster가 HDFS 대신, 전용 어댑터를 통해 Glue Object Storage를 데이터 저장소로 사용할 수 있음',
+                  'Multi Cloud 자동화 플랫폼 Genie 내장',
+                  '가상머신, 컨테이너, 애플리케이션의 배포 전반을 자동화',
+                  'Mold와 Genie 연계를 통해 Genie를 통해 배포된 자원에 대한 현황 및 통합모니터링 기능 제공',
                 ],
               },
             ]}
@@ -104,18 +105,18 @@ const HybridCloudPage = () => {
         </SolutionContent>
         <SolutionContent
           className={'bg-[#FFFFFF] text-[#444444]'}
-          // title='기존의 SAN 또는 NAS를 뛰어넘는 고도로 자동화된 하이퍼 컨버지드 스토리지'
           imagePosition='last'
-          image={<Image src={Logo_Article_3_2} />}>
+          image={<Image src={Logo_Article_3_12} />}>
           <SolutionContent.Description
-            title='다양한 HDFS 옵션 제공'
+            title='다양한 클라우드 플랫폼 지원'
             contents={[
               {
                 title:
-                  'ABLESTACK은 HCI를 이용해 유연하게 Hadoop 데이터 저장환경을 제공하기 위해 다양한 HDFS 구성 옵션을 제공합니다.',
+                  'ABLESTACK Genie는 ABLESTACK 클라우드 클러스터 뿐 아니라다양한 클라우드 플랫폼을 지원하여 밴더 락인을 방지합니다.',
                 descriptions: [
-                  '노드의 로컬 디스크를 직접 HDFS용 디스크로 사용 가능',
-                  'Hadoop Cluster가 HDFS 대신, 전용 어댑터를 통해 Glue Object Storage를 데이터 저장소로 사용할 수 있음',
+                  'ABLESTACK 클라우드 클러스터 자동화 지원',
+                  'OpenStack, VMWare 등의 프라이빗 클라우드 플랫폼 지원',
+                  'AWS, GCP, Azure 등의 다양한 퍼블릭 클라우드 플랫폼 지원',
                 ],
               },
             ]}
@@ -123,18 +124,18 @@ const HybridCloudPage = () => {
         </SolutionContent>
         <SolutionContent
           className={'bg-[#F6F7F9;] text-[#444444]'}
-          // title='기존의 SAN 또는 NAS를 뛰어넘는 고도로 자동화된 하이퍼 컨버지드 스토리지'
           imagePosition='first'
-          image={<Image src={Logo_Article_3_2} />}>
+          image={<Image src={Logo_Article_3_13} />}>
           <SolutionContent.Description
-            title='다양한 HDFS 옵션 제공'
+            title='VPC 기반의 네트워크 통합'
             contents={[
               {
                 title:
-                  'ABLESTACK은 HCI를 이용해 유연하게 Hadoop 데이터 저장환경을 제공하기 위해 다양한 HDFS 구성 옵션을 제공합니다.',
+                  'ABLESTACK은 내장되어 있는 VPC 네트워크를 이용해 확장된 다른 퍼블릭클라우드와 통합되어 확장 효과를 극대화 합니다.',
                 descriptions: [
-                  '노드의 로컬 디스크를 직접 HDFS용 디스크로 사용 가능',
-                  'Hadoop Cluster가 HDFS 대신, 전용 어댑터를 통해 Glue Object Storage를 데이터 저장소로 사용할 수 있음',
+                  '내장된 VPC 게이트웨이를 통해 퍼블릭 클라우드 VPC 게이트웨이와 네트워크 통합',
+                  'Zero Trust 기반의 보안 관리를 통해 안전하게 클라우드 간 통신 보장',
+                  '통합된 네트워크를 통해 배포된 애플리케이션 간의 안정적인 연결 보장',
                 ],
               },
             ]}

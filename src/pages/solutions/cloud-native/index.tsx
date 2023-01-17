@@ -6,7 +6,9 @@ import { SolutionContent, SolutionHeaderProps, SolutionTemplate } from '@/templa
 
 import Logo_Article_1_7 from '@/public/images/new/solutions/article_1_7.png';
 import Logo_Article_2_8 from '@/public/images/new/solutions/article_2_8.svg';
-import Logo_Article_3_2 from '@/public/images/new/solutions/article_3_2.png';
+import Logo_Article_3_17 from '@/public/images/new/solutions/article_3_17.png';
+import Logo_Article_3_18 from '@/public/images/new/solutions/article_3_18.png';
+import Logo_Article_3_19 from '@/public/images/new/solutions/article_3_19.png';
 
 const headerContent: SolutionHeaderProps = {
   title: '클라우드 네이티브',
@@ -46,40 +48,40 @@ const CloudNativePage = () => {
           className={'bg-[#FFFFFF] text-[#444444]'}
           description={
             <p className='max-w-[590px]'>
-              HCI Node의 로컬 디스크를 직접 활용한 전용 데이터노드 구성 아키텍처와 자동화 지원을
-              통한 신속한 구성, 가상화를 통한 높은 유연성을 가진 빅데이터 인프라
+              가상화 및 자동화된 Kubernetes 관리 기능이 포함된 ABLESTACK HCI를 통해 기업의 클라우드
+              네이티브 워크로드를 가속화 할 수 있습니다.
             </p>
           }>
           <section className='mt-12 grid max-w-page-full grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'>
             <SolutionContent.DescriptionCard
               containerClassName='bg-[#F6F7F9]'
-              title='Hadoop 전용 구성'
+              title='서비스 안정성 제고'
               description={
                 <p className={'m-0 px-12 text-[16px] font-[400] leading-[23.17px]'}>
-                  HDFS를 위한 전용 디스크를 선택하여 데이터 노드를 구성함으로써 기존 HCI가 가지는
-                  빅데이터 환경의 저장용량 이슈를 해결했습니다.
+                  내장되어 있는 자가치유 기능으로 높은 회복성을 제공하여 안정적인 클라우드 네이티브
+                  인프라를 제공합니다.
                 </p>
               }
             />
 
             <SolutionContent.DescriptionCard
-              title='신속한 구성'
+              title='신속한 개발/운영'
               containerClassName='bg-[#F6F7F9]'
               description={
                 <p className={'m-0 px-8 text-[16px] font-[400] leading-[23.17px]'}>
-                  사용자가 원하는 빅데이터 플랫폼을 자동화 도구를 이용해 원하는 절차와 설정으로
-                  원클릭으로 빠르게 구성 할 수 있습니다.
+                  Kubernetes 및 배포 자동화를 통해 DevOps 환경을 제공하여 신속한 애플리케이션
+                  개발/운영을 지원합니다.
                 </p>
               }
             />
 
             <SolutionContent.DescriptionCard
-              title='파트너 생태계 구성'
+              title='높은 관리 효율성'
               containerClassName='bg-[#F6F7F9]'
               description={
                 <p className={'m-0 px-12 text-[16px] font-[400] leading-[23.17px]'}>
-                  가상머신 뿐 아니라 Kubernetes 환경을 제공하여 다양한 빅데이터 애플리케이션을
-                  개발하고 배포할 수 있는 유연성을 제공합니다.
+                  하이브리드 클라우드 환경에서 통합된 관리 환경을 제공하고 견고한 자동화 서비스와
+                  함께 높은 관리 편의성을 제공합니다.
                 </p>
               }
             />
@@ -87,18 +89,18 @@ const CloudNativePage = () => {
         </SolutionContent>
         <SolutionContent
           className={'bg-[#EEF4FB] text-[#444444]'}
-          // title='기존의 SAN 또는 NAS를 뛰어넘는 고도로 자동화된 하이퍼 컨버지드 스토리지'
           imagePosition='first'
-          image={<Image src={Logo_Article_3_2} />}>
+          image={<Image src={Logo_Article_3_17} />}>
           <SolutionContent.Description
-            title='다양한 HDFS 옵션 제공'
+            title='Kubernetes 자동화'
             contents={[
               {
                 title:
-                  'ABLESTACK은 HCI를 이용해 유연하게 Hadoop 데이터 저장환경을 제공하기 위해 다양한 HDFS 구성 옵션을 제공합니다.',
+                  'ABLESTACK은 Kubernetes 자동화를 통해 컨테이너 환경을 제공함으로써 기업에 빠르게 클라우드 네이티브 환경을 제공합니다.',
                 descriptions: [
-                  '노드의 로컬 디스크를 직접 HDFS용 디스크로 사용 가능',
-                  'Hadoop Cluster가 HDFS 대신, 전용 어댑터를 통해 Glue Object Storage를 데이터 저장소로 사용할 수 있음',
+                  'Koral을 통한 Kubernetes 클러스터 구성 자동화',
+                  'Mold에 통합되어 편리한 관리 기능 제공',
+                  'Kubernetes 클러스터를 위한 LB, AutoScaling 기능 제공',
                 ],
               },
             ]}
@@ -106,18 +108,18 @@ const CloudNativePage = () => {
         </SolutionContent>
         <SolutionContent
           className={'bg-[#FFFFFF] text-[#444444]'}
-          // title='기존의 SAN 또는 NAS를 뛰어넘는 고도로 자동화된 하이퍼 컨버지드 스토리지'
           imagePosition='last'
-          image={<Image src={Logo_Article_3_2} />}>
+          image={<Image src={Logo_Article_3_18} />}>
           <SolutionContent.Description
-            title='다양한 HDFS 옵션 제공'
+            title='하이브리드 클라우드 자동화'
             contents={[
               {
                 title:
-                  'ABLESTACK은 HCI를 이용해 유연하게 Hadoop 데이터 저장환경을 제공하기 위해 다양한 HDFS 구성 옵션을 제공합니다.',
+                  'ABLESTACK은 Mold에 통합된 Genie를 통해 다양한 클라우드 환경에서 확장성 있는 애플리케이션 개발 및 운영이 가능하도록 지원합니다.',
                 descriptions: [
-                  '노드의 로컬 디스크를 직접 HDFS용 디스크로 사용 가능',
-                  'Hadoop Cluster가 HDFS 대신, 전용 어댑터를 통해 Glue Object Storage를 데이터 저장소로 사용할 수 있음',
+                  'Genie를 통해 애플리케이션 배포 자동화 지원',
+                  '하이브리드 클라우드 환경에서의 DevOps를 지원하여 풀사이클 개발환경을 빠르게 구성할 수 있음',
+                  'AWS, GCP, Azure 및 OpenStack, VMWare 등 폭넓은 클라우드 지원',
                 ],
               },
             ]}
@@ -125,18 +127,18 @@ const CloudNativePage = () => {
         </SolutionContent>
         <SolutionContent
           className={'bg-[#F6F7F9;] text-[#444444]'}
-          // title='기존의 SAN 또는 NAS를 뛰어넘는 고도로 자동화된 하이퍼 컨버지드 스토리지'
           imagePosition='first'
-          image={<Image src={Logo_Article_3_2} />}>
+          image={<Image src={Logo_Article_3_19} />}>
           <SolutionContent.Description
-            title='다양한 HDFS 옵션 제공'
+            title='자가 치유를 통한 무중단 운영'
             contents={[
               {
                 title:
-                  'ABLESTACK은 HCI를 이용해 유연하게 Hadoop 데이터 저장환경을 제공하기 위해 다양한 HDFS 구성 옵션을 제공합니다.',
+                  '자가 치유를 통한 무중단 운영 ABLESTACK은 자체적으로 내장된 자가 치유 아키텍처를 통해 인스턴스 장애에도 지속적인 서비스가 가능한 무중단 운영 환경을 제공합니다.',
                 descriptions: [
-                  '노드의 로컬 디스크를 직접 HDFS용 디스크로 사용 가능',
-                  'Hadoop Cluster가 HDFS 대신, 전용 어댑터를 통해 Glue Object Storage를 데이터 저장소로 사용할 수 있음',
+                  'Glue의 자가 장애 탐지 및 복구 기능을 통해 스토리지 인스턴스 장애 자동 처리',
+                  'Mold의 호스트 및 가상머신 HA 기능을 통해 호스트 인스턴스 장애 시가상머신 자동 복구 기능 제공',
+                  'Koral의 클러스터 자동화를 통해 실행 중인 서비스의 자동 확대 및 축소를 통한서비스 부하의 자동 대응 기능 제공',
                 ],
               },
             ]}

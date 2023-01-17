@@ -6,7 +6,9 @@ import { SolutionContent, SolutionHeaderProps, SolutionTemplate } from '@/templa
 
 import Logo_Article_1_4 from '@/public/images/new/solutions/article_1_4.png';
 import Logo_Article_2_20 from '@/public/images/new/solutions/article_2_20.svg';
-import Logo_Article_3_2 from '@/public/images/new/solutions/article_3_2.png';
+import Logo_Article_3_6 from '@/public/images/new/solutions/article_3_6.png';
+import Logo_Article_3_9 from '@/public/images/new/solutions/article_3_9.png';
+import Logo_Article_3_10 from '@/public/images/new/solutions/article_3_10.png';
 
 const headerContent: SolutionHeaderProps = {
   title: '비즈니스 크리티컬 앱',
@@ -44,40 +46,40 @@ const BusinessCriticalPage = () => {
           className={'bg-[#FFFFFF] text-[#444444]'}
           description={
             <p className='max-w-[590px]'>
-              HCI Node의 로컬 디스크를 직접 활용한 전용 데이터노드 구성 아키텍처와 자동화 지원을
-              통한 신속한 구성, 가상화를 통한 높은 유연성을 가진 빅데이터 인프라
+              조직이 요구하는 비즈니스 애플리케이션에 대한 민첩성과 확장성을 제공하고 기업의 디지털
+              환경에 대한 가치실현 시간을 단축하면서 비용을 절감할 수 있습니다.
             </p>
           }>
           <section className='mt-12 grid max-w-page-full grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'>
             <SolutionContent.DescriptionCard
               containerClassName='bg-[#F6F7F9]'
-              title='Hadoop 전용 구성'
+              title='사용자 만족도 향상'
               description={
                 <p className={'m-0 px-12 text-[16px] font-[400] leading-[23.17px]'}>
-                  HDFS를 위한 전용 디스크를 선택하여 데이터 노드를 구성함으로써 기존 HCI가 가지는
-                  빅데이터 환경의 저장용량 이슈를 해결했습니다.
+                  비즈니스 애플리케이션의 실행 성능을 보장하는 아키텍처를 제공하여 애플리케이션
+                  사용자의 만족도를 향상 시킵니다.
                 </p>
               }
             />
 
             <SolutionContent.DescriptionCard
-              title='신속한 구성'
+              title='IT 효율성 최대 75% 향상'
               containerClassName='bg-[#F6F7F9]'
               description={
                 <p className={'m-0 px-8 text-[16px] font-[400] leading-[23.17px]'}>
-                  사용자가 원하는 빅데이터 플랫폼을 자동화 도구를 이용해 원하는 절차와 설정으로
-                  원클릭으로 빠르게 구성 할 수 있습니다.
+                  단순한 인프라 구조, 내장되어 있는 이중화 기능 등 단순하면서도 집약된 기능을 통해
+                  기업의 IT 효율성을 높일 수 있습니다.
                 </p>
               }
             />
 
             <SolutionContent.DescriptionCard
-              title='파트너 생태계 구성'
+              title='다운타임 최소화'
               containerClassName='bg-[#F6F7F9]'
               description={
                 <p className={'m-0 px-12 text-[16px] font-[400] leading-[23.17px]'}>
-                  가상머신 뿐 아니라 Kubernetes 환경을 제공하여 다양한 빅데이터 애플리케이션을
-                  개발하고 배포할 수 있는 유연성을 제공합니다.
+                  내장되어 있는 데이터베이스 이중화, 고가용성 제공을 통해 비즈니스 애플리키이션의
+                  서비스 연속성을 보장합니다.
                 </p>
               }
             />
@@ -85,18 +87,18 @@ const BusinessCriticalPage = () => {
         </SolutionContent>
         <SolutionContent
           className={'bg-[#EEF4FB] text-[#444444]'}
-          // title='기존의 SAN 또는 NAS를 뛰어넘는 고도로 자동화된 하이퍼 컨버지드 스토리지'
           imagePosition='first'
-          image={<Image src={Logo_Article_3_2} />}>
+          image={<Image src={Logo_Article_3_9} />}>
           <SolutionContent.Description
-            title='다양한 HDFS 옵션 제공'
+            title='고성능을 제공하는 아키텍처'
             contents={[
               {
                 title:
-                  'ABLESTACK은 HCI를 이용해 유연하게 Hadoop 데이터 저장환경을 제공하기 위해 다양한 HDFS 구성 옵션을 제공합니다.',
+                  'ABLESTACK은 비즈니스 크리티컬 앱에 높은 성능을 제공하기 위해 높은 성능의 IO를 처리하기 위한 자체적인 아키텍처를 제공합니다.',
                 descriptions: [
-                  '노드의 로컬 디스크를 직접 HDFS용 디스크로 사용 가능',
-                  'Hadoop Cluster가 HDFS 대신, 전용 어댑터를 통해 Glue Object Storage를 데이터 저장소로 사용할 수 있음',
+                  '호스트 커널 링 버퍼를 사용하는 메모리 로컬리티 기능',
+                  '고성능 NVMe 디스크를 캐시로 사용하는 데이터 로컬리티 기능',
+                  '가상머신 루트이미지를 캐시하여 읽기 성능을 높이는 이미지 캐시 기능',
                 ],
               },
             ]}
@@ -104,18 +106,18 @@ const BusinessCriticalPage = () => {
         </SolutionContent>
         <SolutionContent
           className={'bg-[#FFFFFF] text-[#444444]'}
-          // title='기존의 SAN 또는 NAS를 뛰어넘는 고도로 자동화된 하이퍼 컨버지드 스토리지'
           imagePosition='last'
-          image={<Image src={Logo_Article_3_2} />}>
+          image={<Image src={Logo_Article_3_10} />}>
           <SolutionContent.Description
-            title='다양한 HDFS 옵션 제공'
+            title='단순한 인프라, 단순한 관리'
             contents={[
               {
                 title:
-                  'ABLESTACK은 HCI를 이용해 유연하게 Hadoop 데이터 저장환경을 제공하기 위해 다양한 HDFS 구성 옵션을 제공합니다.',
+                  'ABLESTACK은 애플리케이션을 실행하는 인프라의 단순성을 제공하고 웹을 통해 편리하게 관리할 수 있습니다.',
                 descriptions: [
-                  '노드의 로컬 디스크를 직접 HDFS용 디스크로 사용 가능',
-                  'Hadoop Cluster가 HDFS 대신, 전용 어댑터를 통해 Glue Object Storage를 데이터 저장소로 사용할 수 있음',
+                  '모든 것이 x86 서버로 통합된 단순 인프라 구성',
+                  '로드밸런서 내장을 통해 애플리케이션 서버를 확장하고 부하를 분산할 수 있는 구조 제공',
+                  '웹 기반 관리 플랫폼인 Mold를 통한 모든 애플리케이션/인프라 통합관리',
                 ],
               },
             ]}
@@ -123,18 +125,18 @@ const BusinessCriticalPage = () => {
         </SolutionContent>
         <SolutionContent
           className={'bg-[#F6F7F9;] text-[#444444]'}
-          // title='기존의 SAN 또는 NAS를 뛰어넘는 고도로 자동화된 하이퍼 컨버지드 스토리지'
           imagePosition='first'
-          image={<Image src={Logo_Article_3_2} />}>
+          image={<Image src={Logo_Article_3_6} />}>
           <SolutionContent.Description
-            title='다양한 HDFS 옵션 제공'
+            title='내장된 인프라 안정성'
             contents={[
               {
                 title:
-                  'ABLESTACK은 HCI를 이용해 유연하게 Hadoop 데이터 저장환경을 제공하기 위해 다양한 HDFS 구성 옵션을 제공합니다.',
+                  'ABLESTACK은 내장된 고가용성 및 보안 기능을 통해 애플리케이션이 안전하면서도 안정적으로 운영되도록 합니다.',
                 descriptions: [
-                  '노드의 로컬 디스크를 직접 HDFS용 디스크로 사용 가능',
-                  'Hadoop Cluster가 HDFS 대신, 전용 어댑터를 통해 Glue Object Storage를 데이터 저장소로 사용할 수 있음',
+                  '가상머신, 컨테이너, 호스트 전반에 대한 고가용성 기능을 내장',
+                  '데이터베이스 이중화를 HCI 내부에서 지원',
+                  'Zero Trust 기반의 네트워크 보안을 제공하여 애플리케이션을 외부 공격으로 부터 보호',
                 ],
               },
             ]}

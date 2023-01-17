@@ -27,6 +27,6 @@ export function useLiftedState<T>(
       setInternalState(liftedState);
     }
   }, [liftedState]);
-
+  console.log({ state });
   return [state, setState];
 }

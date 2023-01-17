@@ -6,7 +6,9 @@ import { SolutionContent, SolutionHeaderProps, SolutionTemplate } from '@/templa
 
 import Logo_Article_1_16 from '@/public/images/new/solutions/article_1_16.png';
 import Logo_Article_2_3 from '@/public/images/new/solutions/article_2_3.svg';
-import Logo_Article_3_2 from '@/public/images/new/solutions/article_3_2.png';
+import Logo_Article_3_43 from '@/public/images/new/solutions/article_3_43.png';
+import Logo_Article_3_44 from '@/public/images/new/solutions/article_3_44.png';
+import Logo_Article_3_45 from '@/public/images/new/solutions/article_3_45.png';
 
 const headerContent: SolutionHeaderProps = {
   title: '영상 감시',
@@ -45,40 +47,40 @@ const VideoSurveillancePage = () => {
           className={'bg-[#FFFFFF] text-[#444444]'}
           description={
             <p className='max-w-[590px]'>
-              HCI Node의 로컬 디스크를 직접 활용한 전용 데이터노드 구성 아키텍처와 자동화 지원을
-              통한 신속한 구성, 가상화를 통한 높은 유연성을 가진 빅데이터 인프라
+              대용량의 데이터를 처리해야 하고 다양한 분석/의사결정이 필요한 영상감시 인프라로
+              ABLESTACK HCI는 최고의 성능과 확장성, 단순성으로 운영 안정성과 효율성을 높여 드립니다.
             </p>
           }>
           <section className='mt-12 grid max-w-page-full grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'>
             <SolutionContent.DescriptionCard
               containerClassName='bg-[#F6F7F9]'
-              title='Hadoop 전용 구성'
+              title='공간 효율성 향상'
               description={
                 <p className={'m-0 px-12 text-[16px] font-[400] leading-[23.17px]'}>
-                  HDFS를 위한 전용 디스크를 선택하여 데이터 노드를 구성함으로써 기존 HCI가 가지는
-                  빅데이터 환경의 저장용량 이슈를 해결했습니다.
+                  컴팩트한 아키텍처와 단일 서버만으로 이루어진 인프라 환경을 제공하여 서버실의 공간,
+                  전력 비용을 줄입니다.
                 </p>
               }
             />
 
             <SolutionContent.DescriptionCard
-              title='신속한 구성'
+              title='유지보수성 향상'
               containerClassName='bg-[#F6F7F9]'
               description={
                 <p className={'m-0 px-8 text-[16px] font-[400] leading-[23.17px]'}>
-                  사용자가 원하는 빅데이터 플랫폼을 자동화 도구를 이용해 원하는 절차와 설정으로
-                  원클릭으로 빠르게 구성 할 수 있습니다.
+                  단순한 인프라 구조와 턴키 솔루션 제공을 통해 인프라에 대한 유지보수성이
+                  향상됩니다.
                 </p>
               }
             />
 
             <SolutionContent.DescriptionCard
-              title='파트너 생태계 구성'
+              title='저장/분석 성능 향상'
               containerClassName='bg-[#F6F7F9]'
               description={
                 <p className={'m-0 px-12 text-[16px] font-[400] leading-[23.17px]'}>
-                  가상머신 뿐 아니라 Kubernetes 환경을 제공하여 다양한 빅데이터 애플리케이션을
-                  개발하고 배포할 수 있는 유연성을 제공합니다.
+                  지속적 성능이 보장되어야 하는 영상 저장 및 분석 환경에서 하드디스크 만으로도 높은
+                  성능을 제공합니다.
                 </p>
               }
             />
@@ -86,18 +88,17 @@ const VideoSurveillancePage = () => {
         </SolutionContent>
         <SolutionContent
           className={'bg-[#EEF4FB] text-[#444444]'}
-          // title='기존의 SAN 또는 NAS를 뛰어넘는 고도로 자동화된 하이퍼 컨버지드 스토리지'
           imagePosition='first'
-          image={<Image src={Logo_Article_3_2} />}>
+          image={<Image src={Logo_Article_3_43} />}>
           <SolutionContent.Description
-            title='다양한 HDFS 옵션 제공'
+            title='단순한 영상 감시 인프라'
             contents={[
               {
                 title:
-                  'ABLESTACK은 HCI를 이용해 유연하게 Hadoop 데이터 저장환경을 제공하기 위해 다양한 HDFS 구성 옵션을 제공합니다.',
+                  'ABLESTACK은 x86 서버만으로 이루어지는 인프라를 제공하고 기존 인프라를 재활용 할 수 있어 영상 감시 인프라를 효율적으로 운영할 수 있습니다.',
                 descriptions: [
-                  '노드의 로컬 디스크를 직접 HDFS용 디스크로 사용 가능',
-                  'Hadoop Cluster가 HDFS 대신, 전용 어댑터를 통해 Glue Object Storage를 데이터 저장소로 사용할 수 있음',
+                  'x86 서버만으로 기존 인프라를 대체하기 때문에 필요한 공간을 줄일 수 있어 전반적인 운영 비용 절감 가능',
+                  '기존 스토리지를 그대로 사용할 수 있어 효율적으로 저장공간 운영 계획 수립 가능',
                 ],
               },
             ]}
@@ -105,18 +106,17 @@ const VideoSurveillancePage = () => {
         </SolutionContent>
         <SolutionContent
           className={'bg-[#FFFFFF] text-[#444444]'}
-          // title='기존의 SAN 또는 NAS를 뛰어넘는 고도로 자동화된 하이퍼 컨버지드 스토리지'
           imagePosition='last'
-          image={<Image src={Logo_Article_3_2} />}>
+          image={<Image src={Logo_Article_3_44} />}>
           <SolutionContent.Description
-            title='다양한 HDFS 옵션 제공'
+            title='편리한 관리가 가능한 영상 감시 환경'
             contents={[
               {
                 title:
-                  'ABLESTACK은 HCI를 이용해 유연하게 Hadoop 데이터 저장환경을 제공하기 위해 다양한 HDFS 구성 옵션을 제공합니다.',
+                  'ABLESTACK은 통합 관리 환경을 제공하여 모든 영상감시 인프라를 통합하여 관리하고 모니터링 할 수 있습니다.',
                 descriptions: [
-                  '노드의 로컬 디스크를 직접 HDFS용 디스크로 사용 가능',
-                  'Hadoop Cluster가 HDFS 대신, 전용 어댑터를 통해 Glue Object Storage를 데이터 저장소로 사용할 수 있음',
+                  '영상감시 및 분석/서비스를 위해 필요한 모든 인프라를 통합하여 배포하고관리할 수 있는 Mold 통합 플랫폼 제공',
+                  '운영되는 모든 인프라 및 애플리케이션에 대한 운영 현황 및 성능을 모니터링 할 수 있는 Wall 통합 모니터링 플랫폼 제공',
                 ],
               },
             ]}
@@ -124,18 +124,18 @@ const VideoSurveillancePage = () => {
         </SolutionContent>
         <SolutionContent
           className={'bg-[#F6F7F9;] text-[#444444]'}
-          // title='기존의 SAN 또는 NAS를 뛰어넘는 고도로 자동화된 하이퍼 컨버지드 스토리지'
           imagePosition='first'
-          image={<Image src={Logo_Article_3_2} />}>
+          image={<Image src={Logo_Article_3_45} />}>
           <SolutionContent.Description
-            title='다양한 HDFS 옵션 제공'
+            title='높은 안정성, 성능의 영상감시 인프라'
             contents={[
               {
                 title:
-                  'ABLESTACK은 HCI를 이용해 유연하게 Hadoop 데이터 저장환경을 제공하기 위해 다양한 HDFS 구성 옵션을 제공합니다.',
+                  'ABLESTACK은 대용량의 지속적 데이터 저장 특성을 가지는 영상감시 인프라에 적합한 분산 스토리지 구조를 제공합니다.',
                 descriptions: [
-                  '노드의 로컬 디스크를 직접 HDFS용 디스크로 사용 가능',
-                  'Hadoop Cluster가 HDFS 대신, 전용 어댑터를 통해 Glue Object Storage를 데이터 저장소로 사용할 수 있음',
+                  '하드디스크 만으로도 안정적으로 고용량 데이터의 입출력 처리를 제공',
+                  'Glue 오브젝트 스토리지를 통해 영상 데이터의 효율적 저장 가능',
+                  '일부 스토리지 인프라의 장애에도 서비스 중단 없는 안정적 아키텍처',
                 ],
               },
             ]}

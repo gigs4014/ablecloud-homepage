@@ -6,7 +6,9 @@ import { SolutionContent, SolutionHeaderProps, SolutionTemplate } from '@/templa
 
 import Logo_Article_1_11 from '@/public/images/new/solutions/article_1_11.png';
 import Logo_Article_2_12 from '@/public/images/new/solutions/article_2_12.svg';
-import Logo_Article_3_2 from '@/public/images/new/solutions/article_3_2.png';
+import Logo_Article_3_29 from '@/public/images/new/solutions/article_3_29.png';
+import Logo_Article_3_30 from '@/public/images/new/solutions/article_3_30.png';
+import Logo_Article_3_31 from '@/public/images/new/solutions/article_3_31.png';
 
 const headerContent: SolutionHeaderProps = {
   title: '가상데스크톱/DaaS',
@@ -44,41 +46,41 @@ const VirtualDesktopAndDaasPage = () => {
         <SolutionContent
           className={'bg-[#FFFFFF] text-[#444444]'}
           description={
-            <p className='max-w-[590px]'>
-              HCI Node의 로컬 디스크를 직접 활용한 전용 데이터노드 구성 아키텍처와 자동화 지원을
-              통한 신속한 구성, 가상화를 통한 높은 유연성을 가진 빅데이터 인프라
+            <p className='max-w-[620px]'>
+              고성능을 제공하는 ABLESTACK의 아키텍처와 함께, 다양한 하이퍼바이저 상에서 실행되는
+              다양한 데스크톱 옵션을 통해 효과적으로 원격 업무 환경을 구성할 수 있습니다.
             </p>
           }>
           <section className='mt-12 grid max-w-page-full grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'>
             <SolutionContent.DescriptionCard
               containerClassName='bg-[#F6F7F9]'
-              title='Hadoop 전용 구성'
+              title='접근성 향상'
               description={
                 <p className={'m-0 px-12 text-[16px] font-[400] leading-[23.17px]'}>
-                  HDFS를 위한 전용 디스크를 선택하여 데이터 노드를 구성함으로써 기존 HCI가 가지는
-                  빅데이터 환경의 저장용량 이슈를 해결했습니다.
+                  높은 성능을 제공하는 Glue 스토리지를 통해 고성능을 제공하여 어디서든 빠르게 접근할
+                  수 있습니다.
                 </p>
               }
             />
 
             <SolutionContent.DescriptionCard
-              title='신속한 구성'
+              title='유연성 제고'
               containerClassName='bg-[#F6F7F9]'
               description={
                 <p className={'m-0 px-8 text-[16px] font-[400] leading-[23.17px]'}>
-                  사용자가 원하는 빅데이터 플랫폼을 자동화 도구를 이용해 원하는 절차와 설정으로
-                  원클릭으로 빠르게 구성 할 수 있습니다.
+                  다양한 하이퍼바이저와 가상데스크톱 소프트웨어를 지원하여 사용자 인프라의 유연성을
+                  높일 수 있습니다.
                 </p>
               }
             />
 
             <SolutionContent.DescriptionCard
-              title='파트너 생태계 구성'
+              title='향상된 배포속도'
               containerClassName='bg-[#F6F7F9]'
               description={
                 <p className={'m-0 px-12 text-[16px] font-[400] leading-[23.17px]'}>
-                  가상머신 뿐 아니라 Kubernetes 환경을 제공하여 다양한 빅데이터 애플리케이션을
-                  개발하고 배포할 수 있는 유연성을 제공합니다.
+                  내장되어 있는 Works 플랫폼을 통해 원클릭으로 가상데스크톱 서비스를 사용할 수
+                  있습니다.
                 </p>
               }
             />
@@ -86,18 +88,18 @@ const VirtualDesktopAndDaasPage = () => {
         </SolutionContent>
         <SolutionContent
           className={'bg-[#EEF4FB] text-[#444444]'}
-          // title='기존의 SAN 또는 NAS를 뛰어넘는 고도로 자동화된 하이퍼 컨버지드 스토리지'
           imagePosition='first'
-          image={<Image src={Logo_Article_3_2} />}>
+          image={<Image src={Logo_Article_3_29} />}>
           <SolutionContent.Description
-            title='다양한 HDFS 옵션 제공'
+            title='고성능 스토리지를 통한 빠른 접근'
             contents={[
               {
                 title:
-                  'ABLESTACK은 HCI를 이용해 유연하게 Hadoop 데이터 저장환경을 제공하기 위해 다양한 HDFS 구성 옵션을 제공합니다.',
+                  'ABLESTACK HCI는 가상데스크톱 환경을 위한 고성능 스토리지를 제공하여 빠르게 사용자가 가상데스크톱 환경에 접근할 수 있습니다.',
                 descriptions: [
-                  '노드의 로컬 디스크를 직접 HDFS용 디스크로 사용 가능',
-                  'Hadoop Cluster가 HDFS 대신, 전용 어댑터를 통해 Glue Object Storage를 데이터 저장소로 사용할 수 있음',
+                  '데이터 로컬리티를 통해 가상머신이 실행 중인 고성능 SSD에 IO 발생',
+                  '이미지 로컬리티를 통해 가상데스크톱 마스터 이미지를 로컬에서 실행',
+                  'IO_URING을 통해 가상데스크톱 IO가 호스트 메모리 버퍼를 사용하도록 아키텍처 제공',
                 ],
               },
             ]}
@@ -105,18 +107,17 @@ const VirtualDesktopAndDaasPage = () => {
         </SolutionContent>
         <SolutionContent
           className={'bg-[#FFFFFF] text-[#444444]'}
-          // title='기존의 SAN 또는 NAS를 뛰어넘는 고도로 자동화된 하이퍼 컨버지드 스토리지'
           imagePosition='last'
-          image={<Image src={Logo_Article_3_2} />}>
+          image={<Image src={Logo_Article_3_30} />}>
           <SolutionContent.Description
-            title='다양한 HDFS 옵션 제공'
+            title='다양한 데스크톱 플랫폼과의 호환성'
             contents={[
               {
                 title:
-                  'ABLESTACK은 HCI를 이용해 유연하게 Hadoop 데이터 저장환경을 제공하기 위해 다양한 HDFS 구성 옵션을 제공합니다.',
+                  'ABLESTACK은 다양한 하이퍼바이저를 지원할 뿐 아니라 다수의 데스크톱 플랫폼과 호환되어 사용자의 선택권을 보장합니다.',
                 descriptions: [
-                  '노드의 로컬 디스크를 직접 HDFS용 디스크로 사용 가능',
-                  'Hadoop Cluster가 HDFS 대신, 전용 어댑터를 통해 Glue Object Storage를 데이터 저장소로 사용할 수 있음',
+                  'VMWare ESXi, Citrix Hypervisor, Hyper-V 등의 가상화 호환',
+                  'Citrix XenDesktop, VMWare Horizon, Tilon DStation 등의 데스크톱 플랫폼 지원',
                 ],
               },
             ]}
@@ -124,18 +125,18 @@ const VirtualDesktopAndDaasPage = () => {
         </SolutionContent>
         <SolutionContent
           className={'bg-[#F6F7F9;] text-[#444444]'}
-          // title='기존의 SAN 또는 NAS를 뛰어넘는 고도로 자동화된 하이퍼 컨버지드 스토리지'
           imagePosition='first'
-          image={<Image src={Logo_Article_3_2} />}>
+          image={<Image src={Logo_Article_3_31} />}>
           <SolutionContent.Description
-            title='다양한 HDFS 옵션 제공'
+            title='내장된 DaaS - ABLESTACK Works'
             contents={[
               {
                 title:
-                  'ABLESTACK은 HCI를 이용해 유연하게 Hadoop 데이터 저장환경을 제공하기 위해 다양한 HDFS 구성 옵션을 제공합니다.',
+                  'ABLESTACK은 자체적으로 내장된 DaaS 플랫폼인 Works를 제공하여 원클릭으로 사용자가 직접 가상 데스크톱을 배포할 수 있습니다.',
                 descriptions: [
-                  '노드의 로컬 디스크를 직접 HDFS용 디스크로 사용 가능',
-                  'Hadoop Cluster가 HDFS 대신, 전용 어댑터를 통해 Glue Object Storage를 데이터 저장소로 사용할 수 있음',
+                  'Mold에 통합된 DaaS 플랫폼인 Works를 플러그인 방식으로 지원',
+                  '원클릭으로 사용자가 직접 가상데스크톱을 배포할 수 있어 빠르고 저렴한 가상 데스크톱 환경 제공',
+                  '클라이언트리스 데스크톱으로 별도의 설치 과정 없이 브라우저에서 바로 사용',
                 ],
               },
             ]}

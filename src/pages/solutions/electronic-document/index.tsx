@@ -6,7 +6,9 @@ import { SolutionContent, SolutionHeaderProps, SolutionTemplate } from '@/templa
 
 import Logo_Article_1_17 from '@/public/images/new/solutions/article_1_17.png';
 import Logo_Article_2_16 from '@/public/images/new/solutions/article_2_16.svg';
-import Logo_Article_3_2 from '@/public/images/new/solutions/article_3_2.png';
+import Logo_Article_3_46 from '@/public/images/new/solutions/article_3_46.png';
+import Logo_Article_3_47 from '@/public/images/new/solutions/article_3_47.png';
+import Logo_Article_3_48 from '@/public/images/new/solutions/article_3_48.png';
 
 const headerContent: SolutionHeaderProps = {
   title: '전자문서 유통관리',
@@ -45,40 +47,40 @@ const ElectronicDocumentPage = () => {
           className={'bg-[#FFFFFF] text-[#444444]'}
           description={
             <p className='max-w-[590px]'>
-              HCI Node의 로컬 디스크를 직접 활용한 전용 데이터노드 구성 아키텍처와 자동화 지원을
-              통한 신속한 구성, 가상화를 통한 높은 유연성을 가진 빅데이터 인프라
+              어떠한 경우에도 원본을 유지하는 스토리지와 다양한 자동화 플랫폼을 내장하고 있는
+              ABLESTACK HCI를 통해 중앙 집중화된 문서의 유통 및 관리의 편리함을 경험할 수 있습니다.
             </p>
           }>
           <section className='mt-12 grid max-w-page-full grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'>
             <SolutionContent.DescriptionCard
               containerClassName='bg-[#F6F7F9]'
-              title='Hadoop 전용 구성'
+              title='데이터 안정성 향상'
               description={
                 <p className={'m-0 px-12 text-[16px] font-[400] leading-[23.17px]'}>
-                  HDFS를 위한 전용 디스크를 선택하여 데이터 노드를 구성함으로써 기존 HCI가 가지는
-                  빅데이터 환경의 저장용량 이슈를 해결했습니다.
+                  어떠한 경우에도 원본 문서를 유지하는 기능을 제공하여 전자문서의 유실을 근본적으로
+                  방지합니다.
                 </p>
               }
             />
 
             <SolutionContent.DescriptionCard
-              title='신속한 구성'
+              title='서비스 연속성 보장'
               containerClassName='bg-[#F6F7F9]'
               description={
                 <p className={'m-0 px-8 text-[16px] font-[400] leading-[23.17px]'}>
-                  사용자가 원하는 빅데이터 플랫폼을 자동화 도구를 이용해 원하는 절차와 설정으로
-                  원클릭으로 빠르게 구성 할 수 있습니다.
+                  강력한 내결함성을 통해 장비의 일부 장애에도 전자문서 보관 및 중앙화 서비스는
+                  멈추지 않습니다.
                 </p>
               }
             />
 
             <SolutionContent.DescriptionCard
-              title='파트너 생태계 구성'
+              title='빠른 배포 및 편리한 관리'
               containerClassName='bg-[#F6F7F9]'
               description={
                 <p className={'m-0 px-12 text-[16px] font-[400] leading-[23.17px]'}>
-                  가상머신 뿐 아니라 Kubernetes 환경을 제공하여 다양한 빅데이터 애플리케이션을
-                  개발하고 배포할 수 있는 유연성을 제공합니다.
+                  전자문서관리를 위한 다양한 애플리케이션을 빠르게 배포하고 편리하게 관리할 수
+                  있습니다.
                 </p>
               }
             />
@@ -86,18 +88,18 @@ const ElectronicDocumentPage = () => {
         </SolutionContent>
         <SolutionContent
           className={'bg-[#EEF4FB] text-[#444444]'}
-          // title='기존의 SAN 또는 NAS를 뛰어넘는 고도로 자동화된 하이퍼 컨버지드 스토리지'
           imagePosition='first'
-          image={<Image src={Logo_Article_3_2} />}>
+          image={<Image src={Logo_Article_3_46} />}>
           <SolutionContent.Description
-            title='다양한 HDFS 옵션 제공'
+            title='WORM 스토리지 기반의 전자문서 보호'
             contents={[
               {
                 title:
-                  'ABLESTACK은 HCI를 이용해 유연하게 Hadoop 데이터 저장환경을 제공하기 위해 다양한 HDFS 구성 옵션을 제공합니다.',
+                  'ABLESTACK은 Glue 스토리지를 통해 전자문서 유통에 최적의 안전한 저장 공간을 제공하여 기업의 중요한 전자문서를 보호합니다.',
                 descriptions: [
-                  '노드의 로컬 디스크를 직접 HDFS용 디스크로 사용 가능',
-                  'Hadoop Cluster가 HDFS 대신, 전용 어댑터를 통해 Glue Object Storage를 데이터 저장소로 사용할 수 있음',
+                  'Glue Object를 통한 문서 전용 저장 공간 제공',
+                  'WORM 스토리지 기능을 제공하여 원본 데이터의 유실을 근본적으로 방지',
+                  '자체적으로 내장된 위변조 방지 알고리즘 적용',
                 ],
               },
             ]}
@@ -105,18 +107,18 @@ const ElectronicDocumentPage = () => {
         </SolutionContent>
         <SolutionContent
           className={'bg-[#FFFFFF] text-[#444444]'}
-          // title='기존의 SAN 또는 NAS를 뛰어넘는 고도로 자동화된 하이퍼 컨버지드 스토리지'
           imagePosition='last'
-          image={<Image src={Logo_Article_3_2} />}>
+          image={<Image src={Logo_Article_3_47} />}>
           <SolutionContent.Description
-            title='다양한 HDFS 옵션 제공'
+            title='노드 장애에도 멈추지 않는 저장소'
             contents={[
               {
                 title:
-                  'ABLESTACK은 HCI를 이용해 유연하게 Hadoop 데이터 저장환경을 제공하기 위해 다양한 HDFS 구성 옵션을 제공합니다.',
+                  'ABLESTACK은 스토리지를 구성하는 노드에 장애가 발생해도 스토리지 서비스가 중단되지 않는 강력한 내결함성을 제공합니다.',
                 descriptions: [
-                  '노드의 로컬 디스크를 직접 HDFS용 디스크로 사용 가능',
-                  'Hadoop Cluster가 HDFS 대신, 전용 어댑터를 통해 Glue Object Storage를 데이터 저장소로 사용할 수 있음',
+                  '전자문서 보관을 위한 저장소의 서비스 무중단 운영 보장',
+                  '문서 데이터의 무결성을 확인하는 무결성 체크 로직의 주기적 모니터링',
+                  '노드 장애 시 데이터의 무결성을 유지하기 위한 자가 복구 작업 수행',
                 ],
               },
             ]}
@@ -124,18 +126,17 @@ const ElectronicDocumentPage = () => {
         </SolutionContent>
         <SolutionContent
           className={'bg-[#F6F7F9;] text-[#444444]'}
-          // title='기존의 SAN 또는 NAS를 뛰어넘는 고도로 자동화된 하이퍼 컨버지드 스토리지'
           imagePosition='first'
-          image={<Image src={Logo_Article_3_2} />}>
+          image={<Image src={Logo_Article_3_48} />}>
           <SolutionContent.Description
-            title='다양한 HDFS 옵션 제공'
+            title='빠르게 배포하고 관리하는 통합 관리 플랫폼'
             contents={[
               {
                 title:
-                  'ABLESTACK은 HCI를 이용해 유연하게 Hadoop 데이터 저장환경을 제공하기 위해 다양한 HDFS 구성 옵션을 제공합니다.',
+                  'ABLESTACK은 전자문서 관리 플랫폼을 다양한 방식으로 빠르게 배포할 뿐 아니라 해당 애플리케이션을 지속적으로 모니터링하여 서비스 품질을 보장합니다.',
                 descriptions: [
-                  '노드의 로컬 디스크를 직접 HDFS용 디스크로 사용 가능',
-                  'Hadoop Cluster가 HDFS 대신, 전용 어댑터를 통해 Glue Object Storage를 데이터 저장소로 사용할 수 있음',
+                  '전자문서를 저장하는 저장공간과 함께 관련 애플리케이션 세트를 자동으로 배포하여 빠르게 사용자에게 서비스를 제공합니다.',
+                  'Mold를 통해 모든 가상자원과 애플리케이션의 상태를 모니터링하여 안정적으로서비스를 운영할 수 있습니다.',
                 ],
               },
             ]}

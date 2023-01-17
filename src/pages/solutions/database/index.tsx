@@ -6,7 +6,12 @@ import { SolutionContent, SolutionHeaderProps, SolutionTemplate } from '@/templa
 
 import Logo_Article_1_8 from '@/public/images/new/solutions/article_1_8.png';
 import Logo_Article_2_9 from '@/public/images/new/solutions/article_2_9.svg';
-import Logo_Article_3_2 from '@/public/images/new/solutions/article_3_2.png';
+import Logo_Article_3_20 from '@/public/images/new/solutions/article_3_20.png';
+import Logo_Article_3_21 from '@/public/images/new/solutions/article_3_21.png';
+import Logo_Article_3_22 from '@/public/images/new/solutions/article_3_22.png';
+import Logo_Article_5_1 from '@/public/images/new/solutions/article_5_1.png';
+import Logo_Article_5_2 from '@/public/images/new/solutions/article_5_2.png';
+import Logo_Article_5_3 from '@/public/images/new/solutions/article_5_3.png';
 
 const headerContent: SolutionHeaderProps = {
   title: '데이터베이스',
@@ -44,41 +49,44 @@ const DatabasePage = () => {
         <SolutionContent
           className={'bg-[#FFFFFF] text-[#444444]'}
           description={
-            <p className='max-w-[590px]'>
-              HCI Node의 로컬 디스크를 직접 활용한 전용 데이터노드 구성 아키텍처와 자동화 지원을
-              통한 신속한 구성, 가상화를 통한 높은 유연성을 가진 빅데이터 인프라
+            <p className='max-w-[620px]'>
+              내장된 자동화 플랫폼과 폭넓은 고가용성 기능을 내장한 ABLESTACK HCI 플랫폼을 통해
+              효과적으로 데이터베이스를 관리하고, 데이터베이스 운영 비용을 절감할 수 있습니다.
             </p>
           }>
           <section className='mt-12 grid max-w-page-full grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'>
             <SolutionContent.DescriptionCard
               containerClassName='bg-[#F6F7F9]'
-              title='Hadoop 전용 구성'
+              image={<Image src={Logo_Article_5_1} />}
+              title='80% 빠른 배포'
               description={
                 <p className={'m-0 px-12 text-[16px] font-[400] leading-[23.17px]'}>
-                  HDFS를 위한 전용 디스크를 선택하여 데이터 노드를 구성함으로써 기존 HCI가 가지는
-                  빅데이터 환경의 저장용량 이슈를 해결했습니다.
+                  내장된 자동화 플랫폼을 통해 다양한 데이터베이스 플랫폼을 자동으로 배포하기 때문에
+                  기존 대비 최대 80% 빠르게 배포합니다.
                 </p>
               }
             />
 
             <SolutionContent.DescriptionCard
-              title='신속한 구성'
+              title='저비용 고가용성'
               containerClassName='bg-[#F6F7F9]'
+              image={<Image src={Logo_Article_5_2} />}
               description={
                 <p className={'m-0 px-8 text-[16px] font-[400] leading-[23.17px]'}>
-                  사용자가 원하는 빅데이터 플랫폼을 자동화 도구를 이용해 원하는 절차와 설정으로
-                  원클릭으로 빠르게 구성 할 수 있습니다.
+                  내장되어 있는 고가용성 기능과 데이터베이스 플랫폼에 대한 이중화 구성을 지원하여
+                  저비용으로 무중단 환경을 제공합니다.
                 </p>
               }
             />
 
             <SolutionContent.DescriptionCard
-              title='파트너 생태계 구성'
+              title='운영환경 효율성 제고'
               containerClassName='bg-[#F6F7F9]'
+              image={<Image src={Logo_Article_5_3} />}
               description={
                 <p className={'m-0 px-12 text-[16px] font-[400] leading-[23.17px]'}>
-                  가상머신 뿐 아니라 Kubernetes 환경을 제공하여 다양한 빅데이터 애플리케이션을
-                  개발하고 배포할 수 있는 유연성을 제공합니다.
+                  배포에서부터 운영 까지, 그리고 통합된 데이터베이스 모니터링 환경을 통해 전반적인
+                  운영환경 효율성을 제고합니다.
                 </p>
               }
             />
@@ -86,18 +94,18 @@ const DatabasePage = () => {
         </SolutionContent>
         <SolutionContent
           className={'bg-[#EEF4FB] text-[#444444]'}
-          // title='기존의 SAN 또는 NAS를 뛰어넘는 고도로 자동화된 하이퍼 컨버지드 스토리지'
           imagePosition='first'
-          image={<Image src={Logo_Article_3_2} />}>
+          image={<Image src={Logo_Article_3_20} />}>
           <SolutionContent.Description
-            title='다양한 HDFS 옵션 제공'
+            title='내장된 배포 자동화'
             contents={[
               {
                 title:
-                  'ABLESTACK은 HCI를 이용해 유연하게 Hadoop 데이터 저장환경을 제공하기 위해 다양한 HDFS 구성 옵션을 제공합니다.',
+                  'ABLESTACK HCI는 자동화 플랫폼이 내장되어 있어 사용자가 원하는 데이터베이스를 원하는 구성으로 빠르게 배포할 수 있습니다.',
                 descriptions: [
-                  '노드의 로컬 디스크를 직접 HDFS용 디스크로 사용 가능',
-                  'Hadoop Cluster가 HDFS 대신, 전용 어댑터를 통해 Glue Object Storage를 데이터 저장소로 사용할 수 있음',
+                  '데이터베이스 구성을 위한 모든 구성요소 자동으로 배포',
+                  '단일 구성 및 고가용성 구성 등, 원하는 구성으로 선택 가능한 기능',
+                  '다양한 상용, 오픈소스 데이터베이스 구성을 지원',
                 ],
               },
             ]}
@@ -105,18 +113,18 @@ const DatabasePage = () => {
         </SolutionContent>
         <SolutionContent
           className={'bg-[#FFFFFF] text-[#444444]'}
-          // title='기존의 SAN 또는 NAS를 뛰어넘는 고도로 자동화된 하이퍼 컨버지드 스토리지'
           imagePosition='last'
-          image={<Image src={Logo_Article_3_2} />}>
+          image={<Image src={Logo_Article_3_21} />}>
           <SolutionContent.Description
-            title='다양한 HDFS 옵션 제공'
+            title='내장된 고가용성 구조'
             contents={[
               {
                 title:
-                  'ABLESTACK은 HCI를 이용해 유연하게 Hadoop 데이터 저장환경을 제공하기 위해 다양한 HDFS 구성 옵션을 제공합니다.',
+                  'ABLESTACK HCI는 내장되어 있는 다양한 고가용성 구조를 통해 안정적으로 SLA를 달성할 수 있는 데이터베이스 인프라를 제공합니다.',
                 descriptions: [
-                  '노드의 로컬 디스크를 직접 HDFS용 디스크로 사용 가능',
-                  'Hadoop Cluster가 HDFS 대신, 전용 어댑터를 통해 Glue Object Storage를 데이터 저장소로 사용할 수 있음',
+                  '데이터베이스 서버에 대한 이중화 구성 제공',
+                  '노드 장애 시에도 중단 되지 않는 서비스',
+                  'Affinity 정책에 의해 동일 역할 가상머신이 동일 노드에 배포되지않도록 하여 안정성 제공',
                 ],
               },
             ]}
@@ -124,18 +132,17 @@ const DatabasePage = () => {
         </SolutionContent>
         <SolutionContent
           className={'bg-[#F6F7F9;] text-[#444444]'}
-          // title='기존의 SAN 또는 NAS를 뛰어넘는 고도로 자동화된 하이퍼 컨버지드 스토리지'
           imagePosition='first'
-          image={<Image src={Logo_Article_3_2} />}>
+          image={<Image src={Logo_Article_3_22} />}>
           <SolutionContent.Description
-            title='다양한 HDFS 옵션 제공'
+            title='통합된 관리와 모니터링'
             contents={[
               {
                 title:
-                  'ABLESTACK은 HCI를 이용해 유연하게 Hadoop 데이터 저장환경을 제공하기 위해 다양한 HDFS 구성 옵션을 제공합니다.',
+                  'ABLESTACK은 가상머신 및 컨테이너, 그리고 그 안에서 실행되고 있는 데이터베이스모두에 대한 통합 관리와 모니터링을 제공합니다.',
                 descriptions: [
-                  '노드의 로컬 디스크를 직접 HDFS용 디스크로 사용 가능',
-                  'Hadoop Cluster가 HDFS 대신, 전용 어댑터를 통해 Glue Object Storage를 데이터 저장소로 사용할 수 있음',
+                  'Mold를 통해 데이터베이스를 배포하고, 배포된 서비스가 정상적으로실행되고 있는지를 모니터링',
+                  'Wall을 통해 배포된 데이터베이스에 대한 모니터링을 제공하여 효과적으로데이터베이스 서버의 운영 상황을 확인할 수 있도록 통합 기능 제공',
                 ],
               },
             ]}

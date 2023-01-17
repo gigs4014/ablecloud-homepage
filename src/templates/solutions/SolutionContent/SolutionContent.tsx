@@ -45,7 +45,7 @@ const SolutionContent = memo<PropsWithChildren<SolutionContentProps>>(
         {/* <div className='group-odd:absolute group-odd:inset-0 group-odd:-z-10 group-odd:-skew-y-2 group-odd:bg-slate-100' /> */}
 
         <Container.PageWidth className='px-4'>
-          <header className=' flex flex-col items-center px-8 text-center '>
+          <header className=' flex flex-col items-center px-8 py-4 text-center '>
             {typeof title === 'string' ? (
               <p className={'m-0 mb-[25px] p-0 text-[30px] font-[500] leading-[43.44px]'}>
                 {title}
@@ -58,7 +58,7 @@ const SolutionContent = memo<PropsWithChildren<SolutionContentProps>>(
                 {description}
               </p>
             ) : (
-              description
+              <div className='text-[16px] font-[400] leading-[23.17px]'>{description}</div>
             )}
           </header>
           {image ? (
@@ -66,13 +66,16 @@ const SolutionContent = memo<PropsWithChildren<SolutionContentProps>>(
               {imagePosition === 'first' && (
                 <div
                   className={`${
-                    isBigScreen ? 'flex w-1/2' : 'hidden'
-                  } my-8 mr-8 items-center justify-center `}>
+                    isBigScreen ? 'w-1/2' : 'hidden'
+                  } my-8 mr-8 items-center justify-center`}>
                   {image}
                 </div>
               )}
 
-              <div className={`${isBigScreen ? 'w-1/2' : 'w-full'} flex flex-col justify-center`}>
+              <div
+                className={`${
+                  isBigScreen ? 'w-1/2' : 'w-full'
+                } flex flex-col justify-center leading-[23.17px]`}>
                 {children}
               </div>
 

@@ -18,16 +18,18 @@ const SolutionDescription = memo<PropsWithChildren<SolutionContentDescriptionPro
   ({ title, contents, className }) => {
     return (
       <div className={cls`m-auto mx-4 ${className}`}>
-        <p className='mb-12 text-[30px] font-[500]'>{title}</p>
+        <p className='mb-[71px] text-[30px] font-[500] leading-9'>{title}</p>
         {contents.map(content => (
-          <ul key={uuid()} className={'list-disc py-[20px]'}>
-            <p className='mb-8 text-[16px] font-[400]'>{content.title}</p>
-            {content.descriptions.map(description => (
-              <li key={uuid()} className='ml-4 text-[16px] font-[400]'>
-                {description}
-              </li>
-            ))}
-          </ul>
+          <div key={uuid()}>
+            <p className='mb-4 text-[16px] font-[400]'>{content.title}</p>
+            <ul className={'ml-2 list-disc py-[20px]'}>
+              {content.descriptions.map(description => (
+                <li key={uuid()} className='ml-4 text-[16px] font-[400]'>
+                  {description}
+                </li>
+              ))}
+            </ul>
+          </div>
         ))}
       </div>
     );

@@ -6,7 +6,9 @@ import { SolutionContent, SolutionHeaderProps, SolutionTemplate } from '@/templa
 
 import Logo_Article_1_2 from '@/public/images/new/solutions/article_1_2.png';
 import Logo_Article_2_7 from '@/public/images/new/solutions/article_2_7.svg';
-import Logo_Article_3_2 from '@/public/images/new/solutions/article_3_2.png';
+import Logo_Article_3_3 from '@/public/images/new/solutions/article_3_3.png';
+import Logo_Article_3_4 from '@/public/images/new/solutions/article_3_4.png';
+import Logo_Article_3_5 from '@/public/images/new/solutions/article_3_5.png';
 
 const headerContent: SolutionHeaderProps = {
   title: '빅데이터 분석',
@@ -61,7 +63,6 @@ const BigDataAnalysisPage = () => {
                 </p>
               }
             />
-
             <SolutionContent.DescriptionCard
               title='신속한 구성'
               containerClassName='bg-[#F6F7F9]'
@@ -74,7 +75,7 @@ const BigDataAnalysisPage = () => {
             />
 
             <SolutionContent.DescriptionCard
-              title='파트너 생태계 구성'
+              title='높은 유연성 제공'
               containerClassName='bg-[#F6F7F9]'
               description={
                 <p className={'m-0 px-12 text-[16px] font-[400] leading-[23.17px]'}>
@@ -87,9 +88,15 @@ const BigDataAnalysisPage = () => {
         </SolutionContent>
         <SolutionContent
           className={'bg-[#EEF4FB] text-[#444444]'}
-          // title='기존의 SAN 또는 NAS를 뛰어넘는 고도로 자동화된 하이퍼 컨버지드 스토리지'
           imagePosition='first'
-          image={<Image src={Logo_Article_3_2} />}>
+          image={
+            // <CustomSlider>
+            //   <Image src={Logo_Article_3_2} />
+            //   <Image src={Logo_Article_3_3} />
+            // </CustomSlider>
+
+            <Image src={Logo_Article_3_3} />
+          }>
           <SolutionContent.Description
             title='다양한 HDFS 옵션 제공'
             contents={[
@@ -106,18 +113,18 @@ const BigDataAnalysisPage = () => {
         </SolutionContent>
         <SolutionContent
           className={'bg-[#FFFFFF] text-[#444444]'}
-          // title='기존의 SAN 또는 NAS를 뛰어넘는 고도로 자동화된 하이퍼 컨버지드 스토리지'
           imagePosition='last'
-          image={<Image src={Logo_Article_3_2} />}>
+          image={<Image src={Logo_Article_3_4} />}>
           <SolutionContent.Description
-            title='다양한 HDFS 옵션 제공'
+            title='유연한 인프라 구성'
             contents={[
               {
                 title:
-                  'ABLESTACK은 HCI를 이용해 유연하게 Hadoop 데이터 저장환경을 제공하기 위해 다양한 HDFS 구성 옵션을 제공합니다.',
+                  'ABLESTACK은 빅데이터 에코 플랫폼이 다양한 인프라 환경에서 실행되는 특성을 반영하여 유연하게 에코 플랫폼을 위한 인프라 구성을 선택할 수 있습니다.',
                 descriptions: [
-                  '노드의 로컬 디스크를 직접 HDFS용 디스크로 사용 가능',
-                  'Hadoop Cluster가 HDFS 대신, 전용 어댑터를 통해 Glue Object Storage를 데이터 저장소로 사용할 수 있음',
+                  '가상머신 기반의 빅데이터 인프라',
+                  'Kubernetes 클러스터 기반의 빅데이터 인프라',
+                  '컴퓨터 노드와 스토리지 노드의 분리 구성',
                 ],
               },
             ]}
@@ -125,18 +132,17 @@ const BigDataAnalysisPage = () => {
         </SolutionContent>
         <SolutionContent
           className={'bg-[#F6F7F9;] text-[#444444]'}
-          // title='기존의 SAN 또는 NAS를 뛰어넘는 고도로 자동화된 하이퍼 컨버지드 스토리지'
           imagePosition='first'
-          image={<Image src={Logo_Article_3_2} />}>
+          image={<Image src={Logo_Article_3_5} />}>
           <SolutionContent.Description
-            title='다양한 HDFS 옵션 제공'
+            title='통합된 자동화 기능'
             contents={[
               {
                 title:
-                  'ABLESTACK은 HCI를 이용해 유연하게 Hadoop 데이터 저장환경을 제공하기 위해 다양한 HDFS 구성 옵션을 제공합니다.',
+                  'ABLESTACK은 빅데이터 인프라의 기술 변화 및 애플리케이션 변와에 민첩하게 대응할 수 있도록 내장된 통합 자동화 기능을 통해 다양한 방법으로 빠르게 빅데이터 인프라를 배포합니다.',
                 descriptions: [
-                  '노드의 로컬 디스크를 직접 HDFS용 디스크로 사용 가능',
-                  'Hadoop Cluster가 HDFS 대신, 전용 어댑터를 통해 Glue Object Storage를 데이터 저장소로 사용할 수 있음',
+                  'Genie를 이용해 워크플로우 기반으로 사용자의 빅데이터 환경을 자동으로 배포',
+                  'Station을 이용해 ABLESTACK이 제공하는 표준 빅데이터 인프라를 원클릭으로 배포',
                 ],
               },
             ]}

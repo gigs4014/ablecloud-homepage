@@ -6,7 +6,9 @@ import { SolutionContent, SolutionHeaderProps, SolutionTemplate } from '@/templa
 
 import Logo_Article_1_15 from '@/public/images/new/solutions/article_1_15.png';
 import Logo_Article_2_15 from '@/public/images/new/solutions/article_2_15.svg';
-import Logo_Article_3_2 from '@/public/images/new/solutions/article_3_2.png';
+import Logo_Article_3_40 from '@/public/images/new/solutions/article_3_40.png';
+import Logo_Article_3_41 from '@/public/images/new/solutions/article_3_41.png';
+import Logo_Article_3_42 from '@/public/images/new/solutions/article_3_42.png';
 
 const headerContent: SolutionHeaderProps = {
   title: '엣지 컴퓨팅',
@@ -44,40 +46,40 @@ const EdgeComputingPage = () => {
           className={'bg-[#FFFFFF] text-[#444444]'}
           description={
             <p className='max-w-[590px]'>
-              HCI Node의 로컬 디스크를 직접 활용한 전용 데이터노드 구성 아키텍처와 자동화 지원을
-              통한 신속한 구성, 가상화를 통한 높은 유연성을 가진 빅데이터 인프라
+              단순하면서도 고성능을 제공하는 ABLESTACK HCI의 다양한 라인업을 통해 중앙의
+              데이터센터에서 통합하여 관리하는 엣지 컴퓨팅의 강력함을 느낄 수 있습니다.
             </p>
           }>
           <section className='mt-12 grid max-w-page-full grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'>
             <SolutionContent.DescriptionCard
               containerClassName='bg-[#F6F7F9]'
-              title='Hadoop 전용 구성'
+              title='인프라 단순성 향상'
               description={
                 <p className={'m-0 px-12 text-[16px] font-[400] leading-[23.17px]'}>
-                  HDFS를 위한 전용 디스크를 선택하여 데이터 노드를 구성함으로써 기존 HCI가 가지는
-                  빅데이터 환경의 저장용량 이슈를 해결했습니다.
+                  중앙의 데이터센터, 엣지서버 등의 모든 구조가 단일 인프라 구조로 되어 인프라 전반이
+                  단순해 집니다.
                 </p>
               }
             />
 
             <SolutionContent.DescriptionCard
-              title='신속한 구성'
+              title='빠른 데이터 처리 성능'
               containerClassName='bg-[#F6F7F9]'
               description={
                 <p className={'m-0 px-8 text-[16px] font-[400] leading-[23.17px]'}>
-                  사용자가 원하는 빅데이터 플랫폼을 자동화 도구를 이용해 원하는 절차와 설정으로
-                  원클릭으로 빠르게 구성 할 수 있습니다.
+                  사용자 로컬에 HCI가 직접 배치되어 고성능의 데이터 처리가 가능해지고 전반적인
+                  애플리케이션의 만족도가 높아집니다.
                 </p>
               }
             />
 
             <SolutionContent.DescriptionCard
-              title='파트너 생태계 구성'
+              title='관리 편의성 제고'
               containerClassName='bg-[#F6F7F9]'
               description={
                 <p className={'m-0 px-12 text-[16px] font-[400] leading-[23.17px]'}>
-                  가상머신 뿐 아니라 Kubernetes 환경을 제공하여 다양한 빅데이터 애플리케이션을
-                  개발하고 배포할 수 있는 유연성을 제공합니다.
+                  중앙 데이터센터와 지역별로 흩어져 있는 엣지 서버를 모두 중앙에서 관리할 수 있어
+                  높은 관리 편의성을 경험할 수 있습니다.
                 </p>
               }
             />
@@ -85,18 +87,18 @@ const EdgeComputingPage = () => {
         </SolutionContent>
         <SolutionContent
           className={'bg-[#EEF4FB] text-[#444444]'}
-          // title='기존의 SAN 또는 NAS를 뛰어넘는 고도로 자동화된 하이퍼 컨버지드 스토리지'
           imagePosition='first'
-          image={<Image src={Logo_Article_3_2} />}>
+          image={<Image src={Logo_Article_3_40} />}>
           <SolutionContent.Description
-            title='다양한 HDFS 옵션 제공'
+            title='다양한 라인업의 HCI 제품 구성'
             contents={[
               {
                 title:
-                  'ABLESTACK은 HCI를 이용해 유연하게 Hadoop 데이터 저장환경을 제공하기 위해 다양한 HDFS 구성 옵션을 제공합니다.',
+                  'ABLESTACK은 데이터센터에서 사용할 수 있는 제품 라인업과, 엣지 서버로 사용할 수 있는 소형 서버 라인업 등을 제공하여 모든 사용처에서 동일한 HCI 구조를 제공합니다.',
                 descriptions: [
-                  '노드의 로컬 디스크를 직접 HDFS용 디스크로 사용 가능',
-                  'Hadoop Cluster가 HDFS 대신, 전용 어댑터를 통해 Glue Object Storage를 데이터 저장소로 사용할 수 있음',
+                  '중앙 데이터센터를 위한 고사양 라인업',
+                  '엣지 서버로 사용할 수 있는 소형 서버 라인업 및 클러스터링 라인업',
+                  '모든 인프라를 동일 아키텍처로 제공할 수 있는 제품 구성 제공',
                 ],
               },
             ]}
@@ -104,18 +106,18 @@ const EdgeComputingPage = () => {
         </SolutionContent>
         <SolutionContent
           className={'bg-[#FFFFFF] text-[#444444]'}
-          // title='기존의 SAN 또는 NAS를 뛰어넘는 고도로 자동화된 하이퍼 컨버지드 스토리지'
           imagePosition='last'
-          image={<Image src={Logo_Article_3_2} />}>
+          image={<Image src={Logo_Article_3_41} />}>
           <SolutionContent.Description
-            title='다양한 HDFS 옵션 제공'
+            title='로컬에서 체험하는 고성능 데이터처리'
             contents={[
               {
                 title:
-                  'ABLESTACK은 HCI를 이용해 유연하게 Hadoop 데이터 저장환경을 제공하기 위해 다양한 HDFS 구성 옵션을 제공합니다.',
+                  'ABLESTACK은 Glue를 통해 어떠한 환경에서도 고성능의 데이터 처리를 보장하며 Kubernetes 클러스터를 통해 어떤 사이트에도 빠르게 애플리케이션을 배포할 수 있는 신속성을 제공합니다.',
                 descriptions: [
-                  '노드의 로컬 디스크를 직접 HDFS용 디스크로 사용 가능',
-                  'Hadoop Cluster가 HDFS 대신, 전용 어댑터를 통해 Glue Object Storage를 데이터 저장소로 사용할 수 있음',
+                  '소형 엣지 서버 클러스터에서도 동일하게 경험할 수 있는 스토리지 성능',
+                  '엣지 서버에서의 데이터 분석 및 전송을 빠르게 처리할 수 있는 성능 제공',
+                  'Kubernetes 클러스터를 통해 언제든지 엣지로 빠른 애플리케이션 전송',
                 ],
               },
             ]}
@@ -123,18 +125,17 @@ const EdgeComputingPage = () => {
         </SolutionContent>
         <SolutionContent
           className={'bg-[#F6F7F9;] text-[#444444]'}
-          // title='기존의 SAN 또는 NAS를 뛰어넘는 고도로 자동화된 하이퍼 컨버지드 스토리지'
           imagePosition='first'
-          image={<Image src={Logo_Article_3_2} />}>
+          image={<Image src={Logo_Article_3_42} />}>
           <SolutionContent.Description
-            title='다양한 HDFS 옵션 제공'
+            title='통합 관리를 통한 효율적 인프라 통제'
             contents={[
               {
                 title:
-                  'ABLESTACK은 HCI를 이용해 유연하게 Hadoop 데이터 저장환경을 제공하기 위해 다양한 HDFS 구성 옵션을 제공합니다.',
+                  'ABLESTACK은 중앙의 데이터센터와 엣지서버 사이트 전체를 하나의 통합관리 환경에서 관리할 수 있도록 함으로써 효율적으로 인프라 통제가 가능합니다.',
                 descriptions: [
-                  '노드의 로컬 디스크를 직접 HDFS용 디스크로 사용 가능',
-                  'Hadoop Cluster가 HDFS 대신, 전용 어댑터를 통해 Glue Object Storage를 데이터 저장소로 사용할 수 있음',
+                  'Mold를 통해 중앙의 데이터센터 Zone과 엣지 서버 Zone을 통합관리하여 관리 편의성 향상',
+                  'Kubernetes Cluster 및 자동화 플랫폼을 통한 애플리케이션 통합 배포/관리',
                 ],
               },
             ]}

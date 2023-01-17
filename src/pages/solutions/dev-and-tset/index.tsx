@@ -6,7 +6,12 @@ import { SolutionContent, SolutionHeaderProps, SolutionTemplate } from '@/templa
 
 import Logo_Article_1_9 from '@/public/images/new/solutions/article_1_9.png';
 import Logo_Article_2_10 from '@/public/images/new/solutions/article_2_10.svg';
-import Logo_Article_3_2 from '@/public/images/new/solutions/article_3_2.png';
+import Logo_Article_3_23 from '@/public/images/new/solutions/article_3_23.png';
+import Logo_Article_3_24 from '@/public/images/new/solutions/article_3_24.png';
+import Logo_Article_3_25 from '@/public/images/new/solutions/article_3_25.png';
+import Logo_Article_5_1 from '@/public/images/new/solutions/article_5_1.png';
+import Logo_Article_5_2 from '@/public/images/new/solutions/article_5_2.png';
+import Logo_Article_5_3 from '@/public/images/new/solutions/article_5_3.png';
 
 const headerContent: SolutionHeaderProps = {
   title: '개발/테스트',
@@ -44,41 +49,44 @@ const DevAndTsetPage = () => {
         <SolutionContent
           className={'bg-[#FFFFFF] text-[#444444]'}
           description={
-            <p className='max-w-[590px]'>
-              HCI Node의 로컬 디스크를 직접 활용한 전용 데이터노드 구성 아키텍처와 자동화 지원을
-              통한 신속한 구성, 가상화를 통한 높은 유연성을 가진 빅데이터 인프라
+            <p className='max-w-[610px]'>
+              개발환경 및 운영환경이 모두 동일한 환경을 제공하는 클라우드 인프라를 통해 개발부터
+              테스트에 이르는 전 과정을 효율적이고 빠르게 관리하고 자동화할 수 있습니다.
             </p>
           }>
           <section className='mt-12 grid max-w-page-full grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'>
             <SolutionContent.DescriptionCard
               containerClassName='bg-[#F6F7F9]'
-              title='Hadoop 전용 구성'
+              image={<Image src={Logo_Article_5_1} />}
+              title='출시 사이클 단축'
               description={
                 <p className={'m-0 px-12 text-[16px] font-[400] leading-[23.17px]'}>
-                  HDFS를 위한 전용 디스크를 선택하여 데이터 노드를 구성함으로써 기존 HCI가 가지는
-                  빅데이터 환경의 저장용량 이슈를 해결했습니다.
+                  인프라부터 개발환경 및 테스트 환경에 이르는 모든 자원을 원클릭으로 배포하고
+                  활용하여 전반적인 출시 사이클을 단축합니다.
                 </p>
               }
             />
 
             <SolutionContent.DescriptionCard
-              title='신속한 구성'
+              title='낮은 인력의존도'
               containerClassName='bg-[#F6F7F9]'
+              image={<Image src={Logo_Article_5_2} />}
               description={
                 <p className={'m-0 px-8 text-[16px] font-[400] leading-[23.17px]'}>
-                  사용자가 원하는 빅데이터 플랫폼을 자동화 도구를 이용해 원하는 절차와 설정으로
-                  원클릭으로 빠르게 구성 할 수 있습니다.
+                  자동화 플랫폼을 통해 모든 자원을 자동 배포하여 특정 인력 결손에 의한 개발 지연을
+                  최소화 합니다.
                 </p>
               }
             />
 
             <SolutionContent.DescriptionCard
-              title='파트너 생태계 구성'
+              title='민첩성 제고'
               containerClassName='bg-[#F6F7F9]'
+              image={<Image src={Logo_Article_5_3} />}
               description={
                 <p className={'m-0 px-12 text-[16px] font-[400] leading-[23.17px]'}>
-                  가상머신 뿐 아니라 Kubernetes 환경을 제공하여 다양한 빅데이터 애플리케이션을
-                  개발하고 배포할 수 있는 유연성을 제공합니다.
+                  새로운 기술을 적용한 개발 환경을 언제든지 빠르게 배포하고 개발환경에 적용하여 기업
+                  애플리케이션의 민첩성이 높아집니다.
                 </p>
               }
             />
@@ -86,18 +94,18 @@ const DevAndTsetPage = () => {
         </SolutionContent>
         <SolutionContent
           className={'bg-[#EEF4FB] text-[#444444]'}
-          // title='기존의 SAN 또는 NAS를 뛰어넘는 고도로 자동화된 하이퍼 컨버지드 스토리지'
           imagePosition='first'
-          image={<Image src={Logo_Article_3_2} />}>
+          image={<Image src={Logo_Article_3_23} />}>
           <SolutionContent.Description
-            title='다양한 HDFS 옵션 제공'
+            title='개발에 필요한 모든 인프라 제공'
             contents={[
               {
                 title:
-                  'ABLESTACK은 HCI를 이용해 유연하게 Hadoop 데이터 저장환경을 제공하기 위해 다양한 HDFS 구성 옵션을 제공합니다.',
+                  'ABLESTACK HCI는 개발/테스트에 필요한 모든 인프라를 하나의 통합 인프라로 제공하기 때문에 빠르게 개발을 수행하고 제품을 출시할 수 있습니다.',
                 descriptions: [
-                  '노드의 로컬 디스크를 직접 HDFS용 디스크로 사용 가능',
-                  'Hadoop Cluster가 HDFS 대신, 전용 어댑터를 통해 Glue Object Storage를 데이터 저장소로 사용할 수 있음',
+                  '가상머신을 통해 서버 기반의 개발을 지원',
+                  'Kubernetes 클러스터를 통해 컨테이너 기반의 개발 환경 지원',
+                  '다양한 네트워크 옵션으로 실제 운영환경과 동일한 네트워크 구성 지원',
                 ],
               },
             ]}
@@ -105,18 +113,18 @@ const DevAndTsetPage = () => {
         </SolutionContent>
         <SolutionContent
           className={'bg-[#FFFFFF] text-[#444444]'}
-          // title='기존의 SAN 또는 NAS를 뛰어넘는 고도로 자동화된 하이퍼 컨버지드 스토리지'
           imagePosition='last'
-          image={<Image src={Logo_Article_3_2} />}>
+          image={<Image src={Logo_Article_3_24} />}>
           <SolutionContent.Description
-            title='다양한 HDFS 옵션 제공'
+            title='자동화를 통한 개발환경 제공'
             contents={[
               {
                 title:
-                  'ABLESTACK은 HCI를 이용해 유연하게 Hadoop 데이터 저장환경을 제공하기 위해 다양한 HDFS 구성 옵션을 제공합니다.',
+                  'ABLESTACK은 개발에 필요한 모든 자원과 환경을 자동화 플랫폼을 통해 배포하기 때문에 특정 인력에 대한 의존성을 낮춥니다.',
                 descriptions: [
-                  '노드의 로컬 디스크를 직접 HDFS용 디스크로 사용 가능',
-                  'Hadoop Cluster가 HDFS 대신, 전용 어댑터를 통해 Glue Object Storage를 데이터 저장소로 사용할 수 있음',
+                  '재사용 가능한 자동화 스크립트를 통해 필요 자원 배포',
+                  '배포된 자원에 대한 통합적인 모니터링 가능',
+                  '사용자별로 언제든 필요한 개발환경을 독립적으로 자동 배포 지원',
                 ],
               },
             ]}
@@ -124,18 +132,17 @@ const DevAndTsetPage = () => {
         </SolutionContent>
         <SolutionContent
           className={'bg-[#F6F7F9;] text-[#444444]'}
-          // title='기존의 SAN 또는 NAS를 뛰어넘는 고도로 자동화된 하이퍼 컨버지드 스토리지'
           imagePosition='first'
-          image={<Image src={Logo_Article_3_2} />}>
+          image={<Image src={Logo_Article_3_25} />}>
           <SolutionContent.Description
-            title='다양한 HDFS 옵션 제공'
+            title='이머징 워크로드의 빠른 이식 가능'
             contents={[
               {
                 title:
-                  'ABLESTACK은 HCI를 이용해 유연하게 Hadoop 데이터 저장환경을 제공하기 위해 다양한 HDFS 구성 옵션을 제공합니다.',
+                  'ABLESTACK은 개발자가 원하는 때에 언제든 필요한 개발환경을 탑재한 인프라를 배포할 수 있어 기업 IT 혁신을 촉진합니다.',
                 descriptions: [
-                  '노드의 로컬 디스크를 직접 HDFS용 디스크로 사용 가능',
-                  'Hadoop Cluster가 HDFS 대신, 전용 어댑터를 통해 Glue Object Storage를 데이터 저장소로 사용할 수 있음',
+                  '셀프서비스를 통해 개발자가 원할 때 언제든지 새로운 환경을개발환경에 도입하고 테스트 할 수 있음',
+                  '빅데이터, 인공지능, IoT 등의 다양한 개발 환경 및 향후 새롭게 주목받을 기술에 대한 테스트 환경을 언제든 생성할 수 있음',
                 ],
               },
             ]}

@@ -6,7 +6,9 @@ import { SolutionContent, SolutionHeaderProps, SolutionTemplate } from '@/templa
 
 import Logo_Article_1_22 from '@/public/images/new/solutions/article_1_22.png';
 import Logo_Article_2_6 from '@/public/images/new/solutions/article_2_6.svg';
-import Logo_Article_3_2 from '@/public/images/new/solutions/article_3_2.png';
+import Logo_Article_3_61 from '@/public/images/new/solutions/article_3_61.png';
+import Logo_Article_3_62 from '@/public/images/new/solutions/article_3_62.png';
+import Logo_Article_3_63 from '@/public/images/new/solutions/article_3_63.png';
 
 const headerContent: SolutionHeaderProps = {
   title: '서버 가상화',
@@ -44,40 +46,40 @@ const CallCenterPage = () => {
           className={'bg-[#FFFFFF] text-[#444444]'}
           description={
             <p className='max-w-[590px]'>
-              HCI Node의 로컬 디스크를 직접 활용한 전용 데이터노드 구성 아키텍처와 자동화 지원을
-              통한 신속한 구성, 가상화를 통한 높은 유연성을 가진 빅데이터 인프라
+              ABLESTACK HCI는 내장되어 있는 하이퍼바이저와 통합 관리 플랫폼을 통해 기본에 충실한
+              고성능의 가상화 인프라를 제공합니다.
             </p>
           }>
           <section className='mt-12 grid max-w-page-full grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'>
             <SolutionContent.DescriptionCard
               containerClassName='bg-[#F6F7F9]'
-              title='Hadoop 전용 구성'
+              title='가상화 구축 비용 절감'
               description={
                 <p className={'m-0 px-12 text-[16px] font-[400] leading-[23.17px]'}>
-                  HDFS를 위한 전용 디스크를 선택하여 데이터 노드를 구성함으로써 기존 HCI가 가지는
-                  빅데이터 환경의 저장용량 이슈를 해결했습니다.
+                  x86 서버로만 구성되는 단순한 인프라 구조를 통해 서버 가상화 구축 비용 및
+                  소유비용이 절감됩니다.
                 </p>
               }
             />
 
             <SolutionContent.DescriptionCard
-              title='신속한 구성'
+              title='애플리케이션 민첩성 향상'
               containerClassName='bg-[#F6F7F9]'
               description={
                 <p className={'m-0 px-8 text-[16px] font-[400] leading-[23.17px]'}>
-                  사용자가 원하는 빅데이터 플랫폼을 자동화 도구를 이용해 원하는 절차와 설정으로
-                  원클릭으로 빠르게 구성 할 수 있습니다.
+                  가상머신 및 컨테이너 제공으로 애플리케이션의 종류에 관계없이 언제든 애플리케이션을
+                  배포하여 기업 애플리케이션의 대응이 빨라집니다.
                 </p>
               }
             />
 
             <SolutionContent.DescriptionCard
-              title='파트너 생태계 구성'
+              title='벤더 락인 최소화'
               containerClassName='bg-[#F6F7F9]'
               description={
                 <p className={'m-0 px-12 text-[16px] font-[400] leading-[23.17px]'}>
-                  가상머신 뿐 아니라 Kubernetes 환경을 제공하여 다양한 빅데이터 애플리케이션을
-                  개발하고 배포할 수 있는 유연성을 제공합니다.
+                  다양한 가상화 플랫폼을 지원하고 내장된 네트워크 기능을 제공하여 특정 벤더의 제품에
+                  IT 환경이 종속되는 것을 방지합니다.
                 </p>
               }
             />
@@ -85,18 +87,18 @@ const CallCenterPage = () => {
         </SolutionContent>
         <SolutionContent
           className={'bg-[#EEF4FB] text-[#444444]'}
-          // title='기존의 SAN 또는 NAS를 뛰어넘는 고도로 자동화된 하이퍼 컨버지드 스토리지'
           imagePosition='first'
-          image={<Image src={Logo_Article_3_2} />}>
+          image={<Image src={Logo_Article_3_61} />}>
           <SolutionContent.Description
-            title='다양한 HDFS 옵션 제공'
+            title='컴팩트한 구성으로 총 소유비용 절감'
             contents={[
               {
                 title:
-                  'ABLESTACK은 HCI를 이용해 유연하게 Hadoop 데이터 저장환경을 제공하기 위해 다양한 HDFS 구성 옵션을 제공합니다.',
+                  'ABLESTACK은 x86 서버를 클러스터링하여 서버 가상화에 필요한 모든 인프라를 통합 제공하기 때문에 서버 가상화를 위한 총 소유 비용을 절감할 수 있습니다.',
                 descriptions: [
-                  '노드의 로컬 디스크를 직접 HDFS용 디스크로 사용 가능',
-                  'Hadoop Cluster가 HDFS 대신, 전용 어댑터를 통해 Glue Object Storage를 데이터 저장소로 사용할 수 있음',
+                  '가상화된 서버, 스토리지, 네트워크 기능을 통합하여 제공',
+                  '가상머신, 컨테이너 등의 다양한 애플리케이션 실행 수단 제공',
+                  '통합 관리 플랫폼을 통해 모든 자원 관리 및 모니터링',
                 ],
               },
             ]}
@@ -104,18 +106,18 @@ const CallCenterPage = () => {
         </SolutionContent>
         <SolutionContent
           className={'bg-[#FFFFFF] text-[#444444]'}
-          // title='기존의 SAN 또는 NAS를 뛰어넘는 고도로 자동화된 하이퍼 컨버지드 스토리지'
           imagePosition='last'
-          image={<Image src={Logo_Article_3_2} />}>
+          image={<Image src={Logo_Article_3_62} />}>
           <SolutionContent.Description
-            title='다양한 HDFS 옵션 제공'
+            title='필요할 때 언제든 사용할 수 있는 인프라'
             contents={[
               {
                 title:
-                  'ABLESTACK은 HCI를 이용해 유연하게 Hadoop 데이터 저장환경을 제공하기 위해 다양한 HDFS 구성 옵션을 제공합니다.',
+                  'ABLESTACK은 소프트웨어로 정의된 데이터센터를 사용자에게 제공하기 때문에 언제든 사용자 스스로 원하는 인프라를 생성하여 사용할 수 있습니다. ',
                 descriptions: [
-                  '노드의 로컬 디스크를 직접 HDFS용 디스크로 사용 가능',
-                  'Hadoop Cluster가 HDFS 대신, 전용 어댑터를 통해 Glue Object Storage를 데이터 저장소로 사용할 수 있음',
+                  '다양한 애플리케이션을 실행할 수 있는 인프라를 언제든 생성할 수 있음',
+                  '셀프서비스 방식으로 쉽게 인프라 생성 및 관리 가능',
+                  '가상머신 및 컨테이너 지원으로 최신의 변화에도 빠르게 대응할 수 있음',
                 ],
               },
             ]}
@@ -123,18 +125,17 @@ const CallCenterPage = () => {
         </SolutionContent>
         <SolutionContent
           className={'bg-[#F6F7F9;] text-[#444444]'}
-          // title='기존의 SAN 또는 NAS를 뛰어넘는 고도로 자동화된 하이퍼 컨버지드 스토리지'
           imagePosition='first'
-          image={<Image src={Logo_Article_3_2} />}>
+          image={<Image src={Logo_Article_3_63} />}>
           <SolutionContent.Description
-            title='다양한 HDFS 옵션 제공'
+            title='다양한 가상화 플랫폼을 지원하는 인프라'
             contents={[
               {
                 title:
-                  'ABLESTACK은 HCI를 이용해 유연하게 Hadoop 데이터 저장환경을 제공하기 위해 다양한 HDFS 구성 옵션을 제공합니다.',
+                  'ABLESTACK은 내장된 가상화 플랫폼 뿐 아니라 다양한 상용 하이퍼바이저를 지원해 특정 벤더에 인프라가 락인 되는 것을 방지합니다.',
                 descriptions: [
-                  '노드의 로컬 디스크를 직접 HDFS용 디스크로 사용 가능',
-                  'Hadoop Cluster가 HDFS 대신, 전용 어댑터를 통해 Glue Object Storage를 데이터 저장소로 사용할 수 있음',
+                  '내장된 가상화 플랫폼인 Cell을 제공하여 별도의 가상화 플랫폼 없이 바로 구축 가능',
+                  'VMWare, Citrix, Microsoft, Redhat 등에서 공급하는 다양한 상용 하이버파이저를 지원하여 특정 벤더에 락인 없이 고객이 원하는 가상화 플랫폼 사용 가능',
                 ],
               },
             ]}

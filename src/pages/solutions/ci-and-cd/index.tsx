@@ -6,7 +6,9 @@ import { SolutionContent, SolutionHeaderProps, SolutionTemplate } from '@/templa
 
 import Logo_Article_1_19 from '@/public/images/new/solutions/article_1_19.png';
 import Logo_Article_2_21 from '@/public/images/new/solutions/article_2_21.svg';
-import Logo_Article_3_2 from '@/public/images/new/solutions/article_3_2.png';
+import Logo_Article_3_52 from '@/public/images/new/solutions/article_3_52.png';
+import Logo_Article_3_53 from '@/public/images/new/solutions/article_3_53.png';
+import Logo_Article_3_54 from '@/public/images/new/solutions/article_3_54.png';
 
 const headerContent: SolutionHeaderProps = {
   title: 'CI/CD',
@@ -45,40 +47,40 @@ const CiAndCdPage = () => {
           className={'bg-[#FFFFFF] text-[#444444]'}
           description={
             <p className='max-w-[590px]'>
-              HCI Node의 로컬 디스크를 직접 활용한 전용 데이터노드 구성 아키텍처와 자동화 지원을
-              통한 신속한 구성, 가상화를 통한 높은 유연성을 가진 빅데이터 인프라
+              모든 인프라가 통합되어 있는 단순한 구조의 ABLESTACK HCI의 아키텍처와 함께 자동화
+              플랫폼을 이용해 개발자가 자신의 일에 더욱 집중할 수 있게 됩니다.
             </p>
           }>
           <section className='mt-12 grid max-w-page-full grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'>
             <SolutionContent.DescriptionCard
               containerClassName='bg-[#F6F7F9]'
-              title='Hadoop 전용 구성'
+              title='생명주기의 단축'
               description={
                 <p className={'m-0 px-12 text-[16px] font-[400] leading-[23.17px]'}>
-                  HDFS를 위한 전용 디스크를 선택하여 데이터 노드를 구성함으로써 기존 HCI가 가지는
-                  빅데이터 환경의 저장용량 이슈를 해결했습니다.
+                  통합된 인프라와 자동화된 개발/배포 과정으로 기업 애플리케이션의 생명주기가
+                  단축됩니다.
                 </p>
               }
             />
 
             <SolutionContent.DescriptionCard
-              title='신속한 구성'
+              title='개발 리소스 절약'
               containerClassName='bg-[#F6F7F9]'
               description={
                 <p className={'m-0 px-8 text-[16px] font-[400] leading-[23.17px]'}>
-                  사용자가 원하는 빅데이터 플랫폼을 자동화 도구를 이용해 원하는 절차와 설정으로
-                  원클릭으로 빠르게 구성 할 수 있습니다.
+                  소스코드 개발 외의 빌드/테스트/검증 및 애플리케이션 배포가 자동화되어 전반적
+                  리소스를 절약합니다.
                 </p>
               }
             />
 
             <SolutionContent.DescriptionCard
-              title='파트너 생태계 구성'
+              title='개발/운영 간극 최소화'
               containerClassName='bg-[#F6F7F9]'
               description={
                 <p className={'m-0 px-12 text-[16px] font-[400] leading-[23.17px]'}>
-                  가상머신 뿐 아니라 Kubernetes 환경을 제공하여 다양한 빅데이터 애플리케이션을
-                  개발하고 배포할 수 있는 유연성을 제공합니다.
+                  개발 및 운영을 위해 동일한 인프라 환경을 제공하여 개발과 운영 사이의 간극을
+                  줄입니다.
                 </p>
               }
             />
@@ -86,18 +88,18 @@ const CiAndCdPage = () => {
         </SolutionContent>
         <SolutionContent
           className={'bg-[#EEF4FB] text-[#444444]'}
-          // title='기존의 SAN 또는 NAS를 뛰어넘는 고도로 자동화된 하이퍼 컨버지드 스토리지'
           imagePosition='first'
-          image={<Image src={Logo_Article_3_2} />}>
+          image={<Image src={Logo_Article_3_52} />}>
           <SolutionContent.Description
-            title='다양한 HDFS 옵션 제공'
+            title='원클릭 CI/CD 환경 제공 '
             contents={[
               {
                 title:
-                  'ABLESTACK은 HCI를 이용해 유연하게 Hadoop 데이터 저장환경을 제공하기 위해 다양한 HDFS 구성 옵션을 제공합니다.',
+                  'ABLESTACK은 자동화 플랫폼을 통해 사용자가 원하는 형태의 CI/CD 환경을 원클릭으로 제공합니다.',
                 descriptions: [
-                  '노드의 로컬 디스크를 직접 HDFS용 디스크로 사용 가능',
-                  'Hadoop Cluster가 HDFS 대신, 전용 어댑터를 통해 Glue Object Storage를 데이터 저장소로 사용할 수 있음',
+                  'Genie를 통해 CI/CD 구성요소 자동 배포',
+                  '사용자가 원하는 CI/CD 환경을 커스터마이징 할 수 있는 기능 제공',
+                  '언제든 다수의 사용자가 필요할 때 개발환경 배포 가능',
                 ],
               },
             ]}
@@ -105,18 +107,18 @@ const CiAndCdPage = () => {
         </SolutionContent>
         <SolutionContent
           className={'bg-[#FFFFFF] text-[#444444]'}
-          // title='기존의 SAN 또는 NAS를 뛰어넘는 고도로 자동화된 하이퍼 컨버지드 스토리지'
           imagePosition='last'
-          image={<Image src={Logo_Article_3_2} />}>
+          image={<Image src={Logo_Article_3_53} />}>
           <SolutionContent.Description
-            title='다양한 HDFS 옵션 제공'
+            title='자동화를 통한 개발 리소스의 절약'
             contents={[
               {
                 title:
-                  'ABLESTACK은 HCI를 이용해 유연하게 Hadoop 데이터 저장환경을 제공하기 위해 다양한 HDFS 구성 옵션을 제공합니다.',
+                  'ABLESTACK은 개발 및 테스트, 배포에 이르는 모든 과정을 자동화 할 수 있기 때문에 기업 애플리케이션 개발을 위한 인적 자원을 절약할 수 있습니다.',
                 descriptions: [
-                  '노드의 로컬 디스크를 직접 HDFS용 디스크로 사용 가능',
-                  'Hadoop Cluster가 HDFS 대신, 전용 어댑터를 통해 Glue Object Storage를 데이터 저장소로 사용할 수 있음',
+                  'ABLECLOUD의 개발 노하우를 담은 CI/CD 환경 제공',
+                  '자동화된 테스트 도구를 통해 애플리케이션 오류 최소화',
+                  '개발, 테스트, 배포 전반 자동화를 통해 애플리케이션 개발에 필요한 리소스 절약',
                 ],
               },
             ]}
@@ -124,18 +126,18 @@ const CiAndCdPage = () => {
         </SolutionContent>
         <SolutionContent
           className={'bg-[#F6F7F9;] text-[#444444]'}
-          // title='기존의 SAN 또는 NAS를 뛰어넘는 고도로 자동화된 하이퍼 컨버지드 스토리지'
           imagePosition='first'
-          image={<Image src={Logo_Article_3_2} />}>
+          image={<Image src={Logo_Article_3_54} />}>
           <SolutionContent.Description
-            title='다양한 HDFS 옵션 제공'
+            title='통합된 개발/운영 인프라 제공'
             contents={[
               {
                 title:
-                  'ABLESTACK은 HCI를 이용해 유연하게 Hadoop 데이터 저장환경을 제공하기 위해 다양한 HDFS 구성 옵션을 제공합니다.',
+                  'ABLESTACK은 관리 플랫폼 및 자동화 플랫폼 등이 모두 통합되어 있고 개발/운영에 통합 인프라를 제공하여 관리 자원을 줄일 수 있습니다.',
                 descriptions: [
-                  '노드의 로컬 디스크를 직접 HDFS용 디스크로 사용 가능',
-                  'Hadoop Cluster가 HDFS 대신, 전용 어댑터를 통해 Glue Object Storage를 데이터 저장소로 사용할 수 있음',
+                  '개발 인프라와 운영 인프라가 동일한 구성을 제공',
+                  'CI/CD 환경을 구성하는 데 있어 최적의 인프라 환경 제공',
+                  '통합 관리 플랫폼을 통해 편리한 모니터링/관리 환경 제공',
                 ],
               },
             ]}

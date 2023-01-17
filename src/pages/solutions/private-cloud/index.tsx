@@ -6,7 +6,9 @@ import { SolutionContent, SolutionHeaderProps, SolutionTemplate } from '@/templa
 
 import Logo_Article_1_6 from '@/public/images/new/solutions/article_1_6.png';
 import Logo_Article_2_1 from '@/public/images/new/solutions/article_2_1.svg';
-import Logo_Article_3_2 from '@/public/images/new/solutions/article_3_2.png';
+import Logo_Article_3_14 from '@/public/images/new/solutions/article_3_14.png';
+import Logo_Article_3_15 from '@/public/images/new/solutions/article_3_15.png';
+import Logo_Article_3_16 from '@/public/images/new/solutions/article_3_16.png';
 
 const headerContent: SolutionHeaderProps = {
   title: '프라이빗 클라우드',
@@ -45,40 +47,40 @@ const PrivateCloudPage = () => {
           className={'bg-[#FFFFFF] text-[#444444]'}
           description={
             <p className='max-w-[590px]'>
-              HCI Node의 로컬 디스크를 직접 활용한 전용 데이터노드 구성 아키텍처와 자동화 지원을
-              통한 신속한 구성, 가상화를 통한 높은 유연성을 가진 빅데이터 인프라
+              단순한 인프라 아키텍처에 언제든 필요에 따라 자원을 무중단 확장할 수 있을 뿐 아니라
+              클라우드 웹 콘솔을 이용해 셀프서비스로 원하는 자원을 원하는 만큼 사용하십시오.
             </p>
           }>
           <section className='mt-12 grid max-w-page-full grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'>
             <SolutionContent.DescriptionCard
               containerClassName='bg-[#F6F7F9]'
-              title='Hadoop 전용 구성'
+              title='무중단 확장 가능'
               description={
                 <p className={'m-0 px-12 text-[16px] font-[400] leading-[23.17px]'}>
-                  HDFS를 위한 전용 디스크를 선택하여 데이터 노드를 구성함으로써 기존 HCI가 가지는
-                  빅데이터 환경의 저장용량 이슈를 해결했습니다.
+                  3대의 서버로 시작해서 필요한 만큼 인프라를 무중단으로 확장할 수 있어 기업 내의
+                  프라이빗 클라우드를 실현합니다.
                 </p>
               }
             />
 
             <SolutionContent.DescriptionCard
-              title='신속한 구성'
+              title='사용자 편의성 향상'
               containerClassName='bg-[#F6F7F9]'
               description={
                 <p className={'m-0 px-8 text-[16px] font-[400] leading-[23.17px]'}>
-                  사용자가 원하는 빅데이터 플랫폼을 자동화 도구를 이용해 원하는 절차와 설정으로
-                  원클릭으로 빠르게 구성 할 수 있습니다.
+                  웹 기반의 클라우드 콘솔을 통해 셀프서비스 환경을 제공해 사용자의 편의성을 향상하고
+                  소프트웨어 정의 데이터센터를 제공합니다.
                 </p>
               }
             />
 
             <SolutionContent.DescriptionCard
-              title='파트너 생태계 구성'
+              title='신속성/민첩성 제고'
               containerClassName='bg-[#F6F7F9]'
               description={
                 <p className={'m-0 px-12 text-[16px] font-[400] leading-[23.17px]'}>
-                  가상머신 뿐 아니라 Kubernetes 환경을 제공하여 다양한 빅데이터 애플리케이션을
-                  개발하고 배포할 수 있는 유연성을 제공합니다.
+                  가상머신과 컨테이너 모두를 지원하여 모든 종류의 애플리케이션을 실행할 수 있어 기업
+                  IT의 신속성 및 민첩성을 높입니다.
                 </p>
               }
             />
@@ -86,18 +88,18 @@ const PrivateCloudPage = () => {
         </SolutionContent>
         <SolutionContent
           className={'bg-[#EEF4FB] text-[#444444]'}
-          // title='기존의 SAN 또는 NAS를 뛰어넘는 고도로 자동화된 하이퍼 컨버지드 스토리지'
           imagePosition='first'
-          image={<Image src={Logo_Article_3_2} />}>
+          image={<Image src={Logo_Article_3_14} />}>
           <SolutionContent.Description
-            title='다양한 HDFS 옵션 제공'
+            title='필요할 때 1대 씩 무중단 증설'
             contents={[
               {
                 title:
-                  'ABLESTACK은 HCI를 이용해 유연하게 Hadoop 데이터 저장환경을 제공하기 위해 다양한 HDFS 구성 옵션을 제공합니다.',
+                  'ABLESTACK은 기본 3대로 클러스터를 구성한 후 사용 중에 추가적인 자원이 필요할 때 언제든지 1대 씩 무중단으로 증설할 수 있습니다.',
                 descriptions: [
-                  '노드의 로컬 디스크를 직접 HDFS용 디스크로 사용 가능',
-                  'Hadoop Cluster가 HDFS 대신, 전용 어댑터를 통해 Glue Object Storage를 데이터 저장소로 사용할 수 있음',
+                  'Cube 마법사를 통한 무중단 HCI Node 확장 기능 제공',
+                  'Wall을 통한 자원 증설 시점 예측 기능 제공',
+                  '필요에 따라 증설할 자원을 선택하여, 디스크만 증설하거나 컴퓨트 자원 또는스토리지 자원 만을 증설하는 기능 지원',
                 ],
               },
             ]}
@@ -105,18 +107,18 @@ const PrivateCloudPage = () => {
         </SolutionContent>
         <SolutionContent
           className={'bg-[#FFFFFF] text-[#444444]'}
-          // title='기존의 SAN 또는 NAS를 뛰어넘는 고도로 자동화된 하이퍼 컨버지드 스토리지'
           imagePosition='last'
-          image={<Image src={Logo_Article_3_2} />}>
+          image={<Image src={Logo_Article_3_15} />}>
           <SolutionContent.Description
-            title='다양한 HDFS 옵션 제공'
+            title='웹 기반 클라우드 플랫폼 제공'
             contents={[
               {
                 title:
-                  'ABLESTACK은 HCI를 이용해 유연하게 Hadoop 데이터 저장환경을 제공하기 위해 다양한 HDFS 구성 옵션을 제공합니다.',
+                  '웹 기반의 셀프서비스 클라우드 플랫폼을 제공하고, 다양한 자동화를 통해 효과적으로 기업 내의 클라우드를 제어할 수 있습니다.',
                 descriptions: [
-                  '노드의 로컬 디스크를 직접 HDFS용 디스크로 사용 가능',
-                  'Hadoop Cluster가 HDFS 대신, 전용 어댑터를 통해 Glue Object Storage를 데이터 저장소로 사용할 수 있음',
+                  'Mold를 통해 웹 기반으로 사용자가 언제든 필요한 자원을생성하여 사용 할 수 있는 셀프서비스 기능',
+                  'Genie를 사용해 복잡한 애플리케이션을 사용자가 원클릭으로배포할 수 있는 자동화 기능 제공',
+                  'Wall을 통해 모든 자원의 상태를 모니터링할 수 있음',
                 ],
               },
             ]}
@@ -124,18 +126,18 @@ const PrivateCloudPage = () => {
         </SolutionContent>
         <SolutionContent
           className={'bg-[#F6F7F9;] text-[#444444]'}
-          // title='기존의 SAN 또는 NAS를 뛰어넘는 고도로 자동화된 하이퍼 컨버지드 스토리지'
           imagePosition='first'
-          image={<Image src={Logo_Article_3_2} />}>
+          image={<Image src={Logo_Article_3_16} />}>
           <SolutionContent.Description
-            title='다양한 HDFS 옵션 제공'
+            title='모든 유형의 애플리케이션 실행 가능'
             contents={[
               {
                 title:
-                  'ABLESTACK은 HCI를 이용해 유연하게 Hadoop 데이터 저장환경을 제공하기 위해 다양한 HDFS 구성 옵션을 제공합니다.',
+                  'ABLESTACK은 기업에서 실행 중인 모든 유형의 애플리케이션을 실행할 수 있는 유연성을 제공합니다. ',
                 descriptions: [
-                  '노드의 로컬 디스크를 직접 HDFS용 디스크로 사용 가능',
-                  'Hadoop Cluster가 HDFS 대신, 전용 어댑터를 통해 Glue Object Storage를 데이터 저장소로 사용할 수 있음',
+                  '가상머신을 기반으로 기존의 서버에서 실행 중인 모든 애플리케이션 실행을 보장',
+                  'Koral을 통해 Kubernetes 클러스터를 사용할 수 있어 컨테이너 기반의이머징 워크로드 실행 가능',
+                  'Track을 통해 애플리케이션에 필요한 모든 형태의 네트워크 제공',
                 ],
               },
             ]}

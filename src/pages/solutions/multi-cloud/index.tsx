@@ -6,7 +6,9 @@ import { SolutionContent, SolutionHeaderProps, SolutionTemplate } from '@/templa
 
 import Logo_Article_1_14 from '@/public/images/new/solutions/article_1_14.png';
 import Logo_Article_2_5 from '@/public/images/new/solutions/article_2_5.svg';
-import Logo_Article_3_2 from '@/public/images/new/solutions/article_3_2.png';
+import Logo_Article_3_37 from '@/public/images/new/solutions/article_3_37.png';
+import Logo_Article_3_38 from '@/public/images/new/solutions/article_3_38.png';
+import Logo_Article_3_39 from '@/public/images/new/solutions/article_3_39.png';
 
 const headerContent: SolutionHeaderProps = {
   title: '멀티클라우드',
@@ -44,40 +46,40 @@ const MultiCloudPage = () => {
           className={'bg-[#FFFFFF] text-[#444444]'}
           description={
             <p className='max-w-[590px]'>
-              HCI Node의 로컬 디스크를 직접 활용한 전용 데이터노드 구성 아키텍처와 자동화 지원을
-              통한 신속한 구성, 가상화를 통한 높은 유연성을 가진 빅데이터 인프라
+              다양한 하이퍼바이저를 지원하고, 다수의 클라우드 환경과의 자동화가 가능한 ABLESTACK
+              HCI를 통해 인프라 확장 및 활용의 자유를 누릴 수 있습니다.
             </p>
           }>
           <section className='mt-12 grid max-w-page-full grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'>
             <SolutionContent.DescriptionCard
               containerClassName='bg-[#F6F7F9]'
-              title='Hadoop 전용 구성'
+              title='가상화 유연성 향상'
               description={
                 <p className={'m-0 px-12 text-[16px] font-[400] leading-[23.17px]'}>
-                  HDFS를 위한 전용 디스크를 선택하여 데이터 노드를 구성함으로써 기존 HCI가 가지는
-                  빅데이터 환경의 저장용량 이슈를 해결했습니다.
+                  단순 가상화 클러스터를 ABLESTACK HCI를 통해 클라우드 플랫폼으로 바로 확장하여
+                  사용할 수 있습니다.
                 </p>
               }
             />
 
             <SolutionContent.DescriptionCard
-              title='신속한 구성'
+              title='인프라 확장성 제고'
               containerClassName='bg-[#F6F7F9]'
               description={
                 <p className={'m-0 px-8 text-[16px] font-[400] leading-[23.17px]'}>
-                  사용자가 원하는 빅데이터 플랫폼을 자동화 도구를 이용해 원하는 절차와 설정으로
-                  원클릭으로 빠르게 구성 할 수 있습니다.
+                  다양한 하이퍼바이저, 다수의 클라우드 환경을 지원하여 원할 때 어디로든 인프라를
+                  확장할 수 있습니다.
                 </p>
               }
             />
 
             <SolutionContent.DescriptionCard
-              title='파트너 생태계 구성'
+              title='벤더 락인 방지'
               containerClassName='bg-[#F6F7F9]'
               description={
                 <p className={'m-0 px-12 text-[16px] font-[400] leading-[23.17px]'}>
-                  가상머신 뿐 아니라 Kubernetes 환경을 제공하여 다양한 빅데이터 애플리케이션을
-                  개발하고 배포할 수 있는 유연성을 제공합니다.
+                  특정 제품에 대한 의존도를 낮출 수 있어 벤더 락인을 방지하고 전반적인 소유비용을
+                  절감합니다.
                 </p>
               }
             />
@@ -85,18 +87,18 @@ const MultiCloudPage = () => {
         </SolutionContent>
         <SolutionContent
           className={'bg-[#EEF4FB] text-[#444444]'}
-          // title='기존의 SAN 또는 NAS를 뛰어넘는 고도로 자동화된 하이퍼 컨버지드 스토리지'
           imagePosition='first'
-          image={<Image src={Logo_Article_3_2} />}>
+          image={<Image src={Logo_Article_3_37} />}>
           <SolutionContent.Description
-            title='다양한 HDFS 옵션 제공'
+            title='멀티 하이퍼바이저, 클라우드 전환'
             contents={[
               {
                 title:
-                  'ABLESTACK은 HCI를 이용해 유연하게 Hadoop 데이터 저장환경을 제공하기 위해 다양한 HDFS 구성 옵션을 제공합니다.',
+                  'ABLESTACK HCI를 이용하면 단순한 가상화 플랫폼이 클라우드 플랫폼으로 전환되어 다양한 클라우드 기능을 사용할 수 있습니다.',
                 descriptions: [
-                  '노드의 로컬 디스크를 직접 HDFS용 디스크로 사용 가능',
-                  'Hadoop Cluster가 HDFS 대신, 전용 어댑터를 통해 Glue Object Storage를 데이터 저장소로 사용할 수 있음',
+                  'ABLESTACK에 다양한 하이퍼바이저 기반의 클러스터 구성 가능',
+                  'Mold를 통해 다양한 하이퍼바이저 클러스터를 클라우드 인프라로 전환',
+                  'ABLESTACK 클러스터 외의 일반 가상화 클러스터를 Mold로 통합 관리',
                 ],
               },
             ]}
@@ -104,18 +106,18 @@ const MultiCloudPage = () => {
         </SolutionContent>
         <SolutionContent
           className={'bg-[#FFFFFF] text-[#444444]'}
-          // title='기존의 SAN 또는 NAS를 뛰어넘는 고도로 자동화된 하이퍼 컨버지드 스토리지'
           imagePosition='last'
-          image={<Image src={Logo_Article_3_2} />}>
+          image={<Image src={Logo_Article_3_38} />}>
           <SolutionContent.Description
-            title='다양한 HDFS 옵션 제공'
+            title='클라우드로 인프라 확장 지원'
             contents={[
               {
                 title:
-                  'ABLESTACK은 HCI를 이용해 유연하게 Hadoop 데이터 저장환경을 제공하기 위해 다양한 HDFS 구성 옵션을 제공합니다.',
+                  'ABLESTACK은 내장된 멀티 클라우드 자동화 플랫폼을 통해 사용자가 언제든지 가상자원을 퍼블릭 클라우드로 확장하도록 지원합니다.',
                 descriptions: [
-                  '노드의 로컬 디스크를 직접 HDFS용 디스크로 사용 가능',
-                  'Hadoop Cluster가 HDFS 대신, 전용 어댑터를 통해 Glue Object Storage를 데이터 저장소로 사용할 수 있음',
+                  'Genie를 통해 멀티 클라우드 환경에서의 자동화 지원',
+                  '내부 가상 인프라와 함께 필요할 때 외부로의 인프라 확장 가능',
+                  'VPC 네트워크를 이용해 내부 인프라와 외부 인프라 통합',
                 ],
               },
             ]}
@@ -123,18 +125,18 @@ const MultiCloudPage = () => {
         </SolutionContent>
         <SolutionContent
           className={'bg-[#F6F7F9;] text-[#444444]'}
-          // title='기존의 SAN 또는 NAS를 뛰어넘는 고도로 자동화된 하이퍼 컨버지드 스토리지'
           imagePosition='first'
-          image={<Image src={Logo_Article_3_2} />}>
+          image={<Image src={Logo_Article_3_39} />}>
           <SolutionContent.Description
-            title='다양한 HDFS 옵션 제공'
+            title='선택의 자유, 소유비용의 절감'
             contents={[
               {
                 title:
-                  'ABLESTACK은 HCI를 이용해 유연하게 Hadoop 데이터 저장환경을 제공하기 위해 다양한 HDFS 구성 옵션을 제공합니다.',
+                  'ABLESTACK은 다양한 하이퍼바이저와 클라우드를 지원하여 사용자에게 선택의 자유를 제공하고, 이로 인한 클라우드 소유비용의 절감 효과를 제공합니다.',
                 descriptions: [
-                  '노드의 로컬 디스크를 직접 HDFS용 디스크로 사용 가능',
-                  'Hadoop Cluster가 HDFS 대신, 전용 어댑터를 통해 Glue Object Storage를 데이터 저장소로 사용할 수 있음',
+                  '내장 하이퍼바이저를 이용한 클라우드로 별도의 하이퍼바이저 불필요',
+                  'VMWare, Citrix, Microsoft 등의 다양한 벤더 사의 하이퍼바이저를 지원',
+                  'AWS, Azure, GCP, OpenStack 등의 다수의 클라우드 인프라를 지원하여 사용자가 직접 클라우드를 비교/선택할 수 있음',
                 ],
               },
             ]}
