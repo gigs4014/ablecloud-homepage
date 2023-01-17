@@ -4,12 +4,14 @@ import { cls } from '@/utils';
 export interface PageWidthProps extends BaseComponentProps {
   children: React.ReactNode;
   containerClassName?: string;
-  seperateWithPeer?: boolean;
+  separateWithPeer?: boolean;
+  invertBg?: boolean;
 }
 
 export function PageWidth({
   containerClassName,
-  seperateWithPeer = false,
+  separateWithPeer: separateWithPeer = false,
+  invertBg = false,
   className,
   children,
 }: PageWidthProps) {

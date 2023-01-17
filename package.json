@@ -5,11 +5,13 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
     "docker:build": "./scripts/docker/build",
     "docker:run": "./scripts/docker/run",
     "docker:dev": "./scripts/docker/dev",
-    "start": "next start",
-    "lint": "next lint",
+    "pm2:start": "pm2 start ecosystem.config.js",
+    "prod:fetch": "./scripts/fetch",
     "postinstall": "./scripts/postinstall",
     "prepack": "pinst --disable",
     "postpack": "pinst --enable"
@@ -64,6 +66,7 @@
     "lint-staged": "^12.4.1",
     "lodash": "^4.17.21",
     "pinst": "^3.0.0",
+    "pm2": "^5.2.2",
     "postcss": "^8.4.13",
     "prettier": "2.6.2",
     "prettier-plugin-tailwindcss": "^0.1.10",

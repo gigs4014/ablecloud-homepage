@@ -32,7 +32,7 @@ export default function HomeHeader({
             description
           )}
 
-          {headerExtra && <div className={'mt-[40px]'}>{headerExtra}</div>}
+          {headerExtra && <div className={'mt-[40px] bg-transparent'}>{headerExtra}</div>}
         </section>
       </div>
     </header>

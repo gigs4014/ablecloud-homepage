@@ -281,15 +281,15 @@ export const footerMenus = [
     subMenuItems: [
       {
         label: '데모 신청하기',
-        href: '/company',
+        href: '/company/contact/support',
       },
       {
         label: '전문가와 상담하기',
-        href: '/company',
+        href: '/company/contact/inquire',
       },
       {
         label: '기술 지원 받기',
-        href: '/company',
+        href: '/company/contact/support',
       },
     ],
   },

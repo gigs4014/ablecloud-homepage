@@ -302,7 +302,7 @@ export default function SolutionPage() {
           '>
             {solutions.map(({ title, image, description, href }) => {
               return (
-                <CustomLink key={uuid()} href={href} hoverBehavoir='none' className={'w-full'}>
+                <CustomLink key={uuid()} href={href} hoverBehavior='none' className={'w-full'}>
                   <SolutionContent.RowCard title={title} image={image} description={description} />
                 </CustomLink>
               );
@@ -321,7 +321,7 @@ export default function SolutionPage() {
           <div className='mx-auto mt-8 grid w-full max-w-page-full grid-cols-1 gap-[10px] px-4 md:grid-cols-2 lg:grid-cols-3'>
             {partners.map(({ title, image, description, href }) => {
               return (
-                <CustomLink key={uuid()} href={href} hoverBehavoir='none' className={'w-full'}>
+                <CustomLink key={uuid()} href={href} hoverBehavior='none' className={'w-full'}>
                   <SolutionContent.RowSmallCard
                     image={image}
                     title={title}

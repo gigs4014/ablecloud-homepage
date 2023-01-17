@@ -13,7 +13,7 @@ interface CardProps extends BaseComponentProps {
   containerClassName?: string;
   description?: ReactNode;
   linkText?: ReactNode;
-  hoverBehavoir?: 'none' | 'scale';
+  hoverBehavior?: 'none' | 'scale';
 }
 
 interface ActionCardProps extends CardProps {
@@ -32,7 +32,7 @@ export function ActionCard({
   description,
   buttonTitle,
   href,
-  hoverBehavoir = 'none',
+  hoverBehavior = 'none',
 }: ActionCardProps) {
   return (
     <Container.Card
@@ -69,7 +69,7 @@ export function DescriptionCard({
   image,
   description,
   linkText,
-  hoverBehavoir = 'none',
+  hoverBehavior: hoverBehavior = 'none',
 }: CardProps) {
   return (
     <Container.Card
@@ -113,7 +113,7 @@ export function RowSummaryCard({
   image,
   description,
   linkText,
-  hoverBehavoir = 'none',
+  hoverBehavior: hoverBehavior = 'none',
   containerClassName,
 }: CardProps) {
   return (
@@ -143,7 +143,7 @@ export function RowSmallCard({
   image,
   description,
   containerClassName,
-  hoverBehavoir = 'scale',
+  hoverBehavior: hoverBehavior = 'scale',
 }: CardProps) {
   return (
     <Container.Card
@@ -164,7 +164,7 @@ export function ItemCard({
   title,
   image,
   description,
-  hoverBehavoir = 'none',
+  hoverBehavior: hoverBehavior = 'none',
 }: CardProps) {
   return (
     <Container.Card
