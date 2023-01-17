@@ -20,7 +20,7 @@ function SolutionTemplate({
 }: PropsWithChildren<SolutionTemplateProps>) {
   return (
     <>
-      <SolutionTemplateHead {...headerContent} />
+      {/* <SolutionTemplateHead {...headerContent} /> */}
 
       <Container.Article enableProseSpacing={enableProseSpacing} className={className}>
         <SolutionHeader {...headerContent} />

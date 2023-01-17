@@ -14,7 +14,11 @@ const PartnerContentLogoBox = memo<PartnerContentLogoBoxProps>(({ title, image, 
     <Container.Card
       hoverBehavior={'none'}
       className={`bg-white text-center shadow-none ${className} flex h-[150px] max-h-[150px] flex-col justify-center`}>
-      {image && <div className={'flex items-center justify-center'}>{image}</div>}
+      {image ? (
+        <div className={'flex items-center justify-center'}>{image}</div>
+      ) : (
+        <div className='min-h-[51px]'></div>
+      )}
 
       <p
         className={

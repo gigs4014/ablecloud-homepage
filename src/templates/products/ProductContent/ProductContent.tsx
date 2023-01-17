@@ -40,12 +40,14 @@ const ProductContent = memo<PropsWithChildren<ProductContentProps>>(
 
     return (
       <section
-        className={cls`group relative flex w-full flex-col items-center overflow-hidden pb-16 ${className}`}>
+        className={cls`not-prose group relative flex w-full flex-col items-center overflow-hidden pb-8 ${
+          className ? className : 'text-[#444444]'
+        }`}>
         {/* ::before */}
         {/* <div className='group-odd:absolute group-odd:inset-0 group-odd:-z-10 group-odd:-skew-y-2 group-odd:bg-slate-100' /> */}
 
-        <Container.PageWidth>
-          <header className='flex flex-col items-center px-8 text-center'>
+        <Container.PageWidth className='px-4'>
+          <header className='flex flex-col items-center px-8 text-center '>
             {typeof title === 'string' ? (
               <p className={'m-0 mb-[25px] p-0 text-[30px] font-[500] leading-[43.44px]'}>
                 {title}
@@ -62,22 +64,25 @@ const ProductContent = memo<PropsWithChildren<ProductContentProps>>(
             )}
           </header>
           {image ? (
-            <section className='flex w-full items-center justify-between'>
+            <section className='flex max-w-page-full items-center justify-between'>
               {imagePosition === 'first' && (
                 <div
                   className={`${
                     isBigScreen ? 'flex w-1/2' : 'hidden'
-                  } items-center justify-center `}>
+                  } mr-8 mt-16 items-center justify-center `}>
                   {image}
                 </div>
               )}
 
-              <div className={`${isBigScreen ? 'w-1/2' : 'w-full'} flex-col justify-center`}>
+              <div className={`${isBigScreen ? 'w-1/2' : 'w-full'} flex flex-col justify-center`}>
                 {children}
               </div>
 
               {imagePosition === 'last' && (
-                <div className={`${isBigScreen ? 'w-1/2' : 'hidden'} items-center justify-center`}>
+                <div
+                  className={`${
+                    isBigScreen ? 'w-1/2' : 'hidden'
+                  } ml-8 mt-16 items-center justify-center`}>
                   {image}
                 </div>
               )}

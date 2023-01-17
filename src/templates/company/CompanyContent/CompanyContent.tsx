@@ -17,11 +17,13 @@ const CompanyContent = memo<PropsWithChildren<CompanyContentProps>>(
   ({ title, description, className, children }) => {
     return (
       <section
-        className={cls`group relative flex w-full flex-col items-center overflow-hidden pb-16 ${className}`}>
+        className={cls`not-prose group relative flex w-full flex-col items-center overflow-hidden pb-8 ${
+          className ? className : 'text-[#444444]'
+        }`}>
         <Container.PageWidth>
-          <header className='flex flex-col items-center px-8 text-center'>
+          <header className='m-auto flex w-full max-w-page-full flex-col items-center px-8 text-center'>
             {typeof title === 'string' ? (
-              <p className={'m-0 mb-[25px] p-0 text-[30px] font-[500] leading-[43.44px]'}>
+              <p className={'m-0 mb-[25px] p-0 text-[30px] font-[500] leading-[43.44px] '}>
                 {title}
               </p>
             ) : (

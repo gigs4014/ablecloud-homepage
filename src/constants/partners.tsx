@@ -53,6 +53,7 @@ export const partnerItems: Array<BaseTabItem> = [
         name: '(주)이노티움',
         src: <Logo_Article_4_6 />,
       },
+      { name: '(주)한길TIS', src: '' },
       {
         name: '(주)이노뎁',
         src: <Logo_Article_4_7 />,
@@ -84,6 +85,10 @@ export const partnerItems: Array<BaseTabItem> = [
       {
         name: '(주)대원CTS',
         src: <Logo_Article_4_14 />,
+      },
+      {
+        name: '(주)에이블스토어',
+        src: <Logo_Article_4_5 />,
       },
     ],
   },
@@ -135,6 +140,7 @@ export const partnerItems: Array<BaseTabItem> = [
         name: '(주)에이블스토어',
         src: <Logo_Article_4_5 />,
       },
+
       {
         name: '(주)조인트리',
         src: <Logo_Article_4_1 />,

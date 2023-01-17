@@ -2,6 +2,7 @@ module.exports = {
   extends: ['next/core-web-vitals', 'plugin:prettier/recommended'],
   plugins: ['@wogns3623/better-exhaustive-deps'],
   rules: {
+    'no-unused-vars': 'off',
     'react-hooks/exhaustive-deps': 'off',
     '@wogns3623/better-exhaustive-deps/exhaustive-deps': [
       'warn',

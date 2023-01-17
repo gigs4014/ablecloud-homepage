@@ -6,7 +6,12 @@ import { BaseComponentProps } from '@/types';
 
 import { Container } from '@/components/layout';
 
-import InterViewHeader, { InterViewHeaderProps } from './InterviewHeader';
+import { InterViewClientContent, InterViewClientContentProps } from './InterviewContent';
+import InterViewHeader, {
+  ClientHeader,
+  InterViewClientHeader,
+  InterViewHeaderProps,
+} from './InterviewHeader';
 
 export interface InterViewTemplateProps extends InterViewHeaderProps, BaseComponentProps {
   enableProseSpacing?: boolean;
@@ -20,7 +25,7 @@ function InterViewTemplate({
 }: PropsWithChildren<InterViewTemplateProps>) {
   return (
     <>
-      <InterViewTemplateHead {...headerContent} />
+      {/* <InterViewTemplateHead {...headerContent} /> */}
 
       <Container.Article enableProseSpacing={enableProseSpacing} className={className}>
         <InterViewHeader {...headerContent} />
@@ -32,6 +37,21 @@ function InterViewTemplate({
 }
 
 export default InterViewTemplate;
+
+export function InterViewClientTemplate({
+  headerContent,
+  clientContent,
+}: {
+  headerContent: ClientHeader;
+  clientContent: InterViewClientContentProps;
+}) {
+  return (
+    <div className='w-full'>
+      <InterViewClientHeader {...headerContent} />
+      <InterViewClientContent {...clientContent} />
+    </div>
+  );
+}
 
 function InterViewTemplateHead({ title, description }: InterViewTemplateProps) {
   return (

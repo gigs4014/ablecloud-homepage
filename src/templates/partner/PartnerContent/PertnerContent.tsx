@@ -10,25 +10,28 @@ import PartnerContentLogoBox from './PartnerContentLogoBox';
 
 export interface PartnerContentProps extends BaseComponentProps {
   title?: ReactNode;
+  titleClassName?: string;
   description?: ReactNode;
 }
 
 const PartnerContent = memo<PropsWithChildren<PartnerContentProps>>(
-  ({ title, description, className, children }) => {
+  ({ title, description, className, children, titleClassName }) => {
     return (
       <section
-        className={cls`group relative flex w-full flex-col items-center overflow-hidden pb-16 ${className}`}>
+        className={cls`not-prose group relative flex w-full flex-col items-center overflow-hidden pb-8 ${
+          className ? className : 'text-[#444444]'
+        }`}>
         <Container.PageWidth>
           <header className='flex flex-col items-center px-8 text-center'>
             {typeof title === 'string' ? (
-              <p className={'m-0 mb-[25px] p-0 text-[30px] font-[500] leading-[43.44px]'}>
+              <p className={cls`text-[30px] font-[500] leading-[43.44px] ${titleClassName}`}>
                 {title}
               </p>
             ) : (
               title
             )}
             {typeof description === 'string' ? (
-              <p className='m-0 mb-[25px] max-w-[960px] p-0 text-[16px] font-[400] leading-[23.17px]'>
+              <p className='mb-[30px] max-w-[960px] whitespace-pre-line p-0 text-[16px] font-[400] leading-[23.17px]'>
                 {description}
               </p>
             ) : (

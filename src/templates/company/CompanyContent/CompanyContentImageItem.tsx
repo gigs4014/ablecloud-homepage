@@ -13,9 +13,9 @@ export interface CompanyContentImageItemProps extends BaseComponentProps {
 const CompanyContentImageItem = memo(
   ({ containerClassName, title, image }: CompanyContentImageItemProps) => {
     return (
-      <div className={`bg-none pt-[35px] pb-[58px] text-center ${containerClassName}`}>
+      <div className={`bg-none px-4 pt-8 text-center ${containerClassName}`}>
         <div className='flex h-[257px] items-center justify-center'>{image}</div>
-        <p className='mt-[60px] pt-[12px] text-[18px] font-[400] leading-[26.06px]'>{title}</p>
+        <p className='pt-20 text-[18px] font-[400] leading-[26.06px]'>{title}</p>
       </div>
     );
   },

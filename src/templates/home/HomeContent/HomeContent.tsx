@@ -17,11 +17,13 @@ const HomeContent = memo<PropsWithChildren<HomeContentProps>>(
   ({ title, description, className, children }) => {
     return (
       <section
-        className={cls`group relative flex w-full flex-col items-center overflow-hidden pb-16 ${className}`}>
-        <Container.PageWidth className='items-center'>
-          <header className='flex max-w-[100vw] flex-col items-center px-8 text-center'>
+        className={cls`not-prose group relative w-full flex-col items-center overflow-hidden pb-8 ${
+          className ? className : 'text-[#444444] '
+        }`}>
+        <Container.PageWidth className='w-full max-w-page-full items-center '>
+          <header className='flex flex-col items-center px-8 text-center'>
             {typeof title === 'string' ? (
-              <p className={'m-0 mb-[25px] p-0 text-[30px] font-[500] leading-[43.44px]'}>
+              <p className={'m-0 mb-[35px] p-0 text-[30px] font-[500] leading-[43.44px]'}>
                 {title}
               </p>
             ) : (
@@ -35,7 +37,6 @@ const HomeContent = memo<PropsWithChildren<HomeContentProps>>(
               description
             )}
           </header>
-
           {children}
         </Container.PageWidth>
       </section>
