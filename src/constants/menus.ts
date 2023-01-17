@@ -208,11 +208,9 @@ export const menuItems: Array<HeaderMenuItem> = [
     subMenuItems: [
       {
         label: 'Blog',
-        href: '/blog',
       },
       {
         label: 'Docs',
-        href: '/blog',
       },
     ],
   },

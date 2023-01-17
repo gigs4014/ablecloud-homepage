@@ -24,7 +24,7 @@ export default function DescriptionCard({
   return (
     <Container.Card
       className={`m-auto min-h-[311px] w-full pt-[20px] pb-[58px] text-center shadow-none ${containerClassName}`}
-      hoverBehavoir={hoverBehavoir}>
+      hoverBehavior={hoverBehavoir}>
       {image && <div className='m-auto flex max-w-[150px]'>{image}</div>}
 
       <div className={'pt-[66px]'}>
