@@ -92,17 +92,17 @@ export default function PartnersPage() {
           </div>
         </PartnerContent>
         <PartnerContent
-          className={'bg-backgroudGray text-[#444444]'}
+          className={'bg-backgroundGray text-[#444444]'}
           title='함께하는 파트너'
           description={`현재 에이블클라우드와 함께하고 있는 파트너 입니다.`}>
           <div className='flex w-full flex-row items-center justify-center gap-[20px]'>
             <div className='lg:hidden'>
               <label htmlFor='tabs' className='sr-only'>
-                Select your category
+                Select your category // this is correct
               </label>
               <select
                 id='tabs'
-                className='block w-full min-w-[290px] rounded-lg border border-gray-300 bg-gray-50 p-2.5 px-2 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500  md:min-w-[470px] xsm:min-w-[370px] '
+                className='block w-full min-w-[290px] rounded-lg border border-gray-300 bg-gray-50 p-2.5 px-2 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500 xsm:min-w-[370px] md:min-w-[470px]'
                 onChange={({ target: { value } }) => {
                   setActiveTabIndex(Number(value));
                 }}>
