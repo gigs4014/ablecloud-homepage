@@ -201,7 +201,7 @@ export const menuItems: Array<HeaderMenuItem> = [
   },
   {
     label: '제품문의',
-    href: '/company/contact',
+    href: '/company/contact/inquire',
   },
   {
     label: '자료',
