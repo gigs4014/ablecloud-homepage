@@ -203,18 +203,6 @@ export const menuItems: Array<HeaderMenuItem> = [
     label: '제품문의',
     href: '/company/contact/inquire',
   },
-  {
-    label: '자료',
-    subMenuItems: [
-      {
-        label: 'Blog',
-      },
-      {
-        label: 'Docs',
-        href: 'https://docs.ablecloud.io/',
-      },
-    ],
-  },
 ];
 
 export const footerMenus = [
