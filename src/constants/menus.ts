@@ -211,6 +211,7 @@ export const menuItems: Array<HeaderMenuItem> = [
       },
       {
         label: 'Docs',
+        href: 'https://docs.ablecloud.io/',
       },
     ],
   },
