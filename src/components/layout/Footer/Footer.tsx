@@ -74,7 +74,7 @@ export default function Footer() {
       {/* simplified logo */}
       {/* copyright */}
       {/* social logos */}
-      <FooterSite />
+      {/* <FooterSite /> */}
       <FooterInformation />
       {/* pages not in header */}
     </footer>

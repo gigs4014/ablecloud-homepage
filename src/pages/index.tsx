@@ -313,19 +313,18 @@ export default function HomePage() {
         </HomeContent>
         <HomeContent
           className={'bg-backgroundBlue pb-0 text-white'}
-          title='ABLESTACK 하드웨어 플랫폼'
+          title='I Station, 가상화 데스크톱 결합 HCI 어플라이언스'
           description={
-            <p className='max-w-page mt-3.5 w-full text-[16px] font-[400] leading-[23.17px] '>
-              ABLESTACK은 소프트웨어 HCI 플랫폼으로, 고객사에 성공적으로 HCI 기반 클라우드 환경을
-              구성하기 위해서는 ABLESTACK이 설치되어 실행되는 서버 하드웨어가 필요합니다.
-              ABLESTACK은 자사 어플라이언스와 함께 다양한 OEM 파트너, 서드파티 서버 공급업체의 서버
-              플랫폼과 호환됩니다.
+            <p className='mt-3.5 w-full max-w-[900px] text-[16px] font-[400] leading-[23.17px] '>
+              Isation은 통합 하이퍼 컨버지드 인프라(Hyper-Converged Infrastucture)로서, 컴퓨팅,
+              스토리지, 네트워크 기능을 단일 어플라이언스로 통합하여 쉽고 빠른 클라우드 가상화 구축
+              환경을 제공합니다.
             </p>
           }>
           <div className='flex justify-center'>
             <CustomLink href='/stories' hoverBehavior='none'>
               <Button bordered className='mt-12 bg-white'>
-                어플라이언스 보러가기
+                Isation 보러가기
               </Button>
             </CustomLink>
           </div>
