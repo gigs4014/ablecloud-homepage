@@ -36,17 +36,7 @@ const headerContents = (fontSize: string): HomeHeaderProps[] => [
           에이블클라우드의 국산 HCI 솔루션 ‘ABLESTACK’ 그리고 Eco System 솔루션 소개 세미나
         </p>
         <br />
-        <p className='m-auto w-full max-w-[750px]'>
-          빠르게 변화하는 IT인프라, 에이블클라우드는 이러한 변화속에서 대응할 수 있도록 본 행사를
-          개최합니다. Cloud Innovation 2023은 차세대 디지털 전환에 대비한 솔루션을 소개합니다. 본
-          행사를 통해 파트너분들을 위한 다양한 솔루션 및 제품에 대한 유용한 정보를 얻어가시길
-          바랍니다.
-        </p>
-        <br />
-        <br />
-        <p className='m-auto w-full max-w-[410px]'>
-          2022년 11월 03일(목) 포포인츠 바이 쉐라톤 구로 - G볼룸 오후 2시 - 오후 5시
-        </p>
+        <p> Cloud Innovation 2023에 참석해주신 모든 분들께 감사의 인사를 드립니다.</p>
       </div>
     ),
     bgImage: 'bg-home-header-bg-3',
@@ -55,8 +45,7 @@ const headerContents = (fontSize: string): HomeHeaderProps[] => [
         href={'https://www.ablestor.com/_app/view/landing/review/cloud_innovation.php'}
         passHref>
         <a target={'_blank'}>
-          <Button
-            className={'border-[1px] border-[white] bg-transparent text-[white] hover:scale-102'}>
+          <Button bordered style={{ color: '#ffffff', border: '1px solid white' }}>
             행사 자세히 알아보기
           </Button>
         </a>
