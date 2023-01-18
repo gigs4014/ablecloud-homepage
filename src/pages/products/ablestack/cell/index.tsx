@@ -10,6 +10,7 @@ import {
 } from '@/templates';
 
 import Logo_Article_2_1 from '@/public/images/new/product/ablestack/ablestackCell/article_2_1.png';
+import Logo_Article_3_1 from '@/public/images/new/product/ablestack/ablestackCell/article_3_1.png';
 import Logo_Article_3_2 from '@/public/images/new/product/ablestack/ablestackCell/article_3_2.svg';
 import Logo_Article_3_3 from '@/public/images/new/product/ablestack/ablestackCell/article_3_3.svg';
 import Logo_Article_3_4 from '@/public/images/new/product/ablestack/ablestackCell/article_3_4.svg';
@@ -17,7 +18,6 @@ import Logo_Article_4_5 from '@/public/images/new/product/ablestack/ablestackCel
 import Logo_Article_4_6 from '@/public/images/new/product/ablestack/ablestackCell/article_4_6.svg';
 import Logo_Article_4_7 from '@/public/images/new/product/ablestack/ablestackCell/article_4_7.svg';
 import Logo_Article_4_8 from '@/public/images/new/product/ablestack/ablestackCell/article_4_8.svg';
-import Logo_Article_3_1 from '@/public/images/new/product/ablestack/ablestackGlue/article_3_1.png';
 
 const headerContent: ProductHeaderProps = {
   title: 'Cell 가상화',

@@ -125,28 +125,28 @@ export default function AblestackBlockPage() {
         <ProductContent title='관련 솔루션'>
           <div className='mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2'>
             <ProductContent.RowSummaryCard
-              title={'비즈니스 연속성'}
-              description={`내장된 스냅샷 백업 및 복구, 재해복구 및 써드파티
-백업/복구 기능을 통해 비즈니스 연속성을 보장합니다.`}
+              title={'서버 가상화'}
+              description={`블록스토리지는 가상머신을 위한 기본적인 디스크 
+              형식으로 고성능의 IO를 제공합니다.`}
               image={<SvgIcon Svg={Logo_Article_4_1} />}
             />
             <ProductContent.RowSummaryCard
-              title={'비즈니스 크리티컬 앱'}
-              description={`정책 기반 가상자원 관리 및 부하분산 기능을 통해
-              기업의 중요 애플리케이션을 안정적으로 실행합니다.`}
+              title={'영상 감시'}
+              description={`최신 Kernel 을 사용한 블록 디스크는 지속적인 
+              영상 데이터 저장 및 조회 환경에 최적의 성능을
+              제공합니다. `}
               image={<SvgIcon Svg={Logo_Article_4_2} />}
             />
             <ProductContent.RowSummaryCard
-              title={'IT 운영'}
-              description={`일원화된 자원관리 및 네트워크 관리를 통해 단일 환경에서
-              모든 인프라를 관리하고 통제할 수 있습니다.`}
+              title={'엣지컴퓨팅'}
+              description={`권역별로 구성된 소형 HCI의 경우에도 높은 성능을
+              제공하여 안정적인 정보 수집/정제가 가능합니다.`}
               image={<SvgIcon Svg={Logo_Article_4_3} />}
             />
             <ProductContent.RowSummaryCard
-              title={'개발 및 테스트'}
-              description={`다양한 가상머신 및 개발환경을 배포하여 사용할 수 있어
-              개발 및 테스트, 운영 환경 통합을 위한 최적의 환경을
-              제공합니다. `}
+              title={'인공지능/머신러닝'}
+              description={`효율적이고 고성능의 연산이 필요한 분석 환경에서
+              높은 IO 성능을 통해 안정적 분석/학습을 보장합니다.`}
               image={<SvgIcon Svg={Logo_Article_4_4} />}
             />
           </div>

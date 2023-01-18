@@ -10,11 +10,11 @@ import {
 } from '@/templates';
 
 import Logo_Article_2_1 from '@/public/images/new/product/ablestack/ablestackGenie/article_2_1.png';
+import Logo_Article_3_1 from '@/public/images/new/product/ablestack/ablestackGenie/article_3_1.png';
 import Logo_Article_4_1 from '@/public/images/new/product/ablestack/ablestackGenie/article_4_1.svg';
 import Logo_Article_4_2 from '@/public/images/new/product/ablestack/ablestackGenie/article_4_2.svg';
 import Logo_Article_4_3 from '@/public/images/new/product/ablestack/ablestackGenie/article_4_3.svg';
 import Logo_Article_4_4 from '@/public/images/new/product/ablestack/ablestackGenie/article_4_4.svg';
-import Logo_Article_3_1 from '@/public/images/new/product/ablestack/ablestackGlue/article_3_1.png';
 
 const headerContent: ProductHeaderProps = {
   title: 'Genie 셀프서비스/자동화',
