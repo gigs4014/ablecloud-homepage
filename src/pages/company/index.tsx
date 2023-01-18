@@ -120,7 +120,7 @@ export default function CompanyPage() {
             <div className='mb-[20px] flex w-full items-center justify-between'>
               <p className={'pr-3 pl-8 text-[24px] font-[700] leading-[34.75px] xsm:pl-16'}>2021</p>
               <div className='h-[1px] w-full bg-[#444]'></div>
-              <p className={'pl-3 pr-8 text-[24px] font-[700] leading-[34.75px] xsm:pr-16'}>2022</p>
+              <p className={'pl-3 pr-8 text-[24px] font-[700] leading-[34.75px] xsm:pr-16'}>2023</p>
             </div>
             <div className={'mb-[20px] flex justify-between'}>
               <p className={'pl-8 text-[18px] font-[400] leading-[26.06px] xsm:pl-16'}>
@@ -135,7 +135,7 @@ export default function CompanyPage() {
                 21
               </p>
               <div className='my-[16px] flex justify-end whitespace-nowrap pr-8 xsm:pr-16'>
-                <p className={'text-[140px] font-[400] leading-[162.4px] text-primary'}>1</p>
+                <p className={'text-[140px] font-[400] leading-[162.4px] text-primary'}>2</p>
                 <p className='ml-[20px] mt-[90px]'>년</p>
               </div>
             </div>
