@@ -5,7 +5,7 @@ export default function ContactPage({ title, type }: { title: string; type: stri
   return (
     <>
       <Container.Article enableProseSpacing={true}>
-        <Container.PageWidth separateWithPeer invertBg className='text-center'>
+        <Container.PageWidth separateWithPeer invertBg className=' mt-40 px-4 text-center'>
           <h1>{title}</h1>
 
           <p>
@@ -40,7 +40,7 @@ export default function ContactPage({ title, type }: { title: string; type: stri
           </div>
         </Container.PageWidth>
 
-        <Container.PageWidth separateWithPeer invertBg className='text-center'>
+        <Container.PageWidth separateWithPeer invertBg className='px-4 text-center'>
           <h2>온라인 도큐먼트 센터</h2>
 
           <p>
@@ -67,7 +67,7 @@ function ContactForm({ type }: { type: string }) {
       noValidate
       action='https://formspree.io/f/mzbygdrk'
       method='post'
-      className='flex flex-col space-y-8'>
+      className='flex flex-col space-y-8 px-4'>
       <input type='hidden' name='_subject' value='새로운 기술지원 요청이 있습니다.' />
       <input type='text' name='_gotcha' className='hidden' />
 
@@ -125,7 +125,7 @@ function ContactForm({ type }: { type: string }) {
       </div>
 
       <div className='self-center'>
-        <Button type='submit' id='sendMessageButton'>
+        <Button type='submit' className='border-2  text-[#444]' id='sendMessageButton'>
           {type} 이메일 보내기
         </Button>
       </div>
