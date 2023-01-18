@@ -9,7 +9,7 @@ import {
   ProductTemplate,
 } from '@/templates';
 
-import Logo_Article_2_1 from '@/public/images/new/product/ablestack/ablestackCell/article_2_1.png';
+import Logo_Article_2_1 from '@/public/images/new/product/ablestack/ablestackMold/article_2_1.png';
 import Logo_Article_3_1 from '@/public/images/new/product/ablestack/ablestackMold/article_3_1.png';
 import Logo_Article_4_1 from '@/public/images/new/product/ablestack/ablestackMold/article_4_1.svg';
 import Logo_Article_4_2 from '@/public/images/new/product/ablestack/ablestackMold/article_4_2.svg';
