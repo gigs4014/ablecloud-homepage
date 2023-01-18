@@ -61,3 +61,5 @@ declare module '*.bmp' {
 
   export default content;
 }
+
+declare module '*.mp4';
