@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { ReactNode } from '@mdx-js/react/lib';
 import { NextSeo } from 'next-seo';
 
-import { Button, CustomLink, CustomSlider } from '@/components/common';
+import { Button, CustomLink } from '@/components/common';
 import { CommonDemoContent, HomeContent, HomeHeaderProps, HomeTemplate } from '@/templates';
 
 import Logo_Article_2_1 from '@/public/images/new/home/article_2_1.svg';
@@ -277,20 +277,18 @@ export default function HomePage() {
           title='국내 최초의 HCI, ABLESTACK을 선택한 기업들'
           description={
             <p className='m-0 mb-[50px] p-0 text-[16px] font-[400] leading-[23.17px]'>
-              에이블스택과 함께하는 파트너 입니다.
+              에이블스택을 사용 후 혁신을 이룩한 기업들 입니다.
             </p>
           }>
-          <div className={'w-full'}>
-            <CustomSlider settingsOverrides={imageSliderSettings}>
-              <Logo_Article_4_1 />
-              <Logo_Article_4_2 />
-              <Logo_Article_4_3 />
-              <Logo_Article_4_4 />
-              <Logo_Article_4_5 />
-            </CustomSlider>
+          <div className={'grid grid-cols-2 gap-12 sm:grid-cols-3 lg:grid-cols-5'}>
+            <Logo_Article_4_1 />
+            <Logo_Article_4_2 />
+            <Logo_Article_4_3 />
+            <Logo_Article_4_4 />
+            <Logo_Article_4_5 />
           </div>
           <div className='flex justify-center'>
-            <CustomLink href='/stories' hoverBehavior='none'>
+            <CustomLink href='/interview' hoverBehavior='none'>
               <Button solid className='mt-12'>
                 파트너 확인하기
               </Button>
