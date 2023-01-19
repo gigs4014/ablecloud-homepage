@@ -320,7 +320,7 @@ export default function HomePage() {
             </p>
           }>
           <div className='flex justify-center'>
-            <CustomLink href='/stories' hoverBehavior='none'>
+            <CustomLink hoverBehavior='none'>
               <Button bordered className='mt-12 bg-white'>
                 Isation 보러가기
               </Button>
