@@ -96,7 +96,7 @@ export default function PartnersPage() {
           title='함께하는 파트너'
           description={`현재 에이블클라우드와 함께하고 있는 파트너 입니다.`}>
           <div className='flex w-full flex-row items-center justify-center gap-[20px]'>
-            <div className='lg:hidden'>
+            {/* <div className='lg:hidden'>
               <label htmlFor='tabs' className='sr-only'>
                 Select your category // this is correct
               </label>
@@ -112,24 +112,21 @@ export default function PartnersPage() {
                   </option>
                 ))}
               </select>
-            </div>
-            <ul className={'-mb-px hidden text-center text-sm font-medium lg:flex'}>
+            </div> */}
+            {/* <ul className={'-mb-px hidden text-center text-sm font-medium xl:flex'}>
               {partnerItems.map((item, key) => (
                 <li className={'mr-2'} role={'presentation'} key={key}>
                   <button
                     id={`${key}-tab`}
-                    className={`h-[48px] w-[240px] rounded-lg border-neutral-300 ${
-                      activeTabIndex === key
-                        ? `border-0 bg-[#2151A2] text-white`
-                        : `border-1 bg-white`
-                    }`}
-                    //type={'button'} button에 css 가 입혀져 있어서 위 className 적용 X
-                    onClick={() => setActiveTabIndex(key)}>
+                    className={`h-[48px] w-[220px] rounded-lg border-0 
+                        border-neutral-300 ${item.backgroundColor} ${item.textColor}`}
+                    // onClick={() => setActiveTabIndex(key)}
+                  >
                     {item.title}
                   </button>
                 </li>
               ))}
-            </ul>
+            </ul> */}
           </div>
           <div className='mt-8 grid grid-cols-1 gap-[5px] px-4 sm:grid-cols-2 lg:grid-cols-4'>
             <>

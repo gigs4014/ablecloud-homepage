@@ -6,7 +6,7 @@ import { BaseComponentProps } from '@/types';
 
 import { ActionCard } from '@/components/common';
 
-import Logo_Article_5_8 from '@/public/images/new/home/article_5_8.png';
+import Logo_Article_5_4 from '@/public/images/new/home/article_5_4.png';
 import Logo_Article_5_9 from '@/public/images/new/home/article_5_9.png';
 import Logo_Article_5_10 from '@/public/images/new/home/article_5_10.png';
 
@@ -14,13 +14,21 @@ const ProductsDemoContent = memo<BaseComponentProps>(({ className }) => {
   return (
     <div
       className={`mx-4 grid max-w-page-full grid-cols-1 gap-[40px] py-[43.5px] md:grid-cols-2 lg:grid-cols-3 ${className}`}>
-      <ActionCard
+      {/* <ActionCard
         hoverBehavior={'scale'}
         title={'기술노트'}
         image={<Image src={Logo_Article_5_8} />}
         description={'에이블스택을 좀더 자세하게 설명한 기술개요'}
         buttonTitle={'지금 시작하기'}
         href={'/'}
+      /> */}
+      <ActionCard
+        hoverBehavior={'scale'}
+        title={'Case Study'}
+        image={<Image src={Logo_Article_5_4} />}
+        description={'에이블스택을 최대로 활용하는 파트너사들의 케이스를 확인해보세요.'}
+        buttonTitle={'지금 시작하기'}
+        href={'/interview'}
       />
       <ActionCard
         hoverBehavior={'scale'}

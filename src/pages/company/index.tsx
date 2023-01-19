@@ -158,10 +158,10 @@ export default function CompanyPage() {
           <div className={'grid grid-cols-2 gap-[16px] sm:grid-cols-3 lg:grid-cols-6'}>
             <CompanyContent.SmallCard
               className={`bg-[#83D1FF]`}
-              value={'1'}
+              value={'3'}
               title={'Major Upgrade'}
             />
-            <CompanyContent.SmallCard className={`bg-[#3CA3FF]`} value={'5'} title={'파트너'} />
+            <CompanyContent.SmallCard className={`bg-[#3CA3FF]`} value={'13'} title={'파트너'} />
             <CompanyContent.SmallCard className={`bg-[#3281C4]`} value={'20'} title={'고객'} />
             <CompanyContent.SmallCard className={`bg-[#104C95]`} value={'40'} title={'호스트'} />
             <CompanyContent.SmallCard className={`bg-[#12426B]`} value={'100'} title={'가상머신'} />
