@@ -68,11 +68,11 @@ export const menuItems: Array<HeaderMenuItem> = [
       },
       {
         label: 'Core',
-        href: 'products/ablestack',
+        href: '/products/ablestack',
       },
       {
         label: 'management',
-        href: 'products/ablestack',
+        href: '/products/ablestack',
       },
       {
         label: 'AbleStack 어플라이언스',
@@ -163,19 +163,16 @@ export const menuItems: Array<HeaderMenuItem> = [
       },
       {
         label: '웹 애플리케이션',
-        href: '/solutions/webapp',
       },
       {
         label: '빅데이터',
-        href: '/solutions/bigdata',
       },
       {
         label: '영상감시',
-        href: '/solutions/monitoring',
+        href: '/solutions/video-surveillance',
       },
       {
         label: 'IoT',
-        href: '/solutions/iot',
       },
       {
         label: '엣지 컴퓨팅',
@@ -183,11 +180,10 @@ export const menuItems: Array<HeaderMenuItem> = [
       },
       {
         label: '인공지능',
-        href: '/solutions/ai',
+        href: '/solutions/artificial-intelligence-and-machine-learning',
       },
       {
         label: '최종 사용자 컴퓨팅',
-        href: '/solutions/euc',
       },
     ],
   },
@@ -202,18 +198,6 @@ export const menuItems: Array<HeaderMenuItem> = [
   {
     label: '제품문의',
     href: '/company/contact/inquire',
-  },
-  {
-    label: '자료',
-    subMenuItems: [
-      {
-        label: 'Blog',
-      },
-      {
-        label: 'Docs',
-        href: 'https://docs.ablecloud.io/',
-      },
-    ],
   },
 ];
 

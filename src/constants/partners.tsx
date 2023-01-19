@@ -14,10 +14,13 @@ import Logo_Article_4_11 from '@/public/images/new/partner/article_4_11.svg';
 import Logo_Article_4_12 from '@/public/images/new/partner/article_4_12.svg';
 import Logo_Article_4_14 from '@/public/images/new/partner/article_4_14.svg';
 import Logo_Article_4_15 from '@/public/images/new/partner/article_4_15.svg';
+import Logo_Article_4_17 from '@/public/images/new/partner/article_4_17.svg';
 
 interface BaseTabItem {
   title: string;
   subItems: BaseSubItems[];
+  textColor?: string;
+  backgroundColor?: string;
 }
 
 interface BaseSubItems {
@@ -28,6 +31,8 @@ interface BaseSubItems {
 export const partnerItems: Array<BaseTabItem> = [
   {
     title: '전체',
+    textColor: 'text-[white]',
+    backgroundColor: 'bg-[#2151A2]',
     subItems: [
       {
         name: '(주)에이블스토어',
@@ -53,7 +58,7 @@ export const partnerItems: Array<BaseTabItem> = [
         name: '(주)이노티움',
         src: <Logo_Article_4_6 />,
       },
-      { name: '(주)한길TIS', src: '' },
+      { name: '(주)티쓰리큐', src: <Logo_Article_4_17 /> },
       {
         name: '(주)이노뎁',
         src: <Logo_Article_4_7 />,
@@ -93,114 +98,40 @@ export const partnerItems: Array<BaseTabItem> = [
     ],
   },
   {
-    title: '판매/기술지원',
+    title: '플래티늄',
+    textColor: 'text-[black]',
+    backgroundColor: 'bg-gradient-to-r from-sky-500 to-indigo-500',
     subItems: [
       {
         name: '(주)에이블스토어',
         src: <Logo_Article_4_5 />,
-      },
-      {
-        name: '(주)가시',
-        src: <Logo_Article_4_4 />,
-      },
-      {
-        name: '(주)이노뎁',
-        src: <Logo_Article_4_7 />,
-      },
-      {
-        name: '(주)틸론',
-        src: <Logo_Article_4_9 />,
-      },
-      {
-        name: '(주)유니와이드',
-        src: <Logo_Article_4_10 />,
-      },
-      {
-        name: '(주)KTNF',
-        src: <Logo_Article_4_11 />,
-      },
-      {
-        name: '(주)오우션테크놀러지',
-        src: <Logo_Article_4_12 />,
-      },
-      {
-        name: '(주)이레솔루션',
-        src: <Logo_Article_4_15 />,
-      },
-      {
-        name: '(주)대원CTS',
-        src: <Logo_Article_4_14 />,
       },
     ],
   },
   {
-    title: '솔루션',
+    title: '골드',
     subItems: [
       {
         name: '(주)에이블스토어',
         src: <Logo_Article_4_5 />,
-      },
-
-      {
-        name: '(주)조인트리',
-        src: <Logo_Article_4_1 />,
-      },
-      {
-        name: '(주)지오멕스소프트',
-        src: <Logo_Article_4_3 />,
-      },
-      {
-        name: '(주)이노티움',
-        src: <Logo_Article_4_6 />,
-      },
-      {
-        name: '(주)이노뎁',
-        src: <Logo_Article_4_7 />,
-      },
-      {
-        name: '(주)이든티앤에스',
-        src: <Logo_Article_4_8 />,
-      },
-      {
-        name: '(주)틸론',
-        src: <Logo_Article_4_9 />,
-      },
-      {
-        name: '(주)대원CTS',
-        src: <Logo_Article_4_14 />,
       },
     ],
   },
   {
-    title: '하드웨어',
+    title: '실버',
     subItems: [
       {
         name: '(주)에이블스토어',
         src: <Logo_Article_4_5 />,
       },
+    ],
+  },
+  {
+    title: 'VAD',
+    subItems: [
       {
-        name: '(주)지엔텔',
-        src: <Logo_Article_4_2 />,
-      },
-      {
-        name: '(주)유니와이드',
-        src: <Logo_Article_4_10 />,
-      },
-      {
-        name: '(주)KTNF',
-        src: <Logo_Article_4_11 />,
-      },
-      {
-        name: '(주)오우션테크놀러지',
-        src: <Logo_Article_4_12 />,
-      },
-      {
-        name: '(주)이레솔루션',
-        src: <Logo_Article_4_15 />,
-      },
-      {
-        name: '(주)대원CTS',
-        src: <Logo_Article_4_14 />,
+        name: '(주)에이블스토어',
+        src: <Logo_Article_4_5 />,
       },
     ],
   },

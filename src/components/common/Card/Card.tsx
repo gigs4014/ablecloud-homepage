@@ -13,6 +13,7 @@ interface CardProps extends BaseComponentProps {
   containerClassName?: string;
   description?: ReactNode;
   linkText?: ReactNode;
+  imageClassName?: string;
   hoverBehavior?: 'none' | 'scale';
 }
 
@@ -143,15 +144,16 @@ export function RowSmallCard({
   image,
   description,
   containerClassName,
-  hoverBehavior: hoverBehavior = 'scale',
+  imageClassName,
+  hoverBehavior: hoverBehavior = 'none',
 }: CardProps) {
   return (
     <Container.Card
       hoverBehavior={hoverBehavior}
       className={`flex w-full items-center justify-start border-0.5 shadow-none ${containerClassName}`}>
-      {image && <div className='flex items-center justify-center'>{image}</div>}
+      {image && <div className={`flex items-center justify-center ${imageClassName}`}>{image}</div>}
 
-      <div className={'px-1 text-[14px] font-[500] leading-[20.27px]'}>
+      <div className={' px-1 text-[14px] font-[500] leading-[20.27px]'}>
         <div>{title}</div>
         {description && <div>{description}</div>}
       </div>

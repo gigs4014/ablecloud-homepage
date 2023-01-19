@@ -1,11 +1,9 @@
 import { useEffect, useState } from 'react';
 
-import Link from 'next/link';
-
 import { ReactNode } from '@mdx-js/react/lib';
 import { NextSeo } from 'next-seo';
 
-import { Button, CustomLink, CustomSlider } from '@/components/common';
+import { Button, CustomLink } from '@/components/common';
 import { CommonDemoContent, HomeContent, HomeHeaderProps, HomeTemplate } from '@/templates';
 
 import Logo_Article_2_1 from '@/public/images/new/home/article_2_1.svg';
@@ -21,6 +19,8 @@ import Logo_Article_4_3 from '@/public/images/new/home/article_4_3.svg';
 import Logo_Article_4_4 from '@/public/images/new/home/article_4_4.svg';
 import Logo_Article_4_5 from '@/public/images/new/home/article_4_5.svg';
 
+import Video from '../../public/videos/data.mp4';
+
 interface LogoData {
   title: string;
   src: ReactNode;
@@ -29,28 +29,13 @@ interface LogoData {
 
 const headerContents = (fontSize: string): HomeHeaderProps[] => [
   {
-    title: 'Cloud Innovation 2023',
+    title: 'Cloud Data Center, Big Data',
     description: (
       <div className={`m-0 p-0 ${fontSize} font-[400] leading-[26.06px]`}>
-        <p className='m-auto w-full max-w-[350px]'>
-          에이블클라우드의 국산 HCI 솔루션 ‘ABLESTACK’ 그리고 Eco System 솔루션 소개 세미나
-        </p>
-        <br />
-        <p> Cloud Innovation 2023에 참석해주신 모든 분들께 감사의 인사를 드립니다.</p>
+        클라우드 데이터센터 구축을 위한 통합 HCI 솔루션 ABLESTACK
       </div>
     ),
-    bgImage: 'bg-home-header-bg-3',
-    headerExtra: (
-      <Link
-        href={'https://www.ablestor.com/_app/view/landing/review/cloud_innovation.php'}
-        passHref>
-        <a target={'_blank'}>
-          <Button bordered style={{ color: '#ffffff', border: '1px solid white' }}>
-            행사 자세히 알아보기
-          </Button>
-        </a>
-      </Link>
-    ),
+    bgVideo: Video,
   },
   // {
   //   title: '',
@@ -224,7 +209,7 @@ export default function HomePage() {
             </p>
           }>
           <div className='mt-8 grid w-full max-w-page-full grid-cols-1 gap-6 px-4 md:grid-cols-2 lg:grid-cols-3'>
-            <CustomLink href={'/'}>
+            <CustomLink href={'/company'}>
               <HomeContent.ItemGrid
                 containerClassName='border-borderGrayColor border-1'
                 title='단일 클라우드 플랫폼'
@@ -233,7 +218,7 @@ export default function HomePage() {
                 hoverBehavior={'scale'}
               />
             </CustomLink>
-            <CustomLink href={'/'}>
+            <CustomLink href={'/products/ablestack'}>
               <HomeContent.ItemGrid
                 containerClassName='border-borderGrayColor border-1'
                 title='웹기반 통합 관리 플랫폼'
@@ -242,7 +227,7 @@ export default function HomePage() {
                 hoverBehavior={'scale'}
               />
             </CustomLink>
-            <CustomLink href={'/'}>
+            <CustomLink href={'/solutions'}>
               <HomeContent.ItemGrid
                 containerClassName='border-borderGrayColor border-1'
                 title='새로운 개념의 데이터센터'
@@ -292,20 +277,18 @@ export default function HomePage() {
           title='국내 최초의 HCI, ABLESTACK을 선택한 기업들'
           description={
             <p className='m-0 mb-[50px] p-0 text-[16px] font-[400] leading-[23.17px]'>
-              에이블스택과 함께하는 파트너 입니다.
+              에이블스택을 사용 후 혁신을 이룩한 기업들 입니다.
             </p>
           }>
-          <div className={'w-full'}>
-            <CustomSlider settingsOverrides={imageSliderSettings}>
-              <Logo_Article_4_1 />
-              <Logo_Article_4_2 />
-              <Logo_Article_4_3 />
-              <Logo_Article_4_4 />
-              <Logo_Article_4_5 />
-            </CustomSlider>
+          <div className={'grid grid-cols-2 gap-12 sm:grid-cols-3 lg:grid-cols-5'}>
+            <Logo_Article_4_1 />
+            <Logo_Article_4_2 />
+            <Logo_Article_4_3 />
+            <Logo_Article_4_4 />
+            <Logo_Article_4_5 />
           </div>
           <div className='flex justify-center'>
-            <CustomLink href='/stories' hoverBehavior='none'>
+            <CustomLink href='/interview' hoverBehavior='none'>
               <Button solid className='mt-12'>
                 파트너 확인하기
               </Button>
@@ -328,19 +311,18 @@ export default function HomePage() {
         </HomeContent>
         <HomeContent
           className={'bg-backgroundBlue pb-0 text-white'}
-          title='ABLESTACK 하드웨어 플랫폼'
+          title='I Station, 가상화 데스크톱 결합 HCI 어플라이언스'
           description={
-            <p className='max-w-page mt-3.5 w-full text-[16px] font-[400] leading-[23.17px] '>
-              ABLESTACK은 소프트웨어 HCI 플랫폼으로, 고객사에 성공적으로 HCI 기반 클라우드 환경을
-              구성하기 위해서는 ABLESTACK이 설치되어 실행되는 서버 하드웨어가 필요합니다.
-              ABLESTACK은 자사 어플라이언스와 함께 다양한 OEM 파트너, 서드파티 서버 공급업체의 서버
-              플랫폼과 호환됩니다.
+            <p className='mt-3.5 w-full max-w-[900px] text-[16px] font-[400] leading-[23.17px] '>
+              Isation은 통합 하이퍼 컨버지드 인프라(Hyper-Converged Infrastucture)로서, 컴퓨팅,
+              스토리지, 네트워크 기능을 단일 어플라이언스로 통합하여 쉽고 빠른 클라우드 가상화 구축
+              환경을 제공합니다.
             </p>
           }>
           <div className='flex justify-center'>
-            <CustomLink href='/stories' hoverBehavior='none'>
+            <CustomLink hoverBehavior='none'>
               <Button bordered className='mt-12 bg-white'>
-                어플라이언스 보러가기
+                Isation 보러가기
               </Button>
             </CustomLink>
           </div>

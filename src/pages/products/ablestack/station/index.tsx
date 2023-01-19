@@ -1,13 +1,10 @@
 import Image from 'next/image';
 
 import { NextSeo } from 'next-seo';
+import { ProductsDemoContent } from 'src/templates/productsContents';
 
-import {
-  CommonDemoContent,
-  ProductContent,
-  ProductHeaderProps,
-  ProductTemplate,
-} from '@/templates';
+import { CustomLink } from '@/components/common';
+import { ProductContent, ProductHeaderProps, ProductTemplate } from '@/templates';
 
 import Logo_Article_2_1 from '@/public/images/new/product/ablestack/ablestackStation/article_2_1.svg';
 import Logo_Article_2_2 from '@/public/images/new/product/ablestack/ablestackStation/article_2_2.svg';
@@ -101,36 +98,48 @@ export default function AblestackStationPage() {
 
         <ProductContent title='관련 솔루션'>
           <div className='mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2'>
-            <ProductContent.RowSummaryCard
-              title={'빅데이터'}
-              description={`자체 배포판 제공으로 효율적인 빅데이터 인프라 및 
+            <CustomLink href='/solutions/big-data-analysis'>
+              <ProductContent.RowSummaryCard
+                title={'빅데이터'}
+                description={`자체 배포판 제공으로 효율적인 빅데이터 인프라 및 
             플랫폼을 제공합니다.`}
-              image={<Logo_Article_4_1 />}
-            />
-            <ProductContent.RowSummaryCard
-              title={'인공지능/머신러닝'}
-              description={`검증된 인공지능, 머신러닝 아키텍처를 기반으로
-            신뢰성 높은 플랫폼을 구성할 수 있습니다. `}
-              image={<Logo_Article_4_2 />}
-            />
+                image={<Logo_Article_4_1 />}
+                hoverBehavior={'scale'}
+              />
+            </CustomLink>
 
-            <ProductContent.RowSummaryCard
-              title={'CI/CD'}
-              description={`배포판 이머징 플랫폼과 이에 적합한 개발환경을 같이
+            <CustomLink href='/solutions/artificial-intelligence-and-machine-learning'>
+              <ProductContent.RowSummaryCard
+                title={'인공지능/머신러닝'}
+                description={`검증된 인공지능, 머신러닝 아키텍처를 기반으로
+            신뢰성 높은 플랫폼을 구성할 수 있습니다. `}
+                image={<Logo_Article_4_2 />}
+                hoverBehavior={'scale'}
+              />
+            </CustomLink>
+            <CustomLink href='/solutions/ci-and-cd'>
+              <ProductContent.RowSummaryCard
+                title={'CI/CD'}
+                description={`배포판 이머징 플랫폼과 이에 적합한 개발환경을 같이
             배포하여 애플리케이션 생산성을 높일 수 있습니다.`}
-              image={<Logo_Article_4_3 />}
-            />
-            <ProductContent.RowSummaryCard
-              title={'영상감시'}
-              description={`영상감시를 위한 다양한 인프라와 SW, 분석 시스템 등을
+                image={<Logo_Article_4_3 />}
+                hoverBehavior={'scale'}
+              />
+            </CustomLink>
+            <CustomLink href='/solutions/video-surveillance'>
+              <ProductContent.RowSummaryCard
+                title={'영상감시'}
+                description={`영상감시를 위한 다양한 인프라와 SW, 분석 시스템 등을
             통합 배포하여 효율성을 높일 수 있습니다. `}
-              image={<Logo_Article_4_4 />}
-            />
+                image={<Logo_Article_4_4 />}
+                hoverBehavior={'scale'}
+              />
+            </CustomLink>
           </div>
         </ProductContent>
 
         <ProductContent className={'bg-backgroudGray text-[#444444]'} title='최신 리소스 살펴보기'>
-          <CommonDemoContent />
+          <ProductsDemoContent />
         </ProductContent>
       </ProductTemplate>
     </>

@@ -30,6 +30,10 @@ import Logo_Article_2_20 from '@/public/images/new/solutions/article_2_20.svg';
 import Logo_Article_2_21 from '@/public/images/new/solutions/article_2_21.svg';
 import Logo_Article_4_1 from '@/public/images/new/solutions/article_4_1.svg';
 import Logo_Article_4_2 from '@/public/images/new/solutions/article_4_2.svg';
+import Logo_Article_4_3 from '@/public/images/new/solutions/article_4_3.svg';
+import Logo_Article_4_4 from '@/public/images/new/solutions/article_4_4.svg';
+import Logo_Article_4_5 from '@/public/images/new/solutions/article_4_5.svg';
+import Logo_Article_4_6 from '@/public/images/new/solutions/article_4_6.svg';
 
 const headerContent: SolutionHeaderProps = {
   title: '솔루션',
@@ -231,25 +235,25 @@ const partners = [
   },
   {
     title: '이노뎁',
-    image: <Logo_Article_4_1 />,
+    image: <Logo_Article_4_3 />,
     description: `VURIX솔루션`,
     href: '/',
   },
   {
     title: '이든티앤에스',
-    image: <Logo_Article_4_1 />,
+    image: <Logo_Article_4_4 />,
     description: `WorkTronics RPA`,
     href: '/',
   },
   {
     title: '지오맥스소프트',
-    image: <Logo_Article_4_2 />,
+    image: <Logo_Article_4_5 />,
     description: `XEUS PLATFORM`,
     href: '/',
   },
   {
     title: '이노티움',
-    image: <Logo_Article_4_2 />,
+    image: <Logo_Article_4_6 />,
     description: `이노ECM 문서중앙화`,
     href: '/',
   },
@@ -318,11 +322,12 @@ export default function SolutionPage() {
               다양한 IT 기능 및 서비스를 솔루션으로 제공합니다.
             </p>
           }>
-          <div className='mx-auto mt-8 grid w-full max-w-page-full grid-cols-1 gap-[10px] px-4 md:grid-cols-2 lg:grid-cols-3'>
+          <div className='mx-auto mt-8 grid w-full max-w-[1000px] grid-cols-1 gap-[10px] px-4 md:grid-cols-2 lg:grid-cols-3'>
             {partners.map(({ title, image, description, href }) => {
               return (
-                <CustomLink key={uuid()} href={href} hoverBehavior='none' className={'w-full'}>
+                <CustomLink key={uuid()} hoverBehavior='none' className={'w-full'}>
                   <SolutionContent.RowSmallCard
+                    imageClassName='m-[20px]'
                     image={image}
                     title={title}
                     description={description}

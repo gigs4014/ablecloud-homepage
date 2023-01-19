@@ -84,7 +84,7 @@ export const clients = [
   {
     title: '지엔텔',
     image: <Logo_Article_1_9 />,
-    description: <p>2U 4NODE 형태의 HCI 어플라이언스 제품 구성 제공</p>,
+    description: <p>프라이빗 클라우드</p>,
     href: '/interview/gntel',
     maintype: '산업',
     subtype: 'Solution',
@@ -92,7 +92,7 @@ export const clients = [
   {
     title: '데이타스트림즈',
     image: <Logo_Article_1_10 />,
-    description: <p>2U 4NODE 형태의 HCI 어플라이언스 제품 구성 제공</p>,
+    description: <p>빅데이터 플랫폼 연구개발</p>,
     href: '/interview/datastreams',
     maintype: '다',
     subtype: '다-c',
@@ -100,7 +100,7 @@ export const clients = [
   {
     title: '대검찰청',
     image: <Logo_Article_1_11 />,
-    description: <p>VMWare 기반의 VDI 구축</p>,
+    description: <p>Object Storage 기반 자료관리</p>,
     href: '/interview/spo',
     maintype: '산업',
     subtype: 'Solution',

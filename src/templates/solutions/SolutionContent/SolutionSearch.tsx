@@ -1,11 +1,8 @@
 import { Dispatch, SetStateAction, useEffect, useState } from 'react';
 
-import Link from 'next/link';
-
 import { SelectValue, clients, urlSplit } from 'src/pages/interview';
 
 import { NormalCard } from '@/components/common';
-import MultiSelect from '@/components/common/MultiSelect/MultiSelect';
 
 interface SolutionSearchProps {
   resultValue: SelectValue;
@@ -46,7 +43,7 @@ export const SolutionSearch = ({ resultValue, setResultValue }: SolutionSearchPr
 
   return (
     <div className='m-auto max-w-page-full text-[#444444]'>
-      <div className='mb-4 flex w-full flex-row justify-center'>
+      {/* <div className='mb-4 flex w-full flex-row justify-center'>
         <MultiSelect selectValue={selectValue} setValue={setSelectValue} />
         <Link href={`#${selectValue.mainType}/${selectValue.subType}`}>
           <button
@@ -59,10 +56,10 @@ export const SolutionSearch = ({ resultValue, setResultValue }: SolutionSearchPr
             검색
           </button>
         </Link>
-      </div>
+      </div> */}
       <div>
         {clientList.length > 0 ? (
-          <div className='my-16 grid min-h-[510px] grid-cols-1 gap-6 px-4 md:grid-cols-2 xl:grid-cols-3'>
+          <div className='mb-16 grid min-h-[510px] grid-cols-1 gap-6 px-4 md:grid-cols-2 xl:grid-cols-3'>
             {clientList.map(({ title, image, description, href }, index) => {
               return (
                 <NormalCard
