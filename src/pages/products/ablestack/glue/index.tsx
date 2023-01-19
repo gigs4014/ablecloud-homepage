@@ -1,13 +1,10 @@
 import Image from 'next/image';
 
 import { NextSeo } from 'next-seo';
+import { ProductsDemoContent } from 'src/templates/productsContents';
 
-import {
-  CommonDemoContent,
-  ProductContent,
-  ProductHeaderProps,
-  ProductTemplate,
-} from '@/templates';
+import { CustomLink } from '@/components/common';
+import { ProductContent, ProductHeaderProps, ProductTemplate } from '@/templates';
 
 import Logo_Article_2_1 from '@/public/images/new/product/ablestack/ablestackGlue/article_2_1.png';
 import Logo_Article_3_1 from '@/public/images/new/product/ablestack/ablestackGlue/article_3_1.png';
@@ -85,38 +82,49 @@ export default function AblestackGluePage() {
 
         <ProductContent title='관련 솔루션'>
           <div className='mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2'>
-            <ProductContent.RowSummaryCard
-              title={'핵심 업무를 위한 가상화 인프라'}
-              description={`내장 디스크 만으로 고성능의 내결함성 스토리지를 제공하여
+            <CustomLink href={'/solutions/server-virtualization'}>
+              <ProductContent.RowSummaryCard
+                title={'핵심 업무를 위한 가상화 인프라'}
+                description={`내장 디스크 만으로 고성능의 내결함성 스토리지를 제공하여
               복잡한 스토리지 패브릭을 제거할 수 있고
               99.9% 이상의 운영을 보장하는 안정성을 제공합니다.`}
-              image={<Logo_Article_4_1 />}
-            />
-            <ProductContent.RowSummaryCard
-              title={'프라이빗 클라우드'}
-              description={`필요할 때 무중단으로 무제한 확장이 가능하여
+                image={<Logo_Article_4_1 />}
+                hoverBehavior={'scale'}
+              />
+            </CustomLink>
+            <CustomLink href={'/solutions/private-cloud'}>
+              <ProductContent.RowSummaryCard
+                title={'프라이빗 클라우드'}
+                description={`필요할 때 무중단으로 무제한 확장이 가능하여
               프라이빗 클라우드 구축을 위한 최적의 솔루션입니다.`}
-              image={<Logo_Article_4_2 />}
-            />
-
-            <ProductContent.RowSummaryCard
-              title={'Edge Computing'}
-              description={`내장 디스크 만으로 스토리지를 제공하기 때문에
+                image={<Logo_Article_4_2 />}
+                hoverBehavior={'scale'}
+              />
+            </CustomLink>
+            <CustomLink href={'/solutions/edge-computing'}>
+              <ProductContent.RowSummaryCard
+                title={'Edge Computing'}
+                description={`내장 디스크 만으로 스토리지를 제공하기 때문에
               단순하고 유연성이 높은 Edge Computing 인프라를
               제공합니다.`}
-              image={<Logo_Article_4_3 />}
-            />
-            <ProductContent.RowSummaryCard
-              title={'가상데스크톱/DaaS'}
-              description={`Thin Provisioning, 베이스 스냅샷 기능을 제공하여
+                image={<Logo_Article_4_3 />}
+                hoverBehavior={'scale'}
+              />
+            </CustomLink>
+            <CustomLink href={'/solutions/virtual-desktop-and-daas'}>
+              <ProductContent.RowSummaryCard
+                title={'가상데스크톱/DaaS'}
+                description={`Thin Provisioning, 베이스 스냅샷 기능을 제공하여
               다양한 가상데스크톱/DaaS 환경에 적용할 수 있습니다.`}
-              image={<Logo_Article_4_4 />}
-            />
+                image={<Logo_Article_4_4 />}
+                hoverBehavior={'scale'}
+              />
+            </CustomLink>
           </div>
         </ProductContent>
 
         <ProductContent className={'bg-backgroudGray text-[#444444]'} title='최신 리소스 살펴보기'>
-          <CommonDemoContent />
+          <ProductsDemoContent />
         </ProductContent>
       </ProductTemplate>
     </>

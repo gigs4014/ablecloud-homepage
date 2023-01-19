@@ -72,11 +72,17 @@ const Logo_Article_6_3 = React.lazy(
 const headerContent: ProductHeaderProps = {
   title: 'ABLESTACK HCI',
   description: `ABLESTACK은 엔터프라이즈 클라우드 환경을 구축하는
-      HCI (Hyper Converged Infrastructure) 플랫폼입니다.
-      단 하나의 플랫폼으로 가상머신, 앱, 가상화/클라우드 등 사용하고 관리할 수
-      있습니다. 상용 x86 서버에 10G Network에 연결하고 ABLESTACK을 설치하면 지금 바로 핵심 인프라를
-      포함하여 모든 서비스를 시작할 수 있습니다.`,
-  image: <Image src={Logo_Article_1_1} />,
+  HCI (Hyper Converged Infrastructure) 플랫폼입니다.
+  단 하나의 플랫폼으로 가상머신, 앱, 가상화/클라우드 등 
+  사용하고 관리할 수 있습니다. 상용 x86 서버에 10G Network를 연결하고
+  ABLESTACK을 설치하면 지금 바로 핵심 인프라를 포함하여
+  모든 서비스를 시작할 수 있습니다.
+  `,
+  image: (
+    <div className='mb-8 max-w-[420px]'>
+      <Image src={Logo_Article_1_1} />
+    </div>
+  ),
   bgImage: 'bg-ablestack-header-bg',
 };
 

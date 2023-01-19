@@ -28,7 +28,7 @@ const headerContent: SolutionHeaderProps = {
   textColor: 'text-[#444444]',
 };
 
-const DevAndTsetPage = () => {
+const DevAndTestPage = () => {
   return (
     <>
       <NextSeo
@@ -153,4 +153,4 @@ const DevAndTsetPage = () => {
   );
 };
 
-export default DevAndTsetPage;
+export default DevAndTestPage;

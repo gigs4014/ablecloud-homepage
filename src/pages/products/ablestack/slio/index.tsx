@@ -1,13 +1,9 @@
 import Image from 'next/image';
 
 import { NextSeo } from 'next-seo';
+import { ProductsDemoContent } from 'src/templates/productsContents';
 
-import {
-  CommonDemoContent,
-  ProductContent,
-  ProductHeaderProps,
-  ProductTemplate,
-} from '@/templates';
+import { ProductContent, ProductHeaderProps, ProductTemplate } from '@/templates';
 
 import Logo_Article_1_1 from '@/public/images/new/product/ablestack/ablestackSlio/article_1_1.png';
 import Logo_Article_2_1 from '@/public/images/new/product/ablestack/ablestackSlio/article_2_1.svg';
@@ -150,7 +146,7 @@ export default function AblestackSlioPage() {
         </ProductContent>
 
         <ProductContent className={'bg-backgroudGray text-[#444444]'} title='최신 리소스 살펴보기'>
-          <CommonDemoContent />
+          <ProductsDemoContent />
         </ProductContent>
       </ProductTemplate>
     </>

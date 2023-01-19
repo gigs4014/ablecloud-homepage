@@ -3,14 +3,10 @@ import React from 'react';
 import Image from 'next/image';
 
 import { NextSeo } from 'next-seo';
+import { ProductsDemoContent } from 'src/templates/productsContents';
 
-import { SvgIcon } from '@/components/common';
-import {
-  CommonDemoContent,
-  ProductContent,
-  ProductHeaderProps,
-  ProductTemplate,
-} from '@/templates';
+import { CustomLink, SvgIcon } from '@/components/common';
+import { ProductContent, ProductHeaderProps, ProductTemplate } from '@/templates';
 
 import Logo_Article_3_1 from '@/public/images/new/product/ablestack/ablestackBlock/article_3_1.png';
 
@@ -124,36 +120,48 @@ export default function AblestackBlockPage() {
 
         <ProductContent title='관련 솔루션'>
           <div className='mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2'>
-            <ProductContent.RowSummaryCard
-              title={'서버 가상화'}
-              description={`블록스토리지는 가상머신을 위한 기본적인 디스크 
+            <CustomLink href='/solutions/server-virtualization'>
+              <ProductContent.RowSummaryCard
+                title={'서버 가상화'}
+                description={`블록스토리지는 가상머신을 위한 기본적인 디스크 
               형식으로 고성능의 IO를 제공합니다.`}
-              image={<SvgIcon Svg={Logo_Article_4_1} />}
-            />
-            <ProductContent.RowSummaryCard
-              title={'영상 감시'}
-              description={`최신 Kernel 을 사용한 블록 디스크는 지속적인 
+                image={<SvgIcon Svg={Logo_Article_4_1} />}
+                hoverBehavior={'scale'}
+              />
+            </CustomLink>
+            <CustomLink href='/solutions/video-surveillance'>
+              <ProductContent.RowSummaryCard
+                title={'영상 감시'}
+                description={`최신 Kernel 을 사용한 블록 디스크는 지속적인 
               영상 데이터 저장 및 조회 환경에 최적의 성능을
               제공합니다. `}
-              image={<SvgIcon Svg={Logo_Article_4_2} />}
-            />
-            <ProductContent.RowSummaryCard
-              title={'엣지컴퓨팅'}
-              description={`권역별로 구성된 소형 HCI의 경우에도 높은 성능을
+                image={<SvgIcon Svg={Logo_Article_4_2} />}
+                hoverBehavior={'scale'}
+              />
+            </CustomLink>
+            <CustomLink href='/solutions/edge-computing'>
+              <ProductContent.RowSummaryCard
+                title={'엣지컴퓨팅'}
+                description={`권역별로 구성된 소형 HCI의 경우에도 높은 성능을
               제공하여 안정적인 정보 수집/정제가 가능합니다.`}
-              image={<SvgIcon Svg={Logo_Article_4_3} />}
-            />
-            <ProductContent.RowSummaryCard
-              title={'인공지능/머신러닝'}
-              description={`효율적이고 고성능의 연산이 필요한 분석 환경에서
+                image={<SvgIcon Svg={Logo_Article_4_3} />}
+                hoverBehavior={'scale'}
+              />
+            </CustomLink>
+            <CustomLink href='/solutions/artificial-intelligence-and-machine-learning'>
+              <ProductContent.RowSummaryCard
+                title={'인공지능/머신러닝'}
+                description={`효율적이고 고성능의 연산이 필요한 분석 환경에서
               높은 IO 성능을 통해 안정적 분석/학습을 보장합니다.`}
-              image={<SvgIcon Svg={Logo_Article_4_4} />}
-            />
+                image={<SvgIcon Svg={Logo_Article_4_4} />}
+                hoverBehavior={'scale'}
+              />
+            </CustomLink>
           </div>
         </ProductContent>
 
         <ProductContent className={'bg-backgroudGray text-[#444444]'} title='최신 리소스 살펴보기'>
-          <CommonDemoContent />
+          <ProductsDemoContent />
         </ProductContent>
       </ProductTemplate>
     </>
