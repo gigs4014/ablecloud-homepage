@@ -168,7 +168,7 @@ export default function Header(ref: React.MutableRefObject<TNullable<HTMLDivElem
                 </>
               ) : (
                 <div className={'cursor-pointer'} onClick={toggleMenu}>
-                  {isTextWhitePage && isCurrentScrollTop ? (
+                  {isTextWhitePage && isCurrentScrollTop && !isSubMenuOpen ? (
                     <WhiteBurgerSVG width={'26'} height={'26'} />
                   ) : (
                     <BlackBurgerSVG width={'26'} height={'26'} />

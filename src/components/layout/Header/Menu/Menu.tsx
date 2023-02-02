@@ -58,8 +58,6 @@ export function MobileMenuItem({
     [item, selectedItem],
   );
 
-  const focused = useMemo(() => item === focusedItem, [item, focusedItem]);
-
   return (
     <div className={cls`group h-full w-full py-[20px] text-[#444444] ${className} border-b-1`}>
       <CustomLink href={href}>
@@ -174,9 +172,8 @@ export function SubMenu({ items, selectedItem, className, label }: SubMenuProps)
     <div
       className={cls`fixed left-0 flex w-screen justify-center border-t-1 border-borderGray bg-white text-[#444] drop-shadow-lg`}>
       <div>
-        <div className='flex pt-[62px] pl-[42px] text-[16px] font-[700]'>{label}</div>
         <ul
-          className={cls`flex max-w-[1256px] flex-row flex-wrap gap-y-8 px-[42px] pb-[48px] pt-[20px] ${
+          className={cls`flex max-w-[1256px] flex-row flex-wrap gap-y-8 px-[42px] py-[48px] ${
             label === '제품' ? 'gap-x-[43px]' : 'gap-x-[124px]'
           } ${className}`}>
           {/* <div>{label}</div> */}
@@ -186,7 +183,7 @@ export function SubMenu({ items, selectedItem, className, label }: SubMenuProps)
                 {item.type === 'group' ? (
                   <>
                     {item.label && (
-                      <li className={'mb-[20px]'}>
+                      <li className={'mb-[20px] font-[500]'}>
                         <CustomLink href={item.href} className={`text-red`}>
                           {item.label}
                         </CustomLink>
@@ -195,7 +192,7 @@ export function SubMenu({ items, selectedItem, className, label }: SubMenuProps)
                     {item.subMenuItems.map(subMenuBlock)}
                   </>
                 ) : (
-                  <li className={'flex flex-col'}>
+                  <li className={'flex flex-col font-[500]'}>
                     <CustomLink
                       href={item.href}
                       className={`${
@@ -241,7 +238,7 @@ export function MobileSubMenu({
         <li key={uuid()}>
           <CustomLink href={item.href}>
             <ul
-              className='rounded-md py-[8px] px-[16px] text-base hover:bg-backgroudGray md:text-[16px]'
+              className='rounded-md py-[8px] px-[16px] text-base md:text-[16px]'
               onClick={() => {
                 if (setIsMobileMenu && setIsWhiteHeader) {
                   setIsWhiteHeader(false);

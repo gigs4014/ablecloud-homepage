@@ -2,6 +2,8 @@ import { ReactNode, useMemo } from 'react';
 
 import Link, { LinkProps } from 'next/link';
 
+import { useMediaQuery } from 'react-responsive';
+
 import { BaseComponentProps } from '@/types';
 import { cls } from '@/utils';
 
@@ -25,6 +27,8 @@ export default function CustomLink({
   linkBy = 'anchor',
   ...linkProps
 }: CustomLinkProps) {
+  const bigScreen = useMediaQuery({ query: '(min-width: 768px)' });
+
   const className = useMemo(
     () =>
       cls`hover:cursor-pointer ${{
@@ -37,7 +41,7 @@ export default function CustomLink({
   // Must add passHref to Link
   if (href === undefined) {
     return (
-      <div className={className} style={style}>
+      <div className={bigScreen ? className : ''} style={style}>
         {children}
       </div>
     );
@@ -46,7 +50,7 @@ export default function CustomLink({
   if (linkBy === 'event') {
     return (
       <Link href={href} passHref {...linkProps}>
-        <div className={className} style={style}>
+        <div className={bigScreen ? className : ''} style={style}>
           {children}
         </div>
       </Link>
@@ -55,7 +59,7 @@ export default function CustomLink({
 
   return (
     <Link href={href} passHref {...linkProps}>
-      <a className={className} style={style}>
+      <a className={bigScreen ? className : ''} style={style}>
         {children}
       </a>
     </Link>
