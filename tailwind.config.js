@@ -90,7 +90,7 @@ module.exports = {
         purple: colors.violet,
         yellow: colors.amber,
         pink: colors.fuchsia,
-        primary: '#2BBBE6',
+        primary: '#00D0FF',
         borderGray: '#D4D4D4',
         backgroudGray: '#F6F7F9',
         backgroundBlue: '#71A6CE',
