@@ -1,13 +1,10 @@
 import Image from 'next/image';
 
 import { NextSeo } from 'next-seo';
+import { ProductsDemoContent } from 'src/templates/productsContents';
 
-import {
-  CommonDemoContent,
-  ProductContent,
-  ProductHeaderProps,
-  ProductTemplate,
-} from '@/templates';
+import { CustomLink } from '@/components/common';
+import { ProductContent, ProductHeaderProps, ProductTemplate } from '@/templates';
 
 import Logo_Article_1_1 from '@/public/images/new/product/ablestack/ablestackFiles/article_1_1.png';
 import Logo_Article_2_1 from '@/public/images/new/product/ablestack/ablestackFiles/article_2_1.svg';
@@ -104,35 +101,48 @@ export default function AblestackFilesPage() {
 
         <ProductContent title='관련 솔루션'>
           <div className='mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2'>
-            <ProductContent.RowSummaryCard
-              title={'비즈니스 크리티컬 앱'}
-              description={`다수의 가상머신을 통해 서비스되는 비즈니스 앱을 위해
+            <CustomLink href='/solutions/business-critical'>
+              <ProductContent.RowSummaryCard
+                title={'비즈니스 크리티컬 앱'}
+                description={`다수의 가상머신을 통해 서비스되는 비즈니스 앱을 위해
               공유 스토리지를 제공합니다.`}
-              image={<Logo_Article_4_1 />}
-            />
-            <ProductContent.RowSummaryCard
-              title={'VDI/DaaS'}
-              description={`Hyper-V, Citrix 등의 환경에서의 고성능 파일시스템을
+                image={<Logo_Article_4_1 />}
+                hoverBehavior={'scale'}
+              />
+            </CustomLink>
+
+            <CustomLink href='/solutions/virtual-desktop-and-daas'>
+              <ProductContent.RowSummaryCard
+                title={'VDI/DaaS'}
+                description={`Hyper-V, Citrix 등의 환경에서의 고성능 파일시스템을
               통해 안정적인 데스크톱 환경을 구축합니다.`}
-              image={<Logo_Article_4_2 />}
-            />
-            <ProductContent.RowSummaryCard
-              title={'영상 감시'}
-              description={`영상 수집 서버를 통해 수집되는 영상 데이터를 저장하고
+                image={<Logo_Article_4_2 />}
+                hoverBehavior={'scale'}
+              />
+            </CustomLink>
+            <CustomLink href='/solutions/video-surveillance'>
+              <ProductContent.RowSummaryCard
+                title={'영상 감시'}
+                description={`영상 수집 서버를 통해 수집되는 영상 데이터를 저장하고
               조회할 수 있는 대용량 공유 스토리지를 제공합니다.`}
-              image={<Logo_Article_4_3 />}
-            />
-            <ProductContent.RowSummaryCard
-              title={'멀티 클라우드'}
-              description={`다양한 프로토콜 지원을 통해 VMWare, Hyper-V, 
+                image={<Logo_Article_4_3 />}
+                hoverBehavior={'scale'}
+              />
+            </CustomLink>
+            <CustomLink href='/solutions/multi-cloud'>
+              <ProductContent.RowSummaryCard
+                title={'멀티 클라우드'}
+                description={`다양한 프로토콜 지원을 통해 VMWare, Hyper-V, 
               Citrix, Linux KVM 등의 멀티 하이퍼바이저를 지원합니다.`}
-              image={<Logo_Article_4_4 />}
-            />
+                image={<Logo_Article_4_4 />}
+                hoverBehavior={'scale'}
+              />
+            </CustomLink>
           </div>
         </ProductContent>
 
         <ProductContent className={'bg-backgroudGray text-[#444444]'} title='최신 리소스 살펴보기'>
-          <CommonDemoContent />
+          <ProductsDemoContent />
         </ProductContent>
       </ProductTemplate>
     </>

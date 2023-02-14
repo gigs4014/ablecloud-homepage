@@ -1,13 +1,10 @@
 import Image from 'next/image';
 
 import { NextSeo } from 'next-seo';
+import { ProductsDemoContent } from 'src/templates/productsContents';
 
-import {
-  CommonDemoContent,
-  ProductContent,
-  ProductHeaderProps,
-  ProductTemplate,
-} from '@/templates';
+import { CustomLink } from '@/components/common';
+import { ProductContent, ProductHeaderProps, ProductTemplate } from '@/templates';
 
 import Logo_Article_1_1 from '@/public/images/new/product/ablestack/ablestackObject/article_1_1.png';
 import Logo_Article_2_1 from '@/public/images/new/product/ablestack/ablestackObject/article_2_1.svg';
@@ -115,38 +112,49 @@ export default function AblestackObjectPage() {
 
         <ProductContent title='관련 솔루션'>
           <div className='mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2'>
-            <ProductContent.RowSummaryCard
-              title={'빅데이터'}
-              description={`S3 호환 인터페이스와 빠르고 무한히 확장 가능한 
+            <CustomLink href='/solutions/big-data-analysis'>
+              <ProductContent.RowSummaryCard
+                title={'빅데이터'}
+                description={`S3 호환 인터페이스와 빠르고 무한히 확장 가능한 
             오브젝트 스토리지로 빅데이터를 위한 민첩한 스토리지를
             제공합니다.`}
-              image={<Logo_Article_4_1 />}
-            />
-            <ProductContent.RowSummaryCard
-              title={'백업 및 아카이브'}
-              description={`내장된 오브젝트 버전관리를 제공하고, 스토리지를
+                image={<Logo_Article_4_1 />}
+                hoverBehavior={'scale'}
+              />
+            </CustomLink>
+            <CustomLink href='/solutions/backup-and-recovery'>
+              <ProductContent.RowSummaryCard
+                title={'백업 및 아카이브'}
+                description={`내장된 오브젝트 버전관리를 제공하고, 스토리지를
             더욱 안전하게 보호하여 별도의 오프라인 테이프 시스템
             없이 백업, 아카이브를 지원합니다.`}
-              image={<Logo_Article_4_2 />}
-            />
-
-            <ProductContent.RowSummaryCard
-              title={'클라우드 네이티브'}
-              description={`차세대 클라우드 네이티브 애플리케이션 개발을 위한
+                image={<Logo_Article_4_2 />}
+                hoverBehavior={'scale'}
+              />
+            </CustomLink>
+            <CustomLink href='/solutions/cloud-native'>
+              <ProductContent.RowSummaryCard
+                title={'클라우드 네이티브'}
+                description={`차세대 클라우드 네이티브 애플리케이션 개발을 위한
             간단하고 유연한 스토리지입니다.`}
-              image={<Logo_Article_4_3 />}
-            />
-            <ProductContent.RowSummaryCard
-              title={'전자문서 유통/관리'}
-              description={`WORM 기능을 통해 전자문서의 불변성을 보장하여
+                image={<Logo_Article_4_3 />}
+                hoverBehavior={'scale'}
+              />
+            </CustomLink>
+            <CustomLink href='/solutions/electronic-document'>
+              <ProductContent.RowSummaryCard
+                title={'전자문서 유통/관리'}
+                description={`WORM 기능을 통해 전자문서의 불변성을 보장하여
             안전한 전자문서 유통 및 관리 환경을 제공합니다.`}
-              image={<Logo_Article_4_4 />}
-            />
+                image={<Logo_Article_4_4 />}
+                hoverBehavior={'scale'}
+              />
+            </CustomLink>
           </div>
         </ProductContent>
 
         <ProductContent className={'bg-backgroudGray text-[#444444]'} title='최신 리소스 살펴보기'>
-          <CommonDemoContent />
+          <ProductsDemoContent />
         </ProductContent>
       </ProductTemplate>
     </>

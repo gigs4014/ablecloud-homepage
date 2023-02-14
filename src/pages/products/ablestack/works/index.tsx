@@ -1,13 +1,10 @@
 import Image from 'next/image';
 
 import { NextSeo } from 'next-seo';
+import { ProductsDemoContent } from 'src/templates/productsContents';
 
-import {
-  CommonDemoContent,
-  ProductContent,
-  ProductHeaderProps,
-  ProductTemplate,
-} from '@/templates';
+import { CustomLink } from '@/components/common';
+import { ProductContent, ProductHeaderProps, ProductTemplate } from '@/templates';
 
 import Logo_Article_1_1 from '@/public/images/new/product/ablestack/ablestackWorks/article_1_1.png';
 import Logo_Article_2_1 from '@/public/images/new/product/ablestack/ablestackWorks/article_2_1.svg';
@@ -108,37 +105,48 @@ export default function AblestackWorksPage() {
 
         <ProductContent title='유즈케이스'>
           <div className='mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2'>
-            <ProductContent.RowSummaryCard
-              title={'보안 업무 환경'}
-              description={`보안 공유 환경 등을 제공하고, 업무에 집중할 수 있는
+            <CustomLink href='/solutions/virtual-desktop-and-daas'>
+              <ProductContent.RowSummaryCard
+                title={'보안 업무 환경'}
+                description={`보안 공유 환경 등을 제공하고, 업무에 집중할 수 있는
             보안 업무 환경을 구축하여 제공할 수 있습니다.`}
-              image={<Logo_Article_4_1 />}
-            />
-            <ProductContent.RowSummaryCard
-              title={'DevOps 및 CI/CD'}
-              description={`빠르게 개발 및 운영할 수 있는 업무 환경을 제공하여
+                image={<Logo_Article_4_1 />}
+                hoverBehavior={'scale'}
+              />
+            </CustomLink>
+            <CustomLink href='/solutions/ci-and-cd'>
+              <ProductContent.RowSummaryCard
+                title={'DevOps 및 CI/CD'}
+                description={`빠르게 개발 및 운영할 수 있는 업무 환경을 제공하여
             지속적으로 개발 및 통합이 가능한 IT환경을 구성합니다.`}
-              image={<Logo_Article_4_2 />}
-            />
-
-            <ProductContent.RowSummaryCard
-              title={'원격업무/지사업무 지원'}
-              description={`빠르게 부서별 원격 업무 환경 및 지사를 위한
+                image={<Logo_Article_4_2 />}
+                hoverBehavior={'scale'}
+              />
+            </CustomLink>
+            <CustomLink href='/solutions/remote-and-offices'>
+              <ProductContent.RowSummaryCard
+                title={'원격업무/지사업무 지원'}
+                description={`빠르게 부서별 원격 업무 환경 및 지사를 위한
             업무 환경을 제공하여 어디서든 업무 환경을 
             사용자에게 제공할 수 있습니다. `}
-              image={<Logo_Article_4_3 />}
-            />
-            <ProductContent.RowSummaryCard
-              title={'콜센터 시스템'}
-              description={`동일 이미지로 만들어진 데스크톱 환경으로 콜센터
+                image={<Logo_Article_4_3 />}
+                hoverBehavior={'scale'}
+              />
+            </CustomLink>
+            <CustomLink href='/solutions/call-center'>
+              <ProductContent.RowSummaryCard
+                title={'콜센터 시스템'}
+                description={`동일 이미지로 만들어진 데스크톱 환경으로 콜센터
             환경을 만들고 어디서든 동일한 업무 환경을 제공합니다.`}
-              image={<Logo_Article_4_4 />}
-            />
+                image={<Logo_Article_4_4 />}
+                hoverBehavior={'scale'}
+              />
+            </CustomLink>
           </div>
         </ProductContent>
 
         <ProductContent className={'bg-backgroudGray text-[#444444]'} title='최신 리소스 살펴보기'>
-          <CommonDemoContent />
+          <ProductsDemoContent />
         </ProductContent>
       </ProductTemplate>
     </>

@@ -1,13 +1,10 @@
 import Image from 'next/image';
 
 import { NextSeo } from 'next-seo';
+import { ProductsDemoContent } from 'src/templates/productsContents';
 
-import {
-  CommonDemoContent,
-  ProductContent,
-  ProductHeaderProps,
-  ProductTemplate,
-} from '@/templates';
+import { CustomLink } from '@/components/common';
+import { ProductContent, ProductHeaderProps, ProductTemplate } from '@/templates';
 
 import Logo_Article_2_1 from '@/public/images/new/product/ablestack/ablestackCell/article_2_1.png';
 import Logo_Article_3_1 from '@/public/images/new/product/ablestack/ablestackCell/article_3_1.png';
@@ -94,39 +91,50 @@ export default function AblestackCellPage() {
 
         <ProductContent title='유즈케이스'>
           <div className='mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2'>
-            <ProductContent.RowSummaryCard
-              title={'서버 가상화'}
-              description={`내장된 Cell 하이퍼바이저는 기업을 위한 최적의 가상화
+            <CustomLink href='/solutions/server-virtualization'>
+              <ProductContent.RowSummaryCard
+                title={'서버 가상화'}
+                description={`내장된 Cell 하이퍼바이저는 기업을 위한 최적의 가상화
               플랫폼으로 광범위한 Linux 배포판 운영체제 및 
               Microsoft Windows 운영체제를 지원합니다.`}
-              image={<Logo_Article_4_5 />}
-            />
-            <ProductContent.RowSummaryCard
-              title={'데이터베이스'}
-              description={`최신 커널 기반의 베어메탈급 IO 성능을 제공하여
+                image={<Logo_Article_4_5 />}
+                hoverBehavior={'scale'}
+              />
+            </CustomLink>
+            <CustomLink href='/solutions/database'>
+              <ProductContent.RowSummaryCard
+                title={'데이터베이스'}
+                description={`최신 커널 기반의 베어메탈급 IO 성능을 제공하여
               Oracle, MS-SQL, MySQL, Tibero 등의
               데이터베이스 운영에 적합합니다.`}
-              image={<Logo_Article_4_6 />}
-            />
-
-            <ProductContent.RowSummaryCard
-              title={'데스크톱/애플리케이션 가상화'}
-              description={`다양한 가상데스크톱 환경에 모두 적용이 가능하고
+                image={<Logo_Article_4_6 />}
+                hoverBehavior={'scale'}
+              />
+            </CustomLink>
+            <CustomLink href='/solutions/virtual-desktop-and-daas'>
+              <ProductContent.RowSummaryCard
+                title={'데스크톱/애플리케이션 가상화'}
+                description={`다양한 가상데스크톱 환경에 모두 적용이 가능하고
               단순한 구성을 제공함으로써 비대면 업무 환경 및 
               지사별 업무 환경을 구성할 수 있습니다.`}
-              image={<Logo_Article_4_7 />}
-            />
-            <ProductContent.RowSummaryCard
-              title={'멀티 클라우드'}
-              description={`Cell 하이퍼바이저 및 VMWare, Citrix, Hyper-V 등의
+                image={<Logo_Article_4_7 />}
+                hoverBehavior={'scale'}
+              />
+            </CustomLink>
+            <CustomLink href='/solutions/multi-cloud'>
+              <ProductContent.RowSummaryCard
+                title={'멀티 클라우드'}
+                description={`Cell 하이퍼바이저 및 VMWare, Citrix, Hyper-V 등의
               다양한 하이퍼바이저 환경을 구성할 수 있습니다.`}
-              image={<Logo_Article_4_8 />}
-            />
+                image={<Logo_Article_4_8 />}
+                hoverBehavior={'scale'}
+              />
+            </CustomLink>
           </div>
         </ProductContent>
 
         <ProductContent className={'bg-backgroudGray text-[#444444]'} title='최신 리소스 살펴보기'>
-          <CommonDemoContent />
+          <ProductsDemoContent />
         </ProductContent>
       </ProductTemplate>
     </>

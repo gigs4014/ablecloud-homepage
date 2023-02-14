@@ -13,7 +13,9 @@
     "pm2:start": "pm2 start ecosystem.config.js",
     "prod:fetch": "./scripts/fetch",
     "prepack": "pinst --disable",
-    "postpack": "pinst --enable"
+    "postpack": "pinst --enable",
+    "podman:build": "./scripts/podman/build",
+    "podman:run": "./scripts/podman/run"
   },
   "dependencies": {
     "@mdx-js/mdx": "^2.1.1",
@@ -28,6 +30,7 @@
     "next-mdx-remote": "^4.0.3",
     "next-seo": "^5.15.0",
     "next-sitemap": "^3.1.43",
+    "next-videos": "1.4.1",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-import": "^14.1.0",
     "postcss-preset-env": "^7.7.2",

@@ -20,7 +20,7 @@ export default function ContactPage({ title, type }: { title: string; type: stri
           <ContactForm type={type} />
         </Container.PageWidth>
 
-        <Container.PageWidth separateWithPeer invertBg>
+        <Container.PageWidth separateWithPeer invertBg className='mt-0'>
           <h2 className='text-center'>영업 / 기술지원 이메일</h2>
 
           <div className='not-prose flex space-x-1 self-center'>
@@ -40,7 +40,7 @@ export default function ContactPage({ title, type }: { title: string; type: stri
           </div>
         </Container.PageWidth>
 
-        <Container.PageWidth separateWithPeer invertBg className='px-4 text-center'>
+        <Container.PageWidth separateWithPeer invertBg className='mt-0 px-4 text-center'>
           <h2>온라인 도큐먼트 센터</h2>
 
           <p>

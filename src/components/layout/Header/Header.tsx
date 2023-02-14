@@ -8,7 +8,6 @@ import { v4 as uuid } from 'uuid';
 
 // import useScrollDown from '@/hooks/common/useScrollDown';
 import { HeaderMenuItem, TNullable } from '@/types';
-import { cls } from '@/utils';
 
 import { CustomLink } from '@/components/common';
 
@@ -22,7 +21,7 @@ import { MenuItem, MobileMenuItem, getSelectedItem } from './Menu';
 
 export default function Header(ref: React.MutableRefObject<TNullable<HTMLDivElement>>) {
   const { asPath } = useRouter();
-  const [subMenuItems, setSubMenuItems] = useState<Array<HeaderMenuItem> | undefined>();
+
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
   const [isBigScreen, setIsBigScreen] = useState<boolean>(false);
   const [isTextWhitePage, setIsTextWhitePage] = useState(false);
@@ -37,26 +36,15 @@ export default function Header(ref: React.MutableRefObject<TNullable<HTMLDivElem
 
   const bigScreen = useMediaQuery({ query: '(min-width: 768px)' });
 
-  // let isCurrentScrollTop = useScrollDown(headerRef);
-
   const toggleMenu = () => {
     setIsWhiteHeader(prevState => !prevState);
     setIsMobileMenu(prevState => !prevState);
   };
 
   useEffect(() => {
-    // setIsWhiteHeader(false);
-    setIsWhiteHeader(false);
-  }, [asPath]);
-
-  useEffect(() => {
-    console.log({ isCurrentScrollTop, isWhiteHeader, isTextWhitePage });
-  }, [isWhiteHeader, isTextWhitePage]);
-
-  useEffect(() => {
     const listener = () => {
       const currentScrollPos = window.pageYOffset;
-      setIsCurrentScrollTop(currentScrollPos === 0);
+      setIsCurrentScrollTop(isSubMenuOpen ? false : currentScrollPos === 0);
     };
     listener();
     window.addEventListener('scroll', listener);
@@ -65,7 +53,9 @@ export default function Header(ref: React.MutableRefObject<TNullable<HTMLDivElem
   });
 
   useEffect(() => {
+    setIsWhiteHeader(false);
     setIsTextWhitePage(false);
+    setIsSubMenuOpen(false);
 
     if (asPath.includes('/products')) {
       setIsTextWhitePage(
@@ -84,25 +74,22 @@ export default function Header(ref: React.MutableRefObject<TNullable<HTMLDivElem
     setIsBigScreen(bigScreen);
   }, [bigScreen]);
 
-  // useEffect(() => {
-  //   console.log({ isCurrentScrollTop });
-  // }, [isCurrentScrollTop]);
-
   return (
     <header
       ref={headerRef}
       className={`fixed top-0 z-20 flex ${
         isBigScreen ? 'h-[110px]' : 'min-h-[60px]'
-      } w-full items-center justify-center ${
+      } w-full items-center justify-center ${isSubMenuOpen && 'bg-white'} ${
         isCurrentScrollTop ? (!isWhiteHeader ? 'bg-none' : 'bg-white') : 'bg-white'
-      }`}>
+      } `}>
       <nav
-        onMouseEnter={() => isBigScreen && setIsSubMenuOpen(true)}
-        onMouseLeave={() => {
-          if (isBigScreen) {
-            setIsSubMenuOpen(false);
-            setSubMenuItems(undefined);
-          }
+        onMouseOver={() => {
+          if (!isBigScreen) return;
+          setIsSubMenuOpen(true);
+        }}
+        onMouseOut={() => {
+          if (!isBigScreen) return;
+          setIsSubMenuOpen(false);
         }}
         className='group relative z-20 flex h-fit max-w-page-full flex-1 flex-col flex-nowrap '>
         {/* Main menu section */}
@@ -116,7 +103,7 @@ export default function Header(ref: React.MutableRefObject<TNullable<HTMLDivElem
               setIsMobileMenu(false);
             }}>
             <CustomLink href='/'>
-              {isCurrentScrollTop && !isWhiteHeader && isTextWhitePage ? (
+              {isCurrentScrollTop && !isWhiteHeader && isTextWhitePage && !isSubMenuOpen ? (
                 // isBigScreen &&
                 // !isProductsAbleStackPageException ?
                 <Logo_ablecloud_white width={isBigScreen ? '180' : '125'} />
@@ -127,13 +114,15 @@ export default function Header(ref: React.MutableRefObject<TNullable<HTMLDivElem
           </div>
 
           {isBigScreen ? (
-            <ul>
+            <ul className='flex'>
               {menuItems.map(item => (
-                <li className={cls`inline-flex w-fit`} key={uuid()}>
+                <li key={uuid()}>
                   <MenuItem
                     item={item}
                     selectedItem={selectedItem}
-                    isProductsAbleStackPage={isCurrentScrollTop && isTextWhitePage}
+                    isProductsAbleStackPage={
+                      isCurrentScrollTop && isTextWhitePage && !isSubMenuOpen
+                    }
                   />
                 </li>
               ))}
@@ -163,7 +152,7 @@ export default function Header(ref: React.MutableRefObject<TNullable<HTMLDivElem
                 </>
               ) : (
                 <div className={'cursor-pointer'} onClick={toggleMenu}>
-                  {isTextWhitePage && isCurrentScrollTop ? (
+                  {isTextWhitePage && isCurrentScrollTop && !isSubMenuOpen ? (
                     <WhiteBurgerSVG width={'26'} height={'26'} />
                   ) : (
                     <BlackBurgerSVG width={'26'} height={'26'} />

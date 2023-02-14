@@ -1,13 +1,10 @@
 import Image from 'next/image';
 
 import { NextSeo } from 'next-seo';
+import { ProductsDemoContent } from 'src/templates/productsContents';
 
-import {
-  CommonDemoContent,
-  ProductContent,
-  ProductHeaderProps,
-  ProductTemplate,
-} from '@/templates';
+import { CustomLink } from '@/components/common';
+import { ProductContent, ProductHeaderProps, ProductTemplate } from '@/templates';
 
 import Logo_Article_2_1 from '@/public/images/new/product/ablestack/ablestackMold/article_2_1.png';
 import Logo_Article_3_1 from '@/public/images/new/product/ablestack/ablestackMold/article_3_1.png';
@@ -48,8 +45,8 @@ export default function AblestackMoldPage() {
           title='아키텍처 개요'
           description={`Mold는 Cell 하이퍼바이저 및 다양한 하이퍼바이저 호스트에 연결하여
         가상머신, 네트워크, 스토리지 관리 기능을 통합적으로 제공하는 클라우드 플랫폼 입니다.`}>
-          <div className={'flex w-full items-center justify-center'}>
-            <Image src={Logo_Article_2_1} loading={'lazy'} />
+          <div className={'mx-auto flex w-full max-w-[340px] items-center justify-center'}>
+            <Image src={Logo_Article_2_1} loading={'lazy'} className={''} />
           </div>
         </ProductContent>
 
@@ -77,9 +74,9 @@ export default function AblestackMoldPage() {
               {
                 title: '내장된 비즈니스 연속성 제공',
                 descriptions: [
-                  'C가상머신 단위별 스냅샷 백업 및 복구',
+                  '가상머신 단위별 스냅샷 백업 및 복구',
                   '클러스터 간 미러링을 통한 재해 복구 지원',
-                  'Synology, Veem, EMC Networker 등의 백업 어플라이언스 연동 지원',
+                  'Synology, Veeam, EMC Networker 등의 백업 어플라이언스 연동 지원',
                 ],
               },
             ]}
@@ -88,37 +85,49 @@ export default function AblestackMoldPage() {
 
         <ProductContent title='관련 솔루션'>
           <div className='mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2'>
-            <ProductContent.RowSummaryCard
-              title={'비즈니스 연속성'}
-              description={`내장된 스냅샷 백업 및 복구, 재해복구 및 써드파티
+            <CustomLink href='/solutions/business-continuity'>
+              <ProductContent.RowSummaryCard
+                title={'비즈니스 연속성'}
+                description={`내장된 스냅샷 백업 및 복구, 재해복구 및 써드파티
               백업/복구 기능을 통해 비즈니스 연속성을 보장합니다.`}
-              image={<Logo_Article_4_1 />}
-            />
-            <ProductContent.RowSummaryCard
-              title={'비즈니스 크리티컬 앱'}
-              description={`정책 기반 가상자원 관리 및 부하분산 기능을 통해
+                image={<Logo_Article_4_1 />}
+                hoverBehavior={'scale'}
+              />
+            </CustomLink>
+            <CustomLink href='/solutions/business-critical'>
+              <ProductContent.RowSummaryCard
+                title={'비즈니스 크리티컬 앱'}
+                description={`정책 기반 가상자원 관리 및 부하분산 기능을 통해
               기업의 중요 애플리케이션을 안정적으로 실행합니다.`}
-              image={<Logo_Article_4_2 />}
-            />
+                image={<Logo_Article_4_2 />}
+                hoverBehavior={'scale'}
+              />
+            </CustomLink>
 
-            <ProductContent.RowSummaryCard
-              title={'IT 운영'}
-              description={`일원화된 자원관리 및 네트워크 관리를 통해 단일 환경에서
+            <CustomLink href='//solutions/devops-and-operations'>
+              <ProductContent.RowSummaryCard
+                title={'IT 운영'}
+                description={`일원화된 자원관리 및 네트워크 관리를 통해 단일 환경에서
               모든 인프라를 관리하고 통제할 수 있습니다.`}
-              image={<Logo_Article_4_3 />}
-            />
-            <ProductContent.RowSummaryCard
-              title={'개발 및 테스트'}
-              description={`다양한 가상머신 및 개발환경을 배포하여 사용할 수 있어
+                image={<Logo_Article_4_3 />}
+                hoverBehavior={'scale'}
+              />
+            </CustomLink>
+            <CustomLink href='/solutions/dev-and-test'>
+              <ProductContent.RowSummaryCard
+                title={'개발 및 테스트'}
+                description={`다양한 가상머신 및 개발환경을 배포하여 사용할 수 있어
               개발 및 테스트, 운영 환경 통합을 위한 최적의 환경을
               제공합니다. `}
-              image={<Logo_Article_4_4 />}
-            />
+                image={<Logo_Article_4_4 />}
+                hoverBehavior={'scale'}
+              />
+            </CustomLink>
           </div>
         </ProductContent>
 
         <ProductContent className={'bg-backgroudGray'} title='최신 리소스 살펴보기'>
-          <CommonDemoContent />
+          <ProductsDemoContent />
         </ProductContent>
       </ProductTemplate>
     </>

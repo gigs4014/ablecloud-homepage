@@ -13,6 +13,11 @@
 /**
  * @type {Plugin}
  */
+const withVideos = require('next-videos');
+
+/**
+ * @type {Plugin}
+ */
 const withMDX = require('@next/mdx')({
   extension: /\.mdx?$/,
   options: {
@@ -60,7 +65,7 @@ const nextConfig = {
 
   typescript: {
     ignoreBuildErrors: true,
-  }
+  },
 };
 
-module.exports = withPlugins(nextConfig, [withMDX, withDotenv]);
+module.exports = withPlugins(nextConfig, [withMDX, withDotenv, withVideos]);

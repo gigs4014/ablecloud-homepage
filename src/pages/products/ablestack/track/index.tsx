@@ -1,13 +1,10 @@
 import Image from 'next/image';
 
 import { NextSeo } from 'next-seo';
+import { ProductsDemoContent } from 'src/templates/productsContents';
 
-import {
-  CommonDemoContent,
-  ProductContent,
-  ProductHeaderProps,
-  ProductTemplate,
-} from '@/templates';
+import { CustomLink } from '@/components/common';
+import { ProductContent, ProductHeaderProps, ProductTemplate } from '@/templates';
 
 import Logo_Article_2_1 from '@/public/images/new/product/ablestack/ablestackTrack/article_2_1.png';
 import Logo_Article_3_1 from '@/public/images/new/product/ablestack/ablestackTrack/article_3_1.png';
@@ -88,37 +85,48 @@ export default function AblestackTrackPage() {
 
         <ProductContent title='관련 솔루션'>
           <div className='mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2'>
-            <ProductContent.RowSummaryCard
-              title={'프라이빗 클라우드'}
-              description={`소프트웨어로 정의된 멀티테넌트 네트워크 인프라로써
+            <CustomLink href='/solutions/private-cloud'>
+              <ProductContent.RowSummaryCard
+                title={'프라이빗 클라우드'}
+                description={`소프트웨어로 정의된 멀티테넌트 네트워크 인프라로써
               안전하고 유연한 클라우드 환경을 제공합니다.`}
-              image={<Logo_Article_4_1 />}
-            />
-            <ProductContent.RowSummaryCard
-              title={'보안 인프라'}
-              description={`웹 기반의 트래픽 컨트롤 및 모니터링 환경을 제공하여
+                image={<Logo_Article_4_1 />}
+                hoverBehavior={'scale'}
+              />
+            </CustomLink>
+            <CustomLink href='/solutions/security-infrastructure'>
+              <ProductContent.RowSummaryCard
+                title={'보안 인프라'}
+                description={`웹 기반의 트래픽 컨트롤 및 모니터링 환경을 제공하여
               소프트웨어로 정의된 보안 인프라를 제공합니다.`}
-              image={<Logo_Article_4_2 />}
-            />
-
-            <ProductContent.RowSummaryCard
-              title={'비즈니스 애플리케이션'}
-              description={`방화벽, 로드밸런서 등을 내장하고 있어서 안정적으로
+                image={<Logo_Article_4_2 />}
+                hoverBehavior={'scale'}
+              />
+            </CustomLink>
+            <CustomLink href='/solutions/ci-and-cd'>
+              <ProductContent.RowSummaryCard
+                title={'비즈니스 애플리케이션'}
+                description={`방화벽, 로드밸런서 등을 내장하고 있어서 안정적으로
               부하분산 환경을 제공해야 하는 비즈니스 앱에 적합합니다. `}
-              image={<Logo_Article_4_3 />}
-            />
-            <ProductContent.RowSummaryCard
-              title={'하이브리드 클라우드'}
-              description={`VPC 환경 및 Site to Site VPN 제공으로 다양한 퍼블릭
+                image={<Logo_Article_4_3 />}
+                hoverBehavior={'scale'}
+              />
+            </CustomLink>
+            <CustomLink href='/solutions/hybrid-cloud'>
+              <ProductContent.RowSummaryCard
+                title={'하이브리드 클라우드'}
+                description={`VPC 환경 및 Site to Site VPN 제공으로 다양한 퍼블릭
               클라우드와 네트워크 연동을 통해 인프라를 언제든
               확장할 수 있습니다. `}
-              image={<Logo_Article_4_4 />}
-            />
+                image={<Logo_Article_4_4 />}
+                hoverBehavior={'scale'}
+              />
+            </CustomLink>
           </div>
         </ProductContent>
 
         <ProductContent className={'bg-backgroudGray text-[#444444]'} title='최신 리소스 살펴보기'>
-          <CommonDemoContent />
+          <ProductsDemoContent />
         </ProductContent>
       </ProductTemplate>
     </>
