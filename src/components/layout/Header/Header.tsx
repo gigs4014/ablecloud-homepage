@@ -36,22 +36,15 @@ export default function Header(ref: React.MutableRefObject<TNullable<HTMLDivElem
 
   const bigScreen = useMediaQuery({ query: '(min-width: 768px)' });
 
-  // let isCurrentScrollTop = useScrollDown(headerRef);
-
   const toggleMenu = () => {
     setIsWhiteHeader(prevState => !prevState);
     setIsMobileMenu(prevState => !prevState);
   };
 
   useEffect(() => {
-    // setIsWhiteHeader(false);
-    setIsWhiteHeader(false);
-  }, [asPath]);
-
-  useEffect(() => {
     const listener = () => {
       const currentScrollPos = window.pageYOffset;
-      setIsCurrentScrollTop(currentScrollPos === 0);
+      setIsCurrentScrollTop(isSubMenuOpen ? false : currentScrollPos === 0);
     };
     listener();
     window.addEventListener('scroll', listener);
@@ -60,6 +53,7 @@ export default function Header(ref: React.MutableRefObject<TNullable<HTMLDivElem
   });
 
   useEffect(() => {
+    setIsWhiteHeader(false);
     setIsTextWhitePage(false);
     setIsSubMenuOpen(false);
 
@@ -80,16 +74,6 @@ export default function Header(ref: React.MutableRefObject<TNullable<HTMLDivElem
     setIsBigScreen(bigScreen);
   }, [bigScreen]);
 
-  useEffect(() => {
-    if (isCurrentScrollTop) setIsSubMenuOpen(true);
-
-    setIsSubMenuOpen(false);
-  }, [isCurrentScrollTop]);
-
-  useEffect(() => {
-    console.log(isSubMenuOpen);
-  }, [isSubMenuOpen]);
-
   return (
     <header
       ref={headerRef}
@@ -100,11 +84,11 @@ export default function Header(ref: React.MutableRefObject<TNullable<HTMLDivElem
       } `}>
       <nav
         onMouseOver={() => {
-          if (!isBigScreen) false;
+          if (!isBigScreen) return;
           setIsSubMenuOpen(true);
         }}
         onMouseOut={() => {
-          if (!isBigScreen) false;
+          if (!isBigScreen) return;
           setIsSubMenuOpen(false);
         }}
         className='group relative z-20 flex h-fit max-w-page-full flex-1 flex-col flex-nowrap '>
