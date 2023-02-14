@@ -74,7 +74,7 @@ export function DescriptionCard({
 }: CardProps) {
   return (
     <Container.Card
-      className={`h-[436px] w-[95%] pt-[35px] pb-[58px] text-center shadow-none ${containerClassName}`}
+      className={`mx-auto h-[436px] w-[95%] pt-[35px] pb-[58px] text-center shadow-none ${containerClassName}`}
       hoverBehavior={hoverBehavior}>
       {image && <div className='flex items-center justify-center'>{image}</div>}
 
