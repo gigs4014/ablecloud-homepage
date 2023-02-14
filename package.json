@@ -14,7 +14,9 @@
     "prod:fetch": "./scripts/fetch",
     "postinstall": "./scripts/postinstall",
     "prepack": "pinst --disable",
-    "postpack": "pinst --enable"
+    "postpack": "pinst --enable",
+    "podman:build": "./scripts/podman/build",
+    "podman:run": "./scripts/podman/run"
   },
   "dependencies": {
     "@mdx-js/mdx": "^2.1.1",
