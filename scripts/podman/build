@@ -1,0 +1,1 @@
+podman build -t ablecloud-homepage:$(date "+%Y%m%d") .

@@ -12,9 +12,10 @@
     "docker:dev": "./scripts/docker/dev",
     "pm2:start": "pm2 start ecosystem.config.js",
     "prod:fetch": "./scripts/fetch",
-    "postinstall": "yarn husky install",
     "prepack": "pinst --disable",
-    "postpack": "pinst --enable"
+    "postpack": "pinst --enable",
+    "podman:build": "./scripts/podman/build",
+    "podman:run": "./scripts/podman/run"
   },
   "dependencies": {
     "@mdx-js/mdx": "^2.1.1",
@@ -63,7 +64,6 @@
     "eslint-config-next": "12.1.6",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "husky": "^8.0.0",
     "lint-staged": "^12.4.1",
     "lodash": "^4.17.21",
     "pinst": "^3.0.0",

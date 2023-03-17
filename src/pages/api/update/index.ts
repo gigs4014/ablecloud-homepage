@@ -8,6 +8,8 @@ type Data = {
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
   // let token = req.headers.authorization;
+  throw new Error('Not implemented yet');
+
   try {
     const stdout = await new Promise<string>((resolve, reject) => {
       exec('./scripts/fetch', (error, stdout, stderr) => {
