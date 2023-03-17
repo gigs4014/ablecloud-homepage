@@ -38,8 +38,8 @@ const headerContents = (fontSize: string): HomeHeaderProps[] => [
     ),
     bgVideo: Video,
     slideImg: slideImg,
-    href: new URL("https://forms.gle/FLsHTEcEZ5X66hGe8"),
-    href2: new URL("https://cic2023.framer.website/")
+    href: "https://forms.gle/FLsHTEcEZ5X66hGe8",
+    href2: "https://cic2023.framer.website/"
   },
   // {
   //   title: '',
