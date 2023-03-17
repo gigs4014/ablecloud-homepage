@@ -18,7 +18,7 @@ const components: MDXComponents = {
   img: ResponsiveImage,
 };
 
-export default function CustomApp({ Component, pageProps, router }: AppProps) {
+export default function CustomApp({ Component, pageProps, router }: AppProps<any>) {
   return (
     <MDXProvider components={components}>
       {/* <DarkModeProvider> */}
