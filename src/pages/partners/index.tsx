@@ -92,7 +92,7 @@ export default function PartnersPage() {
           </div>
         </PartnerContent>
         <PartnerContent
-          className={'bg-backgroundGray text-[#444444]'}
+          className={'bg-[#F2F2F2] text-[#444444]'}
           title='함께하는 파트너'
           description={`현재 에이블클라우드와 함께하고 있는 파트너 입니다.`}>
           <div className='flex w-full flex-row items-center justify-center gap-[20px]'>
@@ -128,7 +128,7 @@ export default function PartnersPage() {
               ))}
             </ul> */}
           </div>
-          <div className='mt-8 grid grid-cols-1 gap-[5px] px-4 sm:grid-cols-2 lg:grid-cols-4'>
+          <div className='mt-8 grid grid-cols-1 gap-[24px] px-4 sm:grid-cols-2 lg:grid-cols-4'>
             <>
               {partnerItems[activeTabIndex] &&
                 partnerItems[activeTabIndex].subItems.map((item, i) => (
