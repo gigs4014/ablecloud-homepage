@@ -19,7 +19,6 @@ import Logo_Article_4_3 from '@/public/images/new/home/article_4_3.svg';
 import Logo_Article_4_4 from '@/public/images/new/home/article_4_4.svg';
 import Logo_Article_4_5 from '@/public/images/new/home/article_4_5.svg';
 
-import slideImg from '@/public/images/header/slide_text.png';
 import Video from '../../public/videos/data.mp4';
 
 interface LogoData {
@@ -37,9 +36,9 @@ const headerContents = (fontSize: string): HomeHeaderProps[] => [
       </div>
     ),
     bgVideo: Video,
-    slideImg: slideImg,
-    href: "https://forms.gle/FLsHTEcEZ5X66hGe8",
-    href2: "https://cic2023.framer.website/"
+    // slideImg: slideImg,
+    href: 'https://forms.gle/FLsHTEcEZ5X66hGe8',
+    href2: 'https://cic2023.framer.website/',
   },
   // {
   //   title: '',
