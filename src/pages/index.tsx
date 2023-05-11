@@ -292,8 +292,8 @@ export default function HomePage() {
           </div>
           <div className='flex justify-center'>
             <CustomLink href='/interview' hoverBehavior='none'>
-              <Button solid className='mt-12'>
-                파트너 확인하기
+              <Button solid className='mt-12 bg-[#2BBBE6]'>
+                성공사례 확인하기
               </Button>
             </CustomLink>
           </div>
