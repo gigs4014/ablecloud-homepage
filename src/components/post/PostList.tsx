@@ -36,7 +36,7 @@ function PostList({ posts, categories }: PostListProps) {
   }, [posts]);
 
   return (
-    <article className='m-auto min-h-[700px] w-full max-w-[900px] px-8 pt-36 pb-16'>
+    <article className='m-auto min-h-[700px] w-full max-w-[900px] px-5 pt-36 pb-16 md:px-8'>
       <div className='text-[14px] font-medium'>
         {router.pathname.includes('/blog/admin') && (
           <div className='mb-4 flex justify-end'>
@@ -45,11 +45,11 @@ function PostList({ posts, categories }: PostListProps) {
             </Link>
           </div>
         )}
-        <div className='flex  border-y-1 border-solid border-black bg-white px-10 py-5'>
-          <div className='h-5 w-[10%]'>번호</div>
-          <div className='h-5 w-[10%] text-[#0085F2]'>카테고리</div>
-          <div className='h-5 w-[70%]'>제목</div>
-          <div className='h-5 w-[10%]'>업로드일</div>
+        <div className='flex h-auto border-y-1 border-solid border-black bg-white px-4 py-5 md:px-10'>
+          <div className='mr-4 w-[10%]'>번호</div>
+          <div className='hidden w-[10%] text-[#0085F2] lg:block'>카테고리</div>
+          <div className='w-[90%] md:w-[85%] lg:w-[70%]'>제목</div>
+          <div className='hidden w-[15%] md:block'>업로드일</div>
         </div>
         {postList.length > 0 &&
           postList[page - 1].map((post, index) => (

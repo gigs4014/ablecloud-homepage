@@ -29,11 +29,11 @@ function PostListItem({ post, index, className }: PostPreviewProps) {
 
   return (
     <PostContextProvider value={post}>
-      <div className='flex border-b-1 border-dotted border-[#C7C7C7] bg-white px-10 py-5 hover:bg-gray-50'>
-        <div className='h-5 w-[10%]'>{index}</div>
-        <div className='h-5 w-[10%] text-[#0085F2]'>{category}</div>
-        <div className='h-5 w-[70%]'>{post.slug}</div>
-        <div className='h-5 w-[10%]'>{date}</div>
+      <div className='flex h-auto border-b-1 border-dotted border-[#C7C7C7] bg-white px-5 py-5 hover:bg-gray-50 md:px-10'>
+        <div className='m-auto mr-4 w-[10%]'>{index}</div>
+        <div className='hidden w-[10%] text-[#0085F2] lg:block'>{category}</div>
+        <div className='m-auto w-[90%] md:w-[85%] lg:w-[70%]'>{post.slug}</div>
+        <div className='hidden w-[15%] md:block'>{date}</div>
       </div>
     </PostContextProvider>
   );
