@@ -148,6 +148,10 @@ export const menuItems: Array<HeaderMenuItem> = [
     label: '제품문의',
     href: '/company/contact/inquire',
   },
+  {
+    label: '소식',
+    href: '/blog',
+  },
 ];
 
 export const footerMenus = [

@@ -13,12 +13,15 @@ function PostListTemplate({
   posts,
   params: { path: categories = [] } = { path: [] },
 }: PostListTemplateProps & BasePageProps<{ path: string[] }>) {
-  return (
-    <>
-      <PostListTemplateHead posts={posts} categories={categories} />
+  const sortingPosts = posts.sort((a, b) => {
+    return Number(b.date) - Number(a.date);
+  });
 
-      <PostList posts={posts} categories={categories} />
-    </>
+  return (
+    <div className='w-full bg-[#EEF7FF]'>
+      {/* <PostListTemplateHead posts={posts} categories={categories} /> */}
+      <PostList posts={sortingPosts} categories={categories} />
+    </div>
   );
 }
 
