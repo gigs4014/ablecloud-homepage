@@ -5,7 +5,6 @@ import moment from 'moment';
 import { BaseComponentProps } from '@/types';
 import { cls } from '@/utils';
 
-import { CustomLink } from '../common';
 import { usePostContext } from './PostContext';
 
 export interface PostMetadataProps extends BaseComponentProps {
@@ -20,15 +19,6 @@ function PostMetadata({ className, linkBy }: PostMetadataProps) {
   return (
     <div
       className={cls`not-prose flex divide-x-0.5 divide-slate-300 text-sm leading-[0.875rem] ${className}`}>
-      {/* category */}
-      <CustomLink
-        href={`/${categories.join('/')}`}
-        hoverBehavior='underline'
-        linkBy={linkBy}
-        className='pr-2 text-sky-500 first-letter:uppercase'>
-        {categories.at(-1)}
-      </CustomLink>
-
       {/* created at */}
       <time dateTime={time.toISOString()} className='pl-2'>
         {time.format('yyyy.MM.DD')}

@@ -13,7 +13,7 @@ function PostDetailTemplate({ post }: PostDetailTemplateProps & BasePageProps<{ 
   return (
     <>
       <Head>
-        <title>{post.title}</title>
+        <title>{post.slug}</title>
         {Meta.OpenGraph(post.openGraph)}
       </Head>
 

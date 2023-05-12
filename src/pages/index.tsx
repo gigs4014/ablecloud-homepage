@@ -292,7 +292,7 @@ export default function HomePage() {
           </div>
           <div className='flex justify-center'>
             <CustomLink href='/interview' hoverBehavior='none'>
-              <Button solid className='mt-12 bg-[#2BBBE6]'>
+              <Button solid style={{ backgroundColor: '#2BBBE6' }} className='mt-12'>
                 성공사례 확인하기
               </Button>
             </CustomLink>

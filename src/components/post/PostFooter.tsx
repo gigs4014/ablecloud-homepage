@@ -3,7 +3,7 @@ import { useMemo } from 'react';
 import { Post } from '@/types';
 
 import { usePostContext } from './PostContext';
-import PostPreview from './PostPreview';
+import PostListItem from './PostListItem';
 
 function PostFooter() {
   const { categories, tags, slug } = usePostContext();
@@ -19,7 +19,7 @@ function PostFooter() {
       {/* suggest post */}
       <div>
         {suggestPosts.map(post => (
-          <PostPreview post={post} key={post.slug} />
+          <PostListItem post={post} key={post.slug} />
         ))}
       </div>
     </footer>
