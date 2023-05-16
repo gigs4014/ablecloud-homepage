@@ -20,6 +20,7 @@ function PostListTemplate({
   return (
     <div className='w-full bg-[#EEF7FF]'>
       {/* <PostListTemplateHead posts={posts} categories={categories} /> */}
+
       <PostList posts={sortingPosts} categories={categories} />
     </div>
   );

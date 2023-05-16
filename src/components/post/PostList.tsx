@@ -37,6 +37,7 @@ function PostList({ posts, categories }: PostListProps) {
 
   return (
     <article className='m-auto min-h-[700px] w-full max-w-[900px] px-5 pt-36 pb-16 md:px-8'>
+      <div className='mb-8 text-center text-[30px] font-medium'>에이블클라우드 소식</div>
       <div className='text-[14px] font-medium'>
         {router.pathname.includes('/blog/admin') && (
           <div className='mb-4 flex justify-end'>
