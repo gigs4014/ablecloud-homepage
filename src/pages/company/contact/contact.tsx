@@ -57,8 +57,7 @@ function ContactForm() {
     <form
       name='sentMessage'
       id='contactForm'
-      // action='https://formspree.io/f/mzbygdrk'
-      action='https://formspree.io/f/mjvzookl'
+      action='https://formspree.io/f/mzbygdrk'
       method='post'
       className='mx-auto flex w-full max-w-[887px] flex-col justify-items-center px-4 text-[#444]'>
       <input type='hidden' name='_subject' value='새로운 기술지원 요청이 있습니다.' />
