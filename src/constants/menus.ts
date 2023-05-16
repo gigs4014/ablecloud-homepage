@@ -145,12 +145,12 @@ export const menuItems: Array<HeaderMenuItem> = [
     href: '/partners',
   },
   {
-    label: '제품문의',
-    href: '/company/contact/inquire',
-  },
-  {
     label: '소식',
     href: '/blog',
+  },
+  {
+    label: '제품문의',
+    href: '/company/contact/inquire',
   },
 ];
 
