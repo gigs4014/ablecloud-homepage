@@ -312,7 +312,7 @@ export default function HomePage() {
           }>
           <CommonDemoContent />
         </HomeContent>
-        <HomeContent
+        {/* <HomeContent
           className={'bg-backgroundBlue pb-0 text-white'}
           title='I Station, 가상화 데스크톱 결합 HCI 어플라이언스'
           description={
@@ -329,7 +329,7 @@ export default function HomePage() {
               </Button>
             </CustomLink>
           </div>
-        </HomeContent>
+        </HomeContent> */}
       </HomeTemplate>
     </>
   );
