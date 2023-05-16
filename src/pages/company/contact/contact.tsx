@@ -5,7 +5,7 @@ export default function ContactPage() {
   return (
     <>
       <Container.Article enableProseSpacing={true}>
-        <Container.PageWidth separateWithPeer invertBg className='mt-20'>
+        <Container.PageWidth separateWithPeer invertBg className='mt-20 pt-8'>
           <div className='mb-6 text-center text-[30px] font-medium'>제품 문의</div>
           <ContactForm />
         </Container.PageWidth>
