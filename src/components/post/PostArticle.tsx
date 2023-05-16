@@ -23,7 +23,7 @@ function PostArticle({ post, className, ...props }: PostArticleProps) {
     <PostContextProvider value={post}>
       <article
         {...props}
-        className={cls`prose w-full !max-w-[836px] py-40 px-8 prose-headings:font-bold ${className}`}>
+        className={cls`prose w-full !max-w-[836px] px-8 pb-40 pt-24 prose-headings:font-bold md:pt-36 ${className}`}>
         <Link href={'/blog'}>
           <div className='flex cursor-pointer items-center'>
             <div className='h-full'>
