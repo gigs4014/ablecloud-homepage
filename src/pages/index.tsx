@@ -1,10 +1,15 @@
 import { useEffect, useState } from 'react';
 
-import { ReactNode } from '@mdx-js/react/lib';
 import { NextSeo } from 'next-seo';
 
 import { Button, CustomLink } from '@/components/common';
-import { CommonDemoContent, HomeContent, HomeHeaderProps, HomeTemplate } from '@/templates';
+import {
+  CommonDemoContent,
+  HomeContent,
+  HomeHeaderProps,
+  HomeTemplate,
+  SliderData,
+} from '@/templates';
 
 import Logo_Article_2_1 from '@/public/images/new/home/article_2_1.svg';
 import Logo_Article_2_2 from '@/public/images/new/home/article_2_2.svg';
@@ -18,162 +23,41 @@ import Logo_Article_4_2 from '@/public/images/new/home/article_4_2.svg';
 import Logo_Article_4_3 from '@/public/images/new/home/article_4_3.svg';
 import Logo_Article_4_4 from '@/public/images/new/home/article_4_4.svg';
 import Logo_Article_4_5 from '@/public/images/new/home/article_4_5.svg';
+import Header_Content_1 from '@/public/images/new/home/header-image-1.png';
+import Header_Content_2 from '@/public/images/new/home/header-image-2.png';
+import Header_Content_3 from '@/public/images/new/home/header-image-3.png';
 
-import Video from '../../public/videos/data.mp4';
-
-interface LogoData {
-  title: string;
-  src: ReactNode;
-  href?: string;
-}
+const sliderData: SliderData[] = [
+  {
+    title: '단일 플랫폼으로 기존의 복잡한 인프라에 대한 고민 해결',
+    description:
+      'ABLESTACK은 서버, 스토리지, 네트워크 인프라를 제공하는 단일 HCI 플랫폼으로 기존 인프라 대비 IT운영 비용이 최대 80% 절감됩니다.',
+    href: '/about/infra',
+    bgImage: 'bg-home-header-bg-1',
+    contentImage: Header_Content_1,
+  },
+  {
+    title: '단일 플랫폼으로 기존의 복잡한 인프라에 대한 고민 해결',
+    description:
+      'ABLESTACK은 서버, 스토리지, 네트워크 인프라를 제공하는 단일 HCI 플랫폼으로 기존 인프라 대비 IT운영 비용이 최대 80% 절감됩니다.',
+    href: '/about/infra',
+    bgImage: 'bg-home-header-bg-2',
+    contentImage: Header_Content_2,
+  },
+  {
+    title: '단일 플랫폼으로 기존의 복잡한 인프라에 대한 고민 해결',
+    description:
+      'ABLESTACK은 서버, 스토리지, 네트워크 인프라를 제공하는 단일 HCI 플랫폼으로 기존 인프라 대비 IT운영 비용이 최대 80% 절감됩니다.',
+    href: '/about/infra',
+    bgImage: 'bg-home-header-bg-3',
+    contentImage: Header_Content_3,
+  },
+];
 
 const headerContents = (fontSize: string): HomeHeaderProps[] => [
   {
-    title: 'Cloud Data Center, Big Data',
-    description: (
-      <div className={`m-0 p-0 ${fontSize} font-[400] leading-[26.06px]`}>
-        클라우드 데이터센터 구축을 위한 통합 HCI 솔루션 ABLESTACK
-      </div>
-    ),
-    bgVideo: Video,
-    // slideImg: slideImg,
-    href: 'https://forms.gle/FLsHTEcEZ5X66hGe8',
-    href2: 'https://cic2023.framer.website/',
+    sliderData: sliderData,
   },
-  // {
-  //   title: '',
-  //   description: ``,
-  //   bgImage: 'bg-home-header-bg',
-  // },
-];
-
-const imageSliderSettings = {
-  dots: false,
-  infinite: true,
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  arrows: false,
-  autoplay: true,
-  speed: 2000,
-  autoplaySpeed: 1000,
-  width: 850,
-  cssEase: 'linear',
-  responsive: [
-    {
-      breakpoint: 1280,
-      settings: {
-        slidesToShow: 3,
-      },
-    },
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-      },
-    },
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 2,
-      },
-    },
-  ],
-};
-
-const logos: Array<LogoData> = [
-  {
-    title: '지엔텔',
-    src: <Logo_Article_4_1 />,
-    href: 'http://www.lgntel.com/',
-  },
-  {
-    title: '지오멕스소프트',
-    src: <Logo_Article_4_2 />,
-    href: 'http://www.lgntel.com/',
-  },
-  {
-    title: '한국세무사회',
-    src: <Logo_Article_4_3 />,
-    href: 'http://www.lgntel.com/',
-  },
-  {
-    title: '근로복지공단',
-    src: <Logo_Article_4_4 />,
-    href: 'https://www.comwel.or.kr/',
-  },
-  {
-    title: '대검찰청',
-    src: <Logo_Article_4_5 />,
-    href: 'https://www.spo.go.kr/',
-  },
-  // {
-  //   title: '부안군',
-  //   src: Logo_buan,
-  //   href: 'https://www.buan.go.kr/',
-  // },
-  // {
-  //   title: '춘천시',
-  //   src: Logo_chuncheon,
-  //   href: 'https://www.chuncheon.go.kr/',
-  // },
-
-  // {
-  //   title: '다이소',
-  //   src: Logo_daiso,
-  //   href: 'https://www.daiso.co.kr/',
-  // },
-  // {
-  //   title: '광주문화재단',
-  //   src: Logo_gjcf,
-  //   href: 'http://www.gjcf.or.kr/',
-  // },
-
-  // {
-  //   title: '고령군',
-  //   src: Logo_goryeong,
-  //   href: 'https://www.goryeong.go.kr/',
-  // },
-  // {
-  //   title: '경상남도',
-  //   src: Logo_gyeongnam,
-  //   href: 'https://www.gyeongnam.go.kr/',
-  // },
-  // {
-  //   title: '인천광역시 교육청',
-  //   src: Logo_incheon_edu,
-  //   href: 'https://www.ice.go.kr/',
-  // },
-  // {
-  //   title: '인터넷 토마토',
-  //   src: Logo_internet_tomato,
-  //   href: 'https://www.emato.net/',
-  // },
-  // {
-  //   title: '전주시',
-  //   src: Logo_jeonju,
-  //   href: 'https://www.jeonju.go.kr/',
-  // },
-  // {
-  //   title: '전라남도 교육청',
-  //   src: Logo_jeonnam_edu,
-  //   href: 'https://www.jne.go.kr/',
-  // },
-  // {
-  //   title: '한국 스마트그리드 사업단',
-  //   src: Logo_ksgl,
-  //   href: 'https://www.smartgrid.or.kr',
-  // },
-  // {
-  //   title: 'kt ucloud biz',
-  //   src: Logo_kt_ucloud,
-  //   href: 'https://cloud.kt.com/',
-  // },
-
-  // {
-  //   title: '여주대학교',
-  //   src: Logo_yit,
-  //   href: 'https://www.yit.ac.kr/',
-  // },
 ];
 
 export default function HomePage() {
