@@ -38,8 +38,12 @@ export default function Header(ref: React.MutableRefObject<TNullable<HTMLDivElem
     if (asPath.startsWith('/about')) {
       if (asPath.includes('infra')) {
         return 'bg-[#17244F]';
-      } else if (asPath.includes('performance')) {
+      }
+      if (asPath.includes('performance')) {
         return 'bg-[#000000]';
+      }
+      if (asPath.includes('effect')) {
+        return 'bg-[#000020]';
       }
     }
 
@@ -49,10 +53,6 @@ export default function Header(ref: React.MutableRefObject<TNullable<HTMLDivElem
   const headerRef = useRef<TNullable<HTMLDivElement>>(null);
 
   const bigScreen = useMediaQuery({ query: '(min-width: 768px)' });
-
-  useEffect(() => {
-    console.log(headerColor);
-  }, [headerColor]);
 
   const toggleMenu = () => {
     setIsWhiteHeader(prevState => !prevState);
@@ -188,7 +188,13 @@ export default function Header(ref: React.MutableRefObject<TNullable<HTMLDivElem
                   {isTextWhitePage && isCurrentScrollTop && !isSubMenuOpen ? (
                     <WhiteBurgerSVG width={'26'} height={'26'} />
                   ) : (
-                    <BlackBurgerSVG width={'26'} height={'26'} />
+                    <>
+                      {headerColor === 'bg-[white]' ? (
+                        <BlackBurgerSVG width={'26'} height={'26'} />
+                      ) : (
+                        <WhiteBurgerSVG width={'26'} height={'26'} />
+                      )}
+                    </>
                   )}
                 </div>
               )}

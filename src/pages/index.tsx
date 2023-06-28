@@ -40,15 +40,15 @@ const sliderData: SliderData[] = [
     title: '단일 플랫폼으로 기존의 복잡한 인프라에 대한 고민 해결',
     description:
       'ABLESTACK은 서버, 스토리지, 네트워크 인프라를 제공하는 단일 HCI 플랫폼으로 기존 인프라 대비 IT운영 비용이 최대 80% 절감됩니다.',
-    href: '/about/infra',
+    href: '/about/performance',
     bgImage: 'bg-home-header-bg-2',
     contentImage: Header_Content_2,
   },
   {
-    title: '단일 플랫폼으로 기존의 복잡한 인프라에 대한 고민 해결',
+    title: '영상감시 인프라, HCI를 통해 공간 절약,기존장비 재활용으로 혁신',
     description:
-      'ABLESTACK은 서버, 스토리지, 네트워크 인프라를 제공하는 단일 HCI 플랫폼으로 기존 인프라 대비 IT운영 비용이 최대 80% 절감됩니다.',
-    href: '/about/infra',
+      'ABLESTACK는 단일 HCI 플랫폼을 통해 영상감시 인프라를 단순화 시켜 공간을 절약하면서도 높은 성능을 제공하며, 기존 장비와의 호환성 제공으로 기존 영상데이터의 안정적 운영을 보장합니다.',
+    href: '/about/effect',
     bgImage: 'bg-home-header-bg-3',
     contentImage: Header_Content_3,
   },

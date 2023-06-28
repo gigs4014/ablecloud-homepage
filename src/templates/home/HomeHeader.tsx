@@ -49,12 +49,12 @@ export default function HomeHeader({
       {sliderData.map(({ title, description, bgImage, contentImage, href }, index) => {
         return (
           <div key={index} className={cls`relative !flex h-[670px] w-full bg-cover ${bgImage}`}>
-            <div className='m-auto flex w-full max-w-[1400px] items-center justify-between'>
+            <div className='m-auto flex w-full max-w-page-full items-center justify-between'>
               <div className='mx-[40px] text-white'>
                 <div className='mb-[32px] max-w-[455px] text-[32px] font-extrabold leading-[43.57px]'>
                   {title}
                 </div>
-                <div className='mb-[32px] max-w-[594px] text-[16px] leading-[24.52px]'>
+                <div className='mb-[32px] max-w-[650px] text-[16px] leading-[24.52px]'>
                   {description}
                 </div>
                 <CustomLink href={href}>

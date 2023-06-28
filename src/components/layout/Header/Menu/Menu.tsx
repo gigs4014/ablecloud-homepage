@@ -34,6 +34,7 @@ export interface MenuItemProps extends BaseComponentProps {
   children?: ReactNode;
   center?: boolean;
   isProductsAbleStackPage?: boolean;
+  isAboutPage: boolean;
 }
 
 export function MobileMenuItem({
@@ -59,7 +60,7 @@ export function MobileMenuItem({
   );
 
   return (
-    <div className={cls`group h-full w-full py-[20px] text-[#444444] ${className} border-b-1`}>
+    <div className={cls`group h-full w-full py-[20px]  ${className} border-b-1`}>
       <CustomLink href={href}>
         <div
           className={cls`flex h-full w-full items-center justify-between`}
@@ -100,8 +101,12 @@ export function MenuItem({
   children,
   selectedItem,
   className,
+  headerColor,
   isProductsAbleStackPage,
-}: MenuItemProps) {
+  isAboutPage,
+}: MenuItemProps & {
+  headerColor: 'bg-[#17244F]' | 'bg-[#000000]' | 'bg-[white]' | 'bg-[#000020]';
+}) {
   const { label, href, subMenuItems } = item;
 
   const [isSubMenuOpen, setIsSubMenuOpen] = useState<boolean>(false);
@@ -119,12 +124,17 @@ export function MenuItem({
         href={href}
         className={cls`flex h-full w-full items-center justify-center px-4 
        hover:font-[700] hover:text-primary hover:shadow-primary
-        ${isProductsAbleStackPage ? 'text-white' : 'text-[#444444]'}
+        ${isProductsAbleStackPage || isAboutPage ? 'text-white' : 'text-[#444444]'}
         ${isSubMenuOpen && 'hover:shadow-primary '}`}>
         <div>{label ?? children}</div>
       </CustomLink>
       {isSubMenuOpen && subMenuItems && (
-        <SubMenu items={subMenuItems} selectedItem={selectedItem} label={label} />
+        <SubMenu
+          headerColor={headerColor}
+          items={subMenuItems}
+          selectedItem={selectedItem}
+          label={label}
+        />
       )}
     </div>
   );
@@ -152,7 +162,15 @@ export interface SubMenuProps {
   label?: ReactNode;
 }
 
-export function SubMenu({ items, selectedItem, className, label }: SubMenuProps) {
+export function SubMenu({
+  items,
+  selectedItem,
+  headerColor,
+  className,
+  label,
+}: SubMenuProps & {
+  headerColor: 'bg-[#17244F]' | 'bg-[#000000]' | 'bg-[white]' | 'bg-[#000020]';
+}) {
   const subMenuBlock = (subItem: HeaderMenuItem) => (
     <li key={uuid()}>
       <CustomLink href={subItem.href}>
@@ -170,7 +188,9 @@ export function SubMenu({ items, selectedItem, className, label }: SubMenuProps)
 
   return (
     <div
-      className={cls`fixed left-0 flex w-screen justify-center border-t-1 border-borderGray bg-white text-[#444] drop-shadow-lg`}>
+      className={cls`fixed left-0 flex w-screen justify-center border-t-1 border-borderGray ${headerColor} ${
+        headerColor === 'bg-[white]' ? 'text-[#444]' : 'text-white'
+      } drop-shadow-lg`}>
       <div>
         <ul
           className={cls`flex max-w-[1256px] flex-row flex-wrap gap-y-8 px-[42px] py-[48px] ${
