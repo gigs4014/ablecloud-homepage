@@ -37,9 +37,9 @@ const sliderData: SliderData[] = [
     contentImage: Header_Content_1,
   },
   {
-    title: '단일 플랫폼으로 기존의 복잡한 인프라에 대한 고민 해결',
+    title: '가상데스크톱에 대한 불만족, HCI로 관리와 성능 문제 해결',
     description:
-      'ABLESTACK은 서버, 스토리지, 네트워크 인프라를 제공하는 단일 HCI 플랫폼으로 기존 인프라 대비 IT운영 비용이 최대 80% 절감됩니다.',
+      'ABLESTACK은 단일 플랫폼으로 단순하면서도, 가상데스크톱을 위한 고성능 환경을 제공하여 기존 가상데스크톱 환경의 복잡성 문제와 성능 문제를 동시에 해결합니다.',
     href: '/about/performance',
     bgImage: 'bg-home-header-bg-2',
     contentImage: Header_Content_2,
