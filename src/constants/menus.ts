@@ -89,6 +89,7 @@ export const menuItems: Array<HeaderMenuItem> = [
   },
   {
     label: '솔루션',
+    href: '/solutions',
     subMenuItems: [
       {
         type: 'group',
