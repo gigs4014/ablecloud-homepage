@@ -66,8 +66,6 @@ export const getStaticProps: GetStaticProps<PostPageProps, PostPageParams> = asy
 export const getStaticPaths: GetStaticPaths<PostPageParams> = async () => {
   const postPaths = await getAllSubPaths(['blog']);
 
-  console.log({ postPaths });
-
   return {
     paths: postPaths.map(postPath => {
       return {
