@@ -14,7 +14,10 @@ function PostListTemplate({
   params: { path: categories = [] } = { path: [] },
 }: PostListTemplateProps & BasePageProps<{ path: string[] }>) {
   const sortingPosts = posts.sort((a, b) => {
-    return Number(b.date) - Number(a.date);
+    const date1 = new Date(a.date);
+    const date2 = new Date(b.date);
+
+    return Number(date2) - Number(date1);
   });
 
   return (
