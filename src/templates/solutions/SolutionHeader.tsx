@@ -45,7 +45,7 @@ export default function SolutionHeader({
         </section>
 
         {imagePosition === 'last' && (
-          <section className='hidden  w-1/2 items-center justify-center overflow-visible md:flex lg:flex'>
+          <section className='hidden w-1/2 items-center justify-center overflow-visible md:flex lg:flex'>
             {image}
           </section>
         )}
