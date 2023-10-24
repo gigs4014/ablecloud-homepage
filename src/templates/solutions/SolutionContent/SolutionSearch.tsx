@@ -13,7 +13,7 @@ interface clientList {
   title: string;
   image: JSX.Element;
   description: JSX.Element;
-  href: string;
+  href?: string;
   maintype: string;
   subtype: string;
 }
