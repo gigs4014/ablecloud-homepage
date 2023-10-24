@@ -19,6 +19,12 @@ import Logo_Article_1_9 from '@/public/images/new/interview/article_1_9.svg';
 import Logo_Article_1_10 from '@/public/images/new/interview/article_1_10.svg';
 import Logo_Article_1_11 from '@/public/images/new/interview/article_1_11.svg';
 import Logo_Article_1_12 from '@/public/images/new/interview/article_1_12.svg';
+import Logo_Article_1_13 from '@/public/images/new/interview/article_1_13.svg';
+import Logo_Article_1_14 from '@/public/images/new/interview/article_1_14.svg';
+import Logo_Article_1_15 from '@/public/images/new/interview/article_1_15.svg';
+import Logo_Article_1_16 from '@/public/images/new/interview/article_1_16.svg';
+import Logo_Article_1_17 from '@/public/images/new/interview/article_1_17.svg';
+import Logo_Article_1_18 from '@/public/images/new/interview/article_1_18.svg';
 
 export const clients = [
   {
@@ -110,6 +116,48 @@ export const clients = [
     image: <Logo_Article_1_12 />,
     description: <p>문서중앙화</p>,
     href: '/interview/dtaq',
+    maintype: '산업',
+    subtype: 'Solution',
+  },
+  {
+    title: '고령군청',
+    image: <Logo_Article_1_13 />,
+    description: <p>서버 가상화</p>,
+    maintype: '산업',
+    subtype: 'Solution',
+  },
+  {
+    title: '합천군청',
+    image: <Logo_Article_1_14 />,
+    description: <p>영상감시 통합 플랫폼</p>,
+    maintype: '산업',
+    subtype: 'Solution',
+  },
+  {
+    title: '상주시청',
+    image: <Logo_Article_1_15 />,
+    description: <p>영상 감시 수집</p>,
+    maintype: '산업',
+    subtype: 'Solution',
+  },
+  {
+    title: '전력연구원',
+    image: <Logo_Article_1_16 />,
+    description: <p>Citrix 가상데스크톱</p>,
+    maintype: '산업',
+    subtype: 'Solution',
+  },
+  {
+    title: '방위사업청',
+    image: <Logo_Article_1_17 />,
+    description: <p>원가 관리 빅데이터</p>,
+    maintype: '산업',
+    subtype: 'Solution',
+  },
+  {
+    title: '육군본부',
+    image: <Logo_Article_1_18 />,
+    description: <p>스마트부대</p>,
     maintype: '산업',
     subtype: 'Solution',
   },
