@@ -198,15 +198,15 @@ export default function InterViewsPage() {
   return (
     <>
       <NextSeo
-        title='파트너'
-        description='파트너'
+        title='성공 사례'
+        description='성공 사례'
         openGraph={{
           type: 'website',
           url: 'https://www.ablecloud.io/interview',
           images: [
             {
               url: '',
-              alt: '파트너',
+              alt: '성공 사례',
             },
           ],
         }}
