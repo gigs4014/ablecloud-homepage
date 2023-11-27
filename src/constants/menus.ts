@@ -38,10 +38,6 @@ import { HeaderMenuItem } from '@/types';
 
 export const menuItems: Array<HeaderMenuItem> = [
   {
-    label: '회사소개',
-    href: '/company',
-  },
-  {
     label: '제품',
     subMenuItems: [
       {
@@ -152,6 +148,10 @@ export const menuItems: Array<HeaderMenuItem> = [
   {
     label: '제품문의',
     href: '/company/contact/inquire',
+  },
+  {
+    label: '회사소개',
+    href: '/company',
   },
 ];
 
