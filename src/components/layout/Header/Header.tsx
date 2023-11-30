@@ -12,8 +12,8 @@ import { cls } from '@/utils';
 
 import { CustomLink } from '@/components/common';
 
-import Logo_ablecloud_default from '@/public/images/logos/ablecloud_logo_default.svg';
-import Logo_ablecloud_white from '@/public/images/logos/ablecloud_logo_white.svg';
+import Logo_ablestack_default from '@/public/images/logos/ablestack_logo_default.svg';
+import Logo_ablestack_white from '@/public/images/logos/ablestack_logo_white.svg';
 import BlackBurgerSVG from '@/public/images/new/burger.svg';
 import BlackCloseSVG from '@/public/images/new/close.svg';
 import WhiteBurgerSVG from '@/public/images/new/white_burger.svg';
@@ -21,7 +21,7 @@ import WhiteCloseSVG from '@/public/images/new/white_close.svg';
 
 import { MenuItem, MobileMenuItem, getSelectedItem } from './Menu';
 
-export default function Header(ref: React.MutableRefObject<TNullable<HTMLDivElement>>) {
+export default function Header() {
   const { asPath } = useRouter();
 
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
@@ -92,13 +92,16 @@ export default function Header(ref: React.MutableRefObject<TNullable<HTMLDivElem
 
   useEffect(() => {
     setIsBigScreen(bigScreen);
+    setIsMobileMenu(false);
+    setIsWhiteHeader(false);
+    setIsSubMenuOpen(false);
   }, [bigScreen]);
 
   return (
     <header
       ref={headerRef}
       className={`fixed top-0 z-20 flex ${
-        isBigScreen ? 'h-[110px]' : 'min-h-[60px]'
+        isBigScreen ? 'h-[80px]' : 'min-h-[60px]'
       } w-full items-center justify-center ${isSubMenuOpen && `${headerColor}`} ${
         isCurrentScrollTop ? (!isWhiteHeader ? 'bg-none' : `${headerColor}`) : `${headerColor}`
       } `}>
@@ -116,7 +119,7 @@ export default function Header(ref: React.MutableRefObject<TNullable<HTMLDivElem
         <section className='flex w-full items-center justify-between px-2'>
           {/* Logo */}
           <div
-            className='pl-2 pt-1'
+            className='pl-2'
             onClick={() => {
               if (bigScreen) return;
               setIsWhiteHeader(false);
@@ -126,13 +129,13 @@ export default function Header(ref: React.MutableRefObject<TNullable<HTMLDivElem
               {isCurrentScrollTop && !isWhiteHeader && isTextWhitePage && !isSubMenuOpen ? (
                 // isBigScreen &&
                 // !isProductsAbleStackPageException ?
-                <Logo_ablecloud_white width={isBigScreen ? '180' : '125'} />
+                <Logo_ablestack_white width={isBigScreen ? '220' : '150'} />
               ) : (
                 <>
                   {headerColor === 'bg-[white]' ? (
-                    <Logo_ablecloud_default width={isBigScreen ? '180' : '125'} />
+                    <Logo_ablestack_default width={isBigScreen ? '220' : '150'} />
                   ) : (
-                    <Logo_ablecloud_white width={isBigScreen ? '180' : '125'} />
+                    <Logo_ablestack_white width={isBigScreen ? '220' : '150'} />
                   )}
                 </>
               )}
@@ -167,7 +170,7 @@ export default function Header(ref: React.MutableRefObject<TNullable<HTMLDivElem
                     )}
                   </div>
                   <ul
-                    className={cls`absolute top-[46px] left-0 z-30 max-h-[483px] w-full overflow-y-auto  ${headerColor} ${
+                    className={cls`absolute top-[43px] left-0 z-30 max-h-[483px] w-full overflow-y-auto  ${headerColor} ${
                       headerColor === 'bg-[white]' ? 'text-[#444]' : 'text-white'
                     } px-[20px] `}>
                     {menuItems.map(item => (

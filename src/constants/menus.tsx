@@ -1,4 +1,8 @@
+import Link from 'next/link';
+
 import { HeaderMenuItem } from '@/types';
+
+import { Button } from '@/components/common';
 
 /**
 ## 메뉴 구성
@@ -43,6 +47,20 @@ export const menuItems: Array<HeaderMenuItem> = [
       {
         label: 'ABLESTACK HCI',
         href: '/products/ablestack',
+        content: (
+          <div className='flex flex-col gap-4'>
+            <div className='text-[24px] font-bold text-[#2BBBE6]'>ABLESTACK HCI</div>
+            <div className='text-[14px]'>
+              복잡한 구조의 전통적 기업 데이터센터의 문제점을 해결하고 모든 인프라와 플랫폼을 실행할
+              수 있도록 고안된 HCI 플랫폼 입니다.
+            </div>
+            <div>
+              <Link href={'/products/ablestack'}>
+                <Button>자세히 보기</Button>
+              </Link>
+            </div>
+          </div>
+        ),
       },
       {
         type: 'group',
@@ -85,8 +103,24 @@ export const menuItems: Array<HeaderMenuItem> = [
   },
   {
     label: '솔루션',
-    href: '/solutions',
     subMenuItems: [
+      {
+        label: 'SOLUTIONS',
+        href: '/solutions',
+        content: (
+          <div className='flex flex-col gap-4'>
+            <div className='text-[24px] font-bold text-[#2BBBE6]'>솔루션</div>
+            <div className='text-[14px]'>
+              ABLESTACK은 기업의 비즈니스 및<br /> IT혁신을 위한 필수적인 솔루션입니다.
+            </div>
+            <div>
+              <Link href={'/solutions'}>
+                <Button>자세히 보기</Button>
+              </Link>
+            </div>
+          </div>
+        ),
+      },
       {
         type: 'group',
         subMenuItems: [
@@ -142,8 +176,28 @@ export const menuItems: Array<HeaderMenuItem> = [
     href: '/partners',
   },
   {
-    label: '소식',
-    href: '/blog',
+    label: '리소스',
+    subMenuItems: [
+      {
+        content: (
+          <div className='flex flex-col gap-4'>
+            <div className='text-[24px] font-bold text-[#2BBBE6]'>소식</div>
+            <div className='text-[14px]'>
+              에이블스택에 대한
+              <br /> 모든 소식을 확인할 수 있습니다.
+            </div>
+            <div>
+              <Link href={'/blog'}>
+                <Button>자세히 보기</Button>
+              </Link>
+            </div>
+          </div>
+        ),
+      },
+      { label: '소식', href: '/blog' },
+      { label: '동영상', href: '/video' },
+      { label: '백서 / eBook' },
+    ],
   },
   {
     label: '제품문의',

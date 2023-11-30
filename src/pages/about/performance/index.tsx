@@ -110,12 +110,7 @@ const Performance = () => {
           href='/interview'>
           <AboutExample
             mainImage={
-              <embed
-                width='527'
-                height='296'
-                src={`https://www.youtube.com/embed/4xAH-T0Ta_w`}
-                title='YouTube video preview'
-              />
+              <embed width='527' height='296' src={`https://www.youtube.com/embed/4xAH-T0Ta_w`} />
             }
             clientName='경남정보대학'
             title='i Station (ABLESTACK + D Station)'

@@ -113,7 +113,7 @@ export function MenuItem({
 
   return (
     <div
-      className={cls`group h-[110px] w-full ${className}`}
+      className={cls`group h-[80px] w-full ${className}`}
       onMouseOver={() => {
         setIsSubMenuOpen(true);
       }}
@@ -193,34 +193,44 @@ export function SubMenu({
       } drop-shadow-lg`}>
       <div>
         <ul
-          className={cls`flex max-w-[1256px] flex-row flex-wrap gap-y-8 px-[42px] py-[48px] ${
-            label === '제품' ? 'gap-x-[43px]' : 'gap-x-[124px]'
-          } ${className}`}>
-          {/* <div>{label}</div> */}
+          className={cls`flex max-w-[1306px] flex-row flex-wrap gap-y-8 gap-x-[43px] px-[42px]
+          py-[48px] ${className}`}>
           {items.map(item => (
             <li key={uuid()} className={item.type !== 'group' ? 'mb-[10px]' : ''}>
-              <ul className='w-[200px] py-[8px] text-[16px] '>
-                {item.type === 'group' ? (
+              <ul className={`${item.content ? 'w-[250px]' : 'w-[200px]'} py-[8px] text-[16px]`}>
+                {item.content ? (
+                  <>{item.content}</>
+                ) : (
                   <>
-                    {item.label && (
-                      <li className={'mb-[20px] font-[500]'}>
-                        <CustomLink href={item.href} className={`text-red`}>
+                    {item.type === 'group' ? (
+                      <>
+                        {item.label && (
+                          <li className={'mb-[20px] font-[500]'}>
+                            <CustomLink href={item.href} className={`text-red`}>
+                              {item.label}
+                            </CustomLink>
+                          </li>
+                        )}
+                        {item.subMenuItems.map(subMenuBlock)}
+                      </>
+                    ) : (
+                      <li
+                        className={'flex flex-col font-[500]'}
+                        onClick={() => {
+                          if (!item.href) {
+                            alert('준비중인 기능입니다.');
+                          }
+                        }}>
+                        <CustomLink
+                          href={item.href}
+                          className={`${
+                            selectedItem && isIncludedItem(item, selectedItem) && 'text-primary'
+                          }`}>
                           {item.label}
                         </CustomLink>
                       </li>
                     )}
-                    {item.subMenuItems.map(subMenuBlock)}
                   </>
-                ) : (
-                  <li className={'flex flex-col font-[500]'}>
-                    <CustomLink
-                      href={item.href}
-                      className={`${
-                        selectedItem && isIncludedItem(item, selectedItem) && 'text-primary'
-                      }`}>
-                      {item.label}
-                    </CustomLink>
-                  </li>
                 )}
               </ul>
             </li>
