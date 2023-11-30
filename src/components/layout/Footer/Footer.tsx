@@ -70,7 +70,7 @@ function FooterInformation() {
 
 export default function Footer() {
   return (
-    <footer className={`relative w-full`}>
+    <footer className={`relative mt-auto w-full`}>
       {/* simplified logo */}
       {/* copyright */}
       {/* social logos */}

@@ -6,6 +6,7 @@ interface BaseHeaderMenuItem {
   type?: 'group';
   href?: string;
   subMenuItems?: Array<HeaderMenuItem>;
+  content?: ReactNode;
 }
 
 interface GroupHeaderMenuItem extends BaseHeaderMenuItem {
