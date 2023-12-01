@@ -35,8 +35,8 @@ function FooterSite() {
 function FooterInformation() {
   return (
     <section className={'w-full bg-[#414141] py-8'}>
-      <div className='m-auto flex h-full max-w-[1200px] flex-col justify-between px-12 text-white md:flex-row '>
-        <div className='flex flex-col  gap-4 lg:flex-row lg:gap-9 '>
+      <div className='m-auto flex h-full max-w-[1200px] flex-col justify-between px-12 text-[14px] text-white md:flex-row '>
+        <div className='flex flex-col  gap-4 md:flex-row md:gap-9 '>
           <div className='flex flex-col gap-4'>
             <div>
               <span className='font-bold'>회사명 </span>
@@ -70,7 +70,7 @@ function FooterInformation() {
           </div>
         </div>
         <div className='mt-4 flex justify-end md:mt-0'>
-          <Logo_ablecloud_white width={125} />
+          <Logo_ablecloud_white width={175} />
         </div>
       </div>
     </section>

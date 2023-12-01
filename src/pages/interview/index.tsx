@@ -116,7 +116,13 @@ export const clients = [
   {
     title: '국방기술품질원',
     image: <Logo_Article_1_12 />,
-    description: <p>문서중앙화</p>,
+    description: (
+      <p>
+        문서중앙화
+        <br />
+        프라이빗 클라우드
+      </p>
+    ),
     href: '/interview/dtaq',
     maintype: '산업',
     subtype: 'Solution',
