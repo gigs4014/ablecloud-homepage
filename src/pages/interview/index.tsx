@@ -25,6 +25,8 @@ import Logo_Article_1_15 from '@/public/images/new/interview/article_1_15.svg';
 import Logo_Article_1_16 from '@/public/images/new/interview/article_1_16.svg';
 import Logo_Article_1_17 from '@/public/images/new/interview/article_1_17.svg';
 import Logo_Article_1_18 from '@/public/images/new/interview/article_1_18.svg';
+import Logo_Article_1_19 from '@/public/images/new/interview/article_1_19.svg';
+import Logo_Article_1_20 from '@/public/images/new/interview/article_1_20.svg';
 
 export const clients = [
   {
@@ -158,6 +160,20 @@ export const clients = [
     title: '육군본부',
     image: <Logo_Article_1_18 />,
     description: <p>스마트부대</p>,
+    maintype: '산업',
+    subtype: 'Solution',
+  },
+  {
+    title: '경상북도청',
+    image: <Logo_Article_1_19 />,
+    description: <p>서버 가상화</p>,
+    maintype: '산업',
+    subtype: 'Solution',
+  },
+  {
+    title: '한국농어촌공사',
+    image: <Logo_Article_1_20 />,
+    description: <p>서버 가상화</p>,
     maintype: '산업',
     subtype: 'Solution',
   },
