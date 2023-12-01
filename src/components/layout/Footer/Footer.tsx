@@ -1,4 +1,4 @@
-import { footerInformation, footerMenus } from '@/constants';
+import { footerMenus } from '@/constants';
 import { v4 as uuid } from 'uuid';
 
 import { cls } from '@/utils';
@@ -34,34 +34,43 @@ function FooterSite() {
 
 function FooterInformation() {
   return (
-    <section className={'relative w-full bg-[#414141] py-8'}>
-      <div className={'m-auto flex w-full max-w-page-full flex-wrap px-8 md:flex-nowrap'}>
-        <div className='my-6 mr-24 flex items-center md:my-0 '>
-          <Logo_ablecloud_white width={125} />
+    <section className={'w-full bg-[#414141] py-8'}>
+      <div className='m-auto flex h-full max-w-[1200px] flex-col justify-between px-12 text-white md:flex-row '>
+        <div className='flex flex-col  gap-4 lg:flex-row lg:gap-9 '>
+          <div className='flex flex-col gap-4'>
+            <div>
+              <span className='font-bold'>회사명 </span>
+              <span>(주)에이블클라우드</span>
+            </div>
+            <div>
+              <span className='font-bold'>본사 </span>
+              <span>서울특별시 영등포구 영신로 220 KnK디지털타워 1808호</span>
+            </div>
+            <div>
+              <span className='font-bold'>연구소 </span>
+              <span>대전광역시 대덕구 대화로106번길 66 811호 </span>
+            </div>
+            <div>
+              <span className='font-bold'>Copyright (주)에이블클라우드. All Rights Reserved. </span>
+            </div>
+          </div>
+          <div className='flex flex-col gap-4'>
+            <div>
+              <span className='font-bold'>사업자등록번호 </span>
+              <span>886-86-02158</span>
+            </div>
+            <div>
+              <span className='font-bold'>전화 </span>
+              <span>02-456-7667</span>
+            </div>
+            <div>
+              <span className='font-bold'>팩스 </span>
+              <span>02-456-7262</span>
+            </div>
+          </div>
         </div>
-        <div className='flex flex-col'>
-          {footerInformation.map((info, index) => {
-            return (
-              <div key={index}>
-                {info.map((value, index) => {
-                  return (
-                    <div key={index} className={`mr-2 inline-flex tracking-wide text-black`}>
-                      <div className='flex'>
-                        <div className='text-[14px] text-white'>
-                          {value.label}&nbsp;{value.description}
-                        </div>
-                        {info.length > 1 && index + 1 < info.length ? (
-                          <div className='my-1 ml-2 hidden bg-white pr-[1px] md:flex'></div>
-                        ) : (
-                          ''
-                        )}
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            );
-          })}
+        <div className='mt-4 flex justify-end md:mt-0'>
+          <Logo_ablecloud_white width={125} />
         </div>
       </div>
     </section>
