@@ -1,5 +1,7 @@
 import Head from 'next/head';
 
+import { NextSeo } from 'next-seo';
+
 import { BasePageProps, Post } from '@/types';
 
 import { Meta, OpenGraphProps } from '@/components/head';
@@ -22,8 +24,21 @@ function PostListTemplate({
 
   return (
     <div className='w-full bg-[#EEF7FF]'>
-      {/* <PostListTemplateHead posts={posts} categories={categories} /> */}
-
+      <NextSeo
+        title='에이블클라우드 소식'
+        description='에이블클라우드 소식'
+        openGraph={{
+          type: 'website',
+          url: 'https://www.ablecloud.io/blog',
+          images: [
+            {
+              url: '',
+              alt: '에이블클라우드 소식',
+            },
+          ],
+        }}
+      />
+      ;{/* <PostListTemplateHead posts={posts} categories={categories} /> */}
       <PostList posts={sortingPosts} categories={categories} />
     </div>
   );

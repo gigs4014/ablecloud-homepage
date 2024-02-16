@@ -1,6 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 
-import { NextSeo } from 'next-seo';
 import { ParsedUrlQuery } from 'querystring';
 
 import { getAllSubPaths, getPost, getPosts, isCategoryDir } from '@/helpers/post';
@@ -29,21 +28,6 @@ interface PostDetailPageProps extends BasePostPageProps, PostDetailTemplateProps
 type PostPageProps = PostDetailPageProps | PostListPageProps;
 
 export default function PostPage(props: Readonly<PostPageProps>) {
-  <NextSeo
-    title='에이블클라우드 소식'
-    description='에이블클라우드 소식'
-    openGraph={{
-      type: 'website',
-      url: 'https://www.ablecloud.io/blog',
-      images: [
-        {
-          url: '',
-          alt: '에이블클라우드 소식',
-        },
-      ],
-    }}
-  />;
-
   if (props.isDirectory) {
     return <PostListTemplate {...props} />;
   } else {

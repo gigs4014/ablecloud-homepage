@@ -196,7 +196,7 @@ export const menuItems: Array<HeaderMenuItem> = [
       },
       { label: '소식', href: '/blog' },
       { label: '동영상', href: '/video' },
-      { label: '백서 / eBook' },
+      { label: '백서 / eBook', href: '/ebook' },
     ],
   },
   {
