@@ -1,8 +1,7 @@
 {
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    // import 사용 안하는 변수 삭제
-    "source.organizeImports": true
+    "source.organizeImports": "explicit"
   },
   "search.exclude": {
     "**/.yarn": true,
