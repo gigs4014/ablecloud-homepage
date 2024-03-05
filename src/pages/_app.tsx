@@ -7,6 +7,7 @@ import { MDXComponents } from 'mdx/types';
 import moment from 'moment';
 import 'moment/locale/ko';
 
+import '@/components/common/ImageSlider/css.css';
 import { Layout } from '@/components/layout';
 import '@/styles/globals.css';
 
