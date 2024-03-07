@@ -33,8 +33,8 @@
 }
 
 .imgBox img {
-  min-height: 74px;
-  min-width: 2196px;
+  max-height: 57px;
+  max-width: 1673px;
 }
 
 @keyframes scroll {

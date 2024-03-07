@@ -6,8 +6,10 @@ const ImageSlider = () => {
       <div>
         <img src='/images/new/home/header-image-4.png' />
         <img src='/images/new/home/header-image-4.png' />
+        <img src='/images/new/home/header-image-4.png' />
       </div>
       <div>
+        <img src='/images/new/home/header-image-4.png' />
         <img src='/images/new/home/header-image-4.png' />
         <img src='/images/new/home/header-image-4.png' />
       </div>

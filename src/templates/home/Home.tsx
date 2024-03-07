@@ -46,7 +46,7 @@ function HomeTemplate({
               </div>
             </div>
             <Button
-              className='bg-[#18EE94] px-[72px] text-[16px] !font-bold text-black'
+              className='!bg-[#18EE94] px-[72px] text-[16px] !font-bold text-black'
               onClick={() => {
                 window.open('https://cic2024.framer.website/', '_blank');
               }}>
