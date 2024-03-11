@@ -13,6 +13,7 @@ export default function CustomDocument() {
           content='6o5Lcww7U6jkboi0ZpvyonRKDh_L8pEpUUtJFi0exOE'
         />
         <meta name='naver-site-verification' content='cd86f5c2c2f28c7155e44f08d0b23227f4f1181e' />
+        <meta name='naver-site-verification' content='7cb5dfb1b270876005f3f5aa0bca2c671ae4b1f8' />
         {/* filled icon */}
         <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet' />
         <link
