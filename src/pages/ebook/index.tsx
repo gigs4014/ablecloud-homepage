@@ -51,7 +51,7 @@ export default function VideoPage() {
             <Image src={Logo_Article_1_2} />
             <div className='flex flex-col gap-[10px] p-[16px]'>
               <div className='text-[12px] text-[#919191]'>ABLESTACK V2V</div>
-              <div className='text-[16px] font-bold'>VMware를 완벽하게 대체할 수 있는 플랫폼</div>
+              <div className='text-[16px] font-bold'>V사를 완벽하게 대체할 수 있는 플랫폼</div>
               <div className='text-[14px]'>영구 라이센스를 제공하는 ABLESTACK HCI 플랫폼</div>
               <Link href='https://ablestor.com/public/upload/pdf/ABLESTACK_VMWare.pdf'>
                 <a
