@@ -1,11 +1,13 @@
 import { PropsWithChildren } from 'react';
 
+import { v4 as uuid } from 'uuid';
+
 import { BaseComponentProps } from '@/types';
 
-import { Button } from '@/components/common';
+import { CustomSlider } from '@/components/common';
 import { Container } from '@/components/layout';
 
-import { HomeHeaderProps } from './HomeHeader';
+import HomeHeader, { HomeHeaderProps } from './HomeHeader';
 
 export interface HomeTemplateProps extends BaseComponentProps {
   enableProseSpacing?: boolean;
@@ -32,7 +34,7 @@ function HomeTemplate({
   return (
     <>
       <Container.Article enableProseSpacing={enableProseSpacing} className={className}>
-        <div className='not-prose relative flex h-[560px] justify-center bg-home-header-bg-6 bg-cover'>
+        {/* <div className='not-prose relative flex h-[560px] justify-center bg-home-header-bg-6 bg-cover'>
           <div className='flex w-page-full flex-col gap-[50px] pt-[120px]'>
             <div className='flex flex-col items-start gap-[40px] px-4'>
               <div className='max-w-[454px] text-[30px] font-extrabold leading-normal text-white lg:text-[36px]'>
@@ -55,15 +57,13 @@ function HomeTemplate({
                 </Button>
               </div>
             </div>
-
-            {/* <ImageSlider /> */}
           </div>
-        </div>
-        {/* <CustomSlider settingsOverrides={headerSliderSettings}>
+        </div> */}
+        <CustomSlider settingsOverrides={headerSliderSettings}>
           {headerContents.map(headerContent => (
             <HomeHeader key={uuid()} {...headerContent} />
           ))}
-        </CustomSlider> */}
+        </CustomSlider>
 
         {children}
       </Container.Article>

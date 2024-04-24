@@ -16,6 +16,7 @@ export interface SliderData {
   href: string;
   title: string;
   description: string;
+  isBlank?: boolean;
 }
 
 export interface HomeHeaderProps extends BaseComponentProps {
@@ -46,7 +47,7 @@ export default function HomeHeader({
 
   return (
     <Slider {...options} className='not-prose'>
-      {sliderData.map(({ title, description, bgImage, contentImage, href }, index) => {
+      {sliderData.map(({ title, description, bgImage, contentImage, href, isBlank }, index) => {
         return (
           <div key={index} className={cls`relative !flex h-[560px] w-full bg-cover ${bgImage}`}>
             <div className='m-auto flex w-full max-w-page-full items-center justify-between'>
@@ -57,7 +58,7 @@ export default function HomeHeader({
                 <div className='mb-[32px] max-w-[650px] text-[16px] leading-[24.52px]'>
                   {description}
                 </div>
-                <CustomLink href={href}>
+                <CustomLink href={href} isBlank={isBlank}>
                   <Button
                     className={'mt-5 w-full max-w-[240px] !border-[white] !text-[white]'}
                     bordered>

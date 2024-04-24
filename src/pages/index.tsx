@@ -26,8 +26,18 @@ import Logo_Article_4_5 from '@/public/images/new/home/article_4_5.svg';
 import Header_Content_1 from '@/public/images/new/home/header-image-1.png';
 import Header_Content_2 from '@/public/images/new/home/header-image-2.png';
 import Header_Content_3 from '@/public/images/new/home/header-image-3.png';
+import Header_Content_4 from '@/public/images/new/home/header-image-4.png';
 
 const sliderData: SliderData[] = [
+  {
+    title: '외산 가상화 구독형 라이선스를 단일 HCI 플랫폼으로',
+    description:
+      'ABLESTACK은 모든 기능이 단일 영구 라이선스로 제공되며 기존의 외산 구독형 가상화 인프라를 쉽게 전환할 수 있어 최소 35% 비용을 절감할 수 있습니다.',
+    href: 'https://ablestor.com/public/upload/pdf/ABLESTACK_VMWare.pdf',
+    bgImage: 'bg-custom-gradient',
+    contentImage: Header_Content_4,
+    isBlank: true,
+  },
   {
     title: '단일 플랫폼으로 기존의 복잡한 인프라에 대한 고민 해결',
     description:
@@ -208,7 +218,7 @@ export default function HomePage() {
           }>
           <div className='flex justify-center'>
             <CustomLink hoverBehavior='none'>
-              <Button bordered className='mt-12 bg-white'>
+              <Button bordered className='mt-12 bg-white'>ㄱ
                 Isation 보러가기
               </Button>
             </CustomLink>
