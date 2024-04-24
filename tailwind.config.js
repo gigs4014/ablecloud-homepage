@@ -22,6 +22,7 @@ module.exports = {
   darkMode: 'class',
   theme: {
     backgroundImage: {
+      'custom-gradient': 'linear-gradient(92deg, #000203 0.1%, #00070C 98.07%)',
       'home-header-bg-1': "url('/images/new/home/home-header-1.png')",
       'home-header-bg-2': "url('/images/new/home/home-header-2.png')",
       'home-header-bg-3': "url('/images/new/home/home-header-3.png')",
