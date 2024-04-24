@@ -68,7 +68,7 @@ export const menuItems: Array<HeaderMenuItem> = [
         subMenuItems: [
           { label: 'Glue 스토리지', href: '/products/ablestack/glue' },
           { label: 'Cell 가상화', href: '/products/ablestack/cell' },
-          { label: 'Koral 쿠버네테스 엔진', href: '/products/ablestack/koral' },
+          { label: 'Koral 쿠버네티스 엔진', href: '/products/ablestack/koral' },
           { label: 'Track 네트워크 및 보안', href: '/products/ablestack/track' },
         ],
       },
