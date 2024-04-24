@@ -27,6 +27,7 @@ module.exports = {
       'home-header-bg-3': "url('/images/new/home/home-header-3.png')",
       'home-header-bg-4': "url('/images/new/home/home-header-4.png')",
       'home-header-bg-5': "url('/images/new/home/header-image-4.png')",
+      'home-header-bg-6': "url('/images/new/home/home-header-5.png')",
       'company-header-bg': "url('/images/new/company/company-header-bg.svg')",
       'product-header-bg': "url('/images/new/product/product-header-bg.svg')",
       'kacpta-header-bg': "url('/images/new/interview/clientbgimage/KacptaBgImage.png')",
