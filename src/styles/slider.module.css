@@ -33,6 +33,7 @@
 
 .slick-list {
   position: relative;
+  width: 100%;
 
   display: block;
   overflow: hidden;
@@ -308,7 +309,7 @@
 }
 
 .slide {
-  background: linear-gradient(134.81deg, #FE0048 -1.1%, #0024B1 57.17%, #0DBABA 101.57%);
+  background: linear-gradient(134.81deg, #fe0048 -1.1%, #0024b1 57.17%, #0dbaba 101.57%);
 }
 
 .slide-font {
