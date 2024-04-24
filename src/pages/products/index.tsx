@@ -39,7 +39,7 @@ const items: Record<string, Array<ProductContentGridItem>> = {
     },
     {
       title: 'Koral',
-      summary: '쿠버네테스 클러스터',
+      summary: '쿠버네티스 클러스터',
       href: '/products/ablestack/koral',
     },
     {
