@@ -7,6 +7,7 @@ import { MDXComponents } from 'mdx/types';
 import moment from 'moment';
 import 'moment/locale/ko';
 
+import '@/components/common/ImageSlider/css.css';
 import { Layout } from '@/components/layout';
 import '@/styles/globals.css';
 
@@ -18,7 +19,7 @@ const components: MDXComponents = {
   img: ResponsiveImage,
 };
 
-export default function CustomApp({ Component, pageProps, router }: AppProps) {
+export default function CustomApp({ Component, pageProps, router }: AppProps<any>) {
   return (
     <MDXProvider components={components}>
       {/* <DarkModeProvider> */}

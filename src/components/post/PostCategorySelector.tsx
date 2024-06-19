@@ -18,7 +18,6 @@ function PostCategorySelector({ onChange, ...props }: PostCategorySelectorProps)
   );
 
   if (error) {
-    console.log(error);
     return null;
   }
 

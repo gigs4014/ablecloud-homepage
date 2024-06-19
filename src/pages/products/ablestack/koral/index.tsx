@@ -58,10 +58,10 @@ export default function AblestackKoralPage() {
           <ProductContent.Description
             contents={[
               {
-                title: '자동화된 쿠버네테스 클러스터 배포',
+                title: '자동화된 쿠버네티스 클러스터 배포',
                 descriptions: [
-                  '원클릭 쿠버네테스 배포',
-                  '쿠버네테스 운영에 필요한 모든 구성요소 내장',
+                  '원클릭 쿠버네티스 배포',
+                  '쿠버네티스 운영에 필요한 모든 구성요소 내장',
                 ],
               },
               {

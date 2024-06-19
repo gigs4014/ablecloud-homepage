@@ -1,7 +1,23 @@
+// import { RiArrowLeftSLine, RiArrowRightSLine } from 'react-icons/Ri';
 import { ReactNode } from 'react';
+
+import Image from 'next/image';
+
+import Slider from 'react-slick';
 
 import { BaseComponentProps } from '@/types';
 import { cls } from '@/utils';
+
+import { Button, CustomLink } from '@/components/common';
+
+export interface SliderData {
+  bgImage: string;
+  contentImage: StaticImageData;
+  href: string;
+  title: string;
+  description: string;
+  isBlank?: boolean;
+}
 
 export interface HomeHeaderProps extends BaseComponentProps {
   title?: string;
@@ -9,39 +25,54 @@ export interface HomeHeaderProps extends BaseComponentProps {
   headerExtra?: ReactNode;
   bgImage?: string;
   textColor?: string;
-  bgVideo?: any;
+  sliderData: SliderData[];
+  href?: string;
 }
 
 export default function HomeHeader({
-  title,
-  description,
-  headerExtra,
-  bgImage,
   className,
-  bgVideo,
+  sliderData,
   textColor = 'text-white',
 }: HomeHeaderProps) {
-  return (
-    <>
-      <header
-        className={cls`not-prose relative flex h-full min-h-[670px] w-full justify-center overflow-hidden bg-cover ${bgImage} ${className}`}>
-        <video muted autoPlay loop playsInline className='absolute h-full w-full object-cover'>
-          <source src={bgVideo} type='video/mp4' />
-        </video>
-        <div className='z-10 flex max-w-page-full items-center space-x-8 px-8'>
-          {/* info */}
-          <section className={`${textColor} text-center`}>
-            <p className={'m-0 pt-24 pb-8 text-[42px] font-[800] leading-[52.42px]'}>{title}</p>
-            {typeof description === 'string' ? (
-              <p className={'m-0 text-[18px] font-[400] leading-[26.06px]'}>{description}</p>
-            ) : (
-              description
-            )}
+  const options = {
+    dots: true,
+    infinite: true,
+    speed: 2000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    arrows: false,
+  };
 
-            {headerExtra && <div className={'mt-[40px] bg-transparent'}>{headerExtra}</div>}
-          </section>
-        </div>
-      </header>
-    </>
+  return (
+    <Slider {...options} className='not-prose'>
+      {sliderData.map(({ title, description, bgImage, contentImage, href, isBlank }, index) => {
+        return (
+          <div key={index} className={cls`relative !flex h-[560px] w-full bg-cover ${bgImage}`}>
+            <div className='m-auto flex w-full max-w-page-full items-center justify-between'>
+              <div className='mx-[40px] text-white'>
+                <div className='mb-[32px] max-w-[455px] text-[32px] font-extrabold leading-[43.57px]'>
+                  {title}
+                </div>
+                <div className='mb-[32px] max-w-[650px] text-[16px] leading-[24.52px]'>
+                  {description}
+                </div>
+                <CustomLink href={href} isBlank={isBlank}>
+                  <Button
+                    className={'mt-5 w-full max-w-[240px] !border-[white] !text-[white]'}
+                    bordered>
+                    자세히보기
+                  </Button>
+                </CustomLink>
+              </div>
+              <div className='hidden lg:flex'>
+                <Image src={contentImage} />
+              </div>
+            </div>
+          </div>
+        );
+      })}
+    </Slider>
   );
 }

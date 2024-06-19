@@ -23,7 +23,7 @@ interface ActionCardProps extends CardProps {
 }
 
 interface NormalCard extends CardProps {
-  href: string;
+  href?: string;
 }
 
 export function ActionCard({
@@ -187,19 +187,36 @@ export function ItemCard({
 
 export function NormalCard({ title, image, description, href }: NormalCard) {
   return (
-    <Link href={href}>
-      <div
-        className={
-          'not-prose flex max-h-[320px] w-full items-center justify-center rounded-[10px] border-2 transition-all hover:translate-y-1 hover:scale-102 hover:shadow-ic xl:border-0'
-        }>
-        <div>
-          <div className='flex h-[150px] w-full items-center justify-center'>{image}</div>
-          <div className='m-auto max-w-[380px] pb-4 text-center'>
-            <p className='my-2 text-[20px] font-medium'>{title}</p>
-            <div className='px-6'>{description}</div>
+    <>
+      {href ? (
+        <Link href={href}>
+          <div
+            className={
+              'not-prose flex max-h-[320px] w-full items-center justify-center rounded-[10px] border-2 transition-all hover:translate-y-1 hover:scale-102 hover:shadow-ic xl:border-0'
+            }>
+            <div>
+              <div className='flex h-[150px] w-full items-center justify-center'>{image}</div>
+              <div className='m-auto max-w-[380px] pb-4 text-center'>
+                <p className='my-2 text-[20px] font-medium'>{title}</p>
+                <div className='px-6'>{description}</div>
+              </div>
+            </div>
+          </div>
+        </Link>
+      ) : (
+        <div
+          className={
+            'not-prose flex max-h-[320px] w-full items-center justify-center rounded-[10px] border-2 transition-all hover:translate-y-1 hover:scale-102 hover:shadow-ic xl:border-0'
+          }>
+          <div>
+            <div className='flex h-[150px] w-full items-center justify-center'>{image}</div>
+            <div className='m-auto max-w-[380px] pb-4 text-center'>
+              <p className='my-2 text-[20px] font-medium'>{title}</p>
+              <div className='px-6'>{description}</div>
+            </div>
           </div>
         </div>
-      </div>
-    </Link>
+      )}
+    </>
   );
 }

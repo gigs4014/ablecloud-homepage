@@ -1,5 +1,7 @@
 import Head from 'next/head';
 
+import { NextSeo } from 'next-seo';
+
 import { BasePageProps, Post } from '@/types';
 
 import { Meta, OpenGraphProps } from '@/components/head';
@@ -13,12 +15,32 @@ function PostListTemplate({
   posts,
   params: { path: categories = [] } = { path: [] },
 }: PostListTemplateProps & BasePageProps<{ path: string[] }>) {
-  return (
-    <>
-      <PostListTemplateHead posts={posts} categories={categories} />
+  const sortingPosts = posts.sort((a, b) => {
+    const date1 = new Date(a.date);
+    const date2 = new Date(b.date);
 
-      <PostList posts={posts} categories={categories} />
-    </>
+    return Number(date2) - Number(date1);
+  });
+
+  return (
+    <div className='w-full bg-[#EEF7FF]'>
+      <NextSeo
+        title='에이블클라우드 소식'
+        description='에이블클라우드 소식'
+        openGraph={{
+          type: 'website',
+          url: 'https://www.ablecloud.io/blog',
+          images: [
+            {
+              url: '',
+              alt: '에이블클라우드 소식',
+            },
+          ],
+        }}
+      />
+      ;{/* <PostListTemplateHead posts={posts} categories={categories} /> */}
+      <PostList posts={sortingPosts} categories={categories} />
+    </div>
   );
 }
 

@@ -16,6 +16,7 @@ export interface CustomLinkProps extends BaseComponentProps, Omit<LinkProps, 'hr
    */
   hoverBehavior?: 'color' | 'underline' | 'none';
   linkBy?: 'anchor' | 'event';
+  isBlank?: boolean;
 }
 
 export default function CustomLink({
@@ -25,6 +26,7 @@ export default function CustomLink({
   style,
   hoverBehavior = 'color',
   linkBy = 'anchor',
+  isBlank,
   ...linkProps
 }: CustomLinkProps) {
   const bigScreen = useMediaQuery({ query: '(min-width: 768px)' });
@@ -59,7 +61,10 @@ export default function CustomLink({
 
   return (
     <Link href={href} passHref {...linkProps}>
-      <a className={bigScreen ? className : ''} style={style}>
+      <a
+        target={isBlank ? '_blank' : undefined}
+        className={bigScreen ? className : ''}
+        style={style}>
         {children}
       </a>
     </Link>

@@ -6,6 +6,24 @@
 
 ## Getting Started
 
+
+*필독*
+해당 레파지토리는 yarn berry를 사용중입니다 yarn berry typescript 호한성 문제로 clone 후 해주셔야 할 부분이 있습니다.
+
+https://velog.io/@jungmiin/yarn-berry%EC%97%90%EC%84%9C%EC%9D%98-cannot-find-module-%EC%97%90%EB%9F%AC-%ED%95%B4%EA%B2%B0
+해당 블로그글을 참고하셔서
+
+yarn dlx @yarnpkg/sdks vscode
+
+Ctrl + Shift + P
+
+Select Typescript Version
+
+Use Workspace Version 클릭
+
+위와 같은 명령어 세팅을 해주셔야 합니다.
+
+
 [Yarn berry](https://github.com/yarnpkg/berry)를 사용한 리파지터리이므로 만약 yarn이 설치되어있지 않다면 아래 명령어를 통해 yarn을 먼저 설치해야 합니다
 
 ```bash

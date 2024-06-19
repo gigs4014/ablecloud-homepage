@@ -16,14 +16,19 @@ const width = ({ theme, breakpoints, colors, negative }, ...args) => {
 /**
  * @type {TailwindConfig}
  */
+
 module.exports = {
   content: ['./src/{pages,components,templates}/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'class',
   theme: {
     backgroundImage: {
-      'home-header-bg': "url('/images/new/home/home-header-bg.svg')",
-      'home-header-bg-2': "url('/images/new/home/home-header-bg-2.svg')",
-      'home-header-bg-3': "url('/images/new/home/home-header-bg-3.svg')",
+      'custom-gradient': 'linear-gradient(92deg, #000203 0.1%, #00070C 98.07%)',
+      'home-header-bg-1': "url('/images/new/home/home-header-1.png')",
+      'home-header-bg-2': "url('/images/new/home/home-header-2.png')",
+      'home-header-bg-3': "url('/images/new/home/home-header-3.png')",
+      'home-header-bg-4': "url('/images/new/home/home-header-4.png')",
+      'home-header-bg-5': "url('/images/new/home/header-image-4.png')",
+      'home-header-bg-6': "url('/images/new/home/home-header-5.png')",
       'company-header-bg': "url('/images/new/company/company-header-bg.svg')",
       'product-header-bg': "url('/images/new/product/product-header-bg.svg')",
       'kacpta-header-bg': "url('/images/new/interview/clientbgimage/KacptaBgImage.png')",

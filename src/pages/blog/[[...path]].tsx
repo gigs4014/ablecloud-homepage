@@ -1,5 +1,4 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
-import { useRouter } from 'next/router';
 
 import { ParsedUrlQuery } from 'querystring';
 
@@ -29,12 +28,6 @@ interface PostDetailPageProps extends BasePostPageProps, PostDetailTemplateProps
 type PostPageProps = PostDetailPageProps | PostListPageProps;
 
 export default function PostPage(props: Readonly<PostPageProps>) {
-  const router = useRouter();
-
-  if (router.isFallback) {
-    return <div>Loading...</div>;
-  }
-
   if (props.isDirectory) {
     return <PostListTemplate {...props} />;
   } else {

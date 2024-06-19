@@ -186,18 +186,17 @@ export async function getPost(slug: string, basePath: string[]): Promise<Post> {
 export async function getPosts(basePath: string[]): Promise<Post[]> {
   const posts: Post[] = [];
 
-  try {
-    const dir = await fs.opendir(path.join(POST_PATH, ...basePath));
-
-    for await (const dirent of dir) {
+  const dir = await fs.opendir(path.join(POST_PATH, ...basePath));
+  for await (const dirent of dir) {
+    try {
       if (dirent.isDirectory()) {
         posts.push(...(await getPosts([...basePath, dirent.name])));
       } else if (isMdxFile(dirent)) {
         posts.push(await getPost(dirent.name.replace(POST_EXT_REGEX, ''), basePath));
       }
+    } catch (e) {
+      console.log('In getPosts', e);
     }
-  } catch (e) {
-    console.log('In getPosts', e);
   }
 
   return posts;

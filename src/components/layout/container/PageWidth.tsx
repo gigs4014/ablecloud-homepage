@@ -20,7 +20,7 @@ export function PageWidth({
       className={cls`flex w-full justify-center self-center ${
         separateWithPeer && 'even:bg-backgroudGray'
       } ${containerClassName}`}>
-      <div className={cls`my-[50px] flex max-w-page-full  flex-1 flex-col ${className}`}>
+      <div className={cls`flex max-w-page-full flex-1  flex-col py-[70px] ${className}`}>
         {children}
       </div>
     </section>
