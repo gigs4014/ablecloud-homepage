@@ -56,7 +56,7 @@ jobs:
       - name: Set Docker image FULL TAG
         run: echo "FULL_TAG=$(if [ "${{ secrets.DOCKER_REGISTRY }}" = "" ];then echo ${DOCKER_REPOSITORY}/ablecloud-homepage:${TAG};else echo ${{ secrets.DOCKER_REGISTRY }}/${DOCKER_REPOSITORY}/ablecloud-homepage:${TAG};fi)" >> $GITHUB_ENV
 
-      - name: Build the Docker image for ablestack-kubernetes-provider
+      - name: Build the Docker image for ablecloud-homepage
         run: docker build . --file Dockerfile --tag ${FULL_TAG}
 
       - name: Push Docker image to Docker Registry
