@@ -1,0 +1,1049 @@
+{
+  "home": {
+    "sliderHeaderDetail": "Learn more",
+    "sliderHeader1": {
+      "mainText": "ABLESTACK",
+      "subText": "v4.0",
+      "description": "ABLESTACK has obtained the Security<br></br>Function Certification."
+    },
+    "sliderHeader2": {
+      "mainText": "A Perfect Alternative to<br></br>Vendor V",
+      "description": "ABLESTACK seamlessly replaces costly<br></br>subscription-based virtual machines."
+    },
+    "sliderHeader3": {
+      "mainText": "Simplify Complex<br></br>Infrastructure",
+      "description": "Consolidate servers, storage, and network<br></br>infrastructure into a single platform —<br></br>reducing costs by up to 80%."
+    },
+    "sliderHeader4": {
+      "mainText": "Solve Virtual Desktop<br></br>Challenges at Once",
+      "description": "Deliver a high-performance virtual<br></br>desktop environment on a unified platform,<br></br>eliminating both complexity and<br></br>performance issues."
+    },
+    "sliderHeader5": {
+      "mainText": "Revolutionary Video<br></br>Surveillance<br></br>Infrastructure",
+      "description": "Leverage your existing equipment while<br></br>dramatically reducing costs with<br></br>ABLESTACK’s all-in-one platform."
+    },
+    "mainCardTitle": "A next-generation platform that brings SDDC to life",
+    "card": {
+      "detail": "Learn more",
+      "main1": "Korea's Only<br></br>Virtualization<br></br>Specialist",
+      "main2": "Unified Virtualization<br></br>& Cloud Platform",
+      "main3": "An all-in-one<br></br>HCI cloud platform"
+    },
+    "mainApplicationCard": "Your Trusted Platform for Sovereign Cloud",
+    "applicationCard": {
+      "detail": "See More Applications",
+      "application1": {
+        "title": "Virtualization",
+        "description": "Virtualization for All Enterprise<br></br>Infrastructure and Applications"
+      },
+      "application2": {
+        "title": "Surveillance",
+        "description": "Powering Intelligent Video Data<br></br>Processing"
+      },
+      "application3": {
+        "title": "Big Data & AI",
+        "description": "Enabling Big Data &<br></br>AI/ML Initiatives<br></br>with Scalable Infrastructure"
+      },
+      "application4": {
+        "title": "Private Cloud",
+        "description": "Scalable HCI-Based Cloud<br></br>for Any Application"
+      },
+      "application5": {
+        "title": "Cloud-Native",
+        "description": "Container-Based<br></br>Microservices on HCI Cloud"
+      }
+    },
+    "mainInterviewTitle": "Why Leading Companies Choose ABLESTACK for Virtualization",
+    "interviewDetail": "See more",
+    "mainBlogCardTitle": "Latest News from ABLECLOUD",
+    "blogDetail": "See more News",
+    "footerCard": {
+      "partner": {
+        "description": "Partner with Us to Drive the<br></br>Future of Virtual and Cloud",
+        "buttonText": "Become a Partner"
+      },
+      "aboutUs": {
+        "description": "Driving Innovation, Creating<br></br>Opportunity",
+        "buttonText": "Learn More About Us"
+      },
+      "news": {
+        "description": "See What's New from<br></br>ABLECLOUD",
+        "buttonText": "View News"
+      },
+      "newsLetter": {
+        "title": "Newsletter",
+        "description": "Get ABLECLOUD News by<br></br>Email",
+        "buttonText": "Subscribe"
+      }
+    }
+  },
+  "header": {
+    "menu1": {
+      "title": "PRODUCTS",
+      "subMenu": [
+        {
+          "title": "ABLESTACK VM"
+        },
+        {
+          "title": "ABLESTACK HCI"
+        }
+      ]
+    },
+    "menu2": {
+      "title": "SOLUTION"
+    },
+    "menu3": {
+      "title": "CLIENTS"
+    },
+    "menu4": {
+      "title": "PARTNER",
+      "subMenu": [
+        {
+          "title": "Partnership Program"
+        },
+        {
+          "title": "Partners"
+        }
+      ]
+    },
+    "menu5": {
+      "title": "RESOURCES",
+      "subMenu": [
+        {
+          "title": "News"
+        },
+        {
+          "title": "Videos"
+        },
+        {
+          "title": "Whitepapers"
+        },
+        {
+          "title": "Compatibility"
+        }
+      ]
+    },
+    "menu6": {
+      "title": "ABOUT US",
+      "subMenu": [
+        {
+          "title": "Company Overview"
+        },
+        {
+          "title": "History"
+        },
+        {
+          "title": "Certifications & Patents"
+        },
+        {
+          "title": "Location"
+        }
+      ]
+    },
+    "contact": "CONTACT"
+  },
+  "footer": {
+    "bizLicense": "Business Registration Number",
+    "name": {
+      "label": "Company Name",
+      "value": "ABLECLOUD Inc."
+    },
+    "headOfficeAddress": {
+      "label": "Head Office",
+      "value": "1901, KNK Digital Tower, 220, Yeongsin-ro, Yeongdeungpo-gu, Seoul, 07228, Republic of Korea"
+    },
+    "rndCenterAddress": {
+      "label": "R&D Center",
+      "value": "Unit 810-2, Pentaplex, 66, Daehwa-ro 106beon-gil, Daedeok-gu, Daejeon, 34365, Republic of Korea"
+    },
+    "contact": {
+      "label": "Tel",
+      "value": "1544-3696"
+    }
+  },
+  "product": {
+    "vm": {
+      "header": {
+        "description": "Best Solution for Server Virtualization",
+        "download": "Download Product Brochure"
+      },
+      "cards": {
+        "title": "Why You Need ",
+        "card": [
+          {
+            "title": "Complete VMWare Replacement",
+            "description": "Seamlessly migrate your existing virtual machines<br></br> without any disruption."
+          },
+          {
+            "title": "Perpetual License, Single Platform",
+            "description": "Minimize costs with a single license, offering server virtualization, cloud management, storage, networking, and more—all on one platform."
+          },
+          {
+            "title": "Use Your Existing Infrastructure",
+            "description": "If you already have existing infrastructure, you can install the solution and start using it immediately, reducing the need for costly additional hardware."
+          }
+        ]
+      },
+      "migration": {
+        "title": "Easy VM Migration (P2V and V2V)",
+        "description": "ABLESTACK comes with built-in tools for virtual machine migration.<br></br> Using the web-based migration tool, you can easily move your desired virtual machines with just a few clicks.",
+        "imageText1": "Unified Monitoring Platform at a Glance",
+        "imageText2": "Seamless Data Migration"
+      },
+      "detail": {
+        "title": "Innovative Virtualization Platform for Cloud Transformation",
+        "description": "ABLESTACK virtualizes enterprise and data center infrastructure, providing an innovative platform to transition to the cloud.<br></br>With a simple licensing model, it offers a wide range of virtualization and cloud functionalities."
+      },
+      "ablestack": {
+        "title": "Components",
+        "service": [
+          {
+            "title": "Cube : OS",
+            "description": "A server OS that includes all ABLESTACK packages"
+          },
+          {
+            "title": "Cell : Virtualization",
+            "description": "Kernel-based hypervisor providing high performance "
+          },
+          {
+            "title": "Glue : Storage",
+            "description": "Software-defined storage based on virtual machines"
+          },
+          {
+            "title": "Mold : Cloud Platform",
+            "description": "A cloud platform for integrated management of virtual machines"
+          },
+          {
+            "title": "Track : Network",
+            "description": "Software-Defined Networking for Virtual Machines and Containers"
+          },
+          {
+            "title": "Wall : Monitoring",
+            "description": "Integrated monitoring platform for all ABLESTACK infrastructure"
+          },
+          {
+            "title": "Koral : K8S Container",
+            "description": "Kubernetes Platform for Cluster Deployment and Management"
+          },
+          {
+            "title": "Genie : Configuration and Deployment Automation",
+            "description": "IaC Platform for Automated Application Deployment and Monitoring"
+          },
+          {
+            "title": "Silo : Storage service",
+            "description": "A Platform Offering Diverse Storage Services"
+          },
+          {
+            "title": "Over : Fault and Disaster Management",
+            "description": "Redundancy and Disaster Recovery Support for Enhanced Reliability"
+          },
+          {
+            "title": "Link : Secure network",
+            "description": "VPC, Micro Segmentation"
+          }
+        ]
+      }
+    },
+    "hci": {
+      "header": {
+        "description": "A Unified HCI Platform for Cloud Data Center Infrastructure",
+        "buttonText": "Download Product Brochure"
+      },
+      "title": "Why is HCI Different?",
+      "cards": [
+        {
+          "title": "Excellent scalability",
+          "description": "Non-disruptive, unlimited node expansion"
+        },
+        {
+          "title": "Simple configuration",
+          "description": "Infrastructure consists of only x86 servers, solving data  center fabric complexity issues"
+        },
+        {
+          "title": "Save power and costs",
+          "description": "Reduce TCO by 70% and reduce power costs  by up to 80%"
+        },
+        {
+          "title": "Simple and quick deployment",
+          "description": "Quick cloud infrastructure deployment within  hours through wizard"
+        }
+      ],
+      "contentCards": [
+        {
+          "title": "Cloud Management Platform",
+          "description": "Centralized infrastructure management through a web-based console.<br></br>Provides multi-hypervisor support, and features such as virtual machines, network, storage, automation, backup, and recovery."
+        },
+        {
+          "title": "Integrated Monitoring Platform",
+          "description": "Real-time performance monitoring for visibility of system health and resource needs.<br></br>Preemptive fault detection and alerts for servers, networks, and storage through service-level monitoring."
+        },
+        {
+          "title": "Easy Deployment via Installation Wizard",
+          "description": "Quick and simple installation of all HCI components using ABLESTACK's deployment wizard.<br></br>Single-platform installation on x86 servers, delivering everything needed for a cloud environment."
+        },
+        {
+          "title": "External Storage Integration",
+          "description": "Supports integration with external storage (SAN/iSCSI), enabling reuse of existing infrastructure.<br></br>Offers multiple storage gateways (block, file, object storage) for flexible use cases."
+        }
+      ]
+    }
+  },
+  "company": {
+    "header": {
+      "title": "Company Overview",
+      "description": "Stay up to data with AbleCloud News"
+    },
+    "tab": [
+      {
+        "text": "Company Overview"
+      },
+      {
+        "text": "History"
+      },
+      {
+        "text": "Certifications & Patents"
+      },
+      {
+        "text": "Location"
+      }
+    ],
+    "about": {
+      "description": [
+        "ABLECLOUD drives innovation through integration,<br></br>simplicity, and autonomy.",
+        "At ABLECLOUD,<br></br>we see endless possibilities through new platforms."
+      ],
+      "content": "Welcome to ABLECLOUD Inc.<br></br>As Korea’s only company specializing exclusively in virtualization platforms, ABLECLOUD leverages its deep expertise in virtualization<br></br>technology, proven cloud infrastructure solutions, and strategic partnerships with leading industry players to support data center operations<br></br>and drive IT innovation for our clients.<br></br>With proprietary capabilities in cutting-edge virtualization technologies — as well as emerging innovations like artificial intelligence and big<br></br>data — we deliver high-value platforms and solutions across public, enterprise, and service sectors. Our offerings include cloud data center<br></br>infrastructure, server virtualization, and virtual desktop environments.<br></br>We are committed to building lasting trust with our clients through continued growth and technological excellence.<br></br>Thank you for visiting us.",
+      "dear": "Co-CEOs\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0Mingil Kwon & Donghyuk Park",
+      "card": [
+        {
+          "title": "Cloud Experts",
+          "description": "Engineer-led with 10+ years of virtualization and HCI expertise"
+        },
+        {
+          "title": "Continuous R&D",
+          "description": "Customer-Centered R&D in<br></br>Virtualization & Enterprise HCI"
+        },
+        {
+          "title": "Smart Cloud Solutions",
+          "description": "Product-Driven Technical Support for Customers and Partners"
+        }
+      ]
+    },
+    "history": {
+      "2021": {
+        "year": "2021",
+        "history": [
+          "AbleStack registered for copyright protection",
+          "GS Grade 1 software quality certification obtained",
+          "Launched AbleStack V1.0",
+          "Certified as an enterprise-affiliated research institute",
+          "Established AbleCloud’s R&D center"
+        ]
+      },
+      "2022": {
+        "year": "2022",
+        "history": [
+          "Registered AbleStack V1.0 for trademark",
+          "Hosted Cloud Innovation 2023",
+          "Signed partnership agreement with ‘GEOMEXSOFT’",
+          "Signed partnership agreement with ‘GNTEL’",
+          "Signed agreement with ‘KACPTA’ for cloud-based data storage",
+          "Developing an HCI-powered DevOps R&D environment for ‘DATASTREMS’",
+          "Deploying an integrated HCI platform for the ‘Hapcheon County Government’",
+          "Deploying an HCI-powered system for document security and centralization at the ‘DTaQ’"
+        ]
+      },
+      "2023": {
+        "year": "2023",
+        "history": [
+          "Signed business agreements with ‘Supersolution’",
+          "Signed business agreements with ‘Xenosolution’",
+          "Signed partnership agreement with ‘XSLAB’",
+          "Hosted Cloud Infinity Conference(CIC) 2023",
+          "Acquired Citrix Ready compatibility certification",
+          "Signed business agreement with ‘Tilon’",
+          "Signed partner contracts with ‘Pharos System’",
+          "Signed partner contracts with ‘INNOGRID’",
+          "Signed partner contracts with ‘SNA’",
+          "Upgrading the ICT network at the ‘Supreme Prosecutors' Office’",
+          "Signed business agreements with ‘INOTIUM’, ‘T3Q’",
+          "‘ROKA HQ’ Intelligent Smart Unit (Phase 3) Pilot Construction Project",
+          "The second project to enhance the Defense Cost Management System (DIDC) for the ‘DAPA’."
+        ]
+      },
+      "2024": {
+        "year": "2024",
+        "history": [
+          "Signed business agreement with ‘ZUNGWON’",
+          "Opened ABLECLOUD Seoul office",
+          "Patent granted for ‘System and Method for Provisioning HCI’",
+          "Business Partnership between ‘Gwangju Metropolitan City’ and Leading AI Firms",
+          "Deployment of HCI-based server virtualization for ‘COOCON’ (Nutanix win-back project)",
+          "Implementation of a cloud-based integrated server system for the ‘DTaQ’",
+          "Deployment of VMS and integrated HCI platform for ‘Yecheon County Office’",
+          "Obtained the ‘National Intelligence Service’ Security Function Certification",
+          "Citrix-based virtual desktop infrastructure (VDI) deployment for ‘KEPCO’",
+          "Hosted Cloud Infinity Conference(CIC) 2024",
+          "Released AbleStack V4.0",
+          "Signed business agreement with ‘HanDreamNet’",
+          "Signed business agreement with ‘AJICT’",
+          "Signed business agreement with ‘INNOGRID’",
+          "Obtained GS Grade 1 Software Quality Certification(v4.0)",
+          ""
+        ]
+      },
+      "2025": {
+        "year": "2025",
+        "history": [
+          "Registered AbleStack V4.0 on Korea Public Procurement Service (3-Party Price Contract)",
+          "Signed Business Agreement with ‘Arconsoft’(PaaS)",
+          "Completed Legacy Server Replacement Project for ‘HectoData’",
+          "Signed Business Agreement with ‘STRATO’",
+          "Deployed Citrix VDI Infrastructure for the ‘Korean National Police Agency’",
+          "Implemented VMS and Server Virtualization for ‘Changwon City Government’",
+          "Implementation of ‘KLID’ records management system (6 systems)",
+          "Deployed Server Virtualization for ‘Busan Regional Office of Oceans and Fisheries’",
+          "Development of an AI-based HCI platform for ‘Gyeonggi Provincial Government’",
+          "Built Autonomous Driving Infrastructure through Open Innovation Project in‘Hwaseong City’",
+          "Upgraded Groupware System for ‘Korea Rural Community Corporation’",
+          "Built Groupware Infrastructure for ‘NOVAREX’",
+          "Deployed Server Virtualization for ‘Korea Institute of Maritime and Fisheries ‘Technology",
+          "Cheongyang-gun County Office Disaster Alert Virtualization Project",
+          "Information System Deployment for the National Evidence-based Healthcare Collaborating Agency (NECA)",
+          "Server Virtualization Deployment for Busan Regional Office of Oceans and Fisheries",
+          "Geospatial Information System Server Virtualization for Jecheon City Hall",
+          "HCI Infrastructure Deployment for Nam-gu Office, Daegu City Hall",
+          "HCI Deployment for Daewoong Pharmaceutical Indonesia",
+          "Smart Trainee System Deployment for the Korea Army Training Center",
+          "Smart Air Base Standard Platform Implementation for the Republic of Korea Air Force"
+        ]
+      }
+    },
+    "certification": [
+      "Certified Corporate R&D Center",
+      "Software Quality Certificate",
+      "Copyright Registration Certificate",
+      "First Korean Company in HCI Sector<br></br>Virtualization Management Security Function Certification",
+      "Patent Acquired<br></br>System and Method for<br></br>Provisioning HCI"
+    ],
+    "location": {
+      "headOffice": {
+        "label": "Head Office",
+        "value": "1901, KNK Digital Tower, 220, Yeongsin-ro, Yeongdeungpo-gu, Seoul, 07228, Republic of Korea",
+        "call": "1544-3696"
+      },
+      "rndCenter": {
+        "label": "R&D Center",
+        "value": "Unit 810-2, Pentaplex, 66, Daehwa-ro 106beon-gil, Daedeok-gu, Daejeon, 34365, Republic of Korea"
+      }
+    }
+  },
+  "solution": {
+    "header": {
+      "title": "Use Cases",
+      "description": "ABLESTACK delivers solutions for any type of application and any business workload — without compromise.<br></br>It is an essential platform for driving both business and IT innovation across the enterprise."
+    },
+    "infra": [
+      {
+        "title": "Server Virtualization",
+        "description": "Virtualize all your enterprise infrastructure and applications to maximize agility and efficiency."
+      },
+      {
+        "title": "Private Cloud",
+        "description": "Strengthen your business with an HCI-based cloud that runs any application and scales effortlessly as needed."
+      },
+      {
+        "title": "Hybrid Cloud",
+        "description": "With ABLESTACK, you can seamlessly expand your on-premises infrastructure to the public cloud."
+      },
+      {
+        "title": "Edge Computing",
+        "description": "Support edge site infrastructure with compact hyper-converged technology, reducing the need for specialized personnel."
+      },
+      {
+        "title": "Secure Infrastructure",
+        "description": "Implement zero-trust policies to effectively prevent cyberattacks and data loss."
+      },
+      {
+        "title": "Backup & Recovery",
+        "description": "Provide integrated backup and recovery for both virtual and legacy environments."
+      },
+      {
+        "title": "Business Continuity & Disaster Recovery",
+        "description": "Ensure continuity with full data backup and multiple recovery options, meeting SLAs at minimal cost."
+      }
+    ],
+    "application": [
+      {
+        "title": "Big Data Analytics",
+        "description": "Leverage the agility of cloud HCI and the convenience of on-premises management for your big data applications."
+      },
+      {
+        "title": "AI / Machine Learning",
+        "description": "Accelerate your AI/ML initiatives with fast, easily scalable AI-ready infrastructure."
+      },
+      {
+        "title": "Virtual Desktop / DaaS",
+        "description": "Provide digital workspaces for employees, offering greater flexibility and boosting productivity."
+      },
+      {
+        "title": "Databases",
+        "description": "Ensure stable operations and actionable insights with ABLESTACK solutions for deploying a variety of commercial databases."
+      },
+      {
+        "title": "Electronic Document Distribution & Management",
+        "description": "Support secure distribution, management, and centralization of critical internal documents with strong fault tolerance and data integrity."
+      },
+      {
+        "title": "Call Center Systems",
+        "description": "Build call center systems that can be accessed anytime, anywhere, on any device."
+      }
+    ],
+    "dev": [
+      {
+        "title": "Development & Testing",
+        "description": "Boost productivity and revenue with efficient, agile development and testing environments that shorten release cycles."
+      },
+      {
+        "title": "DevOps / IT Operations",
+        "description": "Reduce cloud costs and accelerate IT services through best practices in IT automation and DevOps."
+      },
+      {
+        "title": "CI/CD",
+        "description": "Support rapid development and integration in an HCI-based cloud environment, shortening the application lifecycle."
+      }
+    ]
+  },
+  "resources": {
+    "header": {
+      "title": "Resources",
+      "description": "Stay Updated with ABLECLOUD"
+    },
+    "tabs": {
+      "blog": "News",
+      "video": "Videos",
+      "ebook": "Whitepapers",
+      "compatibility": "Compatibility"
+    },
+    "compatibility": [
+      {
+        "title": "Hypervisor Versions",
+        "description": "In addition to the proprietary Cell Hypervisor, Mold supports a variety of hypervisors."
+      },
+      {
+        "title": "Servers",
+        "description": "ABLESTACK can be installed on a wide range of commercial x86 servers."
+      },
+      {
+        "title": "Guest OS",
+        "description": "ABLESTACK supports multiple guest operating systems."
+      },
+      {
+        "title": "Virtualization Applications / Platforms",
+        "description": "ABLESTACK is compatible with the following virtualization applications and platforms."
+      },
+      {
+        "title": "External Storage",
+        "description": "ABLESTACK Mold supports connecting various external storage options beyond Glue SDS, enabling efficient cloud operations."
+      },
+      {
+        "title": "Backup Solutions",
+        "description": "ABLESTACK supports a variety of backup solutions, including the following:"
+      }
+    ],
+    "compatibilityData": {
+      "hypervisor": {
+        "title": "Compatible Hypervisor Versions",
+        "descriptionList": [
+          {
+            "description": "Mold supports a variety of hypervisors in addition to its proprietary Cell Hypervisor.<br></br>The hypervisors that can be centrally managed by Mold include :",
+            "list": [
+              "KVM : Ubuntu 18.04 LTS, 20.04 LTS, CentOS 7, 8, RHEL 7, 8, 9, Rocky Linux 8, 9, openSUSE Leap 15, SUSE Linux Enterprise Server 15",
+              "Citrix Hypervisor : Versions 7.x, 8.x with the latest hotfixes",
+              "XCP-ng : 7.x, 8.x",
+              "VMWare : 6.x, 7.x, 8.x"
+            ]
+          },
+          {
+            "description": "Hypervisors that cannot be centrally managed by Mold but can provide unmanaged HCI through Glue SDS include :",
+            "list": [
+              "All hypervisors listed above that Mold can manage",
+              "Hyper-V : Windows Server 2016 or later, Hyper-V 2016 or later"
+            ]
+          }
+        ]
+      },
+      "server": {
+        "title": "Compatible Servers",
+        "descriptionList": [
+          {
+            "description": "ABLESTACK can be installed on a wide range of commercial x86 servers, including :",
+            "list": [
+              "DELL",
+              "HPE",
+              "Fujitsu",
+              "Lenovo",
+              "Supermicro",
+              "Uniwide",
+              "KTNF",
+              "iSlim",
+              "SNA",
+              "ThreeScore (AMD)"
+            ]
+          }
+        ]
+      },
+      "guest-os": {
+        "title": "Compatible Guest OS",
+        "descriptionList": [
+          {
+            "description": "ABLESTACK supports a wide range of guest operating systems, including :",
+            "list": [
+              "Redhat Enterprise Linux : 6 and above",
+              "Oracle Linux : 6 and above",
+              "SUSE Enterprise Linux : 11 and above",
+              "Ubuntu : 16 and above",
+              "Rocky Linux : 8 and above",
+              "Cent OS : 7 and above",
+              "Windows : 8 and above",
+              "Windows Server : 2012 and above"
+            ]
+          }
+        ]
+      },
+      "virtualization": {
+        "title": "Verified Compatible Virtualization Applications / Platforms",
+        "descriptionList": [
+          {
+            "description": "ABLESTACK is compatible with the following virtualization applications and platforms :",
+            "list": [
+              "Tilon : DStatsion(VDI)",
+              "Citrix : Virtual Apps & Desktops(VDI)",
+              "Innotium : InnoECM(Document Centralization)",
+              "Tmax : Webtob(WEB), Jeus(WAS), Tibero(DB)",
+              "Oracle : Oracle RAC(DB)",
+              "MS : MSSQL(DB)"
+            ]
+          }
+        ]
+      },
+      "external-storage": {
+        "title": "Compatible External Storage",
+        "descriptionList": [
+          {
+            "description": "ABLESTACK Mold supports connecting a variety of external storage options beyond Glue SDS, enabling efficient cloud operations. The following external storage solutions are supported for use as block storage :",
+            "list": [
+              "VMWare : Standard iSCSI, Standard NFS",
+              "Citrix Hypervisor : Standard iSCSI, Standard NFS, SMB",
+              "Microsoft Hyper-V : Standard iSCSI, SMB",
+              "Cell, KVM : Standard iSCSI, Standard NFS / POSIX-compatible storage",
+              "Others : GlusterFS, SolidFire, Ceph RBD, Datera, Cloudbyte, Nexenta, Dell PowerFlex, LINSTOR",
+              "ABLESTACK Proprietary : Glue Block, Glue Filesystem"
+            ]
+          }
+        ]
+      },
+      "backup": {
+        "title": "Compatible Backup Solutions",
+        "descriptionList": [
+          {
+            "description": "ABLESTACK supports a variety of backup solutions, including :",
+            "list": [
+              "Integration with Commvault and Dell Networker backup platforms",
+              "Support for Veeam, Veritas NetBackup, Synology ABB, Acronis, Arcserve, and Unitrends backup solutions"
+            ]
+          }
+        ]
+      }
+    },
+    "ebook": {
+      "data": [
+        {
+          "title": "Blade Server? Now, It's Time for HCI",
+          "description": "Which is the better choice for your business — Blade Servers or HCI?"
+        },
+        {
+          "title": "A Platform That Perfectly Replaces Vendor V",
+          "description": "ABLESTACK HCI offers perpetual licensing for long-term value."
+        },
+        {
+          "title": "Configuring Oracle RAC on ABLESTACK",
+          "description": "Learn how to set up Oracle RAC in the ABLESTACK virtualization environment."
+        },
+        {
+          "title": "ABLTESTACK VMware virtual machine migration",
+          "description": "Virtual machines can be migrated V2V using the built-in migration tool."
+        },
+        {
+          "title": "Migrate an ABLESTACK physical server to a virtual machine",
+          "description": "Methods for converting a physical server into a virtual machine."
+        },
+        {
+          "title": "Comparison table of key licensing features between ABLESTACK and VMware.",
+          "description": "Comparison table of key licensing features between ABLESTACK and VMware."
+        },
+        {
+          "title": "Getting Started with ABLESTACK Kubernetes Clusters",
+          "description": "Deploy Kubernetes clusters using the built-in Koral feature."
+        },
+        {
+          "title": "Integrating ABLESTACK Kubernetes Clusters with the Portainer Platform",
+          "description": "Step-by-step guide to integrating Portainer for seamless application management."
+        },
+        {
+          "title": "Ensuring Business Continuity with ABLESTACK HCI Disaster Recovery",
+          "description": "Build an Active-Active disaster recovery environment using built-in features."
+        },
+        {
+          "title": "Security Management Through ABLESTACK Link Micro-Segmentation",
+          "description": "Manage security more effectively using the built-in Link feature."
+        },
+        {
+          "title": "ABLESTACK Link Load Balancer Appliance Utilization",
+          "description": "Scenarios for applying load balancing with the built-in Link appliance."
+        },
+        {
+          "title": "ABLESTACK vs VMware Performance Comparison",
+          "description": "A detailed performance benchmark under identical environments."
+        },
+        {
+          "title": "ABLESTACK for Commvault Backup Solution",
+          "description": "Commvault Backup Solution Integration Function"
+        },
+        {
+          "title": "Virtualization Platform for CCTV Video Surveillance Systems, ABLESTACK",
+          "description": "Video Surveillance Infrastructure and Control Center Construction"
+        }
+      ]
+    }
+  },
+  "interview": {
+    "header": {
+      "title": "Customers",
+      "description": "ABLESTACK can handle any application regardless of user environment or industry, providing the flexibility, predictability, and reliability needed to deploy and operate even the latest emerging workloads smoothly."
+    },
+    "title": "Customers who transformed their business with ABLESTACK "
+  },
+  "partner": {
+    "header": {
+      "title": "Partners",
+      "description": "Innovative technology, sustainable revenue.<br></br>We are looking for partners to drive the design of the ABLESTACK platform and<br></br>foster joint growth in the server virtualization and HCI markets worldwide."
+    },
+    "title": "A Future of Shared Success",
+    "description": "Innovative technology, sustainable revenue. <br></br> Join us in shaping the HCI market and driving global growth through collaborative success.",
+    "tier": [
+      {
+        "title": "Platinum Partner",
+        "description": "Partners with dedicated sales and technical support teams, capable of close collaboration across all areas, including POCs, deployment, and maintenance."
+      },
+      {
+        "title": "Gold Partner",
+        "description": "Partners with dedicated teams for sales, deployment, and maintenance."
+      },
+      {
+        "title": "Silver Partner",
+        "description": "Partners with dedicated sales teams."
+      },
+      {
+        "title": "VAR Partner",
+        "description": "Partners capable of supplying joint solutions or products in a packaged form."
+      }
+    ],
+    "partnerList": {
+      "title": "Manufacturer Partner",
+      "description": "Current manufacturing partners collaborating with ABLECLOUD.",
+      "list": [
+        {
+          "text": "ABLESTOR"
+        },
+        {
+          "text": "DELL Technologies"
+        },
+        {
+          "text": "HPE"
+        },
+        {
+          "text": "FUJITSU"
+        },
+        {
+          "text": "Lenovo"
+        },
+        {
+          "text": "Super Micro Computer"
+        },
+        {
+          "text": "SUPER SOLUTION"
+        },
+        {
+          "text": "KTNF"
+        },
+        {
+          "text": "UNIWIDE"
+        },
+        {
+          "text": "Ocean Technology"
+        },
+        {
+          "text": "Citrix"
+        },
+        {
+          "text": "Tilon"
+        },
+        {
+          "text": "XENO SOLUTION"
+        },
+        {
+          "text": "NHN CROSSENT"
+        },
+        {
+          "text": "HANDREAMNET"
+        },
+        {
+          "text": "INNOGRID"
+        },
+        {
+          "text": "Acornsoft"
+        },
+        {
+          "text": "INNOTIUM"
+        },
+        {
+          "text": "T3Q"
+        },
+        {
+          "text": "Innodep"
+        },
+        {
+          "text": "XSLAB"
+        },
+        {
+          "text": "Hyosung Information Systems"
+        },
+        {
+          "text": "Zungwon EN-SYS"
+        },
+        {
+          "text": "AJ  ICT"
+        },
+        {
+          "text": "SK shieldus"
+        },
+        {
+          "text": "GNTEL"
+        },
+        {
+          "text": "ITCEN CLOIT"
+        },
+        {
+          "text": "SNA"
+        },
+        {
+          "text": "Daewon CTS"
+        },
+        {
+          "text": "Geomax Soft"
+        }
+      ]
+    },
+    "program": {
+      "header": {
+        "title": "Partnership Program",
+        "description": "Innovative technology, sustainable revenue.<br></br> We are seeking partners to drive the design of the ABLESTACK platform and foster joint growth<br></br>in the server virtualization and HCI markets worldwide."
+      },
+      "title": "Introduction to the Partnership Program",
+      "description": "We offer a flexible and innovative program to collaborate effectively with our partners.",
+      "data": [
+        {
+          "title": "ABLECLOUD Seminar Participation",
+          "description": "Attend conferences and seminars<br></br>Online and offline training and technical support"
+        },
+        {
+          "title": "Customized Partner Training (Monthly)",
+          "description": "Basic Course: 1-Day Program<br></br>Advanced Course : A two-part course covering<br></br>installation and PoC practice"
+        },
+        {
+          "title": "Marketing and Sales Support",
+          "description": "Sales support<br></br>Marketing program support"
+        },
+        {
+          "title": "Partner Day",
+          "description": "Annual event for business partners"
+        }
+      ],
+      "contact": "Contact Us"
+    }
+  },
+  "contact": {
+    "header": {
+      "title": "Contact Us",
+      "description": "For inquiries regarding ABLECLOUD products and solutions, including purchases or general questions,<br></br>please leave your details and we will respond promptly."
+    },
+    "form": {
+      "name": "Name",
+      "companyName": "Company",
+      "position": "Title",
+      "email": "Email",
+      "phone": "Phone",
+      "type": "Category",
+      "message": "Message",
+      "button": "Submit Inquiry",
+      "sales": "sales",
+      "techSupport": "techSupport",
+      "estimation": "estimation",
+      "submit": {
+        "title": "Thank you for submitting your inquiry.",
+        "description": "We will review your message and get back to you shortly.<br></br>If you have any further questions, please feel free to contact us at the email address below",
+        "button": "Home"
+      }
+    },
+    "footer": {
+      "title": "Sales / Technical Support Email",
+      "contact": [
+        "Sales / Marketing : sales@ablestack.co.kr",
+        "Technical Support : support@ablecloud.io"
+      ]
+    }
+  },
+  "products": {
+    "header": {
+      "cube": {
+        "title": "Cube os",
+        "description": "Cube is a Linux-based server OS that includes all ABLESTACK software packages, configuration wizards, and a web-based host management platform."
+      },
+      "cell": {
+        "title": "Cell Virtualization",
+        "description": "Cell is a hypervisor designed to run virtual machines or containers by allocating specific zones within a host. It provides a platform environment that divides a host's resources into smaller units—like individual “cells” or “rooms”—to execute virtual machines dedicated to different roles."
+      },
+      "glue": {
+        "title": "Glue Storage",
+        "description": "Glue is the name of ABLESTACK’s storage platform. It leverages the disks within the host to provide a unified storage space and deliver various types of storage services, perfectly embodying the characteristics of HCI storage. The name “Glue” signifies integrated storage, representing its role in connecting and managing data seamlessly."
+      },
+      "mold": {
+        "title": "Mold Management",
+        "description": "Mold is a platform that enables the creation and operation of virtual machines while providing a wide range of cloud and virtualization-related features — including networking, storage services, automation, backup, and disaster recovery — all accessible through an intuitive web-based UI."
+      },
+      "track": {
+        "title": "Track Network",
+        "description": "Track is the platform within ABLESTACK that builds the virtualized networking layer, deploying a software-defined network (SDN) across the virtualization environment. It enables rapid deployment and utilization of user-isolated networks."
+      },
+      "wall": {
+        "title": "Wall Monitoring",
+        "description": "Wall is an integrated monitoring platform for ABLESTACK, designed to monitor all infrastructure components, user virtual machines, and applications within the environment."
+      },
+      "koral": {
+        "title": "Koral K8S Container",
+        "description": "Koral is a Kubernetes cluster automatically deployed through Mold, simplifying application provisioning, lifecycle management, cluster scaling, and container-based operations."
+      },
+      "genie": {
+        "title": "Genie IaC Platform",
+        "description": "Genie is a multi-cloud IT automation platform that enables automatic deployment of virtual machines, applications, and state monitoring across multi-cloud environments based on user-defined workflows."
+      },
+      "silo": {
+        "title": "Silo Storage Service",
+        "description": "Silo is a platform within ABLESTACK that provides a wide range of storage functionalities required for enterprise IT operations. It enhances storage scalability and maximizes the versatility of Glue in various deployment scenarios."
+      },
+      "over": {
+        "title": "Over Fault and Disaster Management",
+        "description": "Over is a recovery platform within ABLESTACK designed to handle various failures and disaster scenarios in virtual infrastructure and applications, effectively protecting an enterprise’s mission-critical applications."
+      },
+      "link": {
+        "title": "Link Secure Network",
+        "description": "Link provides a highly visible and secure environment to fully protect virtual machines and applications from attacks, while supporting connectivity with multiple public clouds."
+      }
+    },
+    "content": {
+      "cube": {
+        "description": "It can be installed on any x86 server without hardware dependency and delivers high performance through an optimized kernel and I/O processing modules.",
+        "subDescriptions": [
+          "Standard Linux OS",
+          "Includes all packages required for ABLESTACK",
+          "Manage devices, services, and networking from anywhere with just a web browser",
+          "Deploy cloud environments easily using the built-in deployment wizard"
+        ]
+      },
+      "cell": {
+        "description": "Cell is a built-in hypervisor based on Linux KVM, enhanced with optimized features for seamless ABLESTACK operations. The Cell hypervisor consists of the following key components.",
+        "subDescriptions": [
+          "Integrated hypervisor within Cube OS — no separate hypervisor license required",
+          "Bare-metal hypervisor capabilities with the latest kernel support for high-performance I/O",
+          "Compatible not only with Cell but also with other hypervisors such as VMware, Hyper-V, and Xen"
+        ]
+      },
+      "glue": {
+        "description": "Glue is a core component of ABLESTACK HCI, serving as the platform that powers its storage capabilities. The diagram below illustrates Glue’s functions within the overall ABLESTACK HCI Components:",
+        "subDescriptions": [
+          "Provides large-scale storage using only the disks built into the server, with self-diagnosis and self-healing capabilities in case of failures",
+          "Ensures high efficiency by reducing storage usage by up to 80% through deduplication and compression",
+          "Supports unlimited capacity expansion during operation, enabling endless use cases"
+        ]
+      },
+      "mold": {
+        "description": "With just a single click, most tasks can be completed, and both infrastructure and application operations can be automated for efficient management.",
+        "subDescriptions": [
+          "Manage all virtualization resources through an intuitive management consoles",
+          "Provide multi-tenant cloud services through self-service capabilities",
+          "Manage complex IT infrastructure with minimal effort",
+          "Automate user-level workflows and enable automated provisioning via APIs and predefined scripts"
+        ]
+      },
+      "track": {
+        "description": "Track provides an overlay software-defined network based on virtual routers, allowing you to configure and manage a variety of network functions quickly and efficiently.",
+        "subDescriptions": [
+          "No need for separate appliance installation",
+          "Supports a wide range of network functions (L2, L3, DNS, etc.)",
+          "Ensures high security by blocking unauthorized external access",
+          "Full control over all network resources through an intuitive web-based UI"
+        ]
+      },
+      "wall": {
+        "description": "As an enterprise-grade monitoring platform, Wall enables you to query and visualize metrics for all hosts, virtual machines, and infrastructure components within the ABLESTACK HCI environment. It also provides threshold-based alerts to ensure proactive issue detection.",
+        "subDescriptions": [
+          "Provides real-time monitoring data",
+          "Supports custom monitoring for databases, web applications, and more",
+          "Sends alerts based on predefined threshold settings",
+          "Offers usage statistics to help predict capacity expansion needs"
+        ]
+      },
+      "koral": {
+        "description": "With just a single click, most tasks can be executed, and infrastructure and application operations can be automated for efficient management.",
+        "subDescriptions": [
+          "One-click simplicity",
+          "Supports persistent storage",
+          "Online scaling and automatic scaling",
+          "Provides high availability"
+        ]
+      },
+      "genie": {
+        "description": "Genie is an automation tool built on a general-purpose language. Using pre-created playbooks, it allows users to perform complex, repetitive tasks across the organization with a single button—deploying virtual machines, containers, networks, applications, and more—without requiring any agents.",
+        "subDescriptions": [
+          "Workflow-based automation",
+          "Automation across multiple cloud services, including AWS, GCP, and Azure",
+          "Predefined workflows simplify deployment and usage of various open-source platforms",
+          "Automatically monitors deployed resources and their status"
+        ]
+      },
+      "silo": {
+        "subDescriptions": [
+          "Connects to various commercial SDS solutions for flexible storage expansion",
+          "Provides an object storage gateway and browser interface for big data and AI data management",
+          "Supports connections to bare-metal servers and hypervisors",
+          "Enables diverse storage usage through a web browser, including object storage browser and web-based NAS"
+        ]
+      },
+      "over": {
+        "subDescriptions": [
+          "Active-Active DR",
+          "Supports DR (Disaster Recovery) settings at the virtual machine level through an intuitive UI, enabling efficient DR management, provides state monitoring for individual virtual machines",
+          "Supports server redundancy to ensure uninterrupted operation of mission-critical applications"
+        ]
+      },
+      "link": {
+        "subDescriptions": [
+          "High security based on Zero Trust principles with multi-cloud connectivity",
+          "Supports isolation of virtual machines, containers, and applications to protect critical applications and shared services",
+          "Software-defined security policy management for centralized control"
+        ]
+      }
+    }
+  }
+}

@@ -1,8 +1,10 @@
-import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 import { HomeMainCardData } from '@/types/home';
 
 import ArrowRight from '@/public/icons/common/arrow-right.svg';
+
+import { Link } from '@/i18n/routing';
 
 interface HomeMainCardsProps {
   title: string;
@@ -10,6 +12,8 @@ interface HomeMainCardsProps {
 }
 
 export function HomeMainCards({ title, cardsData }: HomeMainCardsProps) {
+  const t = useTranslations('home');
+
   return (
     <div className='hidden flex-col gap-[30px] mb-[30px] lg:flex'>
       <div className='font-bold text-center text-[24px] leading-[32px] md:text-[32px] md:leading-[44.16px]'>
@@ -26,7 +30,7 @@ export function HomeMainCards({ title, cardsData }: HomeMainCardsProps) {
               </div>
               <Link href={cardData.href}>
                 <div className='flex gap-1 items-center text-white '>
-                  자세히보기 <ArrowRight width={24} />
+                  {t('card.detail')} <ArrowRight width={24} />
                 </div>
               </Link>
             </div>

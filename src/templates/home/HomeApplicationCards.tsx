@@ -16,10 +16,11 @@ function HomeApplicationCard({ cardData }: { cardData: HomeApplicationCardData }
 
 interface HomeApplicationCardsProps {
   title: string;
+  detailText: string;
   cardsData: HomeApplicationCardData[];
 }
 
-export function HomeApplicationCards({ cardsData, title }: HomeApplicationCardsProps) {
+export function HomeApplicationCards({ cardsData, title, detailText }: HomeApplicationCardsProps) {
   return (
     <div className='flex flex-col gap-[30px] items-center'>
       <div className='font-bold text-center text-[24px] leading-[32px] md:text-[32px] md:leading-[44.16px] lg:pt-[40px]'>
@@ -30,7 +31,7 @@ export function HomeApplicationCards({ cardsData, title }: HomeApplicationCardsP
           return <HomeApplicationCard key={idx} cardData={cardData} />;
         })}
       </div>
-      <Button text='적용분야 더보기' href='/applications/infra' className='mt-[30px]' />
+      <Button text={detailText} href='/applications/infra' className='mt-[30px]' />
     </div>
   );
 }

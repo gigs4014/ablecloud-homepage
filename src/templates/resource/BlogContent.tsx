@@ -1,12 +1,12 @@
 'use client';
 
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
-import Link from 'next/link';
 
 import { MdxMetaData } from '@/types/resource';
 
 import ChevronLeft from '@/public/icons/common/chevron-left.svg';
 
+import { Link } from '@/i18n/routing';
 import { MDXComponents } from 'mdx/types';
 
 const components: MDXComponents = {

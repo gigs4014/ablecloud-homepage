@@ -1,25 +1,55 @@
 'use client';
 
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { useLocale, useTranslations } from 'next-intl';
+import Image from 'next/image';
+import { useSearchParams } from 'next/navigation';
 
 import { useEffect, useMemo, useState } from 'react';
 
-import { headerMenu, pageHeaderHeight, withoutHeaderPage } from '@/constants/common';
+import { pageHeaderHeight, useHeaderMenuData, withoutHeaderPage } from '@/constants/common';
 
 import Ablestack from '@/public/icons/common/ablestack.svg';
 import Close from '@/public/icons/common/close.svg';
 import Hamburger from '@/public/icons/common/hamburger.svg';
+import englishSrc from '@/public/images/language/english.png';
+import koreaSrc from '@/public/images/language/korea.png';
+
+import { Link, usePathname, useRouter } from '@/i18n/routing';
 
 interface HeaderProps {
   isBgBlack?: boolean;
 }
 
 export function Header({ isBgBlack }: HeaderProps) {
+  const t = useTranslations('header');
+
+  const router = useRouter();
   const pathname = usePathname();
+  const locale = useLocale();
+
+  const searchParams = useSearchParams();
+  const isMenuOpen = searchParams.get('menu') === 'open';
+
+  const toggleMenu = () => {
+    const newParams = new URLSearchParams(searchParams.toString());
+    if (isMenuOpen) {
+      newParams.delete('menu');
+    } else {
+      newParams.set('menu', 'open');
+    }
+    router.push(`${pathname}?${newParams.toString()}`);
+  };
+
+  const toggleLanguage = () => {
+    const newLang = locale === 'en' ? 'ko' : 'en';
+    const newParams = new URLSearchParams(searchParams.toString());
+
+    router.replace(`${pathname}?${newParams.toString()}`, { locale: newLang });
+  };
+
+  const headerMenu = useHeaderMenuData();
 
   const [scrollPosition, setScrollPosition] = useState<'top' | 'middle' | 'bottom'>('top');
-  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [openMenus, setOpenMenus] = useState<number[]>([]);
 
   const isWithoutHeaderPage = withoutHeaderPage.findIndex(v => pathname.startsWith(v)) > -1;
@@ -112,16 +142,21 @@ export function Header({ isBgBlack }: HeaderProps) {
             </div>
           ))}
         </div>
-        <Link
-          href={'/contact'}
-          className='cursor-pointer h-[30px] items-center select-none border px-[17px] text-[13px] rounded-md hidden md:flex transition duration-300 hover:brightness-90'>
-          문의하기
-        </Link>
-        <div
-          className='cursor-pointer flex md:hidden'
-          onClick={() => {
-            setIsMenuOpen(prev => !prev);
-          }}>
+        <div className='cursor-pointer flex flex-row items-center gap-4'>
+          <Image
+            src={locale === 'ko' ? koreaSrc : englishSrc}
+            alt=''
+            className='w-[30px] h-[30px] hidden md:flex '
+            onClick={toggleLanguage}
+          />
+          <Link
+            href={'/contact'}
+            className='cursor-pointer h-[30px] w-[96px] items-center justify-center select-none border px-[17px] text-[13px] rounded-md hidden md:flex transition duration-300 hover:brightness-90'>
+            {t('contact')}
+          </Link>
+        </div>
+
+        <div className='cursor-pointer flex md:hidden' onClick={toggleMenu}>
           {isMenuOpen ? <Close className='w-[28px] md:w-[32px]' /> : <Hamburger />}
         </div>
       </div>
@@ -133,10 +168,7 @@ export function Header({ isBgBlack }: HeaderProps) {
                 key={index}
                 className={`flex flex-col w-full ${index === 0 ? 'border-y border-y-[#EEEEEE]' : 'border-b border-b-[#EEEEEE]'}`}>
                 <div className='flex items-center font-bold w-full'>
-                  <Link
-                    href={v.href}
-                    className='flex-1 py-[18px]'
-                    onClick={() => setIsMenuOpen(false)}>
+                  <Link href={v.href} className='flex-1 py-[18px]' onClick={toggleMenu}>
                     {v.title}
                   </Link>
                   {v.subMenu && (
@@ -161,7 +193,7 @@ export function Header({ isBgBlack }: HeaderProps) {
                         key={subIndex}
                         className='py-2'
                         href={subItem.href}
-                        onClick={() => setIsMenuOpen(false)}>
+                        onClick={() => toggleMenu}>
                         {subItem.title}
                       </Link>
                     ))}
@@ -171,12 +203,18 @@ export function Header({ isBgBlack }: HeaderProps) {
             ))}
           </div>
 
-          <div className='flex justify-end my-4'>
+          <div className='flex justify-end my-4 gap-4'>
+            <Image
+              src={locale === 'ko' ? koreaSrc : englishSrc}
+              alt=''
+              className='w-[30px] h-[30px] '
+              onClick={toggleLanguage}
+            />
             <Link
               href={'/contact'}
-              onClick={() => setIsMenuOpen(false)}
+              onClick={() => toggleMenu}
               className='flex cursor-pointer h-[30px] text-black items-center select-none border px-[17px] text-[13px] rounded-md transition duration-300 hover:brightness-90'>
-              문의하기
+              {t('contact')}
             </Link>
           </div>
         </div>

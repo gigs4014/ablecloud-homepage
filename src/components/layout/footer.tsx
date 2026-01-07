@@ -1,11 +1,39 @@
-import Link from 'next/link';
+import { useLocale, useTranslations } from 'next-intl';
 
 import Ablecloud from '@/public/icons/common/ablecloud.svg';
 import ArrowRight from '@/public/icons/common/arrow-right.svg';
 import Blog from '@/public/icons/common/blog.svg';
+import Community from '@/public/icons/common/community.svg';
 import Youtube from '@/public/icons/common/youtube.svg';
 
+import { Link } from '@/i18n/routing';
+
+function TooltipWrapper({ label, children }: { label: string; children: React.ReactNode }) {
+  return (
+    <div className='relative group flex items-center justify-center'>
+      {children}
+      <div
+        className='absolute -top-6 left-1/2 -translate-x-1/2 
+                   opacity-0 translate-y-2 
+                   group-hover:opacity-100 group-hover:translate-y-0
+                   transition-all duration-200 ease-out
+                   bg-black text-white text-sm rounded-md px-3 py-1 
+                   shadow-md whitespace-nowrap'>
+        {label}
+        <div
+          className='absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 
+                     border-l-6 border-r-6 border-t-6 border-transparent border-t-black'
+        />
+      </div>
+    </div>
+  );
+}
+
 export function Footer() {
+  const t = useTranslations('footer');
+
+  const locale = useLocale();
+
   return (
     <div className='flex justify-center w-full bg-[#F9F9F9]'>
       <div className='flex flex-col gap-3 max-w-[1440px] w-full py-8 px-6 md:gap-4'>
@@ -18,14 +46,27 @@ export function Footer() {
             </div>
             <div className='flex gap-1'>
               <Link href='https://blog.naver.com/ablecloud_official' target='_blank'>
-                <Blog />
+                <TooltipWrapper label='블로그'>
+                  <Blog />
+                </TooltipWrapper>
               </Link>
               <Link href='https://www.youtube.com/@ablecloud_official' target='_blank'>
-                <Youtube />
+                <TooltipWrapper label='유튜브'>
+                  <Youtube />
+                </TooltipWrapper>
               </Link>
-              {/* <Link href='https://www.youtube.com/@ablecloud_official' target='_blank'>
-                <Setting />
-              </Link> */}
+              {locale === 'ko' ? (
+                <>
+                  {' '}
+                  <Link href='https://community.ablecloud.io/' target='_blank'>
+                    <TooltipWrapper label='커뮤니티'>
+                      <Community />
+                    </TooltipWrapper>
+                  </Link>
+                </>
+              ) : (
+                <></>
+              )}
             </div>
           </div>
           <Link
@@ -44,16 +85,33 @@ export function Footer() {
           </div>
           <ChevronRight width={16} height={16} className='text-[#222222]' />
         </Link> */}
-        <div className='flex flex-col gap-0 text-[#999999] font-bold leading-[20.6px] text-[14px] lg:leading-[19.2px] lg:gap-2'>
+        <div className='flex flex-col gap-0 text-[#999999] font-bold tracking-[-0.4px] leading-[20.6px] text-[14px] lg:leading-[19.2px] lg:gap-2'>
           <div className='flex flex-col lg:flex-row'>
-            <div>사업자등록번호 : 886-86-02158</div>
+            <div>{t('bizLicense')} : 886-86-02158</div>
             <span className='mx-3 hidden lg:block'>|</span>
-            <div>회사명 : 에이블클라우드</div>
+            <div>
+              {t('name.label')} : {t('name.value')}
+            </div>
           </div>
           <div className='flex flex-col lg:flex-row'>
-            <div>본사 : 서울특별시 영등포구 영신로 220 Knk디지털타워 1901호</div>
+            <div>
+              {t('headOfficeAddress.label')} : {t('headOfficeAddress.value')}
+            </div>
+            {locale === 'ko' ? (
+              <>
+                <span className='mx-3 hidden lg:block'>|</span>
+                <div>
+                  {t('contact.label')} : {t('contact.value')}
+                </div>
+              </>
+            ) : (
+              <></>
+            )}
+
             <span className='mx-3 hidden lg:block'>|</span>
-            <div>기술연구소 : 대전광역시 대덕구 대화로106번길 66 펜타플렉스 810~812호</div>
+            <div>
+              {t('rndCenterAddress.label')} : {t('rndCenterAddress.value')}
+            </div>
           </div>
         </div>
 

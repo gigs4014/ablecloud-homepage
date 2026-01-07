@@ -1,9 +1,8 @@
 'use client';
 
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-
 import { useEffect, useRef, useState } from 'react';
+
+import { Link, usePathname } from '@/i18n/routing';
 
 interface TabsProps {
   tabs: { text: string; href: string }[];
@@ -12,7 +11,7 @@ interface TabsProps {
 export function Tabs({ tabs }: TabsProps) {
   const pathname = usePathname();
 
-  const activeIndex = tabs.findIndex(tab => tab.href === pathname);
+  const activeIndex = tabs.findIndex(tab => pathname.startsWith(tab.href));
 
   const tabRefs = useRef<(HTMLDivElement | null)[]>([]);
 
@@ -54,7 +53,9 @@ export function Tabs({ tabs }: TabsProps) {
                 !bgStyle && activeIndex === idx ? 'bg-[#202020]' : ''
               }`}>
               <div
-                ref={el => (tabRefs.current[idx] = el)}
+                ref={el => {
+                  tabRefs.current[idx] = el;
+                }}
                 className={`relative py-[10px] text-sm transition-all font-bold duration-200 z-10 ${
                   activeIndex === idx ? 'text-white' : 'text-[#787878]'
                 }`}>

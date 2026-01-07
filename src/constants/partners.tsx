@@ -1,7 +1,6 @@
+import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
-
-import { HeaderData } from '@/types/header';
-import { PartnerListData } from '@/types/partners';
 
 import ablestoreSrc from '@/public/images/partners/ablestor.png';
 import acornsoftSrc from '@/public/images/partners/acornsoft.png';
@@ -34,87 +33,92 @@ import xenoSrc from '@/public/images/partners/xeno.png';
 import xslabSrc from '@/public/images/partners/xslab.png';
 import zungwonSrc from '@/public/images/partners/zungwon.png';
 
-export const partnersHeaderData: HeaderData = {
-  title: {
-    mainText: '파트너',
-  },
-  description: (
-    <>
-      독자적인 기술력, 지속 가능한 수익창출.
-      <br />
-      ABLESTACK 플랫폼 설계 및 글로벌 성장을 위해 가상화/클라우드 시장의 공동 성장을 만들어갈
-      파트너를 찾습니다.
-    </>
-  ),
-  bgClassName: 'bg-partners-header',
-  heightClassName: 'min-h-[350px] lg:min-h-[404px]',
+export const getPartnerHeaderData = async () => {
+  const t = await getTranslations('partner.header');
+
+  return {
+    title: {
+      mainText: t('title'),
+    },
+    description: t.rich('description', {
+      br: () => <br />,
+    }),
+    bgClassName: 'bg-partners-header',
+    heightClassName: 'min-h-[350px] lg:min-h-[404px]',
+  };
 };
 
-export const partnerProgramHeaderData: HeaderData = {
-  title: {
-    mainText: 'Partnership Program',
-  },
-  description: (
-    <>
-      독자적인 기술력, 지속 가능한 수익창출.
-      <br />
-      ABLESTACK 플랫폼 설계 및 글로벌 성장을 위해 가상화/클라우드 시장의 공동 성장을 만들어갈
-      파트너를 찾습니다.
-    </>
-  ),
-  bgClassName: 'bg-partners-header',
-  heightClassName: 'min-h-[350px] lg:min-h-[404px]',
+export const usePartnerProgramHeaderData = () => {
+  const t = useTranslations('partner.program.header');
+
+  return {
+    title: {
+      mainText: t('title'),
+    },
+    description: t.rich('description', {
+      br: () => <br />,
+    }),
+    bgClassName: 'bg-partners-header',
+    heightClassName: 'min-h-[350px] lg:min-h-[404px]',
+  };
 };
 
-export const partnersTier = [
-  {
-    title: '플래티넘 파트너',
-    description:
-      '전담 영업 조직 및 기술지원 조직을 운영하며, 모든 분야에서 긴밀하게 협업영업 및 POC, 구축, 유지보수 전담인력을 갖춘 파트너',
-  },
-  {
-    title: '골드 파트너',
-    description: '영업 및 구축, 유지보수 전담인력을 갖춘 파트너',
-  },
-  {
-    title: '실버 파트너',
-    description: '전담 영업을 갖춘 파트너',
-  },
-  {
-    title: 'VAR 파트너',
-    description: '양사 솔루션 또는 제품을 패키징 형태로 공급 가능한 파트너',
-  },
-];
+export const getPartnerTier = async () => {
+  const t = await getTranslations('partner');
 
-export const partnerList: PartnerListData[] = [
-  { img: <Image src={ablestoreSrc} alt='' />, text: '에이블스토어' },
-  { img: <Image src={dellSrc} alt='' />, text: '델 테크놀로지스' },
-  { img: <Image src={hpSrc} alt='' />, text: 'hp' },
-  { img: <Image src={fujitsuSrc} alt='' />, text: '후지쯔' },
-  { img: <Image src={lenovoSrc} alt='' />, text: '레노버' },
-  { img: <Image src={supermicrSrc} alt='' />, text: '슈퍼마이크로컴퓨터' },
-  { img: <Image src={superSrc} alt='' />, text: '슈퍼솔루션' },
-  { img: <Image src={ktnfSrc} alt='' />, text: '케이티엔에프' },
-  { img: <Image src={uniwideSrc} alt='' />, text: '유니와이드' },
-  { img: <Image src={oceanSrc} alt='' />, text: '오우션 테크놀로지' },
-  { img: <Image src={citrixSrc} alt='' />, text: '시트릭스' },
-  { img: <Image src={tilonSrc} alt='' />, text: '틸론' },
-  { img: <Image src={xenoSrc} alt='' />, text: '제노솔루션' },
-  { img: <Image src={nhncrossentSrc} alt='' />, text: 'NHN크로센트(주)' },
-  { img: <Image src={hdnSrc} alt='' />, text: '한드림넷' },
-  { img: <Image src={innogridSrc} alt='' />, text: '이노그리드' },
-  { img: <Image src={acornsoftSrc} alt='' />, text: '아콘소프트' },
-  { img: <Image src={innotiumSrc} alt='' />, text: '이노티움' },
-  { img: <Image src={t3qSrc} alt='' />, text: '티쓰리큐' },
-  { img: <Image src={innodepSrc} alt='' />, text: '이노뎁' },
-  { img: <Image src={xslabSrc} alt='' />, text: '엑세스랩' },
-  { img: <Image src={hsSrc} alt='' />, text: '효성인포메이션시스템' },
-  { img: <Image src={zungwonSrc} alt='' />, text: '정원엔시스' },
-  { img: <Image src={ajictSrc} alt='' />, text: '에이제이아이씨티' },
-  { img: <Image src={skshieldusSrc} alt='' />, text: 'SK쉴더스' },
-  { img: <Image src={gntelSrc} alt='' />, text: '지엔텔' },
-  { img: <Image src={itcenSrc} alt='' />, text: '아이티센 클로잇' },
-  { img: <Image src={snaSrc} alt='' />, text: '에스엔에이' },
-  { img: <Image src={dwctsSrc} alt='' />, text: '대원 CTS' },
-  { img: <Image src={geomexSrc} alt='' />, text: '지오멕스소프트' },
-];
+  return [
+    {
+      title: t('tier.0.title'),
+      description: t('tier.0.description'),
+    },
+    {
+      title: t('tier.1.title'),
+      description: t('tier.1.description'),
+    },
+    {
+      title: t('tier.2.title'),
+      description: t('tier.2.description'),
+    },
+    {
+      title: t('tier.3.title'),
+      description: t('tier.3.description'),
+    },
+  ];
+};
+
+export const usePartnerList = () => {
+  const t = useTranslations('partner.partnerList');
+
+  return [
+    { img: <Image src={ablestoreSrc} alt='' />, text: t('list.0.text') },
+    { img: <Image src={dellSrc} alt='' />, text: t('list.1.text') },
+    { img: <Image src={hpSrc} alt='' />, text: t('list.2.text') },
+    { img: <Image src={fujitsuSrc} alt='' />, text: t('list.3.text') },
+    { img: <Image src={lenovoSrc} alt='' />, text: t('list.4.text') },
+    { img: <Image src={supermicrSrc} alt='' />, text: t('list.5.text') },
+    { img: <Image src={superSrc} alt='' />, text: t('list.6.text') },
+    { img: <Image src={ktnfSrc} alt='' />, text: t('list.7.text') },
+    { img: <Image src={uniwideSrc} alt='' />, text: t('list.8.text') },
+    { img: <Image src={oceanSrc} alt='' />, text: t('list.9.text') },
+    { img: <Image src={citrixSrc} alt='' />, text: t('list.10.text') },
+    { img: <Image src={tilonSrc} alt='' />, text: t('list.11.text') },
+    { img: <Image src={xenoSrc} alt='' />, text: t('list.12.text') },
+    { img: <Image src={nhncrossentSrc} alt='' />, text: t('list.13.text') },
+    { img: <Image src={hdnSrc} alt='' />, text: t('list.14.text') },
+    { img: <Image src={innogridSrc} alt='' />, text: t('list.15.text') },
+    { img: <Image src={acornsoftSrc} alt='' />, text: t('list.16.text') },
+    { img: <Image src={innotiumSrc} alt='' />, text: t('list.17.text') },
+    { img: <Image src={t3qSrc} alt='' />, text: t('list.18.text') },
+    { img: <Image src={innodepSrc} alt='' />, text: t('list.19.text') },
+    { img: <Image src={xslabSrc} alt='' />, text: t('list.20.text') },
+    { img: <Image src={hsSrc} alt='' />, text: t('list.21.text') },
+    { img: <Image src={zungwonSrc} alt='' />, text: t('list.22.text') },
+    { img: <Image src={ajictSrc} alt='' />, text: t('list.23.text') },
+    { img: <Image src={skshieldusSrc} alt='' />, text: t('list.24.text') },
+    { img: <Image src={gntelSrc} alt='' />, text: t('list.25.text') },
+    { img: <Image src={itcenSrc} alt='' />, text: t('list.26.text') },
+    { img: <Image src={snaSrc} alt='' />, text: t('list.27.text') },
+    { img: <Image src={dwctsSrc} alt='' />, text: t('list.28.text') },
+    { img: <Image src={geomexSrc} alt='' />, text: t('list.29.text') },
+  ];
+};

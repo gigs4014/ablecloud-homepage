@@ -50,10 +50,11 @@ jobs:
       - name: Deploy container
         run: |
           docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.event.release.tag_name }}
-          docker stop ablecloud-homepage || true
-          docker rm ablecloud-homepage || true
+          docker rm -f ablecloud-homepage || true
           docker run -d \
             --name ablecloud-homepage \
             --restart unless-stopped \
             -p 8888:80 \
             ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.event.release.tag_name }}
+          sleep 1
+          docker start ablecloud-homepage || true

@@ -1,0 +1,1050 @@
+{
+  "home": {
+    "sliderHeaderDetail": "자세히보기",
+    "sliderHeader1": {
+      "mainText": "ABLESTACK",
+      "subText": "v4.0",
+      "description": "에이블스택이<br></br>보안기능확인서를 획득하였습니다."
+    },
+    "sliderHeader2": {
+      "mainText": "V사의 완벽한 대안",
+      "description": "부담스러운 구독형 가상머신을<br></br>완벽하게 대체할 수 있도록"
+    },
+    "sliderHeader3": {
+      "mainText": "복잡한 인프라를 단일 플랫폼으로",
+      "description": "서버, 스토리지, 네트워크 인프라를<br></br>단일 플랫폼으로 제공하여 비용 최대 80% 절감"
+    },
+    "sliderHeader4": {
+      "mainText": "가상데스크톱 불편함 한번에 해결",
+      "description": "가상데스크톱 위한 고성능 환경을 단일 플랫폼으로<br></br>제공해 복잡성 문제와 성능 문제 동시 해결"
+    },
+    "sliderHeader5": {
+      "mainText": "획기적인 영상 감시 인프라",
+      "description": "기존 장비를 그대로 활용하여 획기적으로<br></br>비용을 줄여주는 단일 플랫폼"
+    },
+    "mainCardTitle": "SDDC를 실현하는 획기적인 플랫폼",
+    "card": {
+      "detail": "자세히 보기",
+      "main1": "국내 유일의<br></br>가상화 전문 기업",
+      "main2": "서버 가상화/<br></br>클라우드 플랫폼",
+      "main3": "모든 인프라가 통합된 HCI<br></br>클라우드 플랫폼"
+    },
+    "mainApplicationCard": "ABLESTACK을 선택해야 하는 이유",
+    "applicationCard": {
+      "detail": "적용분야 더보기",
+      "application1": {
+        "title": "서버가상화",
+        "description": "기업에서 실행하는 모든 인프라와<br></br>어플리케이션을 가상화"
+      },
+      "application2": {
+        "title": "영상 감시",
+        "description": "고성능 환경 제공을 통해 효과적으로<br></br>영상 데이터 수집, 분석"
+      },
+      "application3": {
+        "title": "빅데이터 분석",
+        "description": "ABLESTACK만의 전용<br></br>아키텍처와 자동화 도구"
+      },
+      "application4": {
+        "title": "연속성/데이터 백업",
+        "description": "전체 데이터 백업 및 다양한 복구<br></br>옵션을 통해 연속성 보장"
+      },
+      "application5": {
+        "title": "보안 인프라",
+        "description": "제로 트러스트 정책을 적용하여<br></br>효과적으로 사이버 공격 방지"
+      }
+    },
+    "mainInterviewTitle": "최고의 가상화 플랫폼, ABLESTACK을 선택한 기업들",
+    "interviewDetail": "고객사 더보기",
+    "mainBlogCardTitle": "에이블클라우드의 새로운 소식",
+    "blogDetail": "새로운 소식 더보기",
+    "footerCard": {
+      "partner": {
+        "description": "가상화/클라우드 시장의 공동<br></br>성장을 만들어갈 파트너를 찾습니다.",
+        "buttonText": "파트너 신청하기"
+      },
+      "aboutUs": {
+        "description": "새로운 기회, 혁신적인 솔루션을<br></br>알리기 위한 에이블클라우드의 목표",
+        "buttonText": "회사소개 자세히보기"
+      },
+      "news": {
+        "description": "에이블클라우드의<br></br>대외적인 소식을 확인해보세요.",
+        "buttonText": "뉴스 확인하기"
+      },
+      "newsLetter": {
+        "title": "뉴스레터",
+        "description": "에이블클라우드의<br></br>최신 소식을 메일로 전송해드립니다.",
+        "buttonText": "뉴스레터 구독하기"
+      }
+    }
+  },
+  "header": {
+    "menu1": {
+      "title": "제품",
+      "subMenu": [
+        {
+          "title": "ABLESTACK VM"
+        },
+        {
+          "title": "ABLESTACK HCI"
+        }
+      ]
+    },
+    "menu2": {
+      "title": "적용분야"
+    },
+    "menu3": {
+      "title": "고객사"
+    },
+    "menu4": {
+      "title": "파트너",
+      "subMenu": [
+        {
+          "title": "프로그램 소개"
+        },
+        {
+          "title": "파트너 현황"
+        }
+      ]
+    },
+    "menu5": {
+      "title": "리소스",
+      "subMenu": [
+        {
+          "title": "소식"
+        },
+        {
+          "title": "동영상"
+        },
+        {
+          "title": "백서/ebook"
+        },
+        {
+          "title": "호환성"
+        }
+      ]
+    },
+    "menu6": {
+      "title": "회사소개",
+      "subMenu": [
+        {
+          "title": "회사소개 및 비전"
+        },
+        {
+          "title": "연혁"
+        },
+        {
+          "title": "인증 및 특허"
+        },
+        {
+          "title": "찾아오시는 길"
+        }
+      ]
+    },
+    "contact": "문의하기"
+  },
+  "footer": {
+    "bizLicense": "사업자등록번호",
+    "name": {
+      "label": "회사명",
+      "value": "에이블클라우드"
+    },
+    "headOfficeAddress": {
+      "label": "본사",
+      "value": "서울특별시 영등포구 영신로 220 Knk디지털타워 1901호"
+    },
+    "rndCenterAddress": {
+      "label": "기술연구소",
+      "value": "대전광역시 대덕구 대화로106번길 66 펜타플렉스 810~812호"
+    },
+    "contact": {
+      "label": "전화",
+      "value": "1544-3696"
+    }
+  },
+  "product": {
+    "vm": {
+      "header": {
+        "description": "서버 가상화를 위한 최적의 솔루션",
+        "download": "제품소개서 다운로드"
+      },
+      "cards": {
+        "title": " 이 필요한 이유",
+        "card": [
+          {
+            "title": "VMWare 완벽 대체",
+            "description": "기존 사용 중인 가상화 환경을 완벽하게 마이그레이션 할 수 있습니다."
+          },
+          {
+            "title": "단일 라이센스, 단일 플랫폼",
+            "description": "단일 라이센스로 비용 부담을 최소화하고, 서버가상화, 클라우드 관리, 스토리지, 네트워크 등 모든 기능을 단일 플랫폼으로 제공합니다."
+          },
+          {
+            "title": "기존 사용중인 인프라 그대로",
+            "description": "기존에 사용중인 인프라가 있다면, 솔루션을 설치하고 바로 사용할 수 있습니다.<br></br>부담되는 인프라 구입 비용이 절감됩니다."
+          }
+        ]
+      },
+      "migration": {
+        "title": "손쉬운 마이그레이션 도구를 통한 P2V, V2V",
+        "description": "기존 운영 중인 물리서버 및 가상머신을 마이그레이션할 수 있는 도구를 내장하고 있습니다. 내장된 이관도구를 사용하면 원하는 서버를 손쉽게 ABLESTACK VM으로 옮길 수 있습니다.",
+        "imageText1": "한눈에 보는 통합 모니터링 플랫폼",
+        "imageText2": "완벽한 데이터 마이그레이션"
+      },
+      "detail": {
+        "title": "클라우드 환경으로 전환하기 위한 혁신적 가상화 플랫폼",
+        "description": "기업 및 데이터센터의 인프라를 가상화 하고, 클라우드 환경으로 전환하기 위한 혁신적 가상화 플랫폼으로 단순한 라이선스 모델에 다양한 가상화 및 클라우드 기능을 제공합니다."
+      },
+      "ablestack": {
+        "title": "구성 요소",
+        "service": [
+          {
+            "title": "Cube : 운영체제",
+            "description": "ABLESTACK의 모든 패키지가 포함된 Server OS"
+          },
+          {
+            "title": "Cell : 가상화",
+            "description": "고성능을 제공하는 내장된 커널 기반 하이퍼바이저"
+          },
+          {
+            "title": "Glue : 스토리지",
+            "description": "가상머신 기반 소프트웨어 정의 스토리지"
+          },
+          {
+            "title": "Mold : 관리",
+            "description": "통합관리를 제공하는 클라우드 플랫폼"
+          },
+          {
+            "title": "Track : 네트워크",
+            "description": "가상머신 및 컨테이너를 위한 소프트웨어 정의 네트워크"
+          },
+          {
+            "title": "Wall : 모니터링",
+            "description": "가상머신 및 컨테이너의 성능을 모니터링하고 관리하는 도구"
+          },
+          {
+            "title": "Koral : K8S 컨테이너",
+            "description": "Kubernetes Cluster 배포 및 운영을 위한 K8S 플랫폼"
+          },
+          {
+            "title": "Genie : 구성 및 배포 자동화",
+            "description": "애플리케이션 배포 및 모니터링 자동화를 위한 laC플랫폼"
+          },
+          {
+            "title": "Silo : 스토리지 서비스",
+            "description": "다양한 스토리지 서비스를 제공하는 플랫폼"
+          },
+          {
+            "title": "Over : 장애 및 재해 관리",
+            "description": "안정성을 높이기 위한 이중화/재해복구 지원"
+          },
+          {
+            "title": "Link : 보안 네트워크",
+            "description": "VPC, Micro Segmentation"
+          }
+        ]
+      }
+    },
+    "hci": {
+      "header": {
+        "description": "클라우드 데이터센터 인프라를 위한 단일 HCI 플랫폼",
+        "buttonText": "제품소개서 다운로드"
+      },
+      "title": "HCI, 무엇이 특별한가?",
+      "cards": [
+        {
+          "title": "뛰어난 확장성",
+          "description": "무중단, 무제한 노드 확장"
+        },
+        {
+          "title": "단순한 구성",
+          "description": "x86 서버로만 인프라가 구성되어<br></br>데이터센터의 복잡성 문제 해결"
+        },
+        {
+          "title": "전력 및 비용 절감",
+          "description": "TCO 70% 절감,<br></br> 전력 비용 최대 80% 절감"
+        },
+        {
+          "title": "간편하고 빠른 배포",
+          "description": "마법사를 통해 수 시간 내<br></br>빠른 클라우드 인프라 배포 가능"
+        }
+      ],
+      "contentCards": [
+        {
+          "title": "클라우드 관리 플랫폼",
+          "description": "웹 기반 단일 콘솔로 전체 인프라 시스템 통합 관리<br></br>멀티 하이퍼바이저 지원, 가상머신, 네트워크, 스토리지, 자동화, 백업, 재해복구 등 기능 제공"
+        },
+        {
+          "title": "통합 모니터링 플랫폼",
+          "description": " 실시간 성능 모니터링을 통한 서비스 부하 감지 및 필요 사항 한 눈에 파악<br></br>서버, 네트워크, 스토리지 등 모니터링을 통한 서비스 장애 사전 방지, 이상 징후 경고 알림 기능 제공"
+        },
+        {
+          "title": "마법사를 통한 손쉬운 설치",
+          "description": "ABLESTACK 구성 마법사를 이용해 모든 HCI 구성요소를 설치하고 바로 사용 가능 <br></br>단일 플랫폼을 이용해 X86 서버를 클러스터링하여 클라우드 환경에 필요한 모든 요소 제공"
+        },
+        {
+          "title": "외부 스토리지 연동",
+          "description": "ABLESTACK HCI와 외부 스토리지 (SAN/iSCSI) 연동을 통한 기존 자원 재활용 가능 <br></br>다양한 스토리지 게이트웨이를 제공, 활용 가능(블록스토리지, 파일시스템, 오브젝트 스토리지 등)"
+        }
+      ]
+    }
+  },
+  "company": {
+    "header": {
+      "title": "회사소개",
+      "description": "에이블클라우드의 소식을 만나보세요"
+    },
+    "tab": [
+      {
+        "text": "회사소개"
+      },
+      {
+        "text": "연혁"
+      },
+      {
+        "text": "인증/특허"
+      },
+      {
+        "text": "위치"
+      }
+    ],
+    "about": {
+      "description": [
+        "에이블클라우드는 통합, 단순함, 자율성으로<br></br>혁신을 만듭니다.",
+        "에이블클라우드는 새로운 플랫폼으로 언제나<br></br>무한한 가능성을 봅니다."
+      ],
+      "content": "(주)에이블클라우드 홈페이지에 방문해주셔서 감사합니다.<br></br><br></br>국내 유일의 가상화 플랫폼 전문 기업으로써, 축적된 가상화 기술 관련 전문 지식과, 클라우드구축 관련 우수한 솔루션 제공, 유수 관련 기업과의 전략적 제휴 등<br></br>고객의 데이터센터 운영 및 IT 혁신을 위해 끊임 없이 노력하고 있습니다.<br></br><br></br>최신 가상화 기술 전반 및 인공지능, 빅데이터 등의 혁신 기술에 대한 자체적인 기술력을바탕으로 공공/서비스/기업 부문에 있어 클라우드 데이터센터 구축 및 서버 가상화 구축, 가상데스크톱 환경 구성 등과 관련된 플랫폼 개발 및 솔루션 제공, 시스템 공급을 통해 최고의가치를 제공하고 있습니다.<br></br>기업의 지속적인 성장을 통하여 고객과의 신뢰를 더욱 굳건히 하겠습니다. 감사합니다.",
+      "dear": "대표  권 민 길 & 박 동 혁",
+      "card": [
+        {
+          "title": "클라우드 전문가",
+          "description": "가상화 및 클라우드(HCI) 분야 10년 이상의 경력을 가진 엔지니어/개발자 중심기업"
+        },
+        {
+          "title": "끊임없는 R&D",
+          "description": "고객 요구사항에 가장 적합한 가상화 및 엔터프라이즈 HCI 연구개발을 수행하는 기업"
+        },
+        {
+          "title": "스마트한 클라우드 제품",
+          "description": "제품 개발을 통해 고객과 파트너들에게 체계적인 기술 지원을 하는 기업"
+        }
+      ]
+    },
+    "history": {
+      "2021": {
+        "year": "2021",
+        "history": [
+          "에이블스택 저작권 등록",
+          "GS 1등급 소프트웨어 품질 인증",
+          "클라우드 소프트웨어 에이블스택 1.0 런칭",
+          "기업부설연구소 인정서 취득",
+          "에이블클라우드 연구소 설립"
+        ]
+      },
+      "2022": {
+        "year": "2022",
+        "history": [
+          "에이블스택 조달청 등록",
+          "Cloud Innovation 2023’ 개최",
+          "‘지오멕스소프트’ 업무 협약",
+          "‘지엔텔’ 파트너십 계약 체결",
+          "‘한국세무사회’ 클라우드 데이터 센터 구축 협약",
+          "‘데이터스트림즈’ HCI 기반 DevOps 연구개발환경 구축",
+          "‘합천군청’ HCI 기반 통합 플랫폼 구축",
+          "‘국방기술품질원’ HCI 기반 문서보안 및 중앙화 시스템 구축"
+        ]
+      },
+      "2023": {
+        "year": "2023",
+        "history": [
+          "‘슈퍼솔루션’ 업무 협약",
+          "‘제노솔루션’ 업무 협약",
+          "‘엑세스랩’ 업무 협약",
+          "CIC(Cloud Infinity Conference)2023 개최",
+          "‘Citrix Ready’ 호환성 인증 획득",
+          "‘틸론’ 업무 협약",
+          "‘파로스정보통신’ 파트너십 계약 체결",
+          "‘이노그리드’ 파트너십 계약 체결",
+          "‘에스엔에이’ 파트너십 계약 체결",
+          "‘대검찰청’ 정보통신망 고도화 사업 구축",
+          "‘이노티움, 티쓰리큐’ 업무 협약",
+          "‘육군본부’  지능형 스마트부대(3단계) 시범구축 사업",
+          "‘방위사업청’ 국방 원가관리시스템(DIDC) 고도화 2차 사업"
+        ]
+      },
+      "2024": {
+        "year": "2024",
+        "history": [
+          "‘정원엔시스’ 업무 협약",
+          "에이블클라우드 서울사무소 개소",
+          "‘HCI를 프로비저닝 하기 위한 시스템 및 방법’ 특허 획득",
+          "광주광역시-AI 유치기업 업무협약",
+          "‘쿠콘’ 서버 가상화 HCI 구축(뉴타닉스 윈백)",
+          "‘국방기술품질원’ 클라우드 기반 통합서버 구축",
+          "‘예천군청’ VMS 및 통합 플랫폼 HCI 구축",
+          "국정원 ‘보안기능확인서’ 획득",
+          "‘한국전력공사’ Citrix 가상데스크톱(VDI) 구축 사업",
+          "CIC(Cloud Infinity Conference)2024 개최",
+          "에이블스택 4.0 출시",
+          "‘한드림넷’ 업무 협약",
+          "‘AJICT’ 업무 협약",
+          "‘이노그리드’ 업무 협약",
+          "GS 1등급 소프트웨어 품질 인증",
+          "‘ABLESTACK’ 상표권 등록"
+        ]
+      },
+      "2025": {
+        "year": "2025",
+        "history": [
+          "조달나라장터 3자단가 등록(v4.0)",
+          "‘아콘소프트’(PaaS) 업무 협약",
+          "헥토데이터 노후서버 교체사업",
+          "‘스트라토’(CMP) 업무 협약",
+          "경찰청 VDI 구축",
+          "창원시 VMS 및 서버가상화 구축",
+          "KLID 표준기록물 구축(6개)",
+          "부산지방해양수산청 서버가상화 구축",
+          "경기 생성형AI HCI 구축",
+          "화성시 오픈이노베이션 자율주행 구축",
+          "한국농어촌공사 그룹웨어 고도화 구축",
+          "노바렉스 그룹웨어 인프라 구축",
+          "인제군 AI 힐링케어 서버가상화 구축",
+          "청양군청 재난예경보 가상화 구축",
+          "한국보건의료연구원 정보시스템 구축",
+          "부산지방해양수산청 서버가상화 구축",
+          "제천시청 공간정보시스템 서버가상화 구축",
+          "대구광역시 남구청 HCI 구축",
+          "대웅제약 인도네시아 HCI 구축",
+          "육군훈련소 스마트훈련병 체계 구축",
+          "공군 스마트 비행단 표준 플랫폼 구축"
+        ]
+      }
+    },
+    "certification": [
+      "소프트웨어품질인증서",
+      "저작권 등록증",
+      "HCI 부문 국내 기업 최초<br></br>가상화 관리<br></br>보안기능확인서",
+      "HCI를 프로비저닝 하기 위한<br></br>시스템 및 방법<br></br>특허 획득",
+      "기업부설연구소 인정서"
+    ],
+    "location": {
+      "headOffice": {
+        "label": "본사",
+        "value": "서울특별시 영등포구 영신로 220 Knk디지털타워 1901호",
+        "call": "1544-3696"
+      },
+      "rndCenter": {
+        "label": "기술연구소",
+        "value": "대전광역시 대덕구 대화로106번길 66 펜타플렉스 810~812호"
+      }
+    }
+  },
+  "solution": {
+    "header": {
+      "title": "적용분야",
+      "description": "어떤 형태의 애플리케이션, 어떠한 비즈니스 워크로드 등에 상관없이 ABLESTACK이 솔루션을 제공합니다. <br></br> ABLESTACK은 기업의 비즈니스 및 IT혁신을 위한 필수적인 솔루션입니다."
+    },
+    "infra": [
+      {
+        "title": "서버가상화",
+        "description": "기업에서 실행하는 모든 인프라와 애플리케이션을 가상화 하여 민첩성과 효율성을 극대화 하십시오."
+      },
+      {
+        "title": "프라이빗 클라우드",
+        "description": "필요에 따라 언제든지 확장할 수 있고 모든 앱을 실행할 수 있는 가상화 기반 클라우드로 비즈니스를 강화하십시오."
+      },
+      {
+        "title": "하이브리드 클라우드",
+        "description": "ABLESTACK을 사용하여 온프레미스 인프라를 퍼블릭 클라우드로 원활하게 확장할 수 있습니다."
+      },
+      {
+        "title": "엣지컴퓨팅",
+        "description": "컴팩트한 하이퍼컨버징 기술로 엣지 사이트의 인프라를 지원하고 전문인력 지원을 경감합니다."
+      },
+      {
+        "title": "보안 인프라",
+        "description": "제로 트러스트 정책을 적용하여 효과적으로 사이버 공격 및 데이터 손실을 방지 솔루션을 제공합니다."
+      },
+      {
+        "title": "백업 및 복구",
+        "description": "가상환경 뿐 아니라 레거시 환경에 대한 통합 백업 및 복구를 지원합니다."
+      },
+      {
+        "title": "비즈니스 연속성/재해복구",
+        "description": "전체 데이터 백업 및 다양한 복구 옵션을 통해 연속성을 보장함함으로써 저비용으로 SLA를 충족하심시오."
+      }
+    ],
+    "application": [
+      {
+        "title": "빅데이터 분석",
+        "description": "빅데이터 애플리케이션을 위한 클라우드의 민첩성과 온프레이스 관리 편리성을 활용하십시오."
+      },
+      {
+        "title": "인공지능/머신러닝",
+        "description": "빠르고 확장이 간편한 AI 지원 인프라를 통해 AI/ML 이니셔티브를 얻으십시오."
+      },
+      {
+        "title": "가상데스크톱/DaaS",
+        "description": "회사 직원들을 위한 디지털 작업 공간을 제공하여 업무 환경에 더 큰 유연성을 제공하여 업무 생산성을 높이십시오."
+      },
+      {
+        "title": "데이터베이스",
+        "description": "다양한 상용 데이터베이스 배포를 위한 ABLESTACK 솔루션을 통해 안정적인 운영 및 통찰력을 확보하십시오."
+      },
+      {
+        "title": "전자문서 유통관리",
+        "description": "강력한 내결함성 및 원본 유지 기능을 통해 기업 내부의 중요한 전자문서의 유통 및 관리 및  중앙화를 지원합니다."
+      },
+      {
+        "title": "콜센터 시스템",
+        "description": "언제 어디서나, 어떠한 장치에서든 액세스할 수 콜센터 시스템을 구성할 수 있습니다."
+      }
+    ],
+    "dev": [
+      {
+        "title": "개발/테스트",
+        "description": "효율적이고 민첩한 개발 및 테스트 환경을 통해 생산성을 높이고 출시사이클 단축을 통해 수익을 높일수 있습니다."
+      },
+      {
+        "title": "데브옵스/IT운영",
+        "description": "IT 자동화 및 DevOps를 위한 모범 사례를 통해 기업 클라우드의 비용을 절감하고 IT서비스를 가속화합니다."
+      },
+      {
+        "title": "CI/CD",
+        "description": "가상화 기반의 클라우드 환경을 통해 빠르게 개발환경을 지원하고 통합하여 애플리케이션 생명주기를 단축합니다."
+      }
+    ]
+  },
+  "resources": {
+    "header": {
+      "title": "리소스",
+      "description": "에이블클라우드의 소식을 만나보세요."
+    },
+    "tabs": {
+      "blog": "소식",
+      "video": "동영상",
+      "ebook": "백서",
+      "compatibility": "호환성"
+    },
+    "compatibility": [
+      {
+        "title": "하이퍼바이저 버전",
+        "description": "Mold는 자체적으로 제공되는 Cell 하이버파이저 외에 다양한 하이퍼바이저를 지원합니다."
+      },
+      {
+        "title": "서버",
+        "description": "ABLESTACK은 다양한 상용 x86서버에 설치가 가능합니다."
+      },
+      {
+        "title": "Guest OS",
+        "description": "ABLESTACK은 다양한 Guest OS를 지원합니다."
+      },
+      {
+        "title": "가상화 애플리케이션/플랫폼",
+        "description": "ABLESTACK은 다음의 가상화 응용 애플리케이션 또는 플랫폼과 호환됩니다."
+      },
+      {
+        "title": "외장 스토리지",
+        "description": "ABLESTACK Mold는 Glue SDS 외에 다양한 외장 스토리지를 연결할 수 있도록 지원하여 효과적으로 클라우드 환경을 운영할 수 있도록 합니다."
+      },
+      {
+        "title": "Backup 솔루션",
+        "description": "ABLESTACK은 다양한 Backup 솔루션을 지원하며 다음과 같습니다."
+      }
+    ],
+    "compatibilityData": {
+      "hypervisor": {
+        "title": "호환되는 하이퍼바이저 버전",
+        "descriptionList": [
+          {
+            "description": "Mold는 자체적으로 제공되는 Cell 하이버파이저 외에 다양한 하이퍼바이저를 지원합니다. Mold에 의해 통합 관리될 수 있는 하이퍼바이저는 다음과 같습니다.",
+            "list": [
+              "KVM : Ubuntu 18.04 LTS, 20.04 LTS, CentOS 7, 8, RHEL 7, 8, 9, Rocky Linux 8, 9, openSUSE Leap 15, SUSE Linux Enterprise Server 15",
+              "Citrix Hypervisor : 최신 핫픽스가 적용된 7.x, 8.x 버전",
+              "XCP-ng : 7.x, 8.x",
+              "VMWare : 6.x, 7.x, 8.x"
+            ]
+          },
+          {
+            "description": "Mold에 의해 통합 관리 되지는 않으나, Glue를 통한 SDS를 구성하여 비관리형 HCI를 제공할 수 있는 하이퍼바이저는 다음과 같습니다.",
+            "list": [
+              "위의 Mold가 통합관리하는 모든 하이퍼바이저",
+              "Hyper-V : Windows 2016 이상, Hyper-V 2016 이상"
+            ]
+          }
+        ]
+      },
+      "server": {
+        "title": "호환되는 서버",
+        "descriptionList": [
+          {
+            "description": "ABLESTACK은 다양한 상용 x86서버에 설치가 가능하며 다음과 같습니다.",
+            "list": [
+              "DELL",
+              "HPE",
+              "Fujitsu",
+              "Lenovo",
+              "슈퍼마이크로",
+              "유니와이드",
+              "KTNF",
+              "이슬림",
+              "SNA",
+              "쓰리에스코어(AMD)"
+            ]
+          }
+        ]
+      },
+      "guest-os": {
+        "title": "호환되는 Guest OS",
+        "descriptionList": [
+          {
+            "description": "ABLESTACK은 다양한 Guest OS를 지원하며 다음과 같습니다.",
+            "list": [
+              "Redhat Enterprise Linux : 6 이상",
+              "Oracle Linux : 6 이상",
+              "SUSE Enterprise Linux : 11 이상",
+              "Ubuntu : 16 이상",
+              "Rocky Linux : 8 이상",
+              "Cent OS : 7 이상",
+              "Windows : 8 이상",
+              "Windows Server : 2012 이상"
+            ]
+          }
+        ]
+      },
+      "virtualization": {
+        "title": "호환성이 검증된 가상화 애플리케이션/플랫폼",
+        "descriptionList": [
+          {
+            "description": "ABLESTACK은 다음의 가상화 응용 애플리케이션 또는 플랫폼과 호환됩니다.",
+            "list": [
+              "Tilon(틸론) : DStatsion(VDI)",
+              "Citrix : Virtual Apps & Desktops(VDI)",
+              "이노티움 :  InnoECM(문서중앙화)",
+              "Tmax : Webtob(WEB), Jeus(WAS), Tibero(DB)",
+              "Oracle : Oracle RAC(DB)",
+              "MS : MSSQL(DB)"
+            ]
+          }
+        ]
+      },
+      "external-storage": {
+        "title": "호환되는 외장 스토리지",
+        "descriptionList": [
+          {
+            "description": "ABLESTACK Mold는 Glue SDS 외에 다양한 외장 스토리지를 연결할 수 있도록 지원하여 효과적으로 클라우드 환경을 운영할 수 있도록 지원합니다. 블록 스토리지로 사용할 수 있도록 지원되는 외장스토리지는 다음과 같습니다.",
+            "list": [
+              "VMWare : 표준 iSCSI, 표준 NFS",
+              "Citrix Hypervisor : 표준 iSCSI, 표준 NFS, SMB",
+              "Microsoft Hyper-V : 표준 iSCSI, SMB",
+              "Cell, KVM : 표준 iSCSI, 표준 NFS / POSIX 호환 스토리지",
+              "Others : GlusterFS, SolidFire, Ceph RBD, Datera, Cloudbyte, Nexenta, Dell PowerFlex, LINSTOR",
+              "ABLESTACK Proprietary : Glue Block, Glue Filesystem"
+            ]
+          }
+        ]
+      },
+      "backup": {
+        "title": "호환되는 Backup 솔루션",
+        "descriptionList": [
+          {
+            "description": "ABLESTACK은 다양한 Backup 솔루션을 지원하며 다음과 같습니다.",
+            "list": [
+              "Commvault, Dell Networker 백업 플랫폼 통합",
+              "Veeam, Veritas NetBackup, Synology ABB, Acronics, Arcserve, Unitrends 백업 지원"
+            ]
+          }
+        ]
+      }
+    },
+    "ebook": {
+      "data": [
+        {
+          "title": "Blade Server? 이제는 HCI",
+          "description": "블레이드 서버 또는 HCI 중 어떤 것을 도입해야 할까요?"
+        },
+        {
+          "title": "V사를 완벽하게 대체할 수 있는 플랫폼",
+          "description": "영구 라이센스를 제공하는 ABLESTACK HCI 플랫폼"
+        },
+        {
+          "title": "ABLESTACK for Oracle RAC 구성",
+          "description": "ABLESTACK 가상화 환경에서 Oracle RAC을 구성하세요."
+        },
+        {
+          "title": "ABLESTACK VMWare 가상머신 마이그레이션",
+          "description": "내장된 마이그레이션 도구를 통한 V2V 가상머신 이관"
+        },
+        {
+          "title": "ABLESTACK 물리서버를 가상머신으로",
+          "description": "물리서버를 가상머신으로 마이그레이션하는 방법"
+        },
+        {
+          "title": "ABLESTACK-VMware vSphere 제품 비교",
+          "description": "ABLESTACK와 VMWare 주요 라이선스 기능 비교표"
+        },
+        {
+          "title": "ABLESTACK Kubernetes Cluster 사용기초",
+          "description": "내장된 Koral 기능을 이용한  쿠버네티스 클러스터 배포 방법"
+        },
+        {
+          "title": "ABLESTACK Kubernetes Cluster와 Portainer 플랫폼 연동",
+          "description": "애플리케이션 관리 플랫폼 Portainer와 연동하는 방법"
+        },
+        {
+          "title": "비즈니스 연속성을 제공하는 ABLESTACK HCI 재해복구",
+          "description": "내장된 기능으로 Active-Active 재해복구 환경 구성 가능"
+        },
+        {
+          "title": "ABLESTACK Link를 통한 마이크로 세그먼테이션 보안관리",
+          "description": "내장된 Link를 이용한 보안 관리 기능"
+        },
+        {
+          "title": "ABLESTACK Link Load Balancer 어플라이언스 활용",
+          "description": "내장된 Link를 이용한 Load Balancer 적용 시나리오"
+        },
+        {
+          "title": "ABLESTACK vs VMware 성능 비교",
+          "description": "ABLESTACK와 VMware 동일 환경에서의 성능 비교"
+        },
+        {
+          "title": "ABLESTACK for Commvault 백업 솔루션",
+          "description": "Commvault 백업 솔루션 연동 기능"
+        },
+        {
+          "title": "CCTV 영상감시 시스템을 위한 가상화 플랫폼, ABLESTACK",
+          "description": "영상감시 인프라 및 관제센터 구축"
+        }
+      ]
+    }
+  },
+  "interview": {
+    "header": {
+      "title": "고객사",
+      "description": "ABLESTACK은 어떠한 애플리케이션이든 사용 환경이나 산업 환경과 상관없이 모두 처리할 수 있으며 최신의 이머징 워크로드도 원활하게 배포하여 운영할 수 있는 유연성과 확정성, 안정성을 제공합니다."
+    },
+    "title": "ABLESTACK을 통해 혁신을 이룩한 고객사"
+  },
+  "partner": {
+    "header": {
+      "title": "파트너",
+      "description": "독자적인 기술력, 지속 가능한 수익창출.<br></br>ABLESTACK 플랫폼 설계 및 글로벌 성장을 위해 가상화/클라우드 시장의 공동 성장을 만들어갈 파트너를 찾습니다."
+    },
+    "title": "함께 성공하는 미래",
+    "description": "독자적인 기술력, 지속 가능한 수익창출. <br></br> ABLESTACK 플랫폼 설계 및 글로벌 성장을 위해 가상화/클라우드 시장의 공동 성장을 만들어갈 파트너를 찾습니다.",
+    "tier": [
+      {
+        "title": "플래티넘 파트너",
+        "description": "전담 영업 조직 및 기술지원 조직을 운영하며, 모든 분야에서 긴밀하게 협업영업 및 POC, 구축, 유지보수 전담인력을 갖춘 파트너"
+      },
+      {
+        "title": "골드 파트너",
+        "description": "영업 및 구축, 유지보수 전담인력을 갖춘 파트너"
+      },
+      {
+        "title": "실버 파트너",
+        "description": "전담 영업을 갖춘 파트너"
+      },
+      {
+        "title": "VAR 파트너",
+        "description": "양사 솔루션 또는 제품을 패키징 형태로 공급 가능한 파트너"
+      }
+    ],
+    "partnerList": {
+      "title": "제조사 파트너",
+      "description": "현재 에이블클라우드와 함께하고 있는 제조사 파트너 입니다.",
+      "list": [
+        {
+          "text": "에이블스토어"
+        },
+        {
+          "text": "델 테크놀로지스"
+        },
+        {
+          "text": "HPE"
+        },
+        {
+          "text": "후지쯔"
+        },
+        {
+          "text": "레노버"
+        },
+        {
+          "text": "슈퍼마이크로컴퓨터"
+        },
+        {
+          "text": "슈퍼솔루션"
+        },
+        {
+          "text": "케이티엔에프"
+        },
+        {
+          "text": "유니와이드"
+        },
+        {
+          "text": "오우션 테크놀로지"
+        },
+        {
+          "text": "시트릭스"
+        },
+        {
+          "text": "틸론"
+        },
+        {
+          "text": "제노솔루션"
+        },
+        {
+          "text": "NHN크로센트(주)"
+        },
+        {
+          "text": "한드림넷"
+        },
+        {
+          "text": "이노그리드"
+        },
+        {
+          "text": "아콘소프트"
+        },
+        {
+          "text": "이노티움"
+        },
+        {
+          "text": "티쓰리큐"
+        },
+        {
+          "text": "이노뎁"
+        },
+        {
+          "text": "엑세스랩"
+        },
+        {
+          "text": "효성인포메이션시스템"
+        },
+        {
+          "text": "정원엔시스"
+        },
+        {
+          "text": "에이제이아이씨티"
+        },
+        {
+          "text": "SK쉴더스"
+        },
+        {
+          "text": "지엔텔"
+        },
+        {
+          "text": "아이티센 클로잇"
+        },
+        {
+          "text": "에스엔에이"
+        },
+        {
+          "text": "대원 CTS"
+        },
+        {
+          "text": "지오멕스소프트"
+        }
+      ]
+    },
+    "program": {
+      "header": {
+        "title": "Partnership Program",
+        "description": "독자적인 기술력, 지속 가능한 수익창출.<br></br> ABLESTACK 플랫폼 설계 및 글로벌 성장을 위해 가상화/클라우드 시장의 공동 성장을 만들어갈 파트너를 찾습니다."
+      },
+      "title": "파트너쉽 프로그램 소개",
+      "description": "파트너사와 협력하기 위해 보다 유연하고 혁신적인 프로그램을 제안합니다",
+      "data": [
+        {
+          "title": "에이블클라우드 세미나 참석",
+          "description": "컨퍼런스, 세미나 참여<br></br>온/오프라인 교육 및 기술지원"
+        },
+        {
+          "title": "파트너 맞춤형 교육 지원(매 월)",
+          "description": "기본 과정 (1 Day Program)<br></br>심화 과정 (2 Part 과정으로 설치부터 PoC 실습까지)"
+        },
+        {
+          "title": "마케팅 및 영업 활동 지원",
+          "description": "영업 활동 지원<br></br>마케팅 프로그램 지원"
+        },
+        {
+          "title": "Partner Day 개최/운영",
+          "description": "비즈니스 파트너 대상으로 매 년 1회 실시"
+        }
+      ],
+      "contact": "문의하기"
+    }
+  },
+  "contact": {
+    "header": {
+      "title": "문의",
+      "description": "에이블클라우드의 제품 및 솔루션/ 파트너<br></br> 문의를 남겨주시면 신속하고 정확하게 답변 드리겠습니다."
+    },
+    "form": {
+      "name": "이름",
+      "companyName": "업체명",
+      "position": "직함",
+      "email": "이메일",
+      "phone": "연락처",
+      "type": "문의유형",
+      "message": "문의내용",
+      "button": "문의하기",
+      "sales": "영업",
+      "techSupport": "기술",
+      "estimation": "견적",
+      "submit": {
+        "title": "고객님의 문의사항 제출이 완료되었습니다.",
+        "description": "고객님의 소중한 문의사항을 검토 후 연락드리겠습니다.<br></br>궁금하신 사항은 아래 메일로 추가 문의하실 수 있습니다.",
+        "button": "홈으로"
+      }
+    },
+    "footer": {
+      "title": "영업/기술지원 메일",
+      "contact": [
+        "영업 / 마케팅: sales@ablestack.co.kr",
+        "기술지원: support@ablecloud.io"
+      ]
+    }
+  },
+  "products": {
+    "header": {
+      "cube": {
+        "title": "Cube 운영체제",
+        "description": "Cube는 ABLESTACK을 구성하는 모든 소프트웨어 패키지와 구성마법사 그리고 웹 기반 호스트 관리플랫폼을 포함하는 Linux 기반 서버 OS 입니다."
+      },
+      "cell": {
+        "title": "Cell 가상화",
+        "description": "Cell은 호스트 내에서 구역을 정해 실행되는 가상머신 또는 컨테이너를 실행하기 위한 하이퍼바이저입니다. 말 그대로 하나의 호스트의 자원을 쪼개서 각 각의 역할을 수행하는 작은 단위의 세포 또는 방인 가상머신을 실행하기 위한 환경을 제공하는 플랫폼입니다.",
+        "contentMaxWidth": "max-w-[746px]"
+      },
+      "glue": {
+        "title": "Glue 스토리지",
+        "description": "Glue는 ABLESTACK의 스토리지 플랫폼의 이름입니다. 호스트에 있는 디스크를 이용해 통합된 저장공간을 제공하고, 다양한 형태로 스토리지 서비스를 제공하는 HCI 스토리지의 특성을 잘 설명할 수 있는 단어로, 통합 스토리지 라는 의미를 담고 있습니다."
+      },
+      "mold": {
+        "title": "Mold 관리",
+        "description": "Mold는 가상머신을 생성하고 운영하며, 다양한 네트워크, 스토리지 서비스, 자동화 기능, 백업, 재해복구 기능 등의 다양한 클라우드/가상화 관련 기능을 웹 UI를 통해 사용할 수 있는 플랫폼 입니다."
+      },
+      "track": {
+        "title": "Track 네트워크",
+        "description": "Track은 ABLESTACK에 가상화된 네트워킹 레이어를 구성하는 플랫폼으로, 가상화 영역에 소프트웨어 정의된 네트워크를 배포합니다. 신속하게 사용자 단위로 격리된 네트워크를 배포하고 활용할 수 있습니다."
+      },
+      "wall": {
+        "title": "Wall 모니터링",
+        "description": "Wall은 ABLESTASCK을 구성하는 모든 인프라 및 사용자 가상머신, 애플리케이션을 모니터링하는 통합 모니터링 플랫폼 입니다."
+      },
+      "koral": {
+        "title": "Koral K8S 컨테이너",
+        "description": "Mold를 통해 자동으로 배포되는 Kubernetes 클러스터로 컨테이너를 이용한 애플리케이션 프로비저닝, 운영 및 수명주기 관리, 클러스터 확장 등의 관리가 매우 단순화 됩니다."
+      },
+      "genie": {
+        "title": "Genie IaC 플랫폼",
+        "description": "사용자가 생성한 워크플로우를 기반으로 멀티 클라우드 환경에서 가상머신 및 애플리케이션과 상태 모니터링 등을 자동으로 배포할 수 있도록 지원하는 멀티 클라우드 IT 자동화 플랫폼 입니다."
+      },
+      "silo": {
+        "title": "Silo 스토리지 서비스",
+        "description": "기업이 IT 서비스를 운영하면서 필요한 다양한 스토리지 기능을 ABLESTACK을 통해 제공하는 플랫폼으로, 스토리지 확장의 유연성을 높여주고 다양한 방식으로 Glue의 활용성을 높여줍니다."
+      },
+      "over": {
+        "title": "Over 장애 및 재해 관리",
+        "description": "Over는 ABLESTASCK의 가상 인프라 및 애플리케이션에서 발생할 수 있는 다양한 장애 및 재해 상황을 대응하기 위한 복구 플랫폼으로 기업의 Mission Critical 애플리케이션을 효과적으로 보호합니다."
+      },
+      "link": {
+        "title": "Link 보안네트워크",
+        "description": "가시성 높은 보안 정책을 기반으로 가상머신 및 애플리케이션에 대한 공격에 완벽한 방어 환경을 제공하며, 다양한 퍼블릭 클라우드와의 네트워크 연결을 지원합니다."
+      }
+    },
+    "content": {
+      "cube": {
+        "description": "모든 x86 서버에 하드웨어 의존성 없이 설치하여 사용가능하며, 최적화된 커널 및 IO 처리 모듈을 통해 고성능 환경을 제공합니다.",
+        "subDescriptions": [
+          "표준 Linux OS",
+          "ABLESTACK을 위한 모든 패키지가 포함",
+          "웹 브라우저만 있으면 어디서든 호스트의 디바이스, 서비스, 네트워킹 등을 관리 가능",
+          "클라우드 환경을 배포 마법사를 통해 배포 가능"
+        ]
+      },
+      "cell": {
+        "description": "Cell은 Linux KVM을 기반으로 ABLESTACK 운영에 최적화된 기능을 추가한 내장된 하이퍼바이저입니다. Cell 하이퍼바이저는 다음과 같은 주요 컴포넌트로 구성됩니다.",
+        "subDescriptions": [
+          "Cube OS에 이미 하이퍼바이저가 내장되어 있어 별도의 하이퍼바이저 라이선스 불필요",
+          "베어메탈 하이퍼바이저 전환으로 최신 커널 적용을 통한 고성능 IO 구현",
+          "Cell 뿐만 아니라 VM ware, Hyper V, Xen 등 기존의 하이퍼바이저도 호환 가능"
+        ]
+      },
+      "glue": {
+        "description": "Glue는 ABLESTACK HCI의 핵심 구성요소로 HCI의 스토리지를 제공하기 위한 플랫폼입니다. 다음의 그림은 ABLESTACK HCI의 전체 구성요소 중 Glue가 제공하는 기능을 아키텍처로 표현합니다.",
+        "subDescriptions": [
+          "서버에 내장된 디스크 만으로 대규모 스토리지 제공 및 장애 시에도 자가진단 및 자가복구",
+          "중복 제거 및 압축으로 원본 데이터 대비 최대 80% 용량 절감하여 고효율 보장",
+          "운영 중 무제한 용량 확장 가능, 무한한 유즈케이스"
+        ]
+      },
+      "mold": {
+        "description": "클릭 한 번으로 대부분의 작업 처리가 가능하고, 인프라 및 애플리케이션의 운영을 자동화할 수 있으며 효율적으로 인프라를 관리할 수 있습니다.",
+        "subDescriptions": [
+          "직관적인 UI의 관리 콘솔을 통해 모든 가상화 자원을 관리 가능",
+          "셀프서비스를 통한 멀티 테넌트 클라우드 서비스를 제공",
+          "최소한의 작업으로 복잡한 IT 인프라를 관리",
+          "API를 통해 사용자 수준 워크플로우 자동화와 사전 정의 코드로 자동화된 프로비저닝을 생성"
+        ]
+      },
+      "track": {
+        "description": "Track은 가상 라우터 기반의 오버레이 소프트웨어 정의 네트워크를 제공합니다. 다양한 네트워크 기능을 빠르게 구성하고 관리할 수 있습니다.",
+        "subDescriptions": [
+          "별도의 어플라이언스 설치 없이 사용 가능",
+          "다양한 네트워크 기능 제공 (L2, L3, DNS 등)",
+          "외부 접속의 원천 차단으로 높은 보안성 제공",
+          "웹 UI를 통해 모든 네트워크 자원에 대한 통제 가능"
+        ]
+      },
+      "wall": {
+        "description": "엔터프라이즈 모니터링 플랫폼인 Wall은ABLESTACK HCI는 HCI를 구성하는 모든 호스트 및 가상머신, 그리고 사용자가 모니터링하기 원하는 인프라에 대한 매트릭을 쿼리하고 시각화하며, 임계치 설정에 따른 경고를 받을 수 있습니다.",
+        "subDescriptions": [
+          "실시간 모니터링 정보 제공",
+          "DB, 웹 애플리케이션 등을 커스텀 모니터링 가능",
+          "임계치 설정값을 기반으로 알람 제공",
+          "사용량 통계를 통해 확장 시점 예측 정보 제공"
+        ]
+      },
+      "koral": {
+        "description": "클릭 한 번으로 대부분의 작업 처리가 가능하고, 인프라 및 애플리케이션의 운영을 자동화할 수 있어 효율적으로 인프라를 관리할 수 있습니다.",
+        "subDescriptions": [
+          "원클릭 단순성",
+          "Persistent 스토리지 지원",
+          "온라인 확장 및 자동 스케일링",
+          "고가용성 제공"
+        ]
+      },
+      "genie": {
+        "description": "Genie는 범용 언어를 기반으로 수행되는 자동화 도구로, 어려운 작업을 반복적으로 수행할 수 있도록 미리 생성한 플레이북을 기반으로 에이전트 없이 버튼 하나만 누르면 전사적으로 가상머신, 컨테이너, 네트워크, 애플리케이션 등을 배포할 수 있습니다.",
+        "subDescriptions": [
+          "워크플로우 기반 자동화",
+          "AWS, GCP, Azure 등 다양한 클라우드 서비스에서의 자동화 제공",
+          "사전 정의 워크플로우 제공을 통해 다양한 오픈소스 플랫폼을 쉽게 배포 및 사용할 수 있는 환경 제공",
+          "자동으로 배토된 자원 및 상태를 모니터링 가능"
+        ]
+      },
+      "silo": {
+        "subDescriptions": [
+          "다양한 상용 SDS를 연결하여 스토리지 확장 유연성 제공",
+          "오브젝트 스토리지 게이트웨이 제공 및 브라우저를 제공하여 빅데이터 / AI 데이터 관리 가능",
+          "베어메탈 / 하이퍼바이저 연결 지원",
+          "오브젝트 스토리지 브라우저 및 웹 기반 NAS 등 웹 브라우저 통한 다양한 방식의 스토리지 활용 가능"
+        ]
+      },
+      "over": {
+        "subDescriptions": [
+          "Active-Active DR",
+          "UI를 통해 가상머신 단위로 DR 설정을 지원하여 효율적인 DR 관리가 가능하며, 가상머신 단위로 상태 모니터링 지원",
+          "Mission Critical 애플리케이션이 무중단으로 운영되는 것을 보장하기 위한 서버 이중화 지원"
+        ]
+      },
+      "link": {
+        "subDescriptions": [
+          "Zero Trust 기반의 높은 보안성과 멀티 클라우드 연결 지원",
+          "가상머신, 컨테이너, 애플리케이션에 대한 격리를 지원하여 중요 애플리케이션 및 공유 서비스의 손상 방지",
+          "소프트웨어적으로 정의된 보안정책 관리 기능"
+        ]
+      }
+    }
+  }
+}

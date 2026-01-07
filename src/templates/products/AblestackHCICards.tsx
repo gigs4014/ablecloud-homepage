@@ -1,3 +1,5 @@
+import { useTranslations } from 'next-intl';
+
 import { AblestackHCICardData } from '@/types/products';
 
 interface AblestackHCICardsProps {
@@ -5,10 +7,12 @@ interface AblestackHCICardsProps {
 }
 
 export function AblestackHCICards({ cardsData }: AblestackHCICardsProps) {
+  const t = useTranslations('product.hci');
+
   return (
     <div className='flex flex-col gap-4 md:gap-8'>
       <div className='font-bold text-[24px] leading-[32px] md:text-[32px] md:leading-[44.16px] text-center'>
-        HCI, 무엇이 특별한가?
+        {t('title')}
       </div>
       <div className='grid sm:grid-cols-2 lg:grid-cols-4 justify-items-center p-[10px] gap-[10px] xl:gap-6'>
         {cardsData.map((cardData, idx) => {

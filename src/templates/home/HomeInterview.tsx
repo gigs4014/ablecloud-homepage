@@ -4,9 +4,10 @@ import { Button } from '@/components/ui';
 
 interface HomeInterviewProps {
   title: string;
+  detailText: string;
 }
 
-export function HomeInterview({ title }: HomeInterviewProps) {
+export function HomeInterview({ title, detailText }: HomeInterviewProps) {
   const bannerWidth = {
     banner1: `w-[${homeInterviewIcons1.length * 158 - 8}px]`,
     banner1Wrapper: `w-[${homeInterviewIcons1.length * 158 * 2 - 8}px]`,
@@ -81,7 +82,7 @@ export function HomeInterview({ title }: HomeInterviewProps) {
         </div>
       </div>
       <div className='flex justify-center'>
-        <Button text='고객사 더보기' href='/interview' />
+        <Button text={detailText} href='/interview' />
       </div>
     </div>
   );

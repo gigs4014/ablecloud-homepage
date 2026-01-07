@@ -1,12 +1,12 @@
 'use client';
 
-import Link from 'next/link';
-
 import { useMemo, useState } from 'react';
 
 import { Pagination } from '@/components/ui';
 
 import { BlogData } from '@/types/resource';
+
+import { Link } from '@/i18n/routing';
 
 const LIMIT = 10;
 

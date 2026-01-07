@@ -1,8 +1,9 @@
 import { StaticImageData } from 'next/image';
 
-import { resourceType } from '@/constants/resource';
+import { compatibilityType, resourceType } from '@/constants/resource';
 
 export type ResourceType = (typeof resourceType)[number];
+export type CompatibilityType = (typeof compatibilityType)[number];
 
 export interface MdxMetaData {
   id: number;
@@ -25,4 +26,12 @@ export interface EbookData {
   description: string;
   href: string;
   imgSrc: StaticImageData;
+}
+
+export interface CompatibilityData {
+  title: string;
+  descriptionList: {
+    description: string;
+    list: string[];
+  }[];
 }

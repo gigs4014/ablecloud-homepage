@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
 
 import { useMemo, useState } from 'react';
 
@@ -9,9 +8,11 @@ import { Pagination } from '@/components/ui';
 
 import { EbookData } from '@/types/resource';
 
-const LIMIT = 6;
+import { Link } from '@/i18n/routing';
 
-export function EbookList({ ebooksData }: { ebooksData: EbookData[] }) {
+const LIMIT = 12;
+
+export function EbookList({ ebooksData, origin }: { ebooksData: EbookData[]; origin: string }) {
   const [page, setPage] = useState<number>(1);
 
   const ebookList = useMemo(() => {
@@ -31,10 +32,10 @@ export function EbookList({ ebooksData }: { ebooksData: EbookData[] }) {
           return (
             <Link
               key={idx}
-              href={`/pdf/${v.href}`}
+              href={`${origin}/pdf/${v.href}`}
               target='_blank'
               className='flex flex-col rounded-[20px] border border-[#eee] max-w-[360px] transform transition duration-200 hover:scale-102 hover:shadow-sm'>
-              <Image src={v.imgSrc} alt='' />
+              <Image src={v.imgSrc} alt='' className='rounded-t-[20px] max-h-[207px]' />
               <div className='flex flex-col gap-[6px] px-6 py-4'>
                 <div className='text-[12px] text-[#919191]'>{v.type}</div>
                 <div className='font-bold'>{v.title}</div>

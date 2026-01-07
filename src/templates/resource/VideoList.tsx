@@ -4,7 +4,7 @@ import { useMemo, useState } from 'react';
 
 import { Pagination } from '@/components/ui';
 
-const LIMIT = 6;
+const LIMIT = 12;
 
 export function VideoList({ videosData }: { videosData: string[] }) {
   const [page, setPage] = useState<number>(1);
