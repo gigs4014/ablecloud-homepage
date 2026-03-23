@@ -3,9 +3,9 @@ import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 
 import ablestoreSrc from '@/public/images/partners/ablestor.png';
-import cocktailSrc from '@/public/images/partners/cocktail.png';
 import bostechSrc from '@/public/images/partners/bostech.png';
 import citrixSrc from '@/public/images/partners/citrix.png';
+import cocktailSrc from '@/public/images/partners/cocktail.png';
 import dellSrc from '@/public/images/partners/dell.png';
 import dwctsSrc from '@/public/images/partners/dwcts.png';
 import fujitsuSrc from '@/public/images/partners/fujitsu.png';
@@ -15,14 +15,15 @@ import hdnSrc from '@/public/images/partners/hdn.png';
 import hpSrc from '@/public/images/partners/hp.png';
 import hsSrc from '@/public/images/partners/hs.png';
 import innodepSrc from '@/public/images/partners/innodep.png';
-import namuSrc from '@/public/images/partners/namu.png';
 import innotiumSrc from '@/public/images/partners/innotium.png';
 import itcenSrc from '@/public/images/partners/itcen.png';
+import kaytusSrc from '@/public/images/partners/kaytus.png';
 import ktnfSrc from '@/public/images/partners/ktnf.png';
 import lenovoSrc from '@/public/images/partners/lenovo.png';
-import kaytusSrc from '@/public/images/partners/kaytus.png';
+import namuSrc from '@/public/images/partners/namu.png';
 import oceanSrc from '@/public/images/partners/ocean.png';
 import skshieldusSrc from '@/public/images/partners/skshieldus.png';
+import sminfoSrc from '@/public/images/partners/sminfo.png';
 import snaSrc from '@/public/images/partners/sna.png';
 import superSrc from '@/public/images/partners/super.png';
 import supermicrSrc from '@/public/images/partners/supermicr.png';
@@ -120,5 +121,6 @@ export const usePartnerList = () => {
     { img: <Image src={snaSrc} alt='' />, text: t('list.27.text') },
     { img: <Image src={dwctsSrc} alt='' />, text: t('list.28.text') },
     { img: <Image src={geomexSrc} alt='' />, text: t('list.29.text') },
+    { img: <Image src={sminfoSrc} alt='' width={164} />, text: t('list.30.text') },
   ];
 };
