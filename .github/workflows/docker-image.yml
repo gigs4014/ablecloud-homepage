@@ -34,6 +34,7 @@ jobs:
           tags: |
             type=ref,event=tag
             type=semver,pattern={{version}}
+            type=raw,value=latest
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
@@ -42,19 +43,3 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-
-  deploy:
-    needs: build-and-push
-    runs-on: self-hosted
-    steps:
-      - name: Deploy container
-        run: |
-          docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.event.release.tag_name }}
-          docker rm -f ablecloud-homepage || true
-          docker run -d \
-            --name ablecloud-homepage \
-            --restart unless-stopped \
-            -p 8888:80 \
-            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.event.release.tag_name }}
-          sleep 1
-          docker start ablecloud-homepage || true
