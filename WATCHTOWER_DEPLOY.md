@@ -33,13 +33,14 @@ docker run -d \
 ```
 
 ### 2) Watchtower 실행
-서비스 컨테이너를 감시할 Watchtower를 실행합니다.
+서비스 컨테이너를 감시할 Watchtower를 실행합니다. (API 버전 에러 방지를 위해 `-e DOCKER_API_VERSION=1.40` 옵션을 추가합니다.)
 
 ```bash
 docker run -d \
   --name watchtower \
   --restart always \
   -v /var/run/docker.sock:/var/run/docker.sock \
+  -e DOCKER_API_VERSION=1.40 \
   containrrr/watchtower \
   --interval 60 \
   --cleanup \
