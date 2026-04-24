@@ -156,6 +156,10 @@
       "label": "R&D Center",
       "value": "Unit 810-2, Pentaplex, 66, Daehwa-ro 106beon-gil, Daedeok-gu, Daejeon, 34365, Republic of Korea"
     },
+    "yeongnamAddress": {
+      "label": "Yeongnam Branch",
+      "value": "Room 1325, 128 Namdongcheon-ro, Nam-gu, Busan, Republic of Korea (Busan International Finance Center BIFC II)"
+    },
     "contact": {
       "label": "Tel",
       "value": "1544-3696"
@@ -175,8 +179,8 @@
             "description": "Seamlessly migrate your existing virtual machines<br></br> without any disruption."
           },
           {
-            "title": "Perpetual License, Single Platform",
-            "description": "Minimize costs with a single license, offering server virtualization, cloud management, storage, networking, and more—all on one platform."
+            "title": "Perpetual License, Virtualization Platform",
+            "description": "Minimize cost burden with a perpetual license, and provide all capabilities—such as server virtualization, cloud management, storage, and networking—through a unified virtualization platform."
           },
           {
             "title": "Use Your Existing Infrastructure",
@@ -397,25 +401,47 @@
         "history": [
           "Registered AbleStack V4.0 on Korea Public Procurement Service (3-Party Price Contract)",
           "Signed Business Agreement with ‘Arconsoft’(PaaS)",
-          "Completed Legacy Server Replacement Project for ‘HectoData’",
           "Signed Business Agreement with ‘STRATO’",
-          "Deployed Citrix VDI Infrastructure for the ‘Korean National Police Agency’",
+          "‘DIGICAP’ Signs MOU for AI Cloud Convergence Market",
+          "Completed Legacy Server Replacement Project for ‘HectoData’",
+          "Implemented Citrix VDI infrastructure for the ‘Korean National Police Agency (KNPA)’",
           "Implemented VMS and Server Virtualization for ‘Changwon City Government’",
-          "Implementation of ‘KLID’ records management system (6 systems)",
           "Deployed Server Virtualization for ‘Busan Regional Office of Oceans and Fisheries’",
-          "Development of an AI-based HCI platform for ‘Gyeonggi Provincial Government’",
-          "Built Autonomous Driving Infrastructure through Open Innovation Project in‘Hwaseong City’",
-          "Upgraded Groupware System for ‘Korea Rural Community Corporation’",
-          "Built Groupware Infrastructure for ‘NOVAREX’",
-          "Deployed Server Virtualization for ‘Korea Institute of Maritime and Fisheries ‘Technology",
-          "Cheongyang-gun County Office Disaster Alert Virtualization Project",
-          "Information System Deployment for the National Evidence-based Healthcare Collaborating Agency (NECA)",
-          "Server Virtualization Deployment for Busan Regional Office of Oceans and Fisheries",
           "Geospatial Information System Server Virtualization for Jecheon City Hall",
           "HCI Infrastructure Deployment for Nam-gu Office, Daegu City Hall",
-          "HCI Deployment for Daewoong Pharmaceutical Indonesia",
-          "Smart Trainee System Deployment for the Korea Army Training Center",
-          "Smart Air Base Standard Platform Implementation for the Republic of Korea Air Force"
+          "Development of an AI-based HCI platform for ‘Gyeonggi Provincial Government’",
+          "Built Autonomous Driving Infrastructure through Open Innovation Project in ‘Hwaseong City’",
+          "Upgraded Groupware System for ‘Korea Rural Community Corporation’",
+          "Built Groupware Infrastructure for ‘NOVAREX’",
+          "AI Healing Care Server Virtualization Project for ‘Inje County Office’",
+          "‘Cheongyang-gun County Office’ Disaster Alert Virtualization Project",
+          "VMS & Integrated Control HCI Deployment for Multiple Local Governments (Hapcheon, Buyeo, Cheongsong, Taean, Yangsan, Geoje)",
+          "Implemented the Standard Records Management System (RMS) for ‘the Korea Local Information Research & Development Institute (KLID)’",
+          "Information System Deployment for the National Evidence-based Healthcare Collaborating Agency (NECA)",
+          "Deployed Server Virtualization for ‘Korea Institute of Maritime and Fisheries ‘Technology",
+          "Smart Trainee System Deployment for the ‘Korea Army Training Center’",
+          "Implemented a Smart Air Base Standard Platform for ‘the Republic of Korea Air Force’",
+          "Executed Big Data Implementation Project for ‘DTaQ’",
+          "Implemented AI System for ‘Konyang University’",
+          "Deployed Next-Generation Campus Network Infrastructure for ‘Gwangju Metropolitan Office of Education’",
+          "Deployed HCI infrastructure for ‘Daewoong Pharmaceutical’ Indonesia",
+          "Built a virtualized infrastructure for ‘Dongwon Metal’s U.S. subsidiary’",
+          "Participated in Major Technology Conferences, Including 2025 OCP Korea Tech Day",
+          "Hosted 2025 Regional University IT Council Meeting and Partner Seminars"
+        ]
+      },
+      "2026": {
+        "year": "2026",
+        "history": [
+          "Built an Integrated Open Database Management Platform for ‘Hana Securities’",
+          "Enhanced the Intelligence Management System for ‘the National Police Agency’",
+          "Deployed Server Virtualization Infrastructure for ‘Yangsan Pusan National University Hospital’",
+          "Implemented HCI-based Synthetic Battlefield Training System for ‘the ROK Army Combat Training Command’",
+          "Integrated a Smart City Data Hub and Hardware Infrastructure for ‘Taean County Office’",
+          "Supplied a Website Virtualization Solution for ‘Incheon Geomdan District Office’",
+          "Implemented a Management Information System (Phase 1) for ‘Gwangju Metropolitan Rapid Transit Corporation’ – Metro Line 2",
+          "Executed a Network Segmentation Project for ‘Hanpass’",
+          "Built HCI Infrastructure for ‘EZL’ (Gyeonggi Bus Association Infrastructure Enhancement Project)"
         ]
       }
     },
@@ -435,6 +461,11 @@
       "rndCenter": {
         "label": "R&D Center",
         "value": "Unit 810-2, Pentaplex, 66, Daehwa-ro 106beon-gil, Daedeok-gu, Daejeon, 34365, Republic of Korea"
+      },
+      "yeongnam": {
+        "label": "Yeongnam Branch Office",
+        "value": "Room 1325, 128 Namdongcheon-ro, Nam-gu, Busan, Republic of Korea (Busan International Finance Center BIFC II)",
+        "call": ""
       }
     }
   },
@@ -588,7 +619,8 @@
               "KTNF",
               "iSlim",
               "SNA",
-              "ThreeScore (AMD)"
+              "ThreeScore (AMD)",
+              "UCP UV"
             ]
           }
         ]
@@ -622,7 +654,10 @@
               "Innotium : InnoECM(Document Centralization)",
               "Tmax : Webtob(WEB), Jeus(WAS), Tibero(DB)",
               "Oracle : Oracle RAC(DB)",
-              "MS : MSSQL(DB)"
+              "MS : MSSQL(DB)",
+              "VMS: InnoDep, RealHub, Danusys, M-Stone, Incon, Milestone Systems",
+              "SM Information: ClusterPlex (HA)",
+              "Mantech Solution: MCCS (HA)"
             ]
           }
         ]
@@ -722,7 +757,14 @@
       "title": "Customers",
       "description": "ABLESTACK can handle any application regardless of user environment or industry, providing the flexibility, predictability, and reliability needed to deploy and operate even the latest emerging workloads smoothly."
     },
-    "title": "Customers who transformed their business with ABLESTACK "
+    "title": "Customers who transformed their business with ABLESTACK ",
+    "category": [
+      "Government & Public Sector",
+      "Defense",
+      "Finance / FinTech",
+      "Educational / Healthcare Institutions",
+      "Enterprises"
+    ]
   },
   "partner": {
     "header": {
@@ -793,16 +835,16 @@
           "text": "XENO SOLUTION"
         },
         {
-          "text": "NHN CROSSENT"
+          "text": "KAYTUS"
         },
         {
           "text": "HANDREAMNET"
         },
         {
-          "text": "INNOGRID"
+          "text": "Namu tech"
         },
         {
-          "text": "Acornsoft"
+          "text": "cocktail io"
         },
         {
           "text": "INNOTIUM"
@@ -823,7 +865,7 @@
           "text": "Zungwon EN-SYS"
         },
         {
-          "text": "AJ  ICT"
+          "text": "BOS TECH"
         },
         {
           "text": "SK shieldus"
@@ -842,6 +884,9 @@
         },
         {
           "text": "Geomax Soft"
+        },
+        {
+          "text": "SM Information"
         }
       ]
     },

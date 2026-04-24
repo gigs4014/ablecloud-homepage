@@ -92,11 +92,6 @@ export function Footer() {
             <div>
               {t('name.label')} : {t('name.value')}
             </div>
-          </div>
-          <div className='flex flex-col lg:flex-row'>
-            <div>
-              {t('headOfficeAddress.label')} : {t('headOfficeAddress.value')}
-            </div>
             {locale === 'ko' ? (
               <>
                 <span className='mx-3 hidden lg:block'>|</span>
@@ -107,10 +102,19 @@ export function Footer() {
             ) : (
               <></>
             )}
+          </div>
+          <div className='flex flex-col lg:flex-row'>
+            <div>
+              {t('headOfficeAddress.label')} : {t('headOfficeAddress.value')}
+            </div>
 
             <span className='mx-3 hidden lg:block'>|</span>
             <div>
               {t('rndCenterAddress.label')} : {t('rndCenterAddress.value')}
+            </div>
+            <span className='mx-3 hidden lg:block'>|</span>
+            <div>
+              {t('yeongnamAddress.label')} : {t('yeongnamAddress.value')}
             </div>
           </div>
         </div>

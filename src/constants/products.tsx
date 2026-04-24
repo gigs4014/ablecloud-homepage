@@ -65,7 +65,7 @@ export const getAblestackHciHeaderData = async (): Promise<HeaderData> => {
       ),
       href:
         locale === 'ko'
-          ? `${origin}/pdf/ABLESTACK_HCI_제품소개서.pdf`
+          ? `${origin}/pdf/2026_ABLESTACK_HCI.pdf`
           : `${origin}/pdf/ABLESTACK_HCI_Product_introduction.pdf`,
       target: '_blank',
     },
@@ -101,7 +101,7 @@ export const getAblestackVmHeaderData = async (): Promise<HeaderData> => {
       ),
       href:
         locale === 'ko'
-          ? `${origin}/pdf/ABLESTACK_VM_제품소개서.pdf`
+          ? `${origin}/pdf/2026_ABLESTACK_VM.pdf`
           : `${origin}/pdf/ABLESTACK_VM_Product_introduction.pdf`,
       target: '_blank',
     },

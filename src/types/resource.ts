@@ -26,6 +26,7 @@ export interface EbookData {
   description: string;
   href: string;
   imgSrc: StaticImageData;
+  date: string;
 }
 
 export interface CompatibilityData {

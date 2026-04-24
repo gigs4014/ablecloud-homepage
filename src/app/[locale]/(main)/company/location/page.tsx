@@ -43,6 +43,27 @@ export default async function CompanyLocation() {
           </div>
         </div>
       </div>
+      <div className='flex flex-col gap-4 max-w-[780px] w-full'>
+        <iframe
+          src='https://map.mommoss.com/?&lat=35.1482156310072&lng=129.064302039385'
+          loading='lazy'
+          width='100%'
+          height='280'
+        />
+        <div className='flex flex-col gap-4'>
+          <div className='text-[24px] font-bold'>{t('yeongnam.label')}</div>
+          <div className='flex flex-col gap-[6px]'>
+            <div className='flex items-center gap-[6px]'>
+              <Pin /> {t('yeongnam.value')}
+            </div>
+            {t('yeongnam.call') && (
+              <div className='flex items-center gap-[6px]'>
+                <Call /> {t('yeongnam.call')}
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

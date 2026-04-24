@@ -24,6 +24,13 @@ import spoSrc from '@/public/images/common/spo.png';
 import t3qSrc from '@/public/images/common/t3q.png';
 import uscSrc from '@/public/images/common/usc.png';
 import ycgSrc from '@/public/images/common/ycg.png';
+import kipoSrc from '@/public/images/common/kipo.png';
+import gyeongiSrc from '@/public/images/common/gyeonggi.png';
+import busanoceanSrc from '@/public/images/common/busanocean.png';
+import taeanSrc from '@/public/images/common/taean.png';
+import hanaInvestSrc from '@/public/images/common/hana-invest.png';
+import armyDevelopSrc from '@/public/images/common/army-develop.png';
+import grtcSrc from '@/public/images/common/grtc.png';
 
 export const getHomeSliderData = async (): Promise<HeaderData[]> => {
   const t = await getTranslations('home');
@@ -169,29 +176,29 @@ export const getHomeApplicationCards = async (): Promise<HomeApplicationCardData
 };
 
 export const homeInterviewIcons1 = [
-  <Image src={changwonSrc} alt='' width={96} />,
+  <Image src={kipoSrc} alt='' width={96} />,
   <Image src={spoSrc} alt='' width={80} />,
   <Image src={dapaSrc} alt='' width={96} />,
+  <Image src={busanoceanSrc} alt='' width={85} />,
   <Image src={comwelSrc} alt='' width={86} />,
   <Image src={ekrSrc} alt='' width={137} />,
   <Image src={gyeongnamSrc} alt='' width={114} />,
-  <Image src={hcSrc} alt='' width={85} />,
-  <Image src={sangjuSrc} alt='' width={105} />,
+  <Image src={gyeongiSrc} alt='' width={85} />,
   <Image src={kepcoSrc} alt='' width={120} />,
   <Image src={datqSrc} alt='' width={120} />,
 ];
 
 export const homeInterviewIcons2 = [
-  <Image src={ycgSrc} alt='' width={111} />,
-  <Image src={goryeongSrc} alt='' width={102} />,
+  <Image src={changwonSrc} alt='' width={111} />,
+  <Image src={taeanSrc} alt='' width={102} />,
   <Image src={pyeongtaekSrc} alt='' width={56} />,
   <Image src={uscSrc} alt='' width={112} />,
   <Image src={gbSrc} alt='' width={110} />,
-  <Image src={cooconSrc} alt='' width={120} />,
-  <Image src={gwangjuSrc} alt='' width={120} />,
+  <Image src={hanaInvestSrc} alt='' width={120} />,
+  <Image src={armyDevelopSrc} alt='' width={120} />,
   <Image src={armySrc} alt='' width={120} />,
-  <Image src={t3qSrc} alt='' width={100} />,
-  <Image src={kacptaSrc} alt='' width={115} />,
+  <Image src={cooconSrc} alt='' width={100} />,
+  <Image src={grtcSrc} alt='' width={115} />,
 ];
 
 export const getHomeFooterCards = async (): Promise<HomeFooterCardData[]> => {

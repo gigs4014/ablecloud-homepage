@@ -1,9 +1,10 @@
-import { getInterviewHeaderData, interviewList } from '@/constants/interview';
+import { getInterviewHeaderData, getInterviewlist } from '@/constants/interview';
 
 import { ContentWrapper, MainPageHeader } from '@/templates/common';
 import { InterViewList } from '@/templates/interview';
 
 export default async function Interview() {
+  const interviewList = await getInterviewlist();
   return (
     <>
       <MainPageHeader headerData={await getInterviewHeaderData()} />

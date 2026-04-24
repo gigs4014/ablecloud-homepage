@@ -40,6 +40,7 @@ export function EbookList({ ebooksData, origin }: { ebooksData: EbookData[]; ori
                 <div className='text-[12px] text-[#919191]'>{v.type}</div>
                 <div className='font-bold'>{v.title}</div>
                 <div className='text-[14px]'>{v.description}</div>
+                <div className='text-[12px] text-[#9B9B9B] '>({v.date})</div>
               </div>
             </Link>
           );

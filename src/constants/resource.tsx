@@ -71,6 +71,7 @@ export const getEbookData = async () => {
       title: t('data.12.title'),
       description: t('data.12.description'),
       href: 'ABLESTACK_Commvault_백업 솔루션.pdf',
+      date: '2025.11.03',
       imgSrc: ebook_13_Src,
     },
     {
@@ -78,6 +79,7 @@ export const getEbookData = async () => {
       title: t('data.13.title'),
       description: t('data.13.description'),
       href: 'ABLESTACK_관제 CCTV.pdf',
+      date: '2025.10.16',
       imgSrc: ebook_14_Src,
     },
     {
@@ -85,6 +87,7 @@ export const getEbookData = async () => {
       title: t('data.0.title'),
       description: t('data.0.description'),
       href: 'ABLESTACK_Technical.pdf',
+      date: '2025.09.15',
       imgSrc: ebook_1_Src,
     },
     {
@@ -93,6 +96,7 @@ export const getEbookData = async () => {
       description: t('data.5.description'),
       href: 'ABLESTACK-VMWare_vSphere.pdf',
       imgSrc: ebook_6_Src,
+      date: '2025.08.26',
     },
     {
       type: 'ABLESTACK with Oracle',
@@ -100,6 +104,7 @@ export const getEbookData = async () => {
       description: t('data.2.description'),
       href: 'ABLESTACK_for_Oracle_RAC.pdf',
       imgSrc: ebook_3_Src,
+      date: '2025.07.24',
     },
     {
       type: 'ABLESTACK V2V',
@@ -107,6 +112,7 @@ export const getEbookData = async () => {
       description: t('data.3.description'),
       href: 'ABLESTACK_VMWare_Migration.pdf',
       imgSrc: ebook_4_Src,
+      date: '2025.06.12',
     },
     {
       type: 'ABLESTACK P2V',
@@ -114,6 +120,7 @@ export const getEbookData = async () => {
       description: t('data.4.description'),
       href: 'ABLESTACK_P2V_Migration.pdf',
       imgSrc: ebook_5_Src,
+      date: '2025.05.10',
     },
     {
       type: 'ABLESTACK V2V',
@@ -121,6 +128,7 @@ export const getEbookData = async () => {
       description: t('data.1.description'),
       href: 'ABLESTACK_VMWare.pdf',
       imgSrc: ebook_2_Src,
+      date: '2025.04.24',
     },
     {
       type: 'ABLESTACK Koral',
@@ -128,6 +136,7 @@ export const getEbookData = async () => {
       description: t('data.6.description'),
       href: 'ABLESTACK_Kubernetes_Cluster.pdf',
       imgSrc: ebook_7_Src,
+      date: '2025.04.17',
     },
     {
       type: 'ABLESTACK Koral',
@@ -135,6 +144,7 @@ export const getEbookData = async () => {
       description: t('data.7.description'),
       href: 'ABLESTACK_Kubernetes_Cluster_Portainer.pdf',
       imgSrc: ebook_8_Src,
+      date: '2025.04.08',
     },
     {
       type: 'ABLESTACK Over',
@@ -142,6 +152,7 @@ export const getEbookData = async () => {
       description: t('data.8.description'),
       href: 'ABLESTACK_HCI_ACTIVE.pdf',
       imgSrc: ebook_9_Src,
+      date: '2025.03.18',
     },
     {
       type: 'ABLESTACK Link',
@@ -149,6 +160,7 @@ export const getEbookData = async () => {
       description: t('data.9.description'),
       href: 'ABLESTACK_LINK.pdf',
       imgSrc: ebook_10_Src,
+      date: '2025.03.1',
     },
     {
       type: 'ABLESTACK Link',
@@ -156,6 +168,7 @@ export const getEbookData = async () => {
       description: t('data.10.description'),
       href: 'ABLESTACK_LINK_LOAD_BALANCER.pdf',
       imgSrc: ebook_11_Src,
+      date: '2025.02.23',
     },
     {
       type: 'ABLESTACK  VS VMware',
@@ -163,96 +176,10 @@ export const getEbookData = async () => {
       description: t('data.11.description'),
       href: 'ABLESTACK_VS_VMware.pdf',
       imgSrc: ebook_12_Src,
+      date: '2025.02.16',
     },
   ];
 };
-
-export const ebooksData: EbookData[] = [
-  {
-    type: 'ABLESTACK Technical White Paper',
-    title: 'Blade Server? 이제는 HCI',
-    description: '블레이드 서버 또는 HCI 중 어떤 것을 도입해야 할까요?',
-    href: 'ABLESTACK_Technical.pdf',
-    imgSrc: ebook_1_Src,
-  },
-  {
-    type: 'ABLESTACK VS VMware',
-    title: 'ABLESTACK-VMware vSphere 제품 비교',
-    description: 'ABLESTACK와 VMWare 주요 라이선스 기능 비교표',
-    href: 'ABLESTACK-VMWare_vSphere.pdf',
-    imgSrc: ebook_6_Src,
-  },
-  {
-    type: 'ABLESTACK with Oracle',
-    title: 'ABLESTACK for Oracle RAC 구성',
-    description: 'ABLESTACK 가상화 환경에서 Oracle RAC을 구성하세요.',
-    href: 'ABLESTACK_for_Oracle_RAC.pdf',
-    imgSrc: ebook_3_Src,
-  },
-  {
-    type: 'ABLESTACK V2V',
-    title: 'ABLESTACK VMWare 가상머신 마이그레이션',
-    description: '내장된 마이그레이션 도구를 통한 V2V 가상머신 이관',
-    href: 'ABLESTACK_VMWare_Migration.pdf',
-    imgSrc: ebook_4_Src,
-  },
-  {
-    type: 'ABLESTACK P2V',
-    title: 'ABLESTACK 물리서버를 가상머신으로',
-    description: '물리서버를 가상머신으로 마이그레이션하는 방법',
-    href: 'ABLESTACK_P2V_Migration.pdf',
-    imgSrc: ebook_5_Src,
-  },
-  {
-    type: 'ABLESTACK V2V',
-    title: 'V사를 완벽하게 대체할 수 있는 플랫폼',
-    description: '영구 라이센스를 제공하는 ABLESTACK HCI 플랫폼',
-    href: 'ABLESTACK_VMWare.pdf',
-    imgSrc: ebook_2_Src,
-  },
-  {
-    type: 'ABLESTACK Koral',
-    title: 'ABLESTACK Kubernetes Cluster 사용기초',
-    description: '내장된 Koral 기능을 이용한  쿠버네티스 클러스터 배포 방법',
-    href: 'ABLESTACK_Kubernetes_Cluster.pdf',
-    imgSrc: ebook_7_Src,
-  },
-  {
-    type: 'ABLESTACK Koral',
-    title: 'ABLESTACK Kubernetes Cluster와 Portainer 플랫폼 연동',
-    description: '애플리케이션 관리 플랫폼 Portainer와 연동하는 방법',
-    href: 'ABLESTACK_Kubernetes_Cluster_Portainer.pdf',
-    imgSrc: ebook_8_Src,
-  },
-  {
-    type: 'ABLESTACK Over',
-    title: '비즈니스 연속성을 제공하는 ABLESTACK HCI 재해복구',
-    description: '내장된 기능으로 Active-Active 재해복구 환경 구성 가능',
-    href: 'ABLESTACK_HCI_ACTIVE.pdf',
-    imgSrc: ebook_9_Src,
-  },
-  {
-    type: 'ABLESTACK Link',
-    title: 'ABLESTACK Link를 통한 마이크로 세그먼테이션 보안관리',
-    description: '내장된 Link를 이용한 보안 관리 기능',
-    href: 'ABLESTACK_LINK.pdf',
-    imgSrc: ebook_10_Src,
-  },
-  {
-    type: 'ABLESTACK Link',
-    title: 'ABLESTACK Link Load Balancer 어플라이언스 활용',
-    description: '내장된 Link를 이용한 Load Balancer 적용 시나리오',
-    href: 'ABLESTACK_LINK_LOAD_BALANCER.pdf',
-    imgSrc: ebook_11_Src,
-  },
-  {
-    type: 'ABLESTACK  VS VMware',
-    title: 'ABLESTACK vs VMware 성능 비교',
-    description: 'ABLESTACK와 VMware 동일 환경에서의 성능 비교',
-    href: 'ABLESTACK_VS_VMware.pdf',
-    imgSrc: ebook_12_Src,
-  },
-];
 
 export const useCompatibilityList = () => {
   const t = useTranslations('resources.compatibility');
@@ -345,6 +272,7 @@ export const getCompatibilityData = async () => {
             t('server.descriptionList.0.list.7'),
             t('server.descriptionList.0.list.8'),
             t('server.descriptionList.0.list.9'),
+            t('server.descriptionList.0.list.10'),
           ],
         },
       ],
@@ -379,6 +307,9 @@ export const getCompatibilityData = async () => {
             t('virtualization.descriptionList.0.list.3'),
             t('virtualization.descriptionList.0.list.4'),
             t('virtualization.descriptionList.0.list.5'),
+            t('virtualization.descriptionList.0.list.6'),
+            t('virtualization.descriptionList.0.list.7'),
+            t('virtualization.descriptionList.0.list.8'),
           ],
         },
       ],

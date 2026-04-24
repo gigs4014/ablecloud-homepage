@@ -40,6 +40,20 @@ export const getCompanyHistory = async () => {
 
   return [
     {
+      year: t('2026.year'),
+      history: [
+        { text: t('2026.history.0') },
+        { text: t('2026.history.1') },
+        { text: t('2026.history.2') },
+        { text: t('2026.history.3') },
+        { text: t('2026.history.4') },
+        { text: t('2026.history.5') },
+        { text: t('2026.history.6') },
+        { text: t('2026.history.7') },
+        { text: t('2026.history.8') },
+      ],
+    },
+    {
       year: t('2025.year'),
       history: [
         { text: t('2025.history.0'), isHighlight: true },
@@ -63,6 +77,14 @@ export const getCompanyHistory = async () => {
         { text: t('2025.history.18') },
         { text: t('2025.history.19') },
         { text: t('2025.history.20') },
+        { text: t('2025.history.21') },
+        { text: t('2025.history.22') },
+        { text: t('2025.history.23') },
+        { text: t('2025.history.24') },
+        { text: t('2025.history.25') },
+        { text: t('2025.history.26') },
+        { text: t('2025.history.27') },
+        { text: t('2025.history.28') },
       ],
     },
     {

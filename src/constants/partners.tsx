@@ -3,9 +3,9 @@ import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 
 import ablestoreSrc from '@/public/images/partners/ablestor.png';
-import acornsoftSrc from '@/public/images/partners/acornsoft.png';
-import ajictSrc from '@/public/images/partners/ajict.png';
+import bostechSrc from '@/public/images/partners/bostech.png';
 import citrixSrc from '@/public/images/partners/citrix.png';
+import cocktailSrc from '@/public/images/partners/cocktail.png';
 import dellSrc from '@/public/images/partners/dell.png';
 import dwctsSrc from '@/public/images/partners/dwcts.png';
 import fujitsuSrc from '@/public/images/partners/fujitsu.png';
@@ -15,14 +15,15 @@ import hdnSrc from '@/public/images/partners/hdn.png';
 import hpSrc from '@/public/images/partners/hp.png';
 import hsSrc from '@/public/images/partners/hs.png';
 import innodepSrc from '@/public/images/partners/innodep.png';
-import innogridSrc from '@/public/images/partners/innogrid.png';
 import innotiumSrc from '@/public/images/partners/innotium.png';
 import itcenSrc from '@/public/images/partners/itcen.png';
+import kaytusSrc from '@/public/images/partners/kaytus.png';
 import ktnfSrc from '@/public/images/partners/ktnf.png';
 import lenovoSrc from '@/public/images/partners/lenovo.png';
-import nhncrossentSrc from '@/public/images/partners/nhncrossent.png';
+import namuSrc from '@/public/images/partners/namu.png';
 import oceanSrc from '@/public/images/partners/ocean.png';
 import skshieldusSrc from '@/public/images/partners/skshieldus.png';
+import sminfoSrc from '@/public/images/partners/sminfo.png';
 import snaSrc from '@/public/images/partners/sna.png';
 import superSrc from '@/public/images/partners/super.png';
 import supermicrSrc from '@/public/images/partners/supermicr.png';
@@ -103,22 +104,23 @@ export const usePartnerList = () => {
     { img: <Image src={citrixSrc} alt='' />, text: t('list.10.text') },
     { img: <Image src={tilonSrc} alt='' />, text: t('list.11.text') },
     { img: <Image src={xenoSrc} alt='' />, text: t('list.12.text') },
-    { img: <Image src={nhncrossentSrc} alt='' />, text: t('list.13.text') },
+    { img: <Image src={kaytusSrc} alt='' width={148} height={27} />, text: t('list.13.text') },
     { img: <Image src={hdnSrc} alt='' />, text: t('list.14.text') },
-    { img: <Image src={innogridSrc} alt='' />, text: t('list.15.text') },
-    { img: <Image src={acornsoftSrc} alt='' />, text: t('list.16.text') },
+    { img: <Image src={namuSrc} alt='' width={129} height={34} />, text: t('list.15.text') },
+    { img: <Image src={cocktailSrc} alt='' />, text: t('list.16.text') },
     { img: <Image src={innotiumSrc} alt='' />, text: t('list.17.text') },
     { img: <Image src={t3qSrc} alt='' />, text: t('list.18.text') },
     { img: <Image src={innodepSrc} alt='' />, text: t('list.19.text') },
     { img: <Image src={xslabSrc} alt='' />, text: t('list.20.text') },
     { img: <Image src={hsSrc} alt='' />, text: t('list.21.text') },
     { img: <Image src={zungwonSrc} alt='' />, text: t('list.22.text') },
-    { img: <Image src={ajictSrc} alt='' />, text: t('list.23.text') },
+    { img: <Image src={bostechSrc} alt='' width={164} height={40} />, text: t('list.23.text') },
     { img: <Image src={skshieldusSrc} alt='' />, text: t('list.24.text') },
     { img: <Image src={gntelSrc} alt='' />, text: t('list.25.text') },
     { img: <Image src={itcenSrc} alt='' />, text: t('list.26.text') },
     { img: <Image src={snaSrc} alt='' />, text: t('list.27.text') },
     { img: <Image src={dwctsSrc} alt='' />, text: t('list.28.text') },
     { img: <Image src={geomexSrc} alt='' />, text: t('list.29.text') },
+    { img: <Image src={sminfoSrc} alt='' width={164} />, text: t('list.30.text') },
   ];
 };
